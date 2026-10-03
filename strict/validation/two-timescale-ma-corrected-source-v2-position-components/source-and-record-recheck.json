@@ -1,0 +1,85 @@
+{
+  "scope": "actual_native_N6_N8_full1000_initial_positions_NOT_full300_or_source_trajectories",
+  "checks": [
+    {
+      "N": 6,
+      "M": 5,
+      "figure": 16,
+      "checks": {
+        "iid": {
+          "full_draw_count": 1000,
+          "sample_inverse_Gram_rate_identity_error": 2.948752353404416e-13,
+          "mean_rate_record_error": 0.0,
+          "conditional_moment_aggregation_error": 9.992007221626409e-16,
+          "population_Jensen_plugin_record_recomputed": true,
+          "full_independent_conditional_integral_replay_claimed": false
+        },
+        "correlated": {
+          "full_draw_count": 1000,
+          "sample_inverse_Gram_rate_identity_error": 2.851052727237402e-13,
+          "mean_rate_record_error": 3.552713678800501e-15,
+          "conditional_moment_aggregation_error": 8.881784197001252e-16,
+          "population_Jensen_plugin_record_recomputed": true,
+          "full_independent_conditional_integral_replay_claimed": false
+        }
+      },
+      "actual_source_digest_reconstructed": true,
+      "actual_native_source_digest": "65ba4d7b956406f8905ebd909b8da1be5c14c5803e7192f8596ecbbec40139c7",
+      "input_sha256": "311a44544d4ad715822ead8df8afa9f1ad00cf4c5e189b0ae87c5d599336f5ef",
+      "original_native_result_sha256": "cb91d736098dbcb34ce521050068a8479b035776d467ad8e5bfa76e447452fd1"
+    },
+    {
+      "N": 8,
+      "M": 5,
+      "figure": 14,
+      "checks": {
+        "iid": {
+          "full_draw_count": 1000,
+          "sample_inverse_Gram_rate_identity_error": 2.3092638912203256e-13,
+          "mean_rate_record_error": 0.0,
+          "conditional_moment_aggregation_error": 6.661338147750939e-16,
+          "population_Jensen_plugin_record_recomputed": true,
+          "full_independent_conditional_integral_replay_claimed": false
+        },
+        "correlated": {
+          "full_draw_count": 1000,
+          "sample_inverse_Gram_rate_identity_error": 2.3803181647963356e-13,
+          "mean_rate_record_error": 0.0,
+          "conditional_moment_aggregation_error": 1.5543122344752192e-15,
+          "population_Jensen_plugin_record_recomputed": true,
+          "full_independent_conditional_integral_replay_claimed": false
+        }
+      },
+      "actual_source_digest_reconstructed": true,
+      "actual_native_source_digest": "65ba4d7b956406f8905ebd909b8da1be5c14c5803e7192f8596ecbbec40139c7",
+      "input_sha256": "43cbdf4a627dee9236dcca30575861ea0072076a2104cc5bb916e534ce4af04b",
+      "original_native_result_sha256": "8abd5cab4fb30837e3bb58879a87726a2f99b59e8547289fe09b5277acf5c807"
+    }
+  ],
+  "source_file_sha256": {
+    "strict/two-timescale-ma/run_strict_two_timescale_ma_full_v2.m": "efa6f46df3d486cc24db1699becb596db80de0c1efe15a485e8e3a478459503d",
+    "strict/two-timescale-ma/run_full_ma_figure_v2.m": "864b593bcc624551eb302b64a316efab8b1f3fcef97f42317a06c8df87db9dd6",
+    "strict/two-timescale-ma/strict_ma_full_v2_implementation_fingerprint.m": "4164b656a99df5e3af75a8024b78d7641ce8fc6d5e51c3680877019c57baed13",
+    "strict/two-timescale-ma/ma_exact_coordinate.m": "d4edf54ec1c314fc4d1ae0369b8d049b740091676927e1e3fad14b05f0023e17",
+    "strict/matlab-corrected-source-v2/run_corrected_ma_figure_matlab_source_v2.m": "41e473cfb5e82265139e919f4eb5b55283ddd9a1aa7bbc9f38c56dd5f50ea71f",
+    "strict/matlab-corrected-source-v2/evaluate_correlated_zf_matlab_source_v2.m": "25da11dccca58a42fc7ca95ae961c7def4cc8d7b44adbc8363d36579790e8b2d",
+    "strict/matlab-corrected-source-v2/validate_corrected_zf_source_matlab_full_v2.m": "60c29b7060047e00966f3e39ace34cf3cf629a0a0f4affcfbf801ecc3dfb9281",
+    "strict/matlab-corrected-source-v2/validate_corrected_zf_position_matlab_source_v2.m": "60daad65171bd88b36cd07c6e36b13ce7c0d2897b3a3b43be705cca8b3325f98",
+    "strict/matlab-corrected-source-v2/corrected_zf_source_v2_matlab_fingerprint.m": "af80c00629a2ed0c392eb953ef78bec2d61151aa07882912cda3c44eef58b0f1",
+    "strict/two-timescale-ma/correlated_zf_inverse_moment.m": "97c384fec0339cd30063237b57ef80d3f90bf7153dbeebda5186bf455c34c764",
+    "strict/two-timescale-ma/correlated_zf_jensen_bound.m": "f4b92ff587fc06331801df1ff65197fc1e2c99ee388e2a318ce3d19da036f2e4",
+    "strict/two-timescale-ma/corrected_zf_position_matlab.m": "f5620b040fcef0cff57dcf111873f7cc002df4e09743db332d5aa2a945426c30",
+    "strict/two-timescale-ma/corrected_zf_context_matlab.m": "8056205a1ce941c86cac54aa69b2739a2b2595286ee628e30b5ab8efc204b306"
+  },
+  "runtime_version_strings_used_for_digest": {
+    "matlab_version": "25.2.0.2998904 (R2025b)",
+    "blas_version": "Intel(R) oneAPI Math Kernel Library Version 2024.1-Product Build 20240215 for Intel(R) 64 architecture applications (CNR branch AVX2)",
+    "lapack_version": "Intel(R) oneAPI Math Kernel Library Version 2024.1-Product Build 20240215 for Intel(R) 64 architecture applications (CNR branch AVX2) supporting Linear Algebra PACKage (LAPACK 3.11.0)"
+  },
+  "actual_native_sources_interval_bound_by_original_evaluator_digest": true,
+  "complete_runtime_binary_hash_inventory_available": false,
+  "full_independent_conditional_integral_replay_claimed": false,
+  "full300_native_figures_complete": false,
+  "historical_figure_agreement_verified": false,
+  "full_reproduction_pass": false
+}

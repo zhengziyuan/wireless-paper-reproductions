@@ -68,7 +68,7 @@ def plan(paper, figure, settings_path=None):
                           executor="figures.py / shared-input MATLAB bank")
             if paper == "two-timescale-ma" and figure in (14, 16):
                 result.update(scientific_branch="explicit_corrected_original_model_Schur_Laplace_Jensen",
-                              executor="corrected_figures.py / run_corrected_ma_figure_matlab",
+                              executor="corrected_figures.py / run_corrected_ma_figure_matlab_source_v2",
                               printed_undefined_formula_recovered=False,
                               historical_figure_recovery_claimed=False)
             if paper=='two-timescale-ma' and figure in (19,20):
@@ -120,6 +120,22 @@ def plan(paper, figure, settings_path=None):
 
 def matlab_literal(path):
     return "'" + str(Path(path).resolve()).replace("\\", "/").replace("'", "''") + "'"
+
+
+def corrected_ma_matlab_call(bank, output):
+    """Bind corrected evaluation to the actual full-v2 MATLAB trajectory schema.
+
+    The durable source runner must finish before the corrected adapter checks
+    all300 required cases. Old startup-error/source-v1 files are not upgraded.
+    """
+    source = output / 'matlab'
+    corrected = output / 'matlab-corrected'
+    adapter = HERE / 'matlab-corrected-source-v2'
+    return (f"run_matlab_bank_checked('two-timescale-ma',{matlab_literal(bank)},{matlab_literal(source)});"
+            f"addpath({matlab_literal(adapter)});"
+            f"run_corrected_ma_figure_matlab_source_v2({matlab_literal(bank/'jobs')},"
+            f"{matlab_literal(source)},{matlab_literal(corrected)},"
+            f"{matlab_literal(bank/'run_config.json')},false);")
 
 
 def statistical_matlab_call(config,output,result):
@@ -200,7 +216,7 @@ def execute(specification, language, output, matlab, source_result=None, workers
         if language == "matlab":
             expression = f"run_matlab_bank_checked('{paper}',{matlab_literal(bank)},{matlab_literal(output/'matlab')});"
             if paper=="two-timescale-ma" and figure in (14,16):
-                expression+=f"run_corrected_ma_figure_matlab({matlab_literal(bank/'jobs')},{matlab_literal(output/'matlab')},{matlab_literal(output/'matlab-corrected')},{matlab_literal(bank/'run_config.json')},false);"
+                expression=corrected_ma_matlab_call(bank,output)
         result = bank / "full_summary.json"
     else:
         results=[]

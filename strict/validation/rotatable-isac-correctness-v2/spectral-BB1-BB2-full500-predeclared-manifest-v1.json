@@ -1,0 +1,69 @@
+{
+  "scope": "WORK_predeclared_BB1_BB2_INITIAL_Armijo_seeds_two_full_original_first_blocks_not_full_figures",
+  "production_source_fingerprint": "1e940a4c82564a8f8a8fb65a3bef2dd13702d7872e6eb9da761e4586c7a778fa",
+  "WORK_sources_frozen_before_actual_tests": {
+    "test_spectral_initial_seed_two_cases_work_v1.py": "c75e37444cd91ce10f079164290494350499212a0e6d93ad76c7b68acda567b8",
+    "spectral_initial_armijo_seed_work_v1.py": "28ccd5cb93402d7eed24c16077259269c2401a45fb301e08e7386537c0ca993c",
+    "SPECTRAL_INITIAL_SEED_WORK_PLAN_V1.md": "5c27df6c6a2349dfbdc1cd09a7006982f19586941ef52650ea2adf34fa56146c",
+    "stable_rcg_literal_work_v2.py": "6875a558fbecd3efc04fe9817c7990d8a7f02a1be5cfd0ce2a8bb89608ca01d9",
+    "stable_fixed_rotation_increment_work_v1.py": "6aae5f3ed807179f4c7136cefbd4b71d53f3443cbe3e210fb741f63f03406365",
+    "independent_highprecision_isac.py": "d14050078d636ca33bd78fb2206406735a22589eeb0aa14b0f28c3d443d893bc"
+  },
+  "all_original_inputs_sha256": {
+    "case-000-mc-001.json": "e23f81cd2aa93f186f175f649fc85eb8448de53033fc36d60f1931df068f11d1",
+    "case-000-mc-002.json": "44cc8224c068f5a06bcd0b7c4ef9aabc780cdb44c4296cf256834e0254fb9ed2"
+  },
+  "fixed_population_and_order": [
+    {
+      "strategy": "BB1",
+      "case": "case-000-mc-001"
+    },
+    {
+      "strategy": "BB1",
+      "case": "case-000-mc-002"
+    },
+    {
+      "strategy": "BB2",
+      "case": "case-000-mc-001"
+    },
+    {
+      "strategy": "BB2",
+      "case": "case-000-mc-002"
+    }
+  ],
+  "seed_contract": {
+    "strategies_tested_separately_without_best_result_selection": [
+      "BB1",
+      "BB2"
+    ],
+    "transport": "original T_theta(v)=v-Re(conj(theta)*v)*theta",
+    "secant_step": "s=previous_accepted_alpha*T_current(previous_original_direction)",
+    "negative_utility_secant": "y=T_current(previous_maximization_gradient)-current_maximization_gradient",
+    "BB1": "Re(vdot(s,s))/Re(vdot(s,y))",
+    "BB2": "Re(vdot(s,y))/Re(vdot(y,y))",
+    "fixed_safe_clip": "[original_initial_step*2**-40,original_initial_step]",
+    "validity": "finite positive secant curvature, norm denominator, and raw seed",
+    "fixed_fallback": "original_initial_step, including first iteration and nonpositive/nonfinite curvature",
+    "lower_factor": 9.094947017729282e-13,
+    "original_PR_direction_transport_retraction_backtrack_Armijo_stop_unchanged": true,
+    "seed_not_an_acceptance_or_global_curvature_or_convergence_certificate": true,
+    "no_original_binary64_prefix_bitwise_equivalence_claim": true,
+    "fixed_full_utility_MP_probe_update_indices": [
+      0,
+      249,
+      499
+    ]
+  },
+  "fixed_secant_seed_atol": 1e-12,
+  "fixed_secant_seed_rtol": 1e-10,
+  "fixed_final_phase_gradient_FD_step": 1e-06,
+  "fixed_final_phase_gradient_check_atol": 1e-07,
+  "full_original_M4_N36_K2_A66_all_rays_retained": true,
+  "declared_RCG500_and_original_implemented_epsilon1e_minus_6_unchanged": true,
+  "RCG500_epsilon1e_minus_6_are_declared_unreported_reconstruction_controls_not_author_reported_numbers": true,
+  "raw_PR_direction_transport_retraction_restarts_backtrack_Armijo_unchanged": true,
+  "separate_same_utility_increment_arithmetic_only": true,
+  "no_Wolfe_preconditioner_new_metric_cap_fishing_best_strategy_selection_or_live_source_edit": true,
+  "prior_failed_curvature_seed_receipt_retained": true,
+  "four_actual_gradient_stops_not_yet_claimed": true
+}

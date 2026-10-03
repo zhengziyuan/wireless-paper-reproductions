@@ -1,0 +1,150 @@
+{
+  "scope": "unchanged_actual_component_receipts_plus_separate_independent_record_audit",
+  "inputs": [
+    {
+      "kind": "actual_native_receipt",
+      "filename": "cdf12-prospective-before-ONE1000-ACTUAL-MATLAB-v1.json",
+      "sha256": "f15c3ff52ffc59323d6c60d749f5b638c354df12a4d3bee2a96e0ab1b3abc3bc"
+    },
+    {
+      "kind": "actual_saved_native_matrices",
+      "filename": "cdf12-prospective-before-ONE1000-ACTUAL-MATLAB-v1.json.states.mat",
+      "sha256": "ea41efc0cb1fa86a86d4099f926f07fb4fa499c59594d9580d2b45392a1bf575"
+    },
+    {
+      "kind": "actual_independent80digit_receipt",
+      "filename": "cdf12-prospective-before-ONE1000-ACTUAL-MATLAB80digits-v1.json",
+      "sha256": "1f4d7388007c08abd184be401afa79b5779208c80bf5d895278ffc536b2df09c"
+    },
+    {
+      "kind": "actual_native_receipt",
+      "filename": "cdf22-prospective-before-ONE1000-ACTUAL-MATLAB-v1.json",
+      "sha256": "b152a912a8605b545d3edf8d668b2e72436b528e1700083492cc6a391a0a3c30"
+    },
+    {
+      "kind": "actual_saved_native_matrices",
+      "filename": "cdf22-prospective-before-ONE1000-ACTUAL-MATLAB-v1.json.states.mat",
+      "sha256": "95b63178178bb9c4645fa5d545b1449f46adee35c3b85a4376f9689691f784bb"
+    },
+    {
+      "kind": "actual_independent80digit_receipt",
+      "filename": "cdf22-prospective-before-ONE1000-ACTUAL-MATLAB80digits-v1.json",
+      "sha256": "99668a142c08c0ce5262316ff519014e66dba579c63f2d7df213040c643c665e"
+    },
+    {
+      "kind": "actual_native_receipt",
+      "filename": "cdf32-prospective-before-ONE1000-ACTUAL-MATLAB-v1.json",
+      "sha256": "343a23ae55e9e77e21c968f19fa6d416f97b69689cb98e90d98a1790789e3bc9"
+    },
+    {
+      "kind": "actual_saved_native_matrices",
+      "filename": "cdf32-prospective-before-ONE1000-ACTUAL-MATLAB-v1.json.states.mat",
+      "sha256": "4e0a47894f1f086c50e6fd0ca7888f46bf4396b0a65ad83d806156da19eb6f05"
+    },
+    {
+      "kind": "actual_independent80digit_receipt",
+      "filename": "cdf32-prospective-before-ONE1000-ACTUAL-MATLAB80digits-v1.json",
+      "sha256": "c19e7199f90744818da5d756995b660bd5f3c6cc86c19c90d36058cf0194e166"
+    },
+    {
+      "kind": "actual_native_receipt",
+      "filename": "cdf43-prospective-before-ONE1000-ACTUAL-MATLAB-v1.json",
+      "sha256": "5f3b7202bc3f882ad3b683a4001e9dfcb17893d7fd0b75173b073eccf10e0dbd"
+    },
+    {
+      "kind": "actual_saved_native_matrices",
+      "filename": "cdf43-prospective-before-ONE1000-ACTUAL-MATLAB-v1.json.states.mat",
+      "sha256": "5f9d493a2096ff3d1067496d7f8d750d61add74947342f2165708b0907169492"
+    },
+    {
+      "kind": "actual_independent80digit_receipt",
+      "filename": "cdf43-prospective-before-ONE1000-ACTUAL-MATLAB80digits-v1.json",
+      "sha256": "d258162f3fe28a4a566941f2c91f6c84bf31c0d12b0ab73fb8de80345b6a81bf"
+    },
+    {
+      "kind": "actual_native_receipt",
+      "filename": "cdf56-prospective-before-ONE1000-ACTUAL-MATLAB-v1.json",
+      "sha256": "59abbc6bb34c4cac0c37b093602d2312cf8c519bed882629f222a5b251c27ee1"
+    },
+    {
+      "kind": "actual_saved_native_matrices",
+      "filename": "cdf56-prospective-before-ONE1000-ACTUAL-MATLAB-v1.json.states.mat",
+      "sha256": "8ce776e82cbdc361c850b79634fb6a85c337bbf58633c5451b4769b5b0bb7048"
+    },
+    {
+      "kind": "actual_independent80digit_receipt",
+      "filename": "cdf56-prospective-before-ONE1000-ACTUAL-MATLAB80digits-v1.json",
+      "sha256": "8347a9315181545e0f76119ec59a00c97ffcb1bb951b37e5b0ba04a49a0af92b"
+    }
+  ],
+  "executed_WORK_verifier_sources": {
+    "verify_actual_matlab_scaled_duals.py": "e779012e67e4e0c68496f262f3ccdb2d8888e978dc1d696d4fb18453a32f5d0e",
+    "verify_scaled_dual_general.py": "1872f5ac66fab18382ac40fa44c826d4c642da8e6f27cee919a74135d0b8039e",
+    "audit_original_sdp.py": "f9a5ee7072c1ea6a8f0e492199ca4851f0e16486ca7425cfc6a6d26b234f0fa9",
+    "verify_actual_native_precision_before_one1000_policy_work.py": "aa7f983f7668ed74f7764c1bbec118e722e83c863dacce0824565f02c2e02712"
+  },
+  "freezer_source_sha256": "63487d5f6a9b524b2ebdc013917f05ef463b56cfc3e23bd6cb57c1ec4a6f1785",
+  "full_reproduction_pass": false,
+  "public_files": [
+    {
+      "filename": "cdf12-actual-native.json",
+      "sha256": "f15c3ff52ffc59323d6c60d749f5b638c354df12a4d3bee2a96e0ab1b3abc3bc",
+      "bytes": 3107
+    },
+    {
+      "filename": "cdf12-independent-actual-state80digits.json",
+      "sha256": "1f4d7388007c08abd184be401afa79b5779208c80bf5d895278ffc536b2df09c",
+      "bytes": 4808
+    },
+    {
+      "filename": "cdf22-actual-native.json",
+      "sha256": "b152a912a8605b545d3edf8d668b2e72436b528e1700083492cc6a391a0a3c30",
+      "bytes": 3106
+    },
+    {
+      "filename": "cdf22-independent-actual-state80digits.json",
+      "sha256": "99668a142c08c0ce5262316ff519014e66dba579c63f2d7df213040c643c665e",
+      "bytes": 4807
+    },
+    {
+      "filename": "cdf32-actual-native.json",
+      "sha256": "343a23ae55e9e77e21c968f19fa6d416f97b69689cb98e90d98a1790789e3bc9",
+      "bytes": 3107
+    },
+    {
+      "filename": "cdf32-independent-actual-state80digits.json",
+      "sha256": "c19e7199f90744818da5d756995b660bd5f3c6cc86c19c90d36058cf0194e166",
+      "bytes": 4809
+    },
+    {
+      "filename": "cdf43-actual-native.json",
+      "sha256": "5f3b7202bc3f882ad3b683a4001e9dfcb17893d7fd0b75173b073eccf10e0dbd",
+      "bytes": 3087
+    },
+    {
+      "filename": "cdf43-independent-actual-state80digits.json",
+      "sha256": "d258162f3fe28a4a566941f2c91f6c84bf31c0d12b0ab73fb8de80345b6a81bf",
+      "bytes": 4775
+    },
+    {
+      "filename": "cdf56-actual-native.json",
+      "sha256": "59abbc6bb34c4cac0c37b093602d2312cf8c519bed882629f222a5b251c27ee1",
+      "bytes": 3107
+    },
+    {
+      "filename": "cdf56-independent-actual-state80digits.json",
+      "sha256": "8347a9315181545e0f76119ec59a00c97ffcb1bb951b37e5b0ba04a49a0af92b",
+      "bytes": 4812
+    },
+    {
+      "filename": "independent-five-actual-record-audit.json",
+      "sha256": "4d72f3602b0395caeb9bca4891e1bbb64dcf61b0beba744c986a43763c25a22c",
+      "bytes": 3758
+    },
+    {
+      "filename": "README.md",
+      "sha256": "f709a7352ef931fa71b701df70c9a5a19295bfa987bb2f808e53bd3bb8708198",
+      "bytes": 1890
+    }
+  ]
+}

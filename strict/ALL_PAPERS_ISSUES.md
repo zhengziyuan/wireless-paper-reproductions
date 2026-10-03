@@ -13,7 +13,7 @@ single cases and component tests are recorded separately from complete figures.
 
 | Paper | Source issue versus implementation/numerical issue | Disposition and evidence |
 | --- | --- | --- |
-| MIS communications | Figure7's printed 2x1 orientation and Eq3 imply azimuth-even patterns, while the original two MIS curves are not even. The user markers also contradict the text's adjacent spacing. | [COMM_ERRATA.md](mis-communications/COMM_ERRATA.md) proves the conflict. The separately labelled 1x2 orientation preserves two elements, two patterns and four users. An unfitted two-element derivation agrees with all three original patterns at approximately 8e-8 absolute linear SNR error. This is not the complete optimizer bank. |
+| MIS communications | Figure7's printed 2x1 orientation and Eq3 imply azimuth-even patterns, while the original two MIS curves are not even. The user markers also contradict the text's adjacent spacing. | [COMM_ERRATA.md](mis-communications/COMM_ERRATA.md) proves the conflict. The separately labelled 1x2 orientation preserves two elements, two patterns and four users. The complete actual Python12000-start bank has independent final physical/KKT and230400 recorded-stop checks. All1080 unfitted original vector samples agree within2.572838263652233e-7 linear SNR. Full native MATLAB12000-start certification remains pending. |
 | MIS communications | Subtracting nearly equal LSE costs can reverse a small decrease; a forced move at an already stationary point was a reconstruction bug. A numerically inactive phase block could block other legitimate descent. | Exact LSE increments, initial KKT checks, and a disclosed per-block KKT accuracy-share safeguard preserve objective, gradients, raw PR, full start counts and global tolerances. Independent Decimal tests and actual MATLAB checks are separate from full sweeps. |
 | MIS sensing | Independent block PR does not generally possess product-CG conjugacy; the positive-simplex manifold conflicts with a projection that reaches its boundary. The source's compactness/exact-penalty claims require qualifications. | [SOLVER_ERRATUM.md](mis-sensing/SOLVER_ERRATUM.md) provides counterexamples, a separately named raw-product-PR correction, feasible tangent-cone/active-face handling and an independent original constrained KKT check. The printed branch remains selectable. No global-optimum claim is made. |
 | MIS sensing | Algorithm2's indexing/OR stopping differs from the numerical paragraph's early-AND rule. Requiring early stopping after the prescribed 30 iterations was a reconstruction metadata error. | Budget termination, early termination, every inner accuracy and original KKT are distinct fields. Last actually used inner epsilon is 1.2589254117941667e-6. Completing 30 alone is not convergence. |
@@ -34,6 +34,51 @@ product. Tests verify that identity; transport omission is not blamed for
 the observed failure.
 
 ## Additional execution repairs and remaining precision limits
+
+### New verified checkpoint, with unfinished scopes kept separate
+
+- MIS sensing's arithmetic projection failure and all379 saved old starts are
+  preserved in [failed-v4 evidence](validation/sensing-correctness-v4/failed-bank-v4-v1/README.md).
+  The [distinct same-cone v5](validation/sensing-same-cone-v5-components-v1/README.md)
+  passes actual1025 shared components in each language and the failed377 cold
+  full30 original4000 solves plus original KKT in both languages. The default
+  scientific package now has exactly the executed25-file source/runtime digest;
+  the [promotion record](validation/sensing-same-cone-v5-main-promotion-v1.json)
+  distinguishes this from the still-running6000 bank and its genuine caps.
+  The orchestration now retains each exception without fabricating a completed
+  sample or setting full success from a selected successful incumbent.
+- The sensing compactness qualification is narrowed correctly: eta in R does
+  not itself defeat fixed-rho/lambda closed-domain ALM sublevel compactness,
+  because bounded SINRs and the coercive eta dependence supply it. This is not
+  global compactness of the printed open domain or a4000-step raw-PR guarantee.
+- The [partial MA dual88 snapshot](validation/two-timescale-ma-partial-dual-v1/README.md)
+  checks all5x1000 physical samples and346896 ordered coordinate records at
+  fixed kappa6, with no source/imported-solver oracle. It is not all200 or
+  kappa100. [Corrected MATLAB source-v2 initial N6/N8 components](validation/two-timescale-ma-corrected-source-v2-position-components/README.md)
+  actually use the new native schema and1000 draws. The full300 gate now routes
+  that schema, but these two fixed positions are not complete correlated-ZF
+  figures or recovery of undefined printed formulas. Existing old source-only
+  proofs remain unchanged; runtime evidence is a separately identified supplement.
+- The [native cooperative N48 full-eight case](validation/cooperative-native-N48-full8-v3/README.md)
+  joins the actual M30 case. Original stops, saved margins and selected CVX/
+  backend source intervals pass independent checks. Old v3 did not save final
+  matrices or all1000 raw draws: no final-gradient/sample-replay certification
+  is inferred, nor a new183-point-bank certificate. The extra raw-dual MP80
+  checks still reject all four SDPT3 fixed attempts while passing SeDuMi;
+  the original1e-5 pass and this stricter failure are separately reported.
+- [Five native before-ONE1000 components](validation/hotspot-native-before-one1000-components-v1/README.md)
+  actually select scale1 and execute one original1000 randomization batch each,
+  with independent post-hoc MP80 checks of saved SDP/candidate states. No later
+  scale was executed. Complete candidate replay, an independent live precision
+  gate before production selection, runtime inventory and fullCDF remain
+  uncertified; a correct post-hoc component is not a production-policy certificate.
+- [Fixed ISAC spectral/control diagnostics](validation/rotatable-isac-correctness-v2/SPECTRAL_CAP_AND_NATURAL_INITIAL_DIAGNOSTICS.md)
+  retain every predefined result: BB1/BB2 across two original scenes at10000
+  only yield one true phase-gradient stop; three fail. Natural alternating
+  initial-step controls at500 fail both cases. MP50/MP80 checks confirm actual
+  gradients and accepted increments, not a loosened tolerance or a new optimizer.
+  The unreported caps/initial step controls are diagnostics, not recovered
+  author settings or complete six-scheme/channel-average figures.
 
 - The related-ZF v2 full1000-draw aggregate physical metrics agreed, but some
   individual conditional quadratures failed fixed dual tolerances or reported
@@ -72,7 +117,8 @@ the observed failure.
   An observed500-step cap remains a cap, not convergence. Old incomplete banks
   are kept; a fresh byte-identical500-input bank restarts every case under a
   distinct source fingerprint. This is an execution repair, not a different
-  optimizer. Independent MATLAB fixed-rotation verification is still required.
+  optimizer. Independent MATLAB fixed-rotation and full500-step verification
+  actually passed; complete figure-bank convergence is still required.
 - The hotspot generator placed HUs on a radius15m circle. The author's
   Section3.6 and Table3-1 specify HU-to-HU distances10-20m, but several pairs
   in that reconstruction exceed20m. This is a confirmed implementation

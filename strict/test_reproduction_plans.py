@@ -1,7 +1,7 @@
 """Source routing tests only; never numerical reproduction certificates."""
 import unittest
 from pathlib import Path
-from reproduce import plan,HERE,statistical_matlab_call
+from reproduce import plan,HERE,statistical_matlab_call,corrected_ma_matlab_call
 
 
 class Routing(unittest.TestCase):
@@ -26,6 +26,20 @@ class Routing(unittest.TestCase):
             self.assertEqual(p['settings']['geometry_realizations'],100)
             self.assertEqual(p['settings']['nlos_realizations_per_geometry'],1000)
             self.assertEqual(p['settings']['maximum_AO_iterations'],10000)
+            self.assertIn('run_corrected_ma_figure_matlab_source_v2',p['executor'])
+
+    def test_corrected_matlab_routing_uses_actual_v2_schema_and_full_source_gate(self):
+        expression=corrected_ma_matlab_call(Path('input-bank'),Path('new-output'))
+        self.assertIn('run_matlab_bank_checked',expression)
+        self.assertIn('matlab-corrected-source-v2',expression)
+        self.assertIn('run_corrected_ma_figure_matlab_source_v2(',expression)
+        self.assertNotIn('run_corrected_ma_figure_matlab(',expression)
+        self.assertTrue(expression.endswith(',false);'))
+        self.assertLess(expression.index('run_matlab_bank_checked'),expression.index('run_corrected_ma_figure_matlab_source_v2'))
+        adapter=(HERE/'matlab-corrected-source-v2'/'run_corrected_ma_figure_matlab_source_v2.m').read_text()
+        self.assertIn('manifest.expected_jobs==300',adapter)
+        self.assertIn('config.nlos_realizations_per_geometry==1000',adapter)
+        self.assertLess(adapter.index('if ~all(valid),return;end'),adapter.index('evaluate_correlated_zf_matlab_source_v2(path'))
 
     def test_matlab_statistical_durable_default_and_explicit_legacy(self):
         output=Path('out');result=output/'statistical-matlab.json'

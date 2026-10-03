@@ -1,0 +1,301 @@
+{
+  "schema_version": 1,
+  "paper_id": "cooperative-satcom",
+  "source_version": "author_manuscript_and_author_thesis",
+  "final_publisher_conformance": "unverified_16_vs_18_page_version",
+  "run_label": "prospective_v3_same_v2_circle_softmin_and_exact_constant_factored_MR_QT",
+  "reported": {
+    "J": 3,
+    "U": 2,
+    "N": 16,
+    "K": 1,
+    "M": 25,
+    "leo_height_m": 550000,
+    "geo_height_m": 36000000,
+    "frequency_hz": 12000000000,
+    "noise_dbm": -94,
+    "power_w": 50,
+    "geo_power_w": 2000,
+    "interference_to_noise_db": -12.2,
+    "kappa_leo_db": 20,
+    "kappa_ground_db": 10,
+    "kappa_geo_db": 30,
+    "subsurface_elements": [
+      100,
+      100
+    ],
+    "element_size_m": [
+      0.01,
+      0.01
+    ],
+    "ris_lu_distance_m": 100,
+    "geo_longitude_deg": 100,
+    "lu_separation_deg": 2,
+    "satellite_separation_deg": 2.5
+  },
+  "tuned_not_reported": {
+    "earth_radius_m": 6371000,
+    "seed": 3460068,
+    "monte_carlo_realizations": 1000,
+    "leo_element_gain_dbi": 40,
+    "geo_gain_dbi": 40,
+    "lu_gain_dbi": 0,
+    "gt_diameter_m": 1.2,
+    "ris_plane": "local_east_north",
+    "satellite_plane": "local_tangent",
+    "upa_shape": [
+      4,
+      4
+    ],
+    "antenna_spacing_wavelengths": 0.5,
+    "user_latitudes_deg": [
+      0,
+      2
+    ],
+    "satellite_latitudes_deg": [
+      -2.5,
+      0,
+      2.5
+    ],
+    "lu_longitudes_deg": [
+      100,
+      100
+    ],
+    "gt_latitude_deg": 0,
+    "initial_phase_radians": 0.2,
+    "qt_max_iterations": 200,
+    "ao_max_iterations": 200,
+    "rmo_max_iterations": 100000,
+    "relative_tolerance": 0.0001,
+    "gradient_tolerance": 0.000001,
+    "solver_objective_tolerance": 0.00001,
+    "rmo_initial_step": "alternating positive BB1/BB2 seeds in original RGD direction, same circle/Armijo1e-4",
+    "rmo_safety_cap_evidence": "Original cap unreported. Preserve old5000/20000 failures. WORK same fullJ3/U2/N16/M30 circle-only firstMR-TTSmu1 phase22450 steps reaches9.6646088e-7, all8chains true; jointcircle/softmin distinctM30 andM25 beta0 ground24 full8 independently pass physical/convergence/primal/QT. Declare100000 safetycap; caps remain failures. Gradient1e-6, Armijo1e-4, same smoothing/model/QoS/power/GT limits unchanged.",
+    "rmo_exact_evaluation": "all-coordinate sparse moment-derivative contraction verified against retained scalar-coordinate formulas and all50 finite differences; same full finite-Rician objective, GEO offset and full squared penalty",
+    "smoothing_initial": 1,
+    "smoothing_final": 0.001,
+    "smoothing_max_repeats": 50,
+    "smoothing_progress_tolerance": 1e-8,
+    "solver": "CLARABEL",
+    "solver_options": {},
+    "solver_primal_relative_tolerance": 0.00001,
+    "qt_bound_tolerance": 0.00001,
+    "rmo_exact_increment_representation": "Same-circle phasechange=old*(-2sin(delta/2)^2+i sin(delta)), zero-step exact identity; same softmin log1p identity only|max(t)|<=1/2 where exp-sum>=exp(-1/2), otherwise same centeredlogsumexp. No Armijo slack, reference fit or optimizer replacement.",
+    "mr_QT_representation": "sqrt(scale*v)=sqrt(scale)*sqrt(v), exact positive fixed-coordinate constant moved outside original square-root cone; same auxiliaries/constraints/objective/gates. All19 actual old failed inputs pass independent80digit same1e-5 precision checks."
+  },
+  "sweeps": [
+    {
+      "id": "power_kL20",
+      "parameter": "power_w",
+      "values": [
+        1,
+        1.4142135623730951,
+        2,
+        2.8284271247461903,
+        4,
+        5.656854249492381,
+        8,
+        11.313708498984761,
+        16,
+        22.627416997969522,
+        32
+      ],
+      "kappa_leo_db": 20
+    },
+    {
+      "id": "power_kL0",
+      "parameter": "power_w",
+      "values": [
+        1,
+        1.4142135623730951,
+        2,
+        2.8284271247461903,
+        4,
+        5.656854249492381,
+        8,
+        11.313708498984761,
+        16,
+        22.627416997969522,
+        32,
+        45.254833995939045,
+        64
+      ],
+      "kappa_leo_db": 0
+    },
+    {
+      "id": "interference_kL20",
+      "parameter": "interference_to_noise_ratio",
+      "values": [
+        0.01,
+        0.02,
+        0.03,
+        0.04,
+        0.05,
+        0.06,
+        0.07,
+        0.08,
+        0.09,
+        0.1,
+        0.11,
+        0.12
+      ],
+      "kappa_leo_db": 20
+    },
+    {
+      "id": "interference_kL0",
+      "parameter": "interference_to_noise_ratio",
+      "values": [
+        0.01,
+        0.02,
+        0.03,
+        0.04,
+        0.05,
+        0.06,
+        0.07,
+        0.08,
+        0.09,
+        0.1,
+        0.11,
+        0.12
+      ],
+      "kappa_leo_db": 0
+    },
+    {
+      "id": "subsurfaces_kL20",
+      "parameter": "M",
+      "values": [
+        5,
+        10,
+        15,
+        20,
+        25,
+        30,
+        35,
+        40,
+        45
+      ],
+      "kappa_leo_db": 20
+    },
+    {
+      "id": "subsurfaces_kL0",
+      "parameter": "M",
+      "values": [
+        5,
+        10,
+        15,
+        20,
+        25,
+        30,
+        35,
+        40,
+        45
+      ],
+      "kappa_leo_db": 0
+    },
+    {
+      "id": "ground_kL0",
+      "parameter": "kappa_ground_db",
+      "values": [
+        -12,
+        -9,
+        -6,
+        -3,
+        0,
+        3,
+        6,
+        9,
+        12,
+        15,
+        18,
+        21,
+        24,
+        27,
+        30
+      ],
+      "kappa_leo_db": 0
+    },
+    {
+      "id": "ground_kL10",
+      "parameter": "kappa_ground_db",
+      "values": [
+        -12,
+        -9,
+        -6,
+        -3,
+        0,
+        3,
+        6,
+        9,
+        12,
+        15,
+        18,
+        21,
+        24,
+        27,
+        30
+      ],
+      "kappa_leo_db": 10
+    },
+    {
+      "id": "ground_kL20",
+      "parameter": "kappa_ground_db",
+      "values": [
+        -12,
+        -9,
+        -6,
+        -3,
+        0,
+        3,
+        6,
+        9,
+        12,
+        15,
+        18,
+        21,
+        24,
+        27,
+        30
+      ],
+      "kappa_leo_db": 20
+    }
+  ],
+  "sweep_provenance": "Source dimensions/defaults are reported. Grids recovered from author-thesis originalEPS curve vertices and visually checked axes; power half-octave interpretation inferred from rounded vertices. MC/seed/caps/unreported geometry remain tuned. No reference ordinate enters simulation.",
+  "interference_axis_interpretation": "Original EPS printsW but marks normalized -12.2dB ITU line at0.06026. Scenario limits are linearINR relative to normalizednoise1; do not interpret axis as physical wattage.",
+  "multi_vs_single": {
+    "enabled": true,
+    "status": "implemented_not_full_run",
+    "kappa_leo_db": [
+      0,
+      20
+    ],
+    "offsets_deg": [
+      1.25,
+      2.5
+    ],
+    "single_N": 48,
+    "single_power_w": 150,
+    "single_upa_shape": [
+      6,
+      8
+    ],
+    "interference_values_linear": [
+      0.01,
+      0.02,
+      0.03,
+      0.04,
+      0.05,
+      0.06,
+      0.07,
+      0.08,
+      0.09,
+      0.1,
+      0.11,
+      0.12
+    ],
+    "required_fairness": "3*16=48 total antennas and3*50=150W total power for multi and single"
+  },
+  "gt_pattern_provenance": "Actual ITU-R S.1428-1 recommends1 full piecewise radiation pattern, which ITU S.1503 FSS receive-pattern section references. The thesis citesS.1503-3/1419; exact publisher version unverified. Diameter1.2m is explicit numeric tuning, not a pattern substitution.",
+  "numerical_version": "prospective_v3_distinct_sources_no_v2_or_old_bank_upgrade",
+  "prospective_formal_bank_preflight": "No formal new183 launch until actual full original10 phase-failed scenes/all8 Python chains and independent nativeMAT full preflights/source bindings; old183154valid29failed remains old evidence. NativeMATv2 M30 failure is not relabelled."
+}
+

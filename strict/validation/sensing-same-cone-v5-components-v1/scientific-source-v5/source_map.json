@@ -1,0 +1,83 @@
+{
+  "paper_id": "mis-sensing",
+  "doi": "10.1109/JSTSP.2026.3681476",
+  "public_sources": [
+    "https://doi.org/10.1109/JSTSP.2026.3681476",
+    "https://arxiv.org/abs/2509.15627",
+    "https://arxiv.org/html/2509.15627v1"
+  ],
+  "authoritative_revision": "author-supplied final R1 TeX; private manuscript excluded",
+  "source_sha256": "B0AC3782B11CDB7D2B0D1DFE581BFCFBE17C72C52F64AEF3E55CD0BFCE25592A",
+  "publisher_pdf_comparison": "pending; DOI browser/search did not expose final text",
+  "equations": [
+    {
+      "locator": "Section II MIS Architecture and Modeling; III Problem Formulation, equations (9)-(11)",
+      "implementation": "Model.fields; metric",
+      "claim": "final Hermitian PSD G and quartic echo; exact rank-one reconstruction"
+    },
+    {
+      "locator": "Section IV Product Manifold Constructing, equations (15)-(18)",
+      "implementation": "project; retract",
+      "claim": "Euclidean/Frobenius product geometry, not Fisher multinomial manifold"
+    },
+    {
+      "locator": "Section IV RALM Framework, P2.1/P2.2 and multiplier/penalty/iota equations",
+      "implementation": "augmented; sensing_solve",
+      "claim": "old multiplier iota, clip, conditional rho, exact prescribed budgets"
+    },
+    {
+      "locator": "Section IV RCG Method, gradients (33)-(34), projections (35)-(37), PR/transport (38)-(41), retractions (42)-(45)",
+      "implementation": "metric gradients; augmented; rcg",
+      "claim": "all four block derivatives, raw block PR, additive retractions",
+      "independent_numerical_safeguard": "Closed-boundary simplex projection uses actual feasible-displacement Armijo, projected-displacement non-descent restart, and separately reported projected/KKT residual. Raw PR and all published ALM updates/budgets are unchanged; literal printed mode remains available."
+    },
+    {
+      "locator": "Algorithm 1 label alg:general_solution; Algorithm 2 label alg:ralm; Numerical Results solver paragraph",
+      "implementation": "sensing_solve; settings.json",
+      "claim": "6000x30x4000, prescribed rho/multiplier/epsilon values",
+      "ambiguity": "Algorithm 2 OR versus Numerical Results AND stopping; default AND explicitly selected"
+    },
+    {
+      "locator": "Section V Extension to PSLR-Based Beampattern Design, P3/P3.1/P3.2, gradients (58)",
+      "implementation": "metric pslr; make_model; optimize mu stages",
+      "claim": "complete dense grid, interference/guard sets and ratio softmin derivatives"
+    },
+    {
+      "locator": "Section VI Heuristic Closed-Form MIS Design, equations (64)-(69), final practical A formula",
+      "implementation": "closed_form",
+      "claim": "exact coverage A, quadratic pair, finite padding",
+      "inferred": "Section VI negative-exponent field and Section III positive-exponent c require conjugate quadratic phases for an equivalent implementation. Same-origin phases, original nearest-grid displacement law, no theta-only offset; see CLOSED_FORM_CONVENTION.md. Historical plotted phases remain unavailable."
+    },
+    {
+      "locator": "Section VII Numerical Results; Figures 2-16",
+      "implementation": "figures.json; settings.json; run.py",
+      "claim": "full original dimensions, targets and scenario sweeps; original EPS markers recover phi0/45/90,theta30/50/70 and elevation-major target order; Numerical Results swaps the two ranges. Rectangular PSLR guard phi+/-22.5,theta+/-10 is explicit source text.",
+      "figure_contract": "figure_map.json specifies full point counts, groups, metrics and known source inconsistencies"
+    }
+  ],
+  "known_source_differences": [
+    "public v1 PSD expression differs from final R1",
+    "public v1 L/noise convention differs from final L=1",
+    "public v1 penalty progress comparison differs from final R1",
+    "final R1 Numerical Results angle ranges are swapped relative to Eq3c definitions and original EPS markers; figure-recovered phi0..90,theta30..70 inputs are explicitly used",
+    "The ratio beta^2/sigma_k^2 is dimensionful (inverse power); R1 omits its reference unit and raw versus post-matched-filter noise convention. Earlier unconditional impossibility claims assumed inverse-W/single-PRI and are withdrawn.",
+    "Eq4 uses a*a^H but Eq6/7 use a*a^T, scales noise by sqrt(P), and does not carry the matched-filter waveform energy into an explicit effective-noise definition. Eq9/11 quartic PSD optimization model is retained.",
+    "A separately disclosed effective-factor100 candidate matches all six original continuous RIS ordinates within 0.009 dB; it does not uniquely identify Tp=100, recover all other curves, or certify the complete 6000-start figure."
+  ],
+  "physical_bound_audit": {
+    "premises": "Eq3 unit-modulus steering, Eq10 unit-modulus equivalent v including finite padding, Eq11 G=conj(c)c^T, Eq9 nonnegative target interference and sigma^2/P, L1",
+    "proof": "|c^T v|<=M, v^H G v=|c^T v|^2<=M^2, SINR<=P_W*R_effective_per_W*M^4; a simplex schedule is a convex combination and cannot exceed this bound",
+    "reference_contract": "The following historical bounds are conditional on ratio=-73.88 dB per W and processing_factor=1, not unqualified bounds for the reported physical scenario. Sigma_k^2 may already be processed noise; for raw noise, normalized coherent integration gives sigma_eff^2=sigma_raw^2/Tp. L1 has no array gain.",
+    "fig3_bound_db": 30.202399653118498,
+    "fig3_source_annotation_db": 32.02,
+    "fig15_P30_bound_db": 6.12,
+    "fig15_source_MIS_db": 21.67,
+    "status": "reference convention not uniquely recovered; explicit literal and inferred candidate contracts provided, no all-figure certification",
+    "test_entrypoint": "test_figure_inputs.py"
+  },
+  "excluded": [
+    "measurement and detector false-alarm probability data",
+    "original unpublished initializations/grids",
+    "claim of completed original figure reproduction"
+  ]
+}

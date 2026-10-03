@@ -35,11 +35,16 @@ The private manuscript is not distributed.
    tangent cone, resets memory at active-face changes, and verifies the
    projected-simplex KKT mapping. No scheduling elimination is performed.
 
-3. **Global compactness is not established as written.** The product includes
-   `eta in R`, and an open positive simplex is not compact. A bounded-level-set
-   argument can instead use bounded SINRs and the fixed ALM's coercive eta
-   dependence. That is different from global compactness. This code verifies
-   measured residuals; it does not silently supply a stronger theorem.
+3. **Global compactness needs a sublevel-set qualification.** The full product
+   includes `eta in R`, and an open positive simplex is not compact. However,
+   noncompact eta alone does NOT invalidate the fixed ALM subproblem: with
+   positive noise, the original circle/closed-simplex variables bound every
+   SINR. At fixed finite rho>0 and lambda, as eta tends to minus infinity,
+   the penalty vanishes and L=-eta tends to plus infinity; as eta tends to
+   plus infinity, L grows quadratically. Thus the closed-domain fixed-ALM
+   sublevel sets are compact. This is not compactness of the whole printed
+   open domain, a theorem for the changing-penalty sequence, or a guarantee
+   that every raw-PR inner solve meets tolerance within4000 iterations.
 
 4. **Finite squared ALM is not automatically an exact penalty.** The Section IV
    inference from feasible ALM stationarity to original KKT needs multiplier
@@ -199,3 +204,40 @@ MATLAB: run_mis_sensing('full-fig3-matlab.json','fig3','settings_reference_candi
 Use a new output directory after source/settings changes. Old source digests
 are intentionally rejected; source mutation during a start invalidates that
 execution rather than certifying mixed code.
+
+## Finite same-cone projection repair and fail-closed orchestration (v5)
+
+The v4 full-bank attempt actually stopped on start377: the floating active-set
+membership loop alternated at a raw boundary tie. Its379 saved starts
+(343 passed,36 capped) remain frozen separately, including the failed start's
+exception; this is an implementation arithmetic issue, not a proved manuscript
+error and not a completed6000-start figure.
+
+The default corrected branch now uses the SAME Euclidean closed-simplex
+tangent-cone projection via a finite sorted scalar threshold. Positive X is
+still exactly X>0: no small positive entry is pruned. Uncertain membership
+comparisons escalate to the exact stored binary input values (Python Fraction;
+MATLAB BigDecimal(double)), not a support or stopping tolerance. RAW product
+PR, gradient metric, line search, ALM updates,6000/30/4000 budgets and all
+original accuracy thresholds remain unchanged. The earlier v1 helper is
+retained only as a historical component; the default calls the exact-raw-order
+v2 helper. Source bytes match the independently executed frozen v5 package.
+
+The [portable v5 evidence](../validation/sensing-same-cone-v5-components-v1/README.md)
+contains actual1025 projection checks in each language, the actual original
+start377 cold full30/4000 results, original constrained Decimal KKT audits,
+source/input bindings and preserved v4 diagnosis. Both cold solves pass all30
+inner stops and final original KKT, but their nonconvex local eta values differ;
+they are not claimed as identical trajectories or a global optimum. The new
+complete6000 bank is still running and includes real capped starts. Component
+success does not upgrade those failures or certify the original figure.
+
+The durable central executor now retains a per-start exception as an explicit
+failed record and continues the required population. Such a record has no
+terminal state/metric, cannot enter an incumbent or contribute a manufactured
+6000-sample mean, and makes full-budget/full-convergence flags false. Existing
+receipts cannot be overwritten; keyboard interrupts propagate. Reported mean
+sample counts are actual completed solves, so incomplete counts still fail
+the full-figure renderer. Selected-incumbent convergence is reported separately
+and cannot set overall full success. The orchestration negative tests are
+`python strict/test_sensing_executor_errors.py`, not numerical reproduction.

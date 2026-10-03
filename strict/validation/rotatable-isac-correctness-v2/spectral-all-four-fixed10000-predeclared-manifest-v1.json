@@ -1,0 +1,51 @@
+{
+  "scope": "predeclared_all4_same_spectral_seeds_cold10000_not_live_cap_mutation",
+  "all_original_inputs_sha256": {
+    "case-000-mc-001.json": "e23f81cd2aa93f186f175f649fc85eb8448de53033fc36d60f1931df068f11d1",
+    "case-000-mc-002.json": "44cc8224c068f5a06bcd0b7c4ef9aabc780cdb44c4296cf256834e0254fb9ed2"
+  },
+  "WORK_sources_frozen_before_actual_runs": {
+    "test_spectral_initial_seed_cap10000_work_v2.py": "e3d313b96938fa1fd47fc0cbd9444c785b4c10780ba96073ff74ffb4a5dcfa78",
+    "SPECTRAL_INITIAL_SEED_CAP10000_PLAN_V2.md": "fc83a75bba32f0ddca04659c6592c952a049ecdabae15721680b7d4a35b5bae6",
+    "spectral_initial_armijo_seed_work_v1.py": "28ccd5cb93402d7eed24c16077259269c2401a45fb301e08e7386537c0ca993c",
+    "test_spectral_initial_seed_two_cases_work_v1.py": "c75e37444cd91ce10f079164290494350499212a0e6d93ad76c7b68acda567b8",
+    "stable_rcg_literal_work_v2.py": "6875a558fbecd3efc04fe9817c7990d8a7f02a1be5cfd0ce2a8bb89608ca01d9",
+    "stable_fixed_rotation_increment_work_v1.py": "6aae5f3ed807179f4c7136cefbd4b71d53f3443cbe3e210fb741f63f03406365",
+    "independent_highprecision_isac.py": "d14050078d636ca33bd78fb2206406735a22589eeb0aa14b0f28c3d443d893bc"
+  },
+  "production_source_fingerprint": "1e940a4c82564a8f8a8fb65a3bef2dd13702d7872e6eb9da761e4586c7a778fa",
+  "old_failed_full500_raw_sha256": "8b18e5d092863dbc3a332927d3d15703c9613025d90ebc9c173ef8c088ff7a70",
+  "fixed_population_order": [
+    [
+      "BB1",
+      1
+    ],
+    [
+      "BB1",
+      2
+    ],
+    [
+      "BB2",
+      1
+    ],
+    [
+      "BB2",
+      2
+    ]
+  ],
+  "maximum_parallel_WORK_workers": 2,
+  "BLAS_threads_per_worker": 1,
+  "controlled_diff_only_unreported_RCG_maximum_iterations500_to10000": true,
+  "original_raw_PR_transport_direction_retraction_Armijo_backtrack_and_epsilon1e_minus_6_unchanged": true,
+  "observer_only_added_fixed_checkpoints": [
+    0,
+    249,
+    499,
+    999,
+    4999,
+    9999
+  ],
+  "each_own_original500_full_numerical_prefix_bitwise_check_required": true,
+  "no_best_strategy_selection_Wolfe_preconditioner_cap_fishing_or_production_promotion": true,
+  "all_4_gradient_stops_not_yet_claimed": true
+}

@@ -1,0 +1,95 @@
+{
+  "scope": "WORK_actual_native_fixed_same_SDP_precision_before_ONE1000_component_AND_MP80_actual_state_NOT_production_or_fullCDF",
+  "actual_native_receipt_sha256": "343a23ae55e9e77e21c968f19fa6d416f97b69689cb98e90d98a1790789e3bc9",
+  "actual_native_states_sha256": "4e0a47894f1f086c50e6fd0ca7888f46bf4396b0a65ad83d806156da19eb6f05",
+  "actual_source_interval_and_current_recorded_hashes_pass": true,
+  "fixed_four_scale_schedule": [
+    1,
+    0.01,
+    100,
+    10000
+  ],
+  "actual_selected_attempt_one_based": 1,
+  "actual_attempts": [
+    {
+      "exact_positive_objective_scale": 1.0,
+      "checks": {
+        "same_independently_rebuilt_original_coefficients": true,
+        "independent80digit_dual_PSD_witness_pass": true,
+        "true_unit_diagonal_primal_PSD_pass": true,
+        "true_feasible_primal_dual_gap_original_tolerance_pass": true,
+        "actual_raw_primal_dual_gap_original_tolerance_pass": true
+      },
+      "all_independent80digit_checks_pass": true,
+      "same_coefficient_maximum_error": 2.929642751054232e-14,
+      "true_feasible_primal_dual_gap": "0.000000065117004847948666808059623566551893095433391301965559817043839887",
+      "actual_raw_primal_dual_gap": "0.000000065119520357881317441614813204335680879508746127578965065836622388",
+      "independent_dual_upper_objective": "10.438909265862889612264059370181060429143420137321246127578965066",
+      "positive_dual_PSD_witness_lower_bound": "0.0000000025043148630623500118078786701073608347285376374920470009914584376",
+      "dual_eigendecomposition_residual_bound": "1.4319312675769522860851041231446627091897825693094061801780156134e-78",
+      "explicit80digit_arithmetic_floor": "8.5724220226487805348159230533981483659823028314901649287500938361e-59",
+      "diagnostic_primal_PSD_shift_not_optimizer_change": "1.0e-25",
+      "actual_provisional_double_guard_before_rounding_pass": true,
+      "precision_decimal_digits": 80,
+      "native_CVX_dual_sign_convention_independently_verified": true
+    }
+  ],
+  "selected_actual_SDP_independent80digit_precision_pass": true,
+  "actual_single_original1000_batch_and_candidate_precision_gates_pass": true,
+  "independent_actual_best_phase_original_surrogate_error": 1.2967404927621828e-13,
+  "actual_single1000_rounding": {
+    "original_precision_and_candidate_gates_pass": true,
+    "randomization_batches_executed": 1,
+    "actual_original_candidates_evaluated": 1000,
+    "excluded_near_poles_preserved": 0,
+    "same1000_best_surrogate": 10.438909200748558,
+    "candidate_excess_over_actual_raw_primal": 5.188738327888132e-12,
+    "unit_modulus_error": 2.220446049250313e-16,
+    "same_original_rank_one_identity_error": 2.842170943040401e-14,
+    "no_second_rounding_after_candidate_gate": true
+  },
+  "every_actual1000_candidate_matrix_independently_saved_and_recomputed": false,
+  "all_selected_backend_MAT_and_MEX_runtime_bytes_bound": false,
+  "WORK_source_hashes": {
+    "verify_actual_matlab_scaled_duals.py": "e779012e67e4e0c68496f262f3ccdb2d8888e978dc1d696d4fb18453a32f5d0e",
+    "verify_scaled_dual_general.py": "1872f5ac66fab18382ac40fa44c826d4c642da8e6f27cee919a74135d0b8039e",
+    "audit_original_sdp.py": "f9a5ee7072c1ea6a8f0e492199ca4851f0e16486ca7425cfc6a6d26b234f0fa9",
+    "verify_actual_native_precision_before_one1000_policy_work.py": "aa7f983f7668ed74f7764c1bbec118e722e83c863dacce0824565f02c2e02712"
+  },
+  "actual_native_recorded_source_hashes": [
+    {
+      "filename": "test_prospective_precision_before_rounding_work.m",
+      "sha256": "6d586b85182f926c36f37e03aa0693d8b2cc907358b83606d5eb6c3e1d32e5bd"
+    },
+    {
+      "filename": "strict_hotspot_core.m",
+      "sha256": "875c05cb50659fb8cae6f7bddcd41bd88de321548df3e5656f0128ee1dc7ca95"
+    },
+    {
+      "filename": "instantaneous-SDP-rounding-failure-75970ff91577c333.mat",
+      "sha256": "2ad1d28ca9a9455f026ee53a5b1b4d8dbe3a0e2faaeb1f1575839e41a3b345c4"
+    },
+    {
+      "filename": "cvx_begin.m",
+      "sha256": "48520362f711704d85b9e9377c5ac1f1ccef449952528381121d17c63c2210ad"
+    },
+    {
+      "filename": "cvx_end.m",
+      "sha256": "d0a3fd444b1706d22f7df0b4086932bb78987fd1519e3e2f74cb4487055366b9"
+    },
+    {
+      "filename": "cvx_solver.m",
+      "sha256": "1dadc97e348770eeb54b4bd377e73c45c5f6dc9909f61530c219e9cba2335f81"
+    },
+    {
+      "filename": "cvx_precision.m",
+      "sha256": "ca0b329b07eb8b590ef185706ea6209ba91a54459408e426610181f450f1875e"
+    }
+  ],
+  "old_failed_scale_and_bank_receipts_not_upgraded": true,
+  "no_Python_or_MATLAB_optimization_rerun": true,
+  "native_production_precision_policy_certified": false,
+  "native_whole_sample_or_CDF_verified": false,
+  "full_reproduction_pass": false,
+  "audit_seconds": 6.771539500041399
+}

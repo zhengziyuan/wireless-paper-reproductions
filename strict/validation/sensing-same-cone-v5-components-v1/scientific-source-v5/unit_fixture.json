@@ -1,0 +1,87 @@
+{
+  "model": {
+    "ms1": [
+      3,
+      4
+    ],
+    "ms2": [
+      2,
+      2
+    ],
+    "azimuth_deg": [
+      32,
+      51,
+      68
+    ],
+    "elevation_deg": [
+      18,
+      46,
+      76
+    ],
+    "spacing_over_wavelength": 0.3333333333333333,
+    "incidence_direction_cosines": [
+      0,
+      0
+    ],
+    "reference_snr": 0.01,
+    "echo_beta_squared": 4.0926065973001096e-8,
+    "noise_over_power": 1,
+    "number_of_targets": 3
+  },
+  "phi_angles": [
+    0.13,
+    0.57,
+    -0.31,
+    1.7,
+    -2.1,
+    0.97,
+    -0.8,
+    2.7,
+    0.22,
+    -1.4,
+    0.89,
+    2.1
+  ],
+  "theta_angles": [
+    -0.71,
+    0.42,
+    1.1,
+    -1.8
+  ],
+  "X": [
+    [
+      0.1,
+      0.15,
+      0.2,
+      0.1,
+      0.25,
+      0.2
+    ],
+    [
+      0.21,
+      0.13,
+      0.14,
+      0.17,
+      0.16,
+      0.19
+    ],
+    [
+      0.12,
+      0.18,
+      0.23,
+      0.16,
+      0.2,
+      0.11
+    ]
+  ],
+  "eta": 0.0001,
+  "unit_options": {
+    "max_iterations": 40,
+    "gradient_tolerance": 1e-10,
+    "line_search_policy": "common_product_armijo",
+    "initial_step": 1,
+    "armijo_constant": 0.0001,
+    "backtrack_factor": 0.5,
+    "max_backtracks": 60
+  }
+}

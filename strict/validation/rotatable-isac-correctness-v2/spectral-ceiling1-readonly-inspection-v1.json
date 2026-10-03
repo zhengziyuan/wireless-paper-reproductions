@@ -1,0 +1,304 @@
+{
+  "scope": "read_only_all_four_completed_spectral_cap10000_ceiling_inspection_not_new_control_test",
+  "aggregate_raw_sha256": "3f6a12769a32535a58944a97204fa483ae424929f18f2ad669bef58c4e37d538",
+  "records": [
+    {
+      "strategy": "BB1",
+      "case": "case-000-mc-002",
+      "raw_sha256": "09bfd470d86ba9c116382ff5cac3b8e8c4f54fb5ce04dce6def01de5ed1c7795",
+      "updates": 2047,
+      "positive_finite_secant_seeds": 2046,
+      "valid_raw_seeds_clipped_at_original_scalar_ceiling1": 178,
+      "upper_clipped_fraction_of_valid_seeds": 0.08699902248289346,
+      "fixed_original1_fallback_count": 1,
+      "valid_raw_seed_min_median_max": [
+        0.0008056371123324589,
+        0.006518168181439213,
+        174.20143671446837
+      ],
+      "actual_backtracked_alpha_min_median_max": [
+        1.8419888839057619e-06,
+        0.00161127353491162,
+        0.5
+      ],
+      "fixed_checkpoint_direction_scales": [
+        {
+          "update": 0,
+          "raw_seed": null,
+          "fallback_used": true,
+          "chosen_initial_alpha": 1.0,
+          "accepted_alpha": 0.001953125,
+          "maximum_original_direction_coordinate_abs": 0.46369213972296264,
+          "natural_unit_circle_tangent_trial_alpha_upper": 2.156603302780719
+        },
+        {
+          "update": 249,
+          "raw_seed": 0.018895578960472528,
+          "fallback_used": false,
+          "chosen_initial_alpha": 0.018895578960472528,
+          "accepted_alpha": 0.004723894740118132,
+          "maximum_original_direction_coordinate_abs": 1.676950028082751,
+          "natural_unit_circle_tangent_trial_alpha_upper": 0.5963206912869642
+        },
+        {
+          "update": 499,
+          "raw_seed": 0.06880543843565307,
+          "fallback_used": false,
+          "chosen_initial_alpha": 0.06880543843565307,
+          "accepted_alpha": 0.0021501699511141583,
+          "maximum_original_direction_coordinate_abs": 0.23817208083703617,
+          "natural_unit_circle_tangent_trial_alpha_upper": 4.198644931368875
+        },
+        {
+          "update": 999,
+          "raw_seed": 0.0014972470172397731,
+          "fallback_used": false,
+          "chosen_initial_alpha": 0.0014972470172397731,
+          "accepted_alpha": 0.0014972470172397731,
+          "maximum_original_direction_coordinate_abs": 0.010356377121691391,
+          "natural_unit_circle_tangent_trial_alpha_upper": 96.55886303189017
+        }
+      ],
+      "actual_source_gradient_stop": true,
+      "actual_final_normalized_gradient": 9.008723391934559e-07
+    },
+    {
+      "strategy": "BB1",
+      "case": "case-000-mc-001",
+      "raw_sha256": "4b71dc0e49ff1b3a31ab75e86db915249a72808fe0aabb9d1b649e9c4591992c",
+      "updates": 10000,
+      "positive_finite_secant_seeds": 9995,
+      "valid_raw_seeds_clipped_at_original_scalar_ceiling1": 113,
+      "upper_clipped_fraction_of_valid_seeds": 0.011305652826413206,
+      "fixed_original1_fallback_count": 5,
+      "valid_raw_seed_min_median_max": [
+        3.0972834448403835e-05,
+        0.0011173743491918575,
+        70.8520335858146
+      ],
+      "actual_backtracked_alpha_min_median_max": [
+        4.803998971965986e-08,
+        6.026915978844505e-05,
+        1.0
+      ],
+      "fixed_checkpoint_direction_scales": [
+        {
+          "update": 0,
+          "raw_seed": null,
+          "fallback_used": true,
+          "chosen_initial_alpha": 1.0,
+          "accepted_alpha": 6.103515625e-05,
+          "maximum_original_direction_coordinate_abs": 1.2961045064216528,
+          "natural_unit_circle_tangent_trial_alpha_upper": 0.7715427228633344
+        },
+        {
+          "update": 249,
+          "raw_seed": 0.004473529682207631,
+          "fallback_used": false,
+          "chosen_initial_alpha": 0.004473529682207631,
+          "accepted_alpha": 0.004473529682207631,
+          "maximum_original_direction_coordinate_abs": 0.0017185808663198949,
+          "natural_unit_circle_tangent_trial_alpha_upper": 581.8754413002181
+        },
+        {
+          "update": 499,
+          "raw_seed": 0.0014365853514132435,
+          "fallback_used": false,
+          "chosen_initial_alpha": 0.0014365853514132435,
+          "accepted_alpha": 4.489329223166386e-05,
+          "maximum_original_direction_coordinate_abs": 0.011680773564373819,
+          "natural_unit_circle_tangent_trial_alpha_upper": 85.61076836982653
+        },
+        {
+          "update": 999,
+          "raw_seed": 3.478275669653247e-05,
+          "fallback_used": false,
+          "chosen_initial_alpha": 3.478275669653247e-05,
+          "accepted_alpha": 3.478275669653247e-05,
+          "maximum_original_direction_coordinate_abs": 0.05433091497859399,
+          "natural_unit_circle_tangent_trial_alpha_upper": 18.405727206950097
+        },
+        {
+          "update": 4999,
+          "raw_seed": 3.29339684274983e-05,
+          "fallback_used": false,
+          "chosen_initial_alpha": 3.29339684274983e-05,
+          "accepted_alpha": 3.29339684274983e-05,
+          "maximum_original_direction_coordinate_abs": 0.06632082036586003,
+          "natural_unit_circle_tangent_trial_alpha_upper": 15.078221205399474
+        },
+        {
+          "update": 9999,
+          "raw_seed": 0.0020653431348579064,
+          "fallback_used": false,
+          "chosen_initial_alpha": 0.0020653431348579064,
+          "accepted_alpha": 0.0020653431348579064,
+          "maximum_original_direction_coordinate_abs": 0.006315401934434825,
+          "natural_unit_circle_tangent_trial_alpha_upper": 158.3430493231927
+        }
+      ],
+      "actual_source_gradient_stop": false,
+      "actual_final_normalized_gradient": 0.00827392703705238
+    },
+    {
+      "strategy": "BB2",
+      "case": "case-000-mc-001",
+      "raw_sha256": "d9e736926e2d0a648da97ee01e711e116044b732bf2de5a92e6f65d76f5249ac",
+      "updates": 10000,
+      "positive_finite_secant_seeds": 9306,
+      "valid_raw_seeds_clipped_at_original_scalar_ceiling1": 9,
+      "upper_clipped_fraction_of_valid_seeds": 0.0009671179883945841,
+      "fixed_original1_fallback_count": 694,
+      "valid_raw_seed_min_median_max": [
+        1.0495487388598456e-07,
+        3.53754912200567e-05,
+        12.615147023044713
+      ],
+      "actual_backtracked_alpha_min_median_max": [
+        2.1030628969826363e-09,
+        3.562500128533053e-05,
+        1.0
+      ],
+      "fixed_checkpoint_direction_scales": [
+        {
+          "update": 0,
+          "raw_seed": null,
+          "fallback_used": true,
+          "chosen_initial_alpha": 1.0,
+          "accepted_alpha": 6.103515625e-05,
+          "maximum_original_direction_coordinate_abs": 1.2961045064216528,
+          "natural_unit_circle_tangent_trial_alpha_upper": 0.7715427228633344
+        },
+        {
+          "update": 249,
+          "raw_seed": 5.1866697037450194e-05,
+          "fallback_used": false,
+          "chosen_initial_alpha": 5.1866697037450194e-05,
+          "accepted_alpha": 5.1866697037450194e-05,
+          "maximum_original_direction_coordinate_abs": 0.0011945874471474473,
+          "natural_unit_circle_tangent_trial_alpha_upper": 837.1090809533431
+        },
+        {
+          "update": 499,
+          "raw_seed": 0.0003846969147625143,
+          "fallback_used": false,
+          "chosen_initial_alpha": 0.0003846969147625143,
+          "accepted_alpha": 0.0003846969147625143,
+          "maximum_original_direction_coordinate_abs": 0.0013065025620614718,
+          "natural_unit_circle_tangent_trial_alpha_upper": 765.402249515795
+        },
+        {
+          "update": 999,
+          "raw_seed": 0.008888316470441712,
+          "fallback_used": false,
+          "chosen_initial_alpha": 0.008888316470441712,
+          "accepted_alpha": 0.008888316470441712,
+          "maximum_original_direction_coordinate_abs": 0.0014054780473634898,
+          "natural_unit_circle_tangent_trial_alpha_upper": 711.5016857615681
+        },
+        {
+          "update": 4999,
+          "raw_seed": null,
+          "fallback_used": true,
+          "chosen_initial_alpha": 1.0,
+          "accepted_alpha": 0.0001220703125,
+          "maximum_original_direction_coordinate_abs": 0.02639483259264436,
+          "natural_unit_circle_tangent_trial_alpha_upper": 37.88620353965334
+        },
+        {
+          "update": 9999,
+          "raw_seed": 3.53305010432877e-05,
+          "fallback_used": false,
+          "chosen_initial_alpha": 3.53305010432877e-05,
+          "accepted_alpha": 3.53305010432877e-05,
+          "maximum_original_direction_coordinate_abs": 0.003727117152372504,
+          "natural_unit_circle_tangent_trial_alpha_upper": 268.3038818255144
+        }
+      ],
+      "actual_source_gradient_stop": false,
+      "actual_final_normalized_gradient": 0.0019417535101722803
+    },
+    {
+      "strategy": "BB2",
+      "case": "case-000-mc-002",
+      "raw_sha256": "3c9a5355d8f448700f4833c6a260e9c139d31b45463af2915fa0e12ae2b36f36",
+      "updates": 10000,
+      "positive_finite_secant_seeds": 9923,
+      "valid_raw_seeds_clipped_at_original_scalar_ceiling1": 138,
+      "upper_clipped_fraction_of_valid_seeds": 0.01390708455104303,
+      "fixed_original1_fallback_count": 77,
+      "valid_raw_seed_min_median_max": [
+        0.0001739261757256327,
+        0.00122394222470563,
+        188.26967892676828
+      ],
+      "actual_backtracked_alpha_min_median_max": [
+        7.687249512393173e-06,
+        0.0012285653489685806,
+        1.0
+      ],
+      "fixed_checkpoint_direction_scales": [
+        {
+          "update": 0,
+          "raw_seed": null,
+          "fallback_used": true,
+          "chosen_initial_alpha": 1.0,
+          "accepted_alpha": 0.001953125,
+          "maximum_original_direction_coordinate_abs": 0.46369213972296264,
+          "natural_unit_circle_tangent_trial_alpha_upper": 2.156603302780719
+        },
+        {
+          "update": 249,
+          "raw_seed": 0.0010747219734058382,
+          "fallback_used": false,
+          "chosen_initial_alpha": 0.0010747219734058382,
+          "accepted_alpha": 0.0010747219734058382,
+          "maximum_original_direction_coordinate_abs": 0.0348527951624232,
+          "natural_unit_circle_tangent_trial_alpha_upper": 28.692103325995426
+        },
+        {
+          "update": 499,
+          "raw_seed": 0.0010911976498954575,
+          "fallback_used": false,
+          "chosen_initial_alpha": 0.0010911976498954575,
+          "accepted_alpha": 0.0010911976498954575,
+          "maximum_original_direction_coordinate_abs": 0.038141798552157165,
+          "natural_unit_circle_tangent_trial_alpha_upper": 26.217956099593618
+        },
+        {
+          "update": 999,
+          "raw_seed": 0.003599787706470835,
+          "fallback_used": false,
+          "chosen_initial_alpha": 0.003599787706470835,
+          "accepted_alpha": 0.003599787706470835,
+          "maximum_original_direction_coordinate_abs": 0.04852407552730884,
+          "natural_unit_circle_tangent_trial_alpha_upper": 20.60832667357486
+        },
+        {
+          "update": 4999,
+          "raw_seed": 0.0015862225312079428,
+          "fallback_used": false,
+          "chosen_initial_alpha": 0.0015862225312079428,
+          "accepted_alpha": 0.0015862225312079428,
+          "maximum_original_direction_coordinate_abs": 0.012981512989230271,
+          "natural_unit_circle_tangent_trial_alpha_upper": 77.0326233028169
+        },
+        {
+          "update": 9999,
+          "raw_seed": 0.0008340819023519086,
+          "fallback_used": false,
+          "chosen_initial_alpha": 0.0008340819023519086,
+          "accepted_alpha": 0.0008340819023519086,
+          "maximum_original_direction_coordinate_abs": 0.0030833469801188123,
+          "natural_unit_circle_tangent_trial_alpha_upper": 324.32288887625174
+        }
+      ],
+      "actual_source_gradient_stop": false,
+      "actual_final_normalized_gradient": 0.0013116142708904323
+    }
+  ],
+  "all_four_outcomes_retained_no_best_strategy_selection": true,
+  "scalar_ceiling1_clipping_observed_in_actual_data": true,
+  "different_initial_control_convergence_not_yet_established": true,
+  "no_live_or_old_source_or_output_edits": true
+}
