@@ -163,7 +163,7 @@ normalization. [The actual full-map receipt](validation/sensing-correctness-v4/f
 passes the fixed1e-10 relative/absolute gate. This is numerical correctness
 of the declared analytical convention, **not recovery of the original
 unpublished phase/noise convention or historical Fig2**. In particular the
-second target's coarse nearest displacement gives0.8050dB; that discrepancy
+second target's coarse nearest displacement gives2.8050dB; that discrepancy
 is not hidden by optimizing a replacement schedule.
 
 ISAC's RCG/PGA500 caps and1e-6/1e-8 controls are reconstructed, not values
@@ -198,8 +198,111 @@ The separately versioned production MATLAB-full-v2 entry has now actually
 completed the same full first N6/M5 input with all five1000-sample schemes,
 both original stops and all132/240 coordinate records present. The source
 body is unchanged except the recording-container repair; this one-case
-check does not retroactively validate the old200 startup receipts or finish
-a new200-case bank. The outer/inner start bindings now use distinct files.
+check does not retroactively validate the old200 startup receipts. The
+outer/inner start bindings now use distinct files. The fresh MATLAB-full-v2
+bank has since actually completed200/200 numerical cases with no recorded
+failure. Its actual BEFORE/AFTER source, runtime, input and result identities
+pass; all five1000-draw scheme populations, original stops, physical domains
+and coordinate certificates are checked before rendering the complete Fig3.
+Fresh independent no-solver replay now passes all200 cases' full1000-draw
+physical metrics at every accepted MRT/ZF design. A second independent audit
+also passes all200 cases' original concave coordinate global-gap certificates,
+reconstructing the derivatives and complete linearized-spacing polygons
+without importing the production coordinate solver. The same-input full
+Python bank remains incomplete. Unfitted original Fig3 comparison fails:
+maximum rate error is about4.35 bit/s/Hz under the retained v1 indexing
+convention; neither of the two predeclared v2 indexing conventions recovers
+the reference. The source does not specify the historical convergence-curve
+ensemble size or aggregation. A reference lying inside the individual-scene
+range does not establish a recovered historical protocol and does not permit
+selecting the nearest scene, weights, gain or ordinate.
+
+### Completed runs do not erase source discrepancies
+
+The old complete cooperative-satellite183-point bank actually finishes with
+154 valid and29 failed points:10 phase line-search and19 MR QT failures.
+Every failure is retained. A mathematical representation of the **same** QT
+term factors the exact positive constant out of its square root, improving
+numerical cone scaling without changing its variables, subproblem or gates.
+All19 actual failed inputs have fresh full-dimension WORK component runs with
+the original physical/primal/QT gates and independent80-digit PSD-dual gaps
+passing (maximum3.2004347974e-9). See [the frozen19-input evidence](validation/cooperative-mr-precision19-python-v1/README.md).
+This is not a new successful183-point bank or native MATLAB19-input proof;
+the10 full phase failures and original-reference agreement remain unresolved.
+
+Communication Fig7's actual Python6000-MIS/6000-SMS bank has now completed
+with all recorded stops and domains passing. Independent selected-state
+physical reconstruction and all1080 original EPS vector samples pass, with
+maximum linear-SNR error2.572838263652233e-7 and no ordinate fitting. The
+fresh no-solver independent audit now also checks all12000 actual final
+states and230400 recorded continuation-stop records. Every final domain,
+binary physical score and smoothed KKT passes; maximum final KKT is
+9.99994305807773e-7 against the original declared1e-6 gate. Its maximum
+independent KKT disagreement is4.2180518252356576e-16. Intermediate
+inner-state gradients were not saved and are not claimed replayed.
+explicit2x1-to1x2 axis erratum remains necessary and visible; native full
+MATLAB, other original figures and publisher approval are not established.
+
+Communication Fig8's frozen partial snapshot contains14 actual capped
+starts. Every one has a fresh same-original-RCG cold replay, changing only
+the **unreported**4000 safety cap to100000. All original1e-6 stops and domains
+pass, and every old record through the first4000 cap is bitwise identical.
+The largest actually used stage contains10840 records. This is all failures
+in one partial snapshot, not all12000 inputs or a new complete figure bank;
+the old running bank, its failed flags and original parameter provenance
+remain unchanged. MIS sensing's4000 cap is explicitly reported and cannot
+be extended under this argument.
+
+Hotspot's four actual same-SDP inputs now have all16 native MATLAB scale
+attempts and all original1000-candidate/primal checks independently verified
+with80-digit PSD/feasible-primal/dual-gap witnesses. The older WORK checker
+used the wrong sign for native CVX maximization equality duals and therefore
+reported false large gaps. This is **our checker error**, not an author-paper
+or solver error. The fixed convention lambda=-CVX-dual/objective-scale is
+derived once and checked with actual native scalar max/min/scaling solves,
+then applied uniformly to every returned matrix; old false receipts remain.
+The separate complete Python cold TwoStage chain for CDF41 reaches its
+original gradient stop at6753 (old5000 prefix exact), followed by three QT
+steps. Its independent80-digit checks pass, but native complete sample41
+and all1000 CDF samples remain separate pending requirements. See [the
+actual precision and stopping evidence](validation/hotspot-cdf-numerical-components-v1/NUMERICAL_PRECISION_SCOPE.md).
+
+The new statistical-hotspot Python18-case bank is independently verified for
+all243 required starts,717 original stop records and54000 fresh paired rate
+samples. This does **not** resolve its original-reference discrepancy:
+the actual new run differs by up to8.008012646848087 bit/s/Hz over all54 points.
+NoRIS link-budget/source interpretation is being checked independently of
+RIS optimization. Real TS declines remain in the output; a channel-criterion
+gradient stop is not a final sum-rate optimality certificate. The independently
+running full MATLAB18 bank and original historical input recovery remain
+separate outstanding requirements.
+
+An independent matrix-sandwich/80-digit PSD check now bounds the **current
+declared** U6/beta20 NoRIS ratio-of-expected-powers objective by
+5.44384144626725 bit/s/Hz for any precoder, even after removing the NHU QoS
+constraints. The original reference point is9.580010498687663. Thus neither
+initialization tuning nor a more accurate optimizer on these same current
+moments can recover that reference. At least one historical mean, covariance,
+beam/user geometry, antenna-gain interpretation or model branch is different.
+This is not an upper bound on an unverified final publisher model, on real
+E[log] ergodic rates, or on every possible source-consistent historical input.
+The positive-sandwich assumptions and the source-noise normalization are
+essential; the exact pair-merging algebra is tested independently.
+
+The supplied thesis3-41a also typesets sigma-squared outside the SINR fraction,
+while the received-signal model and subsequent3-45/3-46 QT denominator place
+the single AWGN inside the denominator. The implementation uses the latter
+physical interpretation. This is a qualified author-source/typesetting
+conflict, not proof of which branch generated the historical figure or a
+verified final-journal erratum.
+
+For MIS sensing, the [R1 finite-budget/domain audit](validation/sensing-correctness-v4/R1_FINITE_BUDGET_AND_COMPACTNESS_AUDIT.md)
+documents the printed forced first update, conditional inner accuracy, and
+explicit eta/open-simplex counterexamples to the stated full-product
+compactness assumption. A fixed-inner closed-simplex bounded sublevel can be
+proved instead; this does not automatically prove the outer method or a
+4000-step guarantee. The corrected initial-stationary return and boundary
+treatment remain explicit implementation errata, not literal source code.
 
 1. Bind immutable source, configuration, runtime and shared input identities.
 2. Execute all original dimensions, starts/Monte Carlo samples, subproblems,

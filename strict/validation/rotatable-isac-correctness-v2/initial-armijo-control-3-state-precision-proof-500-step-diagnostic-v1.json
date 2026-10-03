@@ -1,0 +1,217 @@
+{
+  "scope": "independent_same_literal_retraction_3_state_50_80_digit_jet_and_first_full500_seed_diagnostic_not_full_scheme",
+  "paper_reports_numeric_initial_Armijo_seed": false,
+  "source_fingerprint_unchanged": "1e940a4c82564a8f8a8fb65a3bef2dd13702d7872e6eb9da761e4586c7a778fa",
+  "raw_proof_sha256": {
+    "original-retraction-directional-curvature-work-v1-tests.json": "f948816b5c6568bf2176625b2125c9577dd0c9b65e238bd9a424f39def8988c1",
+    "initial-seed-full-first-block-WORK-v1.json": "3e2b1c3c4732b29ea991fc3ce6494b18ccd797340ba32e107ab6cd57f99383f4"
+  },
+  "exact_directional_derivation": "v=theta+a*d; theta0=theta/R; theta1=d/R-theta*b/R^3; theta2=-2*d*b/R^3+theta*(3*b^2/R^5-q/R^3), R=abs(theta), b=Re(conj(theta)*d), q=abs(d)^2; differentiate original rate and quadratic NMSE on the full original fields",
+  "all_M4_N36_K2_A66_original_links_and_targets_retained": true,
+  "all3_states_all50_80_digit_first_and_second_derivative_predeclared_gates_pass": true,
+  "independent_derivative_components": [
+    {
+      "case": "original_full_first_RCG_initial_state",
+      "full_original_M4_N36_K2_A66": true,
+      "original_direction_not_replaced": true,
+      "precisions": [
+        {
+          "digits": 50,
+          "analytic_first": 11.328570928452994,
+          "analytic_second": -192954.77670460628,
+          "independent_first": "11.328570928462454386563375983306804387961790805075",
+          "independent_second": "-192954.77670460618855796455398333513368952815909835",
+          "first_abs_error": 9.460759629700142e-12,
+          "second_abs_error": 9.140566290363538e-11,
+          "predeclared_first_gate": 1.1328571028462456e-07,
+          "predeclared_second_gate": 0.001929547768046062,
+          "first_pass": true,
+          "second_pass": true,
+          "components": {
+            "rate_first": 11.327998275466417,
+            "rho_nmse_first": -0.0005726529865761344,
+            "rate_second": -192954.77522327146,
+            "rho_nmse_second": 0.0014813348253382359,
+            "same_original_normalized_complex_retraction_at_alpha_zero": true,
+            "direction_raw_vector_not_modified": true
+          }
+        },
+        {
+          "digits": 80,
+          "analytic_first": 11.328570928452994,
+          "analytic_second": -192954.77670460628,
+          "independent_first": "11.328570928462454386563375983306804387961790825860523703549903250906716162876707",
+          "independent_second": "-192954.77670460618855796455398333513368952815909791500612106458972348724263954169",
+          "first_abs_error": 9.460759629700142e-12,
+          "second_abs_error": 9.140566290363538e-11,
+          "predeclared_first_gate": 1.1328571028462456e-07,
+          "predeclared_second_gate": 0.001929547768046062,
+          "first_pass": true,
+          "second_pass": true,
+          "components": {
+            "rate_first": 11.327998275466417,
+            "rho_nmse_first": -0.0005726529865761344,
+            "rate_second": -192954.77522327146,
+            "rho_nmse_second": 0.0014813348253382359,
+            "same_original_normalized_complex_retraction_at_alpha_zero": true,
+            "direction_raw_vector_not_modified": true
+          }
+        }
+      ],
+      "solver_controls_or_source_changed": false
+    },
+    {
+      "case": "original_full_first_RCG_10000_capped_state",
+      "full_original_M4_N36_K2_A66": true,
+      "original_direction_not_replaced": true,
+      "precisions": [
+        {
+          "digits": 50,
+          "analytic_first": 0.0005330717635926492,
+          "analytic_second": -13.873881185265695,
+          "independent_first": "0.00053307176362389246276486335455286471006545076507376",
+          "independent_second": "-13.873881185265695159104822659667853294018084736186",
+          "first_abs_error": 3.1243303301519734e-14,
+          "second_abs_error": 2.177289104069424e-17,
+          "predeclared_first_gate": 5.3317176362389245e-12,
+          "predeclared_second_gate": 1.3873981185265697e-07,
+          "first_pass": true,
+          "second_pass": true,
+          "components": {
+            "rate_first": 0.0004568310416180363,
+            "rho_nmse_first": -7.624072197461288e-05,
+            "rate_second": -13.87388137820047,
+            "rho_nmse_second": -1.929347762496768e-07,
+            "same_original_normalized_complex_retraction_at_alpha_zero": true,
+            "direction_raw_vector_not_modified": true
+          }
+        },
+        {
+          "digits": 80,
+          "analytic_first": 0.0005330717635926492,
+          "analytic_second": -13.873881185265695,
+          "independent_first": "0.00053307176362389246276486335455286471006545092377325652010133430707034397738133363",
+          "independent_second": "-13.873881185265695159104822659667853294018084736180750768709825802216316178138296",
+          "first_abs_error": 3.1243303301519734e-14,
+          "second_abs_error": 2.177289104069424e-17,
+          "predeclared_first_gate": 5.3317176362389245e-12,
+          "predeclared_second_gate": 1.3873981185265697e-07,
+          "first_pass": true,
+          "second_pass": true,
+          "components": {
+            "rate_first": 0.0004568310416180363,
+            "rho_nmse_first": -7.624072197461288e-05,
+            "rate_second": -13.87388137820047,
+            "rho_nmse_second": -1.929347762496768e-07,
+            "same_original_normalized_complex_retraction_at_alpha_zero": true,
+            "direction_raw_vector_not_modified": true
+          }
+        }
+      ],
+      "solver_controls_or_source_changed": false
+    },
+    {
+      "case": "actual_original_case002_failure_raw_PR_direction",
+      "full_original_M4_N36_K2_A66": true,
+      "original_direction_not_replaced": true,
+      "precisions": [
+        {
+          "digits": 50,
+          "analytic_first": 1.7073073716353402e-09,
+          "analytic_second": -3.289340029875859e-05,
+          "independent_first": "0.0000000017073075904188231185342823934911670995747266695291",
+          "independent_second": "-0.000032893400298758468802078190886327734378458459239175",
+          "first_abs_error": 2.187834828700835e-16,
+          "second_abs_error": 1.2040222279297957e-19,
+          "predeclared_first_gate": 1.0170730759041882e-15,
+          "predeclared_second_gate": 1.3289340029875847e-12,
+          "first_pass": true,
+          "second_pass": true,
+          "components": {
+            "rate_first": -1.6125212823493845e-06,
+            "rho_nmse_first": -1.6142285897210198e-06,
+            "rate_second": -3.288406303808851e-05,
+            "rho_nmse_second": 9.337260670080202e-09,
+            "same_original_normalized_complex_retraction_at_alpha_zero": true,
+            "direction_raw_vector_not_modified": true
+          }
+        },
+        {
+          "digits": 80,
+          "analytic_first": 1.7073073716353402e-09,
+          "analytic_second": -3.289340029875859e-05,
+          "independent_first": "0.000000001707307590418823118534282393491167099574824205305009792427727018114122335599243",
+          "independent_second": "-0.000032893400298758468802078190886327734378458459239072237074885940506314326051988205",
+          "first_abs_error": 2.187834828700835e-16,
+          "second_abs_error": 1.2040222279297957e-19,
+          "predeclared_first_gate": 1.0170730759041882e-15,
+          "predeclared_second_gate": 1.3289340029875847e-12,
+          "first_pass": true,
+          "second_pass": true,
+          "components": {
+            "rate_first": -1.6125212823493845e-06,
+            "rho_nmse_first": -1.6142285897210198e-06,
+            "rate_second": -3.288406303808851e-05,
+            "rho_nmse_second": 9.337260670080202e-09,
+            "same_original_normalized_complex_retraction_at_alpha_zero": true,
+            "direction_raw_vector_not_modified": true
+          }
+        }
+      ],
+      "solver_controls_or_source_changed": false
+    }
+  ],
+  "declared_unique_initial_seed_contract": {
+    "single_predeclared_seed": "clip(original_slope / (-literal_directional_second), original_initial_step*2**-40, original_initial_step)",
+    "negative_finite_curvature_and_positive_finite_original_slope_required": true,
+    "fixed_fallback": "original_initial_step",
+    "lower_factor": 9.094947017729282e-13,
+    "raw_PR_direction_gradient_restart_retraction_backtrack_epsilon_cap_unchanged": true,
+    "curvature_not_a_global_bound_and_seed_not_an_acceptance_certificate": true,
+    "bitwise_prefix_equivalence_to_original_initial_step_claimed": false
+  },
+  "first_original_full500_results": [
+    {
+      "rounding_contract": "original_absolute_binary64_acceptance",
+      "iterations": 500,
+      "maximum_iterations_unchanged": 500,
+      "normalized_gradient_epsilon_unchanged": 1e-06,
+      "original_stop_gate_met": false,
+      "final_normalized_gradient": 0.0624323243798079,
+      "initial_utility": 15.556000050807532,
+      "final_utility": 15.690392657583429,
+      "first_last_seed": [
+        5.871101571481515e-05,
+        0.0001196692516132948
+      ],
+      "fixed_fallback_uses": 0,
+      "same_raw_PR_direction_and_restart_and_literal_retraction_and_stop_source_body": true,
+      "acceptance_contract_unchanged_original_absolute_expression": true,
+      "elapsed_seconds": 1.3396118000382558
+    },
+    {
+      "rounding_contract": "same_original_stable_increment",
+      "iterations": 500,
+      "maximum_iterations_unchanged": 500,
+      "normalized_gradient_epsilon_unchanged": 1e-06,
+      "original_stop_gate_met": false,
+      "final_normalized_gradient": 0.0624323243798079,
+      "initial_utility": 15.556000050807532,
+      "final_utility": 15.690392657583429,
+      "first_last_seed": [
+        5.871101571481515e-05,
+        0.0001196692516132948
+      ],
+      "fixed_fallback_uses": 0,
+      "same_raw_PR_direction_and_restart_and_literal_retraction_and_stop_source_body": true,
+      "acceptance_contract_unchanged_original_absolute_expression": false,
+      "elapsed_seconds": 4.81924959999742
+    }
+  ],
+  "same500_results_two_rounding_contracts": true,
+  "no_zero_gain_armijo_acceptance_or_epsilon_relaxation": true,
+  "improvement_or_full_convergence_established": false,
+  "not_promoted_to_live_engine_or_bank": true,
+  "no_old_prefix_bitwise_equivalence_claim": true,
+  "full_scheme_full500_bank_or_original_figures_claimed": false
+}

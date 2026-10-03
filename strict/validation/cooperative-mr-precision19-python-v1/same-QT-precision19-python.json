@@ -1,0 +1,1456 @@
+{
+  "scope": "actual_Python_all19_original_failed_MR_QT_inputs_exact_factor_identity_and80digit_precision_NOT_complete_183_rerun",
+  "exact_identity": "sqrt(scale*v)=sqrt(scale)*sqrt(v), scale>0; move only fixed constant outside square-root cone",
+  "unchanged": [
+    "original finite-Rician moments",
+    "all independent J*U powers",
+    "same original QT auxiliaries",
+    "same power and interference constraints",
+    "original1e-5 numerical acceptance gates",
+    "all original failing inputs"
+  ],
+  "required_actual_failure_components": 19,
+  "actual_components_executed": 19,
+  "all_original_and_independent_precision_components_pass": true,
+  "actual_identity_test_draws": 19000,
+  "maximum_identity_relative_error": 4.405949251596066e-16,
+  "maximum_true_feasible_primal_dual_gap": 3.2004347974217994e-09,
+  "all_component_scientific_sources_unchanged": true,
+  "actual_components": [
+    {
+      "sweep": "multi_vs_single_single_1.25_kL0",
+      "value": 0.02,
+      "fixture_sha256": "0a2a2415bcd753519152e2cc0f269fdb43ff69872859a8e63c4c667994c841b7",
+      "native_component_sha256": "8765e2a9bd331059c44d1cddeb58492432562c7308e5e8fb463d9123b7add1ed",
+      "original_same_QT_precision_pass": true,
+      "actual_QT_before_and_after": {
+        "before": {
+          "sinr": [
+            1.9425811030285045,
+            1.9540159816406146
+          ],
+          "denominator": [
+            1.1795058946028707,
+            1.1814703869518235
+          ],
+          "satellite_power": [
+            0.005986902274664626
+          ],
+          "gt_interference": [
+            0.01999999999559834
+          ]
+        },
+        "after": {
+          "sinr": [
+            1.944133912112654,
+            1.9441455426756864
+          ],
+          "denominator": [
+            1.1789611863564926,
+            1.181447731948806
+          ],
+          "satellite_power": [
+            0.005972332778484907
+          ],
+          "gt_interference": [
+            0.019999999998690173
+          ]
+        }
+      },
+      "actual_QT_solver_diagnostics": {
+        "solver": "CLARABEL",
+        "status": "optimal",
+        "iterations": 13,
+        "solve_seconds": 0.0002201,
+        "normalized_constraint_max_violation": 0.0,
+        "constraint_max_relative_violation": 0.0,
+        "physical_normalized_constraint_max_violation": 0
+      },
+      "original_QT_bound_max_violation": 0.0,
+      "independent80digit_primal_dual_certificate": {
+        "checks": {
+          "dual_nonnegative_and_normalized": true,
+          "dual_positive_scalar_quadratic_coefficients": true,
+          "true_feasible_primal_dual_gap_original1e5": true,
+          "actual_raw_primal_dual_gap_original1e5": true
+        },
+        "all_independent80digit_precision_pass": true,
+        "precision_decimal_digits": 80,
+        "independent_feasible_primal_objective": "1.94413313980719660619133760508349714788947708182998500583305",
+        "independent_dual_upper": "1.9441331401972951808590348612835349220589024783657978052559",
+        "true_feasible_primal_dual_gap": "0.000000000390098574667697256200037774169425396535812799422853578731279",
+        "actual_raw_primal_dual_gap": "0.000000000435973664910923378853285469467960095553297805255901818482041",
+        "dual_quadratic_H_minimum": "1885.7882359726869811128837530836273504280303808428974571648",
+        "diagnostic_feasible_p_scale_not_optimizer_change": "1.0",
+        "dual_alpha_sum_before_explicit_feasibility_normalization": 1.0000000000000178,
+        "explicit80digit_arithmetic_floor": "3.455292061635874034664084319956600666046142578125e-59",
+        "proof": "max_{p>=0}(2c*sqrt(p)-H*p)=c^2/H; nonnegative duals with sumalpha=1 give same original QT upper"
+      },
+      "independent_identity_draws": 1000,
+      "identity_maximum_relative_error": 2.6565446455923607e-16,
+      "source_unchanged_during_run": true,
+      "whole_old_failed_point_repaired_or_rerun": false
+    },
+    {
+      "sweep": "multi_vs_single_single_1.25_kL0",
+      "value": 0.03,
+      "fixture_sha256": "73dce10e3e9ee4de0a12e54ffb8c833a41c0d0ab45062c07e454801ac08fde95",
+      "native_component_sha256": "db18071a73265ae9f238b44ef6f425d56851aba803b3ce837118380c766418c1",
+      "original_same_QT_precision_pass": true,
+      "actual_QT_before_and_after": {
+        "before": {
+          "sinr": [
+            1.742671507865856,
+            1.7437778401209738
+          ],
+          "denominator": [
+            1.158234546917276,
+            1.1707129712347955
+          ],
+          "satellite_power": [
+            0.008543411220990081
+          ],
+          "gt_interference": [
+            0.0299999993776576
+          ]
+        },
+        "after": {
+          "sinr": [
+            1.7428024550622416,
+            1.742802583705432
+          ],
+          "denominator": [
+            1.1581862911372458,
+            1.1707079079465765
+          ],
+          "satellite_power": [
+            0.008541228387908113
+          ],
+          "gt_interference": [
+            0.029999999998633335
+          ]
+        }
+      },
+      "actual_QT_solver_diagnostics": {
+        "solver": "CLARABEL",
+        "status": "optimal",
+        "iterations": 11,
+        "solve_seconds": 0.0001426,
+        "normalized_constraint_max_violation": 0.0,
+        "constraint_max_relative_violation": 0.0,
+        "physical_normalized_constraint_max_violation": 0
+      },
+      "original_QT_bound_max_violation": 0.0,
+      "independent80digit_primal_dual_certificate": {
+        "checks": {
+          "dual_nonnegative_and_normalized": true,
+          "dual_positive_scalar_quadratic_coefficients": true,
+          "true_feasible_primal_dual_gap_original1e5": true,
+          "actual_raw_primal_dual_gap_original1e5": true
+        },
+        "all_independent80digit_precision_pass": true,
+        "precision_decimal_digits": 80,
+        "independent_feasible_primal_objective": "1.74280244911836025019879463704943078916739401095650312131022",
+        "independent_dual_upper": "1.7428024495750948483779276760103216810340011858550396760397",
+        "true_feasible_primal_dual_gap": "0.000000000456734598179133038960890891866607174898536554729476534120409",
+        "actual_raw_primal_dual_gap": "0.000000000560185188014868046848013852369221522769102176039700274618912",
+        "dual_quadratic_H_minimum": "714.508898571393732114207366337314126438117976357578232129077",
+        "diagnostic_feasible_p_scale_not_optimizer_change": "1.0",
+        "dual_alpha_sum_before_explicit_feasibility_normalization": 1.000000000000079,
+        "explicit80digit_arithmetic_floor": "3.448670593995631605821472476236522197723388671875e-59",
+        "proof": "max_{p>=0}(2c*sqrt(p)-H*p)=c^2/H; nonnegative duals with sumalpha=1 give same original QT upper"
+      },
+      "independent_identity_draws": 1000,
+      "identity_maximum_relative_error": 3.7006846929053005e-16,
+      "source_unchanged_during_run": true,
+      "whole_old_failed_point_repaired_or_rerun": false
+    },
+    {
+      "sweep": "multi_vs_single_single_1.25_kL0",
+      "value": 0.04,
+      "fixture_sha256": "49d7992c0e8febab6393bdd07262513481f8eb7f5ee3d2a06ead5dc899ddfbef",
+      "native_component_sha256": "b991ea20a36adf9ecc77842ade1efb76b103f74465650fe18c587e2799d0d1db",
+      "original_same_QT_precision_pass": true,
+      "actual_QT_before_and_after": {
+        "before": {
+          "sinr": [
+            3.5364006242429813,
+            3.55365099768423
+          ],
+          "denominator": [
+            1.2964881368789236,
+            1.2917522670917212
+          ],
+          "satellite_power": [
+            0.011938551820380847
+          ],
+          "gt_interference": [
+            0.03999999848683006
+          ]
+        },
+        "after": {
+          "sinr": [
+            3.5396401890397686,
+            3.5396516373095657
+          ],
+          "denominator": [
+            1.295641037748225,
+            1.2917170635792508
+          ],
+          "satellite_power": [
+            0.011915896618347894
+          ],
+          "gt_interference": [
+            0.039999999997146186
+          ]
+        }
+      },
+      "actual_QT_solver_diagnostics": {
+        "solver": "CLARABEL",
+        "status": "optimal",
+        "iterations": 11,
+        "solve_seconds": 0.0001401,
+        "normalized_constraint_max_violation": 0.0,
+        "constraint_max_relative_violation": 0.0,
+        "physical_normalized_constraint_max_violation": 0
+      },
+      "original_QT_bound_max_violation": 0.0,
+      "independent80digit_primal_dual_certificate": {
+        "checks": {
+          "dual_nonnegative_and_normalized": true,
+          "dual_positive_scalar_quadratic_coefficients": true,
+          "true_feasible_primal_dual_gap_original1e5": true,
+          "actual_raw_primal_dual_gap_original1e5": true
+        },
+        "all_independent80digit_precision_pass": true,
+        "precision_decimal_digits": 80,
+        "independent_feasible_primal_objective": "3.53963801165431592978910124103527081291348653124372657865391",
+        "independent_dual_upper": "3.53963801308225554278835751801521327202871208271891611589681",
+        "true_feasible_primal_dual_gap": "0.00000000142793961299925627697994245911522555147518953724290406810797",
+        "actual_raw_primal_dual_gap": "0.00000000161506517229242980874401327078893547139079111589681342219959",
+        "dual_quadratic_H_minimum": "1192.89512120124379741468230464065023842615945412093918232821",
+        "diagnostic_feasible_p_scale_not_optimizer_change": "1.0",
+        "dual_alpha_sum_before_explicit_feasibility_normalization": 1.000000000000146,
+        "explicit80digit_arithmetic_floor": "6.91053792494289069736623787321150302886962890625e-59",
+        "proof": "max_{p>=0}(2c*sqrt(p)-H*p)=c^2/H; nonnegative duals with sumalpha=1 give same original QT upper"
+      },
+      "independent_identity_draws": 1000,
+      "identity_maximum_relative_error": 3.3450846086599786e-16,
+      "source_unchanged_during_run": true,
+      "whole_old_failed_point_repaired_or_rerun": false
+    },
+    {
+      "sweep": "multi_vs_single_single_1.25_kL0",
+      "value": 0.05,
+      "fixture_sha256": "8e6d9237b2dba19c47f93c4d44204d3cbd833872a650d887f8306cedd57b7efd",
+      "native_component_sha256": "d60937aaca25af0dab958468981ce5d5aba31d70f7006ab67bc8738449cd7149",
+      "original_same_QT_precision_pass": true,
+      "actual_QT_before_and_after": {
+        "before": {
+          "sinr": [
+            4.533345554041227,
+            4.533385968787253
+          ],
+          "denominator": [
+            1.3859313800250939,
+            1.3817908644532868
+          ],
+          "satellite_power": [
+            0.015507064486720958
+          ],
+          "gt_interference": [
+            0.049999996338464046
+          ]
+        },
+        "after": {
+          "sinr": [
+            4.533354353262621,
+            4.533354353823845
+          ],
+          "denominator": [
+            1.3859294664935633,
+            1.381790594238097
+          ],
+          "satellite_power": [
+            0.015507012210925143
+          ],
+          "gt_interference": [
+            0.04999999999673458
+          ]
+        }
+      },
+      "actual_QT_solver_diagnostics": {
+        "solver": "CLARABEL",
+        "status": "optimal",
+        "iterations": 11,
+        "solve_seconds": 0.0001352,
+        "normalized_constraint_max_violation": 0.0,
+        "constraint_max_relative_violation": 0.0,
+        "physical_normalized_constraint_max_violation": 0
+      },
+      "original_QT_bound_max_violation": 0.0,
+      "independent80digit_primal_dual_certificate": {
+        "checks": {
+          "dual_nonnegative_and_normalized": true,
+          "dual_positive_scalar_quadratic_coefficients": true,
+          "true_feasible_primal_dual_gap_original1e5": true,
+          "actual_raw_primal_dual_gap_original1e5": true
+        },
+        "all_independent80digit_precision_pass": true,
+        "precision_decimal_digits": 80,
+        "independent_feasible_primal_objective": "4.5333543532501140455493223986250550886925874167999754679644",
+        "independent_dual_upper": "4.5333543546839888494408258241797044834721138087338531647201",
+        "true_feasible_primal_dual_gap": "0.00000000143387480389150342555464939477952639193387769675569916091781",
+        "actual_raw_primal_dual_gap": "0.00000000157719160847210859113467782350659867201510316472010173132363",
+        "dual_quadratic_H_minimum": "1041.07488023230280933953401755639111863271704716173824341927",
+        "diagnostic_feasible_p_scale_not_optimizer_change": "1.0",
+        "dual_alpha_sum_before_explicit_feasibility_normalization": 1.0000000000001508,
+        "explicit80digit_arithmetic_floor": "9.27094100110059713415466831065714359283447265625e-59",
+        "proof": "max_{p>=0}(2c*sqrt(p)-H*p)=c^2/H; nonnegative duals with sumalpha=1 give same original QT upper"
+      },
+      "independent_identity_draws": 1000,
+      "identity_maximum_relative_error": 4.374052713101759e-16,
+      "source_unchanged_during_run": true,
+      "whole_old_failed_point_repaired_or_rerun": false
+    },
+    {
+      "sweep": "multi_vs_single_single_1.25_kL0",
+      "value": 0.06,
+      "fixture_sha256": "f21bc06365960905df01baabaf448906e15e4f7d088705e29fede208aaa43278",
+      "native_component_sha256": "146a1f21eab5f45df2e674e9fa20c3b3587552ee241fea9987c917b79870975b",
+      "original_same_QT_precision_pass": true,
+      "actual_QT_before_and_after": {
+        "before": {
+          "sinr": [
+            5.1951153149910905,
+            5.211957429065123
+          ],
+          "denominator": [
+            1.4512277817758323,
+            1.444011751630978
+          ],
+          "satellite_power": [
+            0.018617767903495223
+          ],
+          "gt_interference": [
+            0.05999999916782832
+          ]
+        },
+        "after": {
+          "sinr": [
+            5.198980757664733,
+            5.19898604280406
+          ],
+          "denominator": [
+            1.4504002817092227,
+            1.4438866698842916
+          ],
+          "satellite_power": [
+            0.018594955108796652
+          ],
+          "gt_interference": [
+            0.05999999999572753
+          ]
+        }
+      },
+      "actual_QT_solver_diagnostics": {
+        "solver": "CLARABEL",
+        "status": "optimal",
+        "iterations": 11,
+        "solve_seconds": 0.0001549,
+        "normalized_constraint_max_violation": 0.0,
+        "constraint_max_relative_violation": 0.0,
+        "physical_normalized_constraint_max_violation": 0
+      },
+      "original_QT_bound_max_violation": 0.0,
+      "independent80digit_primal_dual_certificate": {
+        "checks": {
+          "dual_nonnegative_and_normalized": true,
+          "dual_positive_scalar_quadratic_coefficients": true,
+          "true_feasible_primal_dual_gap_original1e5": true,
+          "actual_raw_primal_dual_gap_original1e5": true
+        },
+        "all_independent80digit_precision_pass": true,
+        "precision_decimal_digits": 80,
+        "independent_feasible_primal_objective": "5.19897851441416896481561318299377209672362594603179653148439",
+        "independent_dual_upper": "5.19897851608730520982053513293707680282957853931829179233008",
+        "true_feasible_primal_dual_gap": "0.00000000167313624500492194994330470610595259328649526084569422097247",
+        "actual_raw_primal_dual_gap": "0.00000000179340142440569416507700395164854826588079179233008359135266",
+        "dual_quadratic_H_minimum": "901.660638330142297674229158161932489157794130603117181527138",
+        "diagnostic_feasible_p_scale_not_optimizer_change": "1.0",
+        "dual_alpha_sum_before_explicit_feasibility_normalization": 1.0000000000001816,
+        "explicit80digit_arithmetic_floor": "1.112493430775024449985721730627119541168212890625e-58",
+        "proof": "max_{p>=0}(2c*sqrt(p)-H*p)=c^2/H; nonnegative duals with sumalpha=1 give same original QT upper"
+      },
+      "independent_identity_draws": 1000,
+      "identity_maximum_relative_error": 3.4295167233997683e-16,
+      "source_unchanged_during_run": true,
+      "whole_old_failed_point_repaired_or_rerun": false
+    },
+    {
+      "sweep": "multi_vs_single_single_1.25_kL0",
+      "value": 0.11,
+      "fixture_sha256": "83bf2db9327aa0c17793a09d4f15763e08a4fa6ebb5f038cea792f4523125a36",
+      "native_component_sha256": "f38179d8e4da72ff4b103a3f8eaec1e844d2e8caebfc998728704b9f1cf6f6c5",
+      "original_same_QT_precision_pass": true,
+      "actual_QT_before_and_after": {
+        "before": {
+          "sinr": [
+            7.807660367130872,
+            7.807678774372627
+          ],
+          "denominator": [
+            1.7716723175822942,
+            1.7544492474601545
+          ],
+          "satellite_power": [
+            0.03400231796463299
+          ],
+          "gt_interference": [
+            0.10999999862095804
+          ]
+        },
+        "after": {
+          "sinr": [
+            7.807665849809211,
+            7.8076658498926745
+          ],
+          "denominator": [
+            1.7716713028222777,
+            1.754449101346269
+          ],
+          "satellite_power": [
+            0.034002290177667475
+          ],
+          "gt_interference": [
+            0.10999999999961581
+          ]
+        }
+      },
+      "actual_QT_solver_diagnostics": {
+        "solver": "CLARABEL",
+        "status": "optimal",
+        "iterations": 12,
+        "solve_seconds": 0.0001507,
+        "normalized_constraint_max_violation": 0.0,
+        "constraint_max_relative_violation": 0.0,
+        "physical_normalized_constraint_max_violation": 0
+      },
+      "original_QT_bound_max_violation": 0.0,
+      "independent80digit_primal_dual_certificate": {
+        "checks": {
+          "dual_nonnegative_and_normalized": true,
+          "dual_positive_scalar_quadratic_coefficients": true,
+          "true_feasible_primal_dual_gap_original1e5": true,
+          "actual_raw_primal_dual_gap_original1e5": true
+        },
+        "all_independent80digit_precision_pass": true,
+        "precision_decimal_digits": 80,
+        "independent_feasible_primal_objective": "7.80766584980602939954705242745648721805973692436731636415621",
+        "independent_dual_upper": "7.80766584991972226279694807844743423643053347636924107648006",
+        "true_feasible_primal_dual_gap": "0.000000000113692863249895650990947018370796552001924712323848970162791",
+        "actual_raw_primal_dual_gap": "0.000000000137347939556728695878240396403678007619241076480057347909062",
+        "dual_quadratic_H_minimum": "520.462443805627127606911814854347768064753011160514616352003",
+        "diagnostic_feasible_p_scale_not_optimizer_change": "1.0",
+        "dual_alpha_sum_before_explicit_feasibility_normalization": 1.0000000000000093,
+        "explicit80digit_arithmetic_floor": "2.03935973596568402399498154409229755401611328125e-58",
+        "proof": "max_{p>=0}(2c*sqrt(p)-H*p)=c^2/H; nonnegative duals with sumalpha=1 give same original QT upper"
+      },
+      "independent_identity_draws": 1000,
+      "identity_maximum_relative_error": 4.405949251596066e-16,
+      "source_unchanged_during_run": true,
+      "whole_old_failed_point_repaired_or_rerun": false
+    },
+    {
+      "sweep": "multi_vs_single_single_1.25_kL20",
+      "value": 0.01,
+      "fixture_sha256": "7cc8f9eb30599592952c7a7358c3407f145c52468cf07a61b7885f6856b3889a",
+      "native_component_sha256": "7b04b954f1ab716d98f548600163107ed2cb07a62767554e5b67d9a411409cfd",
+      "original_same_QT_precision_pass": true,
+      "actual_QT_before_and_after": {
+        "before": {
+          "sinr": [
+            1.0634170931882465,
+            1.0705971393587808
+          ],
+          "denominator": [
+            1.1205893872119708,
+            1.126028355658627
+          ],
+          "satellite_power": [
+            0.0015758905230315258
+          ],
+          "gt_interference": [
+            0.009999999999925435
+          ]
+        },
+        "after": {
+          "sinr": [
+            1.0640397078339505,
+            1.0640495024479082
+          ],
+          "denominator": [
+            1.1202520741074407,
+            1.126015077322816
+          ],
+          "satellite_power": [
+            0.001571150676047032
+          ],
+          "gt_interference": [
+            0.00999999999980325
+          ]
+        }
+      },
+      "actual_QT_solver_diagnostics": {
+        "solver": "CLARABEL",
+        "status": "optimal",
+        "iterations": 13,
+        "solve_seconds": 0.0001534,
+        "normalized_constraint_max_violation": 0.0,
+        "constraint_max_relative_violation": 0.0,
+        "physical_normalized_constraint_max_violation": 0
+      },
+      "original_QT_bound_max_violation": 0.0,
+      "independent80digit_primal_dual_certificate": {
+        "checks": {
+          "dual_nonnegative_and_normalized": true,
+          "dual_positive_scalar_quadratic_coefficients": true,
+          "true_feasible_primal_dual_gap_original1e5": true,
+          "actual_raw_primal_dual_gap_original1e5": true
+        },
+        "all_independent80digit_precision_pass": true,
+        "precision_decimal_digits": 80,
+        "independent_feasible_primal_objective": "1.06403949893401503917517430945614552362563647284199619927919",
+        "independent_dual_upper": "1.06403949900002079621075380231106264155014511205878291734564",
+        "true_feasible_primal_dual_gap": "0.0000000000660057570355794928549171179245086392167867180664489325369784",
+        "actual_raw_primal_dual_gap": "0.000000000068193430686426368934023954082570038816595417345643105271396",
+        "dual_quadratic_H_minimum": "6744.99368465268701375650914234006719075059679153877783157284",
+        "diagnostic_feasible_p_scale_not_optimizer_change": "1.0",
+        "dual_alpha_sum_before_explicit_feasibility_normalization": 1.0000000000000013,
+        "explicit80digit_arithmetic_floor": "2.537877101328411555414277245290577411651611328125e-59",
+        "proof": "max_{p>=0}(2c*sqrt(p)-H*p)=c^2/H; nonnegative duals with sumalpha=1 give same original QT upper"
+      },
+      "independent_identity_draws": 1000,
+      "identity_maximum_relative_error": 3.0276566703696086e-16,
+      "source_unchanged_during_run": true,
+      "whole_old_failed_point_repaired_or_rerun": false
+    },
+    {
+      "sweep": "multi_vs_single_single_1.25_kL20",
+      "value": 0.02,
+      "fixture_sha256": "5bb0488be0013f49bfe800c1b742e2ef358bad21774bea69d32726f4baa5ec53",
+      "native_component_sha256": "18d5b2ff105d675a2e9ea46bea4e0c48f018b72cb296c42de8f85959ce698798",
+      "original_same_QT_precision_pass": true,
+      "actual_QT_before_and_after": {
+        "before": {
+          "sinr": [
+            2.0158954124668313,
+            2.0275454645477002
+          ],
+          "denominator": [
+            1.1876602635410844,
+            1.1898019388373597
+          ],
+          "satellite_power": [
+            0.003146659250577084
+          ],
+          "gt_interference": [
+            0.019999999706734623
+          ]
+        },
+        "after": {
+          "sinr": [
+            2.017315911617268,
+            2.017327834498266
+          ],
+          "denominator": [
+            1.1871033971262024,
+            1.1897344367069895
+          ],
+          "satellite_power": [
+            0.0031388055768058814
+          ],
+          "gt_interference": [
+            0.019999999999393968
+          ]
+        }
+      },
+      "actual_QT_solver_diagnostics": {
+        "solver": "CLARABEL",
+        "status": "optimal",
+        "iterations": 13,
+        "solve_seconds": 0.0001535,
+        "normalized_constraint_max_violation": 0.0,
+        "constraint_max_relative_violation": 0.0,
+        "physical_normalized_constraint_max_violation": 0
+      },
+      "original_QT_bound_max_violation": 0.0,
+      "independent80digit_primal_dual_certificate": {
+        "checks": {
+          "dual_nonnegative_and_normalized": true,
+          "dual_positive_scalar_quadratic_coefficients": true,
+          "true_feasible_primal_dual_gap_original1e5": true,
+          "actual_raw_primal_dual_gap_original1e5": true
+        },
+        "all_independent80digit_precision_pass": true,
+        "precision_decimal_digits": 80,
+        "independent_feasible_primal_objective": "2.01731521764463089035025546277726312815438356416130878180516",
+        "independent_dual_upper": "2.01731521777474050511824185860202208798431294718729957733794",
+        "true_feasible_primal_dual_gap": "0.000000000130109614767986395824758959829929383025990795532777642089546",
+        "actual_raw_primal_dual_gap": "0.000000000146731144522899344613296246938933308515424577337939112788572",
+        "dual_quadratic_H_minimum": "4504.95590976548569994386483249544618475788024008805274206012",
+        "diagnostic_feasible_p_scale_not_optimizer_change": "1.0",
+        "dual_alpha_sum_before_explicit_feasibility_normalization": 1.0000000000000036,
+        "explicit80digit_arithmetic_floor": "5.0985732039206368426675908267498016357421875e-59",
+        "proof": "max_{p>=0}(2c*sqrt(p)-H*p)=c^2/H; nonnegative duals with sumalpha=1 give same original QT upper"
+      },
+      "independent_identity_draws": 1000,
+      "identity_maximum_relative_error": 4.1048906390583224e-16,
+      "source_unchanged_during_run": true,
+      "whole_old_failed_point_repaired_or_rerun": false
+    },
+    {
+      "sweep": "multi_vs_single_single_1.25_kL20",
+      "value": 0.03,
+      "fixture_sha256": "6be0fdcac6a347199696ca27e76ee9898b511438d146afe51798df5f90d86165",
+      "native_component_sha256": "9a0d003dc8209ea60f165377a1dbcd81251c05c0c0b4e61f3d23892a27d24350",
+      "original_same_QT_precision_pass": true,
+      "actual_QT_before_and_after": {
+        "before": {
+          "sinr": [
+            2.888861226083816,
+            2.9046725611357553
+          ],
+          "denominator": [
+            1.2380291630326272,
+            1.235664254031327
+          ],
+          "satellite_power": [
+            0.004709578145116522
+          ],
+          "gt_interference": [
+            0.02999998267286453
+          ]
+        },
+        "after": {
+          "sinr": [
+            2.891254777439023,
+            2.8912686134293897
+          ],
+          "denominator": [
+            1.2372690450782688,
+            1.2356344320672479
+          ],
+          "satellite_power": [
+            0.00469889914754496
+          ],
+          "gt_interference": [
+            0.029999999984820627
+          ]
+        }
+      },
+      "actual_QT_solver_diagnostics": {
+        "solver": "CLARABEL",
+        "status": "optimal",
+        "iterations": 11,
+        "solve_seconds": 0.000149,
+        "normalized_constraint_max_violation": 0.0,
+        "constraint_max_relative_violation": 0.0,
+        "physical_normalized_constraint_max_violation": 0
+      },
+      "original_QT_bound_max_violation": 0.0,
+      "independent80digit_primal_dual_certificate": {
+        "checks": {
+          "dual_nonnegative_and_normalized": true,
+          "dual_positive_scalar_quadratic_coefficients": true,
+          "true_feasible_primal_dual_gap_original1e5": true,
+          "actual_raw_primal_dual_gap_original1e5": true
+        },
+        "all_independent80digit_precision_pass": true,
+        "precision_decimal_digits": 80,
+        "independent_feasible_primal_objective": "2.89125327477005319865655174356350548713936941974642177621767",
+        "independent_dual_upper": "2.89125327684904547224905221526890123699036581453108444514659",
+        "true_feasible_primal_dual_gap": "0.00000000207899227359250047170539574985099639478466266892891929670776",
+        "actual_raw_primal_dual_gap": "0.00000000265703785599898586668453241203156454499983444514659371158851",
+        "dual_quadratic_H_minimum": "3574.12054265287580268984931755311465259510621920727404230987",
+        "diagnostic_feasible_p_scale_not_optimizer_change": "1.0",
+        "dual_alpha_sum_before_explicit_feasibility_normalization": 1.0000000000000522,
+        "explicit80digit_arithmetic_floor": "7.613615089879493780244956724345684051513671875e-59",
+        "proof": "max_{p>=0}(2c*sqrt(p)-H*p)=c^2/H; nonnegative duals with sumalpha=1 give same original QT upper"
+      },
+      "independent_identity_draws": 1000,
+      "identity_maximum_relative_error": 3.6725396487685e-16,
+      "source_unchanged_during_run": true,
+      "whole_old_failed_point_repaired_or_rerun": false
+    },
+    {
+      "sweep": "multi_vs_single_single_1.25_kL20",
+      "value": 0.04,
+      "fixture_sha256": "08f562e744f8e5def0ac3db3a40bcace43c65640bac6c6f5b429e3fc1fc6f066",
+      "native_component_sha256": "8a185940266fe74c284aa277a517d4087e0f5851063ffbbcdc342cfe4deba208",
+      "original_same_QT_precision_pass": true,
+      "actual_QT_before_and_after": {
+        "before": {
+          "sinr": [
+            3.679264718132552,
+            3.6976731880899387
+          ],
+          "denominator": [
+            1.296313077373406,
+            1.2904816557599819
+          ],
+          "satellite_power": [
+            0.00627022276878249
+          ],
+          "gt_interference": [
+            0.039999987801692026
+          ]
+        },
+        "after": {
+          "sinr": [
+            3.6825135854228894,
+            3.682526637517043
+          ],
+          "denominator": [
+            1.2954148174304567,
+            1.2904463762653362
+          ],
+          "satellite_power": [
+            0.00625760280516581
+          ],
+          "gt_interference": [
+            0.039999999997911824
+          ]
+        }
+      },
+      "actual_QT_solver_diagnostics": {
+        "solver": "CLARABEL",
+        "status": "optimal",
+        "iterations": 12,
+        "solve_seconds": 0.0001422,
+        "normalized_constraint_max_violation": 0.0,
+        "constraint_max_relative_violation": 0.0,
+        "physical_normalized_constraint_max_violation": 0
+      },
+      "original_QT_bound_max_violation": 0.0,
+      "independent80digit_primal_dual_certificate": {
+        "checks": {
+          "dual_nonnegative_and_normalized": true,
+          "dual_positive_scalar_quadratic_coefficients": true,
+          "true_feasible_primal_dual_gap_original1e5": true,
+          "actual_raw_primal_dual_gap_original1e5": true
+        },
+        "all_independent80digit_precision_pass": true,
+        "precision_decimal_digits": 80,
+        "independent_feasible_primal_objective": "3.6825113011521198206796764558024201177935105269486839447375",
+        "independent_dual_upper": "3.68251130158398453515123597358335427259538934229438962417415",
+        "true_feasible_primal_dual_gap": "0.000000000431864714471559517780934154801878815345705679436652860626577",
+        "actual_raw_primal_dual_gap": "0.000000000641715340615197561103670515767081236825639624174151789860441",
+        "dual_quadratic_H_minimum": "2993.44324094642960959415477188615397279982333448882393544807",
+        "diagnostic_feasible_p_scale_not_optimizer_change": "1.0",
+        "dual_alpha_sum_before_explicit_feasibility_normalization": 1.0000000000000182,
+        "explicit80digit_arithmetic_floor": "1.01514681583483962867830996401607990264892578125e-58",
+        "proof": "max_{p>=0}(2c*sqrt(p)-H*p)=c^2/H; nonnegative duals with sumalpha=1 give same original QT upper"
+      },
+      "independent_identity_draws": 1000,
+      "identity_maximum_relative_error": 3.2458737505186573e-16,
+      "source_unchanged_during_run": true,
+      "whole_old_failed_point_repaired_or_rerun": false
+    },
+    {
+      "sweep": "multi_vs_single_single_1.25_kL20",
+      "value": 0.05,
+      "fixture_sha256": "6648c274ef2c2f88975b11c6ce6abccf1856660008406d6f965d4a197906bc0c",
+      "native_component_sha256": "fdd14b064a4b1efdbc61ae10613b8a6011719a7c5fdb5cb15f2df055473e46bd",
+      "original_same_QT_precision_pass": true,
+      "actual_QT_before_and_after": {
+        "before": {
+          "sinr": [
+            4.402663512445072,
+            4.422303619313944
+          ],
+          "denominator": [
+            1.3543587236239216,
+            1.3453008943473237
+          ],
+          "satellite_power": [
+            0.00782747058577747
+          ],
+          "gt_interference": [
+            0.04999999761925221
+          ]
+        },
+        "after": {
+          "sinr": [
+            4.406555576109711,
+            4.406566548270229
+          ],
+          "denominator": [
+            1.3533845885118647,
+            1.345262583879998
+          ],
+          "satellite_power": [
+            0.007813784275101078
+          ],
+          "gt_interference": [
+            0.049999999984692206
+          ]
+        }
+      },
+      "actual_QT_solver_diagnostics": {
+        "solver": "CLARABEL",
+        "status": "optimal",
+        "iterations": 12,
+        "solve_seconds": 0.0001497,
+        "normalized_constraint_max_violation": 0.0,
+        "constraint_max_relative_violation": 0.0,
+        "physical_normalized_constraint_max_violation": 0
+      },
+      "original_QT_bound_max_violation": 0.0,
+      "independent80digit_primal_dual_certificate": {
+        "checks": {
+          "dual_nonnegative_and_normalized": true,
+          "dual_positive_scalar_quadratic_coefficients": true,
+          "true_feasible_primal_dual_gap_original1e5": true,
+          "actual_raw_primal_dual_gap_original1e5": true
+        },
+        "all_independent80digit_precision_pass": true,
+        "precision_decimal_digits": 80,
+        "independent_feasible_primal_objective": "4.40655274632107752882795691715474767108146701963094919949871",
+        "independent_dual_upper": "4.40655274952151232624975632201511121295220877582045211173341",
+        "true_feasible_primal_dual_gap": "0.00000000320043479742179940486036354187074175618950291223469752358721",
+        "actual_raw_primal_dual_gap": "0.00000000334223970909453596245128369830377127582045211173340725120017",
+        "dual_quadratic_H_minimum": "2580.18186414737620653633075951843860412234709273899961406056",
+        "diagnostic_feasible_p_scale_not_optimizer_change": "1.0",
+        "dual_alpha_sum_before_explicit_feasibility_normalization": 1.000000000000123,
+        "explicit80digit_arithmetic_floor": "1.268930549084354737487956299446523189544677734375e-58",
+        "proof": "max_{p>=0}(2c*sqrt(p)-H*p)=c^2/H; nonnegative duals with sumalpha=1 give same original QT upper"
+      },
+      "independent_identity_draws": 1000,
+      "identity_maximum_relative_error": 3.450022049076485e-16,
+      "source_unchanged_during_run": true,
+      "whole_old_failed_point_repaired_or_rerun": false
+    },
+    {
+      "sweep": "multi_vs_single_single_1.25_kL20",
+      "value": 0.06,
+      "fixture_sha256": "2c170977bdf5af90246f663dcac6b49b691fb311f7c01c5e7aa9b5aac4adcd1f",
+      "native_component_sha256": "c494a0d740fa1c227b6f4396a555c67321fa0e6268cfde7318014944c8b957f1",
+      "original_same_QT_precision_pass": true,
+      "actual_QT_before_and_after": {
+        "before": {
+          "sinr": [
+            5.00548187271888,
+            5.005489426327211
+          ],
+          "denominator": [
+            1.4360494009319575,
+            1.4265897918733164
+          ],
+          "satellite_power": [
+            0.009376349228334082
+          ],
+          "gt_interference": [
+            0.06000000000000485
+          ]
+        },
+        "after": {
+          "sinr": [
+            5.005483516866199,
+            5.00548351616618
+          ],
+          "denominator": [
+            1.436049008310711,
+            1.4265897442284106
+          ],
+          "satellite_power": [
+            0.00937634369093249
+          ],
+          "gt_interference": [
+            0.05999999998738449
+          ]
+        }
+      },
+      "actual_QT_solver_diagnostics": {
+        "solver": "CLARABEL",
+        "status": "optimal",
+        "iterations": 12,
+        "solve_seconds": 0.0001529,
+        "normalized_constraint_max_violation": 1.3475054405631681e-12,
+        "constraint_max_relative_violation": 1.3475054405631681e-12,
+        "physical_normalized_constraint_max_violation": 0
+      },
+      "original_QT_bound_max_violation": 2.0446400128548703e-10,
+      "independent80digit_primal_dual_certificate": {
+        "checks": {
+          "dual_nonnegative_and_normalized": true,
+          "dual_positive_scalar_quadratic_coefficients": true,
+          "true_feasible_primal_dual_gap_original1e5": true,
+          "actual_raw_primal_dual_gap_original1e5": true
+        },
+        "all_independent80digit_precision_pass": true,
+        "precision_decimal_digits": 80,
+        "independent_feasible_primal_objective": "5.0054835161645348415464133605939455630695543508933262291905",
+        "independent_dual_upper": "5.00548351861306985790811731961070898514799614990792525429483",
+        "true_feasible_primal_dual_gap": "0.00000000244853501636170395901676342207844179901459902510432610812107",
+        "actual_raw_primal_dual_gap": "0.000000002242425931855864382968091997919602595220425254294828751981",
+        "dual_quadratic_H_minimum": "2236.63024283867774212122045342840938946193801881991759571769",
+        "diagnostic_feasible_p_scale_not_optimizer_change": "1.0",
+        "dual_alpha_sum_before_explicit_feasibility_normalization": 1.0000000000000893,
+        "explicit80digit_arithmetic_floor": "1.5295560757826393682989873923361301422119140625e-58",
+        "proof": "max_{p>=0}(2c*sqrt(p)-H*p)=c^2/H; nonnegative duals with sumalpha=1 give same original QT upper"
+      },
+      "independent_identity_draws": 1000,
+      "identity_maximum_relative_error": 4.3594532207685123e-16,
+      "source_unchanged_during_run": true,
+      "whole_old_failed_point_repaired_or_rerun": false
+    },
+    {
+      "sweep": "multi_vs_single_single_1.25_kL20",
+      "value": 0.07,
+      "fixture_sha256": "f838fb95bd9fc9603136ef70793740f8c713db497f2ff63495897009ae4ff5ea",
+      "native_component_sha256": "04b4b10536f27a90e9e4170b23a6215e780a8cebe969c83d58c5a5bd97e08fb7",
+      "original_same_QT_precision_pass": true,
+      "actual_QT_before_and_after": {
+        "before": {
+          "sinr": [
+            5.6800373797861425,
+            5.7022760364370155
+          ],
+          "denominator": [
+            1.4700657605342868,
+            1.454957978942735
+          ],
+          "satellite_power": [
+            0.010936418276108022
+          ],
+          "gt_interference": [
+            0.06999999985513769
+          ]
+        },
+        "after": {
+          "sinr": [
+            5.685236864821316,
+            5.685245269780758
+          ],
+          "denominator": [
+            1.4689231539403902,
+            1.4549130429510624
+          ],
+          "satellite_power": [
+            0.010920365857143993
+          ],
+          "gt_interference": [
+            0.06999999999395154
+          ]
+        }
+      },
+      "actual_QT_solver_diagnostics": {
+        "solver": "CLARABEL",
+        "status": "optimal",
+        "iterations": 12,
+        "solve_seconds": 0.0001622,
+        "normalized_constraint_max_violation": 7.15268122508661e-13,
+        "constraint_max_relative_violation": 7.15268122508661e-13,
+        "physical_normalized_constraint_max_violation": 0
+      },
+      "original_QT_bound_max_violation": 0.0,
+      "independent80digit_primal_dual_certificate": {
+        "checks": {
+          "dual_nonnegative_and_normalized": true,
+          "dual_positive_scalar_quadratic_coefficients": true,
+          "true_feasible_primal_dual_gap_original1e5": true,
+          "actual_raw_primal_dual_gap_original1e5": true
+        },
+        "all_independent80digit_precision_pass": true,
+        "precision_decimal_digits": 80,
+        "independent_feasible_primal_objective": "5.68523279630730666716031328746870511999716759973836537543511",
+        "independent_dual_upper": "5.68523279751712367238580438720533979423339662814043369411102",
+        "true_feasible_primal_dual_gap": "0.00000000120981700522549109973663467423622902840206831867591246812033",
+        "actual_raw_primal_dual_gap": "0.00000000108275182322669818245346081741149721407793369411102240410804",
+        "dual_quadratic_H_minimum": "2011.11874272900050224886581327215746558061001127884934864107",
+        "diagnostic_feasible_p_scale_not_optimizer_change": "1.0",
+        "dual_alpha_sum_before_explicit_feasibility_normalization": 1.0000000000000402,
+        "explicit80digit_arithmetic_floor": "1.77649177646116157802680390886962413787841796875e-58",
+        "proof": "max_{p>=0}(2c*sqrt(p)-H*p)=c^2/H; nonnegative duals with sumalpha=1 give same original QT upper"
+      },
+      "independent_identity_draws": 1000,
+      "identity_maximum_relative_error": 4.4052578446541204e-16,
+      "source_unchanged_during_run": true,
+      "whole_old_failed_point_repaired_or_rerun": false
+    },
+    {
+      "sweep": "multi_vs_single_single_1.25_kL20",
+      "value": 0.09,
+      "fixture_sha256": "05568730ca89107efa7d748504e2c757c115c9966ea861fe7bda0938f66fb20f",
+      "native_component_sha256": "8e68475dfad6c465377dd8dc4a07ed4bcab04190567a7b61135790d2a1b51202",
+      "original_same_QT_precision_pass": true,
+      "actual_QT_before_and_after": {
+        "before": {
+          "sinr": [
+            6.779560610335115,
+            6.779566426427384
+          ],
+          "denominator": [
+            1.5840709953798247,
+            1.5645932790634263
+          ],
+          "satellite_power": [
+            0.014021261654761103
+          ],
+          "gt_interference": [
+            0.08999999999954307
+          ]
+        },
+        "after": {
+          "sinr": [
+            6.779562134522591,
+            6.779562134542001
+          ],
+          "denominator": [
+            1.584070685167988,
+            1.564593266856993
+          ],
+          "satellite_power": [
+            0.01402125729675225
+          ],
+          "gt_interference": [
+            0.08999999999761817
+          ]
+        }
+      },
+      "actual_QT_solver_diagnostics": {
+        "solver": "CLARABEL",
+        "status": "optimal",
+        "iterations": 12,
+        "solve_seconds": 0.0001554,
+        "normalized_constraint_max_violation": 0.0,
+        "constraint_max_relative_violation": 0.0,
+        "physical_normalized_constraint_max_violation": 0
+      },
+      "original_QT_bound_max_violation": 0.0,
+      "independent80digit_primal_dual_certificate": {
+        "checks": {
+          "dual_nonnegative_and_normalized": true,
+          "dual_positive_scalar_quadratic_coefficients": true,
+          "true_feasible_primal_dual_gap_original1e5": true,
+          "actual_raw_primal_dual_gap_original1e5": true
+        },
+        "all_independent80digit_precision_pass": true,
+        "precision_decimal_digits": 80,
+        "independent_feasible_primal_objective": "6.77956213452229180082014403669834166214582072114742572131419",
+        "independent_dual_upper": "6.77956213479110515842393893040101963549886705874773400149349",
+        "true_feasible_primal_dual_gap": "0.000000000268813357603794893702677973353046337600308280179299401971836",
+        "actual_raw_primal_dual_gap": "0.000000000365150036227255852328054490387783074372734001493486143691736",
+        "dual_quadratic_H_minimum": "1631.04815327840371065544697328855068411127542609112388488787",
+        "diagnostic_feasible_p_scale_not_optimizer_change": "1.0",
+        "dual_alpha_sum_before_explicit_feasibility_normalization": 1.0000000000000115,
+        "explicit80digit_arithmetic_floor": "2.28404218124337859308070619590580463409423828125e-58",
+        "proof": "max_{p>=0}(2c*sqrt(p)-H*p)=c^2/H; nonnegative duals with sumalpha=1 give same original QT upper"
+      },
+      "independent_identity_draws": 1000,
+      "identity_maximum_relative_error": 2.8126318469863943e-16,
+      "source_unchanged_during_run": true,
+      "whole_old_failed_point_repaired_or_rerun": false
+    },
+    {
+      "sweep": "multi_vs_single_single_1.25_kL20",
+      "value": 0.1,
+      "fixture_sha256": "5dc1d3dcd64a2705435cf2c0627d7e1a1b46784baca3bf013ec3428e2ccd70f9",
+      "native_component_sha256": "0257a22f3f6962b6be63bd2b287f178fa19d7c8411f8172682cf0c4019a3d27d",
+      "original_same_QT_precision_pass": true,
+      "actual_QT_before_and_after": {
+        "before": {
+          "sinr": [
+            7.265013745492768,
+            7.282407685011062
+          ],
+          "denominator": [
+            1.6424815437161866,
+            1.6194832312458212
+          ],
+          "satellite_power": [
+            0.015583388545228423
+          ],
+          "gt_interference": [
+            0.09999999992209546
+          ]
+        },
+        "after": {
+          "sinr": [
+            7.269776898084852,
+            7.269779479857535
+          ],
+          "denominator": [
+            1.6415360204502443,
+            1.6194460629722174
+          ],
+          "satellite_power": [
+            0.015570106243794055
+          ],
+          "gt_interference": [
+            0.09999999999787788
+          ]
+        }
+      },
+      "actual_QT_solver_diagnostics": {
+        "solver": "CLARABEL",
+        "status": "optimal",
+        "iterations": 12,
+        "solve_seconds": 0.0001603,
+        "normalized_constraint_max_violation": 0.0,
+        "constraint_max_relative_violation": 0.0,
+        "physical_normalized_constraint_max_violation": 0
+      },
+      "original_QT_bound_max_violation": 0.0,
+      "independent80digit_primal_dual_certificate": {
+        "checks": {
+          "dual_nonnegative_and_normalized": true,
+          "dual_positive_scalar_quadratic_coefficients": true,
+          "true_feasible_primal_dual_gap_original1e5": true,
+          "actual_raw_primal_dual_gap_original1e5": true
+        },
+        "all_independent80digit_precision_pass": true,
+        "precision_decimal_digits": 80,
+        "independent_feasible_primal_objective": "7.26977414457543011080700974837033224297346511637761394412751",
+        "independent_dual_upper": "7.26977414475876795487169110046028034951477983196185365181336",
+        "true_feasible_primal_dual_gap": "0.000000000183337844064681352089948106541314715584239707685853051519458",
+        "actual_raw_primal_dual_gap": "0.000000000218097008914118842848379781506356980399353651813363864556825",
+        "dual_quadratic_H_minimum": "1482.11910657816492877978580716570316523135921075421064125334",
+        "diagnostic_feasible_p_scale_not_optimizer_change": "1.0",
+        "dual_alpha_sum_before_explicit_feasibility_normalization": 1.0000000000000053,
+        "explicit80digit_arithmetic_floor": "2.537812392291883725192747078835964202880859375e-58",
+        "proof": "max_{p>=0}(2c*sqrt(p)-H*p)=c^2/H; nonnegative duals with sumalpha=1 give same original QT upper"
+      },
+      "independent_identity_draws": 1000,
+      "identity_maximum_relative_error": 4.3845414550511464e-16,
+      "source_unchanged_during_run": true,
+      "whole_old_failed_point_repaired_or_rerun": false
+    },
+    {
+      "sweep": "multi_vs_single_single_1.25_kL20",
+      "value": 0.11,
+      "fixture_sha256": "a20a991ff26e444bf8981bdf032693855ca772b1cf857bce4cff82674d62d984",
+      "native_component_sha256": "fa6c30986bd25b527307e12e515b2fba27da8d98375de119a74dc586733ac682",
+      "original_same_QT_precision_pass": true,
+      "actual_QT_before_and_after": {
+        "before": {
+          "sinr": [
+            7.727177805956952,
+            7.727179810578239
+          ],
+          "denominator": [
+            1.6989430236025502,
+            1.6743078134853473
+          ],
+          "satellite_power": [
+            0.017118086848497936
+          ],
+          "gt_interference": [
+            0.10999999998921953
+          ]
+        },
+        "after": {
+          "sinr": [
+            7.727178377160529,
+            7.727178377155161
+          ],
+          "denominator": [
+            1.698942912579198,
+            1.6743078091651729
+          ],
+          "satellite_power": [
+            0.01711808528955618
+          ],
+          "gt_interference": [
+            0.10999999999751767
+          ]
+        }
+      },
+      "actual_QT_solver_diagnostics": {
+        "solver": "CLARABEL",
+        "status": "optimal",
+        "iterations": 12,
+        "solve_seconds": 0.0001488,
+        "normalized_constraint_max_violation": 0.0,
+        "constraint_max_relative_violation": 0.0,
+        "physical_normalized_constraint_max_violation": 0
+      },
+      "original_QT_bound_max_violation": 0.0,
+      "independent80digit_primal_dual_certificate": {
+        "checks": {
+          "dual_nonnegative_and_normalized": true,
+          "dual_positive_scalar_quadratic_coefficients": true,
+          "true_feasible_primal_dual_gap_original1e5": true,
+          "actual_raw_primal_dual_gap_original1e5": true
+        },
+        "all_independent80digit_precision_pass": true,
+        "precision_decimal_digits": 80,
+        "independent_feasible_primal_objective": "7.72717837715509686446363762764737348877753927534552908975965",
+        "independent_dual_upper": "7.72717837733716338948036130193140672671643724885171144596483",
+        "true_feasible_primal_dual_gap": "0.000000000182066525016723674284033237938897973506182356205180983784466",
+        "actual_raw_primal_dual_gap": "0.000000000234716018663698859992291202424445061351711445964827944869013",
+        "dual_quadratic_H_minimum": "1355.57586192564176415676460706972862188621802260704635053254",
+        "diagnostic_feasible_p_scale_not_optimizer_change": "1.0",
+        "dual_alpha_sum_before_explicit_feasibility_normalization": 1.000000000000005,
+        "explicit80digit_arithmetic_floor": "2.7915787853485295499922358430922031402587890625e-58",
+        "proof": "max_{p>=0}(2c*sqrt(p)-H*p)=c^2/H; nonnegative duals with sumalpha=1 give same original QT upper"
+      },
+      "independent_identity_draws": 1000,
+      "identity_maximum_relative_error": 3.171688539807849e-16,
+      "source_unchanged_during_run": true,
+      "whole_old_failed_point_repaired_or_rerun": false
+    },
+    {
+      "sweep": "multi_vs_single_single_2.5_kL20",
+      "value": 0.01,
+      "fixture_sha256": "318a9991870f5fadabc3f716a2bbe9b13aebe2896bcb4efd7af1838344ea1cd4",
+      "native_component_sha256": "c183eb698eba28704671a7e2b21efe5ee216965b002ad4225af91be8f4b2ccca",
+      "original_same_QT_precision_pass": true,
+      "actual_QT_before_and_after": {
+        "before": {
+          "sinr": [
+            1.966025482977304,
+            1.9661487611724195
+          ],
+          "denominator": [
+            1.8207526429474776,
+            13.193841503924281
+          ],
+          "satellite_power": [
+            0.019438888892134486
+          ],
+          "gt_interference": [
+            0.009999999949949481
+          ]
+        },
+        "after": {
+          "sinr": [
+            1.9660720318513403,
+            1.9660720318879745
+          ],
+          "denominator": [
+            1.8207242175487406,
+            13.19383730215741
+          ],
+          "satellite_power": [
+            0.01943830878366718
+          ],
+          "gt_interference": [
+            0.009999999999937649
+          ]
+        }
+      },
+      "actual_QT_solver_diagnostics": {
+        "solver": "CLARABEL",
+        "status": "optimal",
+        "iterations": 11,
+        "solve_seconds": 0.0001395,
+        "normalized_constraint_max_violation": 0.0,
+        "constraint_max_relative_violation": 0.0,
+        "physical_normalized_constraint_max_violation": 0
+      },
+      "original_QT_bound_max_violation": 0.0,
+      "independent80digit_primal_dual_certificate": {
+        "checks": {
+          "dual_nonnegative_and_normalized": true,
+          "dual_positive_scalar_quadratic_coefficients": true,
+          "true_feasible_primal_dual_gap_original1e5": true,
+          "actual_raw_primal_dual_gap_original1e5": true
+        },
+        "all_independent80digit_precision_pass": true,
+        "precision_decimal_digits": 80,
+        "independent_feasible_primal_objective": "1.96607203109265997694575401193417638580214851745267169037669",
+        "independent_dual_upper": "1.96607203121209148020324685080440509577460394593027241693593",
+        "true_feasible_primal_dual_gap": "0.000000000119431503257492838870228709972455428477600726559245558754353",
+        "actual_raw_primal_dual_gap": "0.000000000139473182205568468132966938216162783820897416935931956094882",
+        "dual_quadratic_H_minimum": "6626.65624247926590654568427084349963289984557122438668099047",
+        "diagnostic_feasible_p_scale_not_optimizer_change": "1.0",
+        "dual_alpha_sum_before_explicit_feasibility_normalization": 1.0000000000000553,
+        "explicit80digit_arithmetic_floor": "1.20277651328552561693641109741292893886566162109375e-59",
+        "proof": "max_{p>=0}(2c*sqrt(p)-H*p)=c^2/H; nonnegative duals with sumalpha=1 give same original QT upper"
+      },
+      "independent_identity_draws": 1000,
+      "identity_maximum_relative_error": 3.791923599753482e-16,
+      "source_unchanged_during_run": true,
+      "whole_old_failed_point_repaired_or_rerun": false
+    },
+    {
+      "sweep": "multi_vs_single_single_2.5_kL20",
+      "value": 0.02,
+      "fixture_sha256": "27208e4ac2e2a69686622e64cd80a30fc8fb44b9baeede4eac5f89acd6199102",
+      "native_component_sha256": "d462767dc43a5a8ff39ef512b5c9db57d4d8c5e04ffec61e1dada7fb63471028",
+      "original_same_QT_precision_pass": true,
+      "actual_QT_before_and_after": {
+        "before": {
+          "sinr": [
+            3.9225868139427096,
+            3.9225337360891777
+          ],
+          "denominator": [
+            2.6420269619254544,
+            3.0685637909795487
+          ],
+          "satellite_power": [
+            0.03140286159408764
+          ],
+          "gt_interference": [
+            0.01999999993855911
+          ]
+        },
+        "after": {
+          "sinr": [
+            3.922563809054668,
+            3.92256380902527
+          ],
+          "denominator": [
+            2.6420392869714213,
+            3.0685656831167174
+          ],
+          "satellite_power": [
+            0.03140304399933739
+          ],
+          "gt_interference": [
+            0.019999999999792618
+          ]
+        }
+      },
+      "actual_QT_solver_diagnostics": {
+        "solver": "CLARABEL",
+        "status": "optimal",
+        "iterations": 11,
+        "solve_seconds": 0.0001462,
+        "normalized_constraint_max_violation": 0.0,
+        "constraint_max_relative_violation": 0.0,
+        "physical_normalized_constraint_max_violation": 0
+      },
+      "original_QT_bound_max_violation": 0.0,
+      "independent80digit_primal_dual_certificate": {
+        "checks": {
+          "dual_nonnegative_and_normalized": true,
+          "dual_positive_scalar_quadratic_coefficients": true,
+          "true_feasible_primal_dual_gap_original1e5": true,
+          "actual_raw_primal_dual_gap_original1e5": true
+        },
+        "all_independent80digit_precision_pass": true,
+        "precision_decimal_digits": 80,
+        "independent_feasible_primal_objective": "3.92256380894593517334311078000513781621244600065021074356946",
+        "independent_dual_upper": "3.92256380909260866356063092965851333970406193452958814385937",
+        "true_feasible_primal_dual_gap": "0.000000000146673490217520149653375523491615933879377400289906218877781",
+        "actual_raw_primal_dual_gap": "0.000000000189511914312978887699868353551413008748338143859367035327387",
+        "dual_quadratic_H_minimum": "1037.94783886972335444184301897603342621659378022573771704472",
+        "diagnostic_feasible_p_scale_not_optimizer_change": "1.0",
+        "dual_alpha_sum_before_explicit_feasibility_normalization": 1.0000000000000533,
+        "explicit80digit_arithmetic_floor": "3.6615929316077966859666048549115657806396484375e-59",
+        "proof": "max_{p>=0}(2c*sqrt(p)-H*p)=c^2/H; nonnegative duals with sumalpha=1 give same original QT upper"
+      },
+      "independent_identity_draws": 1000,
+      "identity_maximum_relative_error": 4.048947375233659e-16,
+      "source_unchanged_during_run": true,
+      "whole_old_failed_point_repaired_or_rerun": false
+    },
+    {
+      "sweep": "multi_vs_single_single_2.5_kL20",
+      "value": 0.08,
+      "fixture_sha256": "272b5c27619996ca1fb55124db534eb459c88a909dce26445b05e9df3af2140d",
+      "native_component_sha256": "afefdfae6a0f16da3ec0a560cc08f197fb3c986277b267ef78f167e897837b4c",
+      "original_same_QT_precision_pass": true,
+      "actual_QT_before_and_after": {
+        "before": {
+          "sinr": [
+            8.054466820218103,
+            8.054486960945583
+          ],
+          "denominator": [
+            5.3685839242776545,
+            7.292181239348613
+          ],
+          "satellite_power": [
+            0.09817890523461474
+          ],
+          "gt_interference": [
+            0.07999999990902155
+          ]
+        },
+        "after": {
+          "sinr": [
+            8.054476306763622,
+            8.054476306686693
+          ],
+          "denominator": [
+            5.368578307531163,
+            7.292180962182391
+          ],
+          "satellite_power": [
+            0.09817882273824977
+          ],
+          "gt_interference": [
+            0.07999999999630336
+          ]
+        }
+      },
+      "actual_QT_solver_diagnostics": {
+        "solver": "CLARABEL",
+        "status": "optimal",
+        "iterations": 11,
+        "solve_seconds": 0.0001515,
+        "normalized_constraint_max_violation": 0.0,
+        "constraint_max_relative_violation": 0.0,
+        "physical_normalized_constraint_max_violation": 0
+      },
+      "original_QT_bound_max_violation": 0.0,
+      "independent80digit_primal_dual_certificate": {
+        "checks": {
+          "dual_nonnegative_and_normalized": true,
+          "dual_positive_scalar_quadratic_coefficients": true,
+          "true_feasible_primal_dual_gap_original1e5": true,
+          "actual_raw_primal_dual_gap_original1e5": true
+        },
+        "all_independent80digit_precision_pass": true,
+        "precision_decimal_digits": 80,
+        "independent_feasible_primal_objective": "8.05447630668337287786825742130733327555346220383082321492093",
+        "independent_dual_upper": "8.05447630700003497731363659302559929620300475204450518285272",
+        "true_feasible_primal_dual_gap": "0.000000000316662099445379171718266020649542548213681967931789859959801",
+        "actual_raw_primal_dual_gap": "0.000000000410673776464183722127650554290162955169505182852716358636117",
+        "dual_quadratic_H_minimum": "430.992065807580802399814445886343322630384917413164936773341",
+        "diagnostic_feasible_p_scale_not_optimizer_change": "1.0",
+        "dual_alpha_sum_before_explicit_feasibility_normalization": 1.0000000000000637,
+        "explicit80digit_arithmetic_floor": "1.26425286185257135684878448955714702606201171875e-58",
+        "proof": "max_{p>=0}(2c*sqrt(p)-H*p)=c^2/H; nonnegative duals with sumalpha=1 give same original QT upper"
+      },
+      "independent_identity_draws": 1000,
+      "identity_maximum_relative_error": 4.024342495300882e-16,
+      "source_unchanged_during_run": true,
+      "whole_old_failed_point_repaired_or_rerun": false
+    }
+  ],
+  "complete_old183_native_sha256": "d9d825d18ee0db6a8320ad147e62f12773e2bd6350cabc7d087a9900015add34",
+  "complete_old183_native_size_bytes": 45894703,
+  "old183_completed": 183,
+  "old183_valid": 154,
+  "old183_failed": 29,
+  "old_failed_points_kept_and_not_upgraded": true,
+  "new_complete183_rerun_executed": false,
+  "MATLAB19_precision_execution_verified": false,
+  "historical_figure_agreement_verified": false,
+  "full_reproduction_pass": false,
+  "executed_scientific_source_hashes": {
+    "core.py": "fdbe81b3d19e1c1aa62a015969017f24accdcdb6e7a709a65540576b49f0abf2",
+    "models.py": "ce974bbe26e97481425a603b4dc2cbfc7317b284bb192f482d49d71a28e5819e",
+    "increments.py": "384114958637e7d86dbce3894ef653cd6fd6edd2e40883b6b3774a65767fa7ea",
+    "algorithms.py": "3106b9c673757b73ccb350846c78aeae64739837e960b9c80b3fc62a3feaa5b2",
+    "spectral_rmo.py": "2d8ebbcb44801a99d5dfdfd0c954530e1d4a8653b4dfa467885be3068e3edeb1",
+    "qt_numerical_guard.py": "4f35826083c3ffb5f000fe5e0f8563bb09be14313c8981edfa681a9a00c27164",
+    "termination.py": "5b25d0365aa9a21dca886250858221379b02f766ecaaa35277a560eef2ad685d",
+    "scenario.py": "7dbc490944c2fd7aaa2fc862068508530faab10b8c2dcb63eccf5511c74a62ba",
+    "run.py": "d9d064f05c7ec8f08b2b9c5a389f5d6cd5117701c15c1609dac6913f3d236131",
+    "receipts.py": "8b74e8581df67419913d3a48d3326f9fd35aacd4b1480668f5692d880fd1490d",
+    "run_cooperative_guarded.py": "da1ba120c6939cfb2e842f422a637f73b351eeb270e236864af6d7141a680261",
+    "spectral_config.json": "086d63de49ebfe19b1cec833ecebb76d49e75788e7ad244e8e06f03b5b5b6eef"
+  },
+  "executed_WORK_component_source_hashes": {
+    "test_factored_original_mr_fixture.py": "6839d144466f0be1946f77ebd83ab697332dbcef84b84b22da499124c104c85b",
+    "original_mr_qt_factored_work.py": "df308e8b200cd621a2321f7997bbd9e9b545b151cb1013051d35ea80aff7cfc3",
+    "try_original_mr_objective_scale.py": "348376cd61fc15eae51f9b47fcd1298d6facc5c60ca5a745eda891dce6ff0c7a"
+  }
+}

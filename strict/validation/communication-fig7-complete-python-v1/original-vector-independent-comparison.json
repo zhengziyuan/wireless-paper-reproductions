@@ -1,0 +1,92 @@
+{
+  "scope": "one_actual12000_start_corrected_axis_Fig7_independent_physics_and_unfitted_all1080_vector_samples",
+  "original_reference_source_sha256": "475b510d776b68df07e7dff1c9acdbe38dafa3d2d50e7636820934b8f6f005fe",
+  "actual_physical_checks": [
+    {
+      "baseline": "MIS",
+      "actual_starts": 6000,
+      "all_stops_and_feasibility_passed": true,
+      "actual_selected_start": 5543,
+      "fresh_physical_score": 0.03670699253746111,
+      "saved_score_error": 0.0,
+      "all361_beam_samples_error": 2.7755575615628914e-17
+    },
+    {
+      "baseline": "SMS",
+      "actual_starts": 6000,
+      "all_stops_and_feasibility_passed": true,
+      "actual_selected_start": 3983,
+      "fresh_physical_score": 0.01308515185109908,
+      "saved_score_error": 5.204170427930421e-18,
+      "all361_beam_samples_error": 2.0816681711721685e-17
+    }
+  ],
+  "all12000_starts_individually_feasible_and_verified": true,
+  "all_actual_saved_beams_independently_verified": true,
+  "MIS_label_assignments": [
+    {
+      "order": [
+        0,
+        1
+      ],
+      "errors": [
+        {
+          "original_label": "MIS pattern1",
+          "actual_position_index": 0,
+          "maximum_absolute_error": 2.5679671209269395e-07,
+          "rmse": 7.704803774439882e-08
+        },
+        {
+          "original_label": "MIS pattern2",
+          "actual_position_index": 1,
+          "maximum_absolute_error": 2.572838263652233e-07,
+          "rmse": 7.960891918050082e-08
+        }
+      ],
+      "maximum_absolute_error": 2.572838263652233e-07
+    },
+    {
+      "order": [
+        1,
+        0
+      ],
+      "errors": [
+        {
+          "original_label": "MIS pattern1",
+          "actual_position_index": 1,
+          "maximum_absolute_error": 0.038955579512283435,
+          "rmse": 0.031804549219646046
+        },
+        {
+          "original_label": "MIS pattern2",
+          "actual_position_index": 0,
+          "maximum_absolute_error": 0.03895561752168777,
+          "rmse": 0.031804580907320266
+        }
+      ],
+      "maximum_absolute_error": 0.03895561752168777
+    }
+  ],
+  "selected_original_label_to_actual_position_index": [
+    0,
+    1
+  ],
+  "SMS_reference_error": {
+    "maximum_absolute_error": 2.1411544078031586e-07,
+    "rmse": 7.097774406651582e-08
+  },
+  "maximum_absolute_reference_error": 2.572838263652233e-07,
+  "predeclared_linear_SNR_reference_absolute_gate": 1e-05,
+  "all_three_corrected_axis_paths_close_under_declared_gate": true,
+  "fitted_phases_angles_gain_spacing_or_reference_ordinates": false,
+  "production_solver_imported": false,
+  "literal2x1_source_text_recovered": false,
+  "publisher_erratum_or_all_paper_reproduction_claimed": false,
+  "original_figure_reproduction_certified": false,
+  "input_file_sha256": {
+    "computed": "60de36525296282ad6c6c7071619e6e6561c2c4afaf2eba4f5434e933eced1e0",
+    "reference": "ac2479dbc8c34bf090131a9f7cd4008aeec5ffb698b912947226d6560f68ec41"
+  },
+  "independent_evaluator_sha256": "6e0656344d9d7167e31f4ca83d6d30430361397f895a31d77d26467b0b7f5153",
+  "independent_evaluation_inputs_and_source_unchanged": true
+}

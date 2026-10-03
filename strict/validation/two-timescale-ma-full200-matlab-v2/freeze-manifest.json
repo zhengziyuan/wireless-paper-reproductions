@@ -1,0 +1,1485 @@
+{
+  "scope": "immutable_public_evidence_freeze_after_both_actual_full200_independent_audits",
+  "publisher_script_sha256": "2783a5fb4ad119b8337ad3ac51d1313274eb03dbbcbf2ad9c6e54344e8062cf2",
+  "input_bank_label": "work/full-paper-banks/ma-figure03-20261004-ao10000-v2",
+  "actual_MATLAB_output_bank_label": "work/full-paper-banks/ma-figure03-20261004-ao10000-v2-matlab-source-v2",
+  "input_manifest_sha256": "12f2894bb246049035cadd323a0b1fe63fa50a62649a8bc066ef2e4133873337",
+  "input_plan_sha256": "0f730ebecb029432d4c4638f3e5578d2fa04fbf4a0a1250ffe1d31c771f009c0",
+  "input_configuration_sha256": "72bd6211cd90e238bfa34a25d4f8e56d29454b01c51aca32aa483488475a0d80",
+  "actual_outer_execution_identity_sha256": "736b4f9a5b8347c3b59878e7dc64aa73ca19ce0c03340b6a2a9ee6590d04e0ca",
+  "actual_outer_execution_start_identity_sha256": "543401994282333feee5b34f6642e282c1cacdd3682c8ca135296a57b7609639",
+  "actual_inner_execution_start_identity_sha256": "244b7bb0150b6b4ce9536826d06a6ed466e14a92e5eee9a2457a84cd60da7dfa",
+  "actual_final_execution_progress_sha256": "d1731cb7c33a9a55f653faec252cecc93f364146b56c338b4dcef40943ec27e4",
+  "actual_full_summary_sha256": "c3aefa4a7ab433c31e419bab022103c6321edb0477141491890c094ddf9096ac",
+  "all200_original_input_and_raw_output_bindings": [
+    {
+      "input_filename": "case-000-mc-000.json",
+      "input_bytes_sha256": "655a72a105a5feeaefe7a28311bc3fcb5688e3cbb783339927c57aa7a49ae386",
+      "input_fingerprint": "4b58e1dae7ffc2f28ce4aa6654272d7d65032b5917929a3e3b12b2875a19ad43",
+      "raw_result_filename": "case-000-mc-000-matlab.json",
+      "raw_result_sha256": "bebaee1df90c6c553437775ddfe4ce44142d58881225f70734c5cc68325001ec"
+    },
+    {
+      "input_filename": "case-000-mc-001.json",
+      "input_bytes_sha256": "4fc8ca128fa955d2e18976ace787b9e76c844542088c2de9f8bf9da2ec14b0c3",
+      "input_fingerprint": "ff6e014654cc866d607b53d3bafb080b5cac3b21ab425b09249d103209fca52e",
+      "raw_result_filename": "case-000-mc-001-matlab.json",
+      "raw_result_sha256": "f79bc34dc58bfcdad7337816bacf2de5499949787211749d218aad0d9fd1d5f7"
+    },
+    {
+      "input_filename": "case-000-mc-002.json",
+      "input_bytes_sha256": "27376726cf9c445832aa1507942edffadaff43ab1933eeb0a5a8e695a004b0f4",
+      "input_fingerprint": "b6d298d7fcfdf0c4e37c604580fa6206ecb1ebe3bff7fba5a17232b84e0518f2",
+      "raw_result_filename": "case-000-mc-002-matlab.json",
+      "raw_result_sha256": "0977a84458a2e908c418407af2d569593fab95d828f964f1b41ed08ad712f630"
+    },
+    {
+      "input_filename": "case-000-mc-003.json",
+      "input_bytes_sha256": "52381523553de5dc96041a12d6d17b2bfed56cc169d9c8c6f8aa3f64455cb3a8",
+      "input_fingerprint": "2bbbee93fa85a280ae8e2d5d256fbdc46722b78d9948ab22de1f30ec9f47c7e3",
+      "raw_result_filename": "case-000-mc-003-matlab.json",
+      "raw_result_sha256": "3648545ed9fefb4ab761adcb1d2ed4fe4e84ac2c65ba27239d2316a0a52ee463"
+    },
+    {
+      "input_filename": "case-000-mc-004.json",
+      "input_bytes_sha256": "09b6b91404c1e3c2548c9ca4d502c776e99461d7b8a0865cc37e98bb31b580c6",
+      "input_fingerprint": "2ac02c9b90d9f14cbfda554f7d232f35f64a9cc4fb29cd7296f3d131655a0229",
+      "raw_result_filename": "case-000-mc-004-matlab.json",
+      "raw_result_sha256": "caea94e9b742ce570cdb88cd81e132719a2ba731f32ac03b99cff14cbfaaaaea"
+    },
+    {
+      "input_filename": "case-000-mc-005.json",
+      "input_bytes_sha256": "bb7427d237e9af882522f9d0c05aefb6b5f291410ac5a2bea536d7ab767b6450",
+      "input_fingerprint": "1a2dfcfe5ebdbc3df1c9e015cbb6b5315e42d272d060e8f9b7f748bd5ebacf93",
+      "raw_result_filename": "case-000-mc-005-matlab.json",
+      "raw_result_sha256": "7bfe0cfaa7397bb6e62ad35953cd68755d97c7a4dff395e1864d98ef257b7c3e"
+    },
+    {
+      "input_filename": "case-000-mc-006.json",
+      "input_bytes_sha256": "a9a75b8eb41e0524cb67cdfafc99ee00c60f9ad07242570a4ce39cbfc455cada",
+      "input_fingerprint": "c5e0ec5dd59ffb841b1ab7cda8cf387715dbda1f80ed5d46c1b7d891cc5c45d4",
+      "raw_result_filename": "case-000-mc-006-matlab.json",
+      "raw_result_sha256": "dfa715a90cbe9b58c24434e19e73b46170df24d643231b3e9ed9156285ec2623"
+    },
+    {
+      "input_filename": "case-000-mc-007.json",
+      "input_bytes_sha256": "7d72cabd1a5e7d059d5c809fb51459667a92e3d367b9cae2221b38aaf4f31e39",
+      "input_fingerprint": "39304d41b47f7c2c327218d4d26f7a709a14b70e6c88e59c06192bc40f5ba074",
+      "raw_result_filename": "case-000-mc-007-matlab.json",
+      "raw_result_sha256": "d1b37cbd78f5c49b37c95836fe40dd47fcfe74e98bb3cd5ff7529dc80bde17de"
+    },
+    {
+      "input_filename": "case-000-mc-008.json",
+      "input_bytes_sha256": "b91887ffbe49dba93f4e10ab1f7c4a158539968e231ba3e0792a04aa5d43e2e1",
+      "input_fingerprint": "717eb62e44dde4383a2e970af5c372aa11542c6836bec4d81d4b0479b1892529",
+      "raw_result_filename": "case-000-mc-008-matlab.json",
+      "raw_result_sha256": "efde7317ba0c8f79d15f3680bc8a58ca2f054f0b9cdb16c62d533313587188c0"
+    },
+    {
+      "input_filename": "case-000-mc-009.json",
+      "input_bytes_sha256": "f256803789fb40eadf24e61ac1909389cfa69ccb356d263090fb94f8c54417e0",
+      "input_fingerprint": "b04cc53016d8afd412a0e535d608ff4472ef84c5bec4a265c664bcf218920e89",
+      "raw_result_filename": "case-000-mc-009-matlab.json",
+      "raw_result_sha256": "be287c15835914148eeef817f5bf14f29a115180ea91b364236ff87c25ff2116"
+    },
+    {
+      "input_filename": "case-000-mc-010.json",
+      "input_bytes_sha256": "3d48c5e718f3985b3bc862be7caec3d6b7f2875cfb02cdfe8649375bfcec8f3e",
+      "input_fingerprint": "aae2663ae6b723ddb92fab6e1e8016ab759c8c9ff1f83c50e40886c79fb7f6c8",
+      "raw_result_filename": "case-000-mc-010-matlab.json",
+      "raw_result_sha256": "fe04143a26c0599ed56e2d307bb2dc98390e9b41d0b4ff03e7e27ae3032da270"
+    },
+    {
+      "input_filename": "case-000-mc-011.json",
+      "input_bytes_sha256": "157b8830db753a0e3381fc3b16a995118272126efaa0630b180bf5cc3fcf2e2d",
+      "input_fingerprint": "093be8f8985b46f12d57249266353e047b132c087ec93908e536796f7f0d91b4",
+      "raw_result_filename": "case-000-mc-011-matlab.json",
+      "raw_result_sha256": "f763ce2943e313e49e80376f8398082b21683d925ccff173df2eea10780d80c6"
+    },
+    {
+      "input_filename": "case-000-mc-012.json",
+      "input_bytes_sha256": "290888c3d5ed4869ee5771ab37b48824d63362ce76ce3733ec1a09d6c1d66139",
+      "input_fingerprint": "bb75ec3b41a26fd43d45373867468437fc7a3cc93ae28c4b9198e5c2fb3b2aea",
+      "raw_result_filename": "case-000-mc-012-matlab.json",
+      "raw_result_sha256": "5b5957985e36b4c612a0664c217475d0930cbd5fbd4e29e2d9d6a2427ed328a1"
+    },
+    {
+      "input_filename": "case-000-mc-013.json",
+      "input_bytes_sha256": "824a9f9fcf181d503d19e1bd4e9e112ef76127d57cc67b71b5630fa7e8510508",
+      "input_fingerprint": "d3df16f13080417e77ae58cc10ccbc1cb58d569524000e062b2601fcc88dbf42",
+      "raw_result_filename": "case-000-mc-013-matlab.json",
+      "raw_result_sha256": "bb05114bce0a53e0424415cbec5866d07080c5be4b9d66e7cdfc2a882c045b4f"
+    },
+    {
+      "input_filename": "case-000-mc-014.json",
+      "input_bytes_sha256": "d44c527f50b45e8cd144dc001f5941bedff98b015b1acfb78bf1bf088484f1ec",
+      "input_fingerprint": "a6d3ab8fc673e859a915f92f22ec8654a86e45ad02b3a1cc6c52df25a138ed60",
+      "raw_result_filename": "case-000-mc-014-matlab.json",
+      "raw_result_sha256": "26a06c76249793745ec6be49f14ccf9829f25faf06d4c4238618b79b5c59239f"
+    },
+    {
+      "input_filename": "case-000-mc-015.json",
+      "input_bytes_sha256": "7cac7e243bae22248a57b8a1be9c829c6650aa6db2647f148cb0a8cf7299e120",
+      "input_fingerprint": "246e54cd8237648c95d772f60d2f1c671d30e144e3d9a597c11ef82bd60755a9",
+      "raw_result_filename": "case-000-mc-015-matlab.json",
+      "raw_result_sha256": "dc47e214807b183b1532cb6f94299f16f215da9238cf643689a4897402d89dd0"
+    },
+    {
+      "input_filename": "case-000-mc-016.json",
+      "input_bytes_sha256": "5aa6f6e7a04a8f4e651f4aa7fb10b140978150570be6e072667506ddd42f8cb6",
+      "input_fingerprint": "245d5e6dbcff6bc79a836cbdfab01c4919cb8e3293eb9ffa4e59437ec1a700ca",
+      "raw_result_filename": "case-000-mc-016-matlab.json",
+      "raw_result_sha256": "684161bd57777b49db03676ee036809f3ddcbf366f6d520fdb23525cd1906fe7"
+    },
+    {
+      "input_filename": "case-000-mc-017.json",
+      "input_bytes_sha256": "4747af691515275358552a4b7b4f334a67f631d280af1915b006f40c6dfd4511",
+      "input_fingerprint": "60f7e5b85845afbcbc92aec9ac59591b2aeef2723bf5ee138edefcbef424b59f",
+      "raw_result_filename": "case-000-mc-017-matlab.json",
+      "raw_result_sha256": "2a5f01e4f5c51d29fa4e15753fe54f0448d4fc6e81704fa209322232f83d2a6a"
+    },
+    {
+      "input_filename": "case-000-mc-018.json",
+      "input_bytes_sha256": "ded94edfc7bab08d3a94e7a17b9a733332bead3b4bb7198dbf682e26de014190",
+      "input_fingerprint": "62d22cd8d7e4b47b97a07df61cbebda9623c3f431f8063d24270223fbb9ce061",
+      "raw_result_filename": "case-000-mc-018-matlab.json",
+      "raw_result_sha256": "1fdacde7adc1444991109beac61c358ea7ce9da04d186af9968ca87c1573673b"
+    },
+    {
+      "input_filename": "case-000-mc-019.json",
+      "input_bytes_sha256": "46ad5e371e75a4ea406bfc41e7d44ce8204610268a547695aecb769d0ba20d70",
+      "input_fingerprint": "45fcbd3c8f9038b68d63858d32e5197f8cae480104f7ed98b74b393cee040200",
+      "raw_result_filename": "case-000-mc-019-matlab.json",
+      "raw_result_sha256": "e1df7a84d52b41d0b56798c5fe93e54c2c31e97a441977a2bda8214487a78128"
+    },
+    {
+      "input_filename": "case-000-mc-020.json",
+      "input_bytes_sha256": "4ef447db7f9ba25fd38f402b27627b8058353018c71268045adfd272b991b054",
+      "input_fingerprint": "2dae8347ed25ebd552c7d16fee786576d139e6bb054dd2c22b7e73957f306717",
+      "raw_result_filename": "case-000-mc-020-matlab.json",
+      "raw_result_sha256": "f2567f9b0a6d0f782158651a5619b743377d58718ebd955c927b1abf9c9c2e7a"
+    },
+    {
+      "input_filename": "case-000-mc-021.json",
+      "input_bytes_sha256": "f30b9ac24609ee79602e407e192f088659c89ea8e0744794ef4c9972a4b27a24",
+      "input_fingerprint": "6575921281486a4f1f0d24631c04e92a9a9ff914744b83c2aa0a706c64a0f265",
+      "raw_result_filename": "case-000-mc-021-matlab.json",
+      "raw_result_sha256": "7babeb73be79cf7eb0cc2433a29204f954bb89f2dd525a7ba10e7db720f77296"
+    },
+    {
+      "input_filename": "case-000-mc-022.json",
+      "input_bytes_sha256": "c84eabb1cebf5b3837af92b0ab8fa993c44f53ec792734abea11718a096255bb",
+      "input_fingerprint": "25149df6a4b0e6d34df68deacea898aaca5e193e8935a19ec8e7b62b2e54d336",
+      "raw_result_filename": "case-000-mc-022-matlab.json",
+      "raw_result_sha256": "f11c4c5496f1683f12a07d707cc6e6def84c56bad744a8a20415003e8faeef93"
+    },
+    {
+      "input_filename": "case-000-mc-023.json",
+      "input_bytes_sha256": "1694715441fd67ddbec5b5c383e562f6109618a83a9d6909a286693c878af649",
+      "input_fingerprint": "b8efc0c46acfd8db6ba69410a2735a40df8df9506db644d51e451ab447984893",
+      "raw_result_filename": "case-000-mc-023-matlab.json",
+      "raw_result_sha256": "95d3dc98328bbdd6330e029bccb6c77bb9498f3360479b9e2925c298532232cc"
+    },
+    {
+      "input_filename": "case-000-mc-024.json",
+      "input_bytes_sha256": "eb54ede06188a19c235f2ab73152379159a85732806cd7da39a1489c7ae5451c",
+      "input_fingerprint": "b26795f98282337e9b8f957bf87f11f5bf23327cdc2313394ed17092f3acb50f",
+      "raw_result_filename": "case-000-mc-024-matlab.json",
+      "raw_result_sha256": "925c64747b882b6e8e097c247e08337c1e56ee97226dc2e687f686e41e4cde5c"
+    },
+    {
+      "input_filename": "case-000-mc-025.json",
+      "input_bytes_sha256": "facbf3778df6bddf158a097e0fe01b60b9d445aab77574d88279aac3df26ffd2",
+      "input_fingerprint": "a91ffe41a187bb860947b74eab5a16f4cc306e1ace577c4ed2a8a76a3ca1d6fd",
+      "raw_result_filename": "case-000-mc-025-matlab.json",
+      "raw_result_sha256": "6f213155f7e3fc4a3647154edcbeb80be62fc865ee06c8c1cd36d2bfa21ccd30"
+    },
+    {
+      "input_filename": "case-000-mc-026.json",
+      "input_bytes_sha256": "32a1cf8d062185b96b0210eab8079288d54a11b16082dbea2e4d65ec3b658438",
+      "input_fingerprint": "f2341a4822bd6dfb180de19578143945c569941a7c8bbd015bc9d1743ee19a4b",
+      "raw_result_filename": "case-000-mc-026-matlab.json",
+      "raw_result_sha256": "c33e77b6fbfce74aa9a17ebfefc2773da6f846d50891485881c10c39e2b8a59b"
+    },
+    {
+      "input_filename": "case-000-mc-027.json",
+      "input_bytes_sha256": "7b94f5a1ae1b52c63b5210e8d0f9d7048248cb178e0b2da72a578249e906fc75",
+      "input_fingerprint": "49625c5f53e1ef55fe45db38339720f36615964d2d82cbd9bba856cf219368a6",
+      "raw_result_filename": "case-000-mc-027-matlab.json",
+      "raw_result_sha256": "e61e3ff5b1b723d7674c42e31f87dce827accabf616d7d12a6de21cfe42bb77d"
+    },
+    {
+      "input_filename": "case-000-mc-028.json",
+      "input_bytes_sha256": "43fe0ea03a83989bd2ae88def2a8a30f7b4f4fb35c99093593645ace022df8ed",
+      "input_fingerprint": "a13086d7f46f113e188ff2bc2407a62ba5a76da32a4968da09df6feff5f16f95",
+      "raw_result_filename": "case-000-mc-028-matlab.json",
+      "raw_result_sha256": "27d32e9a76fd0e765d2dc1017fc61920744e8d4eb4dbf483f180ad42328159c0"
+    },
+    {
+      "input_filename": "case-000-mc-029.json",
+      "input_bytes_sha256": "da54c07f014422df599b01a9e24d329a277ab3f2a33ac225fddb8b65fa1feab6",
+      "input_fingerprint": "04d8e769e6b71db4c8786754dfb3c656788a74c2cb55135a292d8217679928e8",
+      "raw_result_filename": "case-000-mc-029-matlab.json",
+      "raw_result_sha256": "0adee272f3f90f3cb98a9dc4879ad0e55fcc5004ad5bc168dc71e58da6d048c1"
+    },
+    {
+      "input_filename": "case-000-mc-030.json",
+      "input_bytes_sha256": "f4c6bb82444091b522445c6eefe13c302913fc444d0ae3b506ae0d6fb210b435",
+      "input_fingerprint": "5d51f8d11a5c9a9b7b659408c9b9c50c9cff68bd8311e5f6d569ac16f19601fe",
+      "raw_result_filename": "case-000-mc-030-matlab.json",
+      "raw_result_sha256": "b5020df2541028a12280596a2e172fb4f200a0ee3f3319762055279107cc6840"
+    },
+    {
+      "input_filename": "case-000-mc-031.json",
+      "input_bytes_sha256": "8c760413a1d0e1e29f5c9b1019d9f98a8b8a68c75af512d4a80fcae0a8982afd",
+      "input_fingerprint": "15efab57a915666a3321dd2d90002ec616dfceaf035479d96e4d5431158cc239",
+      "raw_result_filename": "case-000-mc-031-matlab.json",
+      "raw_result_sha256": "4ba1fbe717420dd5a01d3a4f53e524987e1835ee6ecb7127010204aa2f891c33"
+    },
+    {
+      "input_filename": "case-000-mc-032.json",
+      "input_bytes_sha256": "1f4c17fa6ea02e1ed0c36a1fd8a84fe9ccfb768c3030787748b713c71927b17d",
+      "input_fingerprint": "019fce504d8ac48f1cfc494627ea380b58ef3e2f48a4a715173d9c5a6f9eb43a",
+      "raw_result_filename": "case-000-mc-032-matlab.json",
+      "raw_result_sha256": "126e1a34c1d20a7269c03f20ee5a996caff8e30f590ac0defde4510c3bc32382"
+    },
+    {
+      "input_filename": "case-000-mc-033.json",
+      "input_bytes_sha256": "a3203c10ec6d32b9e25260be9ddd26e48f01e07571983b67856616039c3d5b57",
+      "input_fingerprint": "ed971f1cc4511bc868468439403db34f2f08b8179802c9aca6c412bc9119f498",
+      "raw_result_filename": "case-000-mc-033-matlab.json",
+      "raw_result_sha256": "d4482bf0e4ce8596543bc43d4298dfdac0bbe5cca9632ed6466af1d239bebc62"
+    },
+    {
+      "input_filename": "case-000-mc-034.json",
+      "input_bytes_sha256": "261303ec6b46493a297e70c2fca7c4ccf811f84c607bcb7a7a328cc3652a4d6c",
+      "input_fingerprint": "ab94d929cf6b7cc3565a522664edce1e86e10d9075d35f6f3e8ede61de02f09a",
+      "raw_result_filename": "case-000-mc-034-matlab.json",
+      "raw_result_sha256": "766d70dde586d199ff6f361427937ed945937fadcf059c36465c7aebf1e7e96d"
+    },
+    {
+      "input_filename": "case-000-mc-035.json",
+      "input_bytes_sha256": "3c03924f5787268cbbb4d815dc47fce7747021874ed486ae072f4cdde8f5ae84",
+      "input_fingerprint": "4326060a3ea99aebd0e05b15e2fcbe4afaae301de7c4a9fb44055357e8e8f084",
+      "raw_result_filename": "case-000-mc-035-matlab.json",
+      "raw_result_sha256": "18fb684d06f21d7adb2bde171113f1973fb24341ad6a7b58b5fd6f5c956f1298"
+    },
+    {
+      "input_filename": "case-000-mc-036.json",
+      "input_bytes_sha256": "aa21f59c6b517f88937d1816fd40d39731317ebaea76ee90aaa9407a5abf6946",
+      "input_fingerprint": "319c829bc1c9602f1a5d04bc56af1919dee22cc3a41d4c63e29d2f264682f50d",
+      "raw_result_filename": "case-000-mc-036-matlab.json",
+      "raw_result_sha256": "8b8788428b463dcdca9bc29d56123f3437094fbbaada846079d836a0cd53105d"
+    },
+    {
+      "input_filename": "case-000-mc-037.json",
+      "input_bytes_sha256": "0e1fe1fad2151455f8d45f64d604291ee54f82d333bfa1f8c9a37f9ed2af2000",
+      "input_fingerprint": "637bbae778cacb6e1534048f90b59086833b75505ba82e40f159fe4e730dd520",
+      "raw_result_filename": "case-000-mc-037-matlab.json",
+      "raw_result_sha256": "f706247f6ebb1112e67a38a6431a686b861f657206bd55b46b7dcfee3a2ea2dc"
+    },
+    {
+      "input_filename": "case-000-mc-038.json",
+      "input_bytes_sha256": "091abe21f1d29bf7f8e8373f9db48bd1ee545eb6fc2396f27a632d5ee5294b81",
+      "input_fingerprint": "fa9612eb9deacd827e60aaaa834c5f560905d59b90c5433a30f1618b92975184",
+      "raw_result_filename": "case-000-mc-038-matlab.json",
+      "raw_result_sha256": "7975ecc22f01669d8f734d12e8aef0dc58e66e2f8a9295e2663447c7e6538412"
+    },
+    {
+      "input_filename": "case-000-mc-039.json",
+      "input_bytes_sha256": "e7061b3cab5e894be3312b3e86e2ecb870677d1522b16115cf7ef58681fc720e",
+      "input_fingerprint": "698aa78d6e741fc105ddd34062ac6fe6129f1e61f1a79e8fa17223cc93a05fe7",
+      "raw_result_filename": "case-000-mc-039-matlab.json",
+      "raw_result_sha256": "94f97fd3c891e6cdb349bed4dda46be248bd6527ae4a0cec029388637a812126"
+    },
+    {
+      "input_filename": "case-000-mc-040.json",
+      "input_bytes_sha256": "562489747b9eba9a1968dcc5427793c26b001b959e95d2fc96a415754aa8e685",
+      "input_fingerprint": "e7d5a586955bbe23f65c953bfa67405adc6c322d541822873db2bf00298a73c1",
+      "raw_result_filename": "case-000-mc-040-matlab.json",
+      "raw_result_sha256": "a76f377b1a2bb9b0d3f44f02ce4c8d65c6b0845a89024d0526dd81565b62cf99"
+    },
+    {
+      "input_filename": "case-000-mc-041.json",
+      "input_bytes_sha256": "cf06d19d09e8b6877213f70a3abd5cc65860b9078aa6a27bd5d3bb1ebd75a415",
+      "input_fingerprint": "8480b1d2367869e345066fd5345050ec750b940e07ba8a42f94aefc1ae9e5c58",
+      "raw_result_filename": "case-000-mc-041-matlab.json",
+      "raw_result_sha256": "3467ca6332d1cbca73bf56894ef73e3c738520400f0276f90b7a6d1898dc534f"
+    },
+    {
+      "input_filename": "case-000-mc-042.json",
+      "input_bytes_sha256": "c9acb992363f4140f63d2829c4b71331f3953780c803770e7b87457a899fa8a8",
+      "input_fingerprint": "dca5b888bb6f5f8347bfb64698b2267943eb39db6f52c653a477ba7b04f04da6",
+      "raw_result_filename": "case-000-mc-042-matlab.json",
+      "raw_result_sha256": "75b58e1df820be084c91ce90b9f46f7595f39b47056635cbb5fb4fe54d242677"
+    },
+    {
+      "input_filename": "case-000-mc-043.json",
+      "input_bytes_sha256": "b7a8076c4588482cd86a0e63fb690d2d79c0d8d2665dd7a8f17b0940ff252c41",
+      "input_fingerprint": "eea18c90a2def3a3dc23cb431deff7e00eea49278b700d01eec0c62e223db444",
+      "raw_result_filename": "case-000-mc-043-matlab.json",
+      "raw_result_sha256": "b63d11dc4abb7c7125eadf61f60b346ede3bc4a96fe2d43576cfc80de74f6fc4"
+    },
+    {
+      "input_filename": "case-000-mc-044.json",
+      "input_bytes_sha256": "5ea04677b4335c747c5b367397f5849bf9c387e17d74982c327195c04e9d5b03",
+      "input_fingerprint": "5d45fddf8fc54b19217902f8209338d44b42b498eec73923211c867de7d87954",
+      "raw_result_filename": "case-000-mc-044-matlab.json",
+      "raw_result_sha256": "637fe772fb9b488caefc4a037c4844f976a5c2a11c0cf83d59686582b6ca2106"
+    },
+    {
+      "input_filename": "case-000-mc-045.json",
+      "input_bytes_sha256": "02192d7a7559ca6bda06901414598df709dec2e0b80252b679f81e5319b40155",
+      "input_fingerprint": "5f2badbc46d03a67010bda559efbbfdb89a1e0bc9c4eea46f705b38c370fb284",
+      "raw_result_filename": "case-000-mc-045-matlab.json",
+      "raw_result_sha256": "4b856cfe18b21126332d76668a03ff3e0430a1e5cf5a270a1b75edeb01d4f4f8"
+    },
+    {
+      "input_filename": "case-000-mc-046.json",
+      "input_bytes_sha256": "df74e14f3157bf8949a04f1098333aea02121886830d6d6591a2c3f5cab9d7af",
+      "input_fingerprint": "29d7241ceda8f2e92bc281bcc94cf366c86105620e9bcfc08c1e38a4ae03b34f",
+      "raw_result_filename": "case-000-mc-046-matlab.json",
+      "raw_result_sha256": "a9114a89d8cd068ebc74f1857e69546c97e0844b79308cd602fee4072eca154c"
+    },
+    {
+      "input_filename": "case-000-mc-047.json",
+      "input_bytes_sha256": "4ab98deb6122d62f272686191408ce6c1e427445d9da4fd98847244efa17e024",
+      "input_fingerprint": "7f29b65e181ed6c647910feaf04bfcd2701facd96e7b91763aee2546c4ec9106",
+      "raw_result_filename": "case-000-mc-047-matlab.json",
+      "raw_result_sha256": "4dce91b48c5cd6027cea3c79960df8c50766d55ba084ea9ac30aa865cbaf0ae5"
+    },
+    {
+      "input_filename": "case-000-mc-048.json",
+      "input_bytes_sha256": "5236618f1d503570244227e383e214cae8f924a00b5f3ee8d67fa61577c255ad",
+      "input_fingerprint": "d434e0b4135fa558a33f392f0c9e0921d33c05527c313af233ade6cd4874f0c1",
+      "raw_result_filename": "case-000-mc-048-matlab.json",
+      "raw_result_sha256": "f9760dd7835821ffb4fe36ef7ebe4c961cfb416ee13f001937342c9caa60c8fd"
+    },
+    {
+      "input_filename": "case-000-mc-049.json",
+      "input_bytes_sha256": "2e04397c97750226d1a1052126adc02effb24ecec6f1517acdc3eab4af793796",
+      "input_fingerprint": "bdc87528277765bbda8fc192a2117cc911d0d9a0bd1e5f7c2e87fb7e7ec42f39",
+      "raw_result_filename": "case-000-mc-049-matlab.json",
+      "raw_result_sha256": "e8d5835410239577d41e8a622d4263c241115f8102821364a97e7b812f241776"
+    },
+    {
+      "input_filename": "case-000-mc-050.json",
+      "input_bytes_sha256": "d70c7daba1f00a3ddd261af12f4a183f0f1085f072a0c071b38a92080acd2c15",
+      "input_fingerprint": "c2baf4f1b42f85bd7dbdac83d55cbe5cd27c977fbbe1f625a9c26b353f42a1a2",
+      "raw_result_filename": "case-000-mc-050-matlab.json",
+      "raw_result_sha256": "08f8545126fedda3aa21443a4def631bb508b816fbf2d92df3840fa54ea12bb1"
+    },
+    {
+      "input_filename": "case-000-mc-051.json",
+      "input_bytes_sha256": "dddf2bba3fdd7f75879ab17fd4b59a9c38625a2167673028b67fd97fce51cab9",
+      "input_fingerprint": "b344fbd048591cdea6cae00ec97bd2de394cf0272a0f1b9c5a67c7564d9f1bbb",
+      "raw_result_filename": "case-000-mc-051-matlab.json",
+      "raw_result_sha256": "c2540246a93029299280296ec331e60b29bab87cd63be6f2e3139755bf884f13"
+    },
+    {
+      "input_filename": "case-000-mc-052.json",
+      "input_bytes_sha256": "c5402a042ec893d3e1dccf4d5c9f3a20b65e9276aa47b51f23ba8727363f300d",
+      "input_fingerprint": "5b24770386b7466608a917ce21570f0076a6fc687943189eaa35460fab848da6",
+      "raw_result_filename": "case-000-mc-052-matlab.json",
+      "raw_result_sha256": "0f1bcf0993a46551bff97e8e0359cb4e7bbe36e853d609b365289b916695d2e1"
+    },
+    {
+      "input_filename": "case-000-mc-053.json",
+      "input_bytes_sha256": "edbe0b72e59eab62ef5227c7eba07021f0463b52013e6e48afe508b8d27a5bad",
+      "input_fingerprint": "232413c681f2f5c6664f70b38abe84de4e1191db93b16d35127b3fd188673162",
+      "raw_result_filename": "case-000-mc-053-matlab.json",
+      "raw_result_sha256": "631b472058eab3cd9dbb144a2e955f69ce09fe86dcb5112a9c143532d7f19915"
+    },
+    {
+      "input_filename": "case-000-mc-054.json",
+      "input_bytes_sha256": "abf46822c9bf06606a38f275eb6cdcb7494f8767e04b786cbd10533fef735c24",
+      "input_fingerprint": "cb6ddb3f51db52f4df68e51e1ff354301ba769108ef971af9f86179c4a4770b5",
+      "raw_result_filename": "case-000-mc-054-matlab.json",
+      "raw_result_sha256": "a61afc2afd8417cddd08a07ac0b66c5b3b40e1cc6bb06e4ac863a9f056724497"
+    },
+    {
+      "input_filename": "case-000-mc-055.json",
+      "input_bytes_sha256": "900f7c506a935cf4c74c45f2e59605cc4d5c425274b6a23b4e61f41cedbb445e",
+      "input_fingerprint": "0e018c84d83e8e5b6b8a64a84865f011ec9d10d96c88e7fbe0bc112049d6797b",
+      "raw_result_filename": "case-000-mc-055-matlab.json",
+      "raw_result_sha256": "be495aeb979a04ab6face05d23f8b2a0d5012eea0003d79c9a808147e0bc0b58"
+    },
+    {
+      "input_filename": "case-000-mc-056.json",
+      "input_bytes_sha256": "67898e9e8dd49843f1b3e0da403ee520c70e67a9b1ca5651b40e208ead3e0d83",
+      "input_fingerprint": "6716f83d9cb1cd21ac505f2bebb6b74685c0acd09e51dda9be300e74463178ab",
+      "raw_result_filename": "case-000-mc-056-matlab.json",
+      "raw_result_sha256": "71002c7d31f0d2d9e4f633ca23f1d46af370f2ccfa1a09e6ba9ac20fcd3851c4"
+    },
+    {
+      "input_filename": "case-000-mc-057.json",
+      "input_bytes_sha256": "c648bb6bdfa857a59d434c8ebc62b7ee4a6d27ebc6ad99817276f369b2b8b5b2",
+      "input_fingerprint": "30822460463fbe3bdd0e2f202ce2001a0d4705517e45b658b389ef780011f120",
+      "raw_result_filename": "case-000-mc-057-matlab.json",
+      "raw_result_sha256": "2d00476a58bd0b468106239000de354644436ef680d3dddb82c493600ca94947"
+    },
+    {
+      "input_filename": "case-000-mc-058.json",
+      "input_bytes_sha256": "9586dcab077ae8fc7f4ba8c107908abbd1501b7cf5977c7256216150ebebaf30",
+      "input_fingerprint": "133a3c90e6eefe0faab4ea5386ca81124c26ca062a3c1672d93a09b9208aff01",
+      "raw_result_filename": "case-000-mc-058-matlab.json",
+      "raw_result_sha256": "0a636084e425bd689cc5a3a62d33bb3038490390b192a987f6d879a9ce9766dd"
+    },
+    {
+      "input_filename": "case-000-mc-059.json",
+      "input_bytes_sha256": "2b93169a8f73966c1c29b586204c5ddda0c63b4a9572070b4de9a4b7af7d7de8",
+      "input_fingerprint": "4da9dde87da81007ea4fd3e64609e8404ebc3d4e30b3b6456351840f366be764",
+      "raw_result_filename": "case-000-mc-059-matlab.json",
+      "raw_result_sha256": "521225cae7c029b0532f6dc1cc96e7c9e156012936546aaf35d353ccef3d4399"
+    },
+    {
+      "input_filename": "case-000-mc-060.json",
+      "input_bytes_sha256": "16619b09b6ec204a66d3de3e2e1f07deea0ac5986d63742f2dbbf21b4cab4cf6",
+      "input_fingerprint": "4043f456cbfbeabf190d82cbf9ddb8e588bda538c167e9fa99a3c2e5ac96c97b",
+      "raw_result_filename": "case-000-mc-060-matlab.json",
+      "raw_result_sha256": "ea216b12291810ec96f8cc38e6350636e21b1b9eda363bb94ab6f124fd0aa30e"
+    },
+    {
+      "input_filename": "case-000-mc-061.json",
+      "input_bytes_sha256": "11d3f4132eebf94fed24d6a1477b233aed642601e4541b7ddd3313d5f70575d7",
+      "input_fingerprint": "62962414b063383dda1c900dc5a59b6160d7359e48b53428ce8f7dc077590f62",
+      "raw_result_filename": "case-000-mc-061-matlab.json",
+      "raw_result_sha256": "93ae8de308886793fc56993e7cf74801ad2cc8ad868913137c36119c4aea9d90"
+    },
+    {
+      "input_filename": "case-000-mc-062.json",
+      "input_bytes_sha256": "41c4fa6705ae680745dfef2be81a6faa8d4fe7b9d4c97c062a7df0c1560f07af",
+      "input_fingerprint": "3963de1f70e76c0ed6b8c0dee5a1ddd04cdf2b63ae565a43c78def1fe3020866",
+      "raw_result_filename": "case-000-mc-062-matlab.json",
+      "raw_result_sha256": "6c8edff45269b357eadb959f20b35c9ee742f64899fa62337c881e353d669413"
+    },
+    {
+      "input_filename": "case-000-mc-063.json",
+      "input_bytes_sha256": "11d33ad9ed28becaf941b8567190aea7e2d5c1b26d14691971a576f132d76c1b",
+      "input_fingerprint": "71cb71dd42bb94859f1d97462a75c09ab3f2586621696154541250db1e5a7e9f",
+      "raw_result_filename": "case-000-mc-063-matlab.json",
+      "raw_result_sha256": "e55f61e1b39cb9cdc7e6d9b933929dd75c7b57995dace006a8c5ee2ed8fb378b"
+    },
+    {
+      "input_filename": "case-000-mc-064.json",
+      "input_bytes_sha256": "035bce7a3db206d4ce09b88627b45433346986dc5d3301d88b2ee5250562c683",
+      "input_fingerprint": "f398796e82e16c4d1d86796991d4469cf7430397eee0b8a106e5402fdf755559",
+      "raw_result_filename": "case-000-mc-064-matlab.json",
+      "raw_result_sha256": "3348ba9c8ea00a26065210d329450f7cc91f6b1989b6ab2a2fc841be88c1988b"
+    },
+    {
+      "input_filename": "case-000-mc-065.json",
+      "input_bytes_sha256": "e65d52477d00badcb2e151695efee67c93486438143eda2598c8353f55213500",
+      "input_fingerprint": "0bbf92fb1e6b0a5c01bd9c317610017da2d110e3a1a7c2d1f6678079808db0ba",
+      "raw_result_filename": "case-000-mc-065-matlab.json",
+      "raw_result_sha256": "9e4026a41e0c7f6272c29cd832a3ab9165aaa333dfc800264c10c8ae0b56a0a8"
+    },
+    {
+      "input_filename": "case-000-mc-066.json",
+      "input_bytes_sha256": "f59ea8ed284dd66074911da601b5681f625b397f8de241d5bc46d518a406d719",
+      "input_fingerprint": "7d11b2c761b978fc004c634ef1948cdd355e81484aaa5c9ea6ba6a4c59289d5c",
+      "raw_result_filename": "case-000-mc-066-matlab.json",
+      "raw_result_sha256": "fce6cb5574cfb72ef772fed72cd8f5aa0753f4049b7a3070ba34320dfb381aa7"
+    },
+    {
+      "input_filename": "case-000-mc-067.json",
+      "input_bytes_sha256": "96b0245513d24891bfb4ba4ed061cbdd71504740f2c5522edbe4bee92ffb4b8d",
+      "input_fingerprint": "3b09fe2dc2aaeba4b993274d70f238cd365a608be7fceaedb611f934b5b5a4c6",
+      "raw_result_filename": "case-000-mc-067-matlab.json",
+      "raw_result_sha256": "1a449418a678ce6e40068853a396e9aa300f5cbb3b78abcfcfdc8edac7f79aba"
+    },
+    {
+      "input_filename": "case-000-mc-068.json",
+      "input_bytes_sha256": "df312a0555fe935626bb1ae4f847a19e5d8f1e591ff6bac98b08b4a2e252e77f",
+      "input_fingerprint": "4678201516cd0f67fe1528fbfcd6f6ebe64f2f1d50ecc1e03b5ca8f53c5d4212",
+      "raw_result_filename": "case-000-mc-068-matlab.json",
+      "raw_result_sha256": "d7d8f58714c088d37b79712ea58ca444c22660c5cbaae46cd15e6f7b6296ab91"
+    },
+    {
+      "input_filename": "case-000-mc-069.json",
+      "input_bytes_sha256": "22e5989b5a0619fb7c19db3dc24e7a43377e2aec1bc007ca65914c05586734cf",
+      "input_fingerprint": "b883e0341ae0ea1814435f83f7f0ca403df8683269849d7c7aebb9558eff7b9a",
+      "raw_result_filename": "case-000-mc-069-matlab.json",
+      "raw_result_sha256": "80e7d31c0b1118a37f8940b0e267410c20ac12c15003f6fd444552b84c9bf005"
+    },
+    {
+      "input_filename": "case-000-mc-070.json",
+      "input_bytes_sha256": "bed756af6265f3a8e26644dc49a6975b00079521d9451b114374d7c28910485c",
+      "input_fingerprint": "75b2783105f2db8f6ae9697155802cbddf083a02d5dff9730f51480e5ef19fce",
+      "raw_result_filename": "case-000-mc-070-matlab.json",
+      "raw_result_sha256": "3ba58bd9cc328ab3b2a4189f8843e76f28c00eb87f19bd33e15bbd6559123085"
+    },
+    {
+      "input_filename": "case-000-mc-071.json",
+      "input_bytes_sha256": "9bf27ec77ba3a43185ee4f69fcdc4ee6e42f04b5b8a8709b94649f3bde11cf64",
+      "input_fingerprint": "e57c086925a37daec60ca7d18243f8a52c591d62950b4dffee05d63300ba70c9",
+      "raw_result_filename": "case-000-mc-071-matlab.json",
+      "raw_result_sha256": "cf673c3188bc6c013ac01da20b30b2884ba17fc6774802f4b0849dc478819ac4"
+    },
+    {
+      "input_filename": "case-000-mc-072.json",
+      "input_bytes_sha256": "e505ff8e66f009f4bd92c12f04f978bffd3747bda51ad22b1a12b2968f02d6c1",
+      "input_fingerprint": "36c29d1ad6cbd331ef52e5c4c3dd91af4aaf0257017114d67aca36447456edc6",
+      "raw_result_filename": "case-000-mc-072-matlab.json",
+      "raw_result_sha256": "cd6b7293d1f112e5157eb005e4d89c5b6e2ae96d2d294a73f69eb33f771b5afb"
+    },
+    {
+      "input_filename": "case-000-mc-073.json",
+      "input_bytes_sha256": "caa38b176a0ffd643e32c83732da563845781dad15a409a7f95288a39cdd734f",
+      "input_fingerprint": "8afc1b72d296ab6ff3b35469054ffd4b1f55752f3d625d32c77d0fa46e5022b2",
+      "raw_result_filename": "case-000-mc-073-matlab.json",
+      "raw_result_sha256": "541787a41f27f053a7790ccb7ad9d9b433bf6429fa7d5ff5b1f455bea7516a84"
+    },
+    {
+      "input_filename": "case-000-mc-074.json",
+      "input_bytes_sha256": "cde87e274a7294a78e5f01842501a2866c760c018487aa5c9e44f6dc301342c3",
+      "input_fingerprint": "ece55fa2375afa2b3be6ad1289251b531119ff61a63ee191c22f1f0e3b0ff88b",
+      "raw_result_filename": "case-000-mc-074-matlab.json",
+      "raw_result_sha256": "d963e2ecc10f1665450d55f2cfd04de5ca09814eb9ecbf5ee807825afadb6209"
+    },
+    {
+      "input_filename": "case-000-mc-075.json",
+      "input_bytes_sha256": "25547092a3964cd757dd2264275111243a8d7cdaef47bad745edec7a366146fc",
+      "input_fingerprint": "4205387ba4711c96d31803e47bbd8df97b14fb61e1ad4c2b2f57ed1aca105f4c",
+      "raw_result_filename": "case-000-mc-075-matlab.json",
+      "raw_result_sha256": "ce2e3ade03a9ae9a2186892244ffdcab65df56a24ae04cd62cc006cab25509f2"
+    },
+    {
+      "input_filename": "case-000-mc-076.json",
+      "input_bytes_sha256": "2e230e51bfba0ea33cd8b483ca2f07c74c4191a4f79f28c7653384a3d96ea26a",
+      "input_fingerprint": "72701d0f63dc1309b54e0eaf0bd91040ed790ecb55f2815188d5a3097c4a551b",
+      "raw_result_filename": "case-000-mc-076-matlab.json",
+      "raw_result_sha256": "70a50f61358246aebffddb0889468c9845d841f8b93fbdb4f473c1e6e0a918e2"
+    },
+    {
+      "input_filename": "case-000-mc-077.json",
+      "input_bytes_sha256": "4f70a0ec571f2c14dc0b9a3ddd6c5c46dcc3e397d918a612308a52c6c01c3a6b",
+      "input_fingerprint": "ef1b00ac57fae6a5594ba2fabf1ef662a30964020ae039b037cfbf968f7f40c9",
+      "raw_result_filename": "case-000-mc-077-matlab.json",
+      "raw_result_sha256": "90be3df9131c9d10cade202f75d76b1596425d70e3477fa3f6d3b981e7db21dc"
+    },
+    {
+      "input_filename": "case-000-mc-078.json",
+      "input_bytes_sha256": "8ea980a08fa4fd72b4767c590774cc607a50e1abfbbeca22733475ba160873a4",
+      "input_fingerprint": "b9e6c79b896c1de173f472c714528bc52ac2d3c6eb2841d594f46951ae941bbb",
+      "raw_result_filename": "case-000-mc-078-matlab.json",
+      "raw_result_sha256": "3ab3d065cf149977f697435bfdc33ecd671efe110ce7cd029311910441b35680"
+    },
+    {
+      "input_filename": "case-000-mc-079.json",
+      "input_bytes_sha256": "914022bcdaf7f13e9c5d8937fb3ff6315eba103ba5fe7b4e53dee3663eba64f5",
+      "input_fingerprint": "e8ba7c801d551dd3f9bddb215759e9e9ec22beee2294a38c1f24e8a1bad26186",
+      "raw_result_filename": "case-000-mc-079-matlab.json",
+      "raw_result_sha256": "acc16a46b6ef1fa5c4b6d0da530ad8092d4afec60f26f04b010274462478c1c0"
+    },
+    {
+      "input_filename": "case-000-mc-080.json",
+      "input_bytes_sha256": "78d59ca3bc5742fdfadc3c229f12c5d7f1f01b4df6b898edf3d41cb3981e729b",
+      "input_fingerprint": "86a8d14cabb2ee8711aa338b84f51cee0af2b34754a701f9fdac69a283108ea9",
+      "raw_result_filename": "case-000-mc-080-matlab.json",
+      "raw_result_sha256": "df43be60468f97e0430e95403bad58c8fa895516056292350c38088231735548"
+    },
+    {
+      "input_filename": "case-000-mc-081.json",
+      "input_bytes_sha256": "78ededef81afc8f069f960af29cbbe2ebdd7a38029b4e876dbb91fbd6431699b",
+      "input_fingerprint": "287a695c3c78f15075599052fb397ba263b54a8bff88ef9a64d0f342fb618b0d",
+      "raw_result_filename": "case-000-mc-081-matlab.json",
+      "raw_result_sha256": "e17cface2bde7b924e2b012e77d44173d16839c2cabf6fe3f6492f357e0259ad"
+    },
+    {
+      "input_filename": "case-000-mc-082.json",
+      "input_bytes_sha256": "48ccca35341bbb2b77a395fee933e18eaf013d8fe1a786567b736ff7cbbb0fc4",
+      "input_fingerprint": "9b3098b60315acebbc6df0f4813fe0523f7481e86ec890cfc6bef02c7fa9adab",
+      "raw_result_filename": "case-000-mc-082-matlab.json",
+      "raw_result_sha256": "63c20bae11bde5468e487296e0d5f277e3ad402e2cc621b65bda377b35b4016b"
+    },
+    {
+      "input_filename": "case-000-mc-083.json",
+      "input_bytes_sha256": "bfd90ec6698ce447692788a7705636934ad944034de2620aabbfa06d761b91cb",
+      "input_fingerprint": "21b1937b0e92a8e33aa8a0ec1de4c0a3374da550513217517601910b5379ae71",
+      "raw_result_filename": "case-000-mc-083-matlab.json",
+      "raw_result_sha256": "63808302a7a4b50980e18fb5d0524894480f43df82e8f94938d7c1e2508033a4"
+    },
+    {
+      "input_filename": "case-000-mc-084.json",
+      "input_bytes_sha256": "ed6b1a9530c20bd091adf83a523306a26f34675b7191dc0e2cc09faeef5f2bff",
+      "input_fingerprint": "08cf7c927804e57ec7ff98ec464b0be76acdd554797b20d178f1c06d328f1bdd",
+      "raw_result_filename": "case-000-mc-084-matlab.json",
+      "raw_result_sha256": "7601dcbd5365d7ec927e909c538d93b8f06d4a2f001e7172c2151abfed92f46d"
+    },
+    {
+      "input_filename": "case-000-mc-085.json",
+      "input_bytes_sha256": "01dee74a7fb44fd41d2216adc744eabd7c48dd2bed36b4d3d8152b7c652602cd",
+      "input_fingerprint": "57d7fa0b431f3bd5fff848d0a5e23dc52d615f7116795b3a10fb8a185067c06b",
+      "raw_result_filename": "case-000-mc-085-matlab.json",
+      "raw_result_sha256": "59de071756c2521a1ef398c5bed9f210a0dff62171c14b49d0438a63c648a99a"
+    },
+    {
+      "input_filename": "case-000-mc-086.json",
+      "input_bytes_sha256": "36a54da0072c6df00ad5528bc98724b3c58a317bf57191f660d0e1bfb45af91f",
+      "input_fingerprint": "ef01a449503d9e3cf10a68178f6618e4d660c6b1a9f2a702711aa53dbaab6077",
+      "raw_result_filename": "case-000-mc-086-matlab.json",
+      "raw_result_sha256": "85b52a97f86dd7a9f32c3c185be07921e8a3e7a0b8c0f0044bcb07f80c0f14b0"
+    },
+    {
+      "input_filename": "case-000-mc-087.json",
+      "input_bytes_sha256": "f432dcdddd284e6cbe5b30cd2967e057438d98ab9dcc3f56754a46690c898aed",
+      "input_fingerprint": "8c7c173b33ac4011f072f2657466a4624c8ee7bc04ee6418948699d7813d33f8",
+      "raw_result_filename": "case-000-mc-087-matlab.json",
+      "raw_result_sha256": "7732e398120830db4b8ef977c3a9684fb12fe3c69088a81fce763339864f34ad"
+    },
+    {
+      "input_filename": "case-000-mc-088.json",
+      "input_bytes_sha256": "aafc722a3a7845174e3d8da7c287b63c4fbeb20696f0f3e073ac88d7f36e05e2",
+      "input_fingerprint": "6c8c763d007595cfd896d51edcd36b2ea7ad2ab7346e74affc9e5a0cd704ca15",
+      "raw_result_filename": "case-000-mc-088-matlab.json",
+      "raw_result_sha256": "39b9e0db9e40a1b82b4d53535c3123a83549ea9c1b712136a76dc91eeebac569"
+    },
+    {
+      "input_filename": "case-000-mc-089.json",
+      "input_bytes_sha256": "02796cf9e7b5dbcdc0456731f66a969556d65747df0777a7f584868448358535",
+      "input_fingerprint": "14f33dda534afffda7ec0e2c460d4859eb53cd449d9b717131a993e0181f9b0d",
+      "raw_result_filename": "case-000-mc-089-matlab.json",
+      "raw_result_sha256": "72e79aea072dd51335dc4ed03ae646bdee8cb396e0bdcf37fb3014382833b77b"
+    },
+    {
+      "input_filename": "case-000-mc-090.json",
+      "input_bytes_sha256": "9b2abf95473964619479afc3b6ffab9029c23cbe0fc936203827682cdedb2ab2",
+      "input_fingerprint": "53784a15d62fdad2d6a01a978e0b4f63221629a7cc29f8123f28f0c65b0ee383",
+      "raw_result_filename": "case-000-mc-090-matlab.json",
+      "raw_result_sha256": "8f2ca420977f3725eb5205f646f69209a1bd6ad8d40bbff1b6de10f28b3a18b1"
+    },
+    {
+      "input_filename": "case-000-mc-091.json",
+      "input_bytes_sha256": "04236d336882e633d8807a913260da8c46ddeb02179b34b6ef42265fc246989d",
+      "input_fingerprint": "f605d6d2e9aa8fa157e945f97060b150a6dcc2ec6c2a0e9f0a17b9fa9beb3c5c",
+      "raw_result_filename": "case-000-mc-091-matlab.json",
+      "raw_result_sha256": "a509c0d73b7e5b5238b7d7ba48aab4b330c55d33a6f5340afd5a2d5000bfbbd8"
+    },
+    {
+      "input_filename": "case-000-mc-092.json",
+      "input_bytes_sha256": "bc8ea558b1df97abee0f5944f54a727be0eaf6f86fa80e7ad2b902f50ec9dc05",
+      "input_fingerprint": "23304369da8d9d90a3b3e1a956c368573e9cfc2e0e377bba1cab1dae5c46b7bc",
+      "raw_result_filename": "case-000-mc-092-matlab.json",
+      "raw_result_sha256": "c92200ac39a9b77d482736bb42f3409a7e19efd6dd328c6f268ba449d5a64cd0"
+    },
+    {
+      "input_filename": "case-000-mc-093.json",
+      "input_bytes_sha256": "d1e02aa5d17c65945aea4488072eb7c74f10b567a2e581bef122b77a1f6973a8",
+      "input_fingerprint": "a272dd59bd4b4446b709260f1e5de777a726d593ec915fbb81cd29b1510309c7",
+      "raw_result_filename": "case-000-mc-093-matlab.json",
+      "raw_result_sha256": "78eb546d8fe9ccf73601508d6ef0162575406cc6cffeb464af0c25585f7bfd42"
+    },
+    {
+      "input_filename": "case-000-mc-094.json",
+      "input_bytes_sha256": "d7cf06c373c6f84a261ef26483e6fd7d7f7234544b16c9a6572d640142843749",
+      "input_fingerprint": "48d3a18f68e73d8ad1fe95b3eef13ec11e737a715baab6504ebde289c8eb377c",
+      "raw_result_filename": "case-000-mc-094-matlab.json",
+      "raw_result_sha256": "f3e76b6be20bda78e02319020f08102ae4c60ad1b354d92a5bf3180145a2909a"
+    },
+    {
+      "input_filename": "case-000-mc-095.json",
+      "input_bytes_sha256": "9422d2aea5c0fc32c74dda403a134a6ff5a5bc544ab6a39beaf74daaec571b07",
+      "input_fingerprint": "7148826fda457c6b59b75c1ec3aec5e2bbf2203e599ed0dc625f25bcf83d1302",
+      "raw_result_filename": "case-000-mc-095-matlab.json",
+      "raw_result_sha256": "d000b197802ae4b046ef0b7e3125abc774b1257806d9d4097f9a27a8986776e5"
+    },
+    {
+      "input_filename": "case-000-mc-096.json",
+      "input_bytes_sha256": "87905c7c3747ed4fd9a80f1e0d68b19eae7092cb9643dc80b05842b18912cf50",
+      "input_fingerprint": "885f79184384782de7b31d5195f5d71d8fe34f3c8a96eb33b283c2ed1df10ffc",
+      "raw_result_filename": "case-000-mc-096-matlab.json",
+      "raw_result_sha256": "1b23a4c806908981c8d8ff68c02e2d5284be56d0c24e017bf729d79426f0158d"
+    },
+    {
+      "input_filename": "case-000-mc-097.json",
+      "input_bytes_sha256": "6693280f8f04eb3edfa2d7861f3c20552ff98dec511a64f5bafc6f7dc6146fb5",
+      "input_fingerprint": "317162ded4a8def3c5c12d149b25cbccd5b404496551642f8ca9d896bc9c2b26",
+      "raw_result_filename": "case-000-mc-097-matlab.json",
+      "raw_result_sha256": "41aca834db7cbd5183b6a4f376088a6dd713721342d6f1023e50e182c5b41f7f"
+    },
+    {
+      "input_filename": "case-000-mc-098.json",
+      "input_bytes_sha256": "761b3d74222d4e5dabfbf0ab36282499cdb4cf28a3a5943a8c2da468eac3bbfb",
+      "input_fingerprint": "a52e7f2bc9ec6bf9ce5ebf6834de8400924d4975e1237450b0b935eab224ea26",
+      "raw_result_filename": "case-000-mc-098-matlab.json",
+      "raw_result_sha256": "f82a77f32beafbb623f109aae957d0d330a0330c6d0edb58bb70b766810f790c"
+    },
+    {
+      "input_filename": "case-000-mc-099.json",
+      "input_bytes_sha256": "13b165a5e10f59e9571f1234c751c0f1f802bbf0144d335df00125a5467bd882",
+      "input_fingerprint": "9803ec37aedc8af42e516be2169e43670534dc71a7d3839d449dd23812c1f42a",
+      "raw_result_filename": "case-000-mc-099-matlab.json",
+      "raw_result_sha256": "cb6f44d99bff040ad5a74c92ca7e5ac487c3575acc2e0da1556581163615659e"
+    },
+    {
+      "input_filename": "case-001-mc-000.json",
+      "input_bytes_sha256": "e903651a115ee3b7084270772daf66a3bc37a310425d372616a9af94ef9e5633",
+      "input_fingerprint": "5701b6520eb8b8f5d6cd3ec8700d75cc838882998fc98296fdd4d21ffb126d89",
+      "raw_result_filename": "case-001-mc-000-matlab.json",
+      "raw_result_sha256": "66670d15ed38039d8877ead4baf662cd368e75cc4091c607c0b222503e44bf3a"
+    },
+    {
+      "input_filename": "case-001-mc-001.json",
+      "input_bytes_sha256": "4d46f72b8ff39802319c38ddb485b78d1a3fce4d03c67aee20eab0f9f77587cf",
+      "input_fingerprint": "de71b9147dff0881ad2364913a4c135d023da4a3464715bdd19c31f4464baf72",
+      "raw_result_filename": "case-001-mc-001-matlab.json",
+      "raw_result_sha256": "f3b77126fe1c351dd25280b0b4b0601753829505e2424740cf89780cf5764951"
+    },
+    {
+      "input_filename": "case-001-mc-002.json",
+      "input_bytes_sha256": "a1544727a8ccc32ba8b47801ebe709e3822b1a1705c99ee95b63b7070bb8bd6c",
+      "input_fingerprint": "942b039c2ddd9abac151d0941baa5473fd56649dba7d8791e7388a2e528a6e11",
+      "raw_result_filename": "case-001-mc-002-matlab.json",
+      "raw_result_sha256": "6bd7b8ac2ec69ee8a808c79d73967576d31c8b7224ac9fe8df4165d69dda27a7"
+    },
+    {
+      "input_filename": "case-001-mc-003.json",
+      "input_bytes_sha256": "5f784cafe4cbc218b14b05a7c8820b7e16d9a75a3b4c5254e065ef6dfaee0638",
+      "input_fingerprint": "601f7e13deb79b5c04d188a81226c8ca78ec3e4b8e5469b6e1154059ac062b1b",
+      "raw_result_filename": "case-001-mc-003-matlab.json",
+      "raw_result_sha256": "9397e9e39f3411e074fa531ca65e079d840f272003dbee9ff433eb88b7eb350d"
+    },
+    {
+      "input_filename": "case-001-mc-004.json",
+      "input_bytes_sha256": "b560ea63fba29460608783f0af2b454e35b0f85e0061ee131ae02b36eb8c058a",
+      "input_fingerprint": "9b07ccf5cd010486bcd9c152a3fcacbc5734f311b85e9677027ff0a1f69dec76",
+      "raw_result_filename": "case-001-mc-004-matlab.json",
+      "raw_result_sha256": "ed5a6f107b98cc4ee809a0e402994e978381d45c5e3e3b547668d6c3b7733ffa"
+    },
+    {
+      "input_filename": "case-001-mc-005.json",
+      "input_bytes_sha256": "bfc4b5d785fa42d16b771cfe54ada924c714087614f3c6bf666db12e8019dd15",
+      "input_fingerprint": "1d60f321a1a55c2e32f02a9987deb5b82ddb946c5a06a7c830436b921d7fbbe7",
+      "raw_result_filename": "case-001-mc-005-matlab.json",
+      "raw_result_sha256": "77d26894a75ff888d7e4940093c9f0b711ec6c9d2bd6c2a4cd4f346a5d16b188"
+    },
+    {
+      "input_filename": "case-001-mc-006.json",
+      "input_bytes_sha256": "9d691b0f993f304a2e98e816e60c8b3ead127b91319630cda12846cf2c212098",
+      "input_fingerprint": "9817cd7464bcabccd7506aedf143ae73e4d5596e7f50ea38cb704464d70589a7",
+      "raw_result_filename": "case-001-mc-006-matlab.json",
+      "raw_result_sha256": "bc058c26a536861d4d8639d48e068a3e65cd5589115f9eaf3887107fb46a86fe"
+    },
+    {
+      "input_filename": "case-001-mc-007.json",
+      "input_bytes_sha256": "dcd7dce830546ad6567d760ffbb2969db56b6a4b29bd8acb1bb8d54a6e9b4a63",
+      "input_fingerprint": "f2a35be98aa142d26b9de89bd2ca0771a5165a9aef69e728351187269e6de129",
+      "raw_result_filename": "case-001-mc-007-matlab.json",
+      "raw_result_sha256": "3a49f5764ccb48287a3522c5a2e3046809c076336170d3525fe561d3fc43f1a4"
+    },
+    {
+      "input_filename": "case-001-mc-008.json",
+      "input_bytes_sha256": "b24c1757297f45766bb7205f09d79aa0f177b77cd78efebb325536a21e997472",
+      "input_fingerprint": "848e1082baa1127d4d4f987ea298aa180ed3224e62a0c816b86d96c40e91fa0b",
+      "raw_result_filename": "case-001-mc-008-matlab.json",
+      "raw_result_sha256": "c1d6b847fbddcae5dafd1b5af511117781473337f1438696cc3b1eb5fac894b5"
+    },
+    {
+      "input_filename": "case-001-mc-009.json",
+      "input_bytes_sha256": "6d006a678bc05c6d35c2659c5bfb819a43e3ebd3b8e8930c665cb36a3d06bebc",
+      "input_fingerprint": "a78a15726f80faf473edccd3e478b1b36374fa7161e3f0284761a87aa8956951",
+      "raw_result_filename": "case-001-mc-009-matlab.json",
+      "raw_result_sha256": "4f3076abd8da9a5ebb0ecf648ae035c408847bfdb366cb2b27ce240258b3eb71"
+    },
+    {
+      "input_filename": "case-001-mc-010.json",
+      "input_bytes_sha256": "cab7f1ed52dc1d84556a4fa251f91824bb55913d500d3ee7b774c8c802c663f2",
+      "input_fingerprint": "627de3ec9dd559fdf123334290a9222808efd8708fda6df615fd39ea5719885c",
+      "raw_result_filename": "case-001-mc-010-matlab.json",
+      "raw_result_sha256": "6b01c224197427e901c803f4f7a137f19e7c7536cf66556f33cffdb5d4ab3cc4"
+    },
+    {
+      "input_filename": "case-001-mc-011.json",
+      "input_bytes_sha256": "80290c53d7aaf670653512770438453a5e158c9531a134fc01441aee8d5fdd7e",
+      "input_fingerprint": "cb1fd26df7810f00f34f22cfe620c7a8899d6b9557a4370b84c23596b1ee26fb",
+      "raw_result_filename": "case-001-mc-011-matlab.json",
+      "raw_result_sha256": "16666f3c13d337b358a3338603fae9005188233245389613c8031cf288e30c8c"
+    },
+    {
+      "input_filename": "case-001-mc-012.json",
+      "input_bytes_sha256": "06e46346352f2b08ad39b7e9e42196a49a9eec88b7a4e37411e8ac1d7775e7d9",
+      "input_fingerprint": "716258336be51d7a212c61fb85d581a4e00b669285c6470d7fb9e4a92e8e2ed0",
+      "raw_result_filename": "case-001-mc-012-matlab.json",
+      "raw_result_sha256": "e7f3ee12c8b647a36c7537b9e9f640f7d325be1889b72bac4af672f921ab06e2"
+    },
+    {
+      "input_filename": "case-001-mc-013.json",
+      "input_bytes_sha256": "03ea690a6e5bfb71811baad8aa8209dbe35d41d42249461b487fec74577aa9aa",
+      "input_fingerprint": "ae6dcb346e3dae02a69977d08fd35ea7cecc680f91a0d96d1ad0e024e5cf86c2",
+      "raw_result_filename": "case-001-mc-013-matlab.json",
+      "raw_result_sha256": "f3e5531fb70505bd3da2173ecaa6657696fae1c9c12cc7289ea6e3683dd61145"
+    },
+    {
+      "input_filename": "case-001-mc-014.json",
+      "input_bytes_sha256": "e85ffd7b9935312b7288f9b784083e29bc8f0097745a099fc929c238a48121fe",
+      "input_fingerprint": "664bfaeda25a0fa7e29214fe720ec3bb2de62fe36e2023894ac94c6c743bf9c6",
+      "raw_result_filename": "case-001-mc-014-matlab.json",
+      "raw_result_sha256": "668b570068885fbed38f20583b32c2c2219de31cf253bf7dd6f5b66f75b96507"
+    },
+    {
+      "input_filename": "case-001-mc-015.json",
+      "input_bytes_sha256": "441460e7c61b0b0f88ffb18833473a53f2bc88565f10a8f7b6d52e5b92f46c22",
+      "input_fingerprint": "4f301c70b63f03c2a984e8d71ca6c40b7e92b79cc14d1e9a27ff00e632544c9e",
+      "raw_result_filename": "case-001-mc-015-matlab.json",
+      "raw_result_sha256": "c2a927d3e413262b1211f580bd04c5cd19fcf097da94388add60de417632196a"
+    },
+    {
+      "input_filename": "case-001-mc-016.json",
+      "input_bytes_sha256": "3b3c2f05669852d462698cdf87e545cea31e17c0ae8cd4e78eeee548eddacb23",
+      "input_fingerprint": "24fcd25d21bfc9ce038b9942a02ec96a7d48272924e732f564e7909ff572d260",
+      "raw_result_filename": "case-001-mc-016-matlab.json",
+      "raw_result_sha256": "448f3c47bd9e2f41a2b9ed244df7222a65012c39d8342dbe550ca97fb10da9bf"
+    },
+    {
+      "input_filename": "case-001-mc-017.json",
+      "input_bytes_sha256": "6a990f20d0c83c2d38c2a586f2064665879083efffd96e206622cb1fe0e66116",
+      "input_fingerprint": "6823ae52588ac4402108da5ca84fbd4a6f68b45ee7a6ab90a8e9182404e6da92",
+      "raw_result_filename": "case-001-mc-017-matlab.json",
+      "raw_result_sha256": "97a9a0a6b0301cff4de868fb2b048c5dd22c27251da10efaa1acae8ea6538add"
+    },
+    {
+      "input_filename": "case-001-mc-018.json",
+      "input_bytes_sha256": "1e861d0c65ebc851f4fca103400113957c87b92f28e784c756d1253280dc937a",
+      "input_fingerprint": "30bf67902237f166697f6c6dbb816f18fbac5c1f7a0b0a04795bd917ae9e670a",
+      "raw_result_filename": "case-001-mc-018-matlab.json",
+      "raw_result_sha256": "cdd2ec83b4ef21e41e8e8bd8c0028a08db67ea61ebac712db9d22024e2ed8abb"
+    },
+    {
+      "input_filename": "case-001-mc-019.json",
+      "input_bytes_sha256": "ea19e3c94ad9972435b63b15ebe6d55ed90728ca95553c4589fd827fa7608b3c",
+      "input_fingerprint": "33267703050cdeb889193738b7c8847b2df283c39e2c527ffa94f80e357418a3",
+      "raw_result_filename": "case-001-mc-019-matlab.json",
+      "raw_result_sha256": "591fdf088288e4239549eab08b5d54a1842147e34e2e5868fb9ec307ef5dfc1e"
+    },
+    {
+      "input_filename": "case-001-mc-020.json",
+      "input_bytes_sha256": "df0e25747407128d8e18a5ca69f25323aee03c67dccbc2bfc586560eeaefc03e",
+      "input_fingerprint": "6e292be1b5273ea0b4f12c31d2f0d12b963f0fb5e1856890cb58c39f3ad14ddb",
+      "raw_result_filename": "case-001-mc-020-matlab.json",
+      "raw_result_sha256": "ec9a4ee39ef5eefff4473e00ea56dce9aa532ddcd483f46aa50456f04bf73640"
+    },
+    {
+      "input_filename": "case-001-mc-021.json",
+      "input_bytes_sha256": "4e66b70e57d81a599eea948fd08360467f8d049abf2dd9e74b8990302dbe0ae6",
+      "input_fingerprint": "b516fdad123e5d7c1c6354aedcc250d46b503afe1b0bd095bbc91683ee053587",
+      "raw_result_filename": "case-001-mc-021-matlab.json",
+      "raw_result_sha256": "a1f6c8ca6aae4b012f37133f072056b8cfa7a38cd18e234db9c73bef57bf6aa2"
+    },
+    {
+      "input_filename": "case-001-mc-022.json",
+      "input_bytes_sha256": "0f8c6523bc70b400706242ab442c93943d970258cf8c622ae02ff5c046183649",
+      "input_fingerprint": "bd352bd6ce5c8d4ac1cf2baef4f0d564aea72094da1e0f14e9723f4f673ff567",
+      "raw_result_filename": "case-001-mc-022-matlab.json",
+      "raw_result_sha256": "edf8428a469c5aad1d947a226d5de62cbfe127ec255ba37a550d2f312239aa2d"
+    },
+    {
+      "input_filename": "case-001-mc-023.json",
+      "input_bytes_sha256": "07913a9bbb0e6f1f703c37dacd8a79229e531f1d3d26d9b1e34e5a74dcf37e3d",
+      "input_fingerprint": "3770a31b1831852bff997c41d0136773f007da0789af2b02cec93da819e71333",
+      "raw_result_filename": "case-001-mc-023-matlab.json",
+      "raw_result_sha256": "37a6dc2b7162e19951836f141cc7728a2811f236f9795500ab1d6153cd72af58"
+    },
+    {
+      "input_filename": "case-001-mc-024.json",
+      "input_bytes_sha256": "0030aafe6b4fad24e0a5b54f73102a6e1cf8cd3dd5c97fb485a39f9029e486eb",
+      "input_fingerprint": "2531d8e9e573c4aced2be24366e58e4c6b086d0c7147c8fec81d76d23a9cdea6",
+      "raw_result_filename": "case-001-mc-024-matlab.json",
+      "raw_result_sha256": "41c23c551ad78ef609108cf524f2085e7093c4be7cf8434cd08ba75cafcb1449"
+    },
+    {
+      "input_filename": "case-001-mc-025.json",
+      "input_bytes_sha256": "1f970a44702714aa8e53a8f5812acba21ea91831040d6241ac08960c306fcd87",
+      "input_fingerprint": "5ee7df99bc3b3834217f76094a3ac8a88194057752878559d0f3040986e4af83",
+      "raw_result_filename": "case-001-mc-025-matlab.json",
+      "raw_result_sha256": "54b13ed26f7b767513ba62269b2f76391af8c0182950815fbe58f96fd161ef9e"
+    },
+    {
+      "input_filename": "case-001-mc-026.json",
+      "input_bytes_sha256": "f04857ff2262446e0ce8e7ce74ff6fe55c8b108ccfdf921a6bb1587bcc181915",
+      "input_fingerprint": "be8dfdf6a58d9a195e639e7dfaa641763e3da26f2ece6466226c400cc5362dcf",
+      "raw_result_filename": "case-001-mc-026-matlab.json",
+      "raw_result_sha256": "c1aa79c216bcb07fd3bc3afd156dfa8532eb3c4a13949624f713d731ce0bbe68"
+    },
+    {
+      "input_filename": "case-001-mc-027.json",
+      "input_bytes_sha256": "4dc3af69aa811d5d16380f84a0201db681fc3ea4ca46f867ff01a0d0c3f53185",
+      "input_fingerprint": "97d3287d32944edf6233a9bc3a696af16f08c8d7218cb07d541a6dbf159a3be6",
+      "raw_result_filename": "case-001-mc-027-matlab.json",
+      "raw_result_sha256": "7b830ed060517b8a7f2e1ba4e9bdeacd9626143f937ec4efdaafabbad794bf2d"
+    },
+    {
+      "input_filename": "case-001-mc-028.json",
+      "input_bytes_sha256": "23ee1db81c280e7dab29b160be597147e8faba9905f8c865f2d3be607e6f1681",
+      "input_fingerprint": "2cb4090d401623a560ea42691d5a0411ddfdfb684e6252b6d0fca757faf74ee2",
+      "raw_result_filename": "case-001-mc-028-matlab.json",
+      "raw_result_sha256": "679e70a2ca8c8365c1cba62cc090e4303af234e43cc9fa02f10872dfaccb39bb"
+    },
+    {
+      "input_filename": "case-001-mc-029.json",
+      "input_bytes_sha256": "b8ec663b23badf6645e427071f96ca5eb09a556cec79fcd20da3be3f5bbd6cfb",
+      "input_fingerprint": "fa5735ef3151d01e075d679e5ab897c8426bc7124e40d9011be658a937eb209c",
+      "raw_result_filename": "case-001-mc-029-matlab.json",
+      "raw_result_sha256": "faf1031b2373e6ccd87117494d83ca153f66c2369de9c7cf1c22750b5d4703c7"
+    },
+    {
+      "input_filename": "case-001-mc-030.json",
+      "input_bytes_sha256": "4bcec2e862419d38a16e59a47a0932842d7228f09865bb9e8a129ac633910a1f",
+      "input_fingerprint": "48d7c75f1fdeac1a0cccc747bc5b21fb865d071408a533c43b25609e4ab64657",
+      "raw_result_filename": "case-001-mc-030-matlab.json",
+      "raw_result_sha256": "671580bf258a309d123195d407f8deff66920dce279e13e9a4e8b8fbf39cc037"
+    },
+    {
+      "input_filename": "case-001-mc-031.json",
+      "input_bytes_sha256": "40f807a98508b943003d93d2f760fe8df8fa139b50c76edbd54c61885bb7626d",
+      "input_fingerprint": "9384034a5c73a2d6f1ee008921a1a0fab2ae0c8c5bcd087e3ae7da3061fd7807",
+      "raw_result_filename": "case-001-mc-031-matlab.json",
+      "raw_result_sha256": "989b7bfed2cbdcf8345b9bf99e466e82cdac6e914f7eb70b925fb84185b63149"
+    },
+    {
+      "input_filename": "case-001-mc-032.json",
+      "input_bytes_sha256": "37437443fedbd67e50f8aa1d514c9cd4a6ee4ac4f3847c316e56605e07cb32f6",
+      "input_fingerprint": "b399958c80323f1ba50429c170e74200fc783669b06b077c6a52c93fe1d391c3",
+      "raw_result_filename": "case-001-mc-032-matlab.json",
+      "raw_result_sha256": "0c66624dc4a41c2f63fab1a42f963dca6afa5cb1f0d9d44f661917777ae165ec"
+    },
+    {
+      "input_filename": "case-001-mc-033.json",
+      "input_bytes_sha256": "059b648fa63bcfef94238d7de5bb5a80d28b455da1f75f3419f8666f1f87fc2e",
+      "input_fingerprint": "110bc699dad02800b7dbc3d35d3ffc822c3233d66be86322983f3e77378e010e",
+      "raw_result_filename": "case-001-mc-033-matlab.json",
+      "raw_result_sha256": "3a0eeb4057c2699eecec0958b1d6cf4ce1d3d32d79ac7d90506c009d91aca99c"
+    },
+    {
+      "input_filename": "case-001-mc-034.json",
+      "input_bytes_sha256": "271d31e7bdbb76a394b6665b9f83ae26515af3e84dce6ad33fa48c00cc69abd4",
+      "input_fingerprint": "df1cfd154bc87482a964724376fdd081573ff0682dd6a059760f1680dab48d4e",
+      "raw_result_filename": "case-001-mc-034-matlab.json",
+      "raw_result_sha256": "aa0324bd3105368b62197bbb7238510018fade97f792e95662271e1019dbe7e2"
+    },
+    {
+      "input_filename": "case-001-mc-035.json",
+      "input_bytes_sha256": "c605a9887b36fc6558dde9b1da26fafe38d67d30535e973f8d94b2cbbee1f81e",
+      "input_fingerprint": "fffaaca3a7003ee412425a5fceee5ab6f085fd8fa19c19773133c3ca09428a4e",
+      "raw_result_filename": "case-001-mc-035-matlab.json",
+      "raw_result_sha256": "a724f7661a55c8b36d4153b41204202ae68d7e643a54a03bdba34b7d6898e7d9"
+    },
+    {
+      "input_filename": "case-001-mc-036.json",
+      "input_bytes_sha256": "eab02a5c5da07bfdff21e4163d74cf31bec9c1281232f135903f2cdc69e1ff7b",
+      "input_fingerprint": "4c025c1d8271bfb61c3de77844643fcf2e358f960b7c4ff6d610014667ff1320",
+      "raw_result_filename": "case-001-mc-036-matlab.json",
+      "raw_result_sha256": "a5ea6d1faaa9ca63118560ef862e91ba53017a0e05340ad192ec27cc34318c42"
+    },
+    {
+      "input_filename": "case-001-mc-037.json",
+      "input_bytes_sha256": "92ea114f134acd37105e2b5cc95196336aa2678d5a2263ce54af648ee68ee3dd",
+      "input_fingerprint": "0f7f3b56ae027768f1e6934f945dcaefdcc0338ddff6c632b5c31b68d4b5a748",
+      "raw_result_filename": "case-001-mc-037-matlab.json",
+      "raw_result_sha256": "ef52b6c81b86bc1b186cd27b306e8835f2072c3f7abc2fcede9562e1a296c487"
+    },
+    {
+      "input_filename": "case-001-mc-038.json",
+      "input_bytes_sha256": "aca309f07e9dd6e2ff803a9d58ce372b13513a77cc3e6cf515ad8a17fba6de7e",
+      "input_fingerprint": "c1eeb4183e9b1d7684a09960992f534fcc15877d61bf68dbe62b4efa0d39ceae",
+      "raw_result_filename": "case-001-mc-038-matlab.json",
+      "raw_result_sha256": "e7734f1461cfb792dc86511b894b697aa20a928269ea8c00c5643304cf35a73d"
+    },
+    {
+      "input_filename": "case-001-mc-039.json",
+      "input_bytes_sha256": "f1d357f47d0488515c44cd4641eaec475505cd3f37608062bc195b04c5a043c5",
+      "input_fingerprint": "29d19de2dfad7a5055bf59de51ab995a0999a18c60a56ae847b7f9b4069f81bb",
+      "raw_result_filename": "case-001-mc-039-matlab.json",
+      "raw_result_sha256": "a770e53eb69f053a63b7c467b240a80b65a81633ac949b5eafbb828df98d4d4c"
+    },
+    {
+      "input_filename": "case-001-mc-040.json",
+      "input_bytes_sha256": "b47ed070df7e34efbeb4c7c51f321edbfcb878cbd9ba770960954728f8eb76e2",
+      "input_fingerprint": "3778ccedd2e72e85e8dba94250a959027a5ea6433498b3dac0d8ee91cdab87da",
+      "raw_result_filename": "case-001-mc-040-matlab.json",
+      "raw_result_sha256": "80539dc4b995c7c37175812713ba2405ad868171975845a9f4fa7b5ce290fe38"
+    },
+    {
+      "input_filename": "case-001-mc-041.json",
+      "input_bytes_sha256": "25b21754a8e8c833bc5139131164dfb98bd6d767977e03bb1f873a9decc297ef",
+      "input_fingerprint": "7f459167c39c0e6e1d121bc00bb6eb52585505bd17044543eae630e9d76befa9",
+      "raw_result_filename": "case-001-mc-041-matlab.json",
+      "raw_result_sha256": "5a01b81eb72e94e4464c9cf664768e5c9fe646cced3257ea187968f8bc062f8d"
+    },
+    {
+      "input_filename": "case-001-mc-042.json",
+      "input_bytes_sha256": "89173a61cedc311ab16268c8e27b83deae00db70c6570276354f0fb3eeabe1d9",
+      "input_fingerprint": "57d8f523f9b00b04630e66091cb0c514d00b2e1bd5fd93ae373a2b4a858f304a",
+      "raw_result_filename": "case-001-mc-042-matlab.json",
+      "raw_result_sha256": "f54f7a19d9974495f6f075fc7296537d751f58a60df4a2ba5b0d0e3be7260087"
+    },
+    {
+      "input_filename": "case-001-mc-043.json",
+      "input_bytes_sha256": "1cdf4d13a8d46f0873898e2b7f97c42fafbdc5c10415d4ffabbeb42d690bd6f3",
+      "input_fingerprint": "23bf6ee0e5ca98a97d2b69192f57b6cee08cc1ed721c35d39f498032fc558748",
+      "raw_result_filename": "case-001-mc-043-matlab.json",
+      "raw_result_sha256": "71b04fb7e891ec9c77cab0c66fa093afd1ea79ba18c3b7bbcb37fded428305cb"
+    },
+    {
+      "input_filename": "case-001-mc-044.json",
+      "input_bytes_sha256": "9f32667910c42ecd6d1fc99971655483c0f348ef35627cd86c0129522283c3be",
+      "input_fingerprint": "4f51f04143446fb9ca76c52bb9dd03d91000f12219cba202588a273c85092aa4",
+      "raw_result_filename": "case-001-mc-044-matlab.json",
+      "raw_result_sha256": "10527d8afd0e58bd20c6ebacc01be551d508f8d23af0834b96be415c8d6cdf93"
+    },
+    {
+      "input_filename": "case-001-mc-045.json",
+      "input_bytes_sha256": "b8ada805d7809a7b42aa7f5ed047107089ef2867e088f609060991b49f85043c",
+      "input_fingerprint": "9f42622c947cca14cecf8f4c1dbd085c39ee76899146a3395f2b101d7cbbac0f",
+      "raw_result_filename": "case-001-mc-045-matlab.json",
+      "raw_result_sha256": "64aed405dfa5e175445853fb324d515d1b91ef7c6cc9c7cb575d3169dfe63051"
+    },
+    {
+      "input_filename": "case-001-mc-046.json",
+      "input_bytes_sha256": "5abd2c61ca3c2b29c5420f60517fadf33ca7bb6253dc5014007129c705887d54",
+      "input_fingerprint": "9123fe2bd7d54bed07050200c77c5292924a22535c83947df8c163e73a4420ad",
+      "raw_result_filename": "case-001-mc-046-matlab.json",
+      "raw_result_sha256": "f5ac15ec52a15ad271c4456fc8a616ff53cef0f34e80f2f3f7941aa903dc1012"
+    },
+    {
+      "input_filename": "case-001-mc-047.json",
+      "input_bytes_sha256": "e8b04ac8725eb0e027abf1ab7e0cf26ae8c579ab4e5c1312c27a56bfd4a234e8",
+      "input_fingerprint": "235ba60811a4eca835beb08feaf2608ac6b179c3d08e2bac322beca265b926d9",
+      "raw_result_filename": "case-001-mc-047-matlab.json",
+      "raw_result_sha256": "00f06c4e7330ff26246ff6eabcaeaab2f40fca35264e2574ce0530ea9b76a494"
+    },
+    {
+      "input_filename": "case-001-mc-048.json",
+      "input_bytes_sha256": "a6ebb5842ef21c0b6c297ab632e9f3c5444247e0c06f0a981375e1221c8a09cb",
+      "input_fingerprint": "6b9e100ef9017e850b0719a789bac858c81ed9ea5abac4d9dc44245b15e86aed",
+      "raw_result_filename": "case-001-mc-048-matlab.json",
+      "raw_result_sha256": "b94a58e2a07df7cf783e90f694cdd15cc0eae5c1347c82f1e208abc1465979f8"
+    },
+    {
+      "input_filename": "case-001-mc-049.json",
+      "input_bytes_sha256": "f7f816f30f2082698b7b2b95e42913b7d6b56e33f608c44c6b3462a62dffa424",
+      "input_fingerprint": "782106153077f63f001bc2e1e74b1f8adc534a16030e350bcd6d681f29a0c100",
+      "raw_result_filename": "case-001-mc-049-matlab.json",
+      "raw_result_sha256": "620a9de97309694a929b97dcfc2bfb893bb5f387452c650d807216905d026773"
+    },
+    {
+      "input_filename": "case-001-mc-050.json",
+      "input_bytes_sha256": "77d45d3cbcf1ab5e732c9fe616935e08f3cd56dd5dace53ff977d4b88aca7028",
+      "input_fingerprint": "6037d3a1bf957b1b0a7ed4a644a9b40cb62da5a3066347952580683d9bf88b59",
+      "raw_result_filename": "case-001-mc-050-matlab.json",
+      "raw_result_sha256": "41fd5903a96958174b36b674721894ea9ba5f724149d712fe48833e3614ceab5"
+    },
+    {
+      "input_filename": "case-001-mc-051.json",
+      "input_bytes_sha256": "b9f0db2350bcc94b5569cdc108e412a8e8e1309bcd1b20f42a704b0722aada32",
+      "input_fingerprint": "f36cf4f68aefb0dc7fe54ec5c08abdad008c55bd798d936ba1c36cac2598919a",
+      "raw_result_filename": "case-001-mc-051-matlab.json",
+      "raw_result_sha256": "1bfc3c6b04cb249ce54c068276f25fbcda4ac1c70984ea09c76dafe4744f798d"
+    },
+    {
+      "input_filename": "case-001-mc-052.json",
+      "input_bytes_sha256": "d114ccbe260022d85c6c5b34178d9b31f696c655f27338c146ae5e4dc1dd91fe",
+      "input_fingerprint": "3bb7fc8a802d21fd3dc9ed04b2e7ead5ebcc3c31baad70d0089868f0f8f25098",
+      "raw_result_filename": "case-001-mc-052-matlab.json",
+      "raw_result_sha256": "2f2753fe0a6afac92ee285b4b24b464579bf11d78cf1f9a848c7938862632696"
+    },
+    {
+      "input_filename": "case-001-mc-053.json",
+      "input_bytes_sha256": "deca08397b7ef1e3ebe58bd7c704ea097550ada775e287bcb5bbe83a09369459",
+      "input_fingerprint": "a52005d8bf39adb63ef605e1b6a15fbbc12ae8572b0c3d6fb8410b8b61b7c33e",
+      "raw_result_filename": "case-001-mc-053-matlab.json",
+      "raw_result_sha256": "9209dc69fe8251adc1f756f393708cfad8479a0909da0313651ca358b5536056"
+    },
+    {
+      "input_filename": "case-001-mc-054.json",
+      "input_bytes_sha256": "a5d492cc2f5189b851f3956125854bcf1e21594aa8fa65dfa7e8c79d46b3cc21",
+      "input_fingerprint": "aea1d06c2fbd511918c0b704ef81687b129eee86b018f46345ca28379f694113",
+      "raw_result_filename": "case-001-mc-054-matlab.json",
+      "raw_result_sha256": "275aed531e11054d766bf340e8fce14dd10657ab5404617adfcf427b92bce7f1"
+    },
+    {
+      "input_filename": "case-001-mc-055.json",
+      "input_bytes_sha256": "c338387c360193cc7a2d4be2cb078c7d0544a6eb1774847c4759325563be6726",
+      "input_fingerprint": "8bcfaed6976bd03565950fe2be82dc75b2d8855e5812c58df460792fb3868edc",
+      "raw_result_filename": "case-001-mc-055-matlab.json",
+      "raw_result_sha256": "4ea0c7cae96a5f38641d174b9a98989cf92518f80ad44a6983d51968a1c875fe"
+    },
+    {
+      "input_filename": "case-001-mc-056.json",
+      "input_bytes_sha256": "a003e4730db5d96dedaa8e1e59436837344328ff85a8476d4e6f282e84bbc72d",
+      "input_fingerprint": "bd65f4b3361ccb0c85834a0da20be05d606756e9378f2072181a6674dd853c90",
+      "raw_result_filename": "case-001-mc-056-matlab.json",
+      "raw_result_sha256": "3e2ad13516fc99f0945f1ff1557eaeeb0c3221ac1b1ff530914f06efaf3c8c08"
+    },
+    {
+      "input_filename": "case-001-mc-057.json",
+      "input_bytes_sha256": "741fed615e32f107df952d54ec4d56efd1f31316b7616f4f722632426f9e3172",
+      "input_fingerprint": "a95feb5891e1bc3f09a03d11467dfaed8ce018c807212bab75f11f6fd78bd8f8",
+      "raw_result_filename": "case-001-mc-057-matlab.json",
+      "raw_result_sha256": "7cd531e4ea9b5a39165046dc74b5ca10771fc2ae80ef88ababa8e2cd977761be"
+    },
+    {
+      "input_filename": "case-001-mc-058.json",
+      "input_bytes_sha256": "b6eedcf314ee60d68e7881d72b1dbcd49f82c20b4b568d2f3533aff44739543b",
+      "input_fingerprint": "66c7f32926dce9b7068796250798517d4ff586f71a4f2ce27433d1efa6dfd3c2",
+      "raw_result_filename": "case-001-mc-058-matlab.json",
+      "raw_result_sha256": "ebed7e5ea4d70a33179ef93631fa03eb06453d13302d1b14302bc3c2391fffce"
+    },
+    {
+      "input_filename": "case-001-mc-059.json",
+      "input_bytes_sha256": "2c8591ca09f5f350df65e68d4c83adfdc275f75cfa91aad512186e5b3278b1fe",
+      "input_fingerprint": "5c835f3139a9ac3cb195f223fab6a0c29f0872708130b00e588753e0e2d34f14",
+      "raw_result_filename": "case-001-mc-059-matlab.json",
+      "raw_result_sha256": "994db1ddf3bc5af7de25769ca00e212306334d72d563e8bec587eb4e196d8be4"
+    },
+    {
+      "input_filename": "case-001-mc-060.json",
+      "input_bytes_sha256": "f13e63da3b4c0a210b678600cc4d6df9b0cdc393f753d97a53981d532aa228da",
+      "input_fingerprint": "53b2e5ddd01e61697c176de8a6ca746e4aae078bbd5d6c2513d08e341ee68f9a",
+      "raw_result_filename": "case-001-mc-060-matlab.json",
+      "raw_result_sha256": "48679bbe50de2b377718872106c8445a17898e3279be35090bb34dca7d30fbff"
+    },
+    {
+      "input_filename": "case-001-mc-061.json",
+      "input_bytes_sha256": "ebbcb3d748c67418b55d8b09d9c6aea78dacfa9d3e5ff3cacc2caa2aca8a1a1e",
+      "input_fingerprint": "a78dfc94cd35984928528ecc56a71be22528306022cad438e7c68dd16ebcd830",
+      "raw_result_filename": "case-001-mc-061-matlab.json",
+      "raw_result_sha256": "300e0e490815cd5376673772de2f7e67981ccbfcae87c63a3107921f4381a57f"
+    },
+    {
+      "input_filename": "case-001-mc-062.json",
+      "input_bytes_sha256": "8fafc49fabbdd9e880b8fe55d0a7804a60b85cc1b0b67ab01866626b892a97b0",
+      "input_fingerprint": "78fc7a1b7aa381c913017523917a20bf0d784b64e6e011179025e7f7582f7a42",
+      "raw_result_filename": "case-001-mc-062-matlab.json",
+      "raw_result_sha256": "4c8d3b6f2ebf7198c5a581f2a573547c66f233b6718c07a7c9eaa04a4123eb87"
+    },
+    {
+      "input_filename": "case-001-mc-063.json",
+      "input_bytes_sha256": "9cca541b336abc0638a73f0eb9706e10b7127a1025879c9617726a6852822839",
+      "input_fingerprint": "5161c0d42fd624cda8f81d1f3a93ca894251f64b461a2d6e87e1d9392a35c162",
+      "raw_result_filename": "case-001-mc-063-matlab.json",
+      "raw_result_sha256": "3521861ee8a6302a3f60505319e0c0d1d3203aba87ae4788759a98b41a3557b3"
+    },
+    {
+      "input_filename": "case-001-mc-064.json",
+      "input_bytes_sha256": "d92b1da5e839727129655e7136ea82a0678e2a9d8ff65e109847d83740647719",
+      "input_fingerprint": "226e88fdb32aaaad8fa5b17234dd2584cf31277c4ed36fb8ae89149ecdcdcc4a",
+      "raw_result_filename": "case-001-mc-064-matlab.json",
+      "raw_result_sha256": "b2ebf6b44d7d03766f762378b2e02635f6f992198ddfaf5b5ca029a31982a83f"
+    },
+    {
+      "input_filename": "case-001-mc-065.json",
+      "input_bytes_sha256": "1c8a9907feeafc738ea19bd80b04488b4dc708ecb94d570280e3714e575ee095",
+      "input_fingerprint": "ce64d40707115d8e30982db7c26c49743658570e7727a3c5e5bc7bcbc64a1b34",
+      "raw_result_filename": "case-001-mc-065-matlab.json",
+      "raw_result_sha256": "4914f2876012db957b010c0d3d4317ae3dc1ee22f0bb827a3cefe37da6ddc38a"
+    },
+    {
+      "input_filename": "case-001-mc-066.json",
+      "input_bytes_sha256": "a8f62f503d4966ec35fdd38036d4b79a16acea1b2be9a63547728b3e4f8e7f2b",
+      "input_fingerprint": "b8c28cae69f138933ec4b81cd894c2bdbd798b111501d175615953dee6a3aab9",
+      "raw_result_filename": "case-001-mc-066-matlab.json",
+      "raw_result_sha256": "641a79a5056bc03dc4a47ca8f667126e32d5daf5f8dcbbcba57742a0c2eb4eba"
+    },
+    {
+      "input_filename": "case-001-mc-067.json",
+      "input_bytes_sha256": "1da68f820a61264fd763ef42945b6cdd7392ee51672294932e16867065181059",
+      "input_fingerprint": "de5d44af2c29c671a665f709520328e61b6d6a22e2506a0d4424969a3b846e8b",
+      "raw_result_filename": "case-001-mc-067-matlab.json",
+      "raw_result_sha256": "68c13c86c05f43e943f0e3ef077d0cb130aec8a1528e370e4294901e0c214053"
+    },
+    {
+      "input_filename": "case-001-mc-068.json",
+      "input_bytes_sha256": "c3fc01c63f3da61adae3d7bd817470b502d93c5d52f1946d99c9d25ffd0298eb",
+      "input_fingerprint": "b8fc1a1c4ba14cb03ac0f9599d95e706ebdfe0ce27adc1bc5a4d0dfac0f9f1ca",
+      "raw_result_filename": "case-001-mc-068-matlab.json",
+      "raw_result_sha256": "b2765451bcd9b25695328fee65d566077d404637013ca5fc45e2425993849584"
+    },
+    {
+      "input_filename": "case-001-mc-069.json",
+      "input_bytes_sha256": "824b0618659ef64f59825a337f6d7a7f282b408fd5c41ae0be309a60f01bf4e6",
+      "input_fingerprint": "d3c032a162c6c46f255dd7a3dcb87db787906fe1f6c2d8b210f0da1904018c44",
+      "raw_result_filename": "case-001-mc-069-matlab.json",
+      "raw_result_sha256": "f56251ef0a2d68a934dc2a7b52ea6ccea1df0c118fa7b1355f090ca42f59f5ee"
+    },
+    {
+      "input_filename": "case-001-mc-070.json",
+      "input_bytes_sha256": "19a7139382f118f4c1b936e193a2c6901d34e37293a0fc59b7057f487e246525",
+      "input_fingerprint": "3e4e46409d09f9fa76bfb5319026dd2ad4f4203d4bc395421ca184b5ef57b484",
+      "raw_result_filename": "case-001-mc-070-matlab.json",
+      "raw_result_sha256": "8a97e315fb216a3b96dbe293b186761fed1b85ff806f01475f1246a1090505a1"
+    },
+    {
+      "input_filename": "case-001-mc-071.json",
+      "input_bytes_sha256": "53a7b493b270475c7714eb549a731a1ad46a4706ba505f40093811963e241f7e",
+      "input_fingerprint": "54b3f7bce7a50d47e5fd7d781c240879d0217eb9a68121debd5d8dd8bb412274",
+      "raw_result_filename": "case-001-mc-071-matlab.json",
+      "raw_result_sha256": "59fbacf6ba9949d50d4a2d5bc16bea96cc75c87277db126f2574fc1e438b98b8"
+    },
+    {
+      "input_filename": "case-001-mc-072.json",
+      "input_bytes_sha256": "8fd9805153e171b9881f8c34c8128825dd12e356b5d5404e121611052d35f55d",
+      "input_fingerprint": "9ba1d37fa5ff1f87815deb709e87380a3ab9357ddb1064b20c1c6e74084f1f90",
+      "raw_result_filename": "case-001-mc-072-matlab.json",
+      "raw_result_sha256": "068d19c33246bbd0f173defa812690cd4cb9a60e90614eff02277859af623d38"
+    },
+    {
+      "input_filename": "case-001-mc-073.json",
+      "input_bytes_sha256": "489100b5f3896a35da19a11455cf73eb15980b28c82d9b41a571c2938386df77",
+      "input_fingerprint": "a3b2e969f9491688aa2364e05e0756b46c613a395345e318a6fa959cc232fe8b",
+      "raw_result_filename": "case-001-mc-073-matlab.json",
+      "raw_result_sha256": "5fc875e466388e38b0429d4b822a6b3d3683aa866ed08148370ac5de4410aee0"
+    },
+    {
+      "input_filename": "case-001-mc-074.json",
+      "input_bytes_sha256": "9bbd4156d78a0b115e4b4902a988d96ff8d70de7f7b62fa46458109249d7a0d8",
+      "input_fingerprint": "702a6b23f01b6bf69d184a83b9fea633d6a54b6b24b4f48c20dfb45b4327cca3",
+      "raw_result_filename": "case-001-mc-074-matlab.json",
+      "raw_result_sha256": "75c5ce363bd0cb1c9ab2ad635839b6e3c2ffe732893bc879cc2ff95b3e7909ea"
+    },
+    {
+      "input_filename": "case-001-mc-075.json",
+      "input_bytes_sha256": "ab872b9c765de2676552d19834e716db8f0090922dd93858dcef2319bc7fd679",
+      "input_fingerprint": "dce56ce104a661d89f81370ee1411d4437f6958226a0d05681949ca26eb3a67c",
+      "raw_result_filename": "case-001-mc-075-matlab.json",
+      "raw_result_sha256": "82fc12931b6bd507280a05f5757806ddcf0e62a163bedc2f23105fa8766413c0"
+    },
+    {
+      "input_filename": "case-001-mc-076.json",
+      "input_bytes_sha256": "8d4cbed0ee73e29b395b4d4fdd21af66a9ef5678187edb3186f40c4207e32a2a",
+      "input_fingerprint": "d6e8a6eff1c7fe42bda295ec1f45c8f60e6e1a193d6646bbe0fbb8bfe4a40e05",
+      "raw_result_filename": "case-001-mc-076-matlab.json",
+      "raw_result_sha256": "14b3dc13b83fab6b79662681ec04023e7a3e4ed1f7a91145de28e6ee02d3ee70"
+    },
+    {
+      "input_filename": "case-001-mc-077.json",
+      "input_bytes_sha256": "6012eab41d298ad88d1982cb48c6b5a0231968e7e1c1fa5114d6e1c53fdd4d10",
+      "input_fingerprint": "97d222bbd065ab07480a577c830a47e28b555c7aac080c8dc4fd9854cb35edb2",
+      "raw_result_filename": "case-001-mc-077-matlab.json",
+      "raw_result_sha256": "cfa7732532ca1315598ced1c3dc428a3a4446a0fb7873da0943bfd00d1d3ecbe"
+    },
+    {
+      "input_filename": "case-001-mc-078.json",
+      "input_bytes_sha256": "9a14ce0e7517ce911e3c76a2c63c2269b9f2bf1bcf4cfb94e952eee1ffaae695",
+      "input_fingerprint": "34ca2e6952f862f1e677e3865a80469d81eaa35e7c1bb3c5c9e7946bef460101",
+      "raw_result_filename": "case-001-mc-078-matlab.json",
+      "raw_result_sha256": "88121ef45f9663c1ce0c4d2996628c3cf310caed69d34e8f173296d755a20b43"
+    },
+    {
+      "input_filename": "case-001-mc-079.json",
+      "input_bytes_sha256": "01ac6666f6da4ce22a49236943185b80921f9c3fc2916d4f37f189294ce9dd07",
+      "input_fingerprint": "f26b55f9a34feddd4487b152bcd325304b0d4886ee6d24ea8620b77de478db7f",
+      "raw_result_filename": "case-001-mc-079-matlab.json",
+      "raw_result_sha256": "db81c5d372429ebff1ebbea026a81da6b7be84b681db1fee180831f480594b16"
+    },
+    {
+      "input_filename": "case-001-mc-080.json",
+      "input_bytes_sha256": "52b3451863e71386db4e59bed6f87f386ef879800cb0181495bd0d415edfbd4d",
+      "input_fingerprint": "335adc86802c870738ae99385e0621b80399e3e64c1fbfa7da936a845c55ace7",
+      "raw_result_filename": "case-001-mc-080-matlab.json",
+      "raw_result_sha256": "9564e02307c967e4a7aef36e26b5ece323bf3df4544704472a7e026cc91186b7"
+    },
+    {
+      "input_filename": "case-001-mc-081.json",
+      "input_bytes_sha256": "225188e73b7c519ab7bf5324c2954d35c6d0e812d92269ddb6e98fd10ab9ad12",
+      "input_fingerprint": "ec7f4e614c67c2ea477680fa4e1a365ff8fe2516743cafaf10633f626bddafcb",
+      "raw_result_filename": "case-001-mc-081-matlab.json",
+      "raw_result_sha256": "758bd06c7710f19ca7b47ca83a3d7d9b336c3f35342e8ba33892750fb4ccfbbe"
+    },
+    {
+      "input_filename": "case-001-mc-082.json",
+      "input_bytes_sha256": "7d05d71359a70794bc6df1e128d7ce44b11d6856d615c15ff6c3785bcee0c776",
+      "input_fingerprint": "044f32ba498b651985cb58d9cc70158b55cf16bfbb430ebcadf5d425776d6a9d",
+      "raw_result_filename": "case-001-mc-082-matlab.json",
+      "raw_result_sha256": "ca8a5322162b05f4a3bf76720a2d35eb4acc6e66a677392f5445fd56034b0c86"
+    },
+    {
+      "input_filename": "case-001-mc-083.json",
+      "input_bytes_sha256": "05793babb0fbbf4e736f5985e29f5ae3f1b5ffc849999dbcbd32188b51802a44",
+      "input_fingerprint": "8199d9f125e82e7ecc1bd95cea4b4ab6476a0a4500e26e1ac5a7f20f71561f85",
+      "raw_result_filename": "case-001-mc-083-matlab.json",
+      "raw_result_sha256": "8d09ae6a930c9dfb47f1435ffdf6136a296c368d3cd58b8386b70d8700556971"
+    },
+    {
+      "input_filename": "case-001-mc-084.json",
+      "input_bytes_sha256": "f4bebc9f236434ca362b19a5fcd903dcdd033e5d25c984504b3b2234c90a860f",
+      "input_fingerprint": "b6efcc32993f1f2a1eb09d394b5749ceede65755543b2e35aac1482fa5a5e126",
+      "raw_result_filename": "case-001-mc-084-matlab.json",
+      "raw_result_sha256": "849bcc72eba57e410c9e49737888be518ca71dbb7e1364354eef9addeba25a15"
+    },
+    {
+      "input_filename": "case-001-mc-085.json",
+      "input_bytes_sha256": "13b5486dd9de9ac02de4608bb068c9b733151d16b0833345edf8800d32a54a97",
+      "input_fingerprint": "2ee429430d6eb3b4dc1cc494d7c7d3d7c71ce42af5c47c02d182f52e8294ae57",
+      "raw_result_filename": "case-001-mc-085-matlab.json",
+      "raw_result_sha256": "8bc5b3f4b68525044e0113243cf59fcc712ffe58f36a951a4d4cf244bbeba439"
+    },
+    {
+      "input_filename": "case-001-mc-086.json",
+      "input_bytes_sha256": "0778367c633c9a1f8dafaac0430968f7fa24b0e38ffaa74988403d4d45520df3",
+      "input_fingerprint": "46aa133d68f35f447fc53e75b20b3898ab81d5966f0e84a01481f9ff25212902",
+      "raw_result_filename": "case-001-mc-086-matlab.json",
+      "raw_result_sha256": "92c9c3d170f76cce60980fd28189aad27e22dafa0f983fb6148f57ccf734c14a"
+    },
+    {
+      "input_filename": "case-001-mc-087.json",
+      "input_bytes_sha256": "efef37f300eba234d0efe94b9ff30e68c8c5b8c557570381010228d4991adadf",
+      "input_fingerprint": "04f6e8052b2bdb82c48790dab441aeebc389b0070d4bdd568b75d8c68b3116fe",
+      "raw_result_filename": "case-001-mc-087-matlab.json",
+      "raw_result_sha256": "63eaa1a2a2ec23c806039f053cf6e1d5c9db51f9b0e76c79669ec7176962fff5"
+    },
+    {
+      "input_filename": "case-001-mc-088.json",
+      "input_bytes_sha256": "7545e20acc57420a839d5b0ecf78f24f74b8e4e90306965995dc37e3d5102611",
+      "input_fingerprint": "137ab957ee4fc5be6607c46c5cf81afba98ae85a5edb896caec21e59c08711e2",
+      "raw_result_filename": "case-001-mc-088-matlab.json",
+      "raw_result_sha256": "a95628dfb42a2f47388b7d94ec5c706f4b98af01f8c62437be6741a5277c99ce"
+    },
+    {
+      "input_filename": "case-001-mc-089.json",
+      "input_bytes_sha256": "00dfe6c7d42acd694a0f95d81769613d2b8d9210d79b81f01b2717d3e76e075e",
+      "input_fingerprint": "760fe521d072d15cc0f417b21b6ec57e38cb27c8b3ca03606e0c61b98b3637fb",
+      "raw_result_filename": "case-001-mc-089-matlab.json",
+      "raw_result_sha256": "727e9bff9ea19a22318afd363109929c11765e7af6ef56fee9173e36aa965380"
+    },
+    {
+      "input_filename": "case-001-mc-090.json",
+      "input_bytes_sha256": "0f6bd2f9528eff7d93f5055942d3776bfc5031402b5214f751f475a41da3123e",
+      "input_fingerprint": "eaae6175f01d3a59e7f88f2dc00b2c682eb118962f0e3550a32f0e87f87b6a51",
+      "raw_result_filename": "case-001-mc-090-matlab.json",
+      "raw_result_sha256": "a43d5c2800670c3bebd74a9d689f5dd72ba25786490cfe381fcafff1b3fa3812"
+    },
+    {
+      "input_filename": "case-001-mc-091.json",
+      "input_bytes_sha256": "f96ea6425519f555f1a74fbfbaf87256fd2c71bde8b32a725514d84da84fe58a",
+      "input_fingerprint": "cc4cf4733d8005f5649198acbc42db201b0624c28bba2276a0a7c0a86f930819",
+      "raw_result_filename": "case-001-mc-091-matlab.json",
+      "raw_result_sha256": "c8b23753ebc46dc6c7a239c7974c21707199f87b45fa37072e0b623c236d5417"
+    },
+    {
+      "input_filename": "case-001-mc-092.json",
+      "input_bytes_sha256": "b7c9bc13ab5ba22825cb603b55788c1a85a930999032f637583d84ced7c0f220",
+      "input_fingerprint": "82b0524711152413baeac294510bdc6677b77e6060053ce7f1e910cd1212c9ee",
+      "raw_result_filename": "case-001-mc-092-matlab.json",
+      "raw_result_sha256": "e29e8fcc9277766cf9b1cc5ed49a7150cb654d676e71d41ad7a3d9657ca95429"
+    },
+    {
+      "input_filename": "case-001-mc-093.json",
+      "input_bytes_sha256": "1c19763c9ccaf5aaf9e592dc7f1bb9fd4e7e54db8fd6fbbfa6a962580297366f",
+      "input_fingerprint": "349b16fdc571e272b65a19b31ee734c32601f0af21e747ed119f8e10806e1009",
+      "raw_result_filename": "case-001-mc-093-matlab.json",
+      "raw_result_sha256": "146e25df360e5a9ea12e87fbaf3e1c949bab7af4ab50008dbd3d330a3439f3f4"
+    },
+    {
+      "input_filename": "case-001-mc-094.json",
+      "input_bytes_sha256": "164746d6515ebac2b7186f7344ecd59c2d561add2c17881c57648e9ec1f8c258",
+      "input_fingerprint": "04742593c4497923b3c6cb5b44b49b4e8d85d5098d1c5d03de2360d38a50a372",
+      "raw_result_filename": "case-001-mc-094-matlab.json",
+      "raw_result_sha256": "639c7930e33e1c17e85ab608e7f8f9cb9211fe1f600cdcf1230d67c07bf87ef3"
+    },
+    {
+      "input_filename": "case-001-mc-095.json",
+      "input_bytes_sha256": "9f6363eca4510f33ad2258887536404edceaa4870d04d1144bf7abf10b8a0ae5",
+      "input_fingerprint": "4043c541ec339668620cfeea49fe21208bddede71a7ddba810aad7c6a3d6f29a",
+      "raw_result_filename": "case-001-mc-095-matlab.json",
+      "raw_result_sha256": "28edec2ceb98270c9b2dcabd56958b22f48858c7adf02ac80589fb27511e85d3"
+    },
+    {
+      "input_filename": "case-001-mc-096.json",
+      "input_bytes_sha256": "70a106fe2b526ca37441a9cb8dbbba6e8f07db003eb407d3a04d513f17820b83",
+      "input_fingerprint": "d947822d178fc73bd342d95d69156f43b2cb751782ec82a42aadc35123187c38",
+      "raw_result_filename": "case-001-mc-096-matlab.json",
+      "raw_result_sha256": "a82745e96b0cb0e51cbc46983cc90a8a4e4efac8e8ea90c2405ea4dae8280043"
+    },
+    {
+      "input_filename": "case-001-mc-097.json",
+      "input_bytes_sha256": "75479668da9f3eb1b4cb8207928a69542829162067fcfa1e05df18bb1b4e2130",
+      "input_fingerprint": "777e2c9acec813d32ca3bf47994eaecf039b2bb7d003f0ae9f778227830c2617",
+      "raw_result_filename": "case-001-mc-097-matlab.json",
+      "raw_result_sha256": "dba0c8bee0bffdd228363f56ce64e6ed599c5f79acbcfc4b376d6ab927841b40"
+    },
+    {
+      "input_filename": "case-001-mc-098.json",
+      "input_bytes_sha256": "9ce3964de4d524fdd171d8fdd277d3b1f7cb2ab440883c1e3c5834b5e5cfc404",
+      "input_fingerprint": "15ab1dbf31fcc03fdbf441f5199a91fd3ede0226a0f82482f3fc11c3287cf297",
+      "raw_result_filename": "case-001-mc-098-matlab.json",
+      "raw_result_sha256": "b5656c0ff23a95b7053ab40e98614073b4d17611a41011d043510cbbc6bc5a78"
+    },
+    {
+      "input_filename": "case-001-mc-099.json",
+      "input_bytes_sha256": "f5554a056dbb3a116870b020b80c814c59148f75d93a5f58d65636f1d1cb979a",
+      "input_fingerprint": "881f8427f055d69d33cd9f01bfa73df304d1d461c948693980dab2698fefd5c4",
+      "raw_result_filename": "case-001-mc-099-matlab.json",
+      "raw_result_sha256": "7943b745fdc301a69aaea753d179f169bc91555bd50220ea6f3999d4e08743c3"
+    }
+  ],
+  "all_original_inputs_raw_outputs_and_audit_sources_freshly_hash_verified_at_publication": true,
+  "private_original_sources_not_published": true,
+  "actual_raw_bank_not_modified": true,
+  "published_files": {
+    "audit-summary.json": {
+      "sha256": "838f03685571ab1466fd6f309dd0d69d87d3f7f41a74edd178936752186aeda6",
+      "bytes": 3373
+    },
+    "executed-run-config.json": {
+      "sha256": "72bd6211cd90e238bfa34a25d4f8e56d29454b01c51aca32aa483488475a0d80",
+      "bytes": 5508
+    },
+    "execution-runtime-source-identity-compact.json": {
+      "sha256": "632eb17b7ec47270ee7443834ce8860155eee623c516545092a518c569931067",
+      "bytes": 5784
+    },
+    "full200-matlab-Fig3-ensemble-protocol-audit-v1.json": {
+      "sha256": "d35cf57934f9d8b8c5f16e8771017fc4e69a80512a82b4e265600ac9099c790b",
+      "bytes": 25894
+    },
+    "full200-matlab-independent-coordinate-certificates-v1-freeze.json": {
+      "sha256": "c147d55c1270b6cb178247e0e4e44a3f3b7dee57ad9206365e1282bae9604f14",
+      "bytes": 44123
+    },
+    "full200-matlab-independent-coordinate-certificates-v1.json": {
+      "sha256": "8b39bb1c6437bab4a32a7d6701a83012ece38fa64baa50edc1791136ae43283a",
+      "bytes": 251337
+    },
+    "full200-matlab-independent-physical-audit-v1-freeze.json": {
+      "sha256": "d30db22989a363a51ddea8c450745e4da7caae6e58497fa26dbacb453240cc72",
+      "bytes": 44309
+    },
+    "full200-matlab-independent-physical-audit-v1.json": {
+      "sha256": "138db244b7948661e753a16b48faa426d5997ae48f546c3fbb07aa2da17809e8",
+      "bytes": 907558
+    },
+    "full200-matlab-original-Fig3-unfitted-vector-comparison-indexing-v2.json": {
+      "sha256": "f00ee6b07fda722685fe7cdecb2dad650877061f9bd34ec743672d73785c0c8f",
+      "bytes": 5750
+    },
+    "full200-matlab-original-Fig3-unfitted-vector-comparison-v1.json": {
+      "sha256": "7439eba8ea08b477186630f07f4acc7e76c106c3903f3e8798043a4b5228ed63",
+      "bytes": 4266
+    },
+    "readiness.json": {
+      "sha256": "73ce99106f25dcfc94f16ec5bafebd55a0229372bd7eda7e8ccfc49dd240965f",
+      "bytes": 477
+    },
+    "README.md": {
+      "sha256": "3eb3664a3094623aaecabebb6a0bff8ec771197989001b3b0a486983bffd1349",
+      "bytes": 5512
+    },
+    "two-timescale-ma-matlab-figure-03.json": {
+      "sha256": "f7b1aa4f1a3cb9fa4e2ede4feb33fe4ceed69a337662ae751c2f926c11912f96",
+      "bytes": 189912
+    },
+    "two-timescale-ma-matlab-figure-03.png": {
+      "sha256": "f1dbb27856b4ef764469518b4b447dd1af7d5b4d7ce66827394df549db2cac8c",
+      "bytes": 95090
+    },
+    "two-timescale-ma-matlab-figure-03.svg": {
+      "sha256": "aecf6fa90d3f26db81054dd465085a5f3692b843c0841b16c9555f70ff0082a5",
+      "bytes": 61377
+    },
+    "verify_package.py": {
+      "sha256": "93cc1c5d6bfc2bbb314d6a874d09e3f8c73456139a86651b1fa29782fa8499f6",
+      "bytes": 3132
+    }
+  }
+}

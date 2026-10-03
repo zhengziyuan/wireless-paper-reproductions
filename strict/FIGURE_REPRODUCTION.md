@@ -6,6 +6,49 @@ reference-agreement gates. The owner requires full original models, scenes,
 baselines and dimensions in MATLAB/Python; no replacement curves or reduced
 production banks are permitted.
 
+## Actual newly completed numerical scopes
+
+The Python communication Fig7 bank has completed all6000 MIS and6000 SMS
+starts. All12000 recorded stops and domains pass; its selected full physical
+beams are independently reconstructed without importing a production solver.
+All three original EPS paths,1080 samples in total, have been compared with
+no phase/angle/gain/ordinate fit. Maximum absolute linear-SNR error is
+2.572838263652233e-7, below the predeclared1e-5 gate. This is the explicit
+same-two-element1x2 **corrected-axis** result, not recovery of the contradictory
+literal2x1 source text, not a publisher-approved erratum, and not completion of
+the independent full MATLAB bank or the remaining communication figures.
+The complete original Fig8 12000-start bank has now started separately.
+
+The corrected statistical-hotspot Python scope has also actually completed
+all18 cases, all243 declared starts and all54 selected designs'1000 fresh
+paired channel samples. An independent evaluator replays all54000 rates and
+checks every final physical metric and the717 recorded original stop tests;
+see [the complete-scope evidence](validation/hotspot-statistical-validated18-python-v1/README.md).
+The independently running MATLAB bank remains incomplete. All54 original
+reference points have now been compared against this new actual run; maximum
+error is8.008012646848087 bit/s/Hz. **Original figure agreement has not passed.**
+No reference gain is fitted, and pair-distance conformance alone does not
+recover all historical link-budget, coordinate and phase inputs.
+
+MA Fig3's fresh MATLAB-full-v2 now actually completes200/200 numerical
+cases with actual BEFORE/AFTER source/runtime/input/result bindings passing.
+All five1000-draw scheme populations, original recorded stops, design domains
+and coordinate certificates are rechecked before rendering the complete bank.
+Fresh no-solver all200 physical-metric replay and independent global-gap
+certificates for every original concave coordinate subproblem now pass.
+The unfitted original Fig3 curves differ by up to about4.35 bit/s/Hz and do
+not pass reference agreement under either predeclared indexing convention.
+The full same-input Python bank remains incomplete. The
+old200 startup errors remain nonnumerical failures, not upgraded receipts.
+
+The old complete cooperative183-point bank finishes154 valid/29 failed,
+including10 phase and19 MR QT failures, all retained. [All19 actual MR inputs](validation/cooperative-mr-precision19-python-v1/README.md)
+now have successful WORK components for an exact constant-factored version
+of the same QT subproblem, with the unchanged physical/primal/QT gates and
+independent80-digit PSD-dual precision checks. This is not completion of
+a new183-point sweep, all19 independent MATLAB solves, or original-reference
+agreement; the10 phase failures remain separate outstanding work.
+
 ## Original figure inventory
 
 `figure-catalog/` inventories 85 captioned figures and two captioned parameter

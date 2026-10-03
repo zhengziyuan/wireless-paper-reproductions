@@ -1,0 +1,643 @@
+{
+  "scope": "actual_returned_nativeMAT_full_M25_SDP_matrices_4samples_times4scales_AND80digit_dual_NOT_Python_resolve",
+  "actual_samples": [
+    {
+      "sample_index": 12,
+      "scope": "WORK_corrected_native_CVX_max_equality_sign_ACTUAL_MATLAB_matrices_and1000_draws_NOT_Python_resolve_OR_fullCDF",
+      "actual_all_four_native_attempts": [
+        {
+          "exact_positive_objective_scale": 1.0,
+          "checks": {
+            "same_independently_rebuilt_original_coefficients": true,
+            "independent80digit_dual_PSD_witness_pass": true,
+            "true_unit_diagonal_primal_PSD_pass": true,
+            "true_feasible_primal_dual_gap_original_tolerance_pass": true,
+            "actual_raw_primal_dual_gap_original_tolerance_pass": true
+          },
+          "all_independent80digit_checks_pass": true,
+          "same_coefficient_maximum_error": 4.0194366942304644e-14,
+          "true_feasible_primal_dual_gap": "0.00000021338322729312057122597336368196523134273163908418123762349041744",
+          "actual_raw_primal_dual_gap": "0.0000002133851903589791452676449636503859582073466579109280571682451247",
+          "independent_dual_upper_objective": "11.144502067958780908059254025707087902705294144846657910928057168",
+          "positive_dual_PSD_witness_lower_bound": "0.0000000082063211413711990589925306092638505680379369775582838855910337494",
+          "dual_eigendecomposition_residual_bound": "3.7350590214243809007356925154856643003135268154644569122405467896e-79",
+          "explicit80digit_arithmetic_floor": "1.4427952579185327016130474337171545572483932934994182978676625995e-58",
+          "diagnostic_primal_PSD_shift_not_optimizer_change": "1.0e-25",
+          "native_CVX_maximum_equality_dual_conversion": "fixed_all_cases_minus_CVX_dual_divided_by_positive_objective_scale",
+          "actual_native_dual_minimum": -1.8300436619775886,
+          "actual_native_dual_maximum": -0.020013590380811887,
+          "unchanged_actual1000_rounding_and_primal_checks": {
+            "same_all1000_candidates_evaluated": true,
+            "original_raw_candidate_primal_gate_pass": true,
+            "original_raw_PSD_and_diagonal_gate_pass": true,
+            "same_original_rank_one_identity_pass": true,
+            "actual_aggregate_symbolic_primal_identity_pass": true
+          },
+          "old_wrong_sign_receipt_still_failed_and_retained": true,
+          "complete_original_precision_attempt_passed": true
+        },
+        {
+          "exact_positive_objective_scale": 0.01,
+          "checks": {
+            "same_independently_rebuilt_original_coefficients": true,
+            "independent80digit_dual_PSD_witness_pass": true,
+            "true_unit_diagonal_primal_PSD_pass": true,
+            "true_feasible_primal_dual_gap_original_tolerance_pass": true,
+            "actual_raw_primal_dual_gap_original_tolerance_pass": true
+          },
+          "all_independent80digit_checks_pass": true,
+          "same_coefficient_maximum_error": 4.0194366942304644e-14,
+          "true_feasible_primal_dual_gap": "0.0000000099238372172787179710196171631657638176647750630518391016427801108",
+          "actual_raw_primal_dual_gap": "0.0000000099553301978864656548919700200860385726963498684357681610917287204",
+          "independent_dual_upper_objective": "11.144501864482707047432737496865036350042093260196349868435768161",
+          "positive_dual_PSD_witness_lower_bound": "0.00000000038031919646526315709453844461797353246142717148261836015429508245",
+          "dual_eigendecomposition_residual_bound": "1.5610144025663665256796972604829679108583421346723784424045642126e-78",
+          "explicit80digit_arithmetic_floor": "1.4427952123650734067258406506569195434094774160400685886742364548e-58",
+          "diagnostic_primal_PSD_shift_not_optimizer_change": "1.0e-25",
+          "native_CVX_maximum_equality_dual_conversion": "fixed_all_cases_minus_CVX_dual_divided_by_positive_objective_scale",
+          "actual_native_dual_minimum": -1.8300435804742128,
+          "actual_native_dual_maximum": -0.020013589805173822,
+          "unchanged_actual1000_rounding_and_primal_checks": {
+            "same_all1000_candidates_evaluated": true,
+            "original_raw_candidate_primal_gate_pass": true,
+            "original_raw_PSD_and_diagonal_gate_pass": true,
+            "same_original_rank_one_identity_pass": true,
+            "actual_aggregate_symbolic_primal_identity_pass": true
+          },
+          "old_wrong_sign_receipt_still_failed_and_retained": true,
+          "complete_original_precision_attempt_passed": true
+        },
+        {
+          "exact_positive_objective_scale": 100.0,
+          "checks": {
+            "same_independently_rebuilt_original_coefficients": true,
+            "independent80digit_dual_PSD_witness_pass": true,
+            "true_unit_diagonal_primal_PSD_pass": true,
+            "true_feasible_primal_dual_gap_original_tolerance_pass": true,
+            "actual_raw_primal_dual_gap_original_tolerance_pass": true
+          },
+          "all_independent80digit_checks_pass": true,
+          "same_coefficient_maximum_error": 4.0194366942304644e-14,
+          "true_feasible_primal_dual_gap": "0.00000076450762697486904833183633763379566782268447803532543511159981413",
+          "actual_raw_primal_dual_gap": "0.00000076451225332419631096808275035262107767787219430466050559050358387",
+          "independent_dual_upper_objective": "11.144502619093288584790346175842339309453963420059694304660505591",
+          "positive_dual_PSD_witness_lower_bound": "0.000000029403796414438312378569194060953963651398104046179385315052360595",
+          "dual_eigendecomposition_residual_bound": "2.1114518248774581308537988076277133054658807651021442902447047497e-78",
+          "explicit80digit_arithmetic_floor": "1.4427952814087223871907063490016261517483212880332380835441312774e-58",
+          "diagnostic_primal_PSD_shift_not_optimizer_change": "1.0e-25",
+          "native_CVX_maximum_equality_dual_conversion": "fixed_all_cases_minus_CVX_dual_divided_by_positive_objective_scale",
+          "actual_native_dual_minimum": -1.8300439264216686,
+          "actual_native_dual_maximum": -0.020013592903476467,
+          "unchanged_actual1000_rounding_and_primal_checks": {
+            "same_all1000_candidates_evaluated": true,
+            "original_raw_candidate_primal_gate_pass": true,
+            "original_raw_PSD_and_diagonal_gate_pass": true,
+            "same_original_rank_one_identity_pass": true,
+            "actual_aggregate_symbolic_primal_identity_pass": true
+          },
+          "old_wrong_sign_receipt_still_failed_and_retained": true,
+          "complete_original_precision_attempt_passed": true
+        },
+        {
+          "exact_positive_objective_scale": 10000.0,
+          "checks": {
+            "same_independently_rebuilt_original_coefficients": true,
+            "independent80digit_dual_PSD_witness_pass": true,
+            "true_unit_diagonal_primal_PSD_pass": true,
+            "true_feasible_primal_dual_gap_original_tolerance_pass": true,
+            "actual_raw_primal_dual_gap_original_tolerance_pass": true
+          },
+          "all_independent80digit_checks_pass": true,
+          "same_coefficient_maximum_error": 4.0194366942304644e-14,
+          "true_feasible_primal_dual_gap": "0.000000011421427806212168828230654333774477930970656800928966312182514309",
+          "actual_raw_primal_dual_gap": "0.000000011421618073221761519673582159929363468877263294229906760698568418",
+          "independent_dual_upper_objective": "11.144501866015221058454553499470766627245037297002263294229906761",
+          "positive_dual_PSD_witness_lower_bound": "0.00000000043926235394146235476459000409830394968399822229253679026993219957",
+          "dual_eigendecomposition_residual_bound": "1.0793163389254507870860188248695360912302255647149805982660079809e-78",
+          "explicit80digit_arithmetic_floor": "1.4427951256444355795809272013246756976773941041928039682483344221e-58",
+          "diagnostic_primal_PSD_shift_not_optimizer_change": "1.0e-25",
+          "native_CVX_maximum_equality_dual_conversion": "fixed_all_cases_minus_CVX_dual_divided_by_positive_objective_scale",
+          "actual_native_dual_minimum": -1.8300436213236222,
+          "actual_native_dual_maximum": -0.020013589787899244,
+          "unchanged_actual1000_rounding_and_primal_checks": {
+            "same_all1000_candidates_evaluated": true,
+            "original_raw_candidate_primal_gate_pass": true,
+            "original_raw_PSD_and_diagonal_gate_pass": true,
+            "same_original_rank_one_identity_pass": true,
+            "actual_aggregate_symbolic_primal_identity_pass": true
+          },
+          "old_wrong_sign_receipt_still_failed_and_retained": true,
+          "complete_original_precision_attempt_passed": true
+        }
+      ],
+      "actual_corrected_convention_receipt_sha256": "6ee009a37f974f17bcfcdd2b38c103e6490f188ecae857e55361dfc6181a2d05",
+      "retained_wrong_sign_native_receipt_sha256": "50c02651d383840848f67fcf49133724db48bb8ba775ed917af2de029fd042e5",
+      "actual_returned_native_states_sha256": "9b568a80bedc53a4ae649c3f6a1f822427c9d003910ec06c9f30d9ac9b9e389f",
+      "actual_native_runtime_source_hashes": [
+        {
+          "filename": "test_same_sdp_scaled_precision.m",
+          "sha256": "142252c456c30de82a7e4ca19f01092719224ff6bbc97569714a38cd566e5442"
+        },
+        {
+          "filename": "strict_hotspot_core.m",
+          "sha256": "875c05cb50659fb8cae6f7bddcd41bd88de321548df3e5656f0128ee1dc7ca95"
+        },
+        {
+          "filename": "instantaneous-SDP-rounding-failure-cf7c9b932618efb5.mat",
+          "sha256": "5799bb384623ba492fa0e902914ea945b7b0ac3a6e530b99934c7c88c406cf05"
+        }
+      ],
+      "all_actual_native1000_and80digit_precision_attempts_pass": true,
+      "old_wrong_sign_false_flags_not_retrofitted": true,
+      "nativeMAT_full_CDF_or_whole_sample_executed": false
+    },
+    {
+      "sample_index": 22,
+      "scope": "WORK_corrected_native_CVX_max_equality_sign_ACTUAL_MATLAB_matrices_and1000_draws_NOT_Python_resolve_OR_fullCDF",
+      "actual_all_four_native_attempts": [
+        {
+          "exact_positive_objective_scale": 1.0,
+          "checks": {
+            "same_independently_rebuilt_original_coefficients": true,
+            "independent80digit_dual_PSD_witness_pass": true,
+            "true_unit_diagonal_primal_PSD_pass": true,
+            "true_feasible_primal_dual_gap_original_tolerance_pass": true,
+            "actual_raw_primal_dual_gap_original_tolerance_pass": true
+          },
+          "all_independent80digit_checks_pass": true,
+          "same_coefficient_maximum_error": 1.464821375527116e-14,
+          "true_feasible_primal_dual_gap": "0.000000038693712383254045655095502453727090556807056484964654797294388576",
+          "actual_raw_primal_dual_gap": "0.000000038696523979430457027042504776795518595720950059268814133102559516",
+          "independent_dual_upper_objective": "9.5814689033806679173236252128800716293650986738459500592688141331",
+          "positive_dual_PSD_witness_lower_bound": "0.0000000014880221319779255354629565401787370201911130800857983995267270045",
+          "dual_eigendecomposition_residual_bound": "8.2319685169982332062809590596303767639800995295418555244313126352e-79",
+          "explicit80digit_arithmetic_floor": "1.1496071894051394403892773491575763029426425174487249114515858873e-58",
+          "diagnostic_primal_PSD_shift_not_optimizer_change": "1.0e-25",
+          "native_CVX_maximum_equality_dual_conversion": "fixed_all_cases_minus_CVX_dual_divided_by_positive_objective_scale",
+          "actual_native_dual_minimum": -1.507192503842516,
+          "actual_native_dual_maximum": -0.00971415209069569,
+          "unchanged_actual1000_rounding_and_primal_checks": {
+            "same_all1000_candidates_evaluated": true,
+            "original_raw_candidate_primal_gate_pass": true,
+            "original_raw_PSD_and_diagonal_gate_pass": true,
+            "same_original_rank_one_identity_pass": true,
+            "actual_aggregate_symbolic_primal_identity_pass": true
+          },
+          "old_wrong_sign_receipt_still_failed_and_retained": true,
+          "complete_original_precision_attempt_passed": true
+        },
+        {
+          "exact_positive_objective_scale": 0.01,
+          "checks": {
+            "same_independently_rebuilt_original_coefficients": true,
+            "independent80digit_dual_PSD_witness_pass": true,
+            "true_unit_diagonal_primal_PSD_pass": true,
+            "true_feasible_primal_dual_gap_original_tolerance_pass": true,
+            "actual_raw_primal_dual_gap_original_tolerance_pass": true
+          },
+          "all_independent80digit_checks_pass": true,
+          "same_coefficient_maximum_error": 1.464821375527116e-14,
+          "true_feasible_primal_dual_gap": "0.000000043466133592747022651105099790433493604002263423571802897248364486",
+          "actual_raw_primal_dual_gap": "0.000000043473060275722662868459728860999071991941897176451713517380354107",
+          "independent_dual_upper_objective": "9.5814689081200801320292052198359941483983639841293971764517135174",
+          "positive_dual_PSD_witness_lower_bound": "0.0000000016703070080826175666018742504893239486147200255587533375362242144",
+          "dual_eigendecomposition_residual_bound": "2.2895363793106175554785744365306828702054960403967023695021009799e-78",
+          "explicit80digit_arithmetic_floor": "1.1496072131378697098528450925111192240399440398703169143955534054e-58",
+          "diagnostic_primal_PSD_shift_not_optimizer_change": "1.0e-25",
+          "native_CVX_maximum_equality_dual_conversion": "fixed_all_cases_minus_CVX_dual_divided_by_positive_objective_scale",
+          "actual_native_dual_minimum": -1.5071924922785602,
+          "actual_native_dual_maximum": -0.009714151950393083,
+          "unchanged_actual1000_rounding_and_primal_checks": {
+            "same_all1000_candidates_evaluated": true,
+            "original_raw_candidate_primal_gate_pass": true,
+            "original_raw_PSD_and_diagonal_gate_pass": true,
+            "same_original_rank_one_identity_pass": true,
+            "actual_aggregate_symbolic_primal_identity_pass": true
+          },
+          "old_wrong_sign_receipt_still_failed_and_retained": true,
+          "complete_original_precision_attempt_passed": true
+        },
+        {
+          "exact_positive_objective_scale": 100.0,
+          "checks": {
+            "same_independently_rebuilt_original_coefficients": true,
+            "independent80digit_dual_PSD_witness_pass": true,
+            "true_unit_diagonal_primal_PSD_pass": true,
+            "true_feasible_primal_dual_gap_original_tolerance_pass": true,
+            "actual_raw_primal_dual_gap_original_tolerance_pass": true
+          },
+          "all_independent80digit_checks_pass": true,
+          "same_coefficient_maximum_error": 1.464821375527116e-14,
+          "true_feasible_primal_dual_gap": "0.0000013920406662072223728409452945755383187725065761026607065571446646",
+          "actual_raw_primal_dual_gap": "0.0000013920410535424944651326862380390927332686561259034409922763371051",
+          "independent_dual_upper_objective": "9.5814702567277234598132604746845767384335535811561259034409922763",
+          "positive_dual_PSD_witness_lower_bound": "0.000000053539787106864486106742754278601337669547686082767198116294686436",
+          "dual_eigendecomposition_residual_bound": "6.9082945018967250763546534153451772727732524435722819070586537957e-79",
+          "explicit80digit_arithmetic_floor": "1.1496072287479448634945896704018763908543406488113869420161797237e-58",
+          "diagnostic_primal_PSD_shift_not_optimizer_change": "1.0e-25",
+          "native_CVX_maximum_equality_dual_conversion": "fixed_all_cases_minus_CVX_dual_divided_by_positive_objective_scale",
+          "actual_native_dual_minimum": -1.5071930785073675,
+          "actual_native_dual_maximum": -0.009714155438254109,
+          "unchanged_actual1000_rounding_and_primal_checks": {
+            "same_all1000_candidates_evaluated": true,
+            "original_raw_candidate_primal_gate_pass": true,
+            "original_raw_PSD_and_diagonal_gate_pass": true,
+            "same_original_rank_one_identity_pass": true,
+            "actual_aggregate_symbolic_primal_identity_pass": true
+          },
+          "old_wrong_sign_receipt_still_failed_and_retained": true,
+          "complete_original_precision_attempt_passed": true
+        },
+        {
+          "exact_positive_objective_scale": 10000.0,
+          "checks": {
+            "same_independently_rebuilt_original_coefficients": true,
+            "independent80digit_dual_PSD_witness_pass": true,
+            "true_unit_diagonal_primal_PSD_pass": true,
+            "true_feasible_primal_dual_gap_original_tolerance_pass": true,
+            "actual_raw_primal_dual_gap_original_tolerance_pass": true
+          },
+          "all_independent80digit_checks_pass": true,
+          "same_coefficient_maximum_error": 1.464821375527116e-14,
+          "true_feasible_primal_dual_gap": "0.0000000000013672592205422653508574502640779254872917489177106081038325818457",
+          "actual_raw_primal_dual_gap": "0.0000000000022673909946072257809950584972298701434057648004792120430363732838",
+          "independent_dual_upper_objective": "9.581468864692092118060177412604601549586097057643405764800479212",
+          "positive_dual_PSD_witness_lower_bound": "9.999999999999999999999999999999988503928416940340469419707589722e-26",
+          "dual_eigendecomposition_residual_bound": "1.5667070260222808552075971069285996602036272047177161403149875517e-78",
+          "explicit80digit_arithmetic_floor": "1.1496071583059659530423621707675834730466772305095007860248018423e-58",
+          "diagnostic_primal_PSD_shift_not_optimizer_change": "1.0e-25",
+          "native_CVX_maximum_equality_dual_conversion": "fixed_all_cases_minus_CVX_dual_divided_by_positive_objective_scale",
+          "actual_native_dual_minimum": -1.5071925165502258,
+          "actual_native_dual_maximum": -0.00971415234506786,
+          "unchanged_actual1000_rounding_and_primal_checks": {
+            "same_all1000_candidates_evaluated": true,
+            "original_raw_candidate_primal_gate_pass": true,
+            "original_raw_PSD_and_diagonal_gate_pass": true,
+            "same_original_rank_one_identity_pass": true,
+            "actual_aggregate_symbolic_primal_identity_pass": true
+          },
+          "old_wrong_sign_receipt_still_failed_and_retained": true,
+          "complete_original_precision_attempt_passed": true
+        }
+      ],
+      "actual_corrected_convention_receipt_sha256": "303e03b8e6fceb64d35d62571e5a1d2b89af2a72b4ad19356f3e24ff42623e0f",
+      "retained_wrong_sign_native_receipt_sha256": "a6179d92f847367a96369bef184f1a05bd4304add0e332133351389858faffbb",
+      "actual_returned_native_states_sha256": "9e499382734e112c62c76a50101aaf524b668343c24fe4738a7f243428e7055a",
+      "actual_native_runtime_source_hashes": [
+        {
+          "filename": "test_same_sdp_scaled_precision.m",
+          "sha256": "142252c456c30de82a7e4ca19f01092719224ff6bbc97569714a38cd566e5442"
+        },
+        {
+          "filename": "strict_hotspot_core.m",
+          "sha256": "875c05cb50659fb8cae6f7bddcd41bd88de321548df3e5656f0128ee1dc7ca95"
+        },
+        {
+          "filename": "instantaneous-SDP-rounding-failure-a59f2ef102545441.mat",
+          "sha256": "ddb9c4b783e0e52f54172bba1ad2eeff13b78fb7a1133557cf6d200489d0eed3"
+        }
+      ],
+      "all_actual_native1000_and80digit_precision_attempts_pass": true,
+      "old_wrong_sign_false_flags_not_retrofitted": true,
+      "nativeMAT_full_CDF_or_whole_sample_executed": false
+    },
+    {
+      "sample_index": 32,
+      "scope": "WORK_corrected_native_CVX_max_equality_sign_ACTUAL_MATLAB_matrices_and1000_draws_NOT_Python_resolve_OR_fullCDF",
+      "actual_all_four_native_attempts": [
+        {
+          "exact_positive_objective_scale": 1.0,
+          "checks": {
+            "same_independently_rebuilt_original_coefficients": true,
+            "independent80digit_dual_PSD_witness_pass": true,
+            "true_unit_diagonal_primal_PSD_pass": true,
+            "true_feasible_primal_dual_gap_original_tolerance_pass": true,
+            "actual_raw_primal_dual_gap_original_tolerance_pass": true
+          },
+          "all_independent80digit_checks_pass": true,
+          "same_coefficient_maximum_error": 2.929642751054232e-14,
+          "true_feasible_primal_dual_gap": "0.000000065117004847948666808059623566551893095433391301965559817043839887",
+          "actual_raw_primal_dual_gap": "0.000000065119520357881317441614813204335680879508746127578965065836622388",
+          "independent_dual_upper_objective": "10.438909265862889612264059370181060429143420137321246127578965066",
+          "positive_dual_PSD_witness_lower_bound": "0.0000000025043148630623500118078786701073608347285376374920470009914584376",
+          "dual_eigendecomposition_residual_bound": "1.4319312675769522860851041231446627091897825693094061801780156134e-78",
+          "explicit80digit_arithmetic_floor": "8.5724220226487805348159230533981483659823028314901649287500938361e-59",
+          "diagnostic_primal_PSD_shift_not_optimizer_change": "1.0e-25",
+          "native_CVX_maximum_equality_dual_conversion": "fixed_all_cases_minus_CVX_dual_divided_by_positive_objective_scale",
+          "actual_native_dual_minimum": -1.3917198614317803,
+          "actual_native_dual_maximum": -0.0014532091322940368,
+          "unchanged_actual1000_rounding_and_primal_checks": {
+            "same_all1000_candidates_evaluated": true,
+            "original_raw_candidate_primal_gate_pass": true,
+            "original_raw_PSD_and_diagonal_gate_pass": true,
+            "same_original_rank_one_identity_pass": true,
+            "actual_aggregate_symbolic_primal_identity_pass": true
+          },
+          "old_wrong_sign_receipt_still_failed_and_retained": true,
+          "complete_original_precision_attempt_passed": true
+        },
+        {
+          "exact_positive_objective_scale": 0.01,
+          "checks": {
+            "same_independently_rebuilt_original_coefficients": true,
+            "independent80digit_dual_PSD_witness_pass": true,
+            "true_unit_diagonal_primal_PSD_pass": true,
+            "true_feasible_primal_dual_gap_original_tolerance_pass": true,
+            "actual_raw_primal_dual_gap_original_tolerance_pass": true
+          },
+          "all_independent80digit_checks_pass": true,
+          "same_coefficient_maximum_error": 2.929642751054232e-14,
+          "true_feasible_primal_dual_gap": "0.00000015098539875682770664179659852480280992023518233600060280093951873",
+          "actual_raw_primal_dual_gap": "0.0000001509970306991386887567525034670361963672498700658271675362295598",
+          "independent_dual_upper_objective": "10.438909351679607693406635913666081977320620195374870065827167536",
+          "positive_dual_PSD_witness_lower_bound": "0.0000000058049571726838133824678614495622754251903947387747511083943107092",
+          "dual_eigendecomposition_residual_bound": "1.1529313372843923658466419339236071047578241660810470696561949468e-78",
+          "explicit80digit_arithmetic_floor": "8.5724220275031173972699156485298228649973387288781856440993688555e-59",
+          "diagnostic_primal_PSD_shift_not_optimizer_change": "1.0e-25",
+          "native_CVX_maximum_equality_dual_conversion": "fixed_all_cases_minus_CVX_dual_divided_by_positive_objective_scale",
+          "actual_native_dual_minimum": -1.391719896926794,
+          "actual_native_dual_maximum": -0.0014532089825503817,
+          "unchanged_actual1000_rounding_and_primal_checks": {
+            "same_all1000_candidates_evaluated": true,
+            "original_raw_candidate_primal_gate_pass": true,
+            "original_raw_PSD_and_diagonal_gate_pass": true,
+            "same_original_rank_one_identity_pass": true,
+            "actual_aggregate_symbolic_primal_identity_pass": true
+          },
+          "old_wrong_sign_receipt_still_failed_and_retained": true,
+          "complete_original_precision_attempt_passed": true
+        },
+        {
+          "exact_positive_objective_scale": 100.0,
+          "checks": {
+            "same_independently_rebuilt_original_coefficients": true,
+            "independent80digit_dual_PSD_witness_pass": true,
+            "true_unit_diagonal_primal_PSD_pass": true,
+            "true_feasible_primal_dual_gap_original_tolerance_pass": true,
+            "actual_raw_primal_dual_gap_original_tolerance_pass": true
+          },
+          "all_independent80digit_checks_pass": true,
+          "same_coefficient_maximum_error": 2.929642751054232e-14,
+          "true_feasible_primal_dual_gap": "0.000000029972807630041233110477463483762497539899727088994122475437157889",
+          "actual_raw_primal_dual_gap": "0.000000029975117675270443988935236738220021756202270917217794687493722427",
+          "independent_dual_upper_objective": "10.438909230717868757473074630339776084914968045264770917217794687",
+          "positive_dual_PSD_witness_lower_bound": "0.0000000011525832139515397402409905492774851386465577923365564851908529657",
+          "dual_eigendecomposition_residual_bound": "6.7045831114969605850928719701856242555464104949576174087075130797e-79",
+          "explicit80digit_arithmetic_floor": "8.5724221222903069239030880149977492846739462842258741838635502758e-59",
+          "diagnostic_primal_PSD_shift_not_optimizer_change": "1.0e-25",
+          "native_CVX_maximum_equality_dual_conversion": "fixed_all_cases_minus_CVX_dual_divided_by_positive_objective_scale",
+          "actual_native_dual_minimum": -1.3917198157769144,
+          "actual_native_dual_maximum": -0.001453209199155602,
+          "unchanged_actual1000_rounding_and_primal_checks": {
+            "same_all1000_candidates_evaluated": true,
+            "original_raw_candidate_primal_gate_pass": true,
+            "original_raw_PSD_and_diagonal_gate_pass": true,
+            "same_original_rank_one_identity_pass": true,
+            "actual_aggregate_symbolic_primal_identity_pass": true
+          },
+          "old_wrong_sign_receipt_still_failed_and_retained": true,
+          "complete_original_precision_attempt_passed": true
+        },
+        {
+          "exact_positive_objective_scale": 10000.0,
+          "checks": {
+            "same_independently_rebuilt_original_coefficients": true,
+            "independent80digit_dual_PSD_witness_pass": true,
+            "true_unit_diagonal_primal_PSD_pass": true,
+            "true_feasible_primal_dual_gap_original_tolerance_pass": true,
+            "actual_raw_primal_dual_gap_original_tolerance_pass": true
+          },
+          "all_independent80digit_checks_pass": true,
+          "same_coefficient_maximum_error": 2.929642751054232e-14,
+          "true_feasible_primal_dual_gap": "0.000000010975438657491014333840699943583648012848499557495942628132313364",
+          "actual_raw_primal_dual_gap": "0.000000010975526678024872772297070822305276863346105949016905996808587517",
+          "independent_dual_upper_objective": "10.438909211725845040363348480681137642449930183658605949016905997",
+          "positive_dual_PSD_witness_lower_bound": "0.00000000042212108948880895531906315102863187546073711363721364805281414237",
+          "dual_eigendecomposition_residual_bound": "5.3926006087174903252725579285689846486007975080180004915244136196e-79",
+          "explicit80digit_arithmetic_floor": "8.5724218695483808638110556041998924816397644066866984257742028671e-59",
+          "diagnostic_primal_PSD_shift_not_optimizer_change": "1.0e-25",
+          "native_CVX_maximum_equality_dual_conversion": "fixed_all_cases_minus_CVX_dual_divided_by_positive_objective_scale",
+          "actual_native_dual_minimum": -1.3917198790347092,
+          "actual_native_dual_maximum": -0.001453209093556255,
+          "unchanged_actual1000_rounding_and_primal_checks": {
+            "same_all1000_candidates_evaluated": true,
+            "original_raw_candidate_primal_gate_pass": true,
+            "original_raw_PSD_and_diagonal_gate_pass": true,
+            "same_original_rank_one_identity_pass": true,
+            "actual_aggregate_symbolic_primal_identity_pass": true
+          },
+          "old_wrong_sign_receipt_still_failed_and_retained": true,
+          "complete_original_precision_attempt_passed": true
+        }
+      ],
+      "actual_corrected_convention_receipt_sha256": "27dd5609c521bc031bbd3245d17b9a7636e4f7b6edaed49402218fc0f83e47aa",
+      "retained_wrong_sign_native_receipt_sha256": "f239d99441b67445828c71edf5d868106074210451ca57c732819bdf05fa5286",
+      "actual_returned_native_states_sha256": "dd67079b86a8980e7adec94908cf7d6b76f7c57c33d3a6251f733dc99b73f605",
+      "actual_native_runtime_source_hashes": [
+        {
+          "filename": "test_same_sdp_scaled_precision.m",
+          "sha256": "142252c456c30de82a7e4ca19f01092719224ff6bbc97569714a38cd566e5442"
+        },
+        {
+          "filename": "strict_hotspot_core.m",
+          "sha256": "875c05cb50659fb8cae6f7bddcd41bd88de321548df3e5656f0128ee1dc7ca95"
+        },
+        {
+          "filename": "instantaneous-SDP-rounding-failure-75970ff91577c333.mat",
+          "sha256": "2ad1d28ca9a9455f026ee53a5b1b4d8dbe3a0e2faaeb1f1575839e41a3b345c4"
+        }
+      ],
+      "all_actual_native1000_and80digit_precision_attempts_pass": true,
+      "old_wrong_sign_false_flags_not_retrofitted": true,
+      "nativeMAT_full_CDF_or_whole_sample_executed": false
+    },
+    {
+      "sample_index": 43,
+      "scope": "WORK_corrected_native_CVX_max_equality_sign_ACTUAL_MATLAB_matrices_and1000_draws_NOT_Python_resolve_OR_fullCDF",
+      "actual_all_four_native_attempts": [
+        {
+          "exact_positive_objective_scale": 1.0,
+          "checks": {
+            "same_independently_rebuilt_original_coefficients": true,
+            "independent80digit_dual_PSD_witness_pass": true,
+            "true_unit_diagonal_primal_PSD_pass": true,
+            "true_feasible_primal_dual_gap_original_tolerance_pass": true,
+            "actual_raw_primal_dual_gap_original_tolerance_pass": true
+          },
+          "all_independent80digit_checks_pass": true,
+          "same_coefficient_maximum_error": 1.5888218580782548e-14,
+          "true_feasible_primal_dual_gap": "0.0000000047579802460982018131730366492496994045125340487298344197841924457",
+          "actual_raw_primal_dual_gap": "0.0000000047598770077896177871310026424181578911085915530262255810788992048",
+          "independent_dual_upper_objective": "10.208304183503375277244521280300697781349432305171091553026225581",
+          "positive_dual_PSD_witness_lower_bound": "0.00000000018251601577776707355298783128116111228670824022178798719556977762",
+          "dual_eigendecomposition_residual_bound": "3.8082671239656846494298504087874024042743237934060253917922983311e-78",
+          "explicit80digit_arithmetic_floor": "1.1345193120203655386919226472409251812015751915923723574016386511e-58",
+          "diagnostic_primal_PSD_shift_not_optimizer_change": "1.0e-25",
+          "native_CVX_maximum_equality_dual_conversion": "fixed_all_cases_minus_CVX_dual_divided_by_positive_objective_scale",
+          "actual_native_dual_minimum": -1.8816037150413707,
+          "actual_native_dual_maximum": 0.007331054231493287,
+          "unchanged_actual1000_rounding_and_primal_checks": {
+            "same_all1000_candidates_evaluated": true,
+            "original_raw_candidate_primal_gate_pass": true,
+            "original_raw_PSD_and_diagonal_gate_pass": true,
+            "same_original_rank_one_identity_pass": true,
+            "actual_aggregate_symbolic_primal_identity_pass": true
+          },
+          "old_wrong_sign_receipt_still_failed_and_retained": true,
+          "complete_original_precision_attempt_passed": true
+        },
+        {
+          "exact_positive_objective_scale": 0.01,
+          "checks": {
+            "same_independently_rebuilt_original_coefficients": true,
+            "independent80digit_dual_PSD_witness_pass": true,
+            "true_unit_diagonal_primal_PSD_pass": true,
+            "true_feasible_primal_dual_gap_original_tolerance_pass": true,
+            "actual_raw_primal_dual_gap_original_tolerance_pass": true
+          },
+          "all_independent80digit_checks_pass": true,
+          "same_coefficient_maximum_error": 1.5888218580782548e-14,
+          "true_feasible_primal_dual_gap": "0.000000000046217133351794677073018225979065673341310585932108480479522542654",
+          "actual_raw_primal_dual_gap": "0.000000000049920846417336051180572311067128420340311723882401474590527096083",
+          "independent_dual_upper_objective": "10.208304178768106030910785975228608647965932131277811723882401475",
+          "positive_dual_PSD_witness_lower_bound": "9.9999999999999999999999999999999886548106202499857847652289930633e-26",
+          "dual_eigendecomposition_residual_bound": "7.9247733469025138586076375670996213241010605288356111700579643839e-79",
+          "explicit80digit_arithmetic_floor": "1.1345189379750014215155523273467340662694459959580647135039711249e-58",
+          "diagnostic_primal_PSD_shift_not_optimizer_change": "1.0e-25",
+          "native_CVX_maximum_equality_dual_conversion": "fixed_all_cases_minus_CVX_dual_divided_by_positive_objective_scale",
+          "actual_native_dual_minimum": -1.8816036385115371,
+          "actual_native_dual_maximum": 0.007331059073913037,
+          "unchanged_actual1000_rounding_and_primal_checks": {
+            "same_all1000_candidates_evaluated": true,
+            "original_raw_candidate_primal_gate_pass": true,
+            "original_raw_PSD_and_diagonal_gate_pass": true,
+            "same_original_rank_one_identity_pass": true,
+            "actual_aggregate_symbolic_primal_identity_pass": true
+          },
+          "old_wrong_sign_receipt_still_failed_and_retained": true,
+          "complete_original_precision_attempt_passed": true
+        },
+        {
+          "exact_positive_objective_scale": 100.0,
+          "checks": {
+            "same_independently_rebuilt_original_coefficients": true,
+            "independent80digit_dual_PSD_witness_pass": true,
+            "true_unit_diagonal_primal_PSD_pass": true,
+            "true_feasible_primal_dual_gap_original_tolerance_pass": true,
+            "actual_raw_primal_dual_gap_original_tolerance_pass": true
+          },
+          "all_independent80digit_checks_pass": true,
+          "same_coefficient_maximum_error": 1.5888218580782548e-14,
+          "true_feasible_primal_dual_gap": "0.000000028183967714789921901483833404109072536114231543659166772082062971",
+          "actual_raw_primal_dual_gap": "0.000000028184138023377991482237562284125728069858683109397561470476879355",
+          "independent_dual_upper_objective": "10.20830420694089857299585724537654195751134818704618310939756147",
+          "positive_dual_PSD_witness_lower_bound": "0.0000000010839593644492007937022301612161520392633989048240425362742254527",
+          "dual_eigendecomposition_residual_bound": "1.0665836115654603558943768768150364262882899245628461191875205411e-78",
+          "explicit80digit_arithmetic_floor": "1.1345193038946968869718259561124275183453081457940253426089081366e-58",
+          "diagnostic_primal_PSD_shift_not_optimizer_change": "1.0e-25",
+          "native_CVX_maximum_equality_dual_conversion": "fixed_all_cases_minus_CVX_dual_divided_by_positive_objective_scale",
+          "actual_native_dual_minimum": -1.8816037293149146,
+          "actual_native_dual_maximum": 0.007331054258552654,
+          "unchanged_actual1000_rounding_and_primal_checks": {
+            "same_all1000_candidates_evaluated": true,
+            "original_raw_candidate_primal_gate_pass": true,
+            "original_raw_PSD_and_diagonal_gate_pass": true,
+            "same_original_rank_one_identity_pass": true,
+            "actual_aggregate_symbolic_primal_identity_pass": true
+          },
+          "old_wrong_sign_receipt_still_failed_and_retained": true,
+          "complete_original_precision_attempt_passed": true
+        },
+        {
+          "exact_positive_objective_scale": 10000.0,
+          "checks": {
+            "same_independently_rebuilt_original_coefficients": true,
+            "independent80digit_dual_PSD_witness_pass": true,
+            "true_unit_diagonal_primal_PSD_pass": true,
+            "true_feasible_primal_dual_gap_original_tolerance_pass": true,
+            "actual_raw_primal_dual_gap_original_tolerance_pass": true
+          },
+          "all_independent80digit_checks_pass": true,
+          "same_coefficient_maximum_error": 1.5888218580782548e-14,
+          "true_feasible_primal_dual_gap": "0.000000029618982978907198539072318922128154055895424753451736916084613772",
+          "actual_raw_primal_dual_gap": "0.000000029619398831966221034038556406996243005528453423203488230558374973",
+          "independent_dual_upper_objective": "10.208304208376107867235744189914060423872463708653453423203488231",
+          "positive_dual_PSD_witness_lower_bound": "0.0000000011391597120846211165929349748585773964138796781810703738752465679",
+          "dual_eigendecomposition_residual_bound": "1.4953716496443009079060574632224408698297263851165064322276955176e-78",
+          "explicit80digit_arithmetic_floor": "1.1345193034912460863788667869431555788227306268675608437125590079e-58",
+          "diagnostic_primal_PSD_shift_not_optimizer_change": "1.0e-25",
+          "native_CVX_maximum_equality_dual_conversion": "fixed_all_cases_minus_CVX_dual_divided_by_positive_objective_scale",
+          "actual_native_dual_minimum": -1.8816037302853619,
+          "actual_native_dual_maximum": 0.007331054252691453,
+          "unchanged_actual1000_rounding_and_primal_checks": {
+            "same_all1000_candidates_evaluated": true,
+            "original_raw_candidate_primal_gate_pass": true,
+            "original_raw_PSD_and_diagonal_gate_pass": true,
+            "same_original_rank_one_identity_pass": true,
+            "actual_aggregate_symbolic_primal_identity_pass": true
+          },
+          "old_wrong_sign_receipt_still_failed_and_retained": true,
+          "complete_original_precision_attempt_passed": true
+        }
+      ],
+      "actual_corrected_convention_receipt_sha256": "099f2ca6e0945fe401ed95ba343adc4e184127acc8f40e0c4b1a1f162794baeb",
+      "retained_wrong_sign_native_receipt_sha256": "f741b89e27a65f3a26abedd5b0f576222308eb361ae3968845c4757c35c4774f",
+      "actual_returned_native_states_sha256": "0c2202276ea3e5d7e118c95703c8aa40534c7755d62ea10fa5fe27e262d88a93",
+      "actual_native_runtime_source_hashes": [
+        {
+          "filename": "test_same_sdp_scaled_precision.m",
+          "sha256": "142252c456c30de82a7e4ca19f01092719224ff6bbc97569714a38cd566e5442"
+        },
+        {
+          "filename": "strict_hotspot_core.m",
+          "sha256": "875c05cb50659fb8cae6f7bddcd41bd88de321548df3e5656f0128ee1dc7ca95"
+        },
+        {
+          "filename": "instantaneous-SDP-rounding-failure-3e0c166f3d114c45.mat",
+          "sha256": "43cf29aff5469810e939b62e952c611a62d616940230cefaed5bb6627af627bb"
+        }
+      ],
+      "all_actual_native1000_and80digit_precision_attempts_pass": true,
+      "old_wrong_sign_false_flags_not_retrofitted": true,
+      "nativeMAT_full_CDF_or_whole_sample_executed": false
+    }
+  ],
+  "actual_samples_count": 4,
+  "actual_full_precision_attempts": 16,
+  "all16_original_candidate_primal_AND80digit_precision_attempts_pass": true,
+  "native_CVX_convention_actual_scalar_test": {
+    "scope": "WORK_native_CVX_equality_dual_orientation_only_NOT_satellite_reproduction",
+    "maximum": {
+      "primal": 1,
+      "dual": -1,
+      "objective": 1,
+      "status": "Solved"
+    },
+    "minimum": {
+      "primal": 0.9999999999999999,
+      "dual": 1,
+      "objective": 0.9999999999999999,
+      "status": "Solved"
+    },
+    "scaled": {
+      "primal": 1,
+      "dual": -7,
+      "objective": 7,
+      "status": "Solved"
+    },
+    "checks": {
+      "maximum_original_orientation_dual_negative_one": true,
+      "minimum_original_orientation_dual_positive_one": true,
+      "positive_objective_scale_preserved_in_dual": true,
+      "all_actual_primal_solutions_one": true
+    },
+    "all_checks_pass": true,
+    "mathematical_upper_witness": "For maximize f(V), diag(V)==1, B=gradient(f): lambda=-CVX_dual/objective_scale; S=diag(lambda)-B PSD.",
+    "not_sign_chosen_to_fit_reference_or_pass_a_failed_solver": true
+  },
+  "native_scalar_source_interval_receipt_available": false,
+  "fixed_all_case_max_equality_dual_conversion": "lambda=-native_CVX_equality_dual/positive_objective_scale",
+  "old_wrong_sign_failed_receipts_retained": true,
+  "nativeMAT_fullCDF_executed": false,
+  "full_reproduction_pass": false
+}

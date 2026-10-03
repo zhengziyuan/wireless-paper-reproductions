@@ -1,0 +1,153 @@
+{
+  "scope": "actual_original_case002_full_dimension_RCG_failed_single_step_precision_audit_not_full500",
+  "original_source_implementation_fingerprint": "1e940a4c82564a8f8a8fb65a3bef2dd13702d7872e6eb9da761e4586c7a778fa",
+  "full_original_dimensions": {
+    "BS": 4,
+    "RIS": 36,
+    "users": 2,
+    "sensing_directions": 66
+  },
+  "original_input_sha256": "44cc8224c068f5a06bcd0b7c4ef9aabc780cdb44c4296cf256834e0254fb9ed2",
+  "actual_cold_original_failure_reproduced": true,
+  "actual_completed_outer_RIS_blocks_before_failure": 32,
+  "actual_failed_RCG_iteration_zero_based": 442,
+  "actual_all80_original_Armijo_trials_rejected": true,
+  "original_raw_PR_direction_and_literal_retraction_retained_in_all_trial_tests": true,
+  "current_normalized_gradient": 4.785596143832956e-05,
+  "unchanged_declared_gradient_tolerance": 1e-06,
+  "original_gradient_stop_not_met": true,
+  "same_objective_gradient_precision_check": {
+    "all_coordinate_independent_scalar_best_FD_max_abs_error": 2.669196501615934e-09,
+    "independent50_80digit_literal_retraction_derivative": "0.000000001707307590418823118534282393491167099574824205305009792427727018114122335599243",
+    "original_analytic_slope": 1.7072970955200837e-09,
+    "absolute_derivative_difference": 1.0494898739437368e-14
+  },
+  "zero_step_normalization": {
+    "stored_theta_max_modulus_error": 2.220446049250313e-16,
+    "binary_zero_retraction_changes_current": true,
+    "independent80digit_zero_normalization_physical_offset": "0.0000000000000000040603884076273921390433815198259308432910899385437833160557781438874978786844649",
+    "binary64_absolute_utility_zero_normalization_offset": -7.105427357601002e-15
+  },
+  "first_independent_true_original_Armijo_step": {
+    "alpha": 6.103515625e-05,
+    "original_binary64_utility_increment": -5.879741138414829e-13,
+    "original_binary64_stored_threshold_increment": 0.0,
+    "exact_promoted_Armijo_required_increment": "0.00000000000000001042051449902394874867384009723355713557813123123663405439059474993191276367192",
+    "independent_math_retraction_increment_from_stored_current": "0.000000000000042941112407957552004291935920677651038443418973989421293048500744199410624800669",
+    "independent_math_retraction_increment_from_normalized_zero_step": "0.000000000000042937052019549924612152892539157825107600127884050877509732444966055523126921984",
+    "independent_actual_stored_trial_increment": "0.000000000000042978951268067593746142891472375992694208605845919460127291185789640178266987707",
+    "math_trial_meets_original_increment_requirement": true,
+    "actual_stored_trial_meets_original_increment_requirement": true,
+    "stored_trial_equal_current_bitwise": false,
+    "stored_trial_equal_zero_retraction_bitwise": false,
+    "stored_trial_step_norm": 1.892270468865892e-08
+  },
+  "selected_original_trials": [
+    {
+      "alpha": 1.0,
+      "original_binary64_utility_increment": -1.64493927492515e-05,
+      "original_binary64_stored_threshold_increment": 1.7053025658242404e-13,
+      "exact_promoted_Armijo_required_increment": "0.00000000000017072970955200837629827219615307460010931210209258101234713550438288445872000074",
+      "independent_math_retraction_increment_from_stored_current": "-0.000016449392602785613781607837770286406047910414081892829273006561758117090960703778",
+      "independent_math_retraction_increment_from_normalized_zero_step": "-0.000016449392602789674170015465162425449429430240012736120362945105541433146738847666",
+      "independent_actual_stored_trial_increment": "-0.000016449392602765762844791363411044240755841269414269839925058851804598764695635527",
+      "math_trial_meets_original_increment_requirement": false,
+      "actual_stored_trial_meets_original_increment_requirement": false,
+      "stored_trial_equal_current_bitwise": false,
+      "stored_trial_equal_zero_retraction_bitwise": false,
+      "stored_trial_step_norm": 0.00031002959253249277
+    },
+    {
+      "alpha": 0.0001220703125,
+      "original_binary64_utility_increment": -2.1671553440683056e-13,
+      "original_binary64_stored_threshold_increment": 0.0,
+      "exact_promoted_Armijo_required_increment": "0.00000000000000002084102899804789749734768019446711427115626246247326810878118949986382552734384",
+      "independent_math_retraction_increment_from_stored_current": "-0.000000000000036659306710548201896453914600136841138739304581332624274036881337079596128429563",
+      "independent_math_retraction_increment_from_normalized_zero_step": "-0.000000000000036663367098955829288592957981656667069582595671271168057352937115223483626308247",
+      "independent_actual_stored_trial_increment": "-0.000000000000036626693732119707207387842744507084358204368093316774767142049769206207098977607",
+      "math_trial_meets_original_increment_requirement": false,
+      "actual_stored_trial_meets_original_increment_requirement": false,
+      "stored_trial_equal_current_bitwise": false,
+      "stored_trial_equal_zero_retraction_bitwise": false,
+      "stored_trial_step_norm": 3.784540931357671e-08
+    },
+    {
+      "alpha": 6.103515625e-05,
+      "original_binary64_utility_increment": -5.879741138414829e-13,
+      "original_binary64_stored_threshold_increment": 0.0,
+      "exact_promoted_Armijo_required_increment": "0.00000000000000001042051449902394874867384009723355713557813123123663405439059474993191276367192",
+      "independent_math_retraction_increment_from_stored_current": "0.000000000000042941112407957552004291935920677651038443418973989421293048500744199410624800669",
+      "independent_math_retraction_increment_from_normalized_zero_step": "0.000000000000042937052019549924612152892539157825107600127884050877509732444966055523126921984",
+      "independent_actual_stored_trial_increment": "0.000000000000042978951268067593746142891472375992694208605845919460127291185789640178266987707",
+      "math_trial_meets_original_increment_requirement": true,
+      "actual_stored_trial_meets_original_increment_requirement": true,
+      "stored_trial_equal_current_bitwise": false,
+      "stored_trial_equal_zero_retraction_bitwise": false,
+      "stored_trial_step_norm": 1.892270468865892e-08
+    },
+    {
+      "alpha": 3.0517578125e-05,
+      "original_binary64_utility_increment": -6.181721801112872e-13,
+      "original_binary64_stored_threshold_increment": 0.0,
+      "exact_promoted_Armijo_required_increment": "0.00000000000000000521025724951197437433692004861677856778906561561831702719529737496595638183596",
+      "independent_math_retraction_increment_from_stored_current": "0.000000000000036789769907835922287182994249249761190973969778791464929734596559930449337726015",
+      "independent_math_retraction_increment_from_normalized_zero_step": "0.000000000000036785709519428294895043950867729935260130678688852921146418540781786561839847331",
+      "independent_actual_stored_trial_increment": "0.000000000000036810536297372778317713239274079689390434584663701594593869847243226025661223678",
+      "math_trial_meets_original_increment_requirement": true,
+      "actual_stored_trial_meets_original_increment_requirement": true,
+      "stored_trial_equal_current_bitwise": false,
+      "stored_trial_equal_zero_retraction_bitwise": false,
+      "stored_trial_step_norm": 9.461352332798733e-09
+    },
+    {
+      "alpha": 1.6543612251060553e-24,
+      "original_binary64_utility_increment": -7.105427357601002e-15,
+      "original_binary64_stored_threshold_increment": 0.0,
+      "exact_promoted_Armijo_required_increment": "2.8244861145646157768109843405486951817864923421087867804582003343428729830936639e-37",
+      "independent_math_retraction_increment_from_stored_current": "0.0000000000000000040603884076273949635468584379775118554086595822042227961882657021150632829332526",
+      "independent_math_retraction_increment_from_normalized_zero_step": "2.8245034769181515810121175696436604394801324875582275654042487877675777886625657e-33",
+      "independent_actual_stored_trial_increment": "0.000000000000000012505620785212459067180071692670091558428715247271119629763024282197084858082192",
+      "math_trial_meets_original_increment_requirement": true,
+      "actual_stored_trial_meets_original_increment_requirement": true,
+      "stored_trial_equal_current_bitwise": false,
+      "stored_trial_equal_zero_retraction_bitwise": true,
+      "stored_trial_step_norm": 8.115836623419884e-16
+    }
+  ],
+  "independent_original_physics50_80digits_confirmed_stored_trial_Armijo_passes": 66,
+  "same_objective_stable_increment": {
+    "rate_formula": "log1p((I*deltaS-S*deltaI)/((I+deltaI)*(I+S)))/log(2)",
+    "power_formula": "delta|a|^2=2Re(conj(a)*deltaa)+|deltaa|^2",
+    "NMSE_formula": "(2*residual^T*deltaPattern+deltaPattern^T*deltaPattern)/(iota^2*desiredEnergy)",
+    "fixed_W_rotation_iota_and_same_H_G_B": true,
+    "old_binary64_path_base_predeclared_accuracy_gate_failures": 10,
+    "old_failed_receipt_preserved_not_relabelled": true,
+    "higher_precision_SAME_path_sum_base_at80digits_then_binary64": true,
+    "new_all80_UNCHANGED_accuracy_gates_pass": true,
+    "unchanged_accuracy_gate": "1e-18 + 1e-8 * abs(independent increment); validation ONLY, never an Armijo/stop relaxation",
+    "new_max_abs_error": 2.11933890142827e-16,
+    "new_first_valid_stored_trial_increment": 4.2978938344595104e-14,
+    "new_first_valid_increment_abs_error": 1.2923472489523695e-20,
+    "all_new_would_accept_trials_true_in_independent80digit_physics": true,
+    "zero_unrepresented_additions_not_accepted": true,
+    "channel_base_seconds": 1.0118126000161283
+  },
+  "finding": "Original absolute-value Armijo comparison rejects a genuine represented ascent step: its true increment is positive and exceeds the original requirement. This is a floating-precision rejection, separate from real capped nonconvergence in other inner blocks.",
+  "raw_receipt_sha256": {
+    "case002-original-Armijo-failure-diagnosis-v1.json": "80fc696e53b1b3df105d0555424890e49b08a264dcd5854986559474a5638e54",
+    "case002-actual-failed-RCG-single-step-highprecision-v1.json": "3d79391c948dc75cd9afecd91205c5d8a1cf26b08a036098470b99b8843e62e4",
+    "case002-actual-failed-step-stable-literal-increment-tests-v1.json": "df2d0e46d4d34dec30a04cd937fe84c3b81d2a8dbde739caadf16b51a717dc00",
+    "case002-actual-failed-step-higher-precision-path-base-v2.json": "c5533b54ffe6ed60c2e02da65b731c08e4be65ae77c6bacbe166768165877d72"
+  },
+  "live_bank_numerical_sources_directions_caps_thresholds_inputs_and_old_outputs_changed": false,
+  "WORK_cold_full_first_scheme_replay_started_but_not_claimed_complete": true,
+  "WORK_precision_repair_changes_acceptance_rounding_not_old_binary_prefix_bitwise_claim": true,
+  "complete_full500_bank_or_historical_figure_recovery_certified": false,
+  "source_sha256": {
+    "publish_actual_armijo_step_evidence_v2.py": "ca64383b01e7a306f4a140f16e4bc5a25598be1e86a9c8bf28eb9df50c2ed547",
+    "diagnose_captured_rcg_armijo_single_step_v1.py": "4a2f8fa11380c8e60d49bfda4426896158eb42e63be6b2bdc988709770c864ca",
+    "stable_fixed_rotation_increment_work_v1.py": "6aae5f3ed807179f4c7136cefbd4b71d53f3443cbe3e210fb741f63f03406365",
+    "test_actual_failed_step_precise_base_v2.py": "f954dd611396f68e1804f34d27a5160050e4553c0962c4dd5667eb25aa8bc573",
+    "independent_highprecision_isac.py": "d14050078d636ca33bd78fb2206406735a22589eeb0aa14b0f28c3d443d893bc"
+  }
+}

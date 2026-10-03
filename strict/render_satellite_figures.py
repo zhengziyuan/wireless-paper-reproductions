@@ -235,10 +235,32 @@ def render(data,directory):
     fig.savefig(stem.with_suffix('.png'),dpi=200);fig.savefig(stem.with_suffix('.svg'));plt.close(fig)
     stem.with_suffix('.json').write_text(json.dumps(data,indent=2,allow_nan=False)+'\n',encoding='utf-8')
 
-if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--paper',required=True);p.add_argument('--figure',required=True,type=int)
-    p.add_argument('--inputs',nargs='+',type=Path,required=True);p.add_argument('--output-dir',type=Path,required=True);a=p.parse_args()
-    docs=[json.loads(path.read_text(encoding='utf-8-sig')) for path in a.inputs]
-    data=aggregate(a.paper,a.figure,docs);render(data,a.output_dir)
-    print(json.dumps({'paper_id':a.paper,'figure':a.figure,'panels':len(data['panels']),'full_execution_verified':True,
-                      'published_figure_reproduction_certified':False}))
+
+def main():
+    """Render already executed receipts only; never launch another solver."""
+    import argparse
+    import hashlib
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--paper',choices=('hotspot-satcom','cooperative-satcom'),required=True)
+    parser.add_argument('--figure',type=int,required=True)
+    parser.add_argument('--input','--inputs',dest='input',type=Path,nargs='+',required=True)
+    parser.add_argument('--output-dir',type=Path,required=True)
+    args=parser.parse_args()
+    raw=[path.read_bytes() for path in args.input]
+    source=Path(__file__);before=hashlib.sha256(source.read_bytes()).hexdigest()
+    data=aggregate(args.paper,args.figure,[json.loads(item.decode('utf-8-sig')) for item in raw])
+    data['input_file_sha256']={f'{index}:{path.name}':hashlib.sha256(item).hexdigest()
+                              for index,(path,item) in enumerate(zip(args.input,raw))}
+    data['renderer_source_sha256']=before
+    render(data,args.output_dir)
+    require(before==hashlib.sha256(source.read_bytes()).hexdigest(),'Renderer changed during actual plotting')
+    require(all(path.read_bytes()==item for path,item in zip(args.input,raw)),
+            'Input receipts changed during actual plotting')
+    data['input_and_renderer_unchanged_during_render']=True
+    output=args.output_dir/f'{args.paper}-figure-{args.figure}-data.json'
+    output.write_text(json.dumps(data,indent=2,allow_nan=False)+'\n',encoding='utf-8')
+    print(json.dumps(dict(full_execution_verified=data['full_execution_verified'],
+        panels=len(data['panels']),published_figure_reproduction_certified=False,output=str(output))))
+
+
+if __name__=='__main__':main()

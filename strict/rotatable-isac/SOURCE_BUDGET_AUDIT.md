@@ -51,6 +51,24 @@ bitwise prefix. It too remained capped: final normalized gradient
 converged remedy. These actual retained failures motivate gradient and
 line-search diagnostics, not tolerance relaxation or a claim of reproduction.
 
+The separate actual case002 failure has now been cold-reproduced at the33rd
+RIS block, RCG iteration442. Independent50/80-digit evaluation of all80 original
+stored trials shows that `alpha=6.103515625e-5` gives a true utility increase
+`4.2978951e-14`, exceeding the unchanged Armijo requirement `1.0420514e-17`.
+The original binary64 absolute-value subtraction instead reports
+`-5.8797411e-13` and rejects it. This is a verified numerical rejection, not
+evidence that the gradient threshold has been met. Its above-threshold gradient
+and the distinct real cap failures remain recorded.
+
+[Actual single-step precision evidence](../validation/rotatable-isac-correctness-v2/actual-case002-armijo-step-highprecision-v2.json)
+also retains the first stable-increment accuracy failures and the fresh same-path
+higher-precision tests that pass the **unchanged** accuracy gate. WORK-only
+cold full-scheme replays retain the literal retraction, raw PR direction, original
+Armijo, all dimensions and all stopping controls. Their numerical acceptance
+decisions can change binary64 trajectories; they are not old-prefix bitwise
+proofs, and neither a full-scheme completion nor a full500-bank success is
+claimed by the single-step receipt. The live frozen numerical source is unchanged.
+
 Any new control version must keep the complete source physical domain, preserve
 old failures, use a distinct immutable configuration/identity, and re-execute
 the required full population. First-block or exact-cache proofs are not a

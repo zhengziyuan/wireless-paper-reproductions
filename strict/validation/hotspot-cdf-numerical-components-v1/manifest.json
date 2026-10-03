@@ -1,0 +1,179 @@
+{
+  "scope": "actual_cold_TS41_Python_and_Py5_nativeMAT16_SDP_precision_components_NOT_completeCDF",
+  "freezer_source_sha256": "1df1825058dea63f36a717335147a4a82ca2921fa71c321b6c92d109caa73590",
+  "verified_executed_source_hashes": {
+    "hotspot/core.py": "5269cd3d86b109994335be7c94b0506211f08136a8e684df84f10e0afa69b322",
+    "hotspot/scenario_geometry.py": "db6472cc01e83c0220ad82724345f8fdf83e5882deead95945ff9bc35810268d",
+    "hotspot/termination.py": "f9e2c143f00c32abd0dfcf424f8f4e371e57ff04792d932aac3be26e6bffb90f",
+    "hotspot/run.py": "b4225a5c89fc510e484898c08571f69997f82fddb54267b44e5d54b5a1810843",
+    "hotspot/run_support.py": "352dfd9e228f5ec50bd4ee0024fe42b0dd6360999f39b2b521cda47f38ccdf84",
+    "hotspot/instantaneous_sdr_guard.py": "1eef712c6fff1fdaef60bbb39d2a37f4da5775da97d7245e3fc0544d16d04bb6",
+    "hotspot/run_instantaneous_geometry.py": "f5fe9238118ec6065172defb69bc733a6afe30d8e2636bd41a3d525dc97bb0f2",
+    "hotspot/instantaneous_geometry_config.json": "5423d02b19a7d1a634782f689f8c1cc14c511932865eaa3b554b3eaad75be669",
+    "WORK/replay_cdf41_phase_cap_cold_extension.py": "da392ca50bf82e39e461ca56e9d7ac5030d3ac49490f4214456215f1c89b3117",
+    "WORK/complete_cdf41_original_TS_cold_chain.py": "e8d3ea0d40bb79383de34443de39ce9bece5cbb55469de01f32a0a487bdeb929",
+    "WORK/verify_scaled_dual_high_precision.py": "dee4993f6f61ea4d472d0ee0b2f1216927446ba29ae9764f7bb6154515cf1803",
+    "WORK/try_positive_scale.py": "243e00f52f02347d1b674b00fd66435834a33330c853a336c4ffdbe96a6e5462",
+    "WORK/audit_original_sdp.py": "f9a5ee7072c1ea6a8f0e492199ca4851f0e16486ca7425cfc6a6d26b234f0fa9",
+    "WORK/verify_scaled_dual_general.py": "1872f5ac66fab18382ac40fa44c826d4c642da8e6f27cee919a74135d0b8039e",
+    "WORK/verify_actual_matlab_maximization_dual_convention_v3.py": "e3312f53670638f1c44a1784f7df6bb4720baf64191f93d5634c96074f5ba547",
+    "WORK/verify_actual_matlab_scaled_duals.py": "e779012e67e4e0c68496f262f3ccdb2d8888e978dc1d696d4fb18453a32f5d0e",
+    "nativeMAT/test_same_sdp_scaled_precision.m": "142252c456c30de82a7e4ca19f01092719224ff6bbc97569714a38cd566e5442",
+    "nativeMAT/strict_hotspot_core.m": "875c05cb50659fb8cae6f7bddcd41bd88de321548df3e5656f0128ee1dc7ca95",
+    "nativeMAT/instantaneous-SDP-rounding-failure-cf7c9b932618efb5.mat": "5799bb384623ba492fa0e902914ea945b7b0ac3a6e530b99934c7c88c406cf05",
+    "nativeMAT/instantaneous-SDP-rounding-failure-a59f2ef102545441.mat": "ddb9c4b783e0e52f54172bba1ad2eeff13b78fb7a1133557cf6d200489d0eed3",
+    "nativeMAT/instantaneous-SDP-rounding-failure-75970ff91577c333.mat": "2ad1d28ca9a9455f026ee53a5b1b4d8dbe3a0e2faaeb1f1575839e41a3b345c4",
+    "nativeMAT/instantaneous-SDP-rounding-failure-3e0c166f3d114c45.mat": "43cf29aff5469810e939b62e952c611a62d616940230cefaed5bb6627af627bb"
+  },
+  "actual_native_input_and_result_hashes": {
+    "cdf41-cold-original-RGD-cap100000.json": {
+      "sha256": "fbc1e0d947381093fd59f892f183e68e83be69df2c33e7e37ec973738b15a0cd",
+      "bytes": 179859
+    },
+    "cdf41-complete-original-TS-cold-cap100000-python-v2.json": {
+      "sha256": "0576b1d973643508eb317bb6ec85112142714cb6f3437b8dfa4edda9d88c305a",
+      "bytes": 201804
+    },
+    "sample-0041.json": {
+      "sha256": "35ceadf160bcc028c408861efdd65a5e9ef61e6cdc3a413de5a49f30d3d719d5",
+      "bytes": 450031
+    },
+    "sample-0040.json": {
+      "sha256": "c53590fb9ef63b0fc062a5284f9e72229940ae3f8575c02ce672ef909f8da29c",
+      "bytes": 311663
+    },
+    "instantaneous-SDP-rounding-failure-cf7c9b932618efb5.mat": {
+      "sha256": "5799bb384623ba492fa0e902914ea945b7b0ac3a6e530b99934c7c88c406cf05",
+      "bytes": 461152
+    },
+    "cdf12-positive-scale-80digit-dual.json": {
+      "sha256": "cbcbe7d6146d9a575929f158b1c412e14dbe8cd5214f9d829a02f4f0a2c7303a",
+      "bytes": 4284
+    },
+    "cdf12-positive-scale.json": {
+      "sha256": "a850cd38401e26b2b0bb3819af305ec4b8dc97ab00d08bc22b2b0fa1d751164b",
+      "bytes": 3483
+    },
+    "instantaneous-SDP-rounding-failure-a59f2ef102545441.mat": {
+      "sha256": "ddb9c4b783e0e52f54172bba1ad2eeff13b78fb7a1133557cf6d200489d0eed3",
+      "bytes": 461152
+    },
+    "cdf22-positive-scale100-80digit-dual.json": {
+      "sha256": "e25c5e26951ac7c40e79be3ca0237cd92e9b7a4344e750a83701cd3c1a1499a8",
+      "bytes": 4548
+    },
+    "cdf22-positive-scale.json": {
+      "sha256": "4be519563cb2964475ee12c8fd3fb2daa832f13f84473027623a9d9da33bfbfd",
+      "bytes": 5651
+    },
+    "instantaneous-SDP-rounding-failure-75970ff91577c333.mat": {
+      "sha256": "2ad1d28ca9a9455f026ee53a5b1b4d8dbe3a0e2faaeb1f1575839e41a3b345c4",
+      "bytes": 461152
+    },
+    "cdf32-positive-scale100-80digit-dual.json": {
+      "sha256": "44cf324d1e2b66109ca3268a235db5b0a45a73e8bbb20daef075666971b3ed5c",
+      "bytes": 4550
+    },
+    "cdf32-positive-scale.json": {
+      "sha256": "08e13520090e36121a36acf382bbec9999276d6ed484af1204c5fdc9dc546854",
+      "bytes": 5657
+    },
+    "instantaneous-SDP-rounding-failure-3e0c166f3d114c45.mat": {
+      "sha256": "43cf29aff5469810e939b62e952c611a62d616940230cefaed5bb6627af627bb",
+      "bytes": 461152
+    },
+    "cdf43-positive-scale001-80digit-dual.json": {
+      "sha256": "c765f77cec57651a679f73c0ab376a6189889ce8b6333b46695c143de53f7c77",
+      "bytes": 4490
+    },
+    "cdf43-positive-scale.json": {
+      "sha256": "617863e843e3c1c10e191137db960d08bccf6e25502d567cca75008824fec3a6",
+      "bytes": 5670
+    },
+    "instantaneous-SDP-rounding-failure-e63149d21a301160.mat": {
+      "sha256": "634a3ab618151d4cf19f8a381d0de776a9a8fe45eb13750464a109238a8ba605",
+      "bytes": 461152
+    },
+    "cdf56-positive-scale100-80digit-dual.json": {
+      "sha256": "9bdc245538f5f09f4f141aaef224215c52d68dc573188a7978ac26b90d0da404",
+      "bytes": 4542
+    },
+    "cdf56-positive-scale.json": {
+      "sha256": "21b50e4b9f20b6ba20d96ba85832ffb5415317cebf7d494c4bf7c8de0031bd35",
+      "bytes": 4579
+    },
+    "native-CVX-max-equality-sign-20261004-v4.json": {
+      "sha256": "781e9869f5f4e8ac449c07460d4fa5973ae3eba305b7d7b6f07244151a1f83f2",
+      "bytes": 743
+    },
+    "cdf12-same-SDP-scaled-matlab-20261004-v2.json": {
+      "sha256": "50c02651d383840848f67fcf49133724db48bb8ba775ed917af2de029fd042e5",
+      "bytes": 7124
+    },
+    "cdf12-same-SDP-scaled-matlab-20261004-v2.json.states.mat": {
+      "sha256": "9b568a80bedc53a4ae649c3f6a1f822427c9d003910ec06c9f30d9ac9b9e389f",
+      "bytes": 1991716
+    },
+    "cdf12-ACTUAL-MATLAB80digits-corrected-CVX-sign-v3.json": {
+      "sha256": "6ee009a37f974f17bcfcdd2b38c103e6490f188ecae857e55361dfc6181a2d05",
+      "bytes": 9919
+    },
+    "cdf22-same-SDP-scaled-matlab-20261004-v2.json": {
+      "sha256": "a6179d92f847367a96369bef184f1a05bd4304add0e332133351389858faffbb",
+      "bytes": 7114
+    },
+    "cdf22-same-SDP-scaled-matlab-20261004-v2.json.states.mat": {
+      "sha256": "9e499382734e112c62c76a50101aaf524b668343c24fe4738a7f243428e7055a",
+      "bytes": 1991426
+    },
+    "cdf22-ACTUAL-MATLAB80digits-corrected-CVX-sign-v3.json": {
+      "sha256": "303e03b8e6fceb64d35d62571e5a1d2b89af2a72b4ad19356f3e24ff42623e0f",
+      "bytes": 9910
+    },
+    "cdf32-same-SDP-scaled-matlab-20261004-v2.json": {
+      "sha256": "f239d99441b67445828c71edf5d868106074210451ca57c732819bdf05fa5286",
+      "bytes": 7112
+    },
+    "cdf32-same-SDP-scaled-matlab-20261004-v2.json.states.mat": {
+      "sha256": "dd67079b86a8980e7adec94908cf7d6b76f7c57c33d3a6251f733dc99b73f605",
+      "bytes": 1990349
+    },
+    "cdf32-ACTUAL-MATLAB80digits-corrected-CVX-sign-v3.json": {
+      "sha256": "27dd5609c521bc031bbd3245d17b9a7636e4f7b6edaed49402218fc0f83e47aa",
+      "bytes": 9916
+    },
+    "cdf43-same-SDP-scaled-matlab-20261004-v2.json": {
+      "sha256": "f741b89e27a65f3a26abedd5b0f576222308eb361ae3968845c4757c35c4774f",
+      "bytes": 7100
+    },
+    "cdf43-same-SDP-scaled-matlab-20261004-v2.json.states.mat": {
+      "sha256": "0c2202276ea3e5d7e118c95703c8aa40534c7755d62ea10fa5fe27e262d88a93",
+      "bytes": 1990415
+    },
+    "cdf43-ACTUAL-MATLAB80digits-corrected-CVX-sign-v3.json": {
+      "sha256": "099f2ca6e0945fe401ed95ba343adc4e184127acc8f40e0c4b1a1f162794baeb",
+      "bytes": 9920
+    }
+  },
+  "public_files": {
+    "actual-nativeMAT-four-SDP-components.json": {
+      "sha256": "a7b4d5eed5e573e424e2d3dfa14d56c922c4775021b76a027cd3deee067dfe46",
+      "bytes": 41501
+    },
+    "NUMERICAL_PRECISION_SCOPE.md": {
+      "sha256": "3a561b4f1df0d398bccd19affa31ce9aad1bce31ae109f04acdbf79f45366924",
+      "bytes": 2868
+    },
+    "same-SDP-five-python-components.json": {
+      "sha256": "034a5cdab18c216e240f8eb3175989bd08497207951863daa56b0da1acee104c",
+      "bytes": 41625
+    },
+    "sample41-cold-full-TwoStage-python.json": {
+      "sha256": "f1e0bea684b1cdcd88dc28ee822ef262a6172a4bf77db24f7fea7da62f8193a7",
+      "bytes": 6091
+    }
+  },
+  "old_fullCDF_flags_unchanged": true,
+  "nativeMAT_cold_fullTS41_verified": false,
+  "full_reproduction_pass": false
+}

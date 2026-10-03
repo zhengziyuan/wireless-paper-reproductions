@@ -1,0 +1,77 @@
+{
+  "scope": "actual_complete_200_MATLAB_scenario_independent_physics_and_concave_coordinate_certificates_not_historical_recovery",
+  "MATLAB_complete_cases": 200,
+  "failed_cases": 0,
+  "geometry_draws_per_kappa": 100,
+  "NLoS_draws_per_geometry": 1000,
+  "draw_counts_configured_not_disclosed_original_MC_counts": true,
+  "N": 6,
+  "M": 5,
+  "kappa_values": [
+    6,
+    100
+  ],
+  "scheme_count": 5,
+  "terminal_scheme_MC_rate_evaluations": 1000000,
+  "histories": {
+    "mrt": {
+      "accepted_position_count_including_initial": 20843,
+      "coordinate_update_count": 123858,
+      "fresh_MC_evaluations_at_all_accepted_positions": 20843000,
+      "maximum_design_objective_abs_error": 1.0658141036401503e-14,
+      "maximum_coordinate_objective_abs_error": 1.0658141036401503e-14,
+      "maximum_independent_global_gap_to_unchanged_tolerance_ratio": 0.0007360538576562393,
+      "maximum_independent_primal_residual_to_unchanged_tolerance_ratio": 1.0526826431716474e-05,
+      "maximum_minorant_increment_abs_error": 2.0816681711721685e-15,
+      "domain_invalid_vertices_used_only_in_affine_gradient_bound_not_log_objective": 0,
+      "all_original_5e_minus5_AO_stops_verified": true
+    },
+    "zf": {
+      "accepted_position_count_including_initial": 59813,
+      "coordinate_update_count": 357678,
+      "fresh_MC_evaluations_at_all_accepted_positions": 59813000,
+      "maximum_design_objective_abs_error": 8.704148513061227e-14,
+      "maximum_coordinate_objective_abs_error": 9.059419880941277e-14,
+      "maximum_independent_global_gap_to_unchanged_tolerance_ratio": 0.05266667087198457,
+      "maximum_independent_primal_residual_to_unchanged_tolerance_ratio": 0.09561164668052811,
+      "maximum_minorant_increment_abs_error": 1.0345890810725678e-14,
+      "domain_invalid_vertices_used_only_in_affine_gradient_bound_not_log_objective": 1293515,
+      "all_original_5e_minus5_AO_stops_verified": true
+    }
+  },
+  "schemes": {
+    "MA-MRT": {
+      "sample_count": 200000,
+      "maximum_sample_rate_abs_error": 6.039613253960852e-14,
+      "all_per_draw_stops_and_power_constraints_verified": true
+    },
+    "MA-ZF": {
+      "sample_count": 200000,
+      "maximum_sample_rate_abs_error": 1.653344128271783e-11,
+      "all_per_draw_stops_and_power_constraints_verified": true
+    },
+    "FPA-MRT": {
+      "sample_count": 200000,
+      "maximum_sample_rate_abs_error": 8.615330671091215e-13,
+      "all_per_draw_stops_and_power_constraints_verified": true
+    },
+    "FPA-ZF": {
+      "sample_count": 200000,
+      "maximum_sample_rate_abs_error": 3.459810216099868e-11,
+      "all_per_draw_stops_and_power_constraints_verified": true
+    },
+    "FPA-OPT": {
+      "sample_count": 200000,
+      "maximum_sample_rate_abs_error": 8.633094239485217e-12,
+      "all_per_draw_stops_and_power_constraints_verified": true
+    }
+  },
+  "independent_physical_audit_elapsed_seconds": 1311.112255199987,
+  "independent_certificate_audit_elapsed_seconds": 985.2131933000055,
+  "coordinate_certificate_is_NOT_global_nonconvex_AO_optimality": true,
+  "original_curve_closeness_verified": false,
+  "same_input_full_Python200_completion_claimed": false,
+  "all_paper_figures_completed_claimed": false,
+  "geometries_selected_removed_or_reweighted": false,
+  "published_graph_uses_all100_geometry_mean_and_terminal_hold_not_histogram_final_mean_at_each_abscissa": true
+}

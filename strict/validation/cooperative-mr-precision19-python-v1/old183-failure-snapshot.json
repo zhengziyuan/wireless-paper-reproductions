@@ -1,0 +1,2325 @@
+{
+  "scope": "actual_complete_old183_Python_bank_failure_evidence_NOT_new_version_success",
+  "native_sha256": "d9d825d18ee0db6a8320ad147e62f12773e2bd6350cabc7d087a9900015add34",
+  "native_size_bytes": 45894703,
+  "actual_full_points": 183,
+  "actual_valid_points": 154,
+  "actual_failed_points": 29,
+  "actual_elapsed_seconds": 10677.718569199962,
+  "original_all_scope_checks": {
+    "constraint_pass": false,
+    "convergence_pass": false,
+    "solver_primal_pass": false,
+    "qt_bound_pass": false
+  },
+  "failure_groups": {
+    "Original RGD Armijo search failed; no phase substitute": 10,
+    "Same-input same-QT numerical controls exhausted: Original primal, QT bound or monotonicity gate rejected the numeric solution": 19
+  },
+  "executed_source_hashes": {
+    "core.py": "fdbe81b3d19e1c1aa62a015969017f24accdcdb6e7a709a65540576b49f0abf2",
+    "models.py": "ce974bbe26e97481425a603b4dc2cbfc7317b284bb192f482d49d71a28e5819e",
+    "increments.py": "384114958637e7d86dbce3894ef653cd6fd6edd2e40883b6b3774a65767fa7ea",
+    "algorithms.py": "3106b9c673757b73ccb350846c78aeae64739837e960b9c80b3fc62a3feaa5b2",
+    "spectral_rmo.py": "2d8ebbcb44801a99d5dfdfd0c954530e1d4a8653b4dfa467885be3068e3edeb1",
+    "qt_numerical_guard.py": "4f35826083c3ffb5f000fe5e0f8563bb09be14313c8981edfa681a9a00c27164",
+    "termination.py": "5b25d0365aa9a21dca886250858221379b02f766ecaaa35277a560eef2ad685d",
+    "scenario.py": "7dbc490944c2fd7aaa2fc862068508530faab10b8c2dcb63eccf5511c74a62ba",
+    "run.py": "d9d064f05c7ec8f08b2b9c5a389f5d6cd5117701c15c1609dac6913f3d236131",
+    "receipts.py": "8b74e8581df67419913d3a48d3326f9fd35aacd4b1480668f5692d880fd1490d",
+    "run_cooperative_guarded.py": "da1ba120c6939cfb2e842f422a637f73b351eeb270e236864af6d7141a680261",
+    "spectral_config.json": "086d63de49ebfe19b1cec833ecebb76d49e75788e7ad244e8e06f03b5b5b6eef"
+  },
+  "source_unchanged_during_run": true,
+  "all_failure_snapshot": [
+    {
+      "sweep": "subsurfaces_kL20",
+      "parameter": "M",
+      "value": 30,
+      "status": "failed",
+      "error": "Original RGD Armijo search failed; no phase substitute",
+      "constraint_pass": false,
+      "convergence_pass": false,
+      "solver_primal_pass": false,
+      "qt_bound_pass": false,
+      "valid_figure_point": false,
+      "block": "RGD",
+      "original_attempts": null,
+      "generated_fixture": null,
+      "original_failure_kept": true
+    },
+    {
+      "sweep": "subsurfaces_kL20",
+      "parameter": "M",
+      "value": 35,
+      "status": "failed",
+      "error": "Original RGD Armijo search failed; no phase substitute",
+      "constraint_pass": false,
+      "convergence_pass": false,
+      "solver_primal_pass": false,
+      "qt_bound_pass": false,
+      "valid_figure_point": false,
+      "block": "RGD",
+      "original_attempts": null,
+      "generated_fixture": null,
+      "original_failure_kept": true
+    },
+    {
+      "sweep": "subsurfaces_kL20",
+      "parameter": "M",
+      "value": 45,
+      "status": "failed",
+      "error": "Original RGD Armijo search failed; no phase substitute",
+      "constraint_pass": false,
+      "convergence_pass": false,
+      "solver_primal_pass": false,
+      "qt_bound_pass": false,
+      "valid_figure_point": false,
+      "block": "RGD",
+      "original_attempts": null,
+      "generated_fixture": null,
+      "original_failure_kept": true
+    },
+    {
+      "sweep": "subsurfaces_kL0",
+      "parameter": "M",
+      "value": 30,
+      "status": "failed",
+      "error": "Original RGD Armijo search failed; no phase substitute",
+      "constraint_pass": false,
+      "convergence_pass": false,
+      "solver_primal_pass": false,
+      "qt_bound_pass": false,
+      "valid_figure_point": false,
+      "block": "RGD",
+      "original_attempts": null,
+      "generated_fixture": null,
+      "original_failure_kept": true
+    },
+    {
+      "sweep": "subsurfaces_kL0",
+      "parameter": "M",
+      "value": 35,
+      "status": "failed",
+      "error": "Original RGD Armijo search failed; no phase substitute",
+      "constraint_pass": false,
+      "convergence_pass": false,
+      "solver_primal_pass": false,
+      "qt_bound_pass": false,
+      "valid_figure_point": false,
+      "block": "RGD",
+      "original_attempts": null,
+      "generated_fixture": null,
+      "original_failure_kept": true
+    },
+    {
+      "sweep": "subsurfaces_kL0",
+      "parameter": "M",
+      "value": 45,
+      "status": "failed",
+      "error": "Original RGD Armijo search failed; no phase substitute",
+      "constraint_pass": false,
+      "convergence_pass": false,
+      "solver_primal_pass": false,
+      "qt_bound_pass": false,
+      "valid_figure_point": false,
+      "block": "RGD",
+      "original_attempts": null,
+      "generated_fixture": null,
+      "original_failure_kept": true
+    },
+    {
+      "sweep": "ground_kL0",
+      "parameter": "kappa_ground_db",
+      "value": 24,
+      "status": "failed",
+      "error": "Original RGD Armijo search failed; no phase substitute",
+      "constraint_pass": false,
+      "convergence_pass": false,
+      "solver_primal_pass": false,
+      "qt_bound_pass": false,
+      "valid_figure_point": false,
+      "block": "RGD",
+      "original_attempts": null,
+      "generated_fixture": null,
+      "original_failure_kept": true
+    },
+    {
+      "sweep": "ground_kL0",
+      "parameter": "kappa_ground_db",
+      "value": 27,
+      "status": "failed",
+      "error": "Original RGD Armijo search failed; no phase substitute",
+      "constraint_pass": false,
+      "convergence_pass": false,
+      "solver_primal_pass": false,
+      "qt_bound_pass": false,
+      "valid_figure_point": false,
+      "block": "RGD",
+      "original_attempts": null,
+      "generated_fixture": null,
+      "original_failure_kept": true
+    },
+    {
+      "sweep": "ground_kL0",
+      "parameter": "kappa_ground_db",
+      "value": 30,
+      "status": "failed",
+      "error": "Original RGD Armijo search failed; no phase substitute",
+      "constraint_pass": false,
+      "convergence_pass": false,
+      "solver_primal_pass": false,
+      "qt_bound_pass": false,
+      "valid_figure_point": false,
+      "block": "RGD",
+      "original_attempts": null,
+      "generated_fixture": null,
+      "original_failure_kept": true
+    },
+    {
+      "sweep": "multi_vs_single_single_1.25_kL0",
+      "parameter": "interference_to_noise_ratio",
+      "value": 0.02,
+      "status": "failed",
+      "error": "Same-input same-QT numerical controls exhausted: Original primal, QT bound or monotonicity gate rejected the numeric solution",
+      "constraint_pass": false,
+      "convergence_pass": false,
+      "solver_primal_pass": false,
+      "qt_bound_pass": false,
+      "valid_figure_point": false,
+      "block": "mr_QT_same_problem",
+      "original_attempts": [
+        {
+          "backend": "CLARABEL",
+          "options": {},
+          "status": "optimal",
+          "primal_relative_violation": 4.427395297490477e-06,
+          "qt_bound_violation": 0.00014019070440629555,
+          "before_minimum_sinr": 1.9425811030285045,
+          "after_minimum_sinr": 1.9439929416024386,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-09,
+            "tol_gap_rel": 1e-09,
+            "tol_feas": 1e-09,
+            "max_iter": 500,
+            "max_threads": 1
+          },
+          "status": "optimal",
+          "primal_relative_violation": 9.541958529181438e-06,
+          "qt_bound_violation": 0.0003164594496680717,
+          "before_minimum_sinr": 1.9425811030285045,
+          "after_minimum_sinr": 1.9438166806431794,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 5.687340312657274e-07,
+          "qt_bound_violation": 1.889855537839935e-05,
+          "before_minimum_sinr": 1.9425811030285045,
+          "after_minimum_sinr": 1.9441142405055172,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_enable": false
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 0.00011170000770373972,
+          "qt_bound_violation": 0.0038355798134419583,
+          "before_minimum_sinr": 1.9425811030285045,
+          "after_minimum_sinr": 1.9402970992708413,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "equilibrate_max_iter": 50,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 6.4857824157577015e-06,
+          "qt_bound_violation": 0.00021113209976819647,
+          "before_minimum_sinr": 1.9425811030285045,
+          "after_minimum_sinr": 1.943922008079258,
+          "accepted": false
+        },
+        {
+          "backend": "SCS",
+          "options": {
+            "eps": 1e-08,
+            "max_iters": 200000
+          },
+          "status": "optimal",
+          "primal_relative_violation": 3.5413042906093373e-06,
+          "qt_bound_violation": 0.00010965078673175199,
+          "before_minimum_sinr": 1.9425811030285045,
+          "after_minimum_sinr": 1.9440231674574815,
+          "accepted": false
+        }
+      ],
+      "generated_fixture": {
+        "filename": "outputs/mr-QT-numerical-input-72b59733fcf550ec.mat",
+        "sha256": "0a2a2415bcd753519152e2cc0f269fdb43ff69872859a8e63c4c667994c841b7",
+        "input_sha256": "72b59733fcf550ecd005f11c7fcb0083ab15cffdefa667fd868f902288a5e1d8"
+      },
+      "original_failure_kept": true
+    },
+    {
+      "sweep": "multi_vs_single_single_1.25_kL0",
+      "parameter": "interference_to_noise_ratio",
+      "value": 0.03,
+      "status": "failed",
+      "error": "Same-input same-QT numerical controls exhausted: Original primal, QT bound or monotonicity gate rejected the numeric solution",
+      "constraint_pass": false,
+      "convergence_pass": false,
+      "solver_primal_pass": false,
+      "qt_bound_pass": false,
+      "valid_figure_point": false,
+      "block": "mr_QT_same_problem",
+      "original_attempts": [
+        {
+          "backend": "CLARABEL",
+          "options": {},
+          "status": "optimal",
+          "primal_relative_violation": 1.273083729887159e-06,
+          "qt_bound_violation": 4.375775949472249e-05,
+          "before_minimum_sinr": 1.742671507865856,
+          "after_minimum_sinr": 1.7427585290702672,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-09,
+            "tol_gap_rel": 1e-09,
+            "tol_feas": 1e-09,
+            "max_iter": 500,
+            "max_threads": 1
+          },
+          "status": "optimal",
+          "primal_relative_violation": 1.0678380163650636e-06,
+          "qt_bound_violation": 3.6681585777076364e-05,
+          "before_minimum_sinr": 1.742671507865856,
+          "after_minimum_sinr": 1.7427657652268613,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 1.1027394519184941e-05,
+          "qt_bound_violation": 0.0003802769496594749,
+          "before_minimum_sinr": 1.742671507865856,
+          "after_minimum_sinr": 1.7424221483403577,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_enable": false
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 3.971427289584106e-06,
+          "qt_bound_violation": 0.00013678678482142992,
+          "before_minimum_sinr": 1.742671507865856,
+          "after_minimum_sinr": 1.7426656614969467,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "equilibrate_max_iter": 50,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 1.529122783283654e-06,
+          "qt_bound_violation": 5.273228775326544e-05,
+          "before_minimum_sinr": 1.742671507865856,
+          "after_minimum_sinr": 1.7427497170783368,
+          "accepted": false
+        },
+        {
+          "backend": "SCS",
+          "options": {
+            "eps": 1e-08,
+            "max_iters": 200000
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 0.12454717308677664,
+          "qt_bound_violation": 2.5703903317172845,
+          "before_minimum_sinr": 1.742671507865856,
+          "after_minimum_sinr": 4.474836146398429e-06,
+          "accepted": false
+        }
+      ],
+      "generated_fixture": {
+        "filename": "outputs/mr-QT-numerical-input-4f9665e113b3b7b5.mat",
+        "sha256": "73dce10e3e9ee4de0a12e54ffb8c833a41c0d0ab45062c07e454801ac08fde95",
+        "input_sha256": "4f9665e113b3b7b5df6f1e168cd5502744ce816f9f55d41ad0cad1d73e092c7b"
+      },
+      "original_failure_kept": true
+    },
+    {
+      "sweep": "multi_vs_single_single_1.25_kL0",
+      "parameter": "interference_to_noise_ratio",
+      "value": 0.04,
+      "status": "failed",
+      "error": "Same-input same-QT numerical controls exhausted: Original primal, QT bound or monotonicity gate rejected the numeric solution",
+      "constraint_pass": false,
+      "convergence_pass": false,
+      "solver_primal_pass": false,
+      "qt_bound_pass": false,
+      "valid_figure_point": false,
+      "block": "mr_QT_same_problem",
+      "original_attempts": [
+        {
+          "backend": "CLARABEL",
+          "options": {},
+          "status": "optimal",
+          "primal_relative_violation": 8.622203830008224e-07,
+          "qt_bound_violation": 4.5843640261278296e-05,
+          "before_minimum_sinr": 3.5364006242429813,
+          "after_minimum_sinr": 3.5395921674735247,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-09,
+            "tol_gap_rel": 1e-09,
+            "tol_feas": 1e-09,
+            "max_iter": 500,
+            "max_threads": 1
+          },
+          "status": "optimal",
+          "primal_relative_violation": 8.622203830008224e-07,
+          "qt_bound_violation": 4.5843640261278296e-05,
+          "before_minimum_sinr": 3.5364006242429813,
+          "after_minimum_sinr": 3.5395921674735247,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 4.0205800683201787e-07,
+          "qt_bound_violation": 2.5644211884223722e-05,
+          "before_minimum_sinr": 3.5364006242429813,
+          "after_minimum_sinr": 3.539612367881117,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_enable": false
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 5.724800415246589e-07,
+          "qt_bound_violation": 2.585934000087775e-05,
+          "before_minimum_sinr": 3.5364006242429813,
+          "after_minimum_sinr": 3.5396117431614362,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "equilibrate_max_iter": 50,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 1.8951012222892527e-06,
+          "qt_bound_violation": 0.0001170815217688137,
+          "before_minimum_sinr": 3.5364006242429813,
+          "after_minimum_sinr": 3.5395209305748914,
+          "accepted": false
+        },
+        {
+          "backend": "SCS",
+          "options": {
+            "eps": 1e-08,
+            "max_iters": 200000
+          },
+          "status": "optimal",
+          "primal_relative_violation": 1.7665109487904895e-06,
+          "qt_bound_violation": 0.00010821395135796053,
+          "before_minimum_sinr": 3.5364006242429813,
+          "after_minimum_sinr": 3.539530447297555,
+          "accepted": false
+        }
+      ],
+      "generated_fixture": {
+        "filename": "outputs/mr-QT-numerical-input-0556e8370f33c503.mat",
+        "sha256": "49d7992c0e8febab6393bdd07262513481f8eb7f5ee3d2a06ead5dc899ddfbef",
+        "input_sha256": "0556e8370f33c503465870f1fdc89f489686cef12a65b86a0cf8567341f44dc2"
+      },
+      "original_failure_kept": true
+    },
+    {
+      "sweep": "multi_vs_single_single_1.25_kL0",
+      "parameter": "interference_to_noise_ratio",
+      "value": 0.05,
+      "status": "failed",
+      "error": "Same-input same-QT numerical controls exhausted: Original primal, QT bound or monotonicity gate rejected the numeric solution",
+      "constraint_pass": false,
+      "convergence_pass": false,
+      "solver_primal_pass": false,
+      "qt_bound_pass": false,
+      "valid_figure_point": false,
+      "block": "mr_QT_same_problem",
+      "original_attempts": [
+        {
+          "backend": "CLARABEL",
+          "options": {},
+          "status": "optimal",
+          "primal_relative_violation": 2.314474828790658e-06,
+          "qt_bound_violation": 0.00021456650310014425,
+          "before_minimum_sinr": 4.533345554041227,
+          "after_minimum_sinr": 4.5331397841598875,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-09,
+            "tol_gap_rel": 1e-09,
+            "tol_feas": 1e-09,
+            "max_iter": 500,
+            "max_threads": 1
+          },
+          "status": "optimal",
+          "primal_relative_violation": 2.314474828790658e-06,
+          "qt_bound_violation": 0.00021456650310014425,
+          "before_minimum_sinr": 4.533345554041227,
+          "after_minimum_sinr": 4.5331397841598875,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 1.5263264292672551e-06,
+          "qt_bound_violation": 0.00014150326687811798,
+          "before_minimum_sinr": 4.533345554041227,
+          "after_minimum_sinr": 4.533212849779789,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_enable": false
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 2.2376392397743805e-06,
+          "qt_bound_violation": 0.0002074436034185112,
+          "before_minimum_sinr": 4.533345554041227,
+          "after_minimum_sinr": 4.5331469106292674,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "equilibrate_max_iter": 50,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 3.4726383219239876e-05,
+          "qt_bound_violation": 0.003218914209742074,
+          "before_minimum_sinr": 4.533345554041227,
+          "after_minimum_sinr": 4.530135461828903,
+          "accepted": false
+        },
+        {
+          "backend": "SCS",
+          "options": {
+            "eps": 1e-08,
+            "max_iters": 200000
+          },
+          "status": "optimal",
+          "primal_relative_violation": 3.8756557198260655e-07,
+          "qt_bound_violation": 3.593085926656414e-05,
+          "before_minimum_sinr": 4.533345554041227,
+          "after_minimum_sinr": 4.533319343874392,
+          "accepted": false
+        }
+      ],
+      "generated_fixture": {
+        "filename": "outputs/mr-QT-numerical-input-5734b6c6d01fd974.mat",
+        "sha256": "8e6d9237b2dba19c47f93c4d44204d3cbd833872a650d887f8306cedd57b7efd",
+        "input_sha256": "5734b6c6d01fd9747e65828423068d4c0f9d3dd09f0650b10202f683fdaa4549"
+      },
+      "original_failure_kept": true
+    },
+    {
+      "sweep": "multi_vs_single_single_1.25_kL0",
+      "parameter": "interference_to_noise_ratio",
+      "value": 0.06,
+      "status": "failed",
+      "error": "Same-input same-QT numerical controls exhausted: Original primal, QT bound or monotonicity gate rejected the numeric solution",
+      "constraint_pass": false,
+      "convergence_pass": false,
+      "solver_primal_pass": false,
+      "qt_bound_pass": false,
+      "valid_figure_point": false,
+      "block": "mr_QT_same_problem",
+      "original_attempts": [
+        {
+          "backend": "CLARABEL",
+          "options": {},
+          "status": "optimal",
+          "primal_relative_violation": 1.6998445610399981e-06,
+          "qt_bound_violation": 0.00018707774814252787,
+          "before_minimum_sinr": 5.1951153149910905,
+          "after_minimum_sinr": 5.198791405356309,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-09,
+            "tol_gap_rel": 1e-09,
+            "tol_feas": 1e-09,
+            "max_iter": 500,
+            "max_threads": 1
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 1.0753846196837058e-05,
+          "qt_bound_violation": 0.0011873779756577107,
+          "before_minimum_sinr": 5.1951153149910905,
+          "after_minimum_sinr": 5.197791140992862,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 1.0159411834090304e-06,
+          "qt_bound_violation": 0.00011090903793231632,
+          "before_minimum_sinr": 5.1951153149910905,
+          "after_minimum_sinr": 5.198867558662993,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_enable": false
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 8.513486293507122e-07,
+          "qt_bound_violation": 9.257748729663007e-05,
+          "before_minimum_sinr": 5.1951153149910905,
+          "after_minimum_sinr": 5.198885937334942,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "equilibrate_max_iter": 50,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 7.436568213059491e-06,
+          "qt_bound_violation": 0.0008187944329556274,
+          "before_minimum_sinr": 5.1951153149910905,
+          "after_minimum_sinr": 5.198159644576483,
+          "accepted": false
+        },
+        {
+          "backend": "SCS",
+          "options": {
+            "eps": 1e-08,
+            "max_iters": 200000
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 0.12816080856521628,
+          "qt_bound_violation": 9.252101101767185,
+          "before_minimum_sinr": 5.1951153149910905,
+          "after_minimum_sinr": 4.77856101827682e-05,
+          "accepted": false
+        }
+      ],
+      "generated_fixture": {
+        "filename": "outputs/mr-QT-numerical-input-b1ef831f5a339351.mat",
+        "sha256": "f21bc06365960905df01baabaf448906e15e4f7d088705e29fede208aaa43278",
+        "input_sha256": "b1ef831f5a3393511dd9133a3a81e6af503077ed4e90776eb55b9c3d52067099"
+      },
+      "original_failure_kept": true
+    },
+    {
+      "sweep": "multi_vs_single_single_1.25_kL0",
+      "parameter": "interference_to_noise_ratio",
+      "value": 0.11,
+      "status": "failed",
+      "error": "Same-input same-QT numerical controls exhausted: Original primal, QT bound or monotonicity gate rejected the numeric solution",
+      "constraint_pass": false,
+      "convergence_pass": false,
+      "solver_primal_pass": false,
+      "qt_bound_pass": false,
+      "valid_figure_point": false,
+      "block": "mr_QT_same_problem",
+      "original_attempts": [
+        {
+          "backend": "CLARABEL",
+          "options": {},
+          "status": "optimal",
+          "primal_relative_violation": 3.931723231362372e-07,
+          "qt_bound_violation": 8.01817297730878e-05,
+          "before_minimum_sinr": 7.807660367130872,
+          "after_minimum_sinr": 7.807585325975239,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-09,
+            "tol_gap_rel": 1e-09,
+            "tol_feas": 1e-09,
+            "max_iter": 500,
+            "max_threads": 1
+          },
+          "status": "optimal",
+          "primal_relative_violation": 1.6717475021660322e-07,
+          "qt_bound_violation": 3.409285719602195e-05,
+          "before_minimum_sinr": 7.807660367130872,
+          "after_minimum_sinr": 7.80763175354727,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 4.502640742649888e-06,
+          "qt_bound_violation": 0.0009181608840185262,
+          "before_minimum_sinr": 7.807660367130872,
+          "after_minimum_sinr": 7.806747476668128,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_enable": false
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 9.481116575171811e-08,
+          "qt_bound_violation": 1.9335384095597874e-05,
+          "before_minimum_sinr": 7.807660367130872,
+          "after_minimum_sinr": 7.807645637918584,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "equilibrate_max_iter": 50,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 3.6084241931272354e-07,
+          "qt_bound_violation": 7.358825109182732e-05,
+          "before_minimum_sinr": 7.807660367130872,
+          "after_minimum_sinr": 7.807592261447173,
+          "accepted": false
+        },
+        {
+          "backend": "SCS",
+          "options": {
+            "eps": 1e-08,
+            "max_iters": 200000
+          },
+          "status": "optimal",
+          "primal_relative_violation": 1.2483559281434298e-07,
+          "qt_bound_violation": 2.5458432677538667e-05,
+          "before_minimum_sinr": 7.807660367130872,
+          "after_minimum_sinr": 7.807642239737875,
+          "accepted": false
+        }
+      ],
+      "generated_fixture": {
+        "filename": "outputs/mr-QT-numerical-input-85984846234d840e.mat",
+        "sha256": "83bf2db9327aa0c17793a09d4f15763e08a4fa6ebb5f038cea792f4523125a36",
+        "input_sha256": "85984846234d840e5f5d8762699c5034a7a957a660617c71cb74aa9a67748a6c"
+      },
+      "original_failure_kept": true
+    },
+    {
+      "sweep": "multi_vs_single_single_1.25_kL20",
+      "parameter": "interference_to_noise_ratio",
+      "value": 0.01,
+      "status": "failed",
+      "error": "Same-input same-QT numerical controls exhausted: Original primal, QT bound or monotonicity gate rejected the numeric solution",
+      "constraint_pass": false,
+      "convergence_pass": false,
+      "solver_primal_pass": false,
+      "qt_bound_pass": false,
+      "valid_figure_point": false,
+      "block": "mr_QT_same_problem",
+      "original_attempts": [
+        {
+          "backend": "CLARABEL",
+          "options": {},
+          "status": "optimal",
+          "primal_relative_violation": 3.807043092044632e-05,
+          "qt_bound_violation": 0.000953012703767353,
+          "before_minimum_sinr": 1.0634170931882465,
+          "after_minimum_sinr": 1.0630865030945724,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-09,
+            "tol_gap_rel": 1e-09,
+            "tol_feas": 1e-09,
+            "max_iter": 500,
+            "max_threads": 1
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 3.807043092044632e-05,
+          "qt_bound_violation": 0.000953012703767353,
+          "before_minimum_sinr": 1.0634170931882465,
+          "after_minimum_sinr": 1.0630865030945724,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 4.6458574907030925e-05,
+          "qt_bound_violation": 0.0011651453833834147,
+          "before_minimum_sinr": 1.0634170931882465,
+          "after_minimum_sinr": 1.0628764599411902,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_enable": false
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 9.546853965577973e-06,
+          "qt_bound_violation": 0.00024220951223719034,
+          "before_minimum_sinr": 1.0634170931882465,
+          "after_minimum_sinr": 1.0637972937865432,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "equilibrate_max_iter": 50,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 2.7677422786219485e-05,
+          "qt_bound_violation": 0.0006902591487216725,
+          "before_minimum_sinr": 1.0634170931882465,
+          "after_minimum_sinr": 1.063378786895761,
+          "accepted": false
+        },
+        {
+          "backend": "SCS",
+          "options": {
+            "eps": 1e-08,
+            "max_iters": 200000
+          },
+          "status": "optimal",
+          "primal_relative_violation": 0.00010269613889853091,
+          "qt_bound_violation": 0.002604182948914291,
+          "before_minimum_sinr": 1.0634170931882465,
+          "after_minimum_sinr": 1.061435636109877,
+          "accepted": false
+        }
+      ],
+      "generated_fixture": {
+        "filename": "outputs/mr-QT-numerical-input-4fa7e410c708c3c3.mat",
+        "sha256": "7cc8f9eb30599592952c7a7358c3407f145c52468cf07a61b7885f6856b3889a",
+        "input_sha256": "4fa7e410c708c3c33f13644f1b21725df24e1fc1d86cd691b25b2c7d75202e63"
+      },
+      "original_failure_kept": true
+    },
+    {
+      "sweep": "multi_vs_single_single_1.25_kL20",
+      "parameter": "interference_to_noise_ratio",
+      "value": 0.02,
+      "status": "failed",
+      "error": "Same-input same-QT numerical controls exhausted: Original primal, QT bound or monotonicity gate rejected the numeric solution",
+      "constraint_pass": false,
+      "convergence_pass": false,
+      "solver_primal_pass": false,
+      "qt_bound_pass": false,
+      "valid_figure_point": false,
+      "block": "mr_QT_same_problem",
+      "original_attempts": [
+        {
+          "backend": "CLARABEL",
+          "options": {},
+          "status": "optimal",
+          "primal_relative_violation": 0.0001380813368528841,
+          "qt_bound_violation": 0.00700421952604513,
+          "before_minimum_sinr": 2.0158954124668313,
+          "after_minimum_sinr": 2.0103110390024623,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-09,
+            "tol_gap_rel": 1e-09,
+            "tol_feas": 1e-09,
+            "max_iter": 500,
+            "max_threads": 1
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 8.01344580214497e-05,
+          "qt_bound_violation": 0.004061006957500446,
+          "before_minimum_sinr": 2.0158954124668313,
+          "after_minimum_sinr": 2.013254329011782,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 8.924222291421813e-06,
+          "qt_bound_violation": 0.00044124404094558756,
+          "before_minimum_sinr": 2.0158954124668313,
+          "after_minimum_sinr": 2.0168739737789556,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_enable": false
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 3.196689950853149e-05,
+          "qt_bound_violation": 0.0016128985732835055,
+          "before_minimum_sinr": 2.0158954124668313,
+          "after_minimum_sinr": 2.015702330578092,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "equilibrate_max_iter": 50,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 1.1085607416812249e-05,
+          "qt_bound_violation": 0.0005511585875268565,
+          "before_minimum_sinr": 2.0158954124668313,
+          "after_minimum_sinr": 2.016764104510413,
+          "accepted": false
+        },
+        {
+          "backend": "SCS",
+          "options": {
+            "eps": 1e-08,
+            "max_iters": 200000
+          },
+          "status": "optimal",
+          "primal_relative_violation": 1.0457279068808167e-05,
+          "qt_bound_violation": 0.0005192056421647884,
+          "before_minimum_sinr": 2.0158954124668313,
+          "after_minimum_sinr": 2.016795894767334,
+          "accepted": false
+        }
+      ],
+      "generated_fixture": {
+        "filename": "outputs/mr-QT-numerical-input-e59534f3bd828258.mat",
+        "sha256": "5bb0488be0013f49bfe800c1b742e2ef358bad21774bea69d32726f4baa5ec53",
+        "input_sha256": "e59534f3bd8282587263353af9438b6bbc7270c7a16631c3119bb4cc02ff31c9"
+      },
+      "original_failure_kept": true
+    },
+    {
+      "sweep": "multi_vs_single_single_1.25_kL20",
+      "parameter": "interference_to_noise_ratio",
+      "value": 0.03,
+      "status": "failed",
+      "error": "Same-input same-QT numerical controls exhausted: Original primal, QT bound or monotonicity gate rejected the numeric solution",
+      "constraint_pass": false,
+      "convergence_pass": false,
+      "solver_primal_pass": false,
+      "qt_bound_pass": false,
+      "valid_figure_point": false,
+      "block": "mr_QT_same_problem",
+      "original_attempts": [
+        {
+          "backend": "CLARABEL",
+          "options": {},
+          "status": "optimal",
+          "primal_relative_violation": 3.6524151755534806e-06,
+          "qt_bound_violation": 0.00026210065438281305,
+          "before_minimum_sinr": 2.888861226083816,
+          "after_minimum_sinr": 2.8909911151868948,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-09,
+            "tol_gap_rel": 1e-09,
+            "tol_feas": 1e-09,
+            "max_iter": 500,
+            "max_threads": 1
+          },
+          "status": "optimal",
+          "primal_relative_violation": 3.602075223679835e-06,
+          "qt_bound_violation": 0.0002582770357211217,
+          "before_minimum_sinr": 2.888861226083816,
+          "after_minimum_sinr": 2.890994998603578,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 2.0154134921880618e-05,
+          "qt_bound_violation": 0.0015342654000503053,
+          "before_minimum_sinr": 2.888861226083816,
+          "after_minimum_sinr": 2.8897190123661423,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_enable": false
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 3.19891040293091e-05,
+          "qt_bound_violation": 0.002414116769263952,
+          "before_minimum_sinr": 2.888861226083816,
+          "after_minimum_sinr": 2.888839166608619,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "equilibrate_max_iter": 50,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 7.965176793689466e-07,
+          "qt_bound_violation": 5.9216445562171316e-05,
+          "before_minimum_sinr": 2.888861226083816,
+          "after_minimum_sinr": 2.8911940128829223,
+          "accepted": false
+        },
+        {
+          "backend": "SCS",
+          "options": {
+            "eps": 1e-08,
+            "max_iters": 200000
+          },
+          "status": "optimal",
+          "primal_relative_violation": 4.022814855367263e-05,
+          "qt_bound_violation": 0.0030626980674486326,
+          "before_minimum_sinr": 2.888861226083816,
+          "after_minimum_sinr": 2.8881908030558114,
+          "accepted": false
+        }
+      ],
+      "generated_fixture": {
+        "filename": "outputs/mr-QT-numerical-input-8e4925ff477dbc70.mat",
+        "sha256": "6be0fdcac6a347199696ca27e76ee9898b511438d146afe51798df5f90d86165",
+        "input_sha256": "8e4925ff477dbc70a34913d94e74b9df65419c5027f4ff2a1e8f37f958042f75"
+      },
+      "original_failure_kept": true
+    },
+    {
+      "sweep": "multi_vs_single_single_1.25_kL20",
+      "parameter": "interference_to_noise_ratio",
+      "value": 0.04,
+      "status": "failed",
+      "error": "Same-input same-QT numerical controls exhausted: Original primal, QT bound or monotonicity gate rejected the numeric solution",
+      "constraint_pass": false,
+      "convergence_pass": false,
+      "solver_primal_pass": false,
+      "qt_bound_pass": false,
+      "valid_figure_point": false,
+      "block": "mr_QT_same_problem",
+      "original_attempts": [
+        {
+          "backend": "CLARABEL",
+          "options": {},
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 1.320129993924446e-06,
+          "qt_bound_violation": 0.000131919049997542,
+          "before_minimum_sinr": 3.679264718132552,
+          "after_minimum_sinr": 3.6823745987229857,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-09,
+            "tol_gap_rel": 1e-09,
+            "tol_feas": 1e-09,
+            "max_iter": 500,
+            "max_threads": 1
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 1.320129993924446e-06,
+          "qt_bound_violation": 0.000131919049997542,
+          "before_minimum_sinr": 3.679264718132552,
+          "after_minimum_sinr": 3.6823745987229857,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 8.780391847811042e-06,
+          "qt_bound_violation": 0.0008741462273387235,
+          "before_minimum_sinr": 3.679264718132552,
+          "after_minimum_sinr": 3.6816371560155097,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_enable": false
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 4.161583744485137e-05,
+          "qt_bound_violation": 0.004199544970532987,
+          "before_minimum_sinr": 3.679264718132552,
+          "after_minimum_sinr": 3.6783117358147,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "equilibrate_max_iter": 50,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 9.043526591805129e-06,
+          "qt_bound_violation": 0.0009168760177873381,
+          "before_minimum_sinr": 3.679264718132552,
+          "after_minimum_sinr": 3.6815944527536515,
+          "accepted": false
+        },
+        {
+          "backend": "SCS",
+          "options": {
+            "eps": 1e-08,
+            "max_iters": 200000
+          },
+          "status": "optimal",
+          "primal_relative_violation": 6.355836127763803e-06,
+          "qt_bound_violation": 0.0006437454525212161,
+          "before_minimum_sinr": 3.679264718132552,
+          "after_minimum_sinr": 3.6818666598728043,
+          "accepted": false
+        }
+      ],
+      "generated_fixture": {
+        "filename": "outputs/mr-QT-numerical-input-8f4bb031f277b960.mat",
+        "sha256": "08f562e744f8e5def0ac3db3a40bcace43c65640bac6c6f5b429e3fc1fc6f066",
+        "input_sha256": "8f4bb031f277b96069a1764fb326df986e4a425f98ad3842d8675c2390b9f1b4"
+      },
+      "original_failure_kept": true
+    },
+    {
+      "sweep": "multi_vs_single_single_1.25_kL20",
+      "parameter": "interference_to_noise_ratio",
+      "value": 0.05,
+      "status": "failed",
+      "error": "Same-input same-QT numerical controls exhausted: Original primal, QT bound or monotonicity gate rejected the numeric solution",
+      "constraint_pass": false,
+      "convergence_pass": false,
+      "solver_primal_pass": false,
+      "qt_bound_pass": false,
+      "valid_figure_point": false,
+      "block": "mr_QT_same_problem",
+      "original_attempts": [
+        {
+          "backend": "CLARABEL",
+          "options": {},
+          "status": "optimal",
+          "primal_relative_violation": 1.1730290725014969e-05,
+          "qt_bound_violation": 0.0014719585547950942,
+          "before_minimum_sinr": 4.402663512445072,
+          "after_minimum_sinr": 4.405080802558536,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-09,
+            "tol_gap_rel": 1e-09,
+            "tol_feas": 1e-09,
+            "max_iter": 500,
+            "max_threads": 1
+          },
+          "status": "optimal",
+          "primal_relative_violation": 1.1730290725014969e-05,
+          "qt_bound_violation": 0.0014719585547950942,
+          "before_minimum_sinr": 4.402663512445072,
+          "after_minimum_sinr": 4.405080802558536,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 1.7460664290910866e-05,
+          "qt_bound_violation": 0.0021976788907487332,
+          "before_minimum_sinr": 4.402663512445072,
+          "after_minimum_sinr": 4.404355058163735,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_enable": false
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 4.242026612497757e-05,
+          "qt_bound_violation": 0.005357989456182821,
+          "before_minimum_sinr": 4.402663512445072,
+          "after_minimum_sinr": 4.4011948106277465,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "equilibrate_max_iter": 50,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 5.578627790644997e-06,
+          "qt_bound_violation": 0.000692817123817413,
+          "before_minimum_sinr": 4.402663512445072,
+          "after_minimum_sinr": 4.405859054145209,
+          "accepted": false
+        },
+        {
+          "backend": "SCS",
+          "options": {
+            "eps": 1e-08,
+            "max_iters": 200000
+          },
+          "status": "optimal",
+          "primal_relative_violation": 2.0525602804979948e-06,
+          "qt_bound_violation": 0.00024619309295559333,
+          "before_minimum_sinr": 4.402663512445072,
+          "after_minimum_sinr": 4.406306349914199,
+          "accepted": false
+        }
+      ],
+      "generated_fixture": {
+        "filename": "outputs/mr-QT-numerical-input-444c3a8c1373aa17.mat",
+        "sha256": "6648c274ef2c2f88975b11c6ce6abccf1856660008406d6f965d4a197906bc0c",
+        "input_sha256": "444c3a8c1373aa1793878239631db8ac29c22d2adcccf05655ed44bf2c48c902"
+      },
+      "original_failure_kept": true
+    },
+    {
+      "sweep": "multi_vs_single_single_1.25_kL20",
+      "parameter": "interference_to_noise_ratio",
+      "value": 0.06,
+      "status": "failed",
+      "error": "Same-input same-QT numerical controls exhausted: Original primal, QT bound or monotonicity gate rejected the numeric solution",
+      "constraint_pass": false,
+      "convergence_pass": false,
+      "solver_primal_pass": false,
+      "qt_bound_pass": false,
+      "valid_figure_point": false,
+      "block": "mr_QT_same_problem",
+      "original_attempts": [
+        {
+          "backend": "CLARABEL",
+          "options": {},
+          "status": "optimal",
+          "primal_relative_violation": 2.2094541581377247e-06,
+          "qt_bound_violation": 0.00033792944961685834,
+          "before_minimum_sinr": 5.00548187271888,
+          "after_minimum_sinr": 5.005145584042414,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-09,
+            "tol_gap_rel": 1e-09,
+            "tol_feas": 1e-09,
+            "max_iter": 500,
+            "max_threads": 1
+          },
+          "status": "optimal",
+          "primal_relative_violation": 2.2094541581377247e-06,
+          "qt_bound_violation": 0.00033792944961685834,
+          "before_minimum_sinr": 5.00548187271888,
+          "after_minimum_sinr": 5.005145584042414,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 3.051052278187777e-05,
+          "qt_bound_violation": 0.00466572559288192,
+          "before_minimum_sinr": 5.00548187271888,
+          "after_minimum_sinr": 5.000817408918918,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_enable": false
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 7.622668804843635e-07,
+          "qt_bound_violation": 0.00011659201937419539,
+          "before_minimum_sinr": 5.00548187271888,
+          "after_minimum_sinr": 5.005343896530354,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "equilibrate_max_iter": 50,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 2.283489739678124e-06,
+          "qt_bound_violation": 0.0003492666105566755,
+          "before_minimum_sinr": 5.00548187271888,
+          "after_minimum_sinr": 5.005134248003246,
+          "accepted": false
+        },
+        {
+          "backend": "SCS",
+          "options": {
+            "eps": 1e-08,
+            "max_iters": 200000
+          },
+          "status": "optimal",
+          "primal_relative_violation": 7.344819396196134e-06,
+          "qt_bound_violation": 0.001123221058506374,
+          "before_minimum_sinr": 5.00548187271888,
+          "after_minimum_sinr": 5.004361898862651,
+          "accepted": false
+        }
+      ],
+      "generated_fixture": {
+        "filename": "outputs/mr-QT-numerical-input-856505f873e98b50.mat",
+        "sha256": "2c170977bdf5af90246f663dcac6b49b691fb311f7c01c5e7aa9b5aac4adcd1f",
+        "input_sha256": "856505f873e98b50773e098e2c98e69d80a1f5b417eb07e98675018fcab95440"
+      },
+      "original_failure_kept": true
+    },
+    {
+      "sweep": "multi_vs_single_single_1.25_kL20",
+      "parameter": "interference_to_noise_ratio",
+      "value": 0.07,
+      "status": "failed",
+      "error": "Same-input same-QT numerical controls exhausted: Original primal, QT bound or monotonicity gate rejected the numeric solution",
+      "constraint_pass": false,
+      "convergence_pass": false,
+      "solver_primal_pass": false,
+      "qt_bound_pass": false,
+      "valid_figure_point": false,
+      "block": "mr_QT_same_problem",
+      "original_attempts": [
+        {
+          "backend": "CLARABEL",
+          "options": {},
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 6.106103554448516e-07,
+          "qt_bound_violation": 0.00010459403361817721,
+          "before_minimum_sinr": 5.6800373797861425,
+          "after_minimum_sinr": 5.68511142100006,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-09,
+            "tol_gap_rel": 1e-09,
+            "tol_feas": 1e-09,
+            "max_iter": 500,
+            "max_threads": 1
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 6.106103554448516e-07,
+          "qt_bound_violation": 0.00010459403361817721,
+          "before_minimum_sinr": 5.6800373797861425,
+          "after_minimum_sinr": 5.68511142100006,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 4.2064971313149346e-07,
+          "qt_bound_violation": 6.214505540036441e-05,
+          "before_minimum_sinr": 5.6800373797861425,
+          "after_minimum_sinr": 5.685170700455971,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_enable": false
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 1.328464395787543e-06,
+          "qt_bound_violation": 0.00023229382908240837,
+          "before_minimum_sinr": 5.6800373797861425,
+          "after_minimum_sinr": 5.685000493542291,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "equilibrate_max_iter": 50,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 2.2947723668648168e-05,
+          "qt_bound_violation": 0.004076455561054182,
+          "before_minimum_sinr": 5.6800373797861425,
+          "after_minimum_sinr": 5.681156797098317,
+          "accepted": false
+        },
+        {
+          "backend": "SCS",
+          "options": {
+            "eps": 1e-08,
+            "max_iters": 200000
+          },
+          "status": "optimal",
+          "primal_relative_violation": 3.521317669390178e-06,
+          "qt_bound_violation": 0.0006121530348650595,
+          "before_minimum_sinr": 5.6800373797861425,
+          "after_minimum_sinr": 5.684620515567968,
+          "accepted": false
+        }
+      ],
+      "generated_fixture": {
+        "filename": "outputs/mr-QT-numerical-input-0d754002676670b0.mat",
+        "sha256": "f838fb95bd9fc9603136ef70793740f8c713db497f2ff63495897009ae4ff5ea",
+        "input_sha256": "0d754002676670b0fcfc3e45340b7e68c954cdecaac6ccd2f1722348505caca7"
+      },
+      "original_failure_kept": true
+    },
+    {
+      "sweep": "multi_vs_single_single_1.25_kL20",
+      "parameter": "interference_to_noise_ratio",
+      "value": 0.09,
+      "status": "failed",
+      "error": "Same-input same-QT numerical controls exhausted: Original primal, QT bound or monotonicity gate rejected the numeric solution",
+      "constraint_pass": false,
+      "convergence_pass": false,
+      "solver_primal_pass": false,
+      "qt_bound_pass": false,
+      "valid_figure_point": false,
+      "block": "mr_QT_same_problem",
+      "original_attempts": [
+        {
+          "backend": "CLARABEL",
+          "options": {},
+          "status": "optimal",
+          "primal_relative_violation": 3.9778307347679287e-07,
+          "qt_bound_violation": 9.085431111355291e-05,
+          "before_minimum_sinr": 6.779560610335115,
+          "after_minimum_sinr": 6.7794716287315495,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-09,
+            "tol_gap_rel": 1e-09,
+            "tol_feas": 1e-09,
+            "max_iter": 500,
+            "max_threads": 1
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 8.605638817518052e-06,
+          "qt_bound_violation": 0.0019650664274051266,
+          "before_minimum_sinr": 6.779560610335115,
+          "after_minimum_sinr": 6.777597129324476,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 1.9967004888377105e-07,
+          "qt_bound_violation": 4.560523058660948e-05,
+          "before_minimum_sinr": 6.779560610335115,
+          "after_minimum_sinr": 6.779516530437272,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_enable": false
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 1.067940100744208e-06,
+          "qt_bound_violation": 0.00024391640417054106,
+          "before_minimum_sinr": 6.779560610335115,
+          "after_minimum_sinr": 6.779346998058711,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "equilibrate_max_iter": 50,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 3.643748215629433e-06,
+          "qt_bound_violation": 0.000832222285780837,
+          "before_minimum_sinr": 6.779560610335115,
+          "after_minimum_sinr": 6.7787298648315675,
+          "accepted": false
+        },
+        {
+          "backend": "SCS",
+          "options": {
+            "eps": 1e-08,
+            "max_iters": 200000
+          },
+          "status": "optimal",
+          "primal_relative_violation": 4.825536865589106e-05,
+          "qt_bound_violation": 0.011017357862283639,
+          "before_minimum_sinr": 6.779560610335115,
+          "after_minimum_sinr": 6.768546788944516,
+          "accepted": false
+        }
+      ],
+      "generated_fixture": {
+        "filename": "outputs/mr-QT-numerical-input-43e83dbc2c0a9341.mat",
+        "sha256": "05568730ca89107efa7d748504e2c757c115c9966ea861fe7bda0938f66fb20f",
+        "input_sha256": "43e83dbc2c0a934114ae8421004b37b60b667cae484d691baeafe816fbf8e874"
+      },
+      "original_failure_kept": true
+    },
+    {
+      "sweep": "multi_vs_single_single_1.25_kL20",
+      "parameter": "interference_to_noise_ratio",
+      "value": 0.1,
+      "status": "failed",
+      "error": "Same-input same-QT numerical controls exhausted: Original primal, QT bound or monotonicity gate rejected the numeric solution",
+      "constraint_pass": false,
+      "convergence_pass": false,
+      "solver_primal_pass": false,
+      "qt_bound_pass": false,
+      "valid_figure_point": false,
+      "block": "mr_QT_same_problem",
+      "original_attempts": [
+        {
+          "backend": "CLARABEL",
+          "options": {},
+          "status": "optimal",
+          "primal_relative_violation": 2.1156892011341133e-06,
+          "qt_bound_violation": 0.0005311238091492143,
+          "before_minimum_sinr": 7.265013745492768,
+          "after_minimum_sinr": 7.269243024094026,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-09,
+            "tol_gap_rel": 1e-09,
+            "tol_feas": 1e-09,
+            "max_iter": 500,
+            "max_threads": 1
+          },
+          "status": "optimal",
+          "primal_relative_violation": 2.1156892011341133e-06,
+          "qt_bound_violation": 0.0005311238091492143,
+          "before_minimum_sinr": 7.265013745492768,
+          "after_minimum_sinr": 7.269243024094026,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 1.0025750591183269e-07,
+          "qt_bound_violation": 2.272041437656469e-05,
+          "before_minimum_sinr": 7.265013745492768,
+          "after_minimum_sinr": 7.26975024023386,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_enable": false
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 1.0733346439938118e-06,
+          "qt_bound_violation": 0.00026994487573794856,
+          "before_minimum_sinr": 7.265013745492768,
+          "after_minimum_sinr": 7.269504202799601,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "equilibrate_max_iter": 50,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 7.966514973221928e-07,
+          "qt_bound_violation": 0.00019965068590366286,
+          "before_minimum_sinr": 7.265013745492768,
+          "after_minimum_sinr": 7.269574495456914,
+          "accepted": false
+        },
+        {
+          "backend": "SCS",
+          "options": {
+            "eps": 1e-08,
+            "max_iters": 200000
+          },
+          "status": "optimal",
+          "primal_relative_violation": 1.0011109931162138e-05,
+          "qt_bound_violation": 0.002540031927101616,
+          "before_minimum_sinr": 7.265013745492768,
+          "after_minimum_sinr": 7.267236778182875,
+          "accepted": false
+        }
+      ],
+      "generated_fixture": {
+        "filename": "outputs/mr-QT-numerical-input-85de31b37e593775.mat",
+        "sha256": "5dc1d3dcd64a2705435cf2c0627d7e1a1b46784baca3bf013ec3428e2ccd70f9",
+        "input_sha256": "85de31b37e593775a2f032aad5c12221685b9eee91a44ebb628b3b3de928063b"
+      },
+      "original_failure_kept": true
+    },
+    {
+      "sweep": "multi_vs_single_single_1.25_kL20",
+      "parameter": "interference_to_noise_ratio",
+      "value": 0.11,
+      "status": "failed",
+      "error": "Same-input same-QT numerical controls exhausted: Original primal, QT bound or monotonicity gate rejected the numeric solution",
+      "constraint_pass": false,
+      "convergence_pass": false,
+      "solver_primal_pass": false,
+      "qt_bound_pass": false,
+      "valid_figure_point": false,
+      "block": "mr_QT_same_problem",
+      "original_attempts": [
+        {
+          "backend": "CLARABEL",
+          "options": {},
+          "status": "optimal",
+          "primal_relative_violation": 4.0614601335559053e-07,
+          "qt_bound_violation": 0.00011337739700856275,
+          "before_minimum_sinr": 7.727177805956952,
+          "after_minimum_sinr": 7.727065007891028,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-09,
+            "tol_gap_rel": 1e-09,
+            "tol_feas": 1e-09,
+            "max_iter": 500,
+            "max_threads": 1
+          },
+          "status": "optimal",
+          "primal_relative_violation": 4.0614601335559053e-07,
+          "qt_bound_violation": 0.00011337739700856275,
+          "before_minimum_sinr": 7.727177805956952,
+          "after_minimum_sinr": 7.727065007891028,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 1.7093745514628472e-05,
+          "qt_bound_violation": 0.00477113715703581,
+          "before_minimum_sinr": 7.727177805956952,
+          "after_minimum_sinr": 7.722407265474864,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_enable": false
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 8.304917562575176e-07,
+          "qt_bound_violation": 0.00023183187124420357,
+          "before_minimum_sinr": 7.727177805956952,
+          "after_minimum_sinr": 7.726940525727646,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "equilibrate_max_iter": 50,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 2.1453935126689028e-07,
+          "qt_bound_violation": 5.988994582306617e-05,
+          "before_minimum_sinr": 7.727177805956952,
+          "after_minimum_sinr": 7.727118492553876,
+          "accepted": false
+        },
+        {
+          "backend": "SCS",
+          "options": {
+            "eps": 1e-08,
+            "max_iters": 200000
+          },
+          "status": "optimal",
+          "primal_relative_violation": 7.848247176520107e-07,
+          "qt_bound_violation": 0.00021908452554342261,
+          "before_minimum_sinr": 7.727177805956952,
+          "after_minimum_sinr": 7.726959519838959,
+          "accepted": false
+        }
+      ],
+      "generated_fixture": {
+        "filename": "outputs/mr-QT-numerical-input-586e71522c838a8f.mat",
+        "sha256": "a20a991ff26e444bf8981bdf032693855ca772b1cf857bce4cff82674d62d984",
+        "input_sha256": "586e71522c838a8f162d0a5fb835f2095204ff6df483f22dc7c26fefbece160b"
+      },
+      "original_failure_kept": true
+    },
+    {
+      "sweep": "multi_vs_single_single_2.5_kL20",
+      "parameter": "interference_to_noise_ratio",
+      "value": 0.01,
+      "status": "failed",
+      "error": "Same-input same-QT numerical controls exhausted: Original primal, QT bound or monotonicity gate rejected the numeric solution",
+      "constraint_pass": false,
+      "convergence_pass": false,
+      "solver_primal_pass": false,
+      "qt_bound_pass": false,
+      "valid_figure_point": false,
+      "block": "mr_QT_same_problem",
+      "original_attempts": [
+        {
+          "backend": "CLARABEL",
+          "options": {},
+          "status": "optimal",
+          "primal_relative_violation": 8.939830197451926e-06,
+          "qt_bound_violation": 0.0001075248761182035,
+          "before_minimum_sinr": 1.966025482977304,
+          "after_minimum_sinr": 1.9659645144265094,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-09,
+            "tol_gap_rel": 1e-09,
+            "tol_feas": 1e-09,
+            "max_iter": 500,
+            "max_threads": 1
+          },
+          "status": "optimal",
+          "primal_relative_violation": 1.1177642279924793e-05,
+          "qt_bound_violation": 0.00013443935041812516,
+          "before_minimum_sinr": 1.966025482977304,
+          "after_minimum_sinr": 1.9659375931244105,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 1.0212112497381964e-05,
+          "qt_bound_violation": 0.00012282390953166633,
+          "before_minimum_sinr": 1.966025482977304,
+          "after_minimum_sinr": 1.9659492122795232,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_enable": false
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 5.842045359111259e-06,
+          "qt_bound_violation": 7.026655237818424e-05,
+          "before_minimum_sinr": 1.966025482977304,
+          "after_minimum_sinr": 1.9660017647492574,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "equilibrate_max_iter": 50,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 1.9519867008349623e-05,
+          "qt_bound_violation": 0.00023476796768617803,
+          "before_minimum_sinr": 1.966025482977304,
+          "after_minimum_sinr": 1.9658372657691505,
+          "accepted": false
+        },
+        {
+          "backend": "SCS",
+          "options": {
+            "eps": 1e-08,
+            "max_iters": 200000
+          },
+          "status": "optimal",
+          "primal_relative_violation": 5.965355332304689e-05,
+          "qt_bound_violation": 0.0007173413738581491,
+          "before_minimum_sinr": 1.966025482977304,
+          "after_minimum_sinr": 1.9653548373227103,
+          "accepted": false
+        }
+      ],
+      "generated_fixture": {
+        "filename": "outputs/mr-QT-numerical-input-8b4ed5c0cfc2f92b.mat",
+        "sha256": "318a9991870f5fadabc3f716a2bbe9b13aebe2896bcb4efd7af1838344ea1cd4",
+        "input_sha256": "8b4ed5c0cfc2f92b09be223ddf77a835fb0155e88745950de24388075fa5fb66"
+      },
+      "original_failure_kept": true
+    },
+    {
+      "sweep": "multi_vs_single_single_2.5_kL20",
+      "parameter": "interference_to_noise_ratio",
+      "value": 0.02,
+      "status": "failed",
+      "error": "Same-input same-QT numerical controls exhausted: Original primal, QT bound or monotonicity gate rejected the numeric solution",
+      "constraint_pass": false,
+      "convergence_pass": false,
+      "solver_primal_pass": false,
+      "qt_bound_pass": false,
+      "valid_figure_point": false,
+      "block": "mr_QT_same_problem",
+      "original_attempts": [
+        {
+          "backend": "CLARABEL",
+          "options": {},
+          "status": "optimal",
+          "primal_relative_violation": 2.8473280988539074e-07,
+          "qt_bound_violation": 1.042552673702346e-05,
+          "before_minimum_sinr": 3.9225337360891777,
+          "after_minimum_sinr": 3.922553367757048,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-09,
+            "tol_gap_rel": 1e-09,
+            "tol_feas": 1e-09,
+            "max_iter": 500,
+            "max_threads": 1
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 6.3470598594128624e-06,
+          "qt_bound_violation": 0.00023239010036846253,
+          "before_minimum_sinr": 3.9225337360891777,
+          "after_minimum_sinr": 3.9223314200062545,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 1.3253769176879704e-06,
+          "qt_bound_violation": 4.852885649464511e-05,
+          "before_minimum_sinr": 3.9225337360891777,
+          "after_minimum_sinr": 3.922515276037611,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_enable": false
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 7.859767445911325e-07,
+          "qt_bound_violation": 2.877871816053812e-05,
+          "before_minimum_sinr": 3.9225337360891777,
+          "after_minimum_sinr": 3.922535030409647,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "equilibrate_max_iter": 50,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 4.539139580594931e-06,
+          "qt_bound_violation": 0.00016620381490906055,
+          "before_minimum_sinr": 3.9225337360891777,
+          "after_minimum_sinr": 3.9223975854357898,
+          "accepted": false
+        },
+        {
+          "backend": "SCS",
+          "options": {
+            "eps": 1e-08,
+            "max_iters": 200000
+          },
+          "status": "optimal",
+          "primal_relative_violation": 3.7456796243839907e-07,
+          "qt_bound_violation": 1.3714882570070586e-05,
+          "before_minimum_sinr": 3.9225337360891777,
+          "after_minimum_sinr": 3.9225504605590986,
+          "accepted": false
+        }
+      ],
+      "generated_fixture": {
+        "filename": "outputs/mr-QT-numerical-input-50cbb384d6316dc6.mat",
+        "sha256": "27208e4ac2e2a69686622e64cd80a30fc8fb44b9baeede4eac5f89acd6199102",
+        "input_sha256": "50cbb384d6316dc6e45fc1595ccc0b253745a95ee21f2e46cc2fd117c79e684a"
+      },
+      "original_failure_kept": true
+    },
+    {
+      "sweep": "multi_vs_single_single_2.5_kL20",
+      "parameter": "interference_to_noise_ratio",
+      "value": 0.08,
+      "status": "failed",
+      "error": "Same-input same-QT numerical controls exhausted: Original primal, QT bound or monotonicity gate rejected the numeric solution",
+      "constraint_pass": false,
+      "convergence_pass": false,
+      "solver_primal_pass": false,
+      "qt_bound_pass": false,
+      "valid_figure_point": false,
+      "block": "mr_QT_same_problem",
+      "original_attempts": [
+        {
+          "backend": "CLARABEL",
+          "options": {},
+          "status": "optimal",
+          "primal_relative_violation": 2.7870212397640426e-07,
+          "qt_bound_violation": 3.523492226875646e-05,
+          "before_minimum_sinr": 8.054466820218103,
+          "after_minimum_sinr": 8.054441058805581,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-09,
+            "tol_gap_rel": 1e-09,
+            "tol_feas": 1e-09,
+            "max_iter": 500,
+            "max_threads": 1
+          },
+          "status": "optimal",
+          "primal_relative_violation": 2.7870212397640426e-07,
+          "qt_bound_violation": 3.523492226875646e-05,
+          "before_minimum_sinr": 8.054466820218103,
+          "after_minimum_sinr": 8.054441058805581,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 7.474626401299256e-07,
+          "qt_bound_violation": 9.449737752653675e-05,
+          "before_minimum_sinr": 8.054466820218103,
+          "after_minimum_sinr": 8.05438180977977,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "static_regularization_enable": false
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 7.25588449823622e-07,
+          "qt_bound_violation": 9.17319779905057e-05,
+          "before_minimum_sinr": 8.054466820218103,
+          "after_minimum_sinr": 8.054384575045187,
+          "accepted": false
+        },
+        {
+          "backend": "CLARABEL",
+          "options": {
+            "tol_gap_abs": 1e-10,
+            "tol_gap_rel": 1e-10,
+            "tol_feas": 1e-10,
+            "max_iter": 500,
+            "max_threads": 1,
+            "equilibrate_max_iter": 50,
+            "static_regularization_constant": 1e-12
+          },
+          "status": "optimal_inaccurate",
+          "primal_relative_violation": 1.5517233995093749e-06,
+          "qt_bound_violation": 0.00019617321339637783,
+          "before_minimum_sinr": 8.054466820218103,
+          "after_minimum_sinr": 8.054280123572484,
+          "accepted": false
+        },
+        {
+          "backend": "SCS",
+          "options": {
+            "eps": 1e-08,
+            "max_iters": 200000
+          },
+          "status": "optimal",
+          "primal_relative_violation": 3.6164739317112726e-07,
+          "qt_bound_violation": 4.572123365953473e-05,
+          "before_minimum_sinr": 8.054466820218103,
+          "after_minimum_sinr": 8.054431082513595,
+          "accepted": false
+        }
+      ],
+      "generated_fixture": {
+        "filename": "outputs/mr-QT-numerical-input-62a01341ca413f85.mat",
+        "sha256": "272b5c27619996ca1fb55124db534eb459c88a909dce26445b05e9df3af2140d",
+        "input_sha256": "62a01341ca413f85fbbc5aa07bd3495bc04ee966df7ede12b1c5327205516e23"
+      },
+      "original_failure_kept": true
+    },
+    {
+      "sweep": "multi_vs_single_single_2.5_kL20",
+      "parameter": "interference_to_noise_ratio",
+      "value": 0.09,
+      "status": "failed",
+      "error": "Original RGD Armijo search failed; no phase substitute",
+      "constraint_pass": false,
+      "convergence_pass": false,
+      "solver_primal_pass": false,
+      "qt_bound_pass": false,
+      "valid_figure_point": false,
+      "block": "RGD",
+      "original_attempts": null,
+      "generated_fixture": null,
+      "original_failure_kept": true
+    }
+  ],
+  "full_reproduction_pass": false
+}

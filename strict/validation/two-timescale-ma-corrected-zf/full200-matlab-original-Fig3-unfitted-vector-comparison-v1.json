@@ -1,0 +1,111 @@
+{
+  "scope": "author_Fig3_all4_vector_curves_unfitted_comparison_with_actual_full200_MATLAB",
+  "source_sha256": {
+    "Convergence_MR.eps": "872d891a8563ab427ddda37e805949f410b3e79293ceb56eb245a1082ada873c",
+    "two-timescale-ma-matlab-figure-03.json": "f7b1aa4f1a3cb9fa4e2ede4feb33fe4ceed69a337662ae751c2f926c11912f96",
+    "original-author-Convergence-MR-readonly-v1.png": "b7d96b4f171ff50da85ac2b75d05c61117928c396cacaf73831730cb1e6f2cc8",
+    "compare_full200_original_vector_fig3_v1.py": "0c878d621918bdc08252431977c5bcf64b9c06ff924eda3f3e9e4e4bb751f5f4"
+  },
+  "author_curve_mapping_confirmed_against_original_rendered_legend": true,
+  "author_axes_calibration": {
+    "rectangle": [
+      39,
+      7,
+      421,
+      303
+    ],
+    "x_range": [
+      1,
+      600
+    ],
+    "y_range": [
+      8,
+      20
+    ],
+    "axes_visually_verified": true,
+    "scale": "linear in displayed coordinates; dB labels stay dB"
+  },
+  "declared_index_convention": "author_first_stored_state_x1 = current_initial_state_x0; fixed +1, never fitted",
+  "fitted_vertical_offset_or_scale_or_power_noise_or_geometry": false,
+  "all200_MATLAB_actual_execution_verified": true,
+  "independent_all200_physical_audit_done_here": false,
+  "author_original_MC_counts_and_convergence_averaging_protocol_disclosed": false,
+  "comparison_interpolation_only_evaluates_actual_averaged_curves_at_author_vector_x": true,
+  "historical_figure_recovery_claimed": false,
+  "original_curve_closeness_verified": false,
+  "all_source_inputs_actual_curves_unmodified": true,
+  "comparisons": [
+    {
+      "author_curve": "actual_ergodic_kappa100",
+      "current_curve": "history.mrt.instantaneous_MC_mean; kappa=100",
+      "author_vector_sample_count": 600,
+      "current_actual_full200_curve_sample_count": 1290,
+      "all_author_samples_within_actual_curve_domain": true,
+      "max_abs_error_bps_Hz": 4.23882998232984,
+      "RMS_error_bps_Hz": 3.6921788042574826,
+      "author_first_last": [
+        9.422932432432432,
+        19.066391891891893
+      ],
+      "actual_first_last_on_same_domain": [
+        7.914560999184847,
+        14.827561909562053
+      ],
+      "author_decimal_coordinate_accuracy_not_raw_simulation_data": true
+    },
+    {
+      "author_curve": "actual_ergodic_kappa6",
+      "current_curve": "history.mrt.instantaneous_MC_mean; kappa=6",
+      "author_vector_sample_count": 600,
+      "current_actual_full200_curve_sample_count": 911,
+      "all_author_samples_within_actual_curve_domain": true,
+      "max_abs_error_bps_Hz": 1.8309773413531882,
+      "RMS_error_bps_Hz": 1.58738708090478,
+      "author_first_last": [
+        8.250094594594593,
+        12.062851351351352
+      ],
+      "actual_first_last_on_same_domain": [
+        7.08024054693835,
+        10.426492734752049
+      ],
+      "author_decimal_coordinate_accuracy_not_raw_simulation_data": true
+    },
+    {
+      "author_curve": "surrogate_kappa100",
+      "current_curve": "history.mrt.objective; kappa=100",
+      "author_vector_sample_count": 600,
+      "current_actual_full200_curve_sample_count": 1290,
+      "all_author_samples_within_actual_curve_domain": true,
+      "max_abs_error_bps_Hz": 4.347248085818441,
+      "RMS_error_bps_Hz": 3.838306349017136,
+      "author_first_last": [
+        8.97868918918919,
+        19.033472972972973
+      ],
+      "actual_first_last_on_same_domain": [
+        7.8699337396916125,
+        14.686224887154532
+      ],
+      "author_decimal_coordinate_accuracy_not_raw_simulation_data": true
+    },
+    {
+      "author_curve": "surrogate_kappa6",
+      "current_curve": "history.mrt.objective; kappa=6",
+      "author_vector_sample_count": 600,
+      "current_actual_full200_curve_sample_count": 911,
+      "all_author_samples_within_actual_curve_domain": true,
+      "max_abs_error_bps_Hz": 1.759833795835398,
+      "RMS_error_bps_Hz": 1.5830716569616765,
+      "author_first_last": [
+        8.010337837837838,
+        11.773351351351351
+      ],
+      "actual_first_last_on_same_domain": [
+        6.947910806073867,
+        10.167607516972
+      ],
+      "author_decimal_coordinate_accuracy_not_raw_simulation_data": true
+    }
+  ]
+}

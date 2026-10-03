@@ -1,0 +1,154 @@
+{
+  "scope": "all4_original_vector_curves_with_two_declared_index_protocols_no_data_fitting",
+  "sources_sha256": {
+    "Convergence_MR.eps": "872d891a8563ab427ddda37e805949f410b3e79293ceb56eb245a1082ada873c",
+    "full200-matlab-original-Fig3-unfitted-vector-comparison-v1.json": "7439eba8ea08b477186630f07f4acc7e76c106c3903f3e8798043a4b5228ed63",
+    "two-timescale-ma-matlab-figure-03.json": "f7b1aa4f1a3cb9fa4e2ede4feb33fe4ceed69a337662ae751c2f926c11912f96",
+    "compare_full200_original_vector_fig3_indexing_v2.py": "e9eb158accdaca24ce259e96606d49ed4026cdbb064e030d3b344367cdf82045"
+  },
+  "full200_actual_MATLAB_curves_not_Python_full_bank_claim": true,
+  "original_EPS_axes_and_legend_visually_verified": true,
+  "original_history_storage_index_convention_not_reported": true,
+  "v1_plus1_index_was_a_declared_assumption_not_certification_of_historical_storage": true,
+  "both_prior_conventions_retained_no_minimum_RMS_convention_selected": true,
+  "no_vertical_scale_offset_or_power_noise_geometry_fitted": true,
+  "no_curves_discarded_or_geometries_reweighted": true,
+  "original_curve_closeness_verified": false,
+  "historical_figure_recovery_claimed": false,
+  "results": [
+    {
+      "fixed_index_shift": 0,
+      "prior_index_assumption": "author_x_is_completed_sweep_number_1",
+      "original_storage_convention_verified": false,
+      "comparison_rows": [
+        {
+          "author_curve": "actual_ergodic_kappa100",
+          "actual_curve": "history.mrt.instantaneous_MC_mean; kappa=100",
+          "author_vector_samples": 600,
+          "RMS_bps_Hz": 3.6846695783130103,
+          "max_abs_bps_Hz": 4.238798949570766,
+          "author_first_last": [
+            9.422932432432432,
+            19.066391891891893
+          ],
+          "actual_on_same_domain_first_last": [
+            8.558484095400392,
+            14.827592942321127
+          ]
+        },
+        {
+          "author_curve": "actual_ergodic_kappa6",
+          "actual_curve": "history.mrt.instantaneous_MC_mean; kappa=6",
+          "author_vector_samples": 600,
+          "RMS_bps_Hz": 1.5819744411184207,
+          "max_abs_bps_Hz": 1.7223432585976095,
+          "author_first_last": [
+            8.250094594594593,
+            12.062851351351352
+          ],
+          "actual_on_same_domain_first_last": [
+            7.377159402347127,
+            10.426572694749177
+          ]
+        },
+        {
+          "author_curve": "surrogate_kappa100",
+          "actual_curve": "history.mrt.objective; kappa=100",
+          "author_vector_samples": 600,
+          "RMS_bps_Hz": 3.831148597643458,
+          "max_abs_bps_Hz": 4.347216744459979,
+          "author_first_last": [
+            8.97868918918919,
+            19.033472972972973
+          ],
+          "actual_on_same_domain_first_last": [
+            8.506412787265145,
+            14.686256228512994
+          ]
+        },
+        {
+          "author_curve": "surrogate_kappa6",
+          "actual_curve": "history.mrt.objective; kappa=6",
+          "author_vector_samples": 600,
+          "RMS_bps_Hz": 1.5780174906356497,
+          "max_abs_bps_Hz": 1.6621090262335816,
+          "author_first_last": [
+            8.010337837837838,
+            11.773351351351351
+          ],
+          "actual_on_same_domain_first_last": [
+            7.235849992734391,
+            10.16768419531261
+          ]
+        }
+      ]
+    },
+    {
+      "fixed_index_shift": 1,
+      "prior_index_assumption": "author_plot_uses_default_vector_index_1_for_initial_state",
+      "original_storage_convention_verified": false,
+      "comparison_rows": [
+        {
+          "author_curve": "actual_ergodic_kappa100",
+          "actual_curve": "history.mrt.instantaneous_MC_mean; kappa=100",
+          "author_vector_samples": 600,
+          "RMS_bps_Hz": 3.6921788042574826,
+          "max_abs_bps_Hz": 4.23882998232984,
+          "author_first_last": [
+            9.422932432432432,
+            19.066391891891893
+          ],
+          "actual_on_same_domain_first_last": [
+            7.914560999184847,
+            14.827561909562053
+          ]
+        },
+        {
+          "author_curve": "actual_ergodic_kappa6",
+          "actual_curve": "history.mrt.instantaneous_MC_mean; kappa=6",
+          "author_vector_samples": 600,
+          "RMS_bps_Hz": 1.58738708090478,
+          "max_abs_bps_Hz": 1.8309773413531882,
+          "author_first_last": [
+            8.250094594594593,
+            12.062851351351352
+          ],
+          "actual_on_same_domain_first_last": [
+            7.08024054693835,
+            10.426492734752049
+          ]
+        },
+        {
+          "author_curve": "surrogate_kappa100",
+          "actual_curve": "history.mrt.objective; kappa=100",
+          "author_vector_samples": 600,
+          "RMS_bps_Hz": 3.838306349017136,
+          "max_abs_bps_Hz": 4.347248085818441,
+          "author_first_last": [
+            8.97868918918919,
+            19.033472972972973
+          ],
+          "actual_on_same_domain_first_last": [
+            7.8699337396916125,
+            14.686224887154532
+          ]
+        },
+        {
+          "author_curve": "surrogate_kappa6",
+          "actual_curve": "history.mrt.objective; kappa=6",
+          "author_vector_samples": 600,
+          "RMS_bps_Hz": 1.5830716569616765,
+          "max_abs_bps_Hz": 1.759833795835398,
+          "author_first_last": [
+            8.010337837837838,
+            11.773351351351351
+          ],
+          "actual_on_same_domain_first_last": [
+            6.947910806073867,
+            10.167607516972
+          ]
+        }
+      ]
+    }
+  ]
+}

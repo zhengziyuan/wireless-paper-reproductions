@@ -12,6 +12,28 @@ inventories, the explicit full-budget entry point, actual dual-language beam
 plotting and independent reference-error checks. Complete-figure adapters and
 reference agreement remain work in progress; this is not an all-figures-ready release.
 
+Actual newly completed scopes: communication Fig7 has12000/12000 recorded
+successful Python starts and an unfitted all1080-sample original-vector
+comparison (maximum linear-SNR error2.572838263652233e-7), with its array-axis
+erratum explicitly retained. Statistical-hotspot's18-case Python bank has
+independent all243-start/all54000-fresh-sample verification, but its54 original
+reference points still differ by up to8.008012646848087 bit/s/Hz. Neither
+scope is an all-paper or independent full-MATLAB completion certificate.
+MA Fig3's fresh native MATLAB-full-v2 has now actually completed200/200
+numerical cases; runtime/source/input/result bindings and all original
+recorded stops, domains, coordinate certificates and1000-draw populations
+pass before rendering. Fresh no-solver audits have now passed all200 cases:
+every accepted design's full1000-draw physical metrics and every original
+concave coordinate subproblem's independently reconstructed global-gap
+certificate. The unfitted original Fig3 comparison still fails, with maximum
+rate error about4.35 bit/s/Hz; the same-input full Python bank is not yet
+complete. Original-reference agreement remains a separate failed gate. The old
+cooperative183-point bank finishes154 valid/29 failed, not fully reproduced;
+[all19 MR QT failures have successful exact-representation WORK components](validation/cooperative-mr-precision19-python-v1/README.md),
+but10 phase failures and a new complete independent-language execution remain.
+See the [actual Fig7 result and full rerun commands](validation/communication-fig7-complete-python-v1/README.md)
+and [statistical18 evidence with its unresolved original-reference discrepancy](validation/hotspot-statistical-validated18-python-v1/README.md).
+
 The original theoretical algorithms, dimensions, physical units, channel assumptions, baseline definitions, initialization counts, stopping rules, and figure scenarios must be retained. No alternative algorithm or smaller production scenario may be used to stand in for the paper.
 
 The older `../papers/` implementations are superseded previews, not this strict release. Existing parity outputs in `../validation/` concern only those previews.

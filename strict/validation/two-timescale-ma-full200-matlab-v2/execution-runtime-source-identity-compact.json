@@ -1,0 +1,126 @@
+{
+  "paper_id": "two-timescale-ma",
+  "engine": "matlab",
+  "scope": "actual_full_bank_execution_time_source_identity_NOT_convergence_or_reference_certificate",
+  "binding": {
+    "paper_id": "two-timescale-ma",
+    "source_identity": [
+      {
+        "relative_path": "two-timescale-ma/run_strict_two_timescale_ma_full_v2.m",
+        "sha256": "efa6f46df3d486cc24db1699becb596db80de0c1efe15a485e8e3a478459503d"
+      },
+      {
+        "relative_path": "two-timescale-ma/run_full_ma_figure_v2.m",
+        "sha256": "864b593bcc624551eb302b64a316efab8b1f3fcef97f42317a06c8df87db9dd6"
+      },
+      {
+        "relative_path": "two-timescale-ma/strict_ma_full_v2_implementation_fingerprint.m",
+        "sha256": "4164b656a99df5e3af75a8024b78d7641ce8fc6d5e51c3680877019c57baed13"
+      },
+      {
+        "relative_path": "two-timescale-ma/ma_exact_coordinate.m",
+        "sha256": "d4edf54ec1c314fc4d1ae0369b8d049b740091676927e1e3fad14b05f0023e17"
+      },
+      {
+        "relative_path": "run_matlab_bank_checked.m",
+        "sha256": "f240008de6bbf5ed681ac9ae8b203d637010772807da361b2d842e2ea99ed474"
+      }
+    ],
+    "matlab_version": "25.2.0.2998904 (R2025b)",
+    "runtime_implementation_fingerprint": "e78708e52bbfe9733a9fe24faaa736188015469a9d87ea90b41c5a1d0966bf37",
+    "manifest_sha256": "12f2894bb246049035cadd323a0b1fe63fa50a62649a8bc066ef2e4133873337",
+    "configuration_sha256": "72bd6211cd90e238bfa34a25d4f8e56d29454b01c51aca32aa483488475a0d80",
+    "plan_sha256": "0f730ebecb029432d4c4638f3e5578d2fa04fbf4a0a1250ffe1d31c771f009c0",
+    "expected_jobs": 200
+  },
+  "implementation_fingerprint": "e78708e52bbfe9733a9fe24faaa736188015469a9d87ea90b41c5a1d0966bf37",
+  "sources_before": [
+    {
+      "relative_path": "two-timescale-ma/run_strict_two_timescale_ma_full_v2.m",
+      "sha256": "efa6f46df3d486cc24db1699becb596db80de0c1efe15a485e8e3a478459503d"
+    },
+    {
+      "relative_path": "two-timescale-ma/run_full_ma_figure_v2.m",
+      "sha256": "864b593bcc624551eb302b64a316efab8b1f3fcef97f42317a06c8df87db9dd6"
+    },
+    {
+      "relative_path": "two-timescale-ma/strict_ma_full_v2_implementation_fingerprint.m",
+      "sha256": "4164b656a99df5e3af75a8024b78d7641ce8fc6d5e51c3680877019c57baed13"
+    },
+    {
+      "relative_path": "two-timescale-ma/ma_exact_coordinate.m",
+      "sha256": "d4edf54ec1c314fc4d1ae0369b8d049b740091676927e1e3fad14b05f0023e17"
+    },
+    {
+      "relative_path": "run_matlab_bank_checked.m",
+      "sha256": "f240008de6bbf5ed681ac9ae8b203d637010772807da361b2d842e2ea99ed474"
+    }
+  ],
+  "sources_after": [
+    {
+      "relative_path": "two-timescale-ma/run_strict_two_timescale_ma_full_v2.m",
+      "sha256": "efa6f46df3d486cc24db1699becb596db80de0c1efe15a485e8e3a478459503d"
+    },
+    {
+      "relative_path": "two-timescale-ma/run_full_ma_figure_v2.m",
+      "sha256": "864b593bcc624551eb302b64a316efab8b1f3fcef97f42317a06c8df87db9dd6"
+    },
+    {
+      "relative_path": "two-timescale-ma/strict_ma_full_v2_implementation_fingerprint.m",
+      "sha256": "4164b656a99df5e3af75a8024b78d7641ce8fc6d5e51c3680877019c57baed13"
+    },
+    {
+      "relative_path": "two-timescale-ma/ma_exact_coordinate.m",
+      "sha256": "d4edf54ec1c314fc4d1ae0369b8d049b740091676927e1e3fad14b05f0023e17"
+    },
+    {
+      "relative_path": "run_matlab_bank_checked.m",
+      "sha256": "f240008de6bbf5ed681ac9ae8b203d637010772807da361b2d842e2ea99ed474"
+    }
+  ],
+  "runtime_implementation_fingerprint_after": "e78708e52bbfe9733a9fe24faaa736188015469a9d87ea90b41c5a1d0966bf37",
+  "runtime_dependency_identity_unchanged": true,
+  "source_unchanged_during_run": true,
+  "expected_jobs": 200,
+  "all_result_identities_pass": true,
+  "full_reproduction_pass": false,
+  "original_curve_closeness_verified": false,
+  "original_execution_identity_sha256": "736b4f9a5b8347c3b59878e7dc64aa73ca19ce0c03340b6a2a9ee6590d04e0ca",
+  "raw_identity_records_are_bound_in_freeze_manifest": true,
+  "runtime_source_identity": {
+    "version": "MATLAB-full-v2-history-storage",
+    "backend": "certified_exact_2d",
+    "matlab_version": "25.2.0.2998904 (R2025b)",
+    "blas_version": "Intel(R) oneAPI Math Kernel Library Version 2024.1-Product Build 20240215 for Intel(R) 64 architecture applications (CNR branch AVX2)",
+    "lapack_version": "Intel(R) oneAPI Math Kernel Library Version 2024.1-Product Build 20240215 for Intel(R) 64 architecture applications (CNR branch AVX2) supporting Linear Algebra PACKage (LAPACK 3.11.0)",
+    "sources": [
+      {
+        "name": "run_strict_two_timescale_ma_full_v2.m",
+        "path": "strict/two-timescale-ma/run_strict_two_timescale_ma_full_v2.m",
+        "sha256": "efa6f46df3d486cc24db1699becb596db80de0c1efe15a485e8e3a478459503d"
+      },
+      {
+        "name": "run_full_ma_figure_v2.m",
+        "path": "strict/two-timescale-ma/run_full_ma_figure_v2.m",
+        "sha256": "864b593bcc624551eb302b64a316efab8b1f3fcef97f42317a06c8df87db9dd6"
+      },
+      {
+        "name": "strict_ma_full_v2_implementation_fingerprint.m",
+        "path": "strict/two-timescale-ma/strict_ma_full_v2_implementation_fingerprint.m",
+        "sha256": "4164b656a99df5e3af75a8024b78d7641ce8fc6d5e51c3680877019c57baed13"
+      },
+      {
+        "name": "ma_exact_coordinate.m",
+        "path": "strict/two-timescale-ma/ma_exact_coordinate.m",
+        "sha256": "d4edf54ec1c314fc4d1ae0369b8d049b740091676927e1e3fad14b05f0023e17"
+      }
+    ],
+    "selected_runtime_dependencies": [],
+    "fresh_before_after_not_persistent_cache": true,
+    "same_runtime_as_old_bank_claimed": false,
+    "runtime_binary_hashes_complete": false,
+    "implementation_fingerprint": "e78708e52bbfe9733a9fe24faaa736188015469a9d87ea90b41c5a1d0966bf37",
+    "publication_path_redaction_performed": true,
+    "raw_source_identity_evidence_preserved": true
+  }
+}

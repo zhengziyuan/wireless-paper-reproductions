@@ -1,0 +1,209 @@
+{
+  "paper_id": "hotspot-satcom",
+  "figure": 10,
+  "data_kind": "independent_simulation_curves",
+  "panels": [
+    {
+      "source_id": "3-10",
+      "curves": [
+        {
+          "label": "AO_kS0",
+          "x": [
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            5.0,
+            6.0
+          ],
+          "y": [
+            8.375649921874256,
+            9.222082949296729,
+            9.851000220944323,
+            10.33564878333721,
+            10.339627024819247,
+            10.343596529393395
+          ]
+        },
+        {
+          "label": "TwoStage_kS0",
+          "x": [
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            5.0,
+            6.0
+          ],
+          "y": [
+            8.375657995653253,
+            5.349570188017652,
+            9.557043068631897,
+            9.819321763217433,
+            9.767852160200233,
+            5.2494161752148445
+          ]
+        },
+        {
+          "label": "NoRIS_kS0",
+          "x": [
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            5.0,
+            6.0
+          ],
+          "y": [
+            3.6100456045273885,
+            4.076057943202199,
+            4.420662410751561,
+            4.705379123416994,
+            4.709158363006057,
+            4.712928968609588
+          ]
+        },
+        {
+          "label": "AO_kS10",
+          "x": [
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            5.0,
+            6.0
+          ],
+          "y": [
+            9.899522361188101,
+            10.419259932629346,
+            10.843936472622618,
+            11.18225494087333,
+            11.186268325305024,
+            11.190274111880614
+          ]
+        },
+        {
+          "label": "TwoStage_kS10",
+          "x": [
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            5.0,
+            6.0
+          ],
+          "y": [
+            9.899382384394386,
+            6.965607606608612,
+            10.54885709779052,
+            10.684706124933223,
+            10.729620373771805,
+            7.979228105547726
+          ]
+        },
+        {
+          "label": "NoRIS_kS10",
+          "x": [
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            5.0,
+            6.0
+          ],
+          "y": [
+            4.4166332393590135,
+            4.762578577618202,
+            5.033915262944086,
+            5.262969241043365,
+            5.266865698649103,
+            5.270754618764028
+          ]
+        },
+        {
+          "label": "AO_kS20",
+          "x": [
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            5.0,
+            6.0
+          ],
+          "y": [
+            10.568002148160422,
+            10.845761106797482,
+            11.094369442748931,
+            11.303788782375674,
+            11.307807193536869,
+            11.311817972483956
+          ]
+        },
+        {
+          "label": "TwoStage_kS20",
+          "x": [
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            5.0,
+            6.0
+          ],
+          "y": [
+            10.568003681293932,
+            7.42123531238448,
+            10.799653111231942,
+            10.808101399752042,
+            10.86049116905521,
+            8.183199562296336
+          ]
+        },
+        {
+          "label": "NoRIS_kS20",
+          "x": [
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            5.0,
+            6.0
+          ],
+          "y": [
+            4.736766920376162,
+            4.9806095206481205,
+            5.179421204354826,
+            5.3517293768685485,
+            5.3556436049449205,
+            5.359550534711859
+          ]
+        }
+      ],
+      "x": {
+        "quantity": "HU count",
+        "unit": "index"
+      },
+      "y": {
+        "quantity": "source ratio-of-expected-powers HU sum rate",
+        "unit": "bps/Hz"
+      },
+      "algorithm": "explicit_corrected_vector_QT_erratum_not_printed_invalid_SOC",
+      "exact_ergodic_E_log_MC_stored_separately": true
+    }
+  ],
+  "full_execution_verified": true,
+  "all_source_panels_present": true,
+  "failed_samples_discarded": false,
+  "hotspot_HU_pair_distance_contract_declared": true,
+  "scenario_source_constraints_verified": false,
+  "source_conforming_full_execution_verified": false,
+  "source_conformance_note": "A declared HU-distance contract and numerical gates do not establish every source assumption, historical feed/LoS geometry, covariance convention or author initialization.",
+  "published_figure_reproduction_certified": false,
+  "original_curve_closeness_verified": false,
+  "source_version": "author_thesis_Chapter3_TeX_and_original_EPS",
+  "final_published_figure_numbering_verified": false,
+  "input_file_sha256": {
+    "0:statistical-validated18-final-python.json": "a61f569e3d2a65a10b3d6f22e95f63c06ce646fcdb72e4916bba712766540343"
+  },
+  "renderer_source_sha256": "e8b86dc376444928cdbb48f05525a966fdaac376e8ec162a44c1665226a60f7d",
+  "input_and_renderer_unchanged_during_render": true
+}

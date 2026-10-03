@@ -1,0 +1,18 @@
+{
+  "scope": "Public source-specific boundedness and finite-budget audit; not a new numerical source or all-algorithm invalidity claim",
+  "author_R1_sha256": "b0ac3782b11cdb7d2b0d1dfe581bfcfbe17c72c52f64aef3e55cd0bfce25592a",
+  "frozen_scientific_source_digest": "bf41284cc32086f63e1b340b6f180bd1b1f00507950f55e3ab6df0e9aa4553cb",
+  "source_checks": [
+    {"claim": "Printed Algorithm1 forces at least one update even for a supplied stationary initial point", "lines": [577, 578], "test": "i=0 OR gradient_norm >= epsilon_RCG", "corrected_implementation_is_explicit_erratum": true},
+    {"claim": "Each current inner approximate stationarity is a condition of the stated RALM conclusion", "lines": [599, 613, 614, 615], "later_final_KKT_does_not_certify_earlier_inner": true},
+    {"claim": "All finite budgets explicitly reported", "lines": [934], "random_initializations": 6000, "outer_iterations": 30, "inner_cap_each": 4000, "uniform_reach_tolerance_within_cap_not_proved": true},
+    {"claim": "Declared full product is noncompact because eta ranges over R", "lines": [313, 599], "counterexample": "Fix other coordinates, eta_n=n"},
+    {"claim": "Strictly positive row-simplex is noncompact independently of eta", "lines": [307, 309, 320, 599], "counterexample_for_U_at_least_2": "Row first coordinate1/n, remaining(U-1) coordinates(1-1/n)/(U-1), n>=2; excluded boundary limit"}
+  ],
+  "corrected_initial_stopping": {"file": "mis-sensing/solver_erratum.py", "lines": [110, 111, 112, 113], "rule": "Return supplied state before update if declared physical projected-KKT norm is strictly below current tolerance", "not_literal_printed_while": true, "no_stop_tolerance_relaxation": true},
+  "fixed_inner_sublevel_repair": {"assumptions": ["same positive constant scalar noise", "finite nonnegative beta", "unit steering and phase entries", "closed nonnegative row-simplex", "fixed finite lambda", "fixed rho>0"], "physical_metric_bound": "0<=a_k<=max_i beta_i*M^4/noise", "eta_negative_infinity": "All positive-square penalties eventually inactive; -eta tends positive infinity", "eta_positive_infinity": "Uniformly active positive quadratic penalties dominate -eta", "conclusion": "Each fixed-inner continuous ALM sublevel is compact on closed phase/simplex times bounded eta", "does_not_prove": ["full product compactness", "open-simplex boundary exclusion", "uniform outer sublevel boundedness", "constraint qualification", "raw-PR sufficient descent", "smoothness of projected face crossings", "4000-step accuracy guarantee", "global optimum"]},
+  "zero_based_schedule": {"actual_used_outer_indices": [0, 29], "last_used_epsilon": 1.2589254117941667e-6, "next_scheduled_epsilon_after_30": 1e-6, "early_AND_distinct_from_prescribed_budget_completion": true},
+  "failed_receipts_must_remain": true,
+  "source_py_m_settings_and_source_map_not_modified": true,
+  "qualified_RALM_RCG_theory_not_wholesale_refuted": true
+}
