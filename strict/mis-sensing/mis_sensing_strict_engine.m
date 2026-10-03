@@ -5,8 +5,14 @@ base=fileparts(mfilename('fullpath'));
 if nargin<2, figureName="component-test"; end
 if nargin<3, settingsPath=fullfile(base,'settings.json'); end
 settings=jsondecode(fileread(settingsPath));
-if any(string(figureName)==["component-test","component-test-guard"])
+if string(figureName)=="reference-fingerprint"
+    result=reference_fingerprint(base,settings,settingsPath);
+elseif any(string(figureName)==["component-test","component-test-guard"])
     result=component_test(base,settings.kind,string(figureName)=="component-test-guard");
+elseif string(figureName)=="closed-form-test"
+    result=closed_form_test();
+elseif string(figureName)=="stable-increment-test"
+    result=stable_increment_test(base);
 elseif startsWith(string(figureName),"plan:")
     requested=extractAfter(string(figureName),5);
     figures=jsondecode(fileread(fullfile(base,'figures.json')));
@@ -150,6 +156,43 @@ gamma=metric(model,z,objective);q=z.eta-sum(z.X.*gamma,2);chi=max(0,lambda+rho*q
 [~,gp,gt]=metric(model,z,objective,-chi.*z.X);
 eg=struct('phi',gp,'theta',gt,'X',-chi.*gamma,'eta',-1+sum(chi));detail=struct('q',q,'gamma',gamma);
 end
+function value=sinr_alm_difference(model,base,candidate,lambda,rho)
+% Algebraically exact increments; retains cross terms and active-set crossings.
+[oldbar,~,q,a]=fields(model,base);[newbar,~,~,~]=fields(model,candidate);
+dv=oldbar.*(candidate.phi-base.phi).'+(newbar-oldbar).*candidate.phi.';
+dq=model.c*dv.';da=2*real(conj(q).*dq)+abs(dq).^2;
+echo=model.beta.*a.^2;decho=model.beta.*(2*a.*da+da.^2);
+D=sum(echo,1)-echo(1:model.targets,:)+model.config.noise_over_power;
+dD=sum(decho,1)-decho(1:model.targets,:);gamma=echo(1:model.targets,:)./D;
+dgamma=(decho(1:model.targets,:)-gamma.*dD)./(D+dD);
+deta=candidate.eta-base.eta;qres=base.eta-sum(base.X.*gamma,2);
+dqres=deta-sum((candidate.X-base.X).*gamma+candidate.X.*dgamma,2);
+raw=lambda+rho*qres;draw=rho*dqres;chi=max(0,raw);dchi=zeros(size(raw));
+on=raw>0;stay=on&(raw+draw>0);dchi(stay)=draw(stay);dchi(on&~stay)=-raw(on&~stay);dchi(~on)=max(0,raw(~on)+draw(~on));
+value=-deta+sum(dchi.*(2*chi+dchi))/(2*rho);
+end
+function value=objective_increment(evaluate,base,candidate,f,opts)
+if isfield(opts,'stable_difference'),value=opts.stable_difference(base,candidate);else,value=evaluate(candidate)-f;end
+end
+function z=decode_test_state(state)
+z=struct('phi',state.phi.real(:)+1i*state.phi.imag(:),'theta',state.theta.real(:)+1i*state.theta.imag(:),'X',state.X,'eta',state.eta);
+end
+function result=stable_increment_test(base)
+% Full dimensions, independent Decimal60 truth frozen by the Python test.
+fixture=jsondecode(fileread(fullfile(base,'tests','stable_increment_fixture.json')));
+inputs=jsondecode(fileread(fullfile(base,'tests','stable_increment_cases.json')));
+model=build_model(fixture.model);coeff=fixture.steering_coefficients;model.c=coeff.real+1i*coeff.imag;
+cases=as_cells(inputs.cases);checks=cell(numel(cases),1);passed=true;
+for j=1:numel(cases)
+entry=cases{j};z=decode_test_state(entry.base_state);trial=decode_test_state(entry.candidate_state);
+value=sinr_alm_difference(model,z,trial,entry.multipliers(:),entry.penalty);
+naive=augmented(model,trial,entry.multipliers(:),entry.penalty,"sinr")-augmented(model,z,entry.multipliers(:),entry.penalty,"sinr");
+errorvalue=abs(value-entry.reference_difference);ok=isfinite(value)&&errorvalue<=entry.test_only_rounding_error_bound;
+checks{j}=struct('case',entry.case,'reference_difference',entry.reference_difference,'difference_stable_double',value,'difference_naive_double',naive,'absolute_error',errorvalue,'test_only_rounding_error_bound',entry.test_only_rounding_error_bound,'increment_identity_pass',ok);passed=passed&&ok;
+end
+result=struct('scope','full_dimension_400_256_25_9_increment_identity_test_not_paper_figure','precision_reference','independent_Decimal_60_frozen_same_complex_coefficients','number_of_checks',numel(checks),'all_checks_pass',passed,'line_search_acceptance_slack_added',false,'optimizer_stop_threshold_changed',false,'original_figure_reproduction_certified',false,'checks',{checks});
+assert(passed,'Exact SINR increment does not match independent high-precision truth');
+end
 function value=ip(a,b),value=real(sum(conj(a(:)).*b(:)));end
 function g=project(z,eg)
 g=eg;names=fieldnames(eg);for n=1:numel(names),b=names{n};
@@ -180,12 +223,18 @@ d.(b)=-g.(b);one.(b)=d.(b);restarts.(b)=true;probe=retract(z,one,alpha);delta=pr
 end
 if ip(delta,delta)==0,alphas.(b)=0;backtracks.(b)=0;inactive.(b)=true;continue;end
 inactive.(b)=false;rawslope=ip(g.(b),d.(b));accepted=false;
+exhaustionrestart=guard&&isfield(opts,'exhausted_direction_policy')&&string(opts.exhausted_direction_policy)=="documented_block_restart";
+for attempt=1:1+double(exhaustionrestart)
 for ls=1:opts.max_backtracks
 trialcandidate=retract(z,one,alpha);actual=ip(g.(b),trialcandidate.(b)-z.(b));if guard,predicted=actual;else,predicted=alpha*rawslope;end
-trial=evaluate(trialcandidate);if isfinite(trial)&&predicted<0&&trial<=f+opts.armijo_constant*predicted,accepted=true;break;end
+change=objective_increment(evaluate,z,trialcandidate,f,opts);if isfinite(change)&&predicted<0&&change<=opts.armijo_constant*predicted,accepted=true;break;end
 alpha=alpha*opts.backtrack_factor;
 end
-alphas.(b)=alpha;backtracks.(b)=ls-1;
+if accepted||attempt==2||~exhaustionrestart,break;end
+d.(b)=-g.(b);one.(b)=d.(b);rawslope=-ip(g.(b),g.(b));restarts.(b)=true;restartreasons.(b){end+1}='backtracking_exhausted';
+alpha=opts.initial_step;if isfield(opts,'initial_steps')&&isfield(opts.initial_steps,b),alpha=opts.initial_steps.(b);end
+end
+alphas.(b)=alpha;backtracks.(b)=ls-1+(attempt-1)*opts.max_backtracks;
 if ~accepted
 info=struct('block_step_sizes',alphas,'block_backtracks',backtracks,'block_non_descent_restarts',restarts,'block_raw_direction_slopes',rawslopes,'block_restart_reasons',restartreasons,'raw_projected_displacement_slopes',rawactual,'inactive_projected_blocks',inactive,'non_descent_restart',any(structfun(@(v)v,restarts)));
 reason=['block_line_search_exhausted_',b];return;
@@ -201,7 +250,7 @@ for ls=1:opts.max_backtracks
 trialcandidate=retract(z,scaled,coupling);actual=0;rawpred=0;
 for n=1:numel(names),b=names{n};actual=actual+ip(g.(b),trialcandidate.(b)-z.(b));rawpred=rawpred+alphas.(b)*ip(g.(b),d.(b));end
 if guard,predicted=actual;else,predicted=coupling*rawpred;end
-trial=evaluate(trialcandidate);if isfinite(trial)&&predicted<0&&trial<=f+opts.armijo_constant*predicted,accepted=true;break;end
+change=objective_increment(evaluate,z,trialcandidate,f,opts);if isfinite(change)&&predicted<0&&change<=opts.armijo_constant*predicted,accepted=true;break;end
 coupling=coupling*opts.backtrack_factor;
 end
 info.coupling_scale=coupling;info.coupling_backtracks=ls-1;info.accepted_displacement_slope=actual;
@@ -231,10 +280,10 @@ for n=1:numel(names),b=names{n};d.(b)=-g.(b);end,slope=-ng^2;history{end}.non_de
 else,reason='non_descent_raw_PR_direction';break;end
 end
 alpha=opts.initial_step;accepted=false;
-for ls=1:opts.max_backtracks,candidate=retract(z,d,alpha);trial=evaluate(candidate);
+for ls=1:opts.max_backtracks,candidate=retract(z,d,alpha);change=objective_increment(evaluate,z,candidate,f,opts);
 feasibleslope=0;for n=1:numel(names),b=names{n};feasibleslope=feasibleslope+ip(g.(b),candidate.(b)-z.(b));end
 if guard,predicted=feasibleslope;else,predicted=alpha*slope;end
-if isfinite(trial)&&predicted<0&&trial<=f+opts.armijo_constant*predicted,accepted=true;break;end,alpha=alpha*opts.backtrack_factor;end
+if isfinite(change)&&predicted<0&&change<=opts.armijo_constant*predicted,accepted=true;break;end,alpha=alpha*opts.backtrack_factor;end
 if ~accepted,reason='line_search_exhausted';break;end
 oldg=g;oldd=d;z=candidate;
 end
@@ -254,6 +303,7 @@ function [z,history,metrics]=sense_solve(model,z,opts,objective)
 rho=opts.rho_initial;lambda=repmat(opts.lambda_initial,model.targets,1);epsilon=opts.epsilon_initial;factor=(opts.epsilon_min/epsilon)^(1/opts.outer_iterations);oldiota=[];history={};
 for outer=1:opts.outer_iterations
 oldz=z;inneropts=opts.rcg;inneropts.gradient_tolerance=epsilon;
+if objective=="sinr"&&isfield(inneropts,'objective_difference')&&string(inneropts.objective_difference)=="exact_sinr_increment",inneropts.stable_difference=@(base,candidate)sinr_alm_difference(model,base,candidate,lambda,rho);end
 [z,h,stop]=rcg(z,@(x)augmented(model,x,lambda,rho,objective),inneropts);[~,~,detail]=augmented(model,z,lambda,rho,objective);q=detail.q;
 iota=max(q,-lambda/rho);newlambda=min(opts.lambda_max,max(opts.lambda_min,lambda+rho*q));
 if outer==1||max(iota)<=opts.iota_progress_ratio*max(oldiota),newrho=rho;else,newrho=rho*opts.rho_factor;end
@@ -284,7 +334,7 @@ end
 function result=component_test(base,kind,guarded)
 fixture=jsondecode(fileread(fullfile(base,'unit_fixture.json')));model=build_model(fixture.model);
 z=struct('phi',exp(1i*fixture.phi_angles(:)),'theta',exp(1i*fixture.theta_angles(:)),'X',fixture.X,'eta',fixture.eta);opts=fixture.unit_options;
-if guarded,opts.line_search_policy='original_per_block_backtracking';opts.non_descent_policy='documented_non_descent_restart';end
+if guarded,opts.line_search_policy='original_per_block_backtracking';opts.non_descent_policy='documented_non_descent_restart';opts.objective_difference='exact_sinr_increment';opts.exhausted_direction_policy='documented_block_restart';end
 if string(kind)=="communications"
 z=rmfield(z,'eta');errors=gradient_check(z,@(x)comm_objective(model,x,1.3,"maximize_negative_softmin"));
 options=struct('rcg',opts,'initial_mu',1.3,'terminal_mu',.65,'objective_convention','maximize_negative_softmin');[z,h,metrics]=comm_solve(model,z,options);
@@ -369,12 +419,13 @@ az=repmat(azimuth,1,kt);el=repelem(elevation,kp);K=numel(az);
 end
 cfg=struct('ms1',point.ms1,'ms2',point.ms2,'azimuth_deg',az,'elevation_deg',el,'spacing_over_wavelength',settings.spacing_over_wavelength,'incidence_direction_cosines',settings.incidence_direction_cosines,'number_of_targets',K,'reference_snr',.01);
 if string(settings.kind)=="communications",cfg.reference_snr=settings.reference_snr;else
-cfg.echo_beta_squared=10^(settings.reference_echo_db/10);P=settings.power_dbm;if isfield(point,'power_dbm'),P=point.power_dbm;end
-cfg.noise_over_power=1/10^((P-30)/10);
+P=settings.power_dbm;if isfield(point,'power_dbm'),P=point.power_dbm;end
+contract=normalization_contract(settings,P);cfg.normalization_contract=contract;
+cfg.echo_beta_squared=contract.echo_beta_squared;cfg.noise_over_power=contract.noise_over_power;
 end
 if pslr
 gp=settings.pslr_grid(1);gt=settings.pslr_grid(2);caz=repmat(linspace(0,90,gp),1,gt);cel=repelem(linspace(30,70,gt),gp);
-cfg.azimuth_deg=[az,caz];cfg.elevation_deg=[el,cel];cfg.echo_beta_squared=[repmat(10^(settings.reference_echo_db/10),1,K),repmat(10^(settings.reference_echo_db/10)*settings.clutter_relative_echo,1,gp*gt)];
+cfg.azimuth_deg=[az,caz];cfg.elevation_deg=[el,cel];cfg.echo_beta_squared=[repmat(contract.echo_beta_squared,1,K),repmat(contract.echo_beta_squared*settings.clutter_relative_echo,1,gp*gt)];
 cfg.pslr_opponents=cell(K,1);
 for k=1:K,outside=abs(caz-az(k))>settings.mainlobe_guard_azimuth_deg|abs(cel-el(k))>settings.mainlobe_guard_elevation_deg;cfg.pslr_opponents{k}=[setdiff(0:K-1,k-1),K+find(outside)-1];end
 cfg.pslr_mu=settings.pslr_mu_initial;cfg.pslr_epsilon=settings.pslr_epsilon;
@@ -417,6 +468,54 @@ while mu>=settings.pslr_mu_terminal,model.config.pslr_mu=mu;[z,outer,metrics]=se
 else,[z,h,metrics]=sense_solve(model,z,opts,objective);
 end
 result=struct('paper_id','mis-sensing','scope','single_original_full_start_diagnostic_not_full_figure','figure',fig.id,'start',start,'original_number_of_starts',settings.number_of_starts,'configuration',point,'settings',settings,'metrics',metrics,'solver_status',solver_diagnostics(h,settings,objective),'history',{h},'state',serialize(z),'implementation_digest',implementation_digest());
+end
+function result=reference_fingerprint(base,settings,settingsPath)
+% Full original dimensions and per-start RALM budgets, not the 6000-start bank.
+assert(settings.number_of_starts==6000&&settings.outer_iterations==30&&settings.rcg_max_iterations==4000,'Keep original per-start budgets');
+referencePath=fullfile(fileparts(base),'figure-reference','mis-sensing-fig15.json');reference=jsondecode(fileread(referencePath));
+source=fingerprint_hashes(base,settingsPath,referencePath);began=tic;points=cell(1,6);feasible=true;converged=true;
+labels={'RIS continuous','RIS 1-bit','RIS 2-bit'};allvalues=zeros(6,3);
+for j=1:6
+power=12+3*j;point=struct('ms1',[10 10],'ms2',[0 0],'Kphi',2,'Ktheta',2,'power_dbm',power);model=make_model(point,settings,false);targets=cell(1,4);
+for target=1:4
+order=[target,setdiff(1:4,target,'stable')];cfg=model.config;cfg.azimuth_deg=cfg.azimuth_deg(order);cfg.elevation_deg=cfg.elevation_deg(order);cfg.number_of_targets=1;cfg.echo_beta_squared=model.beta(order);ris=build_model(cfg);
+z=struct('phi',conj(ris.c(1,:)).','theta',zeros(0,1),'X',ones(1,1),'eta',settings.initialization.eta_initial);started=tic;
+[z,h,metrics]=sense_solve(ris,z,solver_options(settings),"sinr");quantized=struct();names={'one_bit','two_bit'};
+for bits=1:2
+step=2*pi/2^bits;state=z;state.phi=exp(1i*step*floor(angle(z.phi)/step+.5));q=metric(ris,state,"sinr");quantized.(names{bits})=q(1,1);
+end
+status=solver_diagnostics(h,settings,"sinr");feasible=feasible&&metrics.maximum_constraint<=settings.feasibility_tolerance;converged=converged&&status.convergence_verified;
+targets{target}=struct('target_index',target-1,'target_azimuth_deg',model.config.azimuth_deg(target),'target_elevation_deg',model.config.elevation_deg(target),'metrics',metrics,'solver_status',status,'history',{h},'state',serialize(z),'quantized_sinr',quantized,'elapsed_seconds',toc(started));
+end
+minimum=[Inf Inf Inf];for k=1:4,t=targets{k};minimum=min(minimum,[t.metrics.min_binary_metric,t.quantized_sinr.one_bit,t.quantized_sinr.two_bit]);end
+allvalues(j,:)=10*log10(minimum);values=struct('RIS_continuous',allvalues(j,1),'RIS_1_bit',allvalues(j,2),'RIS_2_bit',allvalues(j,3));
+points{j}=struct('power_dbm',power,'normalization_contract',model.config.normalization_contract,'target_runs',{targets},'minimum_sinr_db',values);
+fprintf('P=%d dBm, continuous=%.9f, 1-bit=%.9f, 2-bit=%.9f\n',power,allvalues(j,1),allvalues(j,2),allvalues(j,3));
+end
+curves=as_cells(reference.curves);comparison={};
+for k=1:numel(curves)
+curve=curves{k};idx=find(strcmp(labels,curve.label));if isempty(idx),continue;end
+predicted=allvalues(:,idx).';errors=predicted-curve.y(:).';
+comparison{end+1}=struct('label',curve.label,'power_dbm',curve.x,'original_plot_vector_reference_db',curve.y,'independently_evaluated_simulation_db',predicted,'errors_db',errors,'maximum_absolute_error_db',max(abs(errors)),'root_mean_square_error_db',sqrt(mean(errors.^2)));
+end
+unchanged=isequal(source,fingerprint_hashes(base,settingsPath,referencePath));
+result=struct('paper_id','mis-sensing','language','matlab','figure','fig15_RIS_parameter_fingerprint',...
+'data_kind','independent_original_model_parameter_fingerprint_simulation_NOT_original_reference_copy',...
+'scope','four_original_targets_six_original_powers_one_deterministic_full_budget_start_NOT_6000_start_figure',...
+'initializer','conjugate_target_steering_no_fitted_phases','quantization','nearest_fixed_zero_alphabet_no_fitted_global_rotation_no_separate_discrete_optimizer',...
+'normalization_origin','effective_factor_inferred_physical_attribution_not_uniquely_identified_NOT_author_Tp_count_verified',...
+'settings',settings,'original_number_of_starts',settings.number_of_starts,'executed_starts_per_target_point',1,'point_count',6,'target_count',4,...
+'source_hashes',{source},'runtime_source_unchanged',unchanged,'original_reference_sha256',reference.source_sha256,...
+'points',{points},'comparison',{comparison},'all_selected_targets_feasible',feasible,'all_stopping_criteria_verified',converged,...
+'all_original_parameter_values_recovered',false,'full_figure_execution_complete',false,'original_figure_reproduction_certified',false,'elapsed_seconds',toc(began));
+assert(unchanged,'Sources changed during execution; rerun from frozen source');
+end
+function hashes=fingerprint_hashes(base,settingsPath,referencePath)
+files=[dir(fullfile(base,'*.py'));dir(fullfile(base,'*.m'))];paths=arrayfun(@(f)fullfile(base,f.name),files,'UniformOutput',false);paths=[paths;{settingsPath};{referencePath}];
+[~,order]=sort(string(paths));paths=paths(order);hashes=cell(size(paths));
+for j=1:numel(paths)
+fid=fopen(paths{j},'rb');assert(fid>=0);bytes=fread(fid,Inf,'*uint8');fclose(fid);md=java.security.MessageDigest.getInstance('SHA-256');md.update(bytes);raw=typecast(md.digest(),'uint8');digest=lower(reshape(dec2hex(raw,2).',1,[]));[~,name,extension]=fileparts(paths{j});hashes{j}=struct('filename',[name,extension],'sha256',digest);
+end
 end
 function out=optimize(model,settings,objective,seedoffset,checkpointpath)
 if nargin<5,checkpointpath='';end
@@ -461,16 +560,43 @@ for k=1:numel(files),fid=fopen(fullfile(base,files(k).name),'rb');assert(fid>=0)
 md.update(uint8(unicode2native([char(0),version,char(0),computer],'UTF-8')));
 raw=typecast(md.digest(),'uint8');digest=lower(reshape(dec2hex(raw,2).',1,[]));
 end
+function result=closed_form_test()
+% Independent exact finite identities; this is not a published figure run.
+cfg=struct('ms1',[20 20],'ms2',[16 16],'azimuth_deg',repmat([0 45 90],1,3),'elevation_deg',repelem([30 50 70],3),'spacing_over_wavelength',1/3,'incidence_direction_cosines',[0 0],'number_of_targets',9,'echo_beta_squared',1,'noise_over_power',1);
+model=build_model(cfg);out=evaluate_closed(model);state=out.state;
+z=struct('phi',state.phi.real(:)+1i*state.phi.imag(:),'theta',state.theta.real(:)+1i*state.theta.imag(:),'X',state.X,'eta',state.eta);
+[bar,v,q,powers]=fields(model,z);coords=zeros(400,2);local=zeros(256,2);m=0;n=0;
+for r=0:19,for c=0:19,m=m+1;coords(m,:)=[r c];end,end
+for r=0:15,for c=0:15,n=n+1;local(n,:)=[r c];end,end
+A=pi/(1/3)/4;expectedphi=exp(-1i*A/9*sum(coords.^2,2));expectedtheta=exp(1i*A/9*sum(local.^2,2));
+assert(max(abs(z.phi-expectedphi))<1e-12&&max(abs(z.theta-expectedtheta))<1e-12,'Both layers must share the same reference with no MS2-only offset');
+expected=[10;6;2;15;12;3;20;18;4];assert(isequal(out.selected_positions(:),expected),'Use original positive displacement nearest-index schedule');
+assert(all(sum(z.X,2)==1)&&isequal(size(z.X),[9 25]));
+az=deg2rad(cfg.azimuth_deg(:));el=deg2rad(cfg.elevation_deg(:));direction=[sin(el).*cos(az),sin(el).*sin(az)];
+cnegative=exp(-2i*pi/3*(direction*coords.'));literalphi=exp(1i*pi/12*sum(coords.^2,2));literaltheta=exp(-1i*pi/12*sum(local.^2,2));vliteral=repmat(literalphi.',25,1);linearerror=0;focuserror=0;
+for u=1:25
+r=floor((u-1)/5);c=mod(u-1,5);ix=zeros(1,256);n=0;
+for i=0:15,for j=0:15,n=n+1;ix(n)=(r+i)*20+c+j+1;end,end
+assert(isequal(model.indices(u,:),ix));outside=true(1,400);outside(ix)=false;assert(all(bar(u,outside)==1));vliteral(u,ix)=vliteral(u,ix).*literaltheta.';
+xy=coords(ix,:);exact=exp(-1i*A/9*(2*xy*[r;c]-r*r-c*c));linearerror=max(linearerror,max(abs(v(u,ix).'-exact)));
+if r*r+c*c<=16,response=exp(2i*pi/3*(xy*[r/4;c/4]));focuserror=max(focuserror,abs(abs(sum(response.*v(u,ix).'))-256));end
+end
+qliteral=cnegative*vliteral.';conjugacy=max(abs(qliteral-conj(q)),[],'all');powererror=max(abs(abs(qliteral).^2-powers),[],'all');
+assert(linearerror<1e-12&&focuserror<1e-10&&conjugacy<1e-10&&powererror<1e-8,'Full finite phase/field identities failed');
+result=struct('paper_id','mis-sensing','scope','independent_closed_form_identity_tests_not_original_figure_reproduction','full_dimensions',struct('ms1',[20 20],'ms2',[16 16],'targets',9,'positions',25),'checks',struct('same_reference_no_layer_only_offset',true,'all_nine_original_law_schedules',true,'full_finite_padding_conjugacy',true,'exact_finite_overlap_linear_phase',true,'row_major_mapping',true),'errors',struct('linear_phase',linearerror,'overlap_focus_amplitude',focuserror,'field_conjugacy',conjugacy,'field_power',powererror),'all_passed',true,'original_figure_reproduction_certified',false);
+end
 function out=evaluate_closed(model)
 mr=model.config.ms1(1);mc=model.config.ms1(2);nr=model.config.ms2(1);nc=model.config.ms2(2);ur=mr-nr+1;uc=mc-nc+1;
 if min(ur,uc)<=1,out=struct('available',false,'reason','Published closed-form A is singular when Ur or Uc equals one');return;end
 d=model.config.spacing_over_wavelength;A=pi/d*max(1/(ur-1),1/(uc-1));phase=zeros(model.M,1);nphase=zeros(model.N,1);m=0;
-for r=0:mr-1,for c=0:mc-1,m=m+1;phase(m)=A*d*d*(r*r+c*c);end,end
-n=0;for r=0:nr-1,for c=0:nc-1,n=n+1;nphase(n)=-A*d*d*((r+ur-1)^2+(c+uc-1)^2);end,end
+% Eq61 has negative array exponent. Our fields use positive exponent, so
+% conjugate both same-reference chirps; do not offset only the MS2 origin.
+for r=0:mr-1,for c=0:mc-1,m=m+1;phase(m)=-A*d*d*(r*r+c*c);end,end
+n=0;for r=0:nr-1,for c=0:nc-1,n=n+1;nphase(n)=A*d*d*(r*r+c*c);end,end
 z=struct('phi',exp(1i*phase),'theta',exp(1i*nphase),'X',zeros(model.targets,model.U),'eta',0);gm=metric(model,z,"sinr");
-az=deg2rad(model.config.azimuth_deg(1:model.targets));el=deg2rad(model.config.elevation_deg(1:model.targets));rows=min(ur-1,max(0,floor((ur-1)-pi/(A*d)*sin(el).*cos(az)+.5)));cols=min(uc-1,max(0,floor((uc-1)-pi/(A*d)*sin(el).*sin(az)+.5)));selected=rows(:)*uc+cols(:)+1;values=zeros(model.targets,1);
+az=deg2rad(model.config.azimuth_deg(1:model.targets));el=deg2rad(model.config.elevation_deg(1:model.targets));rows=min(ur-1,max(0,floor(pi/(A*d)*sin(el).*cos(az)+.5)));cols=min(uc-1,max(0,floor(pi/(A*d)*sin(el).*sin(az)+.5)));selected=rows(:)*uc+cols(:)+1;values=zeros(model.targets,1);
 for k=1:model.targets,z.X(k,selected(k))=1;values(k)=gm(k,selected(k));end
-out=struct('available',true,'minimum_sinr',min(values),'selected_positions',selected-1,'state',serialize(z));
+out=struct('available',true,'minimum_sinr',min(values),'selected_positions',selected-1,'state',serialize(z),'closed_form_convention','same_reference_conjugated_chirps_for_positive_array_exponent','scheduling_rule','source_positive_displacement_law_nearest_admissible_index_not_SINR_search','coordinate_origin','both_layers_zero_based_shared_reference_no_MS2_only_offset','original_figure_reproduction_certified',false);
 end
 function out=communication_beampattern_samples(model,state)
 az=-90:.5:90;cfg=model.config;cfg.azimuth_deg=az;cfg.elevation_deg=45*ones(size(az));cfg.number_of_targets=numel(az);grid=build_model(cfg);

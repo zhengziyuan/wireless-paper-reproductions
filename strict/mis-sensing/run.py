@@ -4,6 +4,7 @@ import argparse, json, math, hashlib, sys, os
 from pathlib import Path
 import numpy as np
 from engine import Model, communication_solve, sensing_solve, closed_form, check_gradient, simplex, serialize
+from normalization import normalization_contract
 
 HERE=Path(__file__).resolve().parent
 PAPER_ID=HERE.name
@@ -41,14 +42,16 @@ def make_model(point,settings,pslr=False):
              incidence_direction_cosines=settings["incidence_direction_cosines"],
              number_of_targets=K,reference_snr=settings.get("reference_snr",.01))
     if settings["kind"]=="sensing":
-        cfg["echo_beta_squared"]=10**(settings["reference_echo_db"]/10)
-        cfg["noise_over_power"]=1/(10**((point.get("power_dbm",settings["power_dbm"])-30)/10))
+        contract=normalization_contract(settings,point.get("power_dbm",settings["power_dbm"]))
+        cfg["normalization_contract"]=contract
+        cfg["echo_beta_squared"]=contract["echo_beta_squared"]
+        cfg["noise_over_power"]=contract["noise_over_power"]
     if pslr:
         gp,gt=settings["pslr_grid"]
         caz=np.tile(np.linspace(0,90,gp),gt)
         cel=np.repeat(np.linspace(30,70,gt),gp)
         cfg["azimuth_deg"]+=caz.tolist(); cfg["elevation_deg"]+=cel.tolist()
-        beta=np.full(K+gp*gt,10**(settings["reference_echo_db"]/10))
+        beta=np.full(K+gp*gt,contract["echo_beta_squared"])
         beta[K:]*=settings["clutter_relative_echo"]
         cfg["echo_beta_squared"]=beta.tolist()
         cfg["pslr_opponents"]=[]
@@ -186,13 +189,18 @@ def evaluate_closed(model):
     mr,mc=model.config["ms1"]; nr,nc=model.config["ms2"]; ur,uc=mr-nr+1,mc-nc+1
     d=model.config["spacing_over_wavelength"]; A=np.pi/d*max(1/(ur-1),1/(uc-1))
     az=np.deg2rad(model.config["azimuth_deg"][:model.targets]); el=np.deg2rad(model.config["elevation_deg"][:model.targets])
-    # Original continuous steering law; explicit orientation + nearest-index rounding.
-    row=np.clip(np.floor((ur-1)-np.pi/(A*d)*np.sin(el)*np.cos(az)+.5),0,ur-1).astype(int)
-    col=np.clip(np.floor((uc-1)-np.pi/(A*d)*np.sin(el)*np.sin(az)+.5),0,uc-1).astype(int)
+    # Original positive displacement law, no extra layer-only coordinate offset.
+    # Nearest-index recovery is explicit and never replaced by SINR maximisation.
+    row=np.clip(np.floor(np.pi/(A*d)*np.sin(el)*np.cos(az)+.5),0,ur-1).astype(int)
+    col=np.clip(np.floor(np.pi/(A*d)*np.sin(el)*np.sin(az)+.5),0,uc-1).astype(int)
     chosen=row*uc+col
     z["X"]=np.zeros_like(z["X"]); z["X"][np.arange(model.targets),chosen]=1
     return {"available":True,"minimum_sinr":float(np.min(metric[np.arange(model.targets),chosen])),
-            "selected_positions":chosen.tolist(),"state":serialize(z)}
+            "selected_positions":chosen.tolist(),"state":serialize(z),
+            "closed_form_convention":"same_reference_conjugated_chirps_for_positive_array_exponent",
+            "scheduling_rule":"source_positive_displacement_law_nearest_admissible_index_not_SINR_search",
+            "coordinate_origin":"both_layers_zero_based_shared_reference_no_MS2_only_offset",
+            "original_figure_reproduction_certified":False}
 
 def communication_beampattern_samples(model,state):
     """Evaluate every MIS position over the complete case-study angular cut."""
@@ -271,7 +279,8 @@ def component_test(guarded=False):
        "X":np.array(fixture["X"]),"eta":np.asarray(fixture["eta"])}
     opts=dict(fixture["unit_options"])
     if guarded:
-        opts.update(line_search_policy="original_per_block_backtracking",non_descent_policy="documented_non_descent_restart")
+        opts.update(line_search_policy="original_per_block_backtracking",non_descent_policy="documented_non_descent_restart",
+                    objective_difference="exact_sinr_increment",exhausted_direction_policy="documented_block_restart")
     if PAPER_ID=="mis-communications":
         z.pop("eta")
         evaluate=lambda x:model.communication_objective(x,1.3,"maximize_negative_softmin")

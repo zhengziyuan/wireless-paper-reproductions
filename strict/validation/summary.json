@@ -1,6 +1,6 @@
 {
   "scope": "Actual mathematical components and dual-language comparisons only; NOT complete paper figures",
-  "verification_timestamp": "2026-10-03T17:31:05+08:00",
+  "verification_timestamp": "2026-10-03T22:47:08+08:00",
   "python_runtime": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
   "component_evidence_verified": true,
   "full_published_figure_reproduction_passed": false,
@@ -13,8 +13,8 @@
         "history",
         "state"
       ],
-      "atol": 1e-07,
-      "rtol": 1e-06,
+      "atol": 1E-07,
+      "rtol": 1E-06,
       "evidence_sha256": {
         "python": "4a5876eb57cfec109086e82c8cea991c3ed7a7059b72d4cfe4f039ef4229e945",
         "matlab": "45cc30933ee0357fe5530ad33408755732ebbffb33bea606b9b8491deacb3b6b",
@@ -34,7 +34,8 @@
         "test_figure_inputs.py": "d25f2164a461d5b219d67612b125ef50aad283e823e98f167ead1999ce53b314",
         "test_line_search.py": "3adffb30d7f1616c4a0bd813d5424ef189f235e682215d0ddb4783e5c851b74a",
         "unit_fixture.json": "60f8ec722d403034c8f70ce54d570ceff3dfbceb60ffc48a7ffa5cb68da913e9"
-      }
+      },
+      "matlab_execution_basis": "Earlier actual MATLAB output; every MATLAB source hash verified unchanged; compared again to fresh Python output"
     },
     {
       "paper_id": "mis-sensing",
@@ -44,29 +45,41 @@
         "history",
         "state"
       ],
-      "atol": 1e-07,
-      "rtol": 1e-06,
+      "atol": 1E-07,
+      "rtol": 1E-06,
       "evidence_sha256": {
-        "python": "09c630182fac129692396a84d3347297bbbfa9d6fe9b2e5fc1a928326fe794a4",
-        "matlab": "0429e4d3f29436369e102207bece2354cdd67194a61582a1878c1bdbe6598a55",
-        "parity": "309b58eb621765c2f9df42c140a5de5bafb0b39c13f6b712c3b3c61a5cec8848"
+        "python": "e59342dd5e34575fc2940f1213f2239d63857933757808d79ef2efcca477ec70",
+        "matlab": "8bccc739efc43a77649846c404157702bdbb79dae3fc8cfec40a5534cf79c951",
+        "parity": "9f9fadf80d0e452287ae4b715c67b1d39479768476a0038dae56d885606ff61f"
       },
       "source_sha256": {
+        "CLOSED_FORM_CONVENTION.md": "396c4235bf301f8c734990fc5bd04fcb95c44ee75da2546e0d399a7fc5fee01f",
         "diagnose_full_start.py": "449b9465d62e5a1c7adeb6c4800876ef596e4501bcf0301e29706cbaed8e35a5",
-        "engine.py": "5766e622beb7adbe427fee7196916e5fe1fdc78e7c7ed153de21559f947bd42a",
-        "figure_map.json": "147a5d45ad5d7b3bcb2abf64cefd6c764daf86d631297513f412bcf77cc1f6bd",
+        "engine.py": "431527410553929fe174f5b050fa343fe02d89625f451283ce865be322b1ff60",
+        "figure_map.json": "81ba99f95e49e6fead9ac61993ff933236cd01131a89925e0b29af01629781fe",
         "figures.json": "5648c2d705204c88171c4eb300e1c4e74774041decaa7a82f64a9efd1e485e78",
-        "mis_sensing_strict_engine.m": "959cdf9d68f14908fdf020d51cdc483dde5a930e8650194e7f060681e40bbdbd",
+        "mis_sensing_strict_engine.m": "c316e21e67ec615df3c8ac24ad010823859fbdbc22da9008677583d3143f2e98",
+        "normalization.py": "2191745f9e3761d3ffcb3b8cd0dab2e8a7f071c10c8c8fb2486a3560ae7866b4",
+        "normalization_contract.m": "da1a3a51f375863589995c95067c68ae40b3fc8a551fe6de104fe975dbeb6df0",
         "plot_beampatterns.py": "1f4dfe523361e86ce13aae3a4a3a09b50831e7b8b6a7a681a9876d60f0675a7d",
-        "README.md": "32de6d1d1df86c35f2c98af6a50831b48ba93797d21a0c120dd0d929f362ffc2",
-        "run.py": "33f52db44bce2bcc49d48c50210f10392520870748bfa62c47fd3466839bfe09",
+        "README.md": "f06963443c7c8a78d83220694260c5bd8471531286541ce53fefed0610583864",
+        "reference_candidate_fingerprint.py": "b44c39cce8a552bdf7aa91fdc445b6efcc655e32b674062d9c90f8a56d862146",
+        "run.py": "8556b3635c1763391e28231e3304a64dab385a094753505384f2007978eca02e",
+        "run_correctness_checks.m": "0493990a6c548bb83238b2d6d70b1817c10bd81cec6c12d31933f165fb15fed7",
         "run_mis_sensing.m": "206254d89eef0b046c0c4d3ca9d6bdb2992b19e1149e608681e70f61143d626a",
-        "settings.json": "3e19281002c0a3b567f96016ce4ec74f85fe82d5068193c9fb4510aa61779369",
-        "source_map.json": "c55c8a7174f176699c4d1493c3a071be4e8d6d383966eacc3c24f4916c1efa44",
-        "test_figure_inputs.py": "d25f2164a461d5b219d67612b125ef50aad283e823e98f167ead1999ce53b314",
+        "run_reference_candidate.m": "ff2dfae02ab1ce68dc673001da18208d35642af84e950f74550dbb871e2294b4",
+        "settings.json": "7d0586a10ed25854a45222d6551822142cef5b4aa2b814a9463fb9c12115d2ee",
+        "settings_reference_candidate.json": "16e0700c4ab5070f9f101db95f72a65ab799f1e3c1c9bc3f3de1c229b283abeb",
+        "SIGNAL_NORMALIZATION.md": "e201ff1289ed8d4a04815447473b418a463461691ad291f0d496b1a107b4fed6",
+        "source_map.json": "3a1b8b2f8df75db988561082e6d675af296cd8a40846a2dd322227c5783042fb",
+        "test_closed_form.py": "183a4c95460e5100a7123112e6636af190b0d5d9c087afd5bbc7e765192c4a9d",
+        "test_figure_inputs.py": "614266254ad6fa7279ad347e507a6341f2ab14b0e10808334c0ca387b6278610",
         "test_line_search.py": "3adffb30d7f1616c4a0bd813d5424ef189f235e682215d0ddb4783e5c851b74a",
+        "test_normalization.py": "48643474ba193d0f32c3fe2f662b6ea24e26db1e8ce3f4c9784b5d9696179277",
+        "test_stable_increment.py": "ea9ee786c027a1c4b7137f241093d7cb95f0007c08e9f38ad87036cb8a2b111c",
         "unit_fixture.json": "60f8ec722d403034c8f70ce54d570ceff3dfbceb60ffc48a7ffa5cb68da913e9"
-      }
+      },
+      "matlab_execution_basis": "Fresh actual MATLAB rerun after the exact-increment and explicit-normalization changes"
     },
     {
       "paper_id": "rotatable-isac",
@@ -75,12 +88,12 @@
         "checks",
         "history"
       ],
-      "atol": 1e-06,
-      "rtol": 1e-05,
+      "atol": 1E-06,
+      "rtol": 1E-05,
       "evidence_sha256": {
-        "python": "cd9fdfab1908efc190baba901198736c9bcae3f5d8ca12e0cc153e765ecd488d",
+        "python": "7c09fe27029c9368e60ca09e0d0b4196c61efd6930a9c42965bbaf298be616d7",
         "matlab": "ed712f5fcc0fa81754f96022b3ba0331e8f8f21c2c369ecea26209b6499169d2",
-        "parity": "d324205d482224120132514bf5910698229abd4ab947e74bc77e32429eed21c9"
+        "parity": "3e452c201f7490a0d80a848b4f510149a2f86cae64c2c879559aa3924d746822"
       },
       "source_sha256": {
         "core.py": "fe67ca5ca4dea9316efbc091ad64180e4acf840a260abd76ecfffa4c18ed88dd",
@@ -97,7 +110,8 @@
         "source_contract.json": "0000cc08da641f393a42c82263e2ab01c91b878e025d5108ef5c3ca932e5f452",
         "strict_isac_implementation_fingerprint.m": "6bc473acf838c405139770fbf9696c1e5e6ca7d3cf3cb164cc8661c020406d2c",
         "test_metadata.py": "de2f96685a6c39e98e7bdf3b415a2d1f1c012ba5c19e208680677ebaf0d1651a"
-      }
+      },
+      "matlab_execution_basis": "Earlier actual MATLAB output; every MATLAB source hash verified unchanged; compared again to fresh Python output"
     },
     {
       "paper_id": "two-timescale-ma",
@@ -106,12 +120,12 @@
         "checks",
         "history"
       ],
-      "atol": 1e-06,
-      "rtol": 1e-05,
+      "atol": 1E-06,
+      "rtol": 1E-05,
       "evidence_sha256": {
-        "python": "6b82a09651ba935baa831de0f1d35c15dca0e53da091318534cd798f002b912e",
+        "python": "ca076e9f9ddbe182a0727f36cf9cac9745ac526891165841fcc2bb092de4d1bf",
         "matlab": "1a0d067bda48979fccb9fcfc39772e699f3ee5ee5f244b5ea6dfd96a4d6aea8a",
-        "parity": "378e3d984fdd6fb63a307e1e4a0dedb82b28bbf20695e9f3bbad34c1e5a0b9d7"
+        "parity": "59024caaba1e2a8cb6e58e1ccb2fc9e2e3b48269eb4f7a02d0cf28a1ff55473f"
       },
       "source_sha256": {
         "brute_force.py": "3f946a57a78fcc3af4fb5557713df8233134bf606ed9815bd6d7de7f927a99d6",
@@ -130,7 +144,8 @@
         "strict_ma_implementation_fingerprint.m": "00d4c934675370212418c2bfa64825ad0435e68ffb67454579156b82faa28aff",
         "test_correlated_derivatives.py": "6a9ec3c86483f7fd28229e0ea8d8f6a03e2b15d44a6e1482f14c3e853cedd7dd",
         "test_metadata.py": "bad55e8f81cdaecb19abf57e5fcf105b0a2bde36c41e861353a5e3dea981ee89"
-      }
+      },
+      "matlab_execution_basis": "Earlier actual MATLAB output; every MATLAB source hash verified unchanged; compared again to fresh Python output"
     },
     {
       "paper_id": "cooperative-satcom",
@@ -138,8 +153,8 @@
         "metrics",
         "checks"
       ],
-      "atol": 1e-06,
-      "rtol": 1e-05,
+      "atol": 1E-06,
+      "rtol": 1E-05,
       "evidence_sha256": {
         "python": "2b2cae206969b5e5327de52763f219664717e42122f094ee4401701a5237f9b8",
         "matlab": "8abb41d47fdce2db5459ab5648a95fb1437f261bdaaa6916016d51c70c7a5f7e",
@@ -165,7 +180,8 @@
         "strict_satcom_scenario.m": "d441703d0f05762e779516d146caffafb8d6b7baf63b5d985041c6810bd857c4",
         "termination.py": "b2ddf5f9f9be25dce18e0ebdeaed9f25926f348058970978bb66a1f34d7c5058",
         "test_termination.py": "fe669d3fbb9233a7b550cbac375840b094adbc64473eb7dc339a76230a8c8a18"
-      }
+      },
+      "matlab_execution_basis": "Earlier actual MATLAB output; every MATLAB source hash verified unchanged; compared again to fresh Python output"
     },
     {
       "paper_id": "hotspot-satcom",
@@ -173,12 +189,12 @@
         "metrics",
         "checks"
       ],
-      "atol": 1e-06,
-      "rtol": 1e-05,
+      "atol": 1E-06,
+      "rtol": 1E-05,
       "evidence_sha256": {
-        "python": "11ead2bb1751f417a026c3678dbe1ee7256b04a15ef2712d7d1b0e647bbddada",
+        "python": "c3533127e12681e6682e7a50b9a77b20fde0235f7efa3b5d6d9b8ced728d3797",
         "matlab": "cb321ee753f7eeb3be95beefb61c53b45a3c8e4625220380594d3736443ee9d7",
-        "parity": "54591635d094e55924c07da9320459b53b67546381ddab8531072db43b35baa6"
+        "parity": "eb1e33c20de11bfe05d793a26cb54f266b8f95ac5355ace1c62c626a56176a77"
       },
       "source_sha256": {
         "core.py": "4525384872bf761e677de6e093655e064237144f52ef0de4acaa557c9d0d9159",
@@ -201,7 +217,8 @@
         "test_phase_method.py": "13cc3dc5dde29a2c1b6eab7b13bbf53101479bc7bd94879b3655f98193ac9484",
         "test_source_contract.py": "54bf9681c3740cd3a3eb8aa7e411e5954f178ae751ae092c3207eca6d1958d6e",
         "test_termination.py": "4bd9ed9c47fa754f9b87fe578546a29aad959c0cea59ee50254d4f73919f14a4"
-      }
+      },
+      "matlab_execution_basis": "Earlier actual MATLAB output; every MATLAB source hash verified unchanged; compared again to fresh Python output"
     }
   ],
   "failures": [],
@@ -209,5 +226,6 @@
     "MATLAB and Python full experiment banks have not all converged/executed",
     "Final publisher-version equivalence and original figure agreement remain unverified",
     "Genuine source-formulation gaps remain explicit in package contracts"
-  ]
+  ],
+  "sensing_correctness_manifest": "sensing-correctness-v2/manifest.json"
 }

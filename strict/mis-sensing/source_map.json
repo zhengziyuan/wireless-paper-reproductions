@@ -46,7 +46,7 @@
       "locator": "Section VI Heuristic Closed-Form MIS Design, equations (64)-(69), final practical A formula",
       "implementation": "closed_form",
       "claim": "exact coverage A, quadratic pair, finite padding",
-      "inferred": "MS2 coordinate offset selects physical shift orientation/origin"
+      "inferred": "Section VI negative-exponent field and Section III positive-exponent c require conjugate quadratic phases for an equivalent implementation. Same-origin phases, original nearest-grid displacement law, no theta-only offset; see CLOSED_FORM_CONVENTION.md. Historical plotted phases remain unavailable."
     },
     {
       "locator": "Section VII Numerical Results; Figures 2-16",
@@ -60,17 +60,19 @@
     "public v1 L/noise convention differs from final L=1",
     "public v1 penalty progress comparison differs from final R1",
     "final R1 Numerical Results angle ranges are swapped relative to Eq3c definitions and original EPS markers; figure-recovered phi0..90,theta30..70 inputs are explicitly used",
-    "final R1 Fig3/Fig15 ordinates exceed the absolute Eq9/11 bound for their stated P/reference/M; no unique numerical normalization correction has been established"
+    "The ratio beta^2/sigma_k^2 is dimensionful (inverse power); R1 omits its reference unit and raw versus post-matched-filter noise convention. Earlier unconditional impossibility claims assumed inverse-W/single-PRI and are withdrawn.",
+    "Eq4 uses a*a^H but Eq6/7 use a*a^T, scales noise by sqrt(P), and does not carry the matched-filter waveform energy into an explicit effective-noise definition. Eq9/11 quartic PSD optimization model is retained.",
+    "A separately disclosed effective-factor100 candidate matches all six original continuous RIS ordinates within 0.009 dB; it does not uniquely identify Tp=100, recover all other curves, or certify the complete 6000-start figure."
   ],
   "physical_bound_audit": {
     "premises": "Eq3 unit-modulus steering, Eq10 unit-modulus equivalent v including finite padding, Eq11 G=conj(c)c^T, Eq9 nonnegative target interference and sigma^2/P, L1",
-    "proof": "|c^T v|<=M, v^H G v=|c^T v|^2<=M^2, SINR<=P(W)*(beta^2/sigma^2)*M^4; a simplex schedule is a convex combination and cannot exceed this bound",
-    "no_omitted_factor": "Tp belongs to the Eq7 detector waveform correlation but is absent from the explicit Eq9 optimization SINR; L1 has no BS array gain. No additional factor is inserted.",
+    "proof": "|c^T v|<=M, v^H G v=|c^T v|^2<=M^2, SINR<=P_W*R_effective_per_W*M^4; a simplex schedule is a convex combination and cannot exceed this bound",
+    "reference_contract": "The following historical bounds are conditional on ratio=-73.88 dB per W and processing_factor=1, not unqualified bounds for the reported physical scenario. Sigma_k^2 may already be processed noise; for raw noise, normalized coherent integration gives sigma_eff^2=sigma_raw^2/Tp. L1 has no array gain.",
     "fig3_bound_db": 30.202399653118498,
     "fig3_source_annotation_db": 32.02,
     "fig15_P30_bound_db": 6.12,
     "fig15_source_MIS_db": 21.67,
-    "status": "source normalization conflict unresolved; strict theoretical curves are not certified close to the original figures",
+    "status": "reference convention not uniquely recovered; explicit literal and inferred candidate contracts provided, no all-figure certification",
     "test_entrypoint": "test_figure_inputs.py"
   },
   "excluded": [

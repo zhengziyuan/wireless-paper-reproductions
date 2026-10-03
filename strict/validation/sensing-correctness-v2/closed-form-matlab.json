@@ -1,0 +1,31 @@
+{
+  "paper_id": "mis-sensing",
+  "scope": "independent_closed_form_identity_tests_not_original_figure_reproduction",
+  "full_dimensions": {
+    "ms1": [
+      20,
+      20
+    ],
+    "ms2": [
+      16,
+      16
+    ],
+    "targets": 9,
+    "positions": 25
+  },
+  "checks": {
+    "same_reference_no_layer_only_offset": true,
+    "all_nine_original_law_schedules": true,
+    "full_finite_padding_conjugacy": true,
+    "exact_finite_overlap_linear_phase": true,
+    "row_major_mapping": true
+  },
+  "errors": {
+    "linear_phase": 2.1433990556263615E-14,
+    "overlap_focus_amplitude": 1.4210854715202004E-13,
+    "field_conjugacy": 0,
+    "field_power": 0
+  },
+  "all_passed": true,
+  "original_figure_reproduction_certified": false
+}

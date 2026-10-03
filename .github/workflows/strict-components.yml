@@ -23,6 +23,9 @@ jobs:
       - run: python strict/two-timescale-ma/test_correlated_derivatives.py
       - run: python strict/mis-communications/test_line_search.py
       - run: python strict/mis-sensing/test_line_search.py
+      - run: python strict/mis-sensing/test_normalization.py
+      - run: python strict/mis-sensing/test_closed_form.py
+      - run: python strict/mis-sensing/test_stable_increment.py
       - run: python strict/cooperative-satcom/test_termination.py
       - run: python strict/hotspot-satcom/test_termination.py
       - run: python strict/hotspot-satcom/test_phase_method.py

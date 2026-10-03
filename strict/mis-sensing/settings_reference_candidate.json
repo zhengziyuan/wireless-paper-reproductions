@@ -29,7 +29,8 @@
     "feasibility": "1e-6 max q feasibility tolerance selected; original best-feasible numerical tolerance absent.",
     "pslr": "Original rectangular guard azimuth +/-22.5 degrees and elevation +/-10 degrees; dense60x60 grid retained over recovered target region phi0..90/theta30..70. Exact intermediate grid samples, clutter beta equal targets, epsilon1e-12 and mu10 halved to1e-3 are inferred, not original quoted values.",
     "ris_baseline": "Independent phase optimization per target by same RALM/RCG, continuous design followed by nearest phase quantization for 1-bit/2-bit. Original baseline optimizer not specified.",
-    "grids": "Sweep point grids recovered from EPS axis ticks/legends and integer geometry. These may differ from unpublished intermediate plotting samples."
+    "grids": "Sweep point grids recovered from EPS axis ticks/legends and integer geometry. These may differ from unpublished intermediate plotting samples.",
+    "normalization": "The effective_reference_gain_factor=100 candidate is inferred from the complete original continuous-RIS six-power fingerprint, with fixed full aperture/targets and original RALM per-start budgets; no fitted phase or changed algorithm. Author PRI count/reference-unit recovery remains unverified."
   },
   "kind": "sensing",
   "carrier_hz": 12000000000,
@@ -42,9 +43,9 @@
   "reference_echo_db": -73.88,
   "reference_echo_unit": "inverse_watt",
   "reference_echo_noise_domain": "raw_per_PRI",
-  "effective_reference_gain_factor": 1,
-  "normalization_status": "declared_literal_inverseW_single_PRI_source_unit_and_processing_unspecified",
-  "normalization_note": "Published reference is -73.88 dB but its inverse-power reference unit and raw-versus-processed noise interpretation are not stated. This default declares an inverse-watt, single-PRI literal interpretation. A separate inferred-reference candidate is never certified as the author's actual PRI count.",
+  "effective_reference_gain_factor": 100,
+  "normalization_status": "inferred_reference_candidate_100_fold_effective_noise_factor_NOT_author_PRI_count_verified",
+  "normalization_note": "All six original continuous-RIS points identify an effective 100-fold reference/noise factor to EPS precision. Its physical origin is not unique: coherent PRI integration, processed-noise normalization or a reference-level difference could give the same SINR. This candidate does NOT claim the source explicitly reports Tp=100. Physical transmit power remains 30 dBm = 1 W. Full figure start/iteration budgets remain unchanged.",
   "power_dbm": 30,
   "bs_antennas": 1,
   "number_of_starts": 6000,

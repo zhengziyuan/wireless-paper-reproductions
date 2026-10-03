@@ -40,7 +40,10 @@ def main():
             "fig3_upper_linear":float(bounds[0]),"fig3_upper_db":float(10*np.log10(bounds[0])),
             "fig15_P30_M100_upper_db":float(10*np.log10(10**(settings["reference_echo_db"]/10)*100**4)),
             "reported_fig3_annotation_db":32.02,"reported_fig15_MIS_P30_db_from_EPS_ticks":21.6700,
-            "reported_figures_exceed_stated_model_bound":True}},indent=2))
+            "reference_contract":"conditional inverse-W, processing-factor1; units and noise stage not stated by source",
+            "bound_formula":"P_W * reference_effective_per_W * M^4",
+            "fig3_exceeds_this_explicit_contract":bool(32.02>10*np.log10(bounds[0])),
+            "reported_physical_scenario_proven_impossible":False}},indent=2))
     if not all(checks.values()):raise AssertionError(checks)
     print(json.dumps({"scope":"source_input_and_identity_unit_tests_not_full_figure","checks":checks},indent=2))
 

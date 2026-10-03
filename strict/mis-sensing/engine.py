@@ -161,6 +161,36 @@ class Model:
               "eta":np.asarray(-1+np.sum(chi))}
         return float(value),eu,{"q":q,"gamma":gamma}
 
+    def sinr_alm_difference(self,base,candidate,lam,rho):
+        """Exact L(candidate)-L(base), without subtracting near-equal objectives.
+
+        The echo/ratio/positive-part increments include all cross terms and
+        active-set crossings. No Armijo slack, objective or threshold changes.
+        This derivation is for SINR only, not the PSLR soft minimum.
+        """
+        oldbar,_,q,a=self.fields(base)
+        newbar,_,_,_=self.fields(candidate)
+        dv=oldbar*(candidate["phi"]-base["phi"])[None,:]+(newbar-oldbar)*candidate["phi"][None,:]
+        dq=self.c@dv.T
+        da=2*np.real(np.conj(q)*dq)+np.abs(dq)**2
+        echo=self.beta[:,None]*a*a
+        decho=self.beta[:,None]*(2*a*da+da*da)
+        denominator=np.sum(echo,axis=0)[None,:]-echo[:self.targets]+self.config["noise_over_power"]
+        dd=np.sum(decho,axis=0)[None,:]-decho[:self.targets]
+        gamma=echo[:self.targets]/denominator
+        dgamma=(decho[:self.targets]-gamma*dd)/(denominator+dd)
+        deta=float(candidate["eta"]-base["eta"])
+        residual=float(base["eta"])-np.sum(base["X"]*gamma,axis=1)
+        dresidual=deta-np.sum((candidate["X"]-base["X"])*gamma+candidate["X"]*dgamma,axis=1)
+        raw=np.asarray(lam)+rho*residual; draw=rho*dresidual
+        chi=np.maximum(0,raw)
+        dchi=np.where(raw>0,np.where(raw+draw>0,draw,-raw),np.maximum(0,raw+draw))
+        return float(-deta+np.sum(dchi*(2*chi+dchi))/(2*rho))
+
+def objective_increment(evaluate,base,candidate,f):
+    difference=getattr(evaluate,"stable_difference",None)
+    return difference(base,candidate) if difference is not None else evaluate(candidate)[0]-f
+
 def block_backtracking(z,g,raw_d,evaluate,f,options):
     """Published distinct block step sizes; joint-coupling check is disclosed.
     Raw PR coefficients/directions are not clipped. A projected non-descent block
@@ -189,15 +219,23 @@ def block_backtracking(z,g,raw_d,evaluate,f,options):
             continue
         inactive[b]=False
         raw_slope=inner(g[b],d[b]); accepted=False
-        for ls in range(options["max_backtracks"]):
-            candidate=retract(z,{b:d[b]},alpha)
-            actual_slope=inner(g[b],candidate[b]-z[b])
-            predicted=actual_slope if guard else alpha*raw_slope
-            trial=evaluate(candidate)[0]
-            if np.isfinite(trial) and predicted<0 and trial<=f+options["armijo_constant"]*predicted:
-                accepted=True; break
-            alpha*=options["backtrack_factor"]
-        alphas[b]=float(alpha); backtracks[b]=ls
+        exhaustion_restart=guard and options.get("exhausted_direction_policy")=="documented_block_restart"
+        for attempt in range(2 if exhaustion_restart else 1):
+            for ls in range(options["max_backtracks"]):
+                candidate=retract(z,{b:d[b]},alpha)
+                actual_slope=inner(g[b],candidate[b]-z[b])
+                predicted=actual_slope if guard else alpha*raw_slope
+                change=objective_increment(evaluate,z,candidate,f)
+                if np.isfinite(change) and predicted<0 and change<=options["armijo_constant"]*predicted:
+                    accepted=True; break
+                alpha*=options["backtrack_factor"]
+            if accepted or attempt==1 or not exhaustion_restart: break
+            # Keep the original PR coefficient in history. Retry only this
+            # exhausted block with minus its current gradient, never a new solver.
+            d[b]=-g[b]; raw_slope=-inner(g[b],g[b])
+            restarts[b]=True;restart_reasons[b].append("backtracking_exhausted")
+            alpha=options.get("initial_steps",{}).get(b,options["initial_step"])
+        alphas[b]=float(alpha); backtracks[b]=ls+attempt*options["max_backtracks"]
         if not accepted:
             info={"block_step_sizes":alphas,"block_backtracks":backtracks,"block_non_descent_restarts":restarts,
                   "block_raw_direction_slopes":raw_slopes,"block_restart_reasons":restart_reasons,
@@ -218,8 +256,8 @@ def block_backtracking(z,g,raw_d,evaluate,f,options):
         candidate=retract(z,scaled,coupling)
         actual=sum(inner(g[b],candidate[b]-z[b]) for b in g)
         predicted=actual if guard else coupling*sum(alphas[b]*inner(g[b],d[b]) for b in g)
-        trial=evaluate(candidate)[0]
-        if np.isfinite(trial) and predicted<0 and trial<=f+options["armijo_constant"]*predicted:
+        change=objective_increment(evaluate,z,candidate,f)
+        if np.isfinite(change) and predicted<0 and change<=options["armijo_constant"]*predicted:
             accepted=True;break
         coupling*=options["backtrack_factor"]
     info.update(coupling_scale=float(coupling),coupling_backtracks=ls,
@@ -286,10 +324,10 @@ def rcg(z, evaluate, options):
         accepted=False
         for ls in range(options["max_backtracks"]):
             candidate=retract(z,d,alpha)
-            trial=evaluate(candidate)[0]
+            change=objective_increment(evaluate,z,candidate,f)
             feasible_slope=sum(inner(g[b],candidate[b]-z[b]) for b in g)
             predicted=feasible_slope if guard else alpha*slope
-            if np.isfinite(trial) and predicted<0 and trial<=f+options["armijo_constant"]*predicted:
+            if np.isfinite(change) and predicted<0 and change<=options["armijo_constant"]*predicted:
                 accepted=True
                 break
             alpha*=options["backtrack_factor"]
@@ -330,7 +368,10 @@ def sensing_solve(model,z,options,objective="sinr"):
     for outer in range(options["outer_iterations"]):
         oldz={b:np.array(v,copy=True) for b,v in z.items()}
         inner_options=dict(options["rcg"],gradient_tolerance=eps)
-        z,h,stop=rcg(z,lambda x:model.augmented(x,lam,rho,objective),inner_options)
+        def evaluate(x): return model.augmented(x,lam,rho,objective)
+        if objective=="sinr" and inner_options.get("objective_difference")=="exact_sinr_increment":
+            evaluate.stable_difference=lambda base,trial:model.sinr_alm_difference(base,trial,lam,rho)
+        z,h,stop=rcg(z,evaluate,inner_options)
         q=model.augmented(z,lam,rho,objective)[2]["q"]
         iota=np.maximum(q,-lam/rho)
         newlam=np.clip(lam+rho*q,options["lambda_min"],options["lambda_max"])
@@ -359,7 +400,12 @@ def sensing_solve(model,z,options,objective="sinr"):
     return z,history,metrics
 
 def closed_form(model):
-    """Final R1 coverage-guaranteed quadratic A, with original finite padding."""
+    """Same-reference Section VI chirps in the positive-field convention.
+
+    Eq(61) uses a negative array exponent with +A/-A chirps. Model.fields
+    uses a positive exponent, so conjugate BOTH chirps, not just one layer.
+    This preserves every finite one-padded array power; see dedicated tests.
+    """
     mr,mc=model.config["ms1"]; nr,nc=model.config["ms2"]
     ur,uc=mr-nr+1,mc-nc+1
     if min(ur,uc)<=1:
@@ -369,8 +415,8 @@ def closed_form(model):
     A=np.pi/d*max(1/(ur-1),1/(uc-1))
     r,c=np.meshgrid(np.arange(mr),np.arange(mc),indexing="ij")
     rn,cn=np.meshgrid(np.arange(nr),np.arange(nc),indexing="ij")
-    return {"phi":np.exp(1j*A*d*d*(r*r+c*c)).ravel(),
-            "theta":np.exp(-1j*A*d*d*((rn+ur-1)**2+(cn+uc-1)**2)).ravel(),
+    return {"phi":np.exp(-1j*A*d*d*(r*r+c*c)).ravel(),
+            "theta":np.exp(1j*A*d*d*(rn*rn+cn*cn)).ravel(),
             "X":np.ones((model.targets,model.U))/model.U,"eta":np.asarray(0.)}
 
 def check_gradient(z,evaluate,h=1e-6):

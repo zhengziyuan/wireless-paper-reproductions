@@ -31,6 +31,8 @@ The complete nine-target closed-form beam has actually run in both languages,
 with full-grid numerical agreement; its original-figure agreement is still
 unverified. A runnable plot must not be confused with a matching original plot.
 
+Latest same-reference phase, explicit-noise-contract and dual-language evidence is collected in [sensing correctness v2](strict/validation/sensing-correctness-v2/); use the figure reproduction guide above to run the full-size plot, while original-figure certification remains pending.
+
 ```sh
 python -m pip install -r strict/requirements.txt
 python strict/validate_components.py --output-dir strict/outputs/components

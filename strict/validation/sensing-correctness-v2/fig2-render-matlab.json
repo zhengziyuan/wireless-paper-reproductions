@@ -1,0 +1,89 @@
+{
+  "kind": "nine_beampattern_panels",
+  "target_metrics": [
+    {
+      "target": 1,
+      "azimuth_deg": 0,
+      "elevation_deg": 30,
+      "metric": "SINR",
+      "metric_db": 22.272244105581663
+    },
+    {
+      "target": 2,
+      "azimuth_deg": 45,
+      "elevation_deg": 30,
+      "metric": "SINR",
+      "metric_db": 0.8050065155970627
+    },
+    {
+      "target": 3,
+      "azimuth_deg": 90,
+      "elevation_deg": 30,
+      "metric": "SINR",
+      "metric_db": 22.272244105581667
+    },
+    {
+      "target": 4,
+      "azimuth_deg": 0,
+      "elevation_deg": 50,
+      "metric": "SINR",
+      "metric_db": 17.83825245840431
+    },
+    {
+      "target": 5,
+      "azimuth_deg": 45,
+      "elevation_deg": 50,
+      "metric": "SINR",
+      "metric_db": 18.34588209414732
+    },
+    {
+      "target": 6,
+      "azimuth_deg": 90,
+      "elevation_deg": 50,
+      "metric": "SINR",
+      "metric_db": 17.838252458404256
+    },
+    {
+      "target": 7,
+      "azimuth_deg": 0,
+      "elevation_deg": 70,
+      "metric": "SINR",
+      "metric_db": 17.833077274295253
+    },
+    {
+      "target": 8,
+      "azimuth_deg": 45,
+      "elevation_deg": 70,
+      "metric": "SINR",
+      "metric_db": 11.144165556393503
+    },
+    {
+      "target": 9,
+      "azimuth_deg": 90,
+      "elevation_deg": 70,
+      "metric": "SINR",
+      "metric_db": 17.833077274295203
+    }
+  ],
+  "computed_grid": [
+    91,
+    361
+  ],
+  "display_crop_only": [
+    -15,
+    105,
+    20,
+    80
+  ],
+  "color_display_limits_db": [
+    -35,
+    0
+  ],
+  "simulation_samples_modified": false,
+  "paper_id": "mis-sensing",
+  "figure": "fig2",
+  "source_result_sha256": "2ee989d3de74574474bf24a758fb7af245d8d9ae28b0c0099918b8ed03a142ed",
+  "full_figure_execution_complete": true,
+  "overall_full_success": true,
+  "original_figure_reproduction_certified": false
+}

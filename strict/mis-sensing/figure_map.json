@@ -55,7 +55,7 @@
       "z_transform": "10log10",
       "annotation": "maps[].target_metric (SINR)",
       "original_annotation_db": 32.02,
-      "source_normalization_discrepancy": "Eq9/11 with M400, P=1W, reference=-73.88dB bounds every SINR by1047.707288908828 (30.2023996531dB); 32.02dB exceeds this. Unreported normalization/gain factor needs source resolution, not curve fitting."
+      "source_normalization_discrepancy": "The 30.2023996531dB bound is conditional on inverse-W reference and processing1. The manuscript omits reference unit and raw/processed-noise convention; earlier unconditional impossibility claim is withdrawn. The disclosed factor100 candidate recovers the continuous RIS power curve, not this full6000-start MIS experiment."
     },
     {
       "id": "fig4",
