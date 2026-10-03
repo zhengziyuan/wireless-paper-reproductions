@@ -30,9 +30,12 @@ def make_model(point,settings,pslr=False):
         el=np.full(K,45.)
     else:
         kp,kt=point["Kphi"],point["Ktheta"]
-        azimuth=np.linspace(30,70,kp) if kp>1 else np.array([50.])
-        elevation=(np.arange(kt)+.5)*90/kt
-        az=np.repeat(azimuth,kt); el=np.tile(elevation,kp); K=len(az)
+        # Original EPS markers identify phi=0/45/90, theta=30/50/70.
+        # Eq(3c) defines phi as azimuth and theta as elevation; the numerical
+        # paragraph swaps the two ranges. Recover inputs, not output phases.
+        azimuth=np.linspace(0,90,kp) if kp>1 else np.array([45.])
+        elevation=np.linspace(30,70,kt) if kt>1 else np.array([50.])
+        az=np.tile(azimuth,kt); el=np.repeat(elevation,kp); K=len(az)
     cfg=dict(ms1=point["ms1"],ms2=point["ms2"],azimuth_deg=az.tolist(),elevation_deg=el.tolist(),
              spacing_over_wavelength=settings["spacing_over_wavelength"],
              incidence_direction_cosines=settings["incidence_direction_cosines"],
@@ -42,15 +45,15 @@ def make_model(point,settings,pslr=False):
         cfg["noise_over_power"]=1/(10**((point.get("power_dbm",settings["power_dbm"])-30)/10))
     if pslr:
         gp,gt=settings["pslr_grid"]
-        caz=np.repeat(np.linspace(30,70,gp),gt)
-        cel=np.tile((np.arange(gt)+.5)*90/gt,gp)
+        caz=np.tile(np.linspace(0,90,gp),gt)
+        cel=np.repeat(np.linspace(30,70,gt),gp)
         cfg["azimuth_deg"]+=caz.tolist(); cfg["elevation_deg"]+=cel.tolist()
         beta=np.full(K+gp*gt,10**(settings["reference_echo_db"]/10))
         beta[K:]*=settings["clutter_relative_echo"]
         cfg["echo_beta_squared"]=beta.tolist()
         cfg["pslr_opponents"]=[]
         for k in range(K):
-            outside=np.hypot(caz-az[k],cel-el[k])>settings["mainlobe_guard_deg"]
+            outside=(np.abs(caz-az[k])>settings["mainlobe_guard_azimuth_deg"]) | (np.abs(cel-el[k])>settings["mainlobe_guard_elevation_deg"])
             cfg["pslr_opponents"].append([i for i in range(K) if i!=k]+(K+np.flatnonzero(outside)).tolist())
         cfg["pslr_mu"]=settings["pslr_mu_initial"]
         cfg["pslr_epsilon"]=settings["pslr_epsilon"]
@@ -191,7 +194,22 @@ def evaluate_closed(model):
     return {"available":True,"minimum_sinr":float(np.min(metric[np.arange(model.targets),chosen])),
             "selected_positions":chosen.tolist(),"state":serialize(z)}
 
-def beampattern_samples(model,state,selected):
+def communication_beampattern_samples(model,state):
+    """Evaluate every MIS position over the complete case-study angular cut."""
+    az=np.arange(-90,90.5,.5)
+    cfg=dict(model.config,azimuth_deg=az.tolist(),elevation_deg=np.full(len(az),45.).tolist(),number_of_targets=len(az))
+    grid=Model(cfg)
+    z={"phi":np.array(state["phi"]["real"])+1j*np.array(state["phi"]["imag"]),
+       "theta":np.array(state["theta"]["real"])+1j*np.array(state["theta"]["imag"])}
+    snr=grid.metric(z,"communications")
+    schedule=np.argmax(np.array(state["X"]),axis=1)
+    return {"scope":"model_evaluated_complete_azimuth_cut_not_original_curve_copy",
+            "azimuth_deg":az.tolist(),"elevation_deg":45.,"resolution_deg":.5,
+            "pattern_snr":snr.tolist(),"number_of_patterns":model.U,
+            "user_azimuth_deg":model.config["azimuth_deg"],"user_pattern":schedule.tolist(),
+            "user_snr_by_pattern":model.metric(z,"communications").tolist()}
+
+def beampattern_samples(model,state,selected,objective="sinr"):
     """Whole front hemisphere, 1-degree sampling; plotting resolution is inferred."""
     az=np.arange(-180,181,dtype=float); el=np.arange(0,91,dtype=float)
     cfg=dict(model.config,azimuth_deg=np.repeat(az,len(el)).tolist(),elevation_deg=np.tile(el,len(az)).tolist(),
@@ -200,15 +218,25 @@ def beampattern_samples(model,state,selected):
     z={"phi":np.array(state["phi"]["real"])+1j*np.array(state["phi"]["imag"]),
        "theta":np.array(state["theta"]["real"])+1j*np.array(state["theta"]["imag"])}
     powers=grid.fields(z)[3]
-    original=model.fields(z)[3]; echo=model.beta[:model.targets,None]*original[:model.targets]**2
+    original=model.fields(z)[3]; all_echo=model.beta[:,None]*original**2
+    echo=all_echo[:model.targets]
+    smooth=model.metric(z,"pslr") if objective=="pslr" else None
     maps=[]
     for k,u in enumerate(selected):
         raw=powers[:,u].reshape(len(az),len(el)).T
         denominator=np.sum(echo[:,u])-echo[k,u]+model.config["noise_over_power"]
-        maps.append({"target":k,"pattern":int(u),"normalized_gain":(raw/np.max(raw)).tolist(),
-                     "sinr":(model.beta[k]*raw*raw/denominator).tolist()})
+        panel={"target":k,"pattern":int(u),"normalized_gain":(raw/np.max(raw)).tolist(),
+               "sinr":(model.beta[k]*raw*raw/denominator).tolist(),
+               "target_azimuth_deg":model.config["azimuth_deg"][k],
+               "target_elevation_deg":model.config["elevation_deg"][k],
+               "target_metric_name":"SINR","target_metric":float(echo[k,u]/denominator)}
+        if objective=="pslr":
+            peak=float(np.max(all_echo[model.config["pslr_opponents"][k],u]))
+            panel.update(target_metric_name="PSLR",target_metric=float(all_echo[k,u]/peak) if peak>0 else None,
+                         smoothed_target_metric=float(smooth[k,u]),sidelobe_echo_peak=peak)
+        maps.append(panel)
     return {"scope":"full_front_hemisphere_independent_samples","resolution_deg":1,
-            "azimuth_deg":az.tolist(),"elevation_deg":el.tolist(),"maps":maps}
+            "objective":objective,"azimuth_deg":az.tolist(),"elevation_deg":el.tolist(),"maps":maps}
 
 def ris_baselines(model,settings,checkpoint_prefix=None):
     out={}
@@ -389,16 +417,20 @@ def main():
                     elif run.get("best_feasible") is not None:
                         best=run["best_feasible"]
                         selected=np.argmax(np.array(best["metrics"]["binary_schedule"]),axis=1)
-                        entry["beampattern_samples"]=beampattern_samples(make_model(point,settings),best["state"],selected)
+                        entry["beampattern_samples"]=beampattern_samples(model,best["state"],selected,figure["objective"])
                 if "closed_form" in figure["baselines"]:
                     entry["closed_form"]=evaluate_closed(make_model(point,settings))
                 if settings["kind"]=="communications":
+                    if figure["id"] in ("fig7","fig8") and run.get("best_feasible") is not None:
+                        entry["beampattern_samples"]=communication_beampattern_samples(model,run["best_feasible"]["state"])
                     if any("SMS" in b for b in figure["baselines"]):
                         sms_point=dict(point,ms2=[0,0])
                         if "same_total_SMS" in figure["baselines"]:
                             if "total" in point: sms_point["ms1"]=[int(math.sqrt(point["total"])),int(math.sqrt(point["total"]))]
                             else: raise ValueError("Fixed-total comparison requires exact total and aperture shape")
                         entry["SMS"]=optimize(make_model(sms_point,settings),settings,"communications",seed_offset=500000+point_index,checkpoint_path=str(prefix)+"-sms.json")
+                        if figure["id"] in ("fig7","fig8") and entry["SMS"].get("best_feasible") is not None:
+                            entry["SMS"]["beampattern_samples"]=communication_beampattern_samples(make_model(sms_point,settings),entry["SMS"]["best_feasible"]["state"])
                     if "dynamic_RIS" in figure["baselines"]:
                         entry["dynamic_RIS"]={"minimum_snr":settings["reference_snr"]*model.M**2}
                 else:
@@ -408,6 +440,8 @@ def main():
                         reference=dict(point)
                         if "ralm_reference_n6" in figure["baselines"]:
                             reference["ms2"]=[6,6]
+                        if "ralm_reference_gap4" in figure["baselines"]:
+                            reference["ms2"]=[reference["ms1"][0]-4,reference["ms1"][1]-4]
                         entry["RALM_reference"]=optimize(make_model(reference,settings),settings,"sinr",seed_offset=900000+point_index,checkpoint_path=str(prefix)+"-reference.json")
                 result["points"].append(entry)
                 result.update(figure_execution_status(result["points"],len(figure["points"])))

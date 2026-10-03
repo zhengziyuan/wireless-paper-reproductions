@@ -1,0 +1,366 @@
+{
+  "paper_id": "mis-sensing",
+  "source_file": "bare_jrnl.tex",
+  "source_sha256": "b0ac3782b11cdb7d2b0d1dfe581bfcfbe17c72c52f64aef3e55cd0bfce25592a",
+  "scope": "Author-source figure inventory; NOT simulation results",
+  "figure_count": 16,
+  "unnumbered_equation_or_algorithm_floats": 1,
+  "figures": [
+    {
+      "figure": 1,
+      "labels": [
+        "fig:system_model"
+      ],
+      "caption_tex": "Illustration of MIS-aided wireless sensing for area surveillance in ground industrial IoT and aerial low-altitude networks.",
+      "assets": [
+        {
+          "file": "system1.pdf",
+          "available": true,
+          "sha256": "14dba887b7fcabea7e993ec02858cdf19c8935c0793f11234b27be44f5f2af39"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 2,
+      "labels": [
+        "fig:beam_steering1"
+      ],
+      "caption_tex": "Normalized beam pattern gain and sensing SINR of the proposed MIS scheme with the closed-form design in Section VI.",
+      "assets": [
+        {
+          "file": "close1.eps",
+          "available": true,
+          "sha256": "736552cd77c44a5ca6ed3a385b54471c2d692c1a1a696f43cb37f87124e70f23"
+        },
+        {
+          "file": "close2.eps",
+          "available": true,
+          "sha256": "2ad7fd9601be6c1db17e49dcf973968794a35eb815c82d9d76b2c10167bfece4"
+        },
+        {
+          "file": "close3.eps",
+          "available": true,
+          "sha256": "9af8a52ad1c8ea5fb88d7e84971f7065fbcf24ea3b80a4cc86b9e90902bae1fa"
+        },
+        {
+          "file": "close4.eps",
+          "available": true,
+          "sha256": "a7925175ce87b9dfc2e888c8edb884141a2f007ea57ed43c68f0044822d2ad22"
+        },
+        {
+          "file": "close5.eps",
+          "available": true,
+          "sha256": "20fa1dfb691d640b79c8fdcf5f4c408edeed4b2d6e25ccef43997db4e5749533"
+        },
+        {
+          "file": "close6.eps",
+          "available": true,
+          "sha256": "2903bed9ca71b2eca34b5e9e5d045eb4ecdf36737802bbdc5cbcd608ada5e49a"
+        },
+        {
+          "file": "close7.eps",
+          "available": true,
+          "sha256": "47d24a79a97f97127c4e00bfbca2c8f8b7b9b064452ead9e6ca83c654ec6b1e9"
+        },
+        {
+          "file": "close8.eps",
+          "available": true,
+          "sha256": "98115abb3c878fbce16546186d2fe571baa8bdb0d8100f20b42618fdbe48481b"
+        },
+        {
+          "file": "close9.eps",
+          "available": true,
+          "sha256": "5546c554d6c2201a0224f0218ca77a176c6c4593a340c25154338ac95be82ae9"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 3,
+      "labels": [
+        "fig:beam_steering2"
+      ],
+      "caption_tex": "Normalized beam pattern gain and sensing SINR of the proposed MIS scheme with the optimization-based design in Section IV.",
+      "assets": [
+        {
+          "file": "opt1.eps",
+          "available": true,
+          "sha256": "1f094535efe850f667da9943503c371350ede9a1bc69949fa482e59d5bee9703"
+        },
+        {
+          "file": "opt2.eps",
+          "available": true,
+          "sha256": "a915701d00e959a3f22bdb1736293ca7ee5db3dae4eface86ec052f85cac2156"
+        },
+        {
+          "file": "opt3.eps",
+          "available": true,
+          "sha256": "d53aa44620710b4a430f83e7dac6566484bc727b01df94b3c7dd9571455d5e99"
+        },
+        {
+          "file": "opt4.eps",
+          "available": true,
+          "sha256": "1100bf698be95d534a68a558baa11337f95f8c743079b9777439317808537e4a"
+        },
+        {
+          "file": "opt5.eps",
+          "available": true,
+          "sha256": "9b7d6a6bc915b4cd5b540a2e37d3f3345653695e678647401935df9141918153"
+        },
+        {
+          "file": "opt6.eps",
+          "available": true,
+          "sha256": "b296e5f5637883b5c0e41d65cd1587eaf0d2d588fc3a59f872159e6f3a976508"
+        },
+        {
+          "file": "opt7.eps",
+          "available": true,
+          "sha256": "dbe7f92314e6098667d40a3e90c17e1f1a0dd67436693e89a3786e9f1bf6a4de"
+        },
+        {
+          "file": "opt8.eps",
+          "available": true,
+          "sha256": "26bf03d1339a9593d1e6a4cc4e059a345a67b1dbe25a83569a317fde25751922"
+        },
+        {
+          "file": "opt9.eps",
+          "available": true,
+          "sha256": "02c100b9469206c111fce4a0f8afdb29d238567749f622fdb211cc9a064541a8"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 4,
+      "labels": [
+        "fig:beam_steering3"
+      ],
+      "caption_tex": "Normalized beam pattern gain and sensing PSLR of the proposed MIS scheme with the optimization-based design in Section V.",
+      "assets": [
+        {
+          "file": "PSLR1.eps",
+          "available": true,
+          "sha256": "08efdf8d0b1afebb771d487d3e0b391fd2b275fd88eb93951f78d8cae6cb9cfb"
+        },
+        {
+          "file": "PSLR2.eps",
+          "available": true,
+          "sha256": "cc089766af3c33e9306c752807485cd3740f029f29c1d46c2728e19def2e21fd"
+        },
+        {
+          "file": "PSLR3.eps",
+          "available": true,
+          "sha256": "419721530803dc6cd1c66d5e5d14a085872adb272f13bff021092e0f968af454"
+        },
+        {
+          "file": "PSLR4.eps",
+          "available": true,
+          "sha256": "5cbe73881db203454a413e7df356f4d753033d507cf130cd531b09a9348adb46"
+        },
+        {
+          "file": "PSLR5.eps",
+          "available": true,
+          "sha256": "770349ee7e087d4edb3e2e63a224c37e33cff641124cbd33d66af183ebef8ca0"
+        },
+        {
+          "file": "PSLR6.eps",
+          "available": true,
+          "sha256": "7629bae5a6e26ccad1c405916b8d975a0298532393399326b678dc0d4c91994f"
+        },
+        {
+          "file": "PSLR7.eps",
+          "available": true,
+          "sha256": "abaa3876ece708d4494674793e3e20bb1d37c4a5ce857a94523ce70016895dcc"
+        },
+        {
+          "file": "PSLR8.eps",
+          "available": true,
+          "sha256": "113c8915754a4bd71eb3a0ee245637c1e4ab510aa3c96d58e96b2602c4b1725d"
+        },
+        {
+          "file": "PSLR9.eps",
+          "available": true,
+          "sha256": "acf8f246320cfc8b7b41394de4c7d12180f4360624a80a0a66a647f391c06040"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 5,
+      "labels": [],
+      "caption_tex": "Convergence of the optimized sensing SINR versus RALM outer iterations for MS1 $20\\times20$, MS2 $16\\times16$, and $K=9$.",
+      "assets": [
+        {
+          "file": "convergence1.eps",
+          "available": true,
+          "sha256": "ece29b96702cb8fe5afb00e5855c7b6f82de7584d6132cb0620848cd798b1705"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 6,
+      "labels": [],
+      "caption_tex": "Convergence of the fairness-constraint violation versus RALM outer iterations for MS1 $20\\times20$, MS2 $16\\times16$, and $K=9$.",
+      "assets": [
+        {
+          "file": "convergence2.eps",
+          "available": true,
+          "sha256": "a4ccd38e91009fa23157235e81f968dffe84b602264127ff1f18f7bc0d9a6492"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 7,
+      "labels": [],
+      "caption_tex": "Minimum SINR vs. transmit power for RALM-based design.",
+      "assets": [
+        {
+          "file": "P.eps",
+          "available": true,
+          "sha256": "1afa2c88881aacbf32d464f5b729db25e184088572c57e0dfb376ca52d679066"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 8,
+      "labels": [],
+      "caption_tex": "Minimum SINR vs. transmit power for closed-form design.",
+      "assets": [
+        {
+          "file": "alg_compare_P.eps",
+          "available": true,
+          "sha256": "79bcfb1c5dffe67264e9d1942e945cb83418695faacc0fb87e384c021826a8c6"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 9,
+      "labels": [],
+      "caption_tex": "Minimum sensing SINR vs. varying MIS sizes $(M,N)$ with fixed number of beam patterns $U$ for RALM-based design.",
+      "assets": [
+        {
+          "file": "fixU.eps",
+          "available": true,
+          "sha256": "68ee668749029e1dc5ccd67a7d582973408b23a9f100a2e9d07d6b359c45bc48"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 10,
+      "labels": [],
+      "caption_tex": "Minimum sensing SINR vs. varying MIS sizes $(M,N)$ with fixed number of beam patterns $U$ for closed-form design.",
+      "assets": [
+        {
+          "file": "alg_compare_fixU.eps",
+          "available": true,
+          "sha256": "0d71a3d8b495d7c61b2355ffe238cecc3eadecf568b822e4b74eaa10638aee9c"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 11,
+      "labels": [],
+      "caption_tex": "Minimum sensing SINR vs. varying MS1 sizes $M$ with given MS2 sizes $N\\in\\{8\\times 8, 9\\times 9, 10\\times10\\}$ for RALM-based design.",
+      "assets": [
+        {
+          "file": "M1.eps",
+          "available": true,
+          "sha256": "14a32ba5e3577c1fc81b11c93a7adb38bdb8a9470f69894f1d05c657626cb947"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 12,
+      "labels": [],
+      "caption_tex": "Minimum sensing SINR vs. varying MS1 sizes $M$ with given MS2 sizes $N\\in\\{5\\times 5,  6\\times 6, 7\\times7\\}$ for RALM-based design.",
+      "assets": [
+        {
+          "file": "M2.eps",
+          "available": true,
+          "sha256": "e9805c075eee1d63e0df30c9b9b115abc8ed66ccda224689982be0e487281ced"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 13,
+      "labels": [],
+      "caption_tex": "Minimum sensing SINR vs. varying number of target directions $K$ for RALM-based design.",
+      "assets": [
+        {
+          "file": "K.eps",
+          "available": true,
+          "sha256": "8cb61c59d13aa0c69a1e041e824b486a6eeade3eab8610a6345e2c40a3df8e05"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 14,
+      "labels": [],
+      "caption_tex": "Minimum sensing SINR vs. $K$ for closed-form design.",
+      "assets": [
+        {
+          "file": "alg_compare_K.eps",
+          "available": true,
+          "sha256": "74a8f1e7c6b004eea297ad35dc77391a4bdb3f6aaa0f525a540ca1274e1d76cf"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 15,
+      "labels": [],
+      "caption_tex": "Comparison between RIS and MIS on sensing SINR with different transmit power $P$.",
+      "assets": [
+        {
+          "file": "RIS1.eps",
+          "available": true,
+          "sha256": "95755474a0ac0bdae21804a4df971458a899a2dbd890d7ec65fbda84f6e02165"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 16,
+      "labels": [],
+      "caption_tex": "Comparison between RIS and MIS on sensing SINR with varying number of target directions $K$.",
+      "assets": [
+        {
+          "file": "RIS2.eps",
+          "available": true,
+          "sha256": "173a0a2b762dccad4377881abd123b11d261507ddce924d52df8241ae4b0c899"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    }
+  ],
+  "table_count": 0,
+  "tables": [],
+  "numbering_note": "Active captioned figure order, excluding nested algorithm captions; verify chapter/publication numbering separately",
+  "full_reproduction_passed": false
+}

@@ -19,11 +19,11 @@
     "scheduling_recovery": "Largest relaxed entry, smallest index on exact tie; paper specifies thresholding but not its threshold.",
     "non_descent": "Raw per-block PR coefficients and slopes are preserved and recorded. A block restarts minus its current gradient if either its raw tangent slope or its initial-step feasible projected displacement slope is nonnegative; raw_non_descent and projected_non_descent reasons are recorded separately. Exact zero-gradient/empty blocks and zero projected boundary motions are inactive. The source specifies an open simplex but its Euclidean projection reaches the closed boundary; this documented numerical safeguard reports raw row-mean and projected/KKT norms separately, using the latter for guarded stopping. literal_printed retains raw-direction diagnostics. No feasibility tolerance is relaxed.",
     "distance": "Ambient product norm for outer step; intrinsic product distance not numerically specified.",
-    "angles": "Azimuth endpoints 30 to 70 degrees; elevation cell midpoints within 0 to 90 degrees avoid physically duplicate theta=0 targets. Original exact samples not published.",
+    "angles": "Recovered original EPS axes/markers: azimuth phi inclusive 0 to 90 degrees, elevation theta inclusive 30 to 70 degrees, elevation-major target ordering. Eq3c defines these symbols; Numerical Results swaps the two angle ranges. Count1 uses azimuth45/elevation50. Sweeps share these recovered ranges; intermediate grids are reconstructed uniformly, not fitted to output curves.",
     "closed_form_origin": "MS2 quadratic coordinates shifted by the maximum index span; physical displacement equals shift index minus maximum. This inferred origin/orientation aligns the published positive quadratic with ordinary-transpose G in the positive-angle region.",
     "stopping": "Numerical paragraph AND chosen explicitly; Algorithm 2 says OR. Both retained as selectable options.",
     "feasibility": "1e-6 max q feasibility tolerance selected; original best-feasible numerical tolerance absent.",
-    "pslr": "Guard 5 degrees Euclidean angular distance, clutter beta equal targets, epsilon 1e-12 and mu 10 halved to 1e-3 are inferred settings; original 60x60 grid retained.",
+    "pslr": "Original rectangular guard azimuth +/-22.5 degrees and elevation +/-10 degrees; dense60x60 grid retained over recovered target region phi0..90/theta30..70. Exact intermediate grid samples, clutter beta equal targets, epsilon1e-12 and mu10 halved to1e-3 are inferred, not original quoted values.",
     "ris_baseline": "Independent phase optimization per target by same RALM/RCG, continuous design followed by nearest phase quantization for 1-bit/2-bit. Original baseline optimizer not specified.",
     "grids": "Sweep point grids recovered from EPS axis ticks/legends and integer geometry. These may differ from unpublished intermediate plotting samples."
   },
@@ -51,8 +51,8 @@
   "minimum_step": 1e-10,
   "outer_stopping_logic": "numerical_text_AND",
   "feasibility_tolerance": 0.000001,
-  "azimuth_sampling": "inclusive_uniform_30_to_70",
-  "elevation_sampling": "uniform_cell_midpoints_in_0_to_90",
+  "azimuth_sampling": "original_EPS_recovered_inclusive_uniform_0_to_90",
+  "elevation_sampling": "original_EPS_recovered_inclusive_uniform_30_to_70",
   "pslr_grid": [
     60,
     60
@@ -61,6 +61,7 @@
   "pslr_mu_terminal": 0.001,
   "pslr_mu_factor": 0.5,
   "pslr_epsilon": 1e-12,
-  "mainlobe_guard_deg": 5,
+  "mainlobe_guard_azimuth_deg": 22.5,
+  "mainlobe_guard_elevation_deg": 10,
   "clutter_relative_echo": 1
 }

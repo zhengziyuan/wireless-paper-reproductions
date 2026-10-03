@@ -10,7 +10,11 @@ The instantaneous branch uses true QT/SOCP active precoding, actual lifted compl
 
 **Statistical CSI is not implemented.** The thesis has a mathematical inconsistency: Eq3-41b sums only NHU interference while Eq3-46 constructs full-user blocks; Eq3-46 calls norm-squared-to-linear an SOC and uses an imaginary coefficient where a negative self-NLoS quadratic is needed. Imaginary coefficients do not negate norms. General full-rank covariance SINR QoS is not directly convex/SOCP. `--csi statistical` explicitly reports this issue; no instantaneous, pure-LoS or unrelated SCA replacement is used.
 
-`full_config.json` separates source-reported parameters from **tuned/not-reported** coordinates, gains, initialization, seeds, grids,1000 MC realizations/1000 randomizations, caps and thresholds. These are not recovered original figure data. Every requested MC sample is optimized; infeasible samples are not silently removed or targets reduced.
+`full_config.json` separates source-reported parameters from **tuned/not-reported** coordinates, gains, initialization, seeds,1000 MC realizations/1000 randomizations, caps and thresholds. HU and Rician grids are now recovered from original author-thesis EPS curve vertices and visually checked axes, not guessed tick grids. Reference ordinates never enter the optimizer. Every requested MC sample is optimized; infeasible samples are not silently removed or targets reduced.
+
+`figure_coverage.json` maps every author-thesis figure3-1 through3-10 to its relative original EPS filename, axes, curves, conflicts and remaining gaps. These are not verified final-publisher figure numbers. Figure3-9's scalar grid is4000:4000:28000 elements per subsurface, but its changing physical row/column shape/spacing is unspecified: the legacy configured element candidate is provisional, not a reproduction of that grid. The per-HU ECDF subcaptions conflict with EPS filenames. Figure3-10 remains blocked; `statistical_formulation_audit.md` gives the exact covariance identity and phase-fixed nonconvexity counterexample.
+
+RandRIS is now explicitly implemented using the physical scenario's shared uniformly random unit-modulus phase and the same original QT precoder design. The complete AO chain records genuine20/100 outer-iteration evaluations and per-HU SINRs for the original five-curve comparisons. An original tolerance stop before a budget is labelled with its actual iteration count; no trace is padded or invented. Phase CPU times are recorded separately for AO and TwoStage.
 
 ## Run
 
@@ -18,11 +22,24 @@ The instantaneous branch uses true QT/SOCP active precoding, actual lifted compl
 python run.py --component-test --output outputs/component-python.json --fixture-output outputs/component-fixture.mat
 python run.py --scenario-test --output outputs/scenario-python.json
 python run.py --chain-test --output outputs/chain-python.json
+python run.py --full-case --output outputs/full-budget-case-python.json
 python run.py --full --sweep base --output outputs/full-base-python.json
 python run.py --full --output outputs/full-sweeps-python.json
 ```
 
-Tests are bounded/full-dimensional, not complete paper reproductions. The full Python backend is explicitly SCS (`eps1e-7/max100000`) after Clarabel failed physical-scenario QT; Clarabel performs minimum-power SOCP initialization. SCS solves the **same original convex problem**, not an algorithm fallback. Full runs have not started; solver runtime may be substantial and needs actual benchmarks.
+Tests are bounded/full-dimensional, not complete paper reproductions. `--full-case` executes one physical sample at the complete configured N16/U6/K10/M25 dimensions and AO/RGD/QT/randomization budgets. It does not change the1000-MC figure configuration and is not an MC estimate. SCS/Clarabel solve the same original convex problems, not alternate algorithms. Full MC sweeps have not run.
+
+A complete-budget SCS attempt failed after149.7s at AO iteration12: the active-QT objective decreased, and earlier primal/QT residuals substantially exceeded validation limits. The genuine history and residuals are retained in `full_budget_failure_receipt.json`; no sample or objective drop was erased. Subsequent exact epigraph conditioning was introduced and tested; full-chain validation remains necessary. A second full-sized attempt failed the SDP PSD check after190.1s. Passing a synthetic component or short chain did not establish full-run success.
+
+The current conditioned Clarabel preset has also been tested on the intact
+physical case. Although early subproblems passed independent feasibility checks,
+its active-QT solver failed at AO iteration15 after55.6s. The history, actual
+auxiliary magnitudes, backend/options and earlier conic residuals are retained in
+`full_budget_clarabel_failure_receipt.json`. The failing mathematical input is
+saved locally as an independently generated fixture in ignored `outputs/`, not
+an author manuscript or original code archive. **No successful complete scene or
+near-original-figure reproduction is claimed.** Full dimensions/budgets and
+1000-MC figure configurations were not reduced.
 
 MATLAB needs external official CVX2.2.2/free SDPT3, not vendored. CVX's documented successive approximation handles log/exp for SDPT3; its experimental warning and true physical feasibility must be recorded. R2025b may require CVX's official `functions/vec_` path.
 
@@ -35,6 +52,12 @@ run_strict_hotspot_satcom('full_config.json','outputs/full-sweeps-matlab.json');
 ```
 
 ## Numerical details and evidence
+
+The active QT uses weighted epigraph `lambda_prime=|a|^2*physical_interference`,
+with `gamma<=2Re(a*desired)-lambda_prime` and the correspondingly weighted
+interference constraint. This removes large-epigraph/tiny-coefficient numerical
+conditioning while preserving the feasible set/objective, including a=0. Both
+languages use the same identity; it is not a new optimization algorithm.
 
 Variable/noise normalization is algebraically exact. SDR uses a principal Hermitian square root to pair shared-language Gaussian draws; current phase is retained as rounding incumbent, with no rank-one/global-optimum claim. Formal two-stage phase design follows the thesis's explicit RGD in Algorithm3-2/Section3.4.3, using tangent gradient, normalization retraction and Armijo. Eq3-36 maximizes F=f2-f3 but the prose prints -gradF: the formal method minimizes cost=-F, whose descent direction is +gradF. This unique sign-consistency interpretation is recorded, not disguised as literal agreement. `phase_rgd(...,literal_sign=True)` (MATLAB seventh argument true) diagnoses the printed opposite sign only. `phase_rcg` is a separate explicit PR+ diagnostic and is never selected by the formal chain. Initialization is minimum-power SOCP, not ZF.
 
@@ -65,3 +88,9 @@ sweep was requested. The bounded physical chain test intentionally is not a full
 convergence experiment. Run `python test_termination.py` for pure receipt tests;
 no artificial paper-rate arrays are generated. No full MC sweep was run to add
 these gates.
+
+The original AO20/AO100 curves are explicitly reported finite-budget evaluations,
+not stationarity claims. Their separate `valid_budget_endpoint` gate requires
+physical/primal/QT/SDR validity and records the actual budget/termination, without
+setting `algorithm_success=true` for an unconverged fixed-budget method. Full
+converged AO/TwoStage/NoRIS/RandRIS success remains gated independently.

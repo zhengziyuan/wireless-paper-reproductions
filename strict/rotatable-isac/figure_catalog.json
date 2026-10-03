@@ -1,0 +1,51 @@
+{
+  "paper_id": "rotatable-isac",
+  "source": "https://arxiv.org/html/2512.20987",
+  "source_version": "title-matched author R1 weighted-rate/NMSE formulation; publisher-version equivalence unverified",
+  "reference_curve_closeness_verified": false,
+  "illustrations": [{"figure":1,"source_artifact":"system.pdf","kind":"architecture_not_simulation"}],
+  "metric_paths": {"utility":"metrics[scheme].utility","rate":"metrics[scheme].rate","nmse":"metrics[scheme].nmse"},
+  "default_schemes": ["Rot-BS & Rot-RIS","Rot-BS & Fix-RIS","Fix-BS & Rot-RIS","Fix-BS & Fix-RIS","Rot-BS & No-RIS","Fix-BS & No-RIS"],
+  "rotation_reference_series": [
+    {"legend_order":1,"legend":"rot-BS(rot-RIS90deg)","swept_array":"BS","other_fixed_half_width_deg":90,"scheme":"Rot-BS & Rot-RIS"},
+    {"legend_order":2,"legend":"rot-BS(rot-RIS45deg)","swept_array":"BS","other_fixed_half_width_deg":45,"scheme":"Rot-BS & Rot-RIS"},
+    {"legend_order":3,"legend":"rot-BS(fix-RIS)","swept_array":"BS","other_fixed_half_width_deg":0,"scheme":"Rot-BS & Fix-RIS"},
+    {"legend_order":4,"legend":"rot-BS(no-RIS)","swept_array":"BS","other_fixed_half_width_deg":90,"scheme":"Rot-BS & No-RIS","bank_selection_note":"Use the existing BS-sweep/RIS90 bank; RIS bound has no effect in the No-RIS scheme, so no additional input family is required."},
+    {"legend_order":5,"legend":"rot-RIS(rot-BS45deg)","swept_array":"RIS","other_fixed_half_width_deg":45,"scheme":"Rot-BS & Rot-RIS"},
+    {"legend_order":6,"legend":"rot-RIS(fix-BS)","swept_array":"RIS","other_fixed_half_width_deg":0,"scheme":"Fix-BS & Rot-RIS"}
+  ],
+  "rotation_reference_verification":{"source_artifact":"DEG_F.eps","visually_verified":true,"verification_date":"2026-10-03","x_grid_deg":[0,9,18,27,36,45,54,63,72,81,90],"fixed_widths_90_and_45_source_verified":true,"RIS_sweep_with_BS_fixed_90_in_reference":false,"curve_numeric_closeness_verified":false},
+  "tradeoff_reference_schemes":["Rot-BS & Rot-RIS","Rot-BS & Fix-RIS","Fix-BS & Rot-RIS","Fix-BS & Fix-RIS"],
+  "numerical_figures": [
+    {"figure":2,"source_artifact":"P1_F.eps","family":"power-b0","x":"power_dbm","x_unit":"dBm","y":"utility","y_unit":"weighted utility","series":"default_schemes"},
+    {"figure":3,"source_artifact":"P2_F.eps","family":"power-b2","x":"power_dbm","x_unit":"dBm","y":"utility","y_unit":"weighted utility","series":"default_schemes"},
+    {"figure":4,"source_artifact":"P1_rate.eps","family":"power-b0","x":"power_dbm","x_unit":"dBm","y":"rate","y_unit":"bps/Hz","series":"default_schemes"},
+    {"figure":5,"source_artifact":"P2_rate.eps","family":"power-b2","x":"power_dbm","x_unit":"dBm","y":"rate","y_unit":"bps/Hz","series":"default_schemes"},
+    {"figure":6,"source_artifact":"P1_nmse.eps","family":"power-b0","x":"power_dbm","x_unit":"dBm","y":"nmse","y_unit":"dimensionless linear","series":"default_schemes"},
+    {"figure":7,"source_artifact":"P2_nmse.eps","family":"power-b2","x":"power_dbm","x_unit":"dBm","y":"nmse","y_unit":"dimensionless linear","series":"default_schemes"},
+    {"figure":8,"source_artifact":"M1_F.eps","family":"bs-count","x":"BS_antenna_count","x_unit":"antennas","y":"utility","y_unit":"weighted utility","series":"default_schemes"},
+    {"figure":9,"source_artifact":"M1_rate.eps","family":"bs-count","x":"BS_antenna_count","x_unit":"antennas","y":"rate","y_unit":"bps/Hz","series":"default_schemes"},
+    {"figure":10,"source_artifact":"M1_nmse.eps","family":"bs-count","x":"BS_antenna_count","x_unit":"antennas","y":"nmse","y_unit":"dimensionless linear","series":"default_schemes"},
+    {"figure":11,"source_artifact":"K_F.eps","family":"users","x":"K","x_unit":"users","y":"utility","y_unit":"weighted utility","series":"default_schemes"},
+    {"figure":12,"source_artifact":"K_rate.eps","family":"users","x":"K","x_unit":"users","y":"rate","y_unit":"bps/Hz","series":"default_schemes"},
+    {"figure":13,"source_artifact":"K_nmse.eps","family":"users","x":"K","x_unit":"users","y":"nmse","y_unit":"dimensionless linear","series":"default_schemes"},
+    {"figure":14,"source_artifact":"DEG_F.eps","family":"rotation","x":"rotation_half_width_deg","x_unit":"degrees","y":"utility","y_unit":"weighted utility","series":"rotation_reference_series"},
+    {"figure":15,"source_artifact":"DEG_rate.eps","family":"rotation","x":"rotation_half_width_deg","x_unit":"degrees","y":"rate","y_unit":"bps/Hz","series":"rotation_reference_series","legend_mapping_source":"visually verified DEG_F.eps; same rotation family"},
+    {"figure":16,"source_artifact":"DEG_nmse.eps","family":"rotation","x":"rotation_half_width_deg","x_unit":"degrees","y":"nmse","y_unit":"dimensionless linear","series":"rotation_reference_series","legend_mapping_source":"visually verified DEG_F.eps; same rotation family"},
+    {"figure":17,"source_artifact":"bound.eps","family":"rho","x":"nmse","x_label":"Beampattern NMSE","x_unit":"dimensionless linear","x_direction":"decreasing_left_to_right","reference_x_limits_left_to_right":[1,0.3],"y":"rate","y_unit":"bps/Hz","parameter":"rho","series":"tradeoff_reference_schemes","reference_legend_visually_verified":true,"parametric":true}
+  ],
+  "aggregation_contract": {
+    "expected_independent_channels_per_point":100,
+    "successful_sample_rule":"all six schemes executed; physical constraints; every original inner stop; outer AO stop; matching input and implementation fingerprints",
+    "failed_sample_policy":"do not discard failed samples and silently average survivors; incomplete points are diagnostic only",
+    "mean_rule":"arithmetic mean across all 100 complete independent-channel metric values; utility/rate/NMSE from the same run",
+    "parametric_tradeoff_rule":"one marker per rho, x=mean NMSE and y=mean rate across matching complete ensembles; never plot rho on the horizontal axis",
+    "rotation_rule":"Select exactly the six visually verified rotation_reference_series in legend order from five distinct bound-pair banks. No-RIS shares the BS-sweep/RIS90 bank. Do not add an RIS-sweep/BS90 reference curve or plot all six output schemes from each bank.",
+    "tradeoff_reference_rule":"Plot only the four reference RIS-present schemes; x-axis runs from NMSE1 at left to NMSE0.3 at right. No-RIS remains computed in raw scenario output but is not an original Fig17 reference series."
+  },
+  "render_gaps": [
+    "No complete 100-channel point or full reference-curve comparison yet.",
+    "Rotation legend and widths90/45/0, and Fig17 four-scheme legend/decreasing NMSE axis, are now visually source-verified; this verifies selection/style, not numerical curve closeness.",
+    "All numerical metrics exist per scenario, but no completed original numerical-figure aggregate follows merely from preparing inputs."
+  ]
+}

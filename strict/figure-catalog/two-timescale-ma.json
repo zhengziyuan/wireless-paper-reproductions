@@ -1,0 +1,298 @@
+{
+  "paper_id": "two-timescale-ma",
+  "source_file": "bare_jrnl.tex",
+  "source_sha256": "9ba173a0da8fcd472bb211155e0a4c1e7b9a0104a718bd88ac166808be876b19",
+  "scope": "Author-source figure inventory; NOT simulation results",
+  "figure_count": 20,
+  "unnumbered_equation_or_algorithm_floats": 7,
+  "figures": [
+    {
+      "figure": 1,
+      "labels": [
+        "fig1"
+      ],
+      "caption_tex": "Illustration of an MA-enabled multiuser system.",
+      "assets": [
+        {
+          "file": "system.pdf",
+          "available": true,
+          "sha256": "0a8bb5f758ebd8a69abe63d189e08c06b2038310a06b38d4ca39a6bb78b458dd"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 2,
+      "labels": [
+        "fig2"
+      ],
+      "caption_tex": "Illustration of the proposed two-timescale framework.",
+      "assets": [
+        {
+          "file": "scheme.pdf",
+          "available": true,
+          "sha256": "03947241ba0ad7a60767fc71bcbc00012c7f2f4fad3d530e31df3d24ba00e9d0"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 3,
+      "labels": [],
+      "caption_tex": "The convergence of the proposed MA-MRT Algorithm 1.",
+      "assets": [
+        {
+          "file": "Convergence_MR.eps",
+          "available": true,
+          "sha256": "872d891a8563ab427ddda37e805949f410b3e79293ceb56eb245a1082ada873c"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 4,
+      "labels": [],
+      "caption_tex": "The convergence of the proposed MA-ZF Algorithm 2.",
+      "assets": [
+        {
+          "file": "Convergence_ZF.eps",
+          "available": true,
+          "sha256": "1f7ecfdfaa61bbc7c105a7c5307c9316cf3e028c840d3a0eb4d1e0f2d6cd7553"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 5,
+      "labels": [],
+      "caption_tex": "Ergodic sum rate versus maximum transmit power with $N=6,M=5$ and $\\kappa=100$.",
+      "assets": [
+        {
+          "file": "P_6_3.eps",
+          "available": true,
+          "sha256": "129c7a8f4e9ba36b38541d17872f5f5ca91c715f468109b0aba707475f134dbb"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 6,
+      "labels": [],
+      "caption_tex": "Ergodic sum rate versus maximum transmit power with $N=6,M=5$ and $\\kappa=6$.",
+      "assets": [
+        {
+          "file": "P_6_4.eps",
+          "available": true,
+          "sha256": "7adf4bfb0a5424a1d3129b809deeab1aad611603e984160d1bf0744f634ecf60"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 7,
+      "labels": [],
+      "caption_tex": "Ergodic sum rate versus Rician factor with $N=6,M=5$.",
+      "assets": [
+        {
+          "file": "K_6.eps",
+          "available": true,
+          "sha256": "5ee03530e8a9914702ede95cd3351c2b61ac567834385cac4f29b9fbb0152b32"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 8,
+      "labels": [],
+      "caption_tex": "Ergodic sum rate versus Rician factor with $N=4,M=3$.",
+      "assets": [
+        {
+          "file": "K_4.eps",
+          "available": true,
+          "sha256": "728b80556c29d74c6f9e65d7327fd3fc30b3bb058f4c7e948084e75b984ad3fe"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 9,
+      "labels": [],
+      "caption_tex": "Ergodic sum rate versus movable region size with $N=6,M=5$.",
+      "assets": [
+        {
+          "file": "A_6_1.eps",
+          "available": true,
+          "sha256": "11b193f57ec26e0c5d40d1ba30e40d066452f28d3cdd0ce2d1a67b539aa31c78"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 10,
+      "labels": [],
+      "caption_tex": "Ergodic sum rate versus movable region size with $N=4,M=3$.",
+      "assets": [
+        {
+          "file": "A_6_2.eps",
+          "available": true,
+          "sha256": "34aaa72d2e5115b8d5518b088f56999a08625783fa109dc5342ea94786f37cf3"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 11,
+      "labels": [],
+      "caption_tex": "Ergodic sum rate as a function of the number of users $M$ for MA and FPA configurations $N=6$ and $N=8$ with $\\kappa=100$.",
+      "assets": [
+        {
+          "file": "M_1.eps",
+          "available": true,
+          "sha256": "e7c19f359a07134c3b65f5cd40722d6f61908fc9d95fc31907950369feb66af8"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 12,
+      "labels": [],
+      "caption_tex": "Ergodic sum rate as a function of the number of users $M$ for MA and FPA configurations $N=6$ and $N=8$ with $\\kappa=6$.",
+      "assets": [
+        {
+          "file": "M_2.eps",
+          "available": true,
+          "sha256": "3645ccaa2bc0523dd2250dcb5c2a92aa801f87a2fecd192aa7555ea03da2f388"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 13,
+      "labels": [],
+      "caption_tex": "Ergodic sum rate evaluation for MA-MRT with different NLoS models ($N=8,M=5$).",
+      "assets": [
+        {
+          "file": "spatial1.eps",
+          "available": true,
+          "sha256": "ddc202e7bcd2ed23da899ff94afbe10b44a2a2d03d82837d0d776095cb2cb8b6"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 14,
+      "labels": [],
+      "caption_tex": "Ergodic sum rate evaluation for MA-ZF with different NLoS Models ($N=8,M=5$).",
+      "assets": [
+        {
+          "file": "spatial2.eps",
+          "available": true,
+          "sha256": "b42f2b377dbcbcb3df63c7f5f2213d68b5585f3c78c3cecc946f42e3740429df"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 15,
+      "labels": [],
+      "caption_tex": "Ergodic sum rate evaluation for MA-MRT with different NLoS Models ($N=6,M=5$).",
+      "assets": [
+        {
+          "file": "spatial3.eps",
+          "available": true,
+          "sha256": "520ab7f5fd4f5bcfa1d8a121e06bd5cfbc92615d705fa35ed66f706fbbed1326"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 16,
+      "labels": [],
+      "caption_tex": "Ergodic sum rate evaluation for MA-ZF with different NLoS Models ($N=6,M=5$).",
+      "assets": [
+        {
+          "file": "spatial4.eps",
+          "available": true,
+          "sha256": "c24568399d5fe9d56f22abd35c65bd685e5e3c15e27751f4ee960047ea40baca"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 17,
+      "labels": [],
+      "caption_tex": "Performance degradation with user position error with $\\kappa=20dB$.",
+      "assets": [
+        {
+          "file": "error2.eps",
+          "available": true,
+          "sha256": "023c02f9894875ffdf7968257b889a759c7ba08f46d62ce69628def34be6e145"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 18,
+      "labels": [],
+      "caption_tex": "Performance degradation with antenna position error with $\\kappa=20dB$.",
+      "assets": [
+        {
+          "file": "error1.eps",
+          "available": true,
+          "sha256": "643b21f1739480eb0d0e8378c4197d934f6eafd8918aa5a3bfc9cd8248e9e7b3"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 19,
+      "labels": [],
+      "caption_tex": "Performance comparison with the brute-force method with $N=4,M=3$.",
+      "assets": [
+        {
+          "file": "bruteforce2.eps",
+          "available": true,
+          "sha256": "184ac50c96cd221757ba36bfd7dc7058dbcd073596e99b57dfab012e9f51d689"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 20,
+      "labels": [],
+      "caption_tex": "Performance comparison with the brute-force method with $N=6,M=5$.",
+      "assets": [
+        {
+          "file": "bruteforce1.eps",
+          "available": true,
+          "sha256": "a3dd1980d6125e9abc885bcc7823f29d1a19e37ca0437b6da6f4d32e1eeccb8a"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    }
+  ],
+  "table_count": 0,
+  "tables": [],
+  "numbering_note": "Active captioned figure order, excluding nested algorithm captions; verify chapter/publication numbering separately",
+  "full_reproduction_passed": false
+}

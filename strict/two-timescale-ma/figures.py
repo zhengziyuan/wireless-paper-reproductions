@@ -63,9 +63,10 @@ if __name__=="__main__":
     p=argparse.ArgumentParser();p.add_argument("--figure",type=int,required=True);p.add_argument("--config",type=Path,default=Path(__file__).with_name("full_config.json"));p.add_argument("--output-dir",type=Path,required=True)
     p.add_argument("--prepare",action="store_true");p.add_argument("--execute",action="store_true");args=p.parse_args();config_bytes=args.config.read_bytes();config=json.loads(config_bytes);case_list=cases(config,args.figure)
     original_available=all(original_scope_available(case) for case in case_list)
-    blockers=[] if original_available else ["Correlated Eq72/74/75 dimension mismatch; correlated MC evaluates uncorrelated MRT/ZF optimized positions, not Eq69/75 optimized curves."]
+    blockers=[] if original_available else ["Correlated-ZF Eq72/74/75 have unresolved dimensions and row-correlated Wishart assumptions. No replacement formula is used."]
     plan={"paper_id":"two-timescale-ma","figure":args.figure,"full":True,"geometry_realizations":config["geometry_realizations"],"nlos_per_geometry":config["nlos_realizations_per_geometry"],"cases":case_list,"jobs":len(case_list)*config["geometry_realizations"],
           "original_figure_scope_available":original_available,"original_figure_blockers":blockers,
+          "model_comparison_protocol":"Figs13/15 evaluate Eq68/69 and iid rates on the original iid Algorithm1 trajectory; source-supported interpretation, not recovered original records or verified original-curve closeness.",
           "warning":"Figs19/20 are exhaustive and may be computationally prohibitive. Correlated-ZF analytical75 remains blocked; correlated MC uses valid model68.","executed":False}
     args.output_dir.mkdir(parents=True,exist_ok=True);(args.output_dir/"plan.json").write_text(json.dumps(plan,indent=2)+"\n")
     if args.prepare or args.execute:
@@ -100,6 +101,7 @@ if __name__=="__main__":
                  "overall_implemented_scope_success":bool(args.execute and valid_bank and implemented_successful.all()),
                  "overall_full_success":bool(args.execute and valid_bank and successful.all()),
                  "original_figure_complete":bool(args.execute and valid_bank and successful.all()),
+                 "original_curve_closeness_verified":False,
                  "original_figure_status":"blocked_by_source_formulation" if not original_available else ("complete" if args.execute and valid_bank and successful.all() else "not_run_or_incomplete"),
                  "original_figure_blockers":blockers,"executed":args.execute}
         (args.output_dir/"full_summary.json").write_text(json.dumps(summary,indent=2)+"\n")

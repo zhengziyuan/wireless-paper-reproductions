@@ -91,6 +91,13 @@ def run_job(job,config):
             fixed[kind].append(value); caps[kind]+=int(not history["converged"])
     for kind,rates in fixed.items():
         results[kind]={"sample_sum_rates":rates,"mean_sum_rate":float(np.mean(rates)),"nonconverged_samples":caps[kind]}
+    # Figures 3/4 need the actual MC evaluator at each accepted AO sweep, not
+    # merely the statistical design objective mislabeled as the actual rate.
+    # Use precisely the exported ensemble; no optimization or RNG is changed.
+    if job["figure"] in [3,13,15]:
+        mrt_hist["instantaneous_MC_mean"]=[instantaneous(np.asarray(p),c,nlos,"MRT")["mean_sum_rate"] for p in mrt_hist["positions"]]
+    if job["figure"] in [4,14,16]:
+        zf_hist["instantaneous_MC_mean"]=[instantaneous(np.asarray(p),c,nlos,"ZF")["mean_sum_rate"] for p in zf_hist["positions"]]
     extension={}
     if job.get("correlated",False):
         extension={"MA-MRT_MC":instantaneous(mrt_pos,c,nlos,"MRT",True),
@@ -99,6 +106,10 @@ def run_job(job,config):
                    "ZF_Eq75_status":"blocked_by_Eq72_74_dimension_mismatch"}
         extension["MRT_correlated_MC_history"]=[instantaneous(np.asarray(p),c,nlos,"MRT",True)["mean_sum_rate"] for p in mrt_hist["positions"]]
         extension["ZF_correlated_MC_history"]=[instantaneous(np.asarray(p),c,nlos,"ZF",True)["mean_sum_rate"] for p in zf_hist["positions"]]
+        extension["MRT_Eq69_history"]=[correlated_mrt(np.asarray(p),c) for p in mrt_hist["positions"]]
+        extension["comparison_protocol"]={"trajectory":"iid_Algorithm1_for_MRT_iid_Algorithm2_for_ZF",
+            "same_exported_NLoS_ensemble":True,"source_supported_interpretation":True,
+            "original_experiment_record_recovered":False,"original_curve_closeness_verified":False}
     checks={"mrt_converged":mrt_hist["converged"],"zf_converged":zf_hist["converged"],
             "each_algorithm_owns_its_positions":True,"full_N":n,"full_M":m,"nlos_samples":len(nlos)}
     for name,positions in [("mrt",mrt_pos),("zf",zf_pos)]:

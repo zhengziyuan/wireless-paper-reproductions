@@ -1,0 +1,346 @@
+{
+  "paper_id": "cooperative-satcom",
+  "source_version": "author_thesis_Chapter4_TeX_and_original_EPS",
+  "final_published_figure_numbering_verified": false,
+  "reference_policy": "Original EPS is an independent comparison reference only. Reference ordinates never enter simulation or optimization; private figures/manuscripts are not redistributed.",
+  "reference_folder_hint": "figures/chapter4",
+  "default_dimensions": {
+    "J": 3,
+    "N": 16,
+    "U": 2,
+    "K": 1,
+    "M": 25
+  },
+  "curves": [
+    "AP-NoRIS",
+    "MR-S-NoRIS",
+    "MR-TTS-NoRIS",
+    "AP-AO",
+    "MR-S-PA",
+    "MR-TTS-PA",
+    "MR-S-TS",
+    "MR-TTS-TS"
+  ],
+  "y": {
+    "quantity": "minimum LU SINR",
+    "scale": "linear"
+  },
+  "figures": [
+    {
+      "source_id": "4-1",
+      "files": [
+        "多星多RIS干扰规避场景图.pdf"
+      ],
+      "kind": "system_diagram",
+      "simulation_required": false
+    },
+    {
+      "source_id": "4-2",
+      "files": [
+        "plot_P_T_2.eps"
+      ],
+      "sweep_id": "power_kL20",
+      "x": {
+        "quantity": "per-LEO transmit power",
+        "unit": "W",
+        "values_expression": "2**arange(0,5.01,0.5)"
+      },
+      "parameters": {
+        "kappa_leo_db": 20
+      },
+      "curves": "curves"
+    },
+    {
+      "source_id": "4-3",
+      "files": [
+        "plot_P_T_1.eps"
+      ],
+      "sweep_id": "power_kL0",
+      "x": {
+        "quantity": "per-LEO transmit power",
+        "unit": "W",
+        "values_expression": "2**arange(0,6.01,0.5)"
+      },
+      "parameters": {
+        "kappa_leo_db": 0
+      },
+      "curves": "curves"
+    },
+    {
+      "source_id": "4-4",
+      "files": [
+        "plot_varsigma_1.eps"
+      ],
+      "sweep_id": "interference_kL20",
+      "x": {
+        "quantity": "LEO-to-GT interference threshold",
+        "values": [
+          0.01,
+          0.02,
+          0.03,
+          0.04,
+          0.05,
+          0.06,
+          0.07,
+          0.08,
+          0.09,
+          0.1,
+          0.11,
+          0.12
+        ],
+        "display_unit_printed": "W",
+        "implemented_unit": "noise-normalized interference-to-noise ratio"
+      },
+      "parameters": {
+        "kappa_leo_db": 20
+      },
+      "curves": "curves",
+      "reference_line": {
+        "INR_db": -12.2,
+        "linear": 0.06025595860743575
+      }
+    },
+    {
+      "source_id": "4-5",
+      "files": [
+        "plot_varsigma_2.eps"
+      ],
+      "sweep_id": "interference_kL0",
+      "x": {
+        "quantity": "LEO-to-GT interference threshold",
+        "values": [
+          0.01,
+          0.02,
+          0.03,
+          0.04,
+          0.05,
+          0.06,
+          0.07,
+          0.08,
+          0.09,
+          0.1,
+          0.11,
+          0.12
+        ],
+        "display_unit_printed": "W",
+        "implemented_unit": "noise-normalized interference-to-noise ratio"
+      },
+      "parameters": {
+        "kappa_leo_db": 0
+      },
+      "curves": "curves",
+      "reference_line": {
+        "INR_db": -12.2,
+        "linear": 0.06025595860743575
+      }
+    },
+    {
+      "source_id": "4-6",
+      "files": [
+        "plot_MN_1.eps"
+      ],
+      "sweep_id": "subsurfaces_kL20",
+      "x": {
+        "quantity": "RIS subsurface count",
+        "values": [
+          5,
+          10,
+          15,
+          20,
+          25,
+          30,
+          35,
+          40,
+          45
+        ]
+      },
+      "parameters": {
+        "kappa_leo_db": 20
+      },
+      "curves": "curves"
+    },
+    {
+      "source_id": "4-7",
+      "files": [
+        "plot_MN_2.eps"
+      ],
+      "sweep_id": "subsurfaces_kL0",
+      "x": {
+        "quantity": "RIS subsurface count",
+        "values": [
+          5,
+          10,
+          15,
+          20,
+          25,
+          30,
+          35,
+          40,
+          45
+        ]
+      },
+      "parameters": {
+        "kappa_leo_db": 0
+      },
+      "curves": "curves"
+    },
+    {
+      "source_id": "4-8",
+      "files": [
+        "plot_beta_1.eps"
+      ],
+      "sweep_id": "ground_kL0",
+      "x": {
+        "quantity": "RIS-to-LU Rician factor",
+        "unit": "dB",
+        "values": [
+          -12,
+          -9,
+          -6,
+          -3,
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30
+        ]
+      },
+      "parameters": {
+        "kappa_leo_db": 0
+      },
+      "curves": "curves"
+    },
+    {
+      "source_id": "4-9",
+      "files": [
+        "plot_beta_2.eps"
+      ],
+      "sweep_id": "ground_kL10",
+      "x": {
+        "quantity": "RIS-to-LU Rician factor",
+        "unit": "dB",
+        "values": [
+          -12,
+          -9,
+          -6,
+          -3,
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30
+        ]
+      },
+      "parameters": {
+        "kappa_leo_db": 10
+      },
+      "curves": "curves"
+    },
+    {
+      "source_id": "4-10",
+      "files": [
+        "plot_beta_3.eps"
+      ],
+      "sweep_id": "ground_kL20",
+      "x": {
+        "quantity": "RIS-to-LU Rician factor",
+        "unit": "dB",
+        "values": [
+          -12,
+          -9,
+          -6,
+          -3,
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30
+        ]
+      },
+      "parameters": {
+        "kappa_leo_db": 20
+      },
+      "curves": "curves"
+    },
+    {
+      "source_id": "4-11",
+      "files": [
+        "plot_case.eps"
+      ],
+      "sweep_id": "multi_vs_single_*",
+      "x": {
+        "quantity": "LEO-to-GT interference threshold",
+        "values": [
+          0.01,
+          0.02,
+          0.03,
+          0.04,
+          0.05,
+          0.06,
+          0.07,
+          0.08,
+          0.09,
+          0.1,
+          0.11,
+          0.12
+        ],
+        "display_unit_printed": "W",
+        "implemented_unit": "noise-normalized interference-to-noise ratio"
+      },
+      "parameters": {
+        "multi_total_antennas": 48,
+        "single_antennas": 48,
+        "multi_total_power_W": 150,
+        "single_power_W": 150,
+        "kappa_leo_db": [
+          0,
+          20
+        ],
+        "single_latitude_offsets_deg": [
+          1.25,
+          2.5
+        ]
+      },
+      "curves": [
+        "M_AP_kL20",
+        "M_AP_kL0",
+        "M_MR_TTS_TS_kL20",
+        "M_MR_TTS_TS_kL0",
+        "S_AP_kL20_offset1.25",
+        "S_AP_kL0_offset1.25",
+        "S_MR_TTS_TS_kL20_offset1.25",
+        "S_MR_TTS_TS_kL0_offset1.25",
+        "S_AP_kL20_offset2.5",
+        "S_AP_kL0_offset2.5",
+        "S_MR_TTS_TS_kL20_offset2.5",
+        "S_MR_TTS_TS_kL0_offset2.5"
+      ]
+    }
+  ],
+  "grid_evidence": "Axis ranges and legends visually checked against original EPS. Power curve vertex abscissas match half-octave powers, not axis ticks; tiny clipped end-segment vertices are not additional scenario points.",
+  "source_unit_conflict": "EPS prints W for interference. The marked ITU line is10^(-12.2/10)=0.06026 and the author states normalized noise in propagation factors, so the implementation uses linear INR. Do not reinterpret0.06 as physical wattage in a -94dBm-noise receiver.",
+  "remaining": [
+    "final publisher version/numbering",
+    "exact author unreported geometry/gain choices",
+    "full converged original-scheme sweeps not executed",
+    "quantified independent agreement with the original reference data"
+  ]
+}

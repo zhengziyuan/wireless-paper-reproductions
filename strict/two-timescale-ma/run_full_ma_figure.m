@@ -16,17 +16,17 @@ for index=1:numel(files)
         end
     end
     implementedSuccessful(entry.case_index+1,entry.realization+1)=ma_resume_implemented_complete(out,expected,job,config);
-    originalJobAvailable=~(isfield(job,'correlated')&&job.correlated);originalAvailable=originalAvailable&&originalJobAvailable;
+    originalJobAvailable=~(isfield(job,'correlated')&&job.correlated)||(isfield(job,'figure')&&ismember(job.figure,[13,15]));originalAvailable=originalAvailable&&originalJobAvailable;
     successful(entry.case_index+1,entry.realization+1)=implementedSuccessful(entry.case_index+1,entry.realization+1)&&originalJobAvailable;
 end
 originalComplete=all(coverage(:))&&all(successful(:));originalStatus='not_run_or_incomplete';blockers={};
-if ~originalAvailable,originalStatus='blocked_by_source_formulation';blockers={'Correlated Eq72/74/75 dimension mismatch; correlated MC evaluates uncorrelated MRT/ZF optimized positions, not Eq69/75 optimized curves.'};
+if ~originalAvailable,originalStatus='blocked_by_source_formulation';blockers={'Correlated-ZF Eq72/74/75 have unresolved dimensions and row-correlated Wishart assumptions. No replacement formula is used.'};
 elseif originalComplete,originalStatus='complete';end
 summary=struct('paper_id','two-timescale-ma','input_bank_complete',all(coverage(:)),'expected_jobs',manifest.expected_jobs,...
     'successful_jobs',sum(successful(:)),'per_case_all_success',all(successful,2)',...
     'implemented_scope_successful_jobs',sum(implementedSuccessful(:)),'per_case_implemented_scope_success',all(implementedSuccessful,2)',...
     'overall_implemented_scope_success',all(coverage(:))&&all(implementedSuccessful(:)),'overall_full_success',originalComplete,...
-    'original_figure_complete',originalComplete,'original_figure_status',originalStatus,'original_figure_blockers',{blockers},'executed',true);
+    'original_figure_complete',originalComplete,'original_curve_closeness_verified',false,'original_figure_status',originalStatus,'original_figure_blockers',{blockers},'executed',true);
 fid=fopen(fullfile(outputFolder,'full_summary.json'),'w');fprintf(fid,'%s\n',jsonencode(summary));fclose(fid);
 end
 
@@ -67,6 +67,15 @@ try
     if isfield(job,'correlated')&&job.correlated
         ext=result.metrics.correlated_extension;if numel(ext.MA_MRT_MC.sample_sum_rates)~=config.nlos_realizations_per_geometry||numel(ext.MA_ZF_MC.sample_sum_rates)~=config.nlos_realizations_per_geometry,return;end
         if ~all(isfinite(ext.MA_MRT_MC.sample_sum_rates))||~all(isfinite(ext.MA_ZF_MC.sample_sum_rates)),return;end
+    end
+    mode='';if isfield(job,'figure')&&ismember(job.figure,[3,13,15]),mode='mrt';elseif isfield(job,'figure')&&ismember(job.figure,[4,14,16]),mode='zf';end
+    if ~isempty(mode)
+        hist=result.history.(mode);count=numel(hist.objective);
+        if count<2||~isfield(hist,'instantaneous_MC_mean')||numel(hist.instantaneous_MC_mean)~=count||~all(isfinite(hist.instantaneous_MC_mean)),return;end
+        if isfield(job,'correlated')&&job.correlated
+            ext=result.metrics.correlated_extension;names={'ZF_correlated_MC_history'};if strcmp(mode,'mrt'),names={'MRT_correlated_MC_history','MRT_Eq69_history'};end
+            for i=1:numel(names),if ~isfield(ext,names{i})||numel(ext.(names{i}))~=count||~all(isfinite(ext.(names{i}))),return;end,end
+        end
     end
     if isfield(job,'brute_force_D')
         if ~result.metrics.brute_force.MRT.search.complete||~result.metrics.brute_force.ZF.search.complete,return;end

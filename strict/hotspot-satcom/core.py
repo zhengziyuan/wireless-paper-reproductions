@@ -6,6 +6,7 @@ conformance remains an explicit gate; thesis-equivalent blocks are not final pro
 from __future__ import annotations
 import numpy as np
 import cvxpy as cp
+import time
 from termination import relative_stop,gradient_stop
 
 
@@ -50,29 +51,39 @@ def active_qt_update(hu,nhu,W0,noise,total_power,nhu_target,solver='CLARABEL',so
     U,N=hu.shape; K=nhu.shape[0]; J=U+K
     if a is None:
         a=qt_parameters(hu,W0,noise)
-    # Exact variable/noise normalization: physical W=sqrt(P)*V, lambda=noise*l.
+    # Exact variable/noise normalization: physical W=sqrt(P)*V.
+    # lambda' = |a*sqrt(noise)|^2 * lambda/noise is the weighted interference
+    # epigraph. This eliminates a large lambda multiplied by a tiny |a|^2;
+    # it is the identical QT feasible set/objective (also when a=0).
     # SINRs/objective/QoS are unchanged; this is numerical conditioning only.
     W=cp.Variable((N,J),complex=True); lam=cp.Variable(U); gamma=cp.Variable(U)
     scale=np.sqrt(total_power/noise); hs=hu*scale; ns=nhu*scale; az=a*np.sqrt(noise)
     constraints=[cp.sum_squares(cp.abs(W))<=1]
     for u in range(U):
         interferers=[j for j in range(J) if j!=u]
-        constraints.append(cp.sum_squares(cp.abs(hs[u]@W[:,interferers]))+1<=lam[u])
-        constraints.append(gamma[u]<=2*cp.real(np.conj(az[u])*(hs[u]@W[:,u]))-abs(az[u])**2*lam[u])
+        constraints.append(cp.sum_squares(cp.abs(np.conj(az[u])*(hs[u]@W[:,interferers])))+abs(az[u])**2<=lam[u])
+        constraints.append(gamma[u]<=2*cp.real(np.conj(az[u])*(hs[u]@W[:,u]))-lam[u])
     for k in range(K):
         index=U+k; interferers=[j for j in range(J) if j!=index]
         desired=ns[k]@W[:,index]
         constraints.append(cp.imag(desired)==0)
         constraints.append(cp.norm(cp.hstack([ns[k]@W[:,interferers],1.0]))<=cp.real(desired)/np.sqrt(nhu_target[k]))
     problem=cp.Problem(cp.Maximize(cp.sum(cp.log1p(gamma))/np.log(2)),constraints)
-    problem.solve(solver=solver,**(solver_options or {}))
+    try:
+        problem.solve(solver=solver,**(solver_options or {}))
+    except cp.error.SolverError as error:
+        error.receipt={'block':'active_QT','backend':solver,'solver_options':solver_options,
+                       'before':evaluate(hu,nhu,W0,noise),'auxiliary_magnitudes':abs(a),
+                       'scaled_hu_row_norms':np.linalg.norm(hs,axis=1)}
+        error.fixture={'hu':hu,'nhu':nhu,'W0':W0,'noise':noise,'power':total_power,'target':nhu_target,'a':a}
+        raise
     if problem.status not in ('optimal','optimal_inaccurate') or W.value is None:
         raise RuntimeError(f'Hotspot QT/SOCP: {problem.status}')
     value=W.value*np.sqrt(total_power); after=evaluate(hu,nhu,value,noise); before=evaluate(hu,nhu,W0,noise)
     received=hu@W0; den=np.sum(abs(received)**2,axis=1)-abs(received[np.arange(U),np.arange(U)])**2+noise
     qt=2*np.real(np.conj(a)*received[np.arange(U),np.arange(U)])-abs(a)**2*den
     return value,{'solver_status':problem.status,'surrogate_rate':float(problem.value),
-                  'solver_diagnostics':solver_diagnostics(problem),
+                  'solver_diagnostics':dict(solver_diagnostics(problem),epigraph_scaling='lambda_prime_equals_abs_a_squared_times_physical_interference'),
                   'qt_bound_max_violation':float(max(0,np.max(gamma.value-after['sinr'][:U]))),
                   'qt_tightness_error':float(np.max(abs(qt-before['sinr'][:U]))),'before':before,'after':after},a
 
@@ -84,7 +95,12 @@ def qt_loop(hu,nhu,W0,noise,power,target,max_iterations,relative_tolerance,solve
         if diagnostics is not None: diagnostics.append(dict(info['solver_diagnostics'],qt_bound_max_violation=info['qt_bound_max_violation']))
         value=info['after']['hu_sum_rate']
         if value < history[-1]-1e-6:
-            raise RuntimeError('QT update decreased exact objective beyond solver tolerance')
+            error=RuntimeError('QT update decreased exact objective beyond solver tolerance')
+            error.receipt={'block':'QT','attempted_iteration':len(history),
+                           'retained_history':history,'attempted_value':value,
+                           'decrease':history[-1]-value,'active_update':info,
+                           'solver_diagnostics':diagnostics or []}
+            raise error
         W=candidate; history.append(value)
         if (history[-1]-history[-2])/max(abs(history[-2]),1e-12)<relative_tolerance:
             break
@@ -125,13 +141,24 @@ def phase_sdr_update(direct,cascade,phi0,W,a,noise,normal_draws,solver='CLARABEL
                 q-=abs(a[u])**2*cp.real(cp.trace(Q@V))
         terms.append(cp.log1p(q)/np.log(2))
     problem=cp.Problem(cp.Maximize(cp.sum(cp.hstack(terms))),constraints)
-    problem.solve(solver=solver,**(solver_options or {}))
+    try:
+        problem.solve(solver=solver,**(solver_options or {}))
+    except cp.error.SolverError as error:
+        error.receipt={'block':'phase_SDP','backend':solver,'solver_options':solver_options,
+                       'before_exact_rate':evaluate(effective_rows(direct,cascade,phi0),np.empty((0,N)),W,noise)['hu_sum_rate'],
+                       'incumbent_surrogate':phase_surrogate(direct,cascade,phi0,W,a,noise)}
+        error.fixture={'direct':direct,'cascade':cascade,'phi0':phi0,'W':W,'a':a,'noise':noise,'normal_draws':normal_draws}
+        raise
     if problem.status not in ('optimal','optimal_inaccurate') or V.value is None:
         raise RuntimeError(f'Phase SDP: {problem.status}')
     relaxation=(V.value+V.value.conj().T)/2
     values,vectors=np.linalg.eigh(relaxation)
     if np.min(values)<-1e-5:
-        raise RuntimeError('SDP returned non-PSD matrix beyond numerical tolerance')
+        error=RuntimeError('SDP returned non-PSD matrix beyond numerical tolerance')
+        error.receipt={'block':'phase_SDP','smallest_sdp_eigenvalue':float(np.min(values)),
+                       'sdp_eigenvalues':values,'diagonal_error':float(np.max(abs(np.diag(relaxation)-1))),
+                       'solver_diagnostics':solver_diagnostics(problem)}
+        raise error
     # Principal Hermitian square root eliminates eigenvector phase/order gauges
     # so paired MATLAB/Python normal draws address the same random directions.
     factor=(vectors*np.sqrt(np.maximum(values,0))[None,:])@vectors.conj().T
@@ -154,7 +181,7 @@ def phase_sdr_update(direct,cascade,phi0,W,a,noise,normal_draws,solver='CLARABEL
 
 
 def ao(direct,cascade,nhu,phi0,W0,noise,power,target,normal_draws,max_iterations,relative_tolerance,
-       solver='CLARABEL',solver_options=None,diagnostics=None,status=None):
+       solver='CLARABEL',solver_options=None,diagnostics=None,status=None,budget_endpoints=None):
     """Original instantaneous AO/QT/SDR structure; shared draws per AO iteration."""
     W=W0.copy(); phi=phi0.copy(); hu=effective_rows(direct,cascade,phi)
     history=[evaluate(hu,nhu,W,noise)['hu_sum_rate']]
@@ -162,19 +189,50 @@ def ao(direct,cascade,nhu,phi0,W0,noise,power,target,normal_draws,max_iterations
         raise ValueError('Provide fixed Gaussian draws for every allowed AO iteration')
     for iteration in range(max_iterations):
         a=qt_parameters(hu,W,noise)
-        W,active,_=active_qt_update(hu,nhu,W,noise,power,target,solver,solver_options,a)
+        try:
+            W,active,_=active_qt_update(hu,nhu,W,noise,power,target,solver,solver_options,a)
+        except (RuntimeError,cp.error.SolverError) as error:
+            error.receipt={'block':'AO_active_subproblem','attempted_iteration':iteration+1,
+                           'retained_history':history,'active_failure':getattr(error,'receipt',None),
+                           'solver_diagnostics':diagnostics or []}
+            raise
         # Algorithm 3-1 updates the quadratic parameter again after active W.
         a=qt_parameters(hu,W,noise)
-        phi,phase=phase_sdr_update(direct,cascade,phi,W,a,noise,normal_draws[iteration],solver,solver_options)
+        phase_clock=time.perf_counter()
+        try:
+            phi,phase=phase_sdr_update(direct,cascade,phi,W,a,noise,normal_draws[iteration],solver,solver_options)
+        except (RuntimeError,cp.error.SolverError) as error:
+            error.receipt={'block':'AO_phase_subproblem','attempted_iteration':iteration+1,
+                           'retained_history':history,'active_update':active,
+                           'phase_failure':getattr(error,'receipt',None),'solver_diagnostics':diagnostics or []}
+            raise
+        phase['solver_diagnostics']['phase_cpu_seconds']=time.perf_counter()-phase_clock
         if diagnostics is not None: diagnostics.append({'active':dict(active['solver_diagnostics'],qt_bound_max_violation=active['qt_bound_max_violation']),
                                                        'phase':phase['solver_diagnostics']})
         hu=effective_rows(direct,cascade,phi); value=evaluate(hu,nhu,W,noise)['hu_sum_rate']
         if value<history[-1]-1e-5:
-            raise RuntimeError('AO objective decrease beyond solver accuracy')
+            error=RuntimeError('AO objective decrease beyond solver accuracy')
+            error.receipt={'block':'AO','attempted_iteration':iteration+1,
+                           'retained_history':history,'attempted_value':value,
+                           'decrease':history[-1]-value,'active_update':active,
+                           'phase_update':phase,'solver_diagnostics':diagnostics or []}
+            raise error
         history.append(value)
+        if budget_endpoints is not None and iteration+1 in (20,100):
+            budget_endpoints[str(iteration+1)]={'evaluation':evaluate(hu,nhu,W,noise),
+                'executed_outer_iterations':iteration+1,'requested_outer_budget':iteration+1,
+                'interpretation':'reported_fixed_budget_endpoint_NOT_stationarity_claim',
+                'solver_diagnostics':list(diagnostics or [])}
         if (history[-1]-history[-2])/max(abs(history[-2]),1e-12)<relative_tolerance:
             break
     if status is not None: status.update(relative_stop(history,max_iterations,relative_tolerance))
+    if budget_endpoints is not None:
+        for budget in (20,100):
+            if str(budget) not in budget_endpoints and len(history)-1<budget and relative_stop(history,max_iterations,relative_tolerance)['converged']:
+                budget_endpoints[str(budget)]={'evaluation':evaluate(hu,nhu,W,noise),
+                    'executed_outer_iterations':len(history)-1,'requested_outer_budget':budget,
+                    'interpretation':'original_relative_stop_reached_before_reported_budget_NO_trace_padding',
+                    'solver_diagnostics':list(diagnostics or [])}
     return phi,W,history
 
 
@@ -250,10 +308,13 @@ def _phase_optimizer(direct,cascade,nhu,phi,max_iterations,gradient_tolerance,st
 def two_stage(direct,cascade,nhu,phi0,W0,noise,power,target,rgd_iterations,gradient_tolerance,
               qt_iterations,qt_tolerance,solver='CLARABEL',solver_options=None):
     phase_stop={}; qt_stop={}
+    phase_clock=time.perf_counter()
     phi,phase_history=phase_rgd(direct,cascade,nhu,phi0,rgd_iterations,gradient_tolerance,phase_stop)
+    phase_seconds=time.perf_counter()-phase_clock
     diagnostics=[]
     W,rate_history=qt_loop(effective_rows(direct,cascade,phi),nhu,W0,noise,power,target,
                            qt_iterations,qt_tolerance,solver,solver_options,diagnostics,qt_stop)
     return phi,W,{'phase_criterion':phase_history,'qt_rate':rate_history,'solver_diagnostics':diagnostics,
                  'phase_method':'author_Algorithm_3-2_RGD_minimize_negative_F',
+                 'phase_cpu_seconds':phase_seconds,
                  'termination':{'phase':phase_stop,'QT':qt_stop}}

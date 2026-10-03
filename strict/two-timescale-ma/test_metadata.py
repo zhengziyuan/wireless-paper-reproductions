@@ -36,6 +36,22 @@ def run():
     assert not original_scope_available({"correlated":True})
     assert not complete(correlated,fp,{"correlated":True},c)
     assert complete(correlated,fp,{"correlated":False},c)
+    correlated["history"]={"mrt":{"objective":[0.,0.],"instantaneous_MC_mean":[0.,0.]},
+                           "zf":{"objective":[0.,0.],"instantaneous_MC_mean":[0.,0.]}}
+    for key in ["MRT_correlated_MC_history","MRT_Eq69_history","ZF_correlated_MC_history"]:
+        correlated["metrics"]["correlated_extension"][key]=[0.,0.]
+    for figure in [13,15]:
+        assert original_scope_available({"correlated":True,"figure":figure})
+        assert complete(correlated,fp,{"correlated":True,"figure":figure},c)
+    for figure in [14,16]:
+        assert not original_scope_available({"correlated":True,"figure":figure})
+        assert implemented_complete(correlated,fp,{"correlated":True,"figure":figure},c)
+        assert not complete(correlated,fp,{"correlated":True,"figure":figure},c)
+    missing_curve=copy.deepcopy(correlated);missing_curve["metrics"]["correlated_extension"].pop("MRT_Eq69_history")
+    assert not complete(missing_curve,fp,{"correlated":True,"figure":13},c)
+    bad_curve=copy.deepcopy(correlated);bad_curve["history"]["mrt"]["instantaneous_MC_mean"][0]=float("nan")
+    assert not complete(bad_curve,fp,{"correlated":True,"figure":15},c)
+    assert not complete(receipt,fp,{"figure":3},c)
     correlated["metrics"]["correlated_extension"]["MA-ZF_MC"]["sample_sum_rates"][0]=float("inf")
     assert not implemented_complete(correlated,fp,{"correlated":True},c)
     data={f"case-000-mc-{r:03d}.json":f"synthetic input identity {r}".encode() for r in range(100)}
@@ -44,7 +60,7 @@ def run():
     missing=dict(data);missing.pop(next(iter(missing)));assert not bank_complete(Bank(missing),manifest,b"config")
     changed=dict(data);changed[next(iter(changed))]=b"changed input";assert not bank_complete(Bank(changed),manifest,b"config")
     duplicate=copy.deepcopy(manifest);duplicate["files"][-1]["realization"]=0;assert not bank_complete(Bank(data),duplicate,b"config")
-    print("MA metadata tests passed: config/input/source change and failed/incomplete receipts never resume; correlated MC subset cannot close original figures.")
+    print("MA metadata tests passed: stale/failed/incomplete receipts never resume; MRT13/15 support model-comparison scope with all histories, ZF14/16 remain blocked; missing/nonfinite actual histories fail.")
 
 
 if __name__=="__main__":run()

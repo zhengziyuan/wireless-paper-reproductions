@@ -67,11 +67,13 @@ def full_run(config,sweep_id=None):
     available=copy.deepcopy(config['sweeps']); comparison=config['multi_vs_single']
     if comparison['enabled']:
         for kappa in comparison['kappa_leo_db']:
-            available.append({'id':f'multi_vs_single_multi_kL{kappa}','parameter':'interference_to_noise_db',
-                'values':comparison['interference_values_db'],'kappa_leo_db':kappa,'satellite_mode':'multi'})
+            axis='interference_to_noise_ratio' if 'interference_values_linear' in comparison else 'interference_to_noise_db'
+            grid=comparison.get('interference_values_linear',comparison.get('interference_values_db'))
+            available.append({'id':f'multi_vs_single_multi_kL{kappa}','parameter':axis,
+                'values':grid,'kappa_leo_db':kappa,'satellite_mode':'multi'})
             for offset in comparison['offsets_deg']:
-                available.append({'id':f'multi_vs_single_single_{offset}_kL{kappa}','parameter':'interference_to_noise_db',
-                    'values':comparison['interference_values_db'],'kappa_leo_db':kappa,'satellite_mode':'single','offset_deg':offset})
+                available.append({'id':f'multi_vs_single_single_{offset}_kL{kappa}','parameter':axis,
+                    'values':grid,'kappa_leo_db':kappa,'satellite_mode':'single','offset_deg':offset})
     sweeps=available if sweep_id is None else [s for s in available if s['id']==sweep_id]
     if sweep_id=='base': sweeps=[{'id':'base','parameter':'power_w','values':[config['reported']['power_w']], 'kappa_leo_db':config['reported']['kappa_leo_db']}]
     if not sweeps: raise ValueError('Unknown sweep id')

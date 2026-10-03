@@ -33,17 +33,18 @@
     "solver_primal_relative_tolerance": 0.00001, "qt_bound_tolerance": 0.00001
   },
   "sweeps": [
-    {"id":"power_kL20", "parameter":"power_w", "values":[1,2,4,8,16,32,64,128], "kappa_leo_db":20},
-    {"id":"power_kL0", "parameter":"power_w", "values":[1,2,4,8,16,32,64,128], "kappa_leo_db":0},
-    {"id":"interference_kL20", "parameter":"interference_to_noise_db", "values":[-30,-25,-20,-15,-12.2,-10,-5,0], "kappa_leo_db":20},
-    {"id":"interference_kL0", "parameter":"interference_to_noise_db", "values":[-30,-25,-20,-15,-12.2,-10,-5,0], "kappa_leo_db":0},
-    {"id":"subsurfaces_kL20", "parameter":"M", "values":[4,9,16,25,36,49,64], "kappa_leo_db":20},
-    {"id":"subsurfaces_kL0", "parameter":"M", "values":[4,9,16,25,36,49,64], "kappa_leo_db":0},
-    {"id":"ground_kL0", "parameter":"kappa_ground_db", "values":[-12,-6,0,6,12,18,24,30], "kappa_leo_db":0},
-    {"id":"ground_kL10", "parameter":"kappa_ground_db", "values":[-12,-6,0,6,12,18,24,30], "kappa_leo_db":10},
-    {"id":"ground_kL20", "parameter":"kappa_ground_db", "values":[-12,-6,0,6,12,18,24,30], "kappa_leo_db":20}
+    {"id":"power_kL20", "parameter":"power_w", "values":[1,1.4142135623730951,2,2.8284271247461903,4,5.656854249492381,8,11.313708498984761,16,22.627416997969522,32], "kappa_leo_db":20},
+    {"id":"power_kL0", "parameter":"power_w", "values":[1,1.4142135623730951,2,2.8284271247461903,4,5.656854249492381,8,11.313708498984761,16,22.627416997969522,32,45.254833995939045,64], "kappa_leo_db":0},
+    {"id":"interference_kL20", "parameter":"interference_to_noise_ratio", "values":[0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.10,0.11,0.12], "kappa_leo_db":20},
+    {"id":"interference_kL0", "parameter":"interference_to_noise_ratio", "values":[0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.10,0.11,0.12], "kappa_leo_db":0},
+    {"id":"subsurfaces_kL20", "parameter":"M", "values":[5,10,15,20,25,30,35,40,45], "kappa_leo_db":20},
+    {"id":"subsurfaces_kL0", "parameter":"M", "values":[5,10,15,20,25,30,35,40,45], "kappa_leo_db":0},
+    {"id":"ground_kL0", "parameter":"kappa_ground_db", "values":[-12,-9,-6,-3,0,3,6,9,12,15,18,21,24,27,30], "kappa_leo_db":0},
+    {"id":"ground_kL10", "parameter":"kappa_ground_db", "values":[-12,-9,-6,-3,0,3,6,9,12,15,18,21,24,27,30], "kappa_leo_db":10},
+    {"id":"ground_kL20", "parameter":"kappa_ground_db", "values":[-12,-9,-6,-3,0,3,6,9,12,15,18,21,24,27,30], "kappa_leo_db":20}
   ],
-  "sweep_provenance": "Families/source dimensions reported; exact grids, MC count and numerical caps are user-authorized tuning, not original figure data.",
-  "multi_vs_single": {"enabled":true,"status":"implemented_not_full_run","kappa_leo_db":[0,20],"offsets_deg":[1.25,2.5],"single_N":48,"single_power_w":150,"single_upa_shape":[6,8],"interference_values_db":[-30,-25,-20,-15,-12.2,-10,-5,0],"required_fairness":"3*16=48 total antennas and3*50=150W total power for multi and single"},
+  "sweep_provenance": "Source dimensions/defaults are reported. Grids recovered from author-thesis originalEPS curve vertices and visually checked axes; power half-octave interpretation inferred from rounded vertices. MC/seed/caps/unreported geometry remain tuned. No reference ordinate enters simulation.",
+  "interference_axis_interpretation":"Original EPS printsW but marks normalized -12.2dB ITU line at0.06026. Scenario limits are linearINR relative to normalizednoise1; do not interpret axis as physical wattage.",
+  "multi_vs_single": {"enabled":true,"status":"implemented_not_full_run","kappa_leo_db":[0,20],"offsets_deg":[1.25,2.5],"single_N":48,"single_power_w":150,"single_upa_shape":[6,8],"interference_values_linear":[0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.10,0.11,0.12],"required_fairness":"3*16=48 total antennas and3*50=150W total power for multi and single"},
   "gt_pattern_provenance": "Actual ITU-R S.1428-1 recommends1 full piecewise radiation pattern, which ITU S.1503 FSS receive-pattern section references. The thesis citesS.1503-3/1419; exact publisher version unverified. Diameter1.2m is explicit numeric tuning, not a pattern substitution."
 }

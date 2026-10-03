@@ -3,12 +3,14 @@ function result=run_strict_cooperative_satcom(configPath,outputPath,sweepId)
 % External CVX required. Full defaults can be expensive; root coordinates runs.
 config=jsondecode(fileread(configPath)); sweeps=num2cell(config.sweeps); comparison=config.multi_vs_single;
 if comparison.enabled
+    if isfield(comparison,'interference_values_linear'), axisName='interference_to_noise_ratio';grid=comparison.interference_values_linear;
+    else, axisName='interference_to_noise_db';grid=comparison.interference_values_db; end
     for kappa=comparison.kappa_leo_db(:).'
-        sweeps{end+1}=struct('id',sprintf('multi_vs_single_multi_kL%g',kappa),'parameter','interference_to_noise_db', ...
-            'values',comparison.interference_values_db,'kappa_leo_db',kappa,'satellite_mode','multi'); %#ok<AGROW>
+        sweeps{end+1}=struct('id',sprintf('multi_vs_single_multi_kL%g',kappa),'parameter',axisName, ...
+            'values',grid,'kappa_leo_db',kappa,'satellite_mode','multi'); %#ok<AGROW>
         for offset=comparison.offsets_deg(:).'
-            sweeps{end+1}=struct('id',sprintf('multi_vs_single_single_%g_kL%g',offset,kappa),'parameter','interference_to_noise_db', ...
-                'values',comparison.interference_values_db,'kappa_leo_db',kappa,'satellite_mode','single','offset_deg',offset); %#ok<AGROW>
+            sweeps{end+1}=struct('id',sprintf('multi_vs_single_single_%g_kL%g',offset,kappa),'parameter',axisName, ...
+                'values',grid,'kappa_leo_db',kappa,'satellite_mode','single','offset_deg',offset); %#ok<AGROW>
         end
     end
 end

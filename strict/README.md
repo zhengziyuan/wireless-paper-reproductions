@@ -2,6 +2,11 @@
 
 **Status: implementation and source verification in progress. No package has passed full published-figure reproduction.**
 
+See [FIGURE_REPRODUCTION.md](FIGURE_REPRODUCTION.md) for original figure/table
+inventories, the explicit full-budget entry point, actual dual-language beam
+plotting and independent reference-error checks. Complete-figure adapters and
+reference agreement remain work in progress; this is not an all-figures-ready release.
+
 The original theoretical algorithms, dimensions, physical units, channel assumptions, baseline definitions, initialization counts, stopping rules, and figure scenarios must be retained. No alternative algorithm or smaller production scenario may be used to stand in for the paper.
 
 The older `../papers/` implementations are superseded previews, not this strict release. Existing parity outputs in `../validation/` concern only those previews.

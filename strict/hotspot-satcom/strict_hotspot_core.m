@@ -46,8 +46,9 @@ cvx_begin quiet
     sum_square_abs(W(:))<=1;
     for u=1:U
         indexes=setdiff(1:J,u);
-        sum_square_abs((hs(u,:)*W(:,indexes)).')+1<=lambda(u);
-        auxSinr(u)<=2*real(conj(az(u))*(hs(u,:)*W(:,u)))-abs(az(u))^2*lambda(u);
+        % Same QT problem with weighted epigraph lambda'=|a|^2*denominator.
+        sum_square_abs((conj(az(u))*(hs(u,:)*W(:,indexes))).')+abs(az(u))^2<=lambda(u);
+        auxSinr(u)<=2*real(conj(az(u))*(hs(u,:)*W(:,u)))-lambda(u);
     end
     for k=1:K
         index=U+k; indexes=setdiff(1:J,index); desired=ns(k,:)*W(:,index);
@@ -62,13 +63,15 @@ den=sum(abs(received).^2,2)-abs(desired).^2+noise;
 qt=2*real(conj(a).*desired)-abs(a).^2.*den;
 scaledReceived=hs*W;newdesired=diag(scaledReceived(:,1:U));
 newden=sum(abs(scaledReceived).^2,2)-abs(newdesired).^2+1;
-newqt=2*real(conj(az).*newdesired)-abs(az).^2.*lambda;
-primal=max([0;sum(abs(W(:)).^2)-1;(newden-lambda)./max(1,abs(newden));(auxSinr-newqt)./max(1,abs(newqt))]);
+weightedDen=abs(az).^2.*newden;
+newqt=2*real(conj(az).*newdesired)-lambda;
+primal=max([0;sum(abs(W(:)).^2)-1;(weightedDen-lambda)./max(1,abs(weightedDen));(auxSinr-newqt)./max(1,abs(newqt))]);
 for k=1:K
     index=U+k;indexes=setdiff(1:J,index);des=ns(k,:)*W(:,index);left=norm([ns(k,:)*W(:,indexes),1]);right=real(des)/sqrt(target(k));
     primal=max([primal,abs(imag(des))/max(1,abs(des)),(left-right)/max([1,left,abs(right)])]);
 end
-diagnostics=struct('solver','external_CVX','status',cvx_status,'reported_solver_tolerance',cvx_slvtol,'constraint_max_relative_violation',primal,'qt_bound_max_violation',max([0;auxSinr-after.sinr(1:U)]));
+diagnostics=struct('solver','external_CVX','status',cvx_status,'reported_solver_tolerance',cvx_slvtol,'constraint_max_relative_violation',primal,'qt_bound_max_violation',max([0;auxSinr-after.sinr(1:U)]), ...
+    'epigraph_scaling','lambda_prime_equals_abs_a_squared_times_physical_interference');
 info=struct('solver_status',cvx_status,'surrogate_rate',cvx_optval, ...
     'solver_diagnostics',diagnostics,'qt_bound_max_violation',diagnostics.qt_bound_max_violation, ...
     'qt_tightness_error',max(abs(qt-before.sinr(1:U))),'before',before,'after',after);
@@ -207,23 +210,34 @@ end
 status=strict_hotspot_termination('relative',history,maxIterations,relativeTolerance);
 end
 
-function [phi,W,history,status,diagnostics]=ao(direct,R,nhu,phi0,W0,noise,power,target,normals,maxIterations,tolerance)
+function [phi,W,history,status,diagnostics,endpoints]=ao(direct,R,nhu,phi0,W0,noise,power,target,normals,maxIterations,tolerance)
 phi=phi0; W=W0; hu=effective(direct,R,phi); e=evaluate(hu,nhu,W,noise); history=e.hu_sum_rate;diagnostics={};
+endpoints=struct();
 assert(numel(normals)>=maxIterations,'Supply shared draws for every AO iteration');
 for it=1:maxIterations
     a=qt_parameters(hu,W,noise); [W,active,~]=active_qt_update(hu,nhu,W,noise,power,target,a);
     a=qt_parameters(hu,W,noise);
-    [phi,phase]=phase_sdr_update(direct,R,phi,W,a,noise,normals{it});diagnostics{end+1}=struct('active',active.solver_diagnostics,'phase',phase.solver_diagnostics); %#ok<AGROW>
+    phaseClock=tic;[phi,phase]=phase_sdr_update(direct,R,phi,W,a,noise,normals{it});phase.solver_diagnostics.phase_cpu_seconds=toc(phaseClock);
+    diagnostics{end+1}=struct('active',active.solver_diagnostics,'phase',phase.solver_diagnostics); %#ok<AGROW>
     hu=effective(direct,R,phi); e=evaluate(hu,nhu,W,noise); value=e.hu_sum_rate;
     assert(value>=history(end)-1e-5,'AO objective decreased beyond solver accuracy');
     history(end+1)=value; %#ok<AGROW>
+    if any(it==[20,100]),endpoints.(sprintf('AO%d',it))=struct('evaluation',e,'executed_outer_iterations',it, ...
+            'requested_outer_budget',it,'interpretation','reported_fixed_budget_endpoint_NOT_stationarity_claim','solver_diagnostics',{diagnostics});end
     if (history(end)-history(end-1))/max(abs(history(end-1)),1e-12)<tolerance, break; end
 end
 status=strict_hotspot_termination('relative',history,maxIterations,tolerance);
+for budget=[20,100]
+    name=sprintf('AO%d',budget);
+    if ~isfield(endpoints,name)&&numel(history)-1<budget&&status.converged
+        endpoints.(name)=struct('evaluation',e,'executed_outer_iterations',numel(history)-1,'requested_outer_budget',budget, ...
+            'interpretation','original_relative_stop_reached_before_reported_budget_NO_trace_padding','solver_diagnostics',{diagnostics});
+    end
+end
 end
 
 function [phi,W,history]=two_stage(direct,R,nhu,phi0,W0,noise,power,target,rgdIterations,gradTolerance,qtIterations,qtTolerance)
-[phi,phaseHistory,pstatus]=phase_rgd(direct,R,nhu,phi0,rgdIterations,gradTolerance);
+phaseClock=tic;[phi,phaseHistory,pstatus]=phase_rgd(direct,R,nhu,phi0,rgdIterations,gradTolerance);phaseSeconds=toc(phaseClock);
 [W,rateHistory,qstatus,diagnostics]=qt_loop(effective(direct,R,phi),nhu,W0,noise,power,target,qtIterations,qtTolerance);
-history=struct('phase_criterion',phaseHistory,'qt_rate',rateHistory,'termination',struct('phase',pstatus,'QT',qstatus),'solver_diagnostics',{diagnostics},'phase_method','author_Algorithm_3-2_RGD_minimize_negative_F');
+history=struct('phase_criterion',phaseHistory,'qt_rate',rateHistory,'termination',struct('phase',pstatus,'QT',qstatus),'solver_diagnostics',{diagnostics},'phase_method','author_Algorithm_3-2_RGD_minimize_negative_F','phase_cpu_seconds',phaseSeconds);
 end

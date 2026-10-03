@@ -26,8 +26,8 @@ for sidx=1:numel(sweeps)
             samples{end+1}=sample; %#ok<AGROW>
             fprintf('Completed %s MC=%d/%d elapsed=%.1fs\n',sweep.id,realization,t.monte_carlo_realizations,toc(started));
         end
-        raw=struct('AO',[],'TwoStage',[],'NoRIS',[]);names={'AO','TwoStage','NoRIS'};
-        for k=1:3,if all(cellfun(@(x)isfield(x,names{k}),samples)),rates=cellfun(@(x)x.(names{k}).hu_sum_rate,samples);raw.(names{k})=mean(rates);end,end
+        raw=struct('AO',[],'AO20',[],'AO100',[],'TwoStage',[],'NoRIS',[],'RandRIS',[]);names={'AO','AO20','AO100','TwoStage','NoRIS','RandRIS'};
+        for k=1:numel(names),if all(cellfun(@(x)isfield(x,names{k}),samples)),rates=cellfun(@(x)x.(names{k}).hu_sum_rate,samples);raw.(names{k})=mean(rates);end,end
         valid=numel(samples)==t.monte_carlo_realizations&&all(cellfun(@(x)x.valid_sample,samples));means=[];if valid,means=raw;end
         records{end+1}=struct('sweep',sweep.id,'parameter',sweep.parameter,'value',value,'samples',{samples}, ...
             'raw_unvalidated_means',raw,'means',means,'valid_figure_point',valid,'failed_or_capped_samples',sum(cellfun(@(x)~x.valid_sample,samples)), ...
@@ -49,23 +49,42 @@ function sample=full_sample(scene)
 t=scene.tuned_not_reported;f=strict_hotspot_scenario(scene);U=size(f.direct,1);hu=strict_hotspot_core('effective',f.direct,f.cascade,f.phi0);
 W0=initialize([hu;f.nhu],[t.initial_hu_sinr*ones(U,1);f.nhu_target],f.noise,f.power);normals=cell(1,t.ao_max_iterations);
 for a=1:numel(normals),normals{a}=(randn(numel(f.phi0)+1,t.randomization_count)+1i*randn(numel(f.phi0)+1,t.randomization_count))/sqrt(2);end
-clock=tic;[apPhi,W,h,astop,diagnostics]=strict_hotspot_core('ao',f.direct,f.cascade,f.nhu,f.phi0,W0,f.noise,f.power,f.nhu_target,normals,t.ao_max_iterations,t.relative_tolerance);
+clock=tic;[apPhi,W,h,astop,diagnostics,endpoints]=strict_hotspot_core('ao',f.direct,f.cascade,f.nhu,f.phi0,W0,f.noise,f.power,f.nhu_target,normals,t.ao_max_iterations,t.relative_tolerance);
 aoTime=toc(clock);aEval=strict_hotspot_core('evaluate',strict_hotspot_core('effective',f.direct,f.cascade,apPhi),f.nhu,W,f.noise);
 clock=tic;[tsPhi,tsW,hts]=strict_hotspot_core('two_stage',f.direct,f.cascade,f.nhu,f.phi0,W0,f.noise,f.power,f.nhu_target,t.rgd_max_iterations,t.gradient_tolerance,t.qt_max_iterations,t.relative_tolerance);
 tsTime=toc(clock);tEval=strict_hotspot_core('evaluate',strict_hotspot_core('effective',f.direct,f.cascade,tsPhi),f.nhu,tsW,f.noise);
-baseInit=initialize([f.direct;f.nhu],[t.initial_hu_sinr*ones(U,1);f.nhu_target],f.noise,f.power);
+clock=tic;baseInit=initialize([f.direct;f.nhu],[t.initial_hu_sinr*ones(U,1);f.nhu_target],f.noise,f.power);
 [baseW,hbase,bstop,bdiag]=strict_hotspot_core('qt_loop',f.direct,f.nhu,baseInit,f.noise,f.power,f.nhu_target,t.qt_max_iterations,t.relative_tolerance);
-bEval=strict_hotspot_core('evaluate',f.direct,f.nhu,baseW,f.noise);violations=0;
-for e={aEval,tEval,bEval},item=e{1};violations=max([violations,item.total_power-f.power,max(f.nhu_target-item.sinr(U+1:end))]);end
+bEval=strict_hotspot_core('evaluate',f.direct,f.nhu,baseW,f.noise);baseTime=toc(clock);
+% Same randomly sampled unit-modulus phi0; optimize only W by original QT.
+clock=tic;[randW,hrand,rstop,rdiag]=strict_hotspot_core('qt_loop',hu,f.nhu,W0,f.noise,f.power,f.nhu_target,t.qt_max_iterations,t.relative_tolerance);
+rEval=strict_hotspot_core('evaluate',hu,f.nhu,randW,f.noise);randTime=toc(clock);violations=0;
+for e={aEval,tEval,bEval,rEval},item=e{1};violations=max([violations,item.total_power-f.power,max(f.nhu_target-item.sinr(U+1:end))]);end
 statuses=struct('AO',strict_hotspot_termination('scheme',{astop},diagnostics,t), ...
     'TwoStage',strict_hotspot_termination('scheme',{hts.termination.phase,hts.termination.QT},hts.solver_diagnostics,t), ...
-    'NoRIS',strict_hotspot_termination('scheme',{bstop},bdiag,t));
-convergence=true;primal=true;bound=true;for name={'AO','TwoStage','NoRIS'},s=statuses.(name{1});convergence=convergence&&s.converged;primal=primal&&s.numerical.solver_primal_pass;bound=bound&&s.numerical.qt_sdr_bound_pass;end
+    'NoRIS',strict_hotspot_termination('scheme',{bstop},bdiag,t),'RandRIS',strict_hotspot_termination('scheme',{rstop},rdiag,t));
+convergence=true;primal=true;bound=true;for name={'AO','TwoStage','NoRIS','RandRIS'},s=statuses.(name{1});convergence=convergence&&s.converged;primal=primal&&s.numerical.solver_primal_pass;bound=bound&&s.numerical.qt_sdr_bound_pass;end
 physical=violations<t.physical_constraint_tolerance;
-sample=struct('status','executed','AO',aEval,'TwoStage',tEval,'NoRIS',bEval,'scheme_status',statuses, ...
-    'solver_diagnostics',struct('AO',{diagnostics},'TwoStage',{hts.solver_diagnostics},'NoRIS',{bdiag}), ...
-    'history',struct('AO',h,'TwoStage',hts,'NoRIS',hbase),'cpu_seconds',struct('AO',aoTime,'TwoStage',tsTime), ...
+sample=struct('status','executed','AO',aEval,'TwoStage',tEval,'NoRIS',bEval,'RandRIS',rEval,'scheme_status',statuses, ...
+    'solver_diagnostics',struct('AO',{diagnostics},'TwoStage',{hts.solver_diagnostics},'NoRIS',{bdiag},'RandRIS',{rdiag}), ...
+    'history',struct('AO',h,'TwoStage',hts,'NoRIS',hbase,'RandRIS',hrand), ...
+    'cpu_seconds',struct('AO',aoTime,'AO_phase',sum(cellfun(@(x)x.phase.phase_cpu_seconds,diagnostics)), ...
+        'TwoStage',tsTime,'TwoStage_phase',hts.phase_cpu_seconds,'NoRIS',baseTime,'RandRIS',randTime), ...
     'physical_constraint_pass',physical,'convergence_pass',convergence,'solver_primal_pass',primal,'qt_sdr_bound_pass',bound,'valid_sample',physical&&convergence&&primal&&bound);
+budgetReceipts=struct();
+for budget=[20,100]
+    name=sprintf('AO%d',budget);available=isfield(endpoints,name);receipt=[];physicalEndpoint=false;
+    if available
+        receipt=endpoints.(name);sample.(name)=receipt.evaluation;records=receipt.solver_diagnostics;
+        physicalEndpoint=receipt.evaluation.total_power-f.power<t.physical_constraint_tolerance&&max(f.nhu_target-receipt.evaluation.sinr(U+1:end))<t.physical_constraint_tolerance;
+    else,records={};end
+    temporaryStatus=strict_hotspot_termination('scheme',{},records,t);numerical=temporaryStatus.numerical;
+    validEndpoint=available&&physicalEndpoint&&numerical.solver_primal_pass&&numerical.qt_sdr_bound_pass;
+    budgetReceipts.(name)=struct('available',available,'receipt',receipt,'numerical',numerical,'physical_constraint_pass',physicalEndpoint, ...
+        'convergence_not_required_for_reported_fixed_budget',true,'valid_budget_endpoint',validEndpoint);
+    sample.valid_sample=sample.valid_sample&&validEndpoint;
+end
+sample.reported_budget_endpoints=budgetReceipts;
 end
 
 function Wout=initialize(C,targets,noise,power)

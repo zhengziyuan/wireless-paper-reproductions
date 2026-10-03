@@ -1,0 +1,256 @@
+{
+  "paper_id": "rotatable-isac",
+  "source_file": "bare_jrnl.tex",
+  "source_sha256": "aa71da008c68caa605ec3ed17520fcb81796561f315667eeb2f7dddf1487d2d2",
+  "scope": "Author-source figure inventory; NOT simulation results",
+  "figure_count": 17,
+  "unnumbered_equation_or_algorithm_floats": 3,
+  "figures": [
+    {
+      "figure": 1,
+      "labels": [
+        "fig1"
+      ],
+      "caption_tex": "A low-altitude ISAC system with rotatable active and passive arrays.",
+      "assets": [
+        {
+          "file": "system.pdf",
+          "available": true,
+          "sha256": "1a0ef7faec50f72ca186f4d7355d591b87c1052d97f134af47c6bd749ab7db77"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 2,
+      "labels": [],
+      "caption_tex": "Weighted ISAC utility versus maximum transmit power under $b^{\\text{R}}=b^{\\text{B}}=0$ with $\\rho=10$, $N=6\\times6$, $M=2\\times2$ and $K=2$.",
+      "assets": [
+        {
+          "file": "P1_F.eps",
+          "available": true,
+          "sha256": "2253d60a35859f768671e80f99c7f71ff83e30db6c4e757af3f9e1b15e49078b"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 3,
+      "labels": [],
+      "caption_tex": "Weighted ISAC utility versus maximum transmit power under $b^{\\text{R}}=b^{\\text{B}}=2$ with $\\rho=10$, $N=6\\times6$, $M=2\\times2$ and $K=2$.",
+      "assets": [
+        {
+          "file": "P2_F.eps",
+          "available": true,
+          "sha256": "d755215d119abb283752b181744c51546809775f001b7869198860ded01bb816"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 4,
+      "labels": [],
+      "caption_tex": "Sum rate versus maximum transmit power under $b^{\\text{R}}=b^{\\text{B}}=0$ with $\\rho=10$, $N=6\\times6$, $M=2\\times2$ and $K=2$.",
+      "assets": [
+        {
+          "file": "P1_rate.eps",
+          "available": true,
+          "sha256": "594a53b331d9f907c4c29316782d65a86ef9151e9a2a4d914dc69c3acf2e3d4d"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 5,
+      "labels": [],
+      "caption_tex": "Sum rate versus maximum transmit power under $b^{\\text{R}}=b^{\\text{B}}=2$ with $\\rho=10$, $N=6\\times6$, $M=2\\times2$ and $K=2$.",
+      "assets": [
+        {
+          "file": "P2_rate.eps",
+          "available": true,
+          "sha256": "ff6638232e1cab8ed7e7107f494617f1ad3b5804d84d25c634e161db3ccebef0"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 6,
+      "labels": [],
+      "caption_tex": "Beampattern NMSE versus maximum transmit power under $b^{\\text{R}}=b^{\\text{B}}=0$ with $\\rho=10$, $N=6\\times6$, $M=2\\times2$ and $K=2$.",
+      "assets": [
+        {
+          "file": "P1_nmse.eps",
+          "available": true,
+          "sha256": "5fdbfadb8a71b1409f522b577f62625c39b2ccce31b5079b9d9d3a883dc00dc8"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 7,
+      "labels": [],
+      "caption_tex": "Beampattern NMSE versus maximum transmit power under $b^{\\text{R}}=b^{\\text{B}}=2$ with $\\rho=10$, $N=6\\times6$, $M=2\\times2$ and $K=2$.",
+      "assets": [
+        {
+          "file": "P2_nmse.eps",
+          "available": true,
+          "sha256": "061b67dfebd82d2c8cdae9e5ca5e743724aa115fb7d5053d26ee6a87329a8926"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 8,
+      "labels": [],
+      "caption_tex": "Weighted ISAC utility versus the number of BS antennas under $b^{\\text{R}}=b^{\\text{B}}=0$ with $\\rho=10$, $N=6\\times6$, $M_{\\text{col}}=1$, $P_{\\text{B}}=30$ dBm, and $K=3$.",
+      "assets": [
+        {
+          "file": "M1_F.eps",
+          "available": true,
+          "sha256": "1f04827387305c6a119a3e15e9041bb925c5c852a836a8303996fe41e56153f6"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 9,
+      "labels": [],
+      "caption_tex": "Sum rate versus the number of BS antennas under $b^{\\text{R}}=b^{\\text{B}}=0$ with $\\rho=10$, $N=6\\times6$, $M_{\\text{col}}=1$, $P_{\\text{B}}=30$ dBm, and $K=3$.",
+      "assets": [
+        {
+          "file": "M1_rate.eps",
+          "available": true,
+          "sha256": "dac150d20be48268b9e85ab1507421a16b0ed588e7811633314308aece1a285c"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 10,
+      "labels": [],
+      "caption_tex": "Beampattern NMSE versus the number of BS antennas under $b^{\\text{R}}=b^{\\text{B}}=0$ with $\\rho=10$, $N=6\\times6$, $M_{\\text{col}}=1$, $P_{\\text{B}}=30$ dBm, and $K=3$.",
+      "assets": [
+        {
+          "file": "M1_nmse.eps",
+          "available": true,
+          "sha256": "e6684127feeb7cbfded0a67003e6c5d7b5f14e1e8954d5fe76868887b7e2a66d"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 11,
+      "labels": [],
+      "caption_tex": "Weighted ISAC utility versus the number of communication users under $b^{\\text{R}}=b^{\\text{B}}=2$ with $\\rho=10$, $N=6\\times6$, $M=2\\times4$.",
+      "assets": [
+        {
+          "file": "K_F.eps",
+          "available": true,
+          "sha256": "b2f2e2b8d096ae2acbeb42a4f1f26ff91f5c44ac1980503e8b933f78f7d06265"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 12,
+      "labels": [],
+      "caption_tex": "Sum rate versus the number of communication users under $b^{\\text{R}}=b^{\\text{B}}=2$ with $\\rho=10$, $N=6\\times6$, $M=2\\times4$.",
+      "assets": [
+        {
+          "file": "K_rate.eps",
+          "available": true,
+          "sha256": "f4cbdf1a3b50b20e8b6a02fb27cc1a4457de6621528293034bce909efc85fb35"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 13,
+      "labels": [],
+      "caption_tex": "Beampattern NMSE versus the number of communication users under $b^{\\text{R}}=b^{\\text{B}}=2$ with $\\rho=10$, $N=6\\times6$, $M=2\\times4$.",
+      "assets": [
+        {
+          "file": "K_nmse.eps",
+          "available": true,
+          "sha256": "839d55b6d921866653b173cef84771bc32a9c3e93268564d25fe4c53cfb7fc3f"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 14,
+      "labels": [],
+      "caption_tex": "Weighted ISAC utility versus the maximum rotation range $r$ (degrees) under $b^{\\text{R}}=b^{\\text{B}}=2$ with $N=6\\times6$, $M=2\\times2$, and $P_{\\text{B}}=30$ dBm.",
+      "assets": [
+        {
+          "file": "DEG_F.eps",
+          "available": true,
+          "sha256": "d00cdc062435ba86e0234b3bcfdc3e88072bda6d23e8ff8faff84b2553ec8f43"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 15,
+      "labels": [],
+      "caption_tex": "Sum rate versus the maximum rotation range $r$ under $b^{\\text{R}}=b^{\\text{B}}=2$ with $N=6\\times6$, $M=2\\times2$, and $P_{\\text{B}}=30$ dBm.",
+      "assets": [
+        {
+          "file": "DEG_rate.eps",
+          "available": true,
+          "sha256": "2a75245860aae4415c2aa5830472be8b216b93e3453c91e2d9eac1b277aa31e4"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 16,
+      "labels": [],
+      "caption_tex": "Beampattern NMSE versus the maximum rotation range $r$ (degrees) under $b^{\\text{R}}=b^{\\text{B}}=2$ with $N=6\\times6$, $M=2\\times2$, and $P_{\\text{B}}=30$ dBm.",
+      "assets": [
+        {
+          "file": "DEG_nmse.eps",
+          "available": true,
+          "sha256": "c92a7964db1150eccb5bfb42735bb618776d763cb42d6849923e56a5f899408e"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 17,
+      "labels": [
+        "fig:pareto_frontier"
+      ],
+      "caption_tex": "Achievable ISAC trade-off curve for the rate-sensing trade-off between the downlink sum rate and the transmit beampattern NMSE, obtained by sweeping the weight $\\rho$ with $K$=2, $P_\\text{B}$=30 dBm, $M$=2$\\times$2, $N$=6$\\times$6.",
+      "assets": [
+        {
+          "file": "bound.eps",
+          "available": true,
+          "sha256": "0f90e07bf9192a44c13fd76a7a7ba87d3d8c1c847f6d6f134a25956ae24a0714"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    }
+  ],
+  "table_count": 0,
+  "tables": [],
+  "numbering_note": "Active captioned figure order, excluding nested algorithm captions; verify chapter/publication numbering separately",
+  "full_reproduction_passed": false
+}

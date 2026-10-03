@@ -1,0 +1,436 @@
+{
+  "paper_id": "hotspot-satcom",
+  "source_version": "author_thesis_Chapter3_TeX_and_original_EPS",
+  "final_published_figure_numbering_verified": false,
+  "reference_policy": "Original EPS is a comparison reference only. No reference ordinate is used by the simulation or optimizer. Private source files are not redistributed.",
+  "reference_folder_hint": "figures/chapter3",
+  "default_dimensions": {
+    "N": 16,
+    "J": 16,
+    "U": 6,
+    "K": 10,
+    "M": 25
+  },
+  "instantaneous_curves": [
+    "NoRIS",
+    "RandRIS",
+    "AO20",
+    "TwoStage",
+    "AO100"
+  ],
+  "budget_endpoint_policy": "The author explicitly compares 20 and 100 AO outer iterations. These are reported finite-budget evaluations, not claims that the original stopping threshold was reached. Keep convergence and numerical validity separate.",
+  "figures": [
+    {
+      "source_id": "3-1",
+      "files": [
+        "RIS辅助热点容量增强场景示意图.pdf"
+      ],
+      "kind": "system_diagram",
+      "simulation_required": false
+    },
+    {
+      "source_id": "3-2",
+      "files": [
+        "convergence.eps"
+      ],
+      "sweep_id": "convergence",
+      "x": {
+        "quantity": "outer iteration",
+        "range": [
+          0,
+          120
+        ]
+      },
+      "y": {
+        "quantity": "HU sum rate",
+        "unit": "bps/Hz"
+      },
+      "curves": [
+        "NoRIS",
+        "RandRIS",
+        "AO"
+      ],
+      "parameters": {
+        "U": 6,
+        "M": 25,
+        "kappa_satellite_db": 20
+      },
+      "runner_gap": [
+        "full configured MC and independent original-reference agreement not validated"
+      ]
+    },
+    {
+      "source_id": "3-3",
+      "files": [
+        "computaiontime.eps"
+      ],
+      "sweep_id": "hu_count_kS20",
+      "x": {
+        "quantity": "HU count",
+        "values": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "y": {
+        "quantity": "CPU time",
+        "unit": "s"
+      },
+      "curves": [
+        "TwoStage_phase",
+        "TwoStage_total",
+        "AO_phase",
+        "AO_total"
+      ],
+      "parameters": {
+        "N": 16,
+        "M": 25,
+        "kappa_satellite_db": 20
+      },
+      "runner_gap": [
+        "published hardware timing is not portable",
+        "full configured MC and independent original-reference agreement not validated"
+      ]
+    },
+    {
+      "source_id": "3-4a",
+      "files": [
+        "HUs_new_100.eps"
+      ],
+      "sweep_id": "hu_count_kS10",
+      "x": {
+        "quantity": "HU count",
+        "values": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "y": {
+        "quantity": "HU sum rate",
+        "unit": "bps/Hz"
+      },
+      "curves": "instantaneous_curves",
+      "parameters": {
+        "kappa_satellite_db": 10
+      },
+      "runner_gap": [
+        "full configured MC and independent original-reference agreement not validated"
+      ]
+    },
+    {
+      "source_id": "3-4b",
+      "files": [
+        "HUs_closely_new_100.eps"
+      ],
+      "sweep_id": "hu_count_kS20",
+      "x": {
+        "quantity": "HU count",
+        "values": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "y": {
+        "quantity": "HU sum rate",
+        "unit": "bps/Hz"
+      },
+      "curves": "instantaneous_curves",
+      "parameters": {
+        "kappa_satellite_db": 20
+      },
+      "runner_gap": [
+        "full configured MC and independent original-reference agreement not validated"
+      ]
+    },
+    {
+      "source_id": "3-5",
+      "files": [
+        "sum_rate_cdf.eps"
+      ],
+      "sweep_id": "cdf_kS20",
+      "x": {
+        "quantity": "HU sum rate",
+        "unit": "bps/Hz",
+        "range": [
+          6,
+          26
+        ]
+      },
+      "y": {
+        "quantity": "ECDF",
+        "range": [
+          0,
+          1
+        ]
+      },
+      "curves": "instantaneous_curves",
+      "parameters": {
+        "U": 6,
+        "kappa_satellite_db": 20
+      },
+      "runner_gap": [
+        "full configured MC and independent original-reference agreement not validated"
+      ]
+    },
+    {
+      "source_id": "3-6",
+      "files": [
+        "user_index_rate.eps"
+      ],
+      "sweep_id": "cdf_kS20",
+      "x": {
+        "quantity": "HU index",
+        "values": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "y": {
+        "quantity": "mean per-HU rate",
+        "unit": "bps/Hz"
+      },
+      "curves": "instantaneous_curves",
+      "parameters": {
+        "U": 6,
+        "kappa_satellite_db": 20
+      },
+      "runner_gap": [
+        "full configured MC and independent original-reference agreement not validated"
+      ]
+    },
+    {
+      "source_id": "3-7a",
+      "files": [
+        "path_rate_cdf_20DB.eps"
+      ],
+      "sweep_id": null,
+      "x": {
+        "quantity": "per-HU rate",
+        "unit": "bps/Hz",
+        "range": [
+          0,
+          14
+        ]
+      },
+      "y": {
+        "quantity": "ECDF",
+        "range": [
+          0,
+          1
+        ]
+      },
+      "curves": "instantaneous_curves",
+      "parameters": {
+        "U": 6
+      },
+      "reference_line": {
+        "HU_SINR": 2,
+        "rate": "log2(3)"
+      },
+      "source_conflict": "TeX subcaption says 10dB but EPS filename says20DB; cannot silently choose one.",
+      "runner_gap": [
+        "source-conflict resolution",
+        "full configured MC and independent original-reference agreement not validated"
+      ]
+    },
+    {
+      "source_id": "3-7b",
+      "files": [
+        "path_rate_cdf_10DB.eps"
+      ],
+      "sweep_id": null,
+      "x": {
+        "quantity": "per-HU rate",
+        "unit": "bps/Hz",
+        "range": [
+          0,
+          14
+        ]
+      },
+      "y": {
+        "quantity": "ECDF",
+        "range": [
+          0,
+          1
+        ]
+      },
+      "curves": "instantaneous_curves",
+      "parameters": {
+        "U": 6
+      },
+      "reference_line": {
+        "HU_SINR": 2,
+        "rate": "log2(3)"
+      },
+      "source_conflict": "TeX subcaption says20dB but EPS filename says10DB; cannot silently choose one.",
+      "runner_gap": [
+        "source-conflict resolution",
+        "full configured MC and independent original-reference agreement not validated"
+      ]
+    },
+    {
+      "source_id": "3-8a",
+      "files": [
+        "rician.eps"
+      ],
+      "sweep_id": "rician_u6",
+      "x": {
+        "quantity": "satellite Rician factor",
+        "unit": "dB",
+        "values": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24
+        ]
+      },
+      "y": {
+        "quantity": "HU sum rate",
+        "unit": "bps/Hz"
+      },
+      "curves": "instantaneous_curves",
+      "parameters": {
+        "U": 6
+      },
+      "runner_gap": [
+        "full configured MC and independent original-reference agreement not validated"
+      ]
+    },
+    {
+      "source_id": "3-8b",
+      "files": [
+        "single_rician_new.eps"
+      ],
+      "sweep_id": "rician_u1",
+      "x": {
+        "quantity": "satellite Rician factor",
+        "unit": "dB",
+        "values": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21
+        ]
+      },
+      "y": {
+        "quantity": "single-HU rate",
+        "unit": "bps/Hz"
+      },
+      "curves": "instantaneous_curves",
+      "parameters": {
+        "U": 1
+      },
+      "source_conflict": "Last EPS legend repeats AO20; surrounding section explicitly compares20 and100 iterations. AO100 identity is context-derived, not a literal legend match.",
+      "runner_gap": [
+        "full configured MC and independent original-reference agreement not validated"
+      ]
+    },
+    {
+      "source_id": "3-9",
+      "files": [
+        "number_elemenst_new.eps"
+      ],
+      "sweep_id": "element_count",
+      "x": {
+        "quantity": "elements per RIS subsurface",
+        "values": [
+          4000,
+          8000,
+          12000,
+          16000,
+          20000,
+          24000,
+          28000
+        ],
+        "display_multiplier": 1000
+      },
+      "y": {
+        "quantity": "HU sum rate",
+        "unit": "bps/Hz"
+      },
+      "curves": "instantaneous_curves",
+      "parameters": {
+        "U": 6,
+        "M": 25,
+        "kappa_satellite_db": 12
+      },
+      "runner_gap": [
+        "element-count to physical shape/spacing contract",
+        "full configured MC and independent original-reference agreement not validated"
+      ],
+      "source_note": "Section3.6 says count determines aperture gain when M is fixed; individual sweep row/column element counts and inter-subsurface placement are not specified. Do not invent integer factorizations to fit reference curves."
+    },
+    {
+      "source_id": "3-10",
+      "files": [
+        "statistical_CSI.eps"
+      ],
+      "sweep_id": null,
+      "x": {
+        "quantity": "HU count",
+        "values": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "y": {
+        "quantity": "statistical HU sum rate",
+        "unit": "bps/Hz"
+      },
+      "curves": [
+        "AO_kS0",
+        "TwoStage_kS0",
+        "NoRIS_kS0",
+        "AO_kS10",
+        "TwoStage_kS10",
+        "NoRIS_kS10",
+        "AO_kS20",
+        "TwoStage_kS20",
+        "NoRIS_kS20"
+      ],
+      "runner_gap": [
+        "original statistical active QoS/SOCP formulation unresolved",
+        "statistical phase-design equations not yet validated"
+      ],
+      "source_note": "EPS betaS=1,10,100 are linear Rician factors, corresponding to0,10,20dB. Table distinguishes statistical ground factor20dB and NHU LoS target-3dB from instantaneous0dB and3dB."
+    }
+  ],
+  "grid_evidence": "Axis ranges and legends visually checked against rendered original EPS; discrete grids checked against EPS linear-polyline vertex abscissas. Final publisher figure identities remain unverified.",
+  "implemented_curves": [
+    "NoRIS",
+    "RandRIS",
+    "AO20",
+    "TwoStage",
+    "AO100"
+  ],
+  "reported_budget_endpoint_fields": "full sample AO20/AO100 plus reported_budget_endpoints; physical/primal/bound receipts are separate from stationarity status"
+}

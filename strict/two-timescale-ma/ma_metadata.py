@@ -37,6 +37,19 @@ def implemented_complete(result,expected_fingerprint,job,config):
         for name in ["MA-MRT_MC","MA-ZF_MC"]:
             rates=extension.get(name,{}).get("sample_sum_rates",[])
             if len(rates)!=config["nlos_realizations_per_geometry"] or not all(math.isfinite(x) for x in rates):return False
+    figure=job.get("figure")
+    mode="mrt" if figure in [3,13,15] else ("zf" if figure in [4,14,16] else None)
+    if mode is not None:
+        history=result.get("history",{}).get(mode,{})
+        count=len(history.get("objective",[]))
+        actual=history.get("instantaneous_MC_mean",[])
+        if count<2 or len(actual)!=count or not all(math.isfinite(x) for x in actual):return False
+        if job.get("correlated",False):
+            extension=result.get("metrics",{}).get("correlated_extension",{})
+            names=["MRT_correlated_MC_history","MRT_Eq69_history"] if mode=="mrt" else ["ZF_correlated_MC_history"]
+            for name in names:
+                values=extension.get(name,[])
+                if len(values)!=count or not all(math.isfinite(x) for x in values):return False
     if "brute_force_D" in job:
         brute=result.get("metrics",{}).get("brute_force",{})
         if not all(brute.get(mode,{}).get("search",{}).get("complete") is True for mode in ["MRT","ZF"]):return False
@@ -44,9 +57,11 @@ def implemented_complete(result,expected_fingerprint,job,config):
 
 
 def original_scope_available(job):
-    # Correlated histories use uncorrelated-design positions; (72)/(74)/(75)
-    # are dimensionally undefined, so neither (69)/(75) optimized curve closes.
-    return not job.get("correlated",False)
+    # Section V and Figs.13/15 describe model evaluation, not a new optimizer.
+    # Alg.1's iid trajectory with valid Eq.68/69 evaluations is a supported
+    # interpretation, not recovery of the author's undisclosed experiment.
+    # Only ZF Figs.14/16 require the genuinely unresolved Eq.72/74/75 analysis.
+    return not job.get("correlated",False) or job.get("figure") in [13,15]
 
 
 def complete(result,expected_fingerprint,job,config):

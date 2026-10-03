@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "paper_id": "mis-sensing",
+  "figure": "fig3",
+  "scope": "single_original_full_start_diagnostic_not_full_figure",
+  "start": 1,
+  "full_6000_start_figure_completed": false,
+  "original_figure_reproduction_certified": false,
+  "convergence_verified": false,
+  "receipt_is_trimmed_numerical_evidence": true,
+  "omitted": ["full phase and schedule state", "private filesystem paths", "original manuscript or figure files"],
+  "configuration": {
+    "ms1": [20, 20],
+    "ms2": [16, 16],
+    "Kphi": 3,
+    "Ktheta": 3,
+    "target_azimuth_deg": [0, 45, 90, 0, 45, 90, 0, 45, 90],
+    "target_elevation_deg": [30, 30, 30, 50, 50, 50, 70, 70, 70],
+    "target_grid_provenance": "Original close1.eps axes and markers, with Eq3c angle definitions; no fitting of simulated ordinates.",
+    "power_dbm": 30,
+    "power_watts": 1,
+    "reference_echo_db": -73.88,
+    "bs_antennas": 1,
+    "original_number_of_starts": 6000,
+    "diagnostic_starts_executed": 1,
+    "outer_iterations": 30,
+    "rcg_max_iterations_per_outer": 4000,
+    "epsilon_initial": 0.001,
+    "epsilon_min": 0.000001,
+    "feasibility_tolerance": 0.000001,
+    "minimum_outer_step": 1e-10,
+    "initialization_seed": 241219071,
+    "line_search_policy": "original_per_block_backtracking",
+    "non_descent_policy": "documented_non_descent_restart",
+    "line_search_initial_step": 1,
+    "armijo_constant": 0.0001,
+    "backtrack_factor": 0.5,
+    "max_backtracks": 60
+  },
+  "timing": {
+    "elapsed_seconds": 418.97122620005393,
+    "outer_iterations_executed": 30,
+    "inner_iterations_executed": 20274,
+    "elapsed_seconds_per_outer": [71.1100626999978, 73.31075299996883, 75.66419879999012, 4.772448500036262, 4.714208299992606, 5.274264300009236, 4.997321899980307, 0.8892421999480575, 11.423582599963993, 9.516821099969093, 6.865860400022939, 7.84612990001915, 12.285935899999458, 7.2437131999759, 16.043830099981278, 4.157694699999411, 16.608961099991575, 15.211192000017036, 26.089094599999953, 12.21627279999666, 1.6586135999532416, 10.80795180000132, 0.08958939998410642, 2.94144269998651, 4.193294500000775, 1.4460027000168338, 0.6348775999504142, 5.140153699961957, 5.508993399969768, 0.1025977999670431]
+  },
+  "metrics": {
+    "eta": 49.53524597368833,
+    "min_relaxed_sinr": 49.535245900875466,
+    "min_binary_sinr": 49.535245900875466,
+    "min_binary_sinr_db": 16.9491432324112,
+    "maximum_constraint": 7.281286684701627e-8,
+    "penalty_after_final_outer_update": 8.916100448255998,
+    "final_objective_before_final_outer_update": -49.5277284741369,
+    "final_raw_gradient_norm": 16.20709699001545,
+    "final_projected_kkt_norm": 2.600428328008246e-5,
+    "final_inner_epsilon_used": 1.2589254117941667e-6,
+    "epsilon_after_final_outer_update": 1e-6,
+    "final_outer_step": 0,
+    "final_raw_gradient_block_norms": {
+      "phi": 1.6343425434348692e-5,
+      "theta": 2.0223923441517317e-5,
+      "X": 16.20709698999459,
+      "eta": 3.2880786837719e-7
+    }
+  },
+  "solver_status": {
+    "epigraph_feasible": true,
+    "binary_epigraph_feasible": true,
+    "final_inner_stationary": false,
+    "all_inner_tolerances_satisfied": false,
+    "outer_stopping_met": true,
+    "continuation_complete": true,
+    "inner_tolerance_exits": 16,
+    "inner_iteration_cap_exits": 2,
+    "inner_failure_exits": 12,
+    "line_search_failure_counts": {
+      "block_line_search_exhausted_theta": 6,
+      "block_line_search_exhausted_phi": 4,
+      "coupling_line_search_exhausted": 2
+    },
+    "final_inner_exit_reason": "block_line_search_exhausted_phi",
+    "convergence_verified": false,
+    "outer_stopping_caveat": "The numerical-text AND rule became true because epsilon reached its endpoint and the failed inner search accepted zero movement. This is not an inner stationarity certificate or a successful figure reproduction."
+  },
+  "history": {
+    "inner_iterations_per_outer": [4000, 4000, 3680, 222, 219, 294, 231, 41, 529, 402, 351, 338, 498, 307, 777, 215, 797, 757, 1079, 478, 58, 444, 1, 108, 106, 46, 8, 172, 115, 1],
+    "eta_per_outer": [49.004784864441724, 49.52560718395769, 49.5352508194689, 49.53524536294681, 49.535244320355766, 49.53524433176507, 49.53524504626107, 49.53524586139683, 49.5352449857692, 49.53524609249219, 49.53524592554663, 49.53524573885233, 49.53524609904169, 49.53524590457345, 49.535245946175024, 49.53524597321716, 49.53524599590771, 49.53524598469434, 49.535245936934714, 49.535245996015355, 49.53524596406721, 49.53524597548493, 49.53524597548493, 49.535245971120546, 49.53524598743223, 49.535245962364165, 49.535245979872776, 49.535245978184754, 49.53524597368833, 49.53524597368833],
+    "maximum_q_per_outer": [0.1235586403289517, 0.006968412684607017, 0.0030351128312275932, 8.882220456030154e-6, 6.889400474108243e-6, 6.26918899371276e-6, 2.642552239251472e-6, 2.119732897654103e-6, 1.585912158930114e-6, 2.4079341542915245e-6, 9.6894623169419e-7, 1.260519212564759e-6, 6.709741811050662e-7, 7.317232331160994e-7, 4.384093088560803e-7, 1.5620127413740192e-7, 3.649901287872126e-7, 1.460356671145746e-7, 5.078713911643717e-7, 3.4878324584042275e-7, 1.9466094158815395e-7, 1.1538830335666717e-7, 1.1538830335666717e-7, 9.743953199858879e-8, 8.293940823023149e-8, 4.10637213121845e-8, 2.557822398330245e-8, 1.6871960184516865e-7, 7.281286684701627e-8, 7.281286684701627e-8],
+    "projected_kkt_norm_per_outer": [0.11358983495099235, 0.07913064201385764, 0.000598880459907656, 0.0004501817633106055, 0.0003031375489018432, 0.00031011342898687704, 0.00023178954973197637, 0.00019346170776876772, 0.0001495864471917569, 0.00011870105883610874, 9.82259187651369e-5, 7.793615795986007e-5, 5.932726056204318e-5, 4.866790717471958e-5, 3.85734578134426e-5, 3.139929571294392e-5, 2.4906114351841566e-5, 1.9121131275287575e-5, 5.0181570911173344e-5, 2.2825520884493896e-5, 1.897444979417016e-5, 1.4017804355762915e-5, 1.988411120949595e-5, 2.1648735258904203e-5, 1.5845935310165196e-5, 1.8322305940054877e-5, 2.2936897167579176e-5, 2.441126843277832e-5, 1.4326534919492083e-5, 2.600428328008246e-5],
+    "inner_exit_reason_per_outer": ["iteration_cap", "iteration_cap", "gradient_tolerance", "gradient_tolerance", "gradient_tolerance", "gradient_tolerance", "gradient_tolerance", "gradient_tolerance", "gradient_tolerance", "gradient_tolerance", "gradient_tolerance", "gradient_tolerance", "gradient_tolerance", "gradient_tolerance", "gradient_tolerance", "gradient_tolerance", "gradient_tolerance", "gradient_tolerance", "block_line_search_exhausted_theta", "block_line_search_exhausted_phi", "block_line_search_exhausted_theta", "block_line_search_exhausted_theta", "block_line_search_exhausted_theta", "block_line_search_exhausted_theta", "coupling_line_search_exhausted", "block_line_search_exhausted_phi", "coupling_line_search_exhausted", "block_line_search_exhausted_theta", "block_line_search_exhausted_phi", "block_line_search_exhausted_phi"]
+  },
+  "source_identity": {
+    "implementation_digest_at_start": "4b49fb1aa6a1a02115e5e2a3b6c51f1d0155da21b4ab4c9475c60304815ff3c0",
+    "implementation_digest_at_end": "05979b38de5072541b656b437bf5e86c2e6b05ebd1697cfee9d3bfeac38f10f2",
+    "source_changed_during_execution": true,
+    "changed_files": ["source_map.json"],
+    "source_change_description": "Evidence-only normalization-bound audit metadata was added while the observer ran. The numerical optimizer, runner and embedded settings did not change. Both start/end identities are preserved rather than describing this as a fully source-immutable run.",
+    "source_map_sha256_at_start": "53005b16f67d13d346fe7719aba34d6ce379711c87bf0ff7dfd2d25b79c7ad1a",
+    "source_map_sha256_at_end": "c55c8a7174f176699c4d1493c3a071be4e8d6d383966eacc3c24f4916c1efa44",
+    "engine_py_sha256_unchanged": "5766e622beb7adbe427fee7196916e5fe1fdc78e7c7ed153de21559f947bd42a",
+    "run_py_sha256_unchanged": "33f52db44bce2bcc49d48c50210f10392520870748bfa62c47fd3466839bfe09",
+    "observer_changes_optimizer": false,
+    "runtime": {
+      "python": "3.12.14",
+      "numpy": "2.5.3",
+      "cpu_count": 22,
+      "blas_threads": {"OPENBLAS_NUM_THREADS": "1", "OMP_NUM_THREADS": "1", "MKL_NUM_THREADS": "1"}
+    }
+  }
+}

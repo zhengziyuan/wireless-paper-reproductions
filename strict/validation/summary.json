@@ -1,6 +1,6 @@
 {
   "scope": "Actual mathematical components and dual-language comparisons only; NOT complete paper figures",
-  "verification_timestamp": "2026-10-03T16:32:05+08:00",
+  "verification_timestamp": "2026-10-03T17:31:05+08:00",
   "python_runtime": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
   "component_evidence_verified": true,
   "full_published_figure_reproduction_passed": false,
@@ -22,14 +22,16 @@
       },
       "source_sha256": {
         "engine.py": "5766e622beb7adbe427fee7196916e5fe1fdc78e7c7ed153de21559f947bd42a",
+        "figure_map.json": "e280cf3fe0db0ff5a02ecca86d050bcea28e81a993589d76e1c23dd1d7f4a07d",
         "figures.json": "92907ef5eb0c8331dc4213d16472de5fa7287b217800ef95e19c68be98cf037f",
-        "mis_communications_strict_engine.m": "659488374ba64e3dfdf1aad99031da421ca72c0bc5a9ca941c7d4aeec9d3f097",
+        "mis_communications_strict_engine.m": "4b66a0ece87b7a34148cf747ba3aae11a03cc24f224b1ca9ec670825abc3c356",
         "plot_beampatterns.py": "1f4dfe523361e86ce13aae3a4a3a09b50831e7b8b6a7a681a9876d60f0675a7d",
-        "README.md": "9fde5059413d33a39312ac2fc15cd93acec7c7ea50521129920f751c976a4e83",
-        "run.py": "82993d32ee1ab0a35f9fff0aead511efa73c8bdb70c21476497916e958685eb4",
+        "README.md": "1bf53cea0fb935d5de09b68d8438d69cdd7753500cda5099cfdc15b4215625c7",
+        "run.py": "33f52db44bce2bcc49d48c50210f10392520870748bfa62c47fd3466839bfe09",
         "run_mis_communications.m": "a875b183f281efcb4786109467d9ff8e37edd2c7aac9d53fa68752e495e34bf1",
         "settings.json": "2dd7d81be15a23a29ee04e567da44d0a866746828ac57071ce621db9055d0a01",
         "source_map.json": "afc6fe44d75225a6b1859c8dac7414f8a8331546bdb1eb5c13db9412a161e457",
+        "test_figure_inputs.py": "d25f2164a461d5b219d67612b125ef50aad283e823e98f167ead1999ce53b314",
         "test_line_search.py": "3adffb30d7f1616c4a0bd813d5424ef189f235e682215d0ddb4783e5c851b74a",
         "unit_fixture.json": "60f8ec722d403034c8f70ce54d570ceff3dfbceb60ffc48a7ffa5cb68da913e9"
       }
@@ -50,15 +52,18 @@
         "parity": "309b58eb621765c2f9df42c140a5de5bafb0b39c13f6b712c3b3c61a5cec8848"
       },
       "source_sha256": {
+        "diagnose_full_start.py": "449b9465d62e5a1c7adeb6c4800876ef596e4501bcf0301e29706cbaed8e35a5",
         "engine.py": "5766e622beb7adbe427fee7196916e5fe1fdc78e7c7ed153de21559f947bd42a",
-        "figures.json": "f8d061ab9653aeefcbd856674acdb9942f13b3d890a7c28db31e702e1b1103de",
-        "mis_sensing_strict_engine.m": "b2c48d986cc69fbd0a713a7d1acaeda6683015cc2112764485d7c1ffc38b7a1e",
+        "figure_map.json": "147a5d45ad5d7b3bcb2abf64cefd6c764daf86d631297513f412bcf77cc1f6bd",
+        "figures.json": "5648c2d705204c88171c4eb300e1c4e74774041decaa7a82f64a9efd1e485e78",
+        "mis_sensing_strict_engine.m": "959cdf9d68f14908fdf020d51cdc483dde5a930e8650194e7f060681e40bbdbd",
         "plot_beampatterns.py": "1f4dfe523361e86ce13aae3a4a3a09b50831e7b8b6a7a681a9876d60f0675a7d",
-        "README.md": "a4101369cca8efc7a813bfa61e73972a43bd6f2f046fa5bb3c7dafcf02e96275",
-        "run.py": "82993d32ee1ab0a35f9fff0aead511efa73c8bdb70c21476497916e958685eb4",
+        "README.md": "32de6d1d1df86c35f2c98af6a50831b48ba93797d21a0c120dd0d929f362ffc2",
+        "run.py": "33f52db44bce2bcc49d48c50210f10392520870748bfa62c47fd3466839bfe09",
         "run_mis_sensing.m": "206254d89eef0b046c0c4d3ca9d6bdb2992b19e1149e608681e70f61143d626a",
-        "settings.json": "12c6c701655f207ecf81eb82f75b409ebda8bb7cb644999932acbb32d3799fdd",
-        "source_map.json": "51ba18588da937367e87de3cfa49150c5674773817b8d5c62e9156c994059fea",
+        "settings.json": "3e19281002c0a3b567f96016ce4ec74f85fe82d5068193c9fb4510aa61779369",
+        "source_map.json": "c55c8a7174f176699c4d1493c3a071be4e8d6d383966eacc3c24f4916c1efa44",
+        "test_figure_inputs.py": "d25f2164a461d5b219d67612b125ef50aad283e823e98f167ead1999ce53b314",
         "test_line_search.py": "3adffb30d7f1616c4a0bd813d5424ef189f235e682215d0ddb4783e5c851b74a",
         "unit_fixture.json": "60f8ec722d403034c8f70ce54d570ceff3dfbceb60ffc48a7ffa5cb68da913e9"
       }
@@ -73,18 +78,19 @@
       "atol": 1e-06,
       "rtol": 1e-05,
       "evidence_sha256": {
-        "python": "ee6060c5a20c947acdd920ce3b29c1927b96e973c604965bc0a04cac7c35d11c",
+        "python": "cd9fdfab1908efc190baba901198736c9bcae3f5d8ca12e0cc153e765ecd488d",
         "matlab": "ed712f5fcc0fa81754f96022b3ba0331e8f8f21c2c369ecea26209b6499169d2",
-        "parity": "5602e91aba3ad1f230061c3bb16a8a2fcee3295c94ecccfd5a492939f99b4ac0"
+        "parity": "d324205d482224120132514bf5910698229abd4ab947e74bc77e32429eed21c9"
       },
       "source_sha256": {
         "core.py": "fe67ca5ca4dea9316efbc091ad64180e4acf840a260abd76ecfffa4c18ed88dd",
         "diagnose_w_budget.py": "aa42fc4ffc12794e1b39684bb67634743ecb3bc350586d552f97b0bc316b6f60",
+        "figure_catalog.json": "460c2a4a3d311d3ca44e99e111bf7496a31fe0006bad70907b4a0c5a5017cc69",
         "figures.py": "80109f69d5491125be9d734d6adb76bc154f9fb31465024530b6aea48177a057",
         "fixture.json": "52d710935fe592e790080ab29c410987c1eddd0e54bc622f1a766b56b35508e0",
-        "full_config.json": "da74a97652acd4bdb86d0f73f867bfd020a6f930dae91bbd49f70b486388b066",
+        "full_config.json": "dd52f8b124cc1ec77ba71cf180048f6da665bb3809161dde6c922982c4eeec89",
         "isac_metadata.py": "fe51c21a4340c7a901ad2c3bbce6a323cdcc38950c5ccbed4f9bc2fbbc6497f3",
-        "README.md": "eacec33157994dd781aaee0af6fea4a5357db97c393d20a3c42b6faf2f1bc541",
+        "README.md": "b88874aa0b6539c5be12c346fe93daa5533e4790bef6e88f2fa112c95cb2aa9e",
         "run.py": "29584a2dc08dbd36d2613fdc44394658a1c3ed1caecbcd42b11010fe42da6111",
         "run_full_isac_figure.m": "5185448c70d7f4d69fbda1e0d1997b253e4900600139a810b6b89f5299bbd825",
         "run_strict_rotatable_isac.m": "55954bc18eefb42ecbd53082a1e265ef6b5cf5dcd3d93dc3394933e944603181",
@@ -103,24 +109,27 @@
       "atol": 1e-06,
       "rtol": 1e-05,
       "evidence_sha256": {
-        "python": "ed058b689b7b2d8db27407cca6284ce0eec4b0e04257562f159e23734562a67e",
-        "matlab": "c5005a24b95fc3e4e2720d39ca262eb88b68f5c66f2a6e5e494606cfab83d6e3",
-        "parity": "4eb0c352a3199c35173220d63e48d74d610f09f581d67be116e5effd923e9db8"
+        "python": "6b82a09651ba935baa831de0f1d35c15dca0e53da091318534cd798f002b912e",
+        "matlab": "1a0d067bda48979fccb9fcfc39772e699f3ee5ee5f244b5ea6dfd96a4d6aea8a",
+        "parity": "378e3d984fdd6fb63a307e1e4a0dedb82b28bbf20695e9f3bbad34c1e5a0b9d7"
       },
       "source_sha256": {
         "brute_force.py": "3f946a57a78fcc3af4fb5557713df8233134bf606ed9815bd6d7de7f927a99d6",
         "core.py": "06d2c504d08f3fe3fdb5a5bcdb4466e14034fdcf45c623e39f14512498312fab",
-        "figures.py": "3df1710fa81899c2ace7dcf5490884fc2543fb15f0814cba36fccb98beba8579",
+        "correlated_model_notes.md": "9a6a93b144d52bdba78f3790e8f7c511163b4b419f84ab0ccef29bca38682161",
+        "figure_catalog.json": "3c4b05267a54a37401720cc9cc744755f119b00dba38b2f158ceeca43fefcec0",
+        "figures.py": "02ee1d5e1d2e13e937ee0f39298756d85aeef75392f8112ab88eaa4c72bbcd38",
         "fixture.json": "cb3d73ae2313c0f565eae0e268df4f5f1fef4900e072cf842b61e6153490efe2",
         "full_config.json": "ec2ab26f9eaf116a506fc74ac7e69b0634d654052d06a5ccbdf19aa7f0aac604",
-        "ma_metadata.py": "d47f9c183143eaa14d602d466e1f4e014628753befbb70d64ae85a8bba84a60b",
-        "README.md": "d9da5f609ab9c99752b5f94a54dc77cdcbbe2e5a9c577e4015e3be471529415a",
-        "run.py": "ba8ed5e3b886c4a8272db7f2a2652e67ccc47847b7381821bb0d8c4fbb56fcc5",
-        "run_full_ma_figure.m": "8a12f58921acadf1bc5e9c25a142c4ef9b851153c1197833008f877db960d2d1",
-        "run_strict_two_timescale_ma.m": "621374d8d18af66b1718fe47b50a6c2f8db8bc8f858bd2368ac925629683a52a",
-        "source_contract.json": "ca7199e56abbbe7e2bf4f6175b31e67d6a679b16a1de5354dcc498028b0730ab",
+        "ma_metadata.py": "b79b8aa82a0941d6ec4ac9a213de8b4f41649d70e7fd9176a0def7cafd21a5be",
+        "README.md": "c11e63cd85e56dbe394944c2a6f9b67ab2d2c9ddef2613c36f689c1da421b2ef",
+        "run.py": "32b5a7c87d4701847e2ecfcd5d3d4bdeb84fd5011edea18a7fc0b17c1d2fcbe8",
+        "run_full_ma_figure.m": "1f1e73077f32f813ab97fb434d69ebf481cea653b0d00a66b3dcc782f1f023b5",
+        "run_strict_two_timescale_ma.m": "3e8d34298c1f9b71cc6de0e5c181785df6805eaf92020b7cd23c78d4025acecd",
+        "source_contract.json": "bfdf2b4e003339a6790d97959cc1cb21bf4aa0d890b4e7614c7e7ff0e0adbc2e",
         "strict_ma_implementation_fingerprint.m": "00d4c934675370212418c2bfa64825ad0435e68ffb67454579156b82faa28aff",
-        "test_metadata.py": "eda6ce3543b6e2da7f6f16c6401018b543b12616f645447a6cfe02fdc0760fe9"
+        "test_correlated_derivatives.py": "6a9ec3c86483f7fd28229e0ea8d8f6a03e2b15d44a6e1482f14c3e853cedd7dd",
+        "test_metadata.py": "bad55e8f81cdaecb19abf57e5fcf105b0a2bde36c41e861353a5e3dea981ee89"
       }
     },
     {
@@ -139,12 +148,13 @@
       "source_sha256": {
         "algorithms.py": "fb9c16b85fd05a938e245cb2a918634bfc26bff7599e6c3b8907dc6602c8fa3f",
         "core.py": "fdbe81b3d19e1c1aa62a015969017f24accdcdb6e7a709a65540576b49f0abf2",
-        "full_config.json": "928095754ec82e797abe9cdc77a9a3c5bfb6502d1db1ab498ea08023827d4410",
+        "figure_coverage.json": "fa67827dc0208e9b056b3b1dd121a186aba7571ef24e58200b63387c3202dcdb",
+        "full_config.json": "40bbdd991e71bc340566cb56e2d08ebea8be4d2ce9d1901af24185cf7b593819",
         "models.py": "9c2aee0dd20dc985644acc60419c412b85a29d9250505f4f404c72a4da87ec7c",
-        "README.md": "3f77879d004de8dd62e11b36ad57507989b6b3d109ef91e8c8eb715231025b57",
-        "run.py": "1cd1e0238c52bd57fb22dd28f31f4cae55fa89fd3f2ba7cf0f607b284997014f",
-        "run_strict_cooperative_satcom.m": "81f0c0a4a99a0d645031d73a90d7446463833778c7228e0f0953e70df9d9b604",
-        "scenario.py": "aa49ddf646b51a75c94a596c1b34dc4a96893c5f806abd331771a05ef70310cd",
+        "README.md": "4eae151fcbfea0c5d4cef224979edf2833103c8c80ccd652269a5024d70acec3",
+        "run.py": "8c9243eeb367bc2b6b86d47423f514e614a9232d205a51a518afb9edfd9d7c48",
+        "run_strict_cooperative_satcom.m": "71431e906267d8f4900cd00c6ab54e983ebb773d3f0256348ed4806a13e24980",
+        "scenario.py": "7dbc490944c2fd7aaa2fc862068508530faab10b8c2dcb63eccf5511c74a62ba",
         "source_contract.json": "a623731511457c0b52653f199dc996cc38f1e9061ad06b39f12deffd196b07e2",
         "source_map.json": "88654a5053a38f9e28d2cd0e46769b10a0dad5d2afdad7eb379097379918ed49",
         "strict_satcom_algorithms.m": "d829f93c25c838aab6d98f1271117a8fee8fd7a1eb2be01bbc91162703911503",
@@ -152,7 +162,7 @@
         "strict_satcom_core.m": "b2cc5284f0c3a5513572f5987e69d2c0a8977c232e278a820c0ccf5bd8de3c80",
         "strict_satcom_model_test.m": "743f85fe5f5ff16f3c61e209d099579c733d9045267ae1cdf0004beaa145223a",
         "strict_satcom_models.m": "2691ff7cc7a1582d8339afe4cfdc5041503d8890ea0514fb1a9022e413665277",
-        "strict_satcom_scenario.m": "1f3d0519039719fd995ead2789b4399894939db3161abf0916dd95f10e3d736b",
+        "strict_satcom_scenario.m": "d441703d0f05762e779516d146caffafb8d6b7baf63b5d985041c6810bd857c4",
         "termination.py": "b2ddf5f9f9be25dce18e0ebdeaed9f25926f348058970978bb66a1f34d7c5058",
         "test_termination.py": "fe669d3fbb9233a7b550cbac375840b094adbc64473eb7dc339a76230a8c8a18"
       }
@@ -166,25 +176,30 @@
       "atol": 1e-06,
       "rtol": 1e-05,
       "evidence_sha256": {
-        "python": "1bd27998efc3544a29ad3871efe542bc77a53be63f095321b4689ebeed3973d5",
-        "matlab": "3a34874c64c1af8b89d84a8c0e7743a303063a42e04b81ff9693b48a8ad3e84f",
-        "parity": "f3484c33dcd813a4c3ac0e4d21ceb19e00426dcb2494fa883b7366b28b994b92"
+        "python": "11ead2bb1751f417a026c3678dbe1ee7256b04a15ef2712d7d1b0e647bbddada",
+        "matlab": "cb321ee753f7eeb3be95beefb61c53b45a3c8e4625220380594d3736443ee9d7",
+        "parity": "54591635d094e55924c07da9320459b53b67546381ddab8531072db43b35baa6"
       },
       "source_sha256": {
-        "core.py": "de932013f2000eaf2510ab4daea355f323419c37d42559c7e7121a5a1b38fc40",
-        "full_config.json": "dd8cf65741ec59a504d1f032571b7858feee4a103fb454e565279d65b661d80c",
-        "README.md": "4e37b9bef1c928caeeaa5227a213efcf842a8a6b361ac3b56bf463ae7649ca01",
-        "run.py": "5904f608615cc687894b9353af51ecc58ded4ce4209754429bd345b544eacda2",
-        "run_strict_hotspot_satcom.m": "ff37888e8b8855eacc7a3b6c660144fdeda6a014e8c91130e78c5e70e734c56a",
+        "core.py": "4525384872bf761e677de6e093655e064237144f52ef0de4acaa557c9d0d9159",
+        "figure_coverage.json": "764affc2de7293af08722e1d16e1e81c4f635d3037ed90dbea1b29de2c1cd6b0",
+        "full_budget_clarabel_failure_receipt.json": "412cff8365cb229703b8289d0cec58d047d2a0e92cce38d03ac759db85805259",
+        "full_budget_failure_receipt.json": "23e3c4ff903d02e47011c13d2b286bbe2dda32ecdc675dfbe81ecb64f1fe5a6b",
+        "full_config.json": "b6e227084b72f76d78a6612f99fe763e58c073bb0d26e3da23c53c490cde6e62",
+        "README.md": "7cd838368e4f8448dcfa9b9a462f223a72f02a8fd177fccb82177ed3c7547986",
+        "run.py": "5a1d121d6cea0863df259c4fef50910152cdf322f4dc657d3dd0127641ae21d2",
+        "run_strict_hotspot_satcom.m": "ee283cccb608407c9875752c529359114e9e52d3043662508234567ed684bf36",
         "scenario.py": "cf778ded5fc65e0ed18ebb85e2ab7388a69714e0a2c911943d341fc66460727c",
-        "source_contract.json": "756c2d429dd34240b7b1d2a442ee1776671321d5d6b0b0991b522810f341d8a3",
+        "source_contract.json": "1fa85c5ee9e33639c86e31a65fca3417b77a56573e48fe14d866a698a6464851",
         "source_map.json": "7a79db8ae5a9b15ac6ab33eaa4c8ae5ea855eb70cd10f98dd87677cd0a614982",
+        "statistical_formulation_audit.md": "283ed5c4db4320af72109bbd158dc0cbb3da215044e4fe9af0e01c0f4c5c0c88",
         "strict_hotspot_component_test.m": "b8ccfefe65e437ba426eda6ea6b654c76c35596519bdb67f16c6e95cd71b7a68",
-        "strict_hotspot_core.m": "edcd894279953899d29c76db9ff0d3d05c0e3a4b615d453f7131795a5d4c2d33",
+        "strict_hotspot_core.m": "09ba449f303e0a69ba367368016575ceb9b6544d8d3232f0c53db3d1a42e1d3a",
         "strict_hotspot_scenario.m": "58bc38d5e20aebc66f2763888d324cd46671a98ee0c80f2a397dd7a2469c0745",
         "strict_hotspot_termination.m": "fe5578137d98f3bad956b31dfffe96be3c22352bf060ef143ea5b7d3e92db4f0",
         "termination.py": "f9e2c143f00c32abd0dfcf424f8f4e371e57ff04792d932aac3be26e6bffb90f",
         "test_phase_method.py": "13cc3dc5dde29a2c1b6eab7b13bbf53101479bc7bd94879b3655f98193ac9484",
+        "test_source_contract.py": "54bf9681c3740cd3a3eb8aa7e411e5954f178ae751ae092c3207eca6d1958d6e",
         "test_termination.py": "4bd9ed9c47fa754f9b87fe578546a29aad959c0cea59ee50254d4f73919f14a4"
       }
     }

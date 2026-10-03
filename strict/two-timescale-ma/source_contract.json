@@ -38,7 +38,8 @@
   "ambiguities": [
     {"id": "MRT_CURVATURE", "equations": ["29a", "29b"], "description": "29a defines maximum eigenvalue of a real symmetric 2x2 matrix. The printed closed form 29b has minus 4*Psi12^2 instead of plus. No silent substitution is permitted; execution requires an explicit interpretation."},
     {"id": "ZF_CROSS_REFERENCES", "equations": ["66", "67", "Algorithm 2"], "description": "Algorithm 2 names P3.n whereas its text defines P5.n; the displayed constraint reference names a curvature formula rather than the spacing inequality. Execution requires explicit use of the mathematically stated P5.n with spacing inequality (30)."},
-    {"id": "CORRELATED_ZF_DIMENSION", "equations": ["72", "74"], "description": "Omega is MxM but S(t) is NxN. Their printed products are undefined for the default N=6,M=5. No invented covariance reduction or replacement Wishart approximation is implemented."},
+    {"id": "CORRELATED_ZF_DIMENSION", "equations": ["71", "72", "74"], "description": "Omega is MxM but S(t) is NxN. Printed products are undefined for default N=6,M=5. Eq68/70 correlate Gaussian rows, generally yielding a generalized Gram/Wishart law, not the asserted standard iid-row Wishart; a second-moment counterexample is in correlated_model_notes.md. No invented covariance reduction or replacement Wishart approximation is implemented."},
+    {"id": "CORRELATED_FIGURE_PROTOCOL", "equations": ["Section V", "Figs13-16"], "description": "Section V and the Figs13/15 captions/text describe NLoS model evaluation, without a new correlated position optimizer. MRT13/15 evaluate valid Eq68/69 on the original iid Algorithm1 trajectory as a source-supported interpretation, not recovered original records or verified curve closeness. ZF14/16 remain blocked by Eq71/72/74/75. Optional Eq69 derivative/curvature notes are not production optimization updates."},
     {"id": "CORRELATION_SQRT", "equations": ["1", "68"], "description": "Section II prose writes S*u while the extension explicitly writes S^(1/2)*u for covariance S. The correlated channel implementation is mapped only to (68)."}
   ],
   "full_figures": {
@@ -47,7 +48,8 @@
     "7-8": "Rician factor sweep, N=6,M=5 and N=4,M=3",
     "9-10": "region size A sweep",
     "11-12": "user count sweep, N=6 and N=8",
-    "13-16": "correlated versus iid extension; correlated ZF formula requires clarification",
+    "13,15": "MRT correlated versus iid model evaluation on Algorithm1 iid trajectory; source-supported interpretation, actual original-curve closeness unverified",
+    "14,16": "ZF correlated versus iid extension; correlated ZF Eq71/72/74/75 requires clarification",
     "17-18": "user and antenna position errors",
     "19-20": "discrete brute force: N4/M3 region [-1.6,1.6]^2 and N6/M5 region [-1.6,1.6]x[-1.6,2.4], in wavelengths, kappa=20dB"
   },

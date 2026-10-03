@@ -17,11 +17,16 @@ jobs:
       - run: python strict/rotatable-isac/test_metadata.py
       - run: python strict/two-timescale-ma/test_metadata.py
       - run: python strict/test_validation.py
+      - run: python -m unittest discover -s strict -p test_figures.py
+      - run: python strict/mis-communications/test_figure_inputs.py
+      - run: python strict/mis-sensing/test_figure_inputs.py
+      - run: python strict/two-timescale-ma/test_correlated_derivatives.py
       - run: python strict/mis-communications/test_line_search.py
       - run: python strict/mis-sensing/test_line_search.py
       - run: python strict/cooperative-satcom/test_termination.py
       - run: python strict/hotspot-satcom/test_termination.py
       - run: python strict/hotspot-satcom/test_phase_method.py
+      - run: python strict/hotspot-satcom/test_source_contract.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:

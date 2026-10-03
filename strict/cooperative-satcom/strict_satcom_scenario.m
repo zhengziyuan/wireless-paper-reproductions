@@ -45,7 +45,10 @@ for j=1:J
     mugt=(lam/(4*pi*norm(a)))^2*leoGain*receiverGain/noise;
     [gm,gv]=factor(mugt,p.kappa_leo_db,steer); data.gt_second(j,1,:,:)=gm*gm'+gv*eye(N);
 end
-powerLimit=p.power_w*ones(J,1); interferenceLimit=10^(p.interference_to_noise_db/10)*ones(K,1);
+powerLimit=p.power_w*ones(J,1);
+if isfield(p,'interference_to_noise_ratio'), interference=p.interference_to_noise_ratio;
+else, interference=10^(p.interference_to_noise_db/10); end
+interferenceLimit=interference*ones(K,1);
 end
 
 function xyz=location(lat,lon,radius)

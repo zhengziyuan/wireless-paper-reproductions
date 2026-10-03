@@ -1,0 +1,205 @@
+{
+  "paper_id": "hotspot-satcom",
+  "source_file": "ch_third.tex",
+  "source_sha256": "684b2de6bb9dd18828fcec33a378d886a085aab7367fb535bac401f51b496794",
+  "scope": "Author-source figure inventory; NOT simulation results",
+  "figure_count": 10,
+  "unnumbered_equation_or_algorithm_floats": 2,
+  "figures": [
+    {
+      "figure": 1,
+      "labels": [
+        "fig:3-1"
+      ],
+      "caption_tex": "RIS\u8f85\u52a9\u9884\u7f16\u7801\u536b\u661f\u7cfb\u7edf\u70ed\u70b9\u5bb9\u91cf\u589e\u5f3a\u573a\u666f\u793a\u610f\u56fe",
+      "assets": [
+        {
+          "file": "figures/chapter3/RIS\u8f85\u52a9\u70ed\u70b9\u5bb9\u91cf\u589e\u5f3a\u573a\u666f\u793a\u610f\u56fe.pdf",
+          "available": true,
+          "sha256": "410e5b21b913b189f42f83aa19a44af5fe4861c49d7b7dc7799ddf7e65a11054"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 2,
+      "labels": [
+        "fig:3-2"
+      ],
+      "caption_tex": "\u6240\u63d0\u57fa\u4e8eAO\u7684\u7b97\u6cd5\u7684\u6536\u655b\u6027\uff0c\u7cfb\u7edf\u4e2d$U=6$\u3001$M=25$\u3001$\\beta _S=20dB$\u3002",
+      "assets": [
+        {
+          "file": "figures/chapter3/convergence.eps",
+          "available": true,
+          "sha256": "e51da9589eb8eab3a497fbd7722366b2bbf805953b4d78bf9f00cda21d14f9df"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 3,
+      "labels": [
+        "fig:3-3"
+      ],
+      "caption_tex": "\u5e73\u5747CPU\u8fd0\u884c\u65f6\u95f4\u4e0eHU\u6570 $U$ \u7684\u5173\u7cfb\uff0c\u7cfb\u7edf\u4e2d$N=16$\u3001$M=25$.",
+      "assets": [
+        {
+          "file": "figures/chapter3/computaiontime.eps",
+          "available": true,
+          "sha256": "a33c84e58a5d8217068c6a7163bb179929c765b1752ff179382eed606bef2f0e"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 4,
+      "labels": [
+        "fig:3-4a",
+        "fig:3-4b",
+        "fig:3-4"
+      ],
+      "caption_tex": "\u4e0d\u540c\u661f\u5730\u94fe\u8def\u83b1\u65af\u56e0\u5b50$\\beta _S$\u8bbe\u7f6e\u4e0b\u70ed\u70b9\u533a\u57df\u5185HU\u7684\u603b\u53ef\u8fbe\u901f\u7387\u4e0e\u7684HU\u6570\u91cf\u7684\u5173\u7cfb",
+      "assets": [
+        {
+          "file": "figures/chapter3/HUs_new_100.eps",
+          "available": true,
+          "sha256": "b4e22956202072dd9883bd5bc145ba288298677fd81951411aaefd22ff05cf30"
+        },
+        {
+          "file": "figures/chapter3/HUs_closely_new_100.eps",
+          "available": true,
+          "sha256": "bc80c911b3c3eb9ff8ff30c97286dc9ea7270d68d514da0404ccf7dda720d466"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 5,
+      "labels": [
+        "fig:3-5"
+      ],
+      "caption_tex": "$U=6$\u65f6HU\u7684\u548c\u53ef\u8fbe\u901f\u7387\u7684\u7ecf\u9a8c\u7d2f\u79ef\u5206\u5e03\u51fd\u6570.",
+      "assets": [
+        {
+          "file": "figures/chapter3/sum_rate_cdf.eps",
+          "available": true,
+          "sha256": "93c35a6b5481e80064ba639f5daa51fab05f5475840bf05a632dee17bb462665"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 6,
+      "labels": [
+        "fig:3-6"
+      ],
+      "caption_tex": "$U=6$\u65f6\u6bcf\u4e2aHU\u7684\u5e73\u5747\u53ef\u8fbe\u901f\u7387",
+      "assets": [
+        {
+          "file": "figures/chapter3/user_index_rate.eps",
+          "available": true,
+          "sha256": "2345fea73778fc0f417dde0bac634d32cc4741f321d871747bd4673fd49d36e0"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 7,
+      "labels": [
+        "fig:3-7a",
+        "fig:3-7b",
+        "fig:3-7"
+      ],
+      "caption_tex": "$U=6$\u65f6\u6bcf\u4e2aHU\u53ef\u8fbe\u901f\u7387\u7684\u7ecf\u9a8c\u7d2f\u79ef\u6982\u7387\u5206\u5e03\u51fd\u6570",
+      "assets": [
+        {
+          "file": "figures/chapter3/path_rate_cdf_20DB.eps",
+          "available": true,
+          "sha256": "48fc2d40c913eaa2d7bdec4fae6d9f013af2681db7abf6ee990d3814af19d686"
+        },
+        {
+          "file": "figures/chapter3/path_rate_cdf_10DB.eps",
+          "available": true,
+          "sha256": "123573ceffe8697a093fcd08f54ccd8c1c40e9c66dc22e7807c43c4050371472"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 8,
+      "labels": [
+        "fig:3-8a",
+        "fig:3-8b",
+        "fig:3-8"
+      ],
+      "caption_tex": "HU\u7684\u53ef\u8fbe\u901f\u7387\u603b\u548c\u4e0e\u661f\u5730\u83b1\u65af\u56e0\u5b50$\\beta _S$\u7684\u5173\u7cfb",
+      "assets": [
+        {
+          "file": "figures/chapter3/Rician.eps",
+          "available": true,
+          "sha256": "c6daa31086291eb004353fd08f12bec2c118797aab668b3fb2684a98b75e0dce"
+        },
+        {
+          "file": "figures/chapter3/single_Rician_new.eps",
+          "available": true,
+          "sha256": "8196712fb21c9c57266338cf89ac5fefaf6f0bb7706a974de8aaafece9c8722d"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 9,
+      "labels": [
+        "fig:3-9"
+      ],
+      "caption_tex": "\u603b\u901f\u7387\u548c\u6bcf\u4e2aRIS\u5b50\u8868\u9762\u4e2d\u53cd\u5c04\u5143\u7d20\u6570\u91cf\u7684\u5173\u7cfb\uff0c\u7cfb\u7edf\u4e2d$U=6$\u3001 $M=25$",
+      "assets": [
+        {
+          "file": "figures/chapter3/number_elemenst_new.eps",
+          "available": true,
+          "sha256": "b411715c006f53b0f507188067d5e6b7805c88c45cc15b9fd05a093caf072bed"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 10,
+      "labels": [
+        "fig:3-10"
+      ],
+      "caption_tex": "\u5728\u7edf\u8ba1CSI\u4e0b\u4e0d\u540c\u661f\u5730\u83b1\u65af\u56e0\u5b50$\\beta _S$\u65f6\u7684HU\u53ef\u8fbe\u901f\u7387\u603b\u548c",
+      "assets": [
+        {
+          "file": "figures/chapter3/statistical_CSI.eps",
+          "available": true,
+          "sha256": "fbcd024a896c49dcba58973df0bd42c06700f96911212ff3324ab9c846cfaa93"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    }
+  ],
+  "table_count": 1,
+  "tables": [
+    {
+      "table": 1,
+      "caption_tex": "RIS\u8f85\u52a9\u9884\u7f16\u7801\u536b\u661f\u7cfb\u7edf\u7684\u4eff\u771f\u53c2\u6570",
+      "labels": [
+        "tab:3-1"
+      ],
+      "content_classification": "Needs explicit parameter/complexity/numerical/measurement classification",
+      "table_reproduction_verified": false
+    }
+  ],
+  "numbering_note": "Active captioned figure order, excluding nested algorithm captions; verify chapter/publication numbering separately",
+  "full_reproduction_passed": false
+}

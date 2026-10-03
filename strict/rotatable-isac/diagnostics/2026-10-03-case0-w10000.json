@@ -1,0 +1,16 @@
+{
+  "paper_id":"rotatable-isac",
+  "diagnostic_date":"2026-10-03",
+  "mode":"actually_executed_full_size_single_realization_six_schemes_not_full_MC_figure",
+  "case":{"family":"power-b2","point":26,"realization":0,"BS_antennas":4,"RIS_elements":36,"users":2,"sensing_grid_points":66,"power_w":0.3981071705534972,"rho":10,"directivity_exponent":2},
+  "input_comparison":{"only_changed_top_level_fields":["W_solver","parameter_provenance"],"all_other_physical_and_random_values_identical_to_original_500_cap_input":true,"W_maximum_iterations":10000,"W_relative_tolerance":0.000001,"other_update_rules_dimensions_and_thresholds_unchanged":true},
+  "provenance":{"config_sha256":"da74a97652acd4bdb86d0f73f867bfd020a6f930dae91bbd49f70b486388b066","input_fingerprint":"6b6d20584fc27e1c0d40612814d134ff8f730c0d3cae2731412ce943611ae115","implementation_fingerprint":"86b206cb59bd85a2c2e3c672b666df5ec7182228a8d4fee4d69bd478e8f2eb06","raw_result_sha256":"426f391cccc8de93da6d124c784955054d0bb888192c15fecf20f97b07eb6588"},
+  "elapsed_seconds":907.6749082999886,
+  "actual_gate_checks":{"all_six_executed":true,"all_six_outer_converged":true,"all_applicable_inner_calls_met_original_stop":true,"all_six_full_converged":true,"all_six_power_and_rotation_constraints_pass":true,"all_six_unit_modulus_error":0.0,"input_and_implementation_fingerprints_match_current_engine":true,"isac_metadata_complete_gate":true},
+  "total_W_calls":102,"total_W_iterations":63483,"maximum_single_W_call_iterations":2828,
+  "W_unmet_cap_calls":0,"RIS_unmet_cap_calls":0,"PGA_unmet_cap_calls":0,
+  "rotating_BS_group":{"schemes":["Rot-BS & Rot-RIS","Rot-BS & Fix-RIS","Rot-BS & No-RIS"],"per_scheme_AO_sweeps":32,"per_scheme_W_iterations":18330,"per_scheme_PGA_relative_step_stops":2,"utility":5.837963589353972,"rate_bps_per_hz":12.339128204282066,"nmse":0.6501164614928093,"outer_final_relative_improvement":0.000008288420573570157,"final_projected_rotation_gradient_norm":0.00000022244460368661943},
+  "fixed_BS_group":{"schemes":["Fix-BS & Rot-RIS","Fix-BS & Fix-RIS","Fix-BS & No-RIS"],"per_scheme_AO_sweeps":2,"per_scheme_W_iterations":2831,"per_scheme_PGA_relative_step_stops":0,"utility":3.5163279274089625,"rate_bps_per_hz":13.191133546923147,"nmse":0.9674805619514185,"outer_final_relative_improvement":0.000003155798995845277,"final_projected_rotation_gradient_norm":0.0},
+  "zero_RIS_bridge":{"all_six_bridge_frobenius_norm":0.0,"all_six_maximum_phase_difference_from_one":0.0,"same_BS_family_three_schemes_identical":true,"evidence_of_RIS_gain":false},
+  "scope_limits":{"complete_100_channel_point":false,"complete_original_figure":false,"MATLAB_full_scene_run":false,"reference_curve_closeness_verified":false,"all_original_nonconvex_KKT_stationarity_certified":false,"globally_optimal":false}
+}

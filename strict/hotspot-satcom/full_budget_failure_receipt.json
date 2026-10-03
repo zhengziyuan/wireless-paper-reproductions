@@ -1,0 +1,497 @@
+{
+  "reported_dimensions":{"N":16,"J":16,"U":6,"K":10,"M":25},
+  "executed_algorithm_budgets":{"AO":200,"QT":200,"RGD":500,"SDR_randomization":1000},
+  "solver_options":{"backend":"SCS","eps":1e-7,"max_iters":100000},
+  "paper_id": "hotspot-satcom",
+  "source_version": "author_thesis",
+  "final_publisher_conformance": "unverified",
+  "scope": "single_full_dimension_full_algorithm_budget_physical_sample_NOT_MC_figure_reproduction",
+  "executed_samples": 1,
+  "configured_figure_MC_samples_unchanged": 1000,
+  "elapsed_seconds": 149.71485419996316,
+  "sample": {
+    "status": "failed",
+    "error": "AO objective decrease beyond solver accuracy",
+    "failure_receipt": {
+      "block": "AO",
+      "attempted_iteration": 12,
+      "retained_history": [
+        0.008651867940528558,
+        1.6987238635847695,
+        1.8331133644773172,
+        2.0159191588914216,
+        2.377062732952335,
+        3.0919603203679173,
+        3.834705863994652,
+        4.317693153657909,
+        4.854581042698406,
+        5.476553119458067,
+        5.829315481324993,
+        6.515665593587308
+      ],
+      "attempted_value": 6.220152212076869,
+      "decrease": 0.29551338151043893,
+      "active_update": {
+        "solver_status": "optimal",
+        "surrogate_rate": 6.058460577720003,
+        "solver_diagnostics": {
+          "solver": "SCS",
+          "status": "optimal",
+          "iterations": 1150,
+          "solve_seconds": 0.2292207,
+          "res_pri": 0.0009805056950351046,
+          "res_dual": 1.5735405292258026e-7,
+          "gap": 3.077421739604496e-7,
+          "pobj": -6.0648106805011714,
+          "dobj": -6.064810988243345,
+          "normalized_constraint_max_violation": 0.0007993880710950307,
+          "constraint_max_relative_violation": 0.00019780713326046572
+        },
+        "qt_bound_max_violation": 0.000024783885258495137,
+        "qt_tightness_error": 3.552713678800501e-15,
+        "before": {
+          "sinr": [
+            0.0000021382868332262106,
+            0.006638293554858891,
+            0.000033996767608113226,
+            0.0000019332160313049964,
+            5.099640296219149,
+            13.901040001281558,
+            1.9695169527214436,
+            1.97405999457109,
+            1.9693561301722882,
+            1.9702306760969872,
+            1.9730820208638804,
+            1.9728889864349979,
+            1.9648303595198977,
+            1.9663895178247308,
+            1.9629171855401957,
+            1.9660803374162812
+          ],
+          "hu_sum_rate": 6.515665593587308,
+          "total_power": 122.96206912560646
+        },
+        "after": {
+          "sinr": [
+            2.487907876849266e-8,
+            0.0010237674281954451,
+            5.631596061466103e-7,
+            3.357220544312925e-8,
+            3.7493445041796583,
+            13.527301469687547,
+            1.9980886045265047,
+            1.997720469182774,
+            1.9984023667678408,
+            1.9980324704980388,
+            1.9979571668685023,
+            1.9978389300723407,
+            1.999203908104764,
+            1.9992930454639033,
+            1.9983488812248793,
+            1.9986035650110379
+          ],
+          "hu_sum_rate": 6.109900368309901,
+          "total_power": 99.91281725083954
+        }
+      },
+      "phase_update": {
+        "solver_status": "optimal",
+        "sdr_upper_bound": 6.207969659687827,
+        "solver_diagnostics": {
+          "solver": "SCS",
+          "status": "optimal",
+          "iterations": 1000,
+          "solve_seconds": 2.2179481,
+          "res_pri": 0.0000015870450396805963,
+          "res_dual": 6.427257819690723e-8,
+          "gap": 2.0605196354125834e-7,
+          "pobj": -6.2079647790916805,
+          "dobj": -6.207964573039717,
+          "normalized_constraint_max_violation": 0.0000017661743051123913,
+          "constraint_max_relative_violation": 0.0000017661725651006585,
+          "sdr_bound_max_violation": 0
+        },
+        "rounded_surrogate": 6.207964576095675,
+        "unit_modulus_error": 2.220446049250313e-16,
+        "diagonal_error": 2.225410205003442e-7,
+        "smallest_sdp_eigenvalue": -0.0000029651196945691814,
+        "randomization_count": 1000
+      },
+      "solver_diagnostics": [
+        {
+          "active": {
+            "solver": "SCS",
+            "status": "optimal",
+            "iterations": 1100,
+            "solve_seconds": 0.2028292,
+            "res_pri": 0.00000801888883293339,
+            "res_dual": 3.502010419086656e-8,
+            "gap": 2.0857699698382386e-7,
+            "pobj": -1.6334661740293148,
+            "dobj": -1.6334659654523178,
+            "normalized_constraint_max_violation": 0.0011162042429759822,
+            "constraint_max_relative_violation": 0.000007367370595880705,
+            "qt_bound_max_violation": 0
+          },
+          "phase": {
+            "solver": "SCS",
+            "status": "optimal",
+            "iterations": 56975,
+            "solve_seconds": 71.649416,
+            "res_pri": 2.5592827967088337e-8,
+            "res_dual": 2.4322155496843437e-7,
+            "gap": 9.548798001455716e-11,
+            "pobj": -1.6926358823931167,
+            "dobj": -1.6926358824886045,
+            "normalized_constraint_max_violation": 1.7715236336744343e-8,
+            "constraint_max_relative_violation": 1.7715236331043448e-8,
+            "sdr_bound_max_violation": 0
+          }
+        },
+        {
+          "active": {
+            "solver": "SCS",
+            "status": "optimal",
+            "iterations": 1200,
+            "solve_seconds": 0.2074319,
+            "res_pri": 0.00000149625337636365,
+            "res_dual": 3.719568675391797e-8,
+            "gap": 1.603545945485473e-9,
+            "pobj": -1.7544406449356706,
+            "dobj": -1.7544406433321247,
+            "normalized_constraint_max_violation": 0.0001509785166575739,
+            "constraint_max_relative_violation": 0.0000015095201212708478,
+            "qt_bound_max_violation": 0
+          },
+          "phase": {
+            "solver": "SCS",
+            "status": "optimal",
+            "iterations": 4825,
+            "solve_seconds": 8.666802,
+            "res_pri": 1.885301967692826e-7,
+            "res_dual": 2.035999801076901e-7,
+            "gap": 2.2166846891484368e-11,
+            "pobj": -1.8197731837782714,
+            "dobj": -1.8197731837561046,
+            "normalized_constraint_max_violation": 9.839225766984912e-8,
+            "constraint_max_relative_violation": 9.839224842433926e-8,
+            "sdr_bound_max_violation": 0
+          }
+        },
+        {
+          "active": {
+            "solver": "SCS",
+            "status": "optimal",
+            "iterations": 975,
+            "solve_seconds": 0.1264934,
+            "res_pri": 0.0000016126632971394612,
+            "res_dual": 2.3995911347205167e-7,
+            "gap": 1.0129104374168549e-7,
+            "pobj": -1.8873156115882628,
+            "dobj": -1.887315510297219,
+            "normalized_constraint_max_violation": 0.00010337346160582683,
+            "constraint_max_relative_violation": 0.0000017295559110898024,
+            "qt_bound_max_violation": 0
+          },
+          "phase": {
+            "solver": "SCS",
+            "status": "optimal",
+            "iterations": 3575,
+            "solve_seconds": 6.818985,
+            "res_pri": 1.452383749397744e-7,
+            "res_dual": 2.1481672540950532e-8,
+            "gap": 5.768979693816391e-10,
+            "pobj": -1.981446187987666,
+            "dobj": -1.9814461885645638,
+            "normalized_constraint_max_violation": 5.571811468693043e-8,
+            "constraint_max_relative_violation": 5.571811140362697e-8,
+            "sdr_bound_max_violation": 0
+          }
+        },
+        {
+          "active": {
+            "solver": "SCS",
+            "status": "optimal",
+            "iterations": 650,
+            "solve_seconds": 0.1023927,
+            "res_pri": 0.000002986572272802016,
+            "res_dual": 4.294365712196617e-8,
+            "gap": 2.9277272783070897e-7,
+            "pobj": -2.09865269538847,
+            "dobj": -2.0986529881611977,
+            "normalized_constraint_max_violation": 0.00015824579134005035,
+            "constraint_max_relative_violation": 0.0000033337481788943592,
+            "qt_bound_max_violation": 0
+          },
+          "phase": {
+            "solver": "SCS",
+            "status": "optimal",
+            "iterations": 2325,
+            "solve_seconds": 4.593214,
+            "res_pri": 1.093059972520924e-7,
+            "res_dual": 2.3782543460212056e-7,
+            "gap": 6.773797063841551e-9,
+            "pobj": -2.284765877461244,
+            "dobj": -2.284765884235041,
+            "normalized_constraint_max_violation": 9.994227363056883e-8,
+            "constraint_max_relative_violation": 9.99422637327937e-8,
+            "sdr_bound_max_violation": 5.54126531326915e-8
+          }
+        },
+        {
+          "active": {
+            "solver": "SCS",
+            "status": "optimal",
+            "iterations": 475,
+            "solve_seconds": 0.0684395,
+            "res_pri": 4.3153697047344163e-7,
+            "res_dual": 1.3510113842282528e-7,
+            "gap": 2.829131044195865e-7,
+            "pobj": -2.539304395846076,
+            "dobj": -2.53930467875918,
+            "normalized_constraint_max_violation": 0.000011514277822755048,
+            "constraint_max_relative_violation": 5.29723254397543e-7,
+            "qt_bound_max_violation": 0
+          },
+          "phase": {
+            "solver": "SCS",
+            "status": "optimal",
+            "iterations": 3975,
+            "solve_seconds": 7.8161971999999995,
+            "res_pri": 1.3159063695798413e-7,
+            "res_dual": 1.407774175857818e-8,
+            "gap": 5.074835988172485e-8,
+            "pobj": -2.9364147168056705,
+            "dobj": -2.93641476755403,
+            "normalized_constraint_max_violation": 9.714225579181599e-8,
+            "constraint_max_relative_violation": 9.714225461063807e-8,
+            "sdr_bound_max_violation": 0
+          }
+        },
+        {
+          "active": {
+            "solver": "SCS",
+            "status": "optimal",
+            "iterations": 475,
+            "solve_seconds": 0.0630499,
+            "res_pri": 6.359965272292298e-7,
+            "res_dual": 1.6794159202853113e-7,
+            "gap": 1.0042983730760099e-7,
+            "pobj": -3.3419675792409342,
+            "dobj": -3.341967478811097,
+            "normalized_constraint_max_violation": 0.000014770583742773624,
+            "constraint_max_relative_violation": 8.515434471282693e-7,
+            "qt_bound_max_violation": 0
+          },
+          "phase": {
+            "solver": "SCS",
+            "status": "optimal",
+            "iterations": 1775,
+            "solve_seconds": 3.872683,
+            "res_pri": 2.790639331156033e-7,
+            "res_dual": 8.082839209374387e-8,
+            "gap": 9.319755036768092e-9,
+            "pobj": -3.7718627971835796,
+            "dobj": -3.771862806503335,
+            "normalized_constraint_max_violation": 2.857386641817385e-7,
+            "constraint_max_relative_violation": 2.8573857432950337e-7,
+            "sdr_bound_max_violation": 2.573149648910089e-8
+          }
+        },
+        {
+          "active": {
+            "solver": "SCS",
+            "status": "optimal",
+            "iterations": 575,
+            "solve_seconds": 0.0882935,
+            "res_pri": 8.81988048726983e-8,
+            "res_dual": 3.606486128257597e-8,
+            "gap": 1.248480552214833e-8,
+            "pobj": -4.024176825145972,
+            "dobj": -4.024176812661167,
+            "normalized_constraint_max_violation": 0.0000015545366451874543,
+            "constraint_max_relative_violation": 1.1048422235612542e-7,
+            "qt_bound_max_violation": 0
+          },
+          "phase": {
+            "solver": "SCS",
+            "status": "optimal",
+            "iterations": 975,
+            "solve_seconds": 2.3123467,
+            "res_pri": 3.9478675080563016e-7,
+            "res_dual": 1.9234917429455065e-7,
+            "gap": 3.548384281123173e-7,
+            "pobj": -4.2924391457282365,
+            "dobj": -4.292438790889808,
+            "normalized_constraint_max_violation": 5.316854666840863e-7,
+            "constraint_max_relative_violation": 5.316854046956471e-7,
+            "sdr_bound_max_violation": 0
+          }
+        },
+        {
+          "active": {
+            "solver": "SCS",
+            "status": "optimal",
+            "iterations": 575,
+            "solve_seconds": 0.1181219,
+            "res_pri": 2.84053700758807e-8,
+            "res_dual": 3.328997211945053e-8,
+            "gap": 4.768410000389865e-8,
+            "pobj": -4.526836239219135,
+            "dobj": -4.526836286903235,
+            "normalized_constraint_max_violation": 2.133213095056874e-8,
+            "constraint_max_relative_violation": 2.1304752453167208e-8,
+            "qt_bound_max_violation": 0
+          },
+          "phase": {
+            "solver": "SCS",
+            "status": "optimal",
+            "iterations": 1300,
+            "solve_seconds": 2.7234895999999997,
+            "res_pri": 1.2179954058309228e-7,
+            "res_dual": 8.248859548584646e-8,
+            "gap": 1.0163988284553528e-7,
+            "pobj": -4.839769261387802,
+            "dobj": -4.839769159747918,
+            "normalized_constraint_max_violation": 1.2095236600827023e-7,
+            "constraint_max_relative_violation": 1.2095236391774826e-7,
+            "sdr_bound_max_violation": 0
+          }
+        },
+        {
+          "active": {
+            "solver": "SCS",
+            "status": "optimal",
+            "iterations": 475,
+            "solve_seconds": 0.0836533,
+            "res_pri": 2.7971374211377027e-7,
+            "res_dual": 2.6691567675338498e-8,
+            "gap": 2.7250392005618755e-8,
+            "pobj": -5.098057006163727,
+            "dobj": -5.098056978913335,
+            "normalized_constraint_max_violation": 0.0000024317349271996136,
+            "constraint_max_relative_violation": 1.3898438654778928e-7,
+            "qt_bound_max_violation": 0
+          },
+          "phase": {
+            "solver": "SCS",
+            "status": "optimal",
+            "iterations": 800,
+            "solve_seconds": 1.8251507,
+            "res_pri": 1.8345206888822932e-7,
+            "res_dual": 5.2276887088399845e-8,
+            "gap": 4.7428404318113404e-8,
+            "pobj": -5.448025110990233,
+            "dobj": -5.448025158418638,
+            "normalized_constraint_max_violation": 1.8310510214629156e-7,
+            "constraint_max_relative_violation": 1.8310507079805916e-7,
+            "sdr_bound_max_violation": 0
+          }
+        },
+        {
+          "active": {
+            "solver": "SCS",
+            "status": "optimal",
+            "iterations": 34025,
+            "solve_seconds": 5.1661985999999995,
+            "res_pri": 0.0000034170125985613425,
+            "res_dual": 8.400453178762733e-8,
+            "gap": 3.6154974469712565e-9,
+            "pobj": -5.682125812874497,
+            "dobj": -5.682125816489994,
+            "normalized_constraint_max_violation": 0.00015734175283199647,
+            "constraint_max_relative_violation": 0.0000036600312972942788,
+            "qt_bound_max_violation": 0
+          },
+          "phase": {
+            "solver": "SCS",
+            "status": "optimal",
+            "iterations": 875,
+            "solve_seconds": 1.8925933,
+            "res_pri": 2.410092980901379e-7,
+            "res_dual": 5.147622600820956e-8,
+            "gap": 5.6443411990930405e-8,
+            "pobj": -5.821065316745553,
+            "dobj": -5.821065373188965,
+            "normalized_constraint_max_violation": 2.410092982962908e-7,
+            "constraint_max_relative_violation": 2.4100924021082296e-7,
+            "sdr_bound_max_violation": 7.89390629307718e-7
+          }
+        },
+        {
+          "active": {
+            "solver": "SCS",
+            "status": "optimal_inaccurate",
+            "iterations": 100000,
+            "solve_seconds": 14.674447200000001,
+            "res_pri": 0.0627955850537129,
+            "res_dual": 0.0000018203920432559463,
+            "gap": 0.000014809134879323957,
+            "pobj": -6.08022100870566,
+            "dobj": -6.080235817840539,
+            "normalized_constraint_max_violation": 0.22962069125606455,
+            "constraint_max_relative_violation": 0.1867410762431996,
+            "qt_bound_max_violation": 0.17575236033420527
+          },
+          "phase": {
+            "solver": "SCS",
+            "status": "optimal",
+            "iterations": 1250,
+            "solve_seconds": 2.7359183,
+            "res_pri": 7.695335935790226e-7,
+            "res_dual": 2.038001336868132e-7,
+            "gap": 1.306170881404342e-7,
+            "pobj": -6.507161519353484,
+            "dobj": -6.507161649970572,
+            "normalized_constraint_max_violation": 0.0000017381906637797923,
+            "constraint_max_relative_violation": 0.0000017381892090487494,
+            "sdr_bound_max_violation": 0
+          }
+        },
+        {
+          "active": {
+            "solver": "SCS",
+            "status": "optimal",
+            "iterations": 1150,
+            "solve_seconds": 0.2292207,
+            "res_pri": 0.0009805056950351046,
+            "res_dual": 1.5735405292258026e-7,
+            "gap": 3.077421739604496e-7,
+            "pobj": -6.0648106805011714,
+            "dobj": -6.064810988243345,
+            "normalized_constraint_max_violation": 0.0007993880710950307,
+            "constraint_max_relative_violation": 0.00019780713326046572,
+            "qt_bound_max_violation": 0.000024783885258495137
+          },
+          "phase": {
+            "solver": "SCS",
+            "status": "optimal",
+            "iterations": 1000,
+            "solve_seconds": 2.2179481,
+            "res_pri": 0.0000015870450396805963,
+            "res_dual": 6.427257819690723e-8,
+            "gap": 2.0605196354125834e-7,
+            "pobj": -6.2079647790916805,
+            "dobj": -6.207964573039717,
+            "normalized_constraint_max_violation": 0.0000017661743051123913,
+            "constraint_max_relative_violation": 0.0000017661725651006585,
+            "sdr_bound_max_violation": 0
+          }
+        }
+      ]
+    },
+    "physical_constraint_pass": false,
+    "convergence_pass": false,
+    "solver_primal_pass": false,
+    "qt_sdr_bound_pass": false,
+    "valid_sample": false
+  },
+  "checks": {
+    "physical_constraint_pass": false,
+    "convergence_pass": false,
+    "solver_primal_pass": false,
+    "qt_sdr_bound_pass": false
+  },
+  "full_reproduction_pass": false,
+  "variant": "original_unweighted_lambda_epigraph_before_equivalent_conditioning_repair"
+}

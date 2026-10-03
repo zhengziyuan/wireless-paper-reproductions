@@ -171,3 +171,33 @@ It never launches the full figure bank and stores no machine-specific paths.
 ```text
 python diagnose_w_budget.py --scene exported/jobs/case-000-mc-000.json --reference full-scene-python.json --maximum-iterations 10000 --output diagnostic-w.json
 ```
+
+### Actual six-scheme rerun with the selected 10,000-step W budget
+
+On 2026-10-03 the **same full-size case-0 realization** was actually rerun for
+all six schemes using a new immutable input/configuration snapshot. All physical
+and random values were identical to the earlier 500-cap case; only `W_solver`
+and disclosed parameter provenance changed. The W stop stayed at **1e-6**;
+no dimension, sensing grid, original update, other solver budget or threshold
+was reduced or relaxed. Actual elapsed time was **907.67 seconds**.
+
+All six schemes passed the complete original-stop/physical/fingerprint gate:
+every W/RIS/PGA call met its recorded stopping criterion and every outer AO
+converged. There were **zero unmet-cap calls**. The three rotating-BS schemes
+each used 32 AO sweeps and 18,330 W iterations; the three fixed-BS schemes each
+used 2 AO sweeps and 2,831 W iterations. Across the six schemes this is 102 W
+calls and 63,483 W iterations, with a maximum 2,828 iterations in any one W call.
+Rotating-BS final utility/rate/NMSE were 5.83796359/12.33912820/0.65011646;
+fixed-BS values were 3.51632793/13.19113355/0.96748056.
+
+This is **one successfully converged realization, not a complete 100-channel
+point, full figure, MATLAB full-scene validation or verified match to the
+reference curves**. The RIS bridge remains exactly zero and all phases remain
+one: the three schemes within each BS family coincide. It therefore provides no
+evidence of RIS gain. Each rotating-BS trajectory also has two rotation blocks
+stopped by the paper's relative-step criterion rather than the gradient
+criterion; passing those original stop rules does not certify every block's KKT
+stationarity or global optimality. A portable condensed actual receipt, including
+the raw-result hash and exact configuration/input/engine fingerprints, is in
+`diagnostics/2026-10-03-case0-w10000.json`. The reference figure/axis/metric
+inventory and unresolved legend-selection details are in `figure_catalog.json`.

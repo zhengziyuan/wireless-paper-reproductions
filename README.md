@@ -25,6 +25,12 @@ Each current package has its own MATLAB entry point, Python entry point, full co
 
 For current dependencies and commands, use the [strict implementation guide](strict/README.md). Actual execution outputs and dual-language comparisons are under [strict/validation](strict/validation); machine-readable status is in [strict/status.json](strict/status.json). **No package has yet passed complete published-figure reproduction.**
 
+Original figures/tables, explicit full-budget execution and independent
+reference comparisons now have a [figure reproduction guide](strict/FIGURE_REPRODUCTION.md).
+The complete nine-target closed-form beam has actually run in both languages,
+with full-grid numerical agreement; its original-figure agreement is still
+unverified. A runnable plot must not be confused with a matching original plot.
+
 ```sh
 python -m pip install -r strict/requirements.txt
 python strict/validate_components.py --output-dir strict/outputs/components

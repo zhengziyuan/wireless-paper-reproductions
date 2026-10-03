@@ -8,10 +8,10 @@
   "full_size_failed_attempts_are_not_successful_reproduction": true,
   "papers": [
     {"id": "mis-communications", "status": "original_algorithm_dual_implementation_component_checked; full_sweeps_not_validated", "full_figure_validation": false},
-    {"id": "mis-sensing", "status": "full_size_solver_boundary_debugging; closed_form_dual_outputs_checked; stochastic_full_batch_not_passed", "full_figure_validation": false},
-    {"id": "rotatable-isac", "status": "original_algorithm_dual_components_checked; full_size_first_scene_inner_caps_failed; unreported_W_budget_tuned_from_actual_2828_iteration_trial; full_100_channel_sweeps_not_validated", "full_figure_validation": false},
-    {"id": "two-timescale-ma", "status": "original_MRT_and_ZF_dual_components_checked; full_MC_and_exhaustive_figures_not_run; correlated_MRT_optimization_not_implemented_and_correlated_ZF_expression_unresolved", "full_figure_validation": false},
+    {"id": "mis-sensing", "status": "original_EPS_target_grid_and_PSLR_guard_recovered; full_closed_form_dual_grid_agrees_but_not_original_figure; full_sized_single_start_feasible_but_not_converged; stated_model_upper_bound_conflicts_with_original_fig3_and_fig15; full_6000_start_banks_not_passed", "full_figure_validation": false},
+    {"id": "rotatable-isac", "status": "original_algorithm_dual_components_checked; one_immutable_full_size_six_scheme_case_passed_original_stopping_and_physical_gates; source_rotation_legends_recovered; full_100_channel_sweeps_not_validated", "full_figure_validation": false},
+    {"id": "two-timescale-ma", "status": "original_MRT_and_ZF_dual_components_checked; actual_MC_convergence_history_added; source_supported_correlated_MRT_comparison_protocol_on_original_iid_trajectory; full_MC_and_exhaustive_figures_not_run; correlated_ZF_expression_unresolved", "full_figure_validation": false},
     {"id": "cooperative-satcom", "status": "author_model_dual_components_and_physical_model_checked; full_size_bounded_chain_not_converged; full_sweeps_not_validated", "full_figure_validation": false},
-    {"id": "hotspot-satcom", "status": "original_instantaneous_QT_SDR_RGD_dual_components_checked; physical_bounded_chain_feasible_not_converged; statistical_QoS_formulation_unresolved", "full_figure_validation": false}
+    {"id": "hotspot-satcom", "status": "same_problem_weighted_QT_epigraph_and_original_RandRIS_AO20_AO100_baselines_added; genuine_full_size_SCS_and_Clarabel_failures_preserved; no_successful_complete_MC_sample; statistical_QoS_formulation_unresolved", "full_figure_validation": false}
   ]
 }

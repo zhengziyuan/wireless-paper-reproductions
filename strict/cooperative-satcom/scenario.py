@@ -102,4 +102,5 @@ def make_scenario(config):
         mugt=(lam/(4*np.pi*np.linalg.norm(a)))**2*leo_gain*receiver_gain/noise
         gm,gv=factor(mugt,p['kappa_leo_db'],steer)
         data['gt_second'][j,0]=np.outer(gm,np.conj(gm))+gv*np.eye(N)
-    return data,np.full(J,p['power_w']),np.full(K,10**(p['interference_to_noise_db']/10))
+    interference=p.get('interference_to_noise_ratio',10**(p['interference_to_noise_db']/10))
+    return data,np.full(J,p['power_w']),np.full(K,interference)

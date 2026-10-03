@@ -1,0 +1,37 @@
+{
+  "paper_id":"two-timescale-ma",
+  "source":"https://arxiv.org/html/2410.05912v2",
+  "reference_curve_closeness_verified":false,
+  "illustrations":[{"figure":1,"source_artifact":"system.pdf","kind":"architecture_not_simulation"},{"figure":2,"source_artifact":"scheme.pdf","kind":"two_timescale_framework_not_simulation"}],
+  "default_schemes":["MA-MRT","MA-ZF","FPA-MRT","FPA-ZF","FPA-OPT"],
+  "numerical_figures":[
+    {"figure":3,"source_artifact":"Convergence_MR.eps","x":"AO_sweep_index","x_unit":"iterations","y":"rate","y_unit":"bps/Hz","series":["history.mrt.objective","history.mrt.instantaneous_MC_mean"],"fixed":"N6M5;kappa6/100"},
+    {"figure":4,"source_artifact":"Convergence_ZF.eps","x":"AO_sweep_index","x_unit":"iterations","y":"rate","y_unit":"bps/Hz","series":["history.zf.objective","history.zf.instantaneous_MC_mean"],"fixed":"N6M5;kappa6/100"},
+    {"figure":5,"source_artifact":"P_6_3.eps","x":"power_dbm","x_unit":"dBm","y":"MC_rate","y_unit":"bps/Hz","series":"default_schemes","fixed":"N6M5;kappa100"},
+    {"figure":6,"source_artifact":"P_6_4.eps","x":"power_dbm","x_unit":"dBm","y":"MC_rate","y_unit":"bps/Hz","series":"default_schemes","fixed":"N6M5;kappa6"},
+    {"figure":7,"source_artifact":"K_6.eps","x":"rician_db","x_unit":"dB","y":"MC_rate","y_unit":"bps/Hz","series":"default_schemes","fixed":"N6M5"},
+    {"figure":8,"source_artifact":"K_4.eps","x":"rician_db","x_unit":"dB","y":"MC_rate","y_unit":"bps/Hz","series":"default_schemes","fixed":"N4M3"},
+    {"figure":9,"source_artifact":"A_6_1.eps","x":"region_A","x_unit":"dimensionless; geometry in wavelengths","y":"MC_rate","y_unit":"bps/Hz","series":"default_schemes","fixed":"N6M5;kappa6/100"},
+    {"figure":10,"source_artifact":"A_6_2.eps","x":"region_A","x_unit":"dimensionless; geometry in wavelengths","y":"MC_rate","y_unit":"bps/Hz","series":"default_schemes","fixed":"N4M3;kappa6/100"},
+    {"figure":11,"source_artifact":"M_1.eps","x":"M","x_unit":"users","y":"MC_rate","y_unit":"bps/Hz","series":"default_schemes","fixed":"N6/N8;kappa100"},
+    {"figure":12,"source_artifact":"M_2.eps","x":"M","x_unit":"users","y":"MC_rate","y_unit":"bps/Hz","series":"default_schemes","fixed":"N6/N8;kappa6"},
+    {"figure":13,"source_artifact":"spatial1.eps","x":"AO_sweep_index","x_unit":"iterations","y":"rate","y_unit":"bps/Hz","series":["history.mrt.instantaneous_MC_mean","metrics.correlated_extension.MRT_correlated_MC_history","history.mrt.objective","metrics.correlated_extension.MRT_Eq69_history"],"fixed":"N8M5;kappa5/10/15dB","scope":"source_supported_model_comparison_protocol_original_records_unrecovered"},
+    {"figure":14,"source_artifact":"spatial2.eps","x":"AO_sweep_index","x_unit":"iterations","y":"rate","y_unit":"bps/Hz","series":["history.zf.instantaneous_MC_mean","metrics.correlated_extension.ZF_correlated_MC_history"],"fixed":"N8M5;kappa5/10/15dB","scope":"blocked_correlated_ZF_analytical_Eq71_72_74_75;implemented_MC_diagnostic_only"},
+    {"figure":15,"source_artifact":"spatial3.eps","x":"AO_sweep_index","x_unit":"iterations","y":"rate","y_unit":"bps/Hz","series":["history.mrt.instantaneous_MC_mean","metrics.correlated_extension.MRT_correlated_MC_history","history.mrt.objective","metrics.correlated_extension.MRT_Eq69_history"],"fixed":"N6M5;kappa5/10/15dB","scope":"source_supported_model_comparison_protocol_original_records_unrecovered"},
+    {"figure":16,"source_artifact":"spatial4.eps","x":"AO_sweep_index","x_unit":"iterations","y":"rate","y_unit":"bps/Hz","series":["history.zf.instantaneous_MC_mean","metrics.correlated_extension.ZF_correlated_MC_history"],"fixed":"N6M5;kappa5/10/15dB","scope":"blocked_correlated_ZF_analytical_Eq71_72_74_75;implemented_MC_diagnostic_only"},
+    {"figure":17,"source_artifact":"error2.eps","x":"user_error_m","x_unit":"m","y":"MC_rate","y_unit":"bps/Hz","series":["MA-MRT","MA-ZF"],"fixed":"N4M3/N6M5;kappa20dB"},
+    {"figure":18,"source_artifact":"error1.eps","x":"antenna_error_lambda_times_100","x_unit":"percent of wavelength","y":"MC_rate","y_unit":"bps/Hz","series":["MA-MRT","MA-ZF"],"fixed":"N4M3/N6M5;kappa20dB"},
+    {"figure":19,"source_artifact":"bruteforce2.eps","x":"D_points_per_axis","x_unit":"points","y":"MC_rate","y_unit":"bps/Hz","series":["MA-MRT","MA-ZF","metrics.brute_force.MRT.MC","metrics.brute_force.ZF.MC"],"fixed":"N4M3;kappa20dB;[-1.6,1.6]lambda^2"},
+    {"figure":20,"source_artifact":"bruteforce1.eps","x":"D_points_per_axis","x_unit":"points","y":"MC_rate","y_unit":"bps/Hz","series":["MA-MRT","MA-ZF","metrics.brute_force.MRT.MC","metrics.brute_force.ZF.MC"],"fixed":"N6M5;kappa20dB;x[-1.6,1.6]lambda;y[-1.6,2.4]lambda"}
+  ],
+  "aggregation_contract":{
+    "geometry_realizations":100,"NLoS_realizations_per_geometry":1000,"MC_counts_provenance":"tuned_not_disclosed_in_paper",
+    "rate_samples":"metrics.schemes[scheme].sample_sum_rates; paired ensemble across compatible sweep points",
+    "mean_rule":"mean NLoS samples within each geometry, then mean all complete geometries; do not discard solver failures",
+    "history_rule":"actual MC and statistical objective are separate series; terminal hold for unequal iteration lengths must be explicitly declared, never fictitious updates",
+    "correlation_rule":"MRT13/15 original iid Algorithm1 trajectory with Eq68/69 evaluation; ZF14/16 formula blocker stays visible",
+    "error_rule":"do not clamp jittered coordinates; report nominal and realized constraints separately; short-timescale beamformer uses true channel",
+    "brute_force_rule":"complete actual-MC ordered-layout search by default; statistical-objective search is optional and must be separately labeled, never presented as actual-MC optimum"
+  },
+  "render_gaps":["No complete MC figure has executed by preparing drivers.","Correlation reference legends do not uniquely identify whether plotted values are actual MC or statistical formulas; retain separate fields and verify reference before selecting series.","ZF14/16 analytical source formulation is unresolved.","Exhaustive19/20 are computationally enormous and not run; D=10,N=6 has 10^12 ordered candidate geometries before feasibility pruning."]
+}

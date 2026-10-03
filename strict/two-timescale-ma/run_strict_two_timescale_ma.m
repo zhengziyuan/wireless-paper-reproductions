@@ -212,6 +212,14 @@ for index=1:size(nlos,1)
     for kind=1:3,[rates(kind,index),hist]=ma_fixed_benchmark(H,c,kinds{kind});caps(kind)=caps(kind)+~hist.converged;end
 end
 for kind=1:3,schemes.(names{kind})=struct('sample_sum_rates',rates(kind,:),'mean_sum_rate',mean(rates(kind,:)),'nonconverged_samples',caps(kind));end
+if ismember(job.figure,[3,13,15])
+    curve=zeros(1,size(mrtHist.positions,1));for index=1:numel(curve),item=ma_instantaneous(reshape(mrtHist.positions(index,:,:),job.N,2),c,nlos,'MRT',false);curve(index)=item.mean_sum_rate;end
+    mrtHist.instantaneous_MC_mean=curve;
+end
+if ismember(job.figure,[4,14,16])
+    curve=zeros(1,size(zfHist.positions,1));for index=1:numel(curve),item=ma_instantaneous(reshape(zfHist.positions(index,:,:),job.N,2),c,nlos,'ZF',false);curve(index)=item.mean_sum_rate;end
+    zfHist.instantaneous_MC_mean=curve;
+end
 extension=struct();if isfield(job,'correlated')&&job.correlated
     extension.MA_MRT_MC=ma_instantaneous(mrtPos,c,nlos,'MRT',true);extension.MA_ZF_MC=ma_instantaneous(zfPos,c,nlos,'ZF',true);
     extension.MRT_Eq69_at_MRT_positions=ma_correlated_mrt(mrtPos,c);extension.ZF_Eq75_status='blocked_by_Eq72_74_dimension_mismatch';
@@ -219,6 +227,10 @@ extension=struct();if isfield(job,'correlated')&&job.correlated
     for index=1:numel(mrtCurve),item=ma_instantaneous(reshape(mrtHist.positions(index,:,:),job.N,2),c,nlos,'MRT',true);mrtCurve(index)=item.mean_sum_rate;end
     for index=1:numel(zfCurve),item=ma_instantaneous(reshape(zfHist.positions(index,:,:),job.N,2),c,nlos,'ZF',true);zfCurve(index)=item.mean_sum_rate;end
     extension.MRT_correlated_MC_history=mrtCurve;extension.ZF_correlated_MC_history=zfCurve;
+    eq69Curve=zeros(1,size(mrtHist.positions,1));for index=1:numel(eq69Curve),eq69Curve(index)=ma_correlated_mrt(reshape(mrtHist.positions(index,:,:),job.N,2),c);end
+    extension.MRT_Eq69_history=eq69Curve;
+    extension.comparison_protocol=struct('trajectory','iid_Algorithm1_for_MRT_iid_Algorithm2_for_ZF','same_exported_NLoS_ensemble',true,...
+        'source_supported_interpretation',true,'original_experiment_record_recovered',false,'original_curve_closeness_verified',false);
 end
 checks=struct('mrt_converged',mrtHist.converged,'zf_converged',zfHist.converged,'each_algorithm_owns_its_positions',true,'full_N',job.N,'full_M',job.M,'nlos_samples',size(nlos,1));
 for item=1:2

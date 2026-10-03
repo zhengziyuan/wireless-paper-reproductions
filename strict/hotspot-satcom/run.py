@@ -10,7 +10,7 @@ from scipy.io import savemat
 from core import (effective_rows,evaluate,active_qt_update,phase_sdr_update,
                   criterion_gradient,phase_rgd,phase_surrogate,qt_parameters,ao,two_stage,qt_loop)
 from scenario import sample_scenario
-from termination import scheme_status
+from termination import scheme_status,numerical_gate
 
 
 def numerical_json(value):
@@ -75,7 +75,7 @@ def full_run(config,sweep_id=None,csi='instantaneous'):
                             'convergence_pass':False,'solver_primal_pass':False,'qt_sdr_bound_pass':False,'valid_sample':False}
                 samples.append(sample)
                 print(json.dumps({'progress':sweep['id'],'value':value,'completed_mc':index+1,'required_mc':t['monte_carlo_realizations'],'elapsed_seconds':time.perf_counter()-started}),flush=True)
-            raw={scheme:float(np.mean([x[scheme]['hu_sum_rate'] for x in samples])) if all(scheme in x for x in samples) else None for scheme in ('AO','TwoStage','NoRIS')}
+            raw={scheme:float(np.mean([x[scheme]['hu_sum_rate'] for x in samples])) if all(scheme in x for x in samples) else None for scheme in ('AO','AO20','AO100','TwoStage','NoRIS','RandRIS')}
             valid=bool(len(samples)==t['monte_carlo_realizations'] and all(x['valid_sample'] for x in samples))
             results.append({'sweep':sweep['id'],'parameter':sweep['parameter'],'value':value,'samples':samples,
                             'raw_unvalidated_means':raw,'means':raw if valid else None,'valid_figure_point':valid,
@@ -92,32 +92,84 @@ def full_run(config,sweep_id=None,csi='instantaneous'):
             'full_reproduction_pass':False,'remaining':['Statistical CSI original mathematical consistency','Final publication equivalence','Agreement with published figure data']}
 
 
-def full_sample(scene,rng):
+def full_case(config):
+    """One full-sized diagnostic; neither an MC estimate nor figure reproduction."""
+    started=time.perf_counter()
+    def progress(scheme,seconds):
+        print(json.dumps({'scope':'single_full_configured_sample_diagnostic',
+                          'completed_scheme':scheme,'scheme_seconds':seconds,
+                          'elapsed_seconds':time.perf_counter()-started}),flush=True)
+    try:
+        sample=full_sample(config,np.random.default_rng(config['tuned_not_reported']['seed']),progress)
+    except (RuntimeError,ValueError,cp.error.SolverError) as error:
+        sample={'status':'failed','error':str(error),'failure_receipt':getattr(error,'receipt',None),
+                'physical_constraint_pass':False,'convergence_pass':False,
+                'solver_primal_pass':False,'qt_sdr_bound_pass':False,'valid_sample':False}
+        if hasattr(error,'fixture'):
+            fixture_path=Path(__file__).with_name('outputs')/'full-case-failing-subproblem.mat'
+            fixture_path.parent.mkdir(parents=True,exist_ok=True);savemat(fixture_path,error.fixture)
+            sample['independent_generated_failure_fixture']='outputs/full-case-failing-subproblem.mat'
+    return {'paper_id':'hotspot-satcom','source_version':config['source_version'],
+            'final_publisher_conformance':config['final_publisher_conformance'],
+            'scope':'single_full_dimension_full_algorithm_budget_physical_sample_NOT_MC_figure_reproduction',
+            'configuration':config,'executed_samples':1,
+            'configured_figure_MC_samples_unchanged':config['tuned_not_reported']['monte_carlo_realizations'],
+            'elapsed_seconds':time.perf_counter()-started,'sample':sample,
+            'checks':{key:sample[key] for key in ('physical_constraint_pass','convergence_pass','solver_primal_pass','qt_sdr_bound_pass')},
+            'full_reproduction_pass':False}
+
+
+def full_sample(scene,rng,progress=None):
     """One intact MC sample, retaining original updates plus independent receipts."""
     t=scene['tuned_not_reported']; f=sample_scenario(scene,rng)
     direct,R,nhu,phi=(f[k] for k in ('direct','cascade','nhu','phi0')); U=direct.shape[0]
     hu=effective_rows(direct,R,phi); noise,power,target=f['noise'],f['power'],f['nhu_target']
     W0=feasible_initialization(np.vstack((hu,nhu)),np.r_[np.full(U,t['initial_hu_sinr']),target],noise,power,t['initialization_solver'])
     draws=[(rng.standard_normal((phi.size+1,t['randomization_count']))+1j*rng.standard_normal((phi.size+1,t['randomization_count'])))/np.sqrt(2) for _ in range(t['ao_max_iterations'])]
-    diagnostics=[]; astop={}; bstop={}; bdiagnostics=[]
-    clock=time.perf_counter(); ap_phi,W,h=ao(direct,R,nhu,phi,W0,noise,power,target,draws,t['ao_max_iterations'],t['relative_tolerance'],t['solver'],t['solver_options'],diagnostics,astop)
+    diagnostics=[]; astop={}; bstop={}; bdiagnostics=[]; endpoints={}
+    clock=time.perf_counter(); ap_phi,W,h=ao(direct,R,nhu,phi,W0,noise,power,target,draws,t['ao_max_iterations'],t['relative_tolerance'],t['solver'],t['solver_options'],diagnostics,astop,endpoints)
     ao_time=time.perf_counter()-clock; ao_eval=evaluate(effective_rows(direct,R,ap_phi),nhu,W,noise)
+    if progress is not None:progress('AO',ao_time)
     clock=time.perf_counter(); ts_phi,tsW,hts=two_stage(direct,R,nhu,phi,W0,noise,power,target,t['rgd_max_iterations'],t['gradient_tolerance'],t['qt_max_iterations'],t['relative_tolerance'],t['solver'],t['solver_options'])
     ts_time=time.perf_counter()-clock; ts_eval=evaluate(effective_rows(direct,R,ts_phi),nhu,tsW,noise)
+    if progress is not None:progress('TwoStage',ts_time)
+    clock=time.perf_counter()
     baseline_init=feasible_initialization(np.vstack((direct,nhu)),np.r_[np.full(U,t['initial_hu_sinr']),target],noise,power,t['initialization_solver'])
     baselineW,hbase=qt_loop(direct,nhu,baseline_init,noise,power,target,t['qt_max_iterations'],t['relative_tolerance'],t['solver'],t['solver_options'],bdiagnostics,bstop)
-    baseline_eval=evaluate(direct,nhu,baselineW,noise); violations=[]
-    for e in (ao_eval,ts_eval,baseline_eval): violations.extend([e['total_power']-power,float(np.max(target-e['sinr'][U:]))])
+    baseline_eval=evaluate(direct,nhu,baselineW,noise); baseline_time=time.perf_counter()-clock
+    if progress is not None:progress('NoRIS',baseline_time)
+    # phi0 is a shared uniform random unit-modulus phase realization from the
+    # physical scenario, not a surrogate/no-RIS channel or an optimized phase.
+    rstop={}; rdiagnostics=[]; clock=time.perf_counter()
+    randW,hrand=qt_loop(hu,nhu,W0,noise,power,target,t['qt_max_iterations'],t['relative_tolerance'],t['solver'],t['solver_options'],rdiagnostics,rstop)
+    rand_eval=evaluate(hu,nhu,randW,noise); rand_time=time.perf_counter()-clock
+    if progress is not None:progress('RandRIS',rand_time)
+    violations=[]
+    for e in (ao_eval,ts_eval,baseline_eval,rand_eval): violations.extend([e['total_power']-power,float(np.max(target-e['sinr'][U:]))])
     statuses={'AO':scheme_status([astop],diagnostics,t),'TwoStage':scheme_status(list(hts['termination'].values()),hts['solver_diagnostics'],t),
-              'NoRIS':scheme_status([bstop],bdiagnostics,t)}
-    sample={'status':'executed','AO':ao_eval,'TwoStage':ts_eval,'NoRIS':baseline_eval,'scheme_status':statuses,
-            'solver_diagnostics':{'AO':diagnostics,'TwoStage':hts['solver_diagnostics'],'NoRIS':bdiagnostics},
-            'history':{'AO':h,'TwoStage':hts,'NoRIS':hbase},'cpu_seconds':{'AO':ao_time,'TwoStage':ts_time},
+              'NoRIS':scheme_status([bstop],bdiagnostics,t),'RandRIS':scheme_status([rstop],rdiagnostics,t)}
+    endpoint_receipts={}
+    for budget in (20,100):
+        receipt=endpoints.get(str(budget)); numerical=numerical_gate(receipt['solver_diagnostics'],t) if receipt is not None else numerical_gate([],t)
+        physical=bool(receipt is not None and receipt['evaluation']['total_power']-power<t['physical_constraint_tolerance']
+                      and np.max(target-receipt['evaluation']['sinr'][U:])<t['physical_constraint_tolerance'])
+        endpoint_receipts['AO'+str(budget)]={'available':receipt is not None,'receipt':receipt,'numerical':numerical,
+            'convergence_not_required_for_reported_fixed_budget':True,
+            'physical_constraint_pass':physical,
+            'valid_budget_endpoint':bool(physical and numerical['solver_primal_pass'] and numerical['qt_sdr_bound_pass'])}
+    sample={'status':'executed','AO':ao_eval,'TwoStage':ts_eval,'NoRIS':baseline_eval,'RandRIS':rand_eval,'scheme_status':statuses,
+            'reported_budget_endpoints':endpoint_receipts,
+            'solver_diagnostics':{'AO':diagnostics,'TwoStage':hts['solver_diagnostics'],'NoRIS':bdiagnostics,'RandRIS':rdiagnostics},
+            'history':{'AO':h,'TwoStage':hts,'NoRIS':hbase,'RandRIS':hrand},
+            'cpu_seconds':{'AO':ao_time,'AO_phase':sum(d['phase']['phase_cpu_seconds'] for d in diagnostics),
+                           'TwoStage':ts_time,'TwoStage_phase':hts['phase_cpu_seconds'],'NoRIS':baseline_time,'RandRIS':rand_time},
             'physical_constraint_pass':bool(max(violations)<t['physical_constraint_tolerance']),
             'convergence_pass':all(s['converged'] for s in statuses.values()),
             'solver_primal_pass':all(s['numerical']['solver_primal_pass'] for s in statuses.values()),
             'qt_sdr_bound_pass':all(s['numerical']['qt_sdr_bound_pass'] for s in statuses.values())}
-    sample['valid_sample']=all(sample[k] for k in ('physical_constraint_pass','convergence_pass','solver_primal_pass','qt_sdr_bound_pass'))
+    for name,entry in endpoint_receipts.items():
+        if entry['available']:sample[name]=entry['receipt']['evaluation']
+    sample['valid_sample']=all(sample[k] for k in ('physical_constraint_pass','convergence_pass','solver_primal_pass','qt_sdr_bound_pass')) and all(e['valid_budget_endpoint'] for e in endpoint_receipts.values())
     return sample
 
 
@@ -195,6 +247,7 @@ def component_test(f):
 if __name__=='__main__':
     parser=argparse.ArgumentParser(); parser.add_argument('--component-test',action='store_true')
     parser.add_argument('--scenario-test',action='store_true'); parser.add_argument('--full',action='store_true')
+    parser.add_argument('--full-case',action='store_true',help='One physical sample at full configured dimensions and algorithm budgets; NOT a Monte Carlo figure run')
     parser.add_argument('--chain-test',action='store_true')
     parser.add_argument('--config',type=Path,default=Path(__file__).with_name('full_config.json')); parser.add_argument('--sweep')
     parser.add_argument('--csi',default='instantaneous',choices=['instantaneous','statistical'])
@@ -208,6 +261,7 @@ if __name__=='__main__':
         result=component_test(fixture)
     elif args.scenario_test: result=scene_test(config)
     elif args.chain_test: result=chain_test(config)
+    elif args.full_case: result=full_case(config)
     elif args.full: result=full_run(config,args.sweep,args.csi)
     else: raise SystemExit('Choose explicit --component-test, --scenario-test or --full. Full configured 1000 MC realizations and 1000 SDP randomizations are never silently reduced.')
     if args.output:

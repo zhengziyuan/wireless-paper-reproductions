@@ -32,15 +32,15 @@
     {"swept_array":"BS","other_fixed_half_width_deg":90},
     {"swept_array":"BS","other_fixed_half_width_deg":45},
     {"swept_array":"BS","other_fixed_half_width_deg":0},
-    {"swept_array":"RIS","other_fixed_half_width_deg":90},
     {"swept_array":"RIS","other_fixed_half_width_deg":45},
     {"swept_array":"RIS","other_fixed_half_width_deg":0}
   ],
   "parameter_provenance": {
     "paper_explicit": ["100 independent channels", "BS2x2,RIS6x6,lambda0.1m,lambda/2 spacing", "L=Q=P=2", "azimuth[-pi,pi],elevation[-pi/3,pi/3]", "66-point sensing grid", "rho10", "b0/2", "rotation each Euler axis±pi/2", "six scheme families", "Fig17 37 rho points"],
     "inferred_from_author_figure_ticks": ["power26:2:34dBm", "BScount4:8", "users2:6", "rotation0:9:90deg"],
+    "visually_verified_author_figure_legends": "DEG_F.eps six-series legend: BS(RIS90),BS(RIS45),BS(fixRIS),BS(noRIS),RIS(BS45),RIS(fixBS). Five bound-pair banks suffice because BS(noRIS) shares the BS(RIS90) bank's No-RIS output. No RIS(BS90) curve occurs. bound.eps has four RIS-present schemes and NMSE decreasing from left1 to right0.3.",
     "derived_from_pattern_normalization": "Integral G over sphere=2*pi*G0/(b+1)=4*pi, hence G0=2*(b+1). This follows unit-average power gain, not the G0=1 in some legacy scripts.",
-    "tuned_or_not_explicit_in_final_text": ["seed", "noise0.001", "per-path variance1", "two sector bounds from an earlier author script but not verified as final figure setup", "initial phases/orientations/sensing amplitude", "all numeric caps/tolerances/line-search constants", "rotation legend fixed widths", "No-RIS zeros entire BS-RIS bridge so sensing and communication reflected links both disappear"],
+    "tuned_or_not_explicit_in_final_text": ["seed", "noise0.001", "per-path variance1", "two sector bounds from an earlier author script but not verified as final figure setup", "initial phases/orientations/sensing amplitude", "all numeric caps/tolerances/line-search constants", "No-RIS zeros entire BS-RIS bridge so sensing and communication reflected links both disappear"],
     "retained_printed_rule": "PR coefficient remains untruncated. literal_printed RCG and as_printed BB are selectable diagnostics.",
     "documented_numerical_safeguards_not_in_paper": ["Non-ascent RCG direction restarts to Riemannian gradient, recording raw PR and slope; no PR+ truncation", "Ascent BB uses -s^T delta_gradient, the secant curvature of the minimized -F; printed-sign diagnostics and evidence are retained"],
     "W_budget_tuning_evidence": "Safety cap increased from unreported 500 to 10000 without changing the original QT/MM updates or 1e-6 stopping criterion. The first full-size initial W trial reached that criterion at 2828 iterations; its first 500 objective values exactly matched the earlier capped run. This does not certify all channels, original nonconvex KKT stationarity or full figures. Old input banks keep their immutable prior configuration."

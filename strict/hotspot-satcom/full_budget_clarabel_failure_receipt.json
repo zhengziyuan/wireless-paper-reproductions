@@ -1,0 +1,420 @@
+{
+  "paper_id": "hotspot-satcom",
+  "source_version": "author_thesis",
+  "final_publisher_conformance": "unverified",
+  "scope": "single_full_dimension_full_algorithm_budget_physical_sample_NOT_MC_figure_reproduction",
+  "executed_samples": 1,
+  "configured_figure_MC_samples_unchanged": 1000,
+  "elapsed_seconds": 55.57864589995006,
+  "sample": {
+    "status": "failed",
+    "error": "Solver 'CLARABEL' failed. Try another solver, or solve with verbose=True for more information.",
+    "failure_receipt": {
+      "block": "AO_active_subproblem",
+      "attempted_iteration": 15,
+      "retained_history": [
+        0.008651867940528558,
+        1.698464316428818,
+        1.8321190912535683,
+        2.0140687922907197,
+        2.373674096811653,
+        3.089180106829532,
+        3.822888388353139,
+        4.296423953050674,
+        4.825616460814899,
+        5.449944943216634,
+        5.817237712880019,
+        5.998519220216661,
+        6.213792715217423,
+        6.507036954399219,
+        6.909410950874662
+      ],
+      "active_failure": {
+        "block": "active_QT",
+        "backend": "CLARABEL",
+        "solver_options": {
+          "tol_gap_abs": 1e-9,
+          "tol_gap_rel": 1e-9,
+          "tol_feas": 1e-9,
+          "max_iter": 300,
+          "max_threads": 1
+        },
+        "before": {
+          "sinr": [
+            5.5295582288427575e-12,
+            3.8245013143496183e-7,
+            4.896540399201345e-10,
+            7.765207353913518e-12,
+            3.1338669080269055,
+            28.079256086333405,
+            1.995262317347742,
+            1.9952623180997375,
+            1.9952623173298565,
+            1.995262317555477,
+            1.9952623177699862,
+            1.9952623176536555,
+            1.9952623174385524,
+            1.995262317673976,
+            1.9952623170129726,
+            1.9952623174365178
+          ],
+          "hu_sum_rate": 6.909410950874662,
+          "total_power": 99.99999998409793
+        },
+        "auxiliary_magnitudes": [
+          6.811179751814545e-7,
+          0.0002625777712948102,
+          0.000013216751458274612,
+          4.721578644852483e-7,
+          1.7266706601636503,
+          4.673584741504331
+        ],
+        "scaled_hu_row_norms": [
+          10.34774869781146,
+          6.335782637052827,
+          3.5129634543647863,
+          18.258113786564795,
+          4.704468921301263,
+          16.599694363980387
+        ]
+      },
+      "solver_diagnostics": [
+        {
+          "active": {
+            "solver": "CLARABEL",
+            "status": "optimal",
+            "iterations": 26,
+            "solve_seconds": 0.2324299,
+            "normalized_constraint_max_violation": 6.894665394163724e-11,
+            "constraint_max_relative_violation": 6.894665394163724e-11,
+            "epigraph_scaling": "lambda_prime_equals_abs_a_squared_times_physical_interference",
+            "qt_bound_max_violation": 0
+          },
+          "phase": {
+            "solver": "CLARABEL",
+            "status": "optimal_inaccurate",
+            "iterations": 18,
+            "solve_seconds": 2.738841,
+            "normalized_constraint_max_violation": 1.260377802125845e-9,
+            "constraint_max_relative_violation": 1.260377802125845e-9,
+            "sdr_bound_max_violation": 0,
+            "phase_cpu_seconds": 3.207864999945741
+          }
+        },
+        {
+          "active": {
+            "solver": "CLARABEL",
+            "status": "optimal",
+            "iterations": 25,
+            "solve_seconds": 0.226011,
+            "normalized_constraint_max_violation": 5.0930926143166744e-11,
+            "constraint_max_relative_violation": 5.0930926143166744e-11,
+            "epigraph_scaling": "lambda_prime_equals_abs_a_squared_times_physical_interference",
+            "qt_bound_max_violation": 0
+          },
+          "phase": {
+            "solver": "CLARABEL",
+            "status": "optimal_inaccurate",
+            "iterations": 18,
+            "solve_seconds": 2.4733733,
+            "normalized_constraint_max_violation": 3.3952712863438705e-9,
+            "constraint_max_relative_violation": 3.3952712863438705e-9,
+            "sdr_bound_max_violation": 2.2466943661036964e-7,
+            "phase_cpu_seconds": 2.938942200038582
+          }
+        },
+        {
+          "active": {
+            "solver": "CLARABEL",
+            "status": "optimal",
+            "iterations": 23,
+            "solve_seconds": 0.2274559,
+            "normalized_constraint_max_violation": 9.572687087455733e-11,
+            "constraint_max_relative_violation": 9.572687087455733e-11,
+            "epigraph_scaling": "lambda_prime_equals_abs_a_squared_times_physical_interference",
+            "qt_bound_max_violation": 0
+          },
+          "phase": {
+            "solver": "CLARABEL",
+            "status": "optimal_inaccurate",
+            "iterations": 16,
+            "solve_seconds": 2.4915336,
+            "normalized_constraint_max_violation": 6.220721604499602e-9,
+            "constraint_max_relative_violation": 6.220721604499602e-9,
+            "sdr_bound_max_violation": 4.12709397101807e-7,
+            "phase_cpu_seconds": 2.9937186999595724
+          }
+        },
+        {
+          "active": {
+            "solver": "CLARABEL",
+            "status": "optimal",
+            "iterations": 23,
+            "solve_seconds": 0.1863742,
+            "normalized_constraint_max_violation": 1.1374881592196573e-10,
+            "constraint_max_relative_violation": 1.1374881592196573e-10,
+            "epigraph_scaling": "lambda_prime_equals_abs_a_squared_times_physical_interference",
+            "qt_bound_max_violation": 0
+          },
+          "phase": {
+            "solver": "CLARABEL",
+            "status": "optimal_inaccurate",
+            "iterations": 16,
+            "solve_seconds": 2.2105572,
+            "normalized_constraint_max_violation": 1.0439395015104935e-8,
+            "constraint_max_relative_violation": 1.0439395015104935e-8,
+            "sdr_bound_max_violation": 6.928829492380828e-7,
+            "phase_cpu_seconds": 2.683604399964679
+          }
+        },
+        {
+          "active": {
+            "solver": "CLARABEL",
+            "status": "optimal",
+            "iterations": 23,
+            "solve_seconds": 0.220142,
+            "normalized_constraint_max_violation": 1.9922080651824103e-10,
+            "constraint_max_relative_violation": 1.9922080651824103e-10,
+            "epigraph_scaling": "lambda_prime_equals_abs_a_squared_times_physical_interference",
+            "qt_bound_max_violation": 0
+          },
+          "phase": {
+            "solver": "CLARABEL",
+            "status": "optimal_inaccurate",
+            "iterations": 16,
+            "solve_seconds": 2.4626975,
+            "normalized_constraint_max_violation": 1.322053200247808e-8,
+            "constraint_max_relative_violation": 1.322053200247808e-8,
+            "sdr_bound_max_violation": 0,
+            "phase_cpu_seconds": 2.9952836000011303
+          }
+        },
+        {
+          "active": {
+            "solver": "CLARABEL",
+            "status": "optimal",
+            "iterations": 22,
+            "solve_seconds": 0.2272329,
+            "normalized_constraint_max_violation": 2.349458405603855e-10,
+            "constraint_max_relative_violation": 2.339481386393061e-10,
+            "epigraph_scaling": "lambda_prime_equals_abs_a_squared_times_physical_interference",
+            "qt_bound_max_violation": 0
+          },
+          "phase": {
+            "solver": "CLARABEL",
+            "status": "optimal_inaccurate",
+            "iterations": 17,
+            "solve_seconds": 2.4179817,
+            "normalized_constraint_max_violation": 1.2642665470075087e-8,
+            "constraint_max_relative_violation": 1.2642665470075087e-8,
+            "sdr_bound_max_violation": 0.0000011421552685852987,
+            "phase_cpu_seconds": 2.8460295000113547
+          }
+        },
+        {
+          "active": {
+            "solver": "CLARABEL",
+            "status": "optimal",
+            "iterations": 22,
+            "solve_seconds": 0.2649218,
+            "normalized_constraint_max_violation": 5.658433721578149e-10,
+            "constraint_max_relative_violation": 4.517289875494157e-10,
+            "epigraph_scaling": "lambda_prime_equals_abs_a_squared_times_physical_interference",
+            "qt_bound_max_violation": 0
+          },
+          "phase": {
+            "solver": "CLARABEL",
+            "status": "optimal_inaccurate",
+            "iterations": 19,
+            "solve_seconds": 2.7002439000000003,
+            "normalized_constraint_max_violation": 3.0728725119999467e-9,
+            "constraint_max_relative_violation": 3.0728725119999467e-9,
+            "sdr_bound_max_violation": 5.121888033698951e-7,
+            "phase_cpu_seconds": 3.217211499984842
+          }
+        },
+        {
+          "active": {
+            "solver": "CLARABEL",
+            "status": "optimal",
+            "iterations": 23,
+            "solve_seconds": 0.2046824,
+            "normalized_constraint_max_violation": 5.516831436125358e-10,
+            "constraint_max_relative_violation": 2.5182671177489765e-10,
+            "epigraph_scaling": "lambda_prime_equals_abs_a_squared_times_physical_interference",
+            "qt_bound_max_violation": 0
+          },
+          "phase": {
+            "solver": "CLARABEL",
+            "status": "optimal_inaccurate",
+            "iterations": 19,
+            "solve_seconds": 2.7992868,
+            "normalized_constraint_max_violation": 3.849255469923207e-9,
+            "constraint_max_relative_violation": 3.849255469923207e-9,
+            "sdr_bound_max_violation": 0,
+            "phase_cpu_seconds": 3.382061199983582
+          }
+        },
+        {
+          "active": {
+            "solver": "CLARABEL",
+            "status": "optimal",
+            "iterations": 25,
+            "solve_seconds": 0.2042256,
+            "normalized_constraint_max_violation": 6.365006299802189e-10,
+            "constraint_max_relative_violation": 1.9563591718840811e-10,
+            "epigraph_scaling": "lambda_prime_equals_abs_a_squared_times_physical_interference",
+            "qt_bound_max_violation": 0
+          },
+          "phase": {
+            "solver": "CLARABEL",
+            "status": "optimal_inaccurate",
+            "iterations": 28,
+            "solve_seconds": 4.2164373,
+            "normalized_constraint_max_violation": 2.082116701274117e-10,
+            "constraint_max_relative_violation": 2.082116701274117e-10,
+            "sdr_bound_max_violation": 7.930713410431167e-7,
+            "phase_cpu_seconds": 4.6918360000126995
+          }
+        },
+        {
+          "active": {
+            "solver": "CLARABEL",
+            "status": "optimal",
+            "iterations": 24,
+            "solve_seconds": 0.2348413,
+            "normalized_constraint_max_violation": 2.5627588939869383e-10,
+            "constraint_max_relative_violation": 6.584142779597624e-11,
+            "epigraph_scaling": "lambda_prime_equals_abs_a_squared_times_physical_interference",
+            "qt_bound_max_violation": 0
+          },
+          "phase": {
+            "solver": "CLARABEL",
+            "status": "optimal_inaccurate",
+            "iterations": 20,
+            "solve_seconds": 2.984141,
+            "normalized_constraint_max_violation": 5.279753301223877e-10,
+            "constraint_max_relative_violation": 5.279753301223877e-10,
+            "sdr_bound_max_violation": 0.000003897398185515044,
+            "phase_cpu_seconds": 3.4506003000424244
+          }
+        },
+        {
+          "active": {
+            "solver": "CLARABEL",
+            "status": "optimal_inaccurate",
+            "iterations": 28,
+            "solve_seconds": 0.2393076,
+            "normalized_constraint_max_violation": 1.1183054482444277e-10,
+            "constraint_max_relative_violation": 2.5354531733683128e-11,
+            "epigraph_scaling": "lambda_prime_equals_abs_a_squared_times_physical_interference",
+            "qt_bound_max_violation": 0
+          },
+          "phase": {
+            "solver": "CLARABEL",
+            "status": "optimal_inaccurate",
+            "iterations": 22,
+            "solve_seconds": 3.2577087000000002,
+            "normalized_constraint_max_violation": 2.4447910362823677e-10,
+            "constraint_max_relative_violation": 2.4447910362823677e-10,
+            "sdr_bound_max_violation": 0.0000024223988708271804,
+            "phase_cpu_seconds": 3.6954787999857217
+          }
+        },
+        {
+          "active": {
+            "solver": "CLARABEL",
+            "status": "optimal_inaccurate",
+            "iterations": 35,
+            "solve_seconds": 0.3310146,
+            "normalized_constraint_max_violation": 5.732303520744608e-11,
+            "constraint_max_relative_violation": 1.2334686982744258e-11,
+            "epigraph_scaling": "lambda_prime_equals_abs_a_squared_times_physical_interference",
+            "qt_bound_max_violation": 0
+          },
+          "phase": {
+            "solver": "CLARABEL",
+            "status": "optimal_inaccurate",
+            "iterations": 21,
+            "solve_seconds": 3.5178392,
+            "normalized_constraint_max_violation": 5.834377425628645e-11,
+            "constraint_max_relative_violation": 5.834377425628645e-11,
+            "sdr_bound_max_violation": 6.160065426641381e-7,
+            "phase_cpu_seconds": 3.9798621999798343
+          }
+        },
+        {
+          "active": {
+            "solver": "CLARABEL",
+            "status": "optimal_inaccurate",
+            "iterations": 31,
+            "solve_seconds": 0.3773969,
+            "normalized_constraint_max_violation": 7.496936405004817e-11,
+            "constraint_max_relative_violation": 1.6057746712178078e-11,
+            "epigraph_scaling": "lambda_prime_equals_abs_a_squared_times_physical_interference",
+            "qt_bound_max_violation": 0
+          },
+          "phase": {
+            "solver": "CLARABEL",
+            "status": "optimal_inaccurate",
+            "iterations": 21,
+            "solve_seconds": 3.3744369,
+            "normalized_constraint_max_violation": 2.0321899718567238e-10,
+            "constraint_max_relative_violation": 2.0321899718567238e-10,
+            "sdr_bound_max_violation": 0.0000028068410502513075,
+            "phase_cpu_seconds": 4.086235800001305
+          }
+        },
+        {
+          "active": {
+            "solver": "CLARABEL",
+            "status": "optimal_inaccurate",
+            "iterations": 44,
+            "solve_seconds": 0.4479595,
+            "normalized_constraint_max_violation": 4.263966957296361e-11,
+            "constraint_max_relative_violation": 1.103894108115094e-11,
+            "epigraph_scaling": "lambda_prime_equals_abs_a_squared_times_physical_interference",
+            "qt_bound_max_violation": 0
+          },
+          "phase": {
+            "solver": "CLARABEL",
+            "status": "optimal_inaccurate",
+            "iterations": 21,
+            "solve_seconds": 3.3155694,
+            "normalized_constraint_max_violation": 1.1454359682971926e-10,
+            "constraint_max_relative_violation": 1.1454359682971926e-10,
+            "sdr_bound_max_violation": 0.00000152743780645892,
+            "phase_cpu_seconds": 3.885079699975904
+          }
+        }
+      ]
+    },
+    "physical_constraint_pass": false,
+    "convergence_pass": false,
+    "solver_primal_pass": false,
+    "qt_sdr_bound_pass": false,
+    "valid_sample": false,
+    "independent_generated_failure_fixture": "outputs/full-case-failing-subproblem.mat"
+  },
+  "checks": {
+    "physical_constraint_pass": false,
+    "convergence_pass": false,
+    "solver_primal_pass": false,
+    "qt_sdr_bound_pass": false
+  },
+  "full_reproduction_pass": false,
+  "reported_dimensions": {
+    "N": 16,
+    "J": 16,
+    "U": 6,
+    "K": 10,
+    "M": 25
+  },
+  "executed_algorithm_budgets": {
+    "ao_max_iterations": 200,
+    "qt_max_iterations": 200,
+    "rgd_max_iterations": 5000,
+    "randomization_count": 1000
+  },
+  "variant": "current_weighted_lambda_original_QT_full_configuration"
+}

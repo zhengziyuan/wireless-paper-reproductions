@@ -1,0 +1,236 @@
+{
+  "paper_id": "mis-communications",
+  "source_file": "bare_jrnl.tex",
+  "source_sha256": "6e27fb9fd2ba0decc9d7bcfc54bcb73612553f91f6df923ab502e7d561058cb0",
+  "scope": "Author-source figure inventory; NOT simulation results",
+  "figure_count": 11,
+  "unnumbered_equation_or_algorithm_floats": 0,
+  "figures": [
+    {
+      "figure": 1,
+      "labels": [
+        "fig:system_model"
+      ],
+      "caption_tex": "Illustration of MIS-enabled wireless communication systems.",
+      "assets": [
+        {
+          "file": "magzine2.pdf",
+          "available": true,
+          "sha256": "171beea794322c7d583f767ca3f9744553b20ddf84f4fdee0559f32de4cc37aa"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 2,
+      "labels": [],
+      "caption_tex": "An example of the proposed MIS architecture and its dynamic beam steering mechanism.",
+      "assets": [
+        {
+          "file": "beampattern2-1.pdf",
+          "available": true,
+          "sha256": "e9cbbe793b345baab87bb1cc80b5f71d6f2954d2d619d76c114ae7ca5bce1646"
+        },
+        {
+          "file": "beampattern2-2.pdf",
+          "available": true,
+          "sha256": "48cbc96c2fa228dfff853aee6216150e8f70f2dc809db9ad0d2977cabdc4ef8e"
+        },
+        {
+          "file": "beampattern2-3.pdf",
+          "available": true,
+          "sha256": "5064e4ae506a280463d68a8f32142fa4c040dc81a0e4285ff09d22682f5dfc48"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 3,
+      "labels": [
+        "fig:system_model"
+      ],
+      "caption_tex": "Illustration of the MIS-aided coverage extension scenario.",
+      "assets": [
+        {
+          "file": "system3.pdf",
+          "available": true,
+          "sha256": "5bdb4bf9055dd070107afe3b4b76be626343b7aac2215abc41a0fbdfa80e79d3"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 4,
+      "labels": [],
+      "caption_tex": "(a) Fabricated prototypes of MS 1, MS 2, and a patch antenna; (b) closely stacked MSs with differentially shifted positions.",
+      "assets": [
+        {
+          "file": "Prototype.pdf",
+          "available": true,
+          "sha256": "f9ca9a8f96cfdf0071f2492eb6a97e3867cc282e92641acdb4d5d78cd92b26fc"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 5,
+      "labels": [],
+      "caption_tex": "Experimental devices in a compact range anechoic chamber for validating the 1D beam scanning: (a) Measurement setup in side view; (b) front view; (c) back view; (d) Measured normalized radiation patterns of the scanned beams on the XoZ-plane. Each beam pattern corresponds to certain shifted units in the X-direction.",
+      "assets": [
+        {
+          "file": "Experiment.pdf",
+          "available": true,
+          "sha256": "955b686038d919fb63936c7a79c7563e084c39fb0cc7051bc487abb3bd32217d"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 6,
+      "labels": [],
+      "caption_tex": "Communication experiments of the MIS. (a) indoor measurement environment based on an SDR/USRP platform, a horn antenna, the MIS, frequency converter, and a host computer; (b) the side view of the experiment environment, the experiment settings, and the vertical view showing the system geometry; (c) the constellation diagram in different situations.",
+      "assets": [
+        {
+          "file": "experiment2.pdf",
+          "available": true,
+          "sha256": "a809b92e6856966f245d8cccf5378757de83148e08495430b2210cf2f4a54382"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 7,
+      "labels": [],
+      "caption_tex": "Case study on the beam pattern of a MIS configured with $M=2\\times1$ and $N=1$ versus a single-layer SMS.",
+      "assets": [
+        {
+          "file": "21simul.eps",
+          "available": true,
+          "sha256": "475b510d776b68df07e7dff1c9acdbe38dafa3d2d50e7636820934b8f6f005fe"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 8,
+      "labels": [],
+      "caption_tex": "Case study on the beam pattern of a MIS configured with $M=2\\times2$ and $N=1$ versus a single-layer SMS.",
+      "assets": [
+        {
+          "file": "22simul.eps",
+          "available": true,
+          "sha256": "d729bd25e154fb1b03278b72f0f7bfa22391cc36d9bcf4833bcd67d199a33633"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 9,
+      "labels": [
+        "fig:beam_steering"
+      ],
+      "caption_tex": "Normalized worst-case SNR gain of the proposed MIS scheme over the single-layer SMS with varying $N_r\\times N_c$, i.e., the size of MS 2, under different MS 1's size $M$ and $K$.",
+      "assets": [
+        {
+          "file": "normalized_heatmap_6x6_K8.eps",
+          "available": true,
+          "sha256": "f43edcc83d233d566fdb29fa8991f3b51c25716977eaeb93a285c5624ec4a217"
+        },
+        {
+          "file": "normalized_heatmap_6x6_K16.eps",
+          "available": true,
+          "sha256": "886b8078c5470610f6f2d4c3703014c1a7527161585be75e5b6fddaf564bdcea"
+        },
+        {
+          "file": "normalized_heatmap_6x6_K32.eps",
+          "available": true,
+          "sha256": "ad910aa55bd1f6268fcffe5b792c02c618d2f76771107cb133b28df2c9a94364"
+        },
+        {
+          "file": "normalized_heatmap_8x8_K8.eps",
+          "available": true,
+          "sha256": "cc64bed142beea0eac9033a724ba3aed1765c7ec2c33fb9e293982a424e9e765"
+        },
+        {
+          "file": "normalized_heatmap_8x8_K16.eps",
+          "available": true,
+          "sha256": "47d761473f35b858df47848611607b0f5909fb7a80fa3ac546e6eccde9f91d0c"
+        },
+        {
+          "file": "normalized_heatmap_8x8_K32.eps",
+          "available": true,
+          "sha256": "3b639d35ff815ebc0ae43f9c1b7c4db9e3907fe42f088c7745a5c703f4a3a69f"
+        },
+        {
+          "file": "normalized_heatmap_10x10_K8.eps",
+          "available": true,
+          "sha256": "6caff906e71df14a07141f50f4c2654a7d7dec6019b2865b25ef094bd7f11276"
+        },
+        {
+          "file": "normalized_heatmap_10x10_K16.eps",
+          "available": true,
+          "sha256": "213fb823156b81f0f3e65509cf7e59bb3582216bf07f4e2533dfc5b27cda8354"
+        },
+        {
+          "file": "normalized_heatmap_10x10_K32.eps",
+          "available": true,
+          "sha256": "d7ddc1672a1838d962bb22bb7f5a0715de08b3df389036ba2cc9dd9ac7b04653"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 10,
+      "labels": [
+        "1fig:beam_steering"
+      ],
+      "caption_tex": "Worst-case SNR performance of the MIS scheme under different strategies of element allocation between MS 1 and MS 2.",
+      "assets": [
+        {
+          "file": "total64.eps",
+          "available": true,
+          "sha256": "e3a145d46fe19532b28a8694a8095fd34395f840859b7da310d3792927bfddbc"
+        },
+        {
+          "file": "total100.eps",
+          "available": true,
+          "sha256": "4b2d756ac6c6aed63465f138195cf4097aba8eb48c00da6fbf7f890b7ffa6574"
+        },
+        {
+          "file": "total144.eps",
+          "available": true,
+          "sha256": "e034cad0b72918d91a1c1fe19f28eea6bd33813c86be34670f5add0ed3bfabf3"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    },
+    {
+      "figure": 11,
+      "labels": [],
+      "caption_tex": "Worst-case SNR $\\gamma_{\\text{min}}$ versus the number of users $K$ in the target coverage area with different 1D and 2D MIS configurations.",
+      "assets": [
+        {
+          "file": "K5.eps",
+          "available": true,
+          "sha256": "4d9cd888289feef125fd971e821878dcc959398ba4c54069bd7345b131d96f26"
+        }
+      ],
+      "simulation_reproduction_verified": false,
+      "reference_curve_agreement_verified": false
+    }
+  ],
+  "table_count": 0,
+  "tables": [],
+  "numbering_note": "Active captioned figure order, excluding nested algorithm captions; verify chapter/publication numbering separately",
+  "full_reproduction_passed": false
+}

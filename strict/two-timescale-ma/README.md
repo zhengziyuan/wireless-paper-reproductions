@@ -28,6 +28,15 @@ paper coordinate subproblems; ZF is not merely evaluated at MRT positions.
   correlated MRT closed form (69). Correlated histories evaluate the actual
   correlated channel at every **uncorrelated-objective** AO sweep geometry;
   this is evaluation, not optimization of the correlated (69)/(75) objectives.
+  Section V and the Figs.13/15 captions/text describe **model evaluation**, not
+  a new correlated objective optimizer. Accordingly MRT Figs.13/15 use a
+  **source-supported interpretation**: original Algorithm 1's iid trajectory,
+  with iid/correlated Monte Carlo and (13)/(69) evaluations on the same geometry.
+  This does not recover the author's unreported experiment records or establish
+  that the resulting curves closely match the reference figures.
+- Actual iid Monte Carlo rate histories for convergence Figs.3/4 and correlated
+  model-comparison Figs.13–16, using the complete exported NLoS ensemble at every
+  accepted AO sweep. The statistical objective is not mislabeled as actual MC.
 - Full-size scenario families for numerical Figs.3–20: convergence, power, Rician
   factor, movement region, user count, correlated extension, user/antenna position
   errors and full finite-grid exhaustive searches. The latter have no hidden cap;
@@ -49,14 +58,23 @@ the spacing inequality **(30)**, explicitly recorded in the source contract.
 
 **Correlated-ZF analytical equations (72)/(74)/(75) remain genuinely unresolved.**
 `Omega` is M×M, but spatial covariance `S(t)` is N×N; the printed products are
-undefined when N=6,M=5 or N=8,M=5. No invented effective covariance, covariance
+undefined when N=6,M=5 or N=8,M=5. In addition, (68)/(70) correlate the **rows**
+of the Gaussian channel, whereas the standard Wishart assertion (71) requires
+the relevant iid-row covariance structure; a dimension-only replacement does
+not in general preserve that distribution. A second-moment counterexample is
+provided in `correlated_model_notes.md`. No invented effective covariance, covariance
 trace reduction or alternate Wishart approximation is substituted. The actual
 channel (68) remains valid and is simulated for the correlated ZF comparisons;
 outputs mark analytical (75) as blocked. Consequently the complete printed
 correlated analytical derivation cannot honestly be claimed reproduced without
-an author-approved expression. Figs.13–16 therefore remain original-figure
-blocked, even if their implemented correlated-MC evaluations all finish. The
-positions were optimized by the uncorrelated MRT/ZF objectives, not (69)/(75).
+an author-approved expression. **ZF Figs.14/16** remain original-figure
+blocked, even if their implemented correlated-MC evaluations all finish.
+MRT Figs.13/15 have no such dimensional/formulation blocker: valid (68)/(69)
+are evaluated on the original iid Algorithm 1 trajectory under the explicit
+interpretation above. The source does not uniquely establish whether the author
+instead reoptimized (69), so no recovered-original-protocol claim is made.
+The optional derivative notes/tests are mathematical diagnostics, not a new
+production optimizer or a silent reuse of the iid curvature for (69).
 
 ## Full configuration and provenance
 
@@ -120,12 +138,15 @@ both searches complete. Failed, partial, nonconverged or changed-input results
 are retried. `run_config.json`/`manifest.json` record the exact input bank. Both
 languages validate every case's complete geometry coverage and output
 `overall_full_success=false` until **all** required jobs succeed. An incomplete
-bank or configuration mismatch is not called a full run. For correlated
-Figs.13–16, completed numerical evaluations may set
+bank or configuration mismatch is not called a full run. For correlated-ZF
+Figs.14/16, completed numerical evaluations may set
 `overall_implemented_scope_success=true`, but `original_figure_complete` and
 `overall_full_success` remain **false** with
 `original_figure_status="blocked_by_source_formulation"`; complete MC sample
-counts cannot override the unresolved analytical/optimization scope. These
+counts cannot override the unresolved analytical scope. For MRT Figs.13/15,
+complete source-supported model-comparison evaluations can close the implemented
+figure scope, but `original_curve_closeness_verified` remains false until an
+actual reference comparison is performed. These
 implemented receipts can be reused without endlessly rerunning unchanged MC.
 MATLAB full wrappers
 default to the immutable `run_config.json` beside the exported job folder.

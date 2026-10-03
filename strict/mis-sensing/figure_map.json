@@ -1,0 +1,334 @@
+{
+  "paper_id": "mis-sensing",
+  "source_url": "https://doi.org/10.1109/JSTSP.2026.3681476",
+  "source_contract": "Final author-supplied R1 figure numbering 2-16; public arXiv v1 numbering differs after addition of PSLR/convergence figures.",
+  "ordinate_fields": {
+    "ralm": "points[].result.best_feasible.metrics.min_binary_metric",
+    "closed_form": "points[].result.minimum_sinr",
+    "reference": "points[].RALM_reference.best_feasible.metrics.min_binary_metric",
+    "RIS": "minimum of points[].RIS.continuous/one_bit/two_bit"
+  },
+  "ordinate_transform": "10*log10(linear metric); never plot eta as feasible SINR unless feasibility is verified",
+  "figures": [
+    {
+      "id": "fig2",
+      "sources": [
+        "close1.eps",
+        "close2.eps",
+        "close3.eps",
+        "close4.eps",
+        "close5.eps",
+        "close6.eps",
+        "close7.eps",
+        "close8.eps",
+        "close9.eps"
+      ],
+      "kind": "nine_beampattern_panels",
+      "point_count": 1,
+      "x": "beampattern_samples.azimuth_deg",
+      "y": "beampattern_samples.elevation_deg",
+      "z": "beampattern_samples.maps[].normalized_gain",
+      "z_transform": "10log10",
+      "annotation": "maps[].target_metric (SINR)",
+      "target_order": "elevation-major, azimuth-minor; recovered original EPS numbering",
+      "target_azimuth_deg": [0,45,90,0,45,90,0,45,90],
+      "target_elevation_deg": [30,30,30,50,50,50,70,70,70]
+    },
+    {
+      "id": "fig3",
+      "sources": [
+        "opt1.eps",
+        "opt2.eps",
+        "opt3.eps",
+        "opt4.eps",
+        "opt5.eps",
+        "opt6.eps",
+        "opt7.eps",
+        "opt8.eps",
+        "opt9.eps"
+      ],
+      "kind": "nine_beampattern_panels",
+      "point_count": 1,
+      "x": "beampattern_samples.azimuth_deg",
+      "y": "beampattern_samples.elevation_deg",
+      "z": "maps[].normalized_gain",
+      "z_transform": "10log10",
+      "annotation": "maps[].target_metric (SINR)",
+      "original_annotation_db": 32.02,
+      "source_normalization_discrepancy": "Eq9/11 with M400, P=1W, reference=-73.88dB bounds every SINR by1047.707288908828 (30.2023996531dB); 32.02dB exceeds this. Unreported normalization/gain factor needs source resolution, not curve fitting."
+    },
+    {
+      "id": "fig4",
+      "sources": [
+        "PSLR1.eps",
+        "PSLR2.eps",
+        "PSLR3.eps",
+        "PSLR4.eps",
+        "PSLR5.eps",
+        "PSLR6.eps",
+        "PSLR7.eps",
+        "PSLR8.eps",
+        "PSLR9.eps"
+      ],
+      "kind": "nine_beampattern_panels",
+      "point_count": 1,
+      "x": "beampattern_samples.azimuth_deg",
+      "y": "beampattern_samples.elevation_deg",
+      "z": "maps[].normalized_gain",
+      "z_transform": "10log10",
+      "annotation": "maps[].target_metric (exact discrete PSLR, separate from smoothed optimization metric)",
+      "source_guard": "Rectangular azimuth +/-22.5deg, elevation +/-10deg; other K-1 targets remain in Jk even if inside guard."
+    },
+    {
+      "id": "fig5",
+      "sources": [
+        "convergence1.eps"
+      ],
+      "kind": "convergence",
+      "point_count": 1,
+      "reuse": "fig3 exact same 6000-start bank",
+      "x": "outer_iteration",
+      "x_values": "1..30",
+      "curves": {
+        "best": "result.best_feasible.history[].eta",
+        "average": "result.mean_outer_eta"
+      },
+      "y_transform": "identity, linear eta",
+      "note": "Do not resample or select a different best initialization per outer iteration."
+    },
+    {
+      "id": "fig6",
+      "sources": [
+        "convergence2.eps"
+      ],
+      "kind": "convergence",
+      "point_count": 1,
+      "reuse": "fig3 exact same 6000-start bank",
+      "x": "outer_iteration",
+      "x_values": "1..30",
+      "curves": {
+        "best": "max(0,max(result.best_feasible.history[].q))",
+        "average": "result.mean_outer_violation"
+      },
+      "y_transform": "logarithmic axis",
+      "note": "Source does not define the aggregate violation norm explicitly; maximum positive residual is the recorded reconstruction. Exact zeros must remain zeros in stored data, with any plotting floor disclosed."
+    },
+    {
+      "id": "fig7",
+      "sources": [
+        "P.eps"
+      ],
+      "kind": "multi_curve",
+      "point_count": 24,
+      "x": "configuration.power_dbm",
+      "x_values": [
+        15,
+        18,
+        21,
+        24,
+        27,
+        30
+      ],
+      "curve_groups": [
+        "configuration.ms2[0]"
+      ],
+      "curves": "RALM Nside=6,7,8,9"
+    },
+    {
+      "id": "fig8",
+      "sources": [
+        "alg_compare_P.eps"
+      ],
+      "kind": "multi_curve",
+      "point_count": 24,
+      "x": "configuration.power_dbm",
+      "x_values": [
+        15,
+        18,
+        21,
+        24,
+        27,
+        30
+      ],
+      "curve_groups": [
+        "configuration.ms2[0]"
+      ],
+      "curves": "Closed form Nside=6,7,8,9 and one RALM reference Nside6",
+      "reference_selection": "configuration.ms2=[6,6]; reuse Fig7 Nside6 source bank if available"
+    },
+    {
+      "id": "fig9",
+      "sources": [
+        "fixU.eps"
+      ],
+      "kind": "multi_curve",
+      "point_count": 20,
+      "x": "configuration.ms1[0]",
+      "x_values": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "curve_groups": [
+        "configuration.gap"
+      ],
+      "curves": "RALM gap=1,2,3,4"
+    },
+    {
+      "id": "fig10",
+      "sources": [
+        "alg_compare_fixU.eps"
+      ],
+      "kind": "multi_curve",
+      "point_count": 20,
+      "x": "configuration.ms1[0]",
+      "x_values": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "curve_groups": [
+        "configuration.gap"
+      ],
+      "curves": "Closed form gap=1,2,3,4; one RALM source-worst reference gap4",
+      "reference_selection": "The final EPS fixU.eps gap4 is the lowest curve. Reference model must set Nside=Mside-4; do not reuse each point's arbitrary gap."
+    },
+    {
+      "id": "fig11",
+      "sources": [
+        "M1.eps"
+      ],
+      "kind": "multi_curve",
+      "point_count": 18,
+      "x": "configuration.ms1[0]",
+      "x_values": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "curve_groups": [
+        "configuration.ms2[0]"
+      ],
+      "curves": "RALM Nside=8,9,10; not closed-form"
+    },
+    {
+      "id": "fig12",
+      "sources": [
+        "M2.eps"
+      ],
+      "kind": "multi_curve",
+      "point_count": 18,
+      "x": "configuration.ms1[0]",
+      "x_values": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "curve_groups": [
+        "configuration.ms2[0]"
+      ],
+      "curves": "RALM Nside=5,6,7; not closed-form",
+      "source_typo": "Numerical paragraph swaps N7/N10 figure references; captions and included EPS identify the intended sets."
+    },
+    {
+      "id": "fig13",
+      "sources": [
+        "K.eps"
+      ],
+      "kind": "multi_curve",
+      "point_count": 24,
+      "x": "configuration.Kphi",
+      "x_tick_labels": "2*Ktheta,3*Ktheta,...,7*Ktheta (as printed original EPS); each curve's physical K=Kphi*Ktheta is retained in its configuration",
+      "curve_groups": [
+        "configuration.ms2[0]",
+        "configuration.Ktheta"
+      ],
+      "curves": "Nside17,16,15 each Ktheta2 and Nside16 Ktheta3; Kphi=2..7",
+      "x_values_by_Ktheta": {
+        "2": [
+          4,
+          6,
+          8,
+          10,
+          12,
+          14
+        ],
+        "3": [
+          6,
+          9,
+          12,
+          15,
+          18,
+          21
+        ]
+      }
+    },
+    {
+      "id": "fig14",
+      "sources": [
+        "alg_compare_K.eps"
+      ],
+      "kind": "multi_curve",
+      "point_count": 24,
+      "x": "configuration.Kphi",
+      "x_tick_labels": "2*Ktheta,3*Ktheta,...,7*Ktheta (as printed original EPS); curves share normalized Kphi positions despite different Ktheta",
+      "curve_groups": [
+        "configuration.ms2[0]",
+        "configuration.Ktheta"
+      ],
+      "curves": "Same four closed-form groups; one original-worst RALM group",
+      "reference_selection": "Select/reuse the Nside16,Ktheta3 curve from Fig13, not four extra RALM legend entries. Original EPS fourth curve and comparison reference have affine-identical six ordinates after accounting for different y-axis scales."
+    },
+    {
+      "id": "fig15",
+      "sources": [
+        "RIS1.eps"
+      ],
+      "kind": "multi_curve",
+      "point_count": 6,
+      "x": "configuration.power_dbm",
+      "x_values": [
+        15,
+        18,
+        21,
+        24,
+        27,
+        30
+      ],
+      "curves": "MIS RALM and RIS continuous/1-bit/2-bit",
+      "source_model": "Mside10,Nside8,Kphi2,Ktheta2",
+      "source_normalization_discrepancy": "At P30dBm and reference-73.88dB, Eq9/11 gives every MIS/RIS SINR <=6.12dB. Original RIS1.eps uses a 0..30dB axis y337..10; MIS atP30 has y100.797, i.e.21.6700dB, 1bit17.6600dB, 2bit23.8500dB and continuous25.6900dB. All exceed the source-model upper bound. No fitted gain correction is applied."
+    },
+    {
+      "id": "fig16",
+      "sources": [
+        "RIS2.eps"
+      ],
+      "kind": "multi_curve",
+      "point_count": 6,
+      "x": "configuration.Kphi*configuration.Ktheta",
+      "x_values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "curves": "MIS RALM and RIS continuous/1-bit/2-bit",
+      "source_model": "Mside10,Nside8,Ktheta1 inferred because source plots direct K"
+    }
+  ],
+  "rendering_missing_before_this_audit": "Only plot_beampatterns.py existed; no package-local full multi-curve/convergence/heatmap renderer. Repository root owns the unified renderer.",
+  "validity": "All original optimizer dimensions and6000/30/4000 budgets are retained. Missing or nonconverged full points are not original figure reproduction; numerical output and original-figure certification are separate."
+}

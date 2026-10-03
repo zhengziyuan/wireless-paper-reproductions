@@ -37,7 +37,7 @@ else
                 entry.beampattern_samples=beampattern_samples(model,run.state,run.selected_positions);
             elseif string(fig.objective)~="closed_form_sinr"&&~isempty(run.best_feasible)
                 best=run.best_feasible;[~,selected]=max(best.metrics.binary_schedule,[],2);
-                entry.beampattern_samples=beampattern_samples(make_model(point,settings,false),best.state,selected-1);
+                entry.beampattern_samples=beampattern_samples(model,best.state,selected-1,string(fig.objective));
             end
         end
         baselines=string(fig.baselines);
@@ -45,6 +45,7 @@ else
             entry.closed_form=evaluate_closed(make_model(point,settings,false));
         end
         if string(settings.kind)=="communications"
+            if any(string(fig.id)==["fig7","fig8"])&&~isempty(run.best_feasible),entry.beampattern_samples=communication_beampattern_samples(model,run.best_feasible.state);end
             if any(contains(baselines,"SMS"))
                 sms=point; sms.ms2=[0 0];
                 if any(baselines=="same_total_SMS")
@@ -52,6 +53,7 @@ else
                     else,error('Fixed-total comparison requires exact total and aperture shape');end
                 end
                 entry.SMS=optimize(make_model(sms,settings,false),settings,"communications",500000+j-1,[checkpointprefix,'-sms.json']);
+                if any(string(fig.id)==["fig7","fig8"])&&~isempty(entry.SMS.best_feasible),entry.SMS.beampattern_samples=communication_beampattern_samples(make_model(sms,settings,false),entry.SMS.best_feasible.state);end
             end
             if any(baselines=="dynamic_RIS"), entry.dynamic_RIS=struct('minimum_snr',settings.reference_snr*model.M^2); end
         else
@@ -59,6 +61,7 @@ else
             if any(startsWith(baselines,"ralm_reference"))
                 reference=point;
                 if any(baselines=="ralm_reference_n6"),reference.ms2=[6 6];end
+                if any(baselines=="ralm_reference_gap4"),reference.ms2=reference.ms1-[4 4];end
                 entry.RALM_reference=optimize(make_model(reference,settings,false),settings,"sinr",900000+j-1,[checkpointprefix,'-reference.json']);
             end
         end
@@ -358,8 +361,11 @@ function model=make_model(point,settings,pslr)
 if string(settings.kind)=="communications"
 K=point.K;if K==1,az=0;else,az=linspace(-60,60,K);end,el=45*ones(1,K);
 else
-kp=point.Kphi;kt=point.Ktheta;if kp==1,azimuth=50;else,azimuth=linspace(30,70,kp);end
-elevation=((0:kt-1)+.5)*90/kt;az=repelem(azimuth,kt);el=repmat(elevation,1,kp);K=numel(az);
+% Original EPS axes/markers recover phi0/45/90, theta30/50/70.
+% Eq3c defines phi=azimuth, theta=elevation; numerical text swaps ranges.
+kp=point.Kphi;kt=point.Ktheta;if kp==1,azimuth=45;else,azimuth=linspace(0,90,kp);end
+if kt==1,elevation=50;else,elevation=linspace(30,70,kt);end
+az=repmat(azimuth,1,kt);el=repelem(elevation,kp);K=numel(az);
 end
 cfg=struct('ms1',point.ms1,'ms2',point.ms2,'azimuth_deg',az,'elevation_deg',el,'spacing_over_wavelength',settings.spacing_over_wavelength,'incidence_direction_cosines',settings.incidence_direction_cosines,'number_of_targets',K,'reference_snr',.01);
 if string(settings.kind)=="communications",cfg.reference_snr=settings.reference_snr;else
@@ -367,10 +373,10 @@ cfg.echo_beta_squared=10^(settings.reference_echo_db/10);P=settings.power_dbm;if
 cfg.noise_over_power=1/10^((P-30)/10);
 end
 if pslr
-gp=settings.pslr_grid(1);gt=settings.pslr_grid(2);caz=repelem(linspace(30,70,gp),gt);cel=repmat(((0:gt-1)+.5)*90/gt,1,gp);
+gp=settings.pslr_grid(1);gt=settings.pslr_grid(2);caz=repmat(linspace(0,90,gp),1,gt);cel=repelem(linspace(30,70,gt),gp);
 cfg.azimuth_deg=[az,caz];cfg.elevation_deg=[el,cel];cfg.echo_beta_squared=[repmat(10^(settings.reference_echo_db/10),1,K),repmat(10^(settings.reference_echo_db/10)*settings.clutter_relative_echo,1,gp*gt)];
 cfg.pslr_opponents=cell(K,1);
-for k=1:K,outside=hypot(caz-az(k),cel-el(k))>settings.mainlobe_guard_deg;cfg.pslr_opponents{k}=[setdiff(0:K-1,k-1),K+find(outside)-1];end
+for k=1:K,outside=abs(caz-az(k))>settings.mainlobe_guard_azimuth_deg|abs(cel-el(k))>settings.mainlobe_guard_elevation_deg;cfg.pslr_opponents{k}=[setdiff(0:K-1,k-1),K+find(outside)-1];end
 cfg.pslr_mu=settings.pslr_mu_initial;cfg.pslr_epsilon=settings.pslr_epsilon;
 end
 model=build_model(cfg);
@@ -466,12 +472,21 @@ az=deg2rad(model.config.azimuth_deg(1:model.targets));el=deg2rad(model.config.el
 for k=1:model.targets,z.X(k,selected(k))=1;values(k)=gm(k,selected(k));end
 out=struct('available',true,'minimum_sinr',min(values),'selected_positions',selected-1,'state',serialize(z));
 end
-function out=beampattern_samples(model,state,selected)
+function out=communication_beampattern_samples(model,state)
+az=-90:.5:90;cfg=model.config;cfg.azimuth_deg=az;cfg.elevation_deg=45*ones(size(az));cfg.number_of_targets=numel(az);grid=build_model(cfg);
+z=struct('phi',state.phi.real(:)+1i*state.phi.imag(:),'theta',state.theta.real(:)+1i*state.theta.imag(:));snr=metric(grid,z,"communications");[~,selected]=max(state.X,[],2);
+out=struct('scope','model_evaluated_complete_azimuth_cut_not_original_curve_copy','azimuth_deg',az,'elevation_deg',45,'resolution_deg',.5,'pattern_snr',snr,'number_of_patterns',model.U,'user_azimuth_deg',model.config.azimuth_deg,'user_pattern',selected-1,'user_snr_by_pattern',metric(model,z,"communications"));
+end
+function out=beampattern_samples(model,state,selected,objective)
+if nargin<4,objective="sinr";end
 az=-180:180;el=0:90;cfg=model.config;cfg.azimuth_deg=repelem(az,numel(el));cfg.elevation_deg=repmat(el,1,numel(az));cfg.echo_beta_squared=1;cfg.number_of_targets=numel(az)*numel(el);grid=build_model(cfg);
-z=struct('phi',state.phi.real(:)+1i*state.phi.imag(:),'theta',state.theta.real(:)+1i*state.theta.imag(:));[~,~,~,powers]=fields(grid,z);[~,~,~,original]=fields(model,z);echo=model.beta(1:model.targets).*original(1:model.targets,:).^2;maps=cell(model.targets,1);
+z=struct('phi',state.phi.real(:)+1i*state.phi.imag(:),'theta',state.theta.real(:)+1i*state.theta.imag(:));[~,~,~,powers]=fields(grid,z);[~,~,~,original]=fields(model,z);all_echo=model.beta.*original.^2;echo=all_echo(1:model.targets,:);maps=cell(model.targets,1);
+if objective=="pslr",smooth=metric(model,z,"pslr");opponents=as_cells(model.config.pslr_opponents);end
 for k=1:model.targets,u=selected(k)+1;raw=reshape(powers(:,u),numel(el),numel(az));denominator=sum(echo(:,u))-echo(k,u)+model.config.noise_over_power;
-maps{k}=struct('target',k-1,'pattern',u-1,'normalized_gain',raw/max(raw(:)),'sinr',model.beta(k)*raw.^2/denominator);end
-out=struct('scope','full_front_hemisphere_independent_samples','resolution_deg',1,'azimuth_deg',az,'elevation_deg',el,'maps',{maps});
+maps{k}=struct('target',k-1,'pattern',u-1,'normalized_gain',raw/max(raw(:)),'sinr',model.beta(k)*raw.^2/denominator,'target_azimuth_deg',model.config.azimuth_deg(k),'target_elevation_deg',model.config.elevation_deg(k),'target_metric_name','SINR','target_metric',echo(k,u)/denominator);
+if objective=="pslr",peak=max(all_echo(opponents{k}+1,u));exact=[];if peak>0,exact=all_echo(k,u)/peak;end,maps{k}.target_metric_name='PSLR';maps{k}.target_metric=exact;maps{k}.smoothed_target_metric=smooth(k,u);maps{k}.sidelobe_echo_peak=peak;end
+end
+out=struct('scope','full_front_hemisphere_independent_samples','resolution_deg',1,'objective',char(objective),'azimuth_deg',az,'elevation_deg',el,'maps',{maps});
 end
 function out=ris_baselines(model,settings,checkpointprefix)
 if nargin<3,checkpointprefix='';end

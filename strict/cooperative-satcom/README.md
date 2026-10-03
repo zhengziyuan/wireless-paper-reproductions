@@ -10,7 +10,14 @@ All eight AP-AO/MR-S-PA/MR-S-TS/MR-TTS-PA/MR-TTS-TS/AP-NoRIS/MR-S-NoRIS/MR-TTS-N
 
 The generator retains J3/U2/N16/M25/K1 and reported source altitudes/Rician/default parameters. Fair single-vs-multi comparisons use N48/P150W against3x16 antennas/3x50W with1.25/2.5deg offsets. GT receive radiation uses actual ITU S.1428-1 piecewise main/transition/side/back lobes referenced by the S.1503 FSS prescription, not a generic sidelobe envelope.
 
-`full_config.json` separates source-reported candidates from **tuned/not-reported** gains, diameter, coordinates, seeds, exact grids,1000 MC samples, caps and thresholds. These are not recovered original figure settings. A fixed statistical geometry is optimized analytically; MC independently validates its moments instead of repeating identical deterministic optimization1000 times.
+`full_config.json` separates source-reported candidates from **tuned/not-reported** gains, diameter, coordinates, seeds,1000 MC samples, caps and thresholds. Grids are now recovered from original author-thesis EPS curve vertices and visually checked axes: half-octave power sweeps, linear INR0.01:0.01:0.12, M5:5:45 and ground Rician-12:3:30dB. No reference ordinate enters the simulation. A fixed statistical geometry is optimized analytically; MC independently validates its moments instead of repeating identical deterministic optimization1000 times.
+
+`figure_coverage.json` maps author-thesis figures4-1 through4-11 to original
+relative EPS filenames, axes, all eight schemes or the twelve fair-comparison
+curves, parameters and remaining gaps. These are not verified final-publisher
+figure numbers. The interference EPS axis printsW, but its marked ITU line is
+10^(-12.2/10)=0.06026 and the source states normalized noise; the implementation
+uses linearINR, not0.06 physical watts in a -94dBm-noise receiver.
 
 ## Run
 
@@ -38,7 +45,7 @@ CVX2.2.2/MATLAB R2025b may need CVX's official `functions/vec_` folder onpath. E
 
 Full-count Python synthetic components passed physical constraints/QT identities. Full geometry analytical gradients and a bounded all-eight-scheme chain passed. See `outputs/` and `source_contract.json`; tests keep `full_reproduction_pass:false`.
 
-Publisher-version reconciliation is outstanding. Public-author Eq30d's power coefficient appears inconsistent with original physical Eq25c; implementation follows the physical constraint also given in the thesis. The cited S.1503-3 edition itself was not downloaded; available S.1503 editions verify the FSS S.1428 reference. Numerical values/exact grids are disclosed tuning. All full sweeps, both-language full-run validation and agreement with plotted paper curves remain to be completed; do not advertise this as complete reproduction of every final figure.
+Publisher-version reconciliation is outstanding. Public-author Eq30d's power coefficient appears inconsistent with original physical Eq25c; implementation follows the physical constraint also given in the thesis. The cited S.1503-3 edition itself was not downloaded; available S.1503 editions verify the FSS S.1428 reference. Unreported numerical geometry/gains/solver settings remain disclosed tuning; the axis grids now follow the original author-thesis EPS. All full sweeps, both-language full-run validation and agreement with plotted paper curves remain to be completed; do not advertise this as complete reproduction of every final figure.
 ## Termination and full-sweep receipts
 
 Every executed scheme now records each QT/AO/RMO stopping rule, actual final
