@@ -2,13 +2,40 @@
 
 > **Strict-reproduction status (2026-10-03): NOT COMPLETE.** The owner now requires the original theoretical algorithms and full published simulation scenarios, without substitute solvers or reduced dimensions/budgets. The previous `papers/` release does **not** meet that requirement and is retained only as a superseded preview. Its 6/6 parity result is not evidence of strict or complete paper reproduction.
 >
-> **严格复现状态：尚未完成。** 之前的 `papers/` 为已撤下推荐的简化预览，含替代子求解器及缩小场景，不满足现在的要求。严格版工作位于 [`strict/`](strict/README.md)。未公开的逐图参数、最终稿和原文歧义必须先补齐；不得自行编造设置或用替代算法补位。
+> **严格复现状态：尚未完成。** 当前工作位于 [`strict/`](strict/README.md)，以作者提供的 LaTeX 和可获取的作者稿为依据。原文明确规定的模型、算法、场景尺寸与实验预算保留；原文未给出的数值设置按作者授权调试，并在配置中注明来源。最终发表版的一致性尚未核验。之前的 `papers/` 是含替代算法及缩小场景的历史预览，不满足现在的要求。
 
 Independent MATLAB and Python implementations associated with selected technical papers by Ziyuan Zheng and collaborators.
 
 This is not the original private simulation source. Each paper has an explicit implementation scope, equation/source map, shared inputs, executable examples, and validation results. A successful reduced-size run is not evidence that every published figure, Monte Carlo campaign, or hardware experiment has been reproduced.
 
-中文说明：本仓库提供六篇技术论文的独立 MATLAB/Python 双实现，采用相同数值输入进行模型、梯度、约束和双语言结果检查。这是限定范围的核心实现，不是原作者私有代码，也不是原论文全部图表或硬件实验的完整复现。每篇目录均列明算法改动和未完成部分；Hotspot SatCom 的最终期刊全文核验仍待完成。
+中文说明：这里公开的是按论文理论重新编写的 MATLAB/Python 双实现，不是原作者私有仿真代码。核心检查、完整尺寸的调试实验与全部图表复现分开记录；通过核心检查不代表完整复现。所有尚未实现的公式、未收敛的运行和调试数值设置均明确列出，不用替代方法补位。
+
+## Current original-algorithm implementations — work in progress
+
+| Package | Implemented original method | Outstanding full-reproduction work |
+| --- | --- | --- |
+| [MIS communications](strict/mis-communications) | Product-manifold RCG and smoothing; relaxed scheduling and final hardening | Full sweeps and original-figure agreement |
+| [MIS sensing](strict/mis-sensing) | Original RALM/RCG, echo SINR, PSLR and separate closed-form design | Full 6000-start campaigns, convergence and figure agreement |
+| [Rotatable-array ISAC](strict/rotatable-isac) | QT/Lipschitz-MM QCQP, raw-PR RCG and PGA/BB rotation | All six schemes and full 100-channel figure banks |
+| [Two-timescale MA](strict/two-timescale-ma) | MRT AO/SCA, ZF AO/MM, full finite-grid search protocol | Full MC/figures; undefined correlated-ZF expression |
+| [Cooperative SatCom](strict/cooperative-satcom) | Finite-Rician moments, AP/MR QT, RMO and two-stage design | Full converged sweeps and final-version reconciliation |
+| [Hotspot SatCom](strict/hotspot-satcom) | Instantaneous QT/SOCP, AO/SDR and original two-stage RGD/QT | Full converged MC; inconsistent statistical-CSI QoS formulation |
+
+Each current package has its own MATLAB entry point, Python entry point, full configuration and source/equation contract. Necessary sign/typographical corrections and numerical safeguards are disclosed, with literal-source diagnostic modes where applicable. No undefined analytical expression is filled in using an unrelated model.
+
+For current dependencies and commands, use the [strict implementation guide](strict/README.md). Actual execution outputs and dual-language comparisons are under [strict/validation](strict/validation); machine-readable status is in [strict/status.json](strict/status.json). **No package has yet passed complete published-figure reproduction.**
+
+```sh
+python -m pip install -r strict/requirements.txt
+python strict/validate_components.py --output-dir strict/outputs/components
+python strict/rotatable-isac/test_metadata.py
+python strict/two-timescale-ma/test_metadata.py
+```
+
+These are component and receipt-integrity checks, not full production commands. Full scenarios are separate, potentially expensive runs described in the package READMEs. MATLAB convex subproblems require a separately installed CVX toolbox; MIS and ISAC use base MATLAB.
+
+<details>
+<summary>Historical reduced previews — superseded, not the current reproduction work</summary>
 
 ## Superseded preview packages (not the strict implementations)
 
@@ -23,7 +50,7 @@ This is not the original private simulation source. Each paper has an explicit i
 
 The npj Wireless Technology perspective is not a numerical-algorithm package and is not included. Every package contains `README.md`, `source_map.json`, `fixture.json`, a Python entry point, and a uniquely named MATLAB entry point.
 
-## Dependencies
+## Preview dependencies
 
 Python 3.10 or later and NumPy. MATLAB implementations use base MATLAB unless a paper README explicitly states otherwise. Optional plotting uses Matplotlib. No proprietary solver or third-party MATLAB toolbox is bundled.
 
@@ -31,7 +58,7 @@ Python 3.10 or later and NumPy. MATLAB implementations use base MATLAB unless a 
 python -m pip install -r requirements.txt
 ```
 
-## Run and validate
+## Run and validate historical previews only
 
 From this repository's root, run all Python examples and checks:
 
@@ -62,6 +89,8 @@ The initial local checks use Python 3.12, NumPy, and MATLAB R2025b. Numerical pa
 ![Reduced-fixture optimization histories](validation/iteration-traces.png)
 
 These are newly computed iteration traces, **not published paper figures**. Metrics and units differ between panels and cannot be compared across papers.
+
+</details>
 
 ## Scientific scope
 

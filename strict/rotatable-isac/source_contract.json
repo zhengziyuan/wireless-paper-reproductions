@@ -1,0 +1,44 @@
+{
+  "paper_id": "rotatable-isac",
+  "title": "Low-Altitude ISAC with Rotatable Active and Passive Arrays",
+  "doi_claim_to_verify": "10.1109/JSTSP.2026.3693227",
+  "primary_source": "https://arxiv.org/html/2512.20987",
+  "identity_source": "https://arxiv.org/abs/2512.20987",
+  "status": "FULL_DIMENSION_THEORETICAL_RUNNERS_IMPLEMENTED_FULL_FIGURES_NOT_EXECUTED_FINAL_VERSION_PENDING",
+  "source_version_warning": "The current HTML and title-matched author revised source describe weighted NMSE with QT/MM, RCG and PGA. The arXiv abstract still describes a sensing-MSE constraint and penalty/PGD. The final published version must be confirmed before claiming exact final-paper reproduction.",
+  "known_settings": {
+    "bs_shape": [2, 2], "ris_shape": [6, 6], "wavelength_m": 0.1,
+    "element_spacing_in_wavelengths": 0.5, "bs_center_m": [0, 0, 0], "ris_center_m": [10, 0, 0],
+    "local_boresight": [0, 0, 1], "bu_paths": 2, "ru_paths": 2, "br_paths": 2,
+    "azimuth_uniform_rad": [-3.141592653589793, 3.141592653589793],
+    "elevation_uniform_rad": [-1.0471975511965976, 1.0471975511965976],
+    "complex_gain_distribution": "independent circular complex Gaussian, normalized variance",
+    "sensing_azimuth_points": 11, "sensing_elevation_points": 6,
+    "sensing_azimuth_interval_rad": [-3.141592653589793, 3.141592653589793],
+    "sensing_elevation_interval_rad": [-0.7853981633974483, 0.7853981633974483],
+    "rotation_each_axis_interval_rad": [-1.5707963267948966, 1.5707963267948966],
+    "directivity_exponents": [0, 2], "rho_default": 10, "channel_realizations": 100,
+    "rho_figure17": [0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1,2,3,4,5,6,7,8,9,10,20,30,40,50,60,70,80,90,100,200,300,400,500,600,700,800,900,1000]
+  },
+  "benchmarks": ["Rot-BS & Rot-RIS", "Rot-BS & Fix-RIS", "Fix-BS & Rot-RIS", "Fix-BS & Fix-RIS", "Rot-BS & No-RIS", "Fix-BS & No-RIS"],
+  "unreported_author_fields": [
+    "noise_power", "exact_desired_two_angular_sectors", "maximum_gain_normalization_used_in_figures",
+    "initial_array_orientations_and_RIS_phases", "random_seed_or_exported_random_inputs",
+    "AO_tolerance_and_cap", "W_tolerance_and_cap", "RCG_tolerance_and_cap", "PGA_tolerances_and_cap",
+    "RCG_Armijo_constants_and_initial_step", "PGA_alpha0_alpha_min_alpha_max_kappa1_kappa2",
+    "bisection_precision", "iota_zero_denominator_safeguard", "exact_sweep_values_for_figures2_to16",
+    "No_RIS_sensing_path_disable_convention"
+  ],
+  "equation_map": {
+    "model": "(2)-(24)", "W_QT_MM_QCQP": "(P2.1), Q/P matrices, W(nu), Algorithm 1",
+    "RIS_RCG": "RCG_Egrad, RCG_Rgrad, RCG_conjugate, RCG_direction, RCG_retraction, Algorithm 2",
+    "rotation_PGA_BB": "BB1, PGA_projection, PGA_backtracking, PG-box, Algorithm 3",
+    "iota_AO": "iota_star, Algorithm 4"
+  },
+  "ambiguities": [
+    {"id": "BB_ASCENT_SIGN", "description": "Printed BB1 uses s^T s/(s^T delta_gradient) in an ascent method. The full-size component test observes negative curvature and clipping to alpha_min. Full runs select documented ascent_sign_correction: use the secant curvature of -F, namely -s^T delta_gradient. as_printed diagnostics remain selectable. Both comparisons are output, not silently changed."},
+    {"id": "RCG_NONASCENT", "description": "Printed RCG uses untruncated Polak-Ribiere and has no non-ascent restart. Full-size component test observes non-ascent at the second step. Full runs select documented_non_ascent_restart, logging each raw PR coefficient and raw slope. PR is not truncated. literal_printed diagnostic mode raises instead of restarting."},
+    {"id": "HALFSPACE_BOUNDARY", "description": "At b=0 the half-space response has a visibility discontinuity. Zero derivatives are piecewise derivatives, not a global smoothness claim."}
+  ],
+  "compute_note": "Each original sweep point needs 100 channel realizations times 6 schemes and nested AO/QT-MM/RCG/PGA loops. The 37-point rho grid alone has 22200 AO jobs if all six schemes are evaluated. Wall time cannot be inferred until original budgets are supplied and an actual timing measurement is made."
+}

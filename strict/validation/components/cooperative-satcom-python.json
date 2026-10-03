@@ -1,0 +1,30 @@
+{
+  "paper_id": "cooperative-satcom",
+  "scope": "synthetic_full-dimensional_component_test_NOT_paper_reproduction",
+  "dimensions": {
+    "J": 3,
+    "U": 2,
+    "N": 16,
+    "M": 25,
+    "K": 1
+  },
+  "metrics": {
+    "stat_mr_before_min": 0.05483217039113282,
+    "stat_mr_after_min": 8.470079769977781,
+    "tts_mr_before_min": 0.08635823252769984,
+    "tts_mr_after_min": 9.776743488773311,
+    "ap_before_min": 0.011000589236557862,
+    "ap_after_min": 10.259451581082072
+  },
+  "checks": {
+    "qt_identity_pass": true,
+    "qt_identity_error": 1.3877787807814457e-17,
+    "physical_constraint_pass": true,
+    "physical_constraint_violation": 0.0,
+    "gaussian_limit_identity_pass": true,
+    "gaussian_limit_identity_error": 1.1102230246251565e-16,
+    "finite_cascade_fourth_jensen_pass": true,
+    "ap_qt_lower_bound_pass": true
+  },
+  "full_reproduction_pass": false
+}

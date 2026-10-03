@@ -1,0 +1,40 @@
+{
+  "schema_version":1, "paper_id":"hotspot-satcom",
+  "source_version":"author_thesis", "final_publisher_conformance":"unverified",
+  "reported": {
+    "N":16,"J":16,"U":6,"K":10,"M":25,
+    "leo_height_m":550000,"frequency_hz":12000000000,"power_w":100,
+    "bandwidth_hz":200000000,"temperature_k":235.3,"satellite_gain_dbi":50,
+    "antenna_diameter_m":0.5,"nhu_sinr_db":3,
+    "kappa_satellite_db":20,"kappa_ground_db":0,
+    "ris_hu_distance_m":400,"hu_spacing_m_range":[10,20],
+    "subsurface_elements":[200,140],"element_size_m":[0.01,0.01]
+  },
+  "tuned_not_reported": {
+    "seed":3309957,"monte_carlo_realizations":1000,
+    "feed_center_spacing_m":50000,"ground_receive_gain_dbi":0,
+    "initial_hu_sinr":0.001,"qt_max_iterations":200,"ao_max_iterations":200,
+    "rgd_max_iterations":500,"relative_tolerance":0.0001,"gradient_tolerance":0.000001,
+    "phase_method":"author_Algorithm_3-2_RGD_minimize_negative_F",
+    "phase_sign_interpretation":"Eq3-36_argmax_F_equivalent_minimize_negative_F; literal_-grad_F_is_explicit_diagnostic_only",
+    "randomization_count":1000,"solver":"SCS","solver_options":{"eps":0.0000001,"max_iters":100000},"initialization_solver":"CLARABEL",
+    "physical_constraint_tolerance":0.00001,
+    "solver_primal_relative_tolerance":0.00001,"qt_bound_tolerance":0.00001,
+    "esa_pattern":"Gmax*(J1(nu)/(2nu)+36J3(nu)/nu^3)^2, limit at zero=Gmax",
+    "surface_radiation_gain":"4*pi*subsurface_area/lambda^2; unit broadside factors",
+    "geometry":"local planar footprint at zenith; 4x4 feed centers; HU hexagon 15m spacing centered below satellite; RIS east400m; NHU chosen feed centers"
+  },
+  "sweeps":[
+    {"id":"hu_count_kS10","parameter":"U","values":[1,2,3,4,5,6],"kappa_satellite_db":10},
+    {"id":"hu_count_kS20","parameter":"U","values":[1,2,3,4,5,6],"kappa_satellite_db":20},
+    {"id":"cdf_kS10","parameter":"kappa_satellite_db","values":[10],"kappa_satellite_db":10},
+    {"id":"cdf_kS20","parameter":"kappa_satellite_db","values":[20],"kappa_satellite_db":20},
+    {"id":"rician_u6","parameter":"kappa_satellite_db","values":[0,4,8,12,16,20,24,28,32],"U":6},
+    {"id":"rician_u1","parameter":"kappa_satellite_db","values":[0,4,8,12,16,20,24,28,32],"U":1},
+    {"id":"element_count","parameter":"subsurface_elements","values":[[100,70],[150,105],[200,140],[250,175],[300,210]],"kappa_satellite_db":12}
+  ],
+  "sweep_provenance":"Source figure families/default full counts; exact grids/MC/initialization/caps are authorized tuning, not recovered original data.",
+  "statistical_csi_status":"not_implemented_due_to_author_thesis_formulation_inconsistency",
+  "statistical_csi_issue":"Eq3-41b denominator j in K excludes HU while Eq3-46 construction sums full J; Eq3-46 writes norm squared <= linear and an imaginary coefficient on self NLoS norm that cannot subtract a PSD norm. No LoS or arbitrary SCA substitute is used.",
+  "full_run_started":false
+}

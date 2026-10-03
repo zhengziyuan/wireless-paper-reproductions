@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "paper_id": "cooperative-satcom",
+  "source_version": "author_manuscript_and_author_thesis",
+  "final_publisher_conformance": "unverified_16_vs_18_page_version",
+  "run_label": "full_dimensional_author_model_tuned_unreported_numerics",
+  "reported": {
+    "J": 3, "U": 2, "N": 16, "K": 1, "M": 25,
+    "leo_height_m": 550000, "geo_height_m": 36000000,
+    "frequency_hz": 12000000000, "noise_dbm": -94,
+    "power_w": 50, "geo_power_w": 2000, "interference_to_noise_db": -12.2,
+    "kappa_leo_db": 20, "kappa_ground_db": 10, "kappa_geo_db": 30,
+    "subsurface_elements": [100,100], "element_size_m": [0.01,0.01],
+    "ris_lu_distance_m": 100, "geo_longitude_deg": 100,
+    "lu_separation_deg": 2, "satellite_separation_deg": 2.5
+  },
+  "tuned_not_reported": {
+    "earth_radius_m": 6371000, "seed": 3460068,
+    "monte_carlo_realizations": 1000,
+    "leo_element_gain_dbi": 40, "geo_gain_dbi": 40, "lu_gain_dbi": 0,
+    "gt_diameter_m": 1.2,
+    "ris_plane": "local_east_north", "satellite_plane": "local_tangent",
+    "upa_shape": [4,4], "antenna_spacing_wavelengths": 0.5,
+    "user_latitudes_deg": [0,2], "satellite_latitudes_deg": [-2.5,0,2.5],
+    "lu_longitudes_deg": [100,100], "gt_latitude_deg": 0,
+    "initial_phase_radians": 0.2,
+    "qt_max_iterations": 200, "ao_max_iterations": 200,
+    "rmo_max_iterations": 500, "relative_tolerance": 0.0001,
+    "gradient_tolerance": 0.000001, "solver_objective_tolerance": 0.00001,
+    "smoothing_initial": 1, "smoothing_final": 0.001,
+    "smoothing_max_repeats": 50, "smoothing_progress_tolerance": 0.00000001,
+    "solver": "CLARABEL", "solver_options": {},
+    "solver_primal_relative_tolerance": 0.00001, "qt_bound_tolerance": 0.00001
+  },
+  "sweeps": [
+    {"id":"power_kL20", "parameter":"power_w", "values":[1,2,4,8,16,32,64,128], "kappa_leo_db":20},
+    {"id":"power_kL0", "parameter":"power_w", "values":[1,2,4,8,16,32,64,128], "kappa_leo_db":0},
+    {"id":"interference_kL20", "parameter":"interference_to_noise_db", "values":[-30,-25,-20,-15,-12.2,-10,-5,0], "kappa_leo_db":20},
+    {"id":"interference_kL0", "parameter":"interference_to_noise_db", "values":[-30,-25,-20,-15,-12.2,-10,-5,0], "kappa_leo_db":0},
+    {"id":"subsurfaces_kL20", "parameter":"M", "values":[4,9,16,25,36,49,64], "kappa_leo_db":20},
+    {"id":"subsurfaces_kL0", "parameter":"M", "values":[4,9,16,25,36,49,64], "kappa_leo_db":0},
+    {"id":"ground_kL0", "parameter":"kappa_ground_db", "values":[-12,-6,0,6,12,18,24,30], "kappa_leo_db":0},
+    {"id":"ground_kL10", "parameter":"kappa_ground_db", "values":[-12,-6,0,6,12,18,24,30], "kappa_leo_db":10},
+    {"id":"ground_kL20", "parameter":"kappa_ground_db", "values":[-12,-6,0,6,12,18,24,30], "kappa_leo_db":20}
+  ],
+  "sweep_provenance": "Families/source dimensions reported; exact grids, MC count and numerical caps are user-authorized tuning, not original figure data.",
+  "multi_vs_single": {"enabled":true,"status":"implemented_not_full_run","kappa_leo_db":[0,20],"offsets_deg":[1.25,2.5],"single_N":48,"single_power_w":150,"single_upa_shape":[6,8],"interference_values_db":[-30,-25,-20,-15,-12.2,-10,-5,0],"required_fairness":"3*16=48 total antennas and3*50=150W total power for multi and single"},
+  "gt_pattern_provenance": "Actual ITU-R S.1428-1 recommends1 full piecewise radiation pattern, which ITU S.1503 FSS receive-pattern section references. The thesis citesS.1503-3/1419; exact publisher version unverified. Diameter1.2m is explicit numeric tuning, not a pattern substitution."
+}

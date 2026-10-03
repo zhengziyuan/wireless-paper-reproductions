@@ -1,0 +1,20 @@
+{
+  "paper_id": "mis-communications",
+  "scope": "Actual component-output comparison only; NOT full published-figure reproduction",
+  "compared_sections": [
+    "metrics",
+    "checks",
+    "history",
+    "state"
+  ],
+  "atol": 1e-07,
+  "rtol": 1e-06,
+  "component_parity_passed": true,
+  "full_published_figure_reproduction_passed": false,
+  "output_sha256": {
+    "python": "4a5876eb57cfec109086e82c8cea991c3ed7a7059b72d4cfe4f039ef4229e945",
+    "matlab": "45cc30933ee0357fe5530ad33408755732ebbffb33bea606b9b8491deacb3b6b"
+  },
+  "failures": [],
+  "schema_adapter": "Singleton MATLAB struct collections QCQP/restarts/BB normalized to lists only"
+}

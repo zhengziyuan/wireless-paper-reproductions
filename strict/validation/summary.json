@@ -1,0 +1,198 @@
+{
+  "scope": "Actual mathematical components and dual-language comparisons only; NOT complete paper figures",
+  "verification_timestamp": "2026-10-03T16:32:05+08:00",
+  "python_runtime": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "component_evidence_verified": true,
+  "full_published_figure_reproduction_passed": false,
+  "records": [
+    {
+      "paper_id": "mis-communications",
+      "compared_sections": [
+        "metrics",
+        "checks",
+        "history",
+        "state"
+      ],
+      "atol": 1e-07,
+      "rtol": 1e-06,
+      "evidence_sha256": {
+        "python": "4a5876eb57cfec109086e82c8cea991c3ed7a7059b72d4cfe4f039ef4229e945",
+        "matlab": "45cc30933ee0357fe5530ad33408755732ebbffb33bea606b9b8491deacb3b6b",
+        "parity": "1247dd7d99fafcebad0ace8da9e32d2d09b1d1cfca96c439b94f357d13829d2d"
+      },
+      "source_sha256": {
+        "engine.py": "5766e622beb7adbe427fee7196916e5fe1fdc78e7c7ed153de21559f947bd42a",
+        "figures.json": "92907ef5eb0c8331dc4213d16472de5fa7287b217800ef95e19c68be98cf037f",
+        "mis_communications_strict_engine.m": "659488374ba64e3dfdf1aad99031da421ca72c0bc5a9ca941c7d4aeec9d3f097",
+        "plot_beampatterns.py": "1f4dfe523361e86ce13aae3a4a3a09b50831e7b8b6a7a681a9876d60f0675a7d",
+        "README.md": "9fde5059413d33a39312ac2fc15cd93acec7c7ea50521129920f751c976a4e83",
+        "run.py": "82993d32ee1ab0a35f9fff0aead511efa73c8bdb70c21476497916e958685eb4",
+        "run_mis_communications.m": "a875b183f281efcb4786109467d9ff8e37edd2c7aac9d53fa68752e495e34bf1",
+        "settings.json": "2dd7d81be15a23a29ee04e567da44d0a866746828ac57071ce621db9055d0a01",
+        "source_map.json": "afc6fe44d75225a6b1859c8dac7414f8a8331546bdb1eb5c13db9412a161e457",
+        "test_line_search.py": "3adffb30d7f1616c4a0bd813d5424ef189f235e682215d0ddb4783e5c851b74a",
+        "unit_fixture.json": "60f8ec722d403034c8f70ce54d570ceff3dfbceb60ffc48a7ffa5cb68da913e9"
+      }
+    },
+    {
+      "paper_id": "mis-sensing",
+      "compared_sections": [
+        "metrics",
+        "checks",
+        "history",
+        "state"
+      ],
+      "atol": 1e-07,
+      "rtol": 1e-06,
+      "evidence_sha256": {
+        "python": "09c630182fac129692396a84d3347297bbbfa9d6fe9b2e5fc1a928326fe794a4",
+        "matlab": "0429e4d3f29436369e102207bece2354cdd67194a61582a1878c1bdbe6598a55",
+        "parity": "309b58eb621765c2f9df42c140a5de5bafb0b39c13f6b712c3b3c61a5cec8848"
+      },
+      "source_sha256": {
+        "engine.py": "5766e622beb7adbe427fee7196916e5fe1fdc78e7c7ed153de21559f947bd42a",
+        "figures.json": "f8d061ab9653aeefcbd856674acdb9942f13b3d890a7c28db31e702e1b1103de",
+        "mis_sensing_strict_engine.m": "b2c48d986cc69fbd0a713a7d1acaeda6683015cc2112764485d7c1ffc38b7a1e",
+        "plot_beampatterns.py": "1f4dfe523361e86ce13aae3a4a3a09b50831e7b8b6a7a681a9876d60f0675a7d",
+        "README.md": "a4101369cca8efc7a813bfa61e73972a43bd6f2f046fa5bb3c7dafcf02e96275",
+        "run.py": "82993d32ee1ab0a35f9fff0aead511efa73c8bdb70c21476497916e958685eb4",
+        "run_mis_sensing.m": "206254d89eef0b046c0c4d3ca9d6bdb2992b19e1149e608681e70f61143d626a",
+        "settings.json": "12c6c701655f207ecf81eb82f75b409ebda8bb7cb644999932acbb32d3799fdd",
+        "source_map.json": "51ba18588da937367e87de3cfa49150c5674773817b8d5c62e9156c994059fea",
+        "test_line_search.py": "3adffb30d7f1616c4a0bd813d5424ef189f235e682215d0ddb4783e5c851b74a",
+        "unit_fixture.json": "60f8ec722d403034c8f70ce54d570ceff3dfbceb60ffc48a7ffa5cb68da913e9"
+      }
+    },
+    {
+      "paper_id": "rotatable-isac",
+      "compared_sections": [
+        "metrics",
+        "checks",
+        "history"
+      ],
+      "atol": 1e-06,
+      "rtol": 1e-05,
+      "evidence_sha256": {
+        "python": "ee6060c5a20c947acdd920ce3b29c1927b96e973c604965bc0a04cac7c35d11c",
+        "matlab": "ed712f5fcc0fa81754f96022b3ba0331e8f8f21c2c369ecea26209b6499169d2",
+        "parity": "5602e91aba3ad1f230061c3bb16a8a2fcee3295c94ecccfd5a492939f99b4ac0"
+      },
+      "source_sha256": {
+        "core.py": "fe67ca5ca4dea9316efbc091ad64180e4acf840a260abd76ecfffa4c18ed88dd",
+        "diagnose_w_budget.py": "aa42fc4ffc12794e1b39684bb67634743ecb3bc350586d552f97b0bc316b6f60",
+        "figures.py": "80109f69d5491125be9d734d6adb76bc154f9fb31465024530b6aea48177a057",
+        "fixture.json": "52d710935fe592e790080ab29c410987c1eddd0e54bc622f1a766b56b35508e0",
+        "full_config.json": "da74a97652acd4bdb86d0f73f867bfd020a6f930dae91bbd49f70b486388b066",
+        "isac_metadata.py": "fe51c21a4340c7a901ad2c3bbce6a323cdcc38950c5ccbed4f9bc2fbbc6497f3",
+        "README.md": "eacec33157994dd781aaee0af6fea4a5357db97c393d20a3c42b6faf2f1bc541",
+        "run.py": "29584a2dc08dbd36d2613fdc44394658a1c3ed1caecbcd42b11010fe42da6111",
+        "run_full_isac_figure.m": "5185448c70d7f4d69fbda1e0d1997b253e4900600139a810b6b89f5299bbd825",
+        "run_strict_rotatable_isac.m": "55954bc18eefb42ecbd53082a1e265ef6b5cf5dcd3d93dc3394933e944603181",
+        "source_contract.json": "0000cc08da641f393a42c82263e2ab01c91b878e025d5108ef5c3ca932e5f452",
+        "strict_isac_implementation_fingerprint.m": "6bc473acf838c405139770fbf9696c1e5e6ca7d3cf3cb164cc8661c020406d2c",
+        "test_metadata.py": "de2f96685a6c39e98e7bdf3b415a2d1f1c012ba5c19e208680677ebaf0d1651a"
+      }
+    },
+    {
+      "paper_id": "two-timescale-ma",
+      "compared_sections": [
+        "metrics",
+        "checks",
+        "history"
+      ],
+      "atol": 1e-06,
+      "rtol": 1e-05,
+      "evidence_sha256": {
+        "python": "ed058b689b7b2d8db27407cca6284ce0eec4b0e04257562f159e23734562a67e",
+        "matlab": "c5005a24b95fc3e4e2720d39ca262eb88b68f5c66f2a6e5e494606cfab83d6e3",
+        "parity": "4eb0c352a3199c35173220d63e48d74d610f09f581d67be116e5effd923e9db8"
+      },
+      "source_sha256": {
+        "brute_force.py": "3f946a57a78fcc3af4fb5557713df8233134bf606ed9815bd6d7de7f927a99d6",
+        "core.py": "06d2c504d08f3fe3fdb5a5bcdb4466e14034fdcf45c623e39f14512498312fab",
+        "figures.py": "3df1710fa81899c2ace7dcf5490884fc2543fb15f0814cba36fccb98beba8579",
+        "fixture.json": "cb3d73ae2313c0f565eae0e268df4f5f1fef4900e072cf842b61e6153490efe2",
+        "full_config.json": "ec2ab26f9eaf116a506fc74ac7e69b0634d654052d06a5ccbdf19aa7f0aac604",
+        "ma_metadata.py": "d47f9c183143eaa14d602d466e1f4e014628753befbb70d64ae85a8bba84a60b",
+        "README.md": "d9da5f609ab9c99752b5f94a54dc77cdcbbe2e5a9c577e4015e3be471529415a",
+        "run.py": "ba8ed5e3b886c4a8272db7f2a2652e67ccc47847b7381821bb0d8c4fbb56fcc5",
+        "run_full_ma_figure.m": "8a12f58921acadf1bc5e9c25a142c4ef9b851153c1197833008f877db960d2d1",
+        "run_strict_two_timescale_ma.m": "621374d8d18af66b1718fe47b50a6c2f8db8bc8f858bd2368ac925629683a52a",
+        "source_contract.json": "ca7199e56abbbe7e2bf4f6175b31e67d6a679b16a1de5354dcc498028b0730ab",
+        "strict_ma_implementation_fingerprint.m": "00d4c934675370212418c2bfa64825ad0435e68ffb67454579156b82faa28aff",
+        "test_metadata.py": "eda6ce3543b6e2da7f6f16c6401018b543b12616f645447a6cfe02fdc0760fe9"
+      }
+    },
+    {
+      "paper_id": "cooperative-satcom",
+      "compared_sections": [
+        "metrics",
+        "checks"
+      ],
+      "atol": 1e-06,
+      "rtol": 1e-05,
+      "evidence_sha256": {
+        "python": "2b2cae206969b5e5327de52763f219664717e42122f094ee4401701a5237f9b8",
+        "matlab": "8abb41d47fdce2db5459ab5648a95fb1437f261bdaaa6916016d51c70c7a5f7e",
+        "parity": "fa11260612e1614f16f12679cbf21ae0c7b35666d541f071acf1530e4797d5ee"
+      },
+      "source_sha256": {
+        "algorithms.py": "fb9c16b85fd05a938e245cb2a918634bfc26bff7599e6c3b8907dc6602c8fa3f",
+        "core.py": "fdbe81b3d19e1c1aa62a015969017f24accdcdb6e7a709a65540576b49f0abf2",
+        "full_config.json": "928095754ec82e797abe9cdc77a9a3c5bfb6502d1db1ab498ea08023827d4410",
+        "models.py": "9c2aee0dd20dc985644acc60419c412b85a29d9250505f4f404c72a4da87ec7c",
+        "README.md": "3f77879d004de8dd62e11b36ad57507989b6b3d109ef91e8c8eb715231025b57",
+        "run.py": "1cd1e0238c52bd57fb22dd28f31f4cae55fa89fd3f2ba7cf0f607b284997014f",
+        "run_strict_cooperative_satcom.m": "81f0c0a4a99a0d645031d73a90d7446463833778c7228e0f0953e70df9d9b604",
+        "scenario.py": "aa49ddf646b51a75c94a596c1b34dc4a96893c5f806abd331771a05ef70310cd",
+        "source_contract.json": "a623731511457c0b52653f199dc996cc38f1e9061ad06b39f12deffd196b07e2",
+        "source_map.json": "88654a5053a38f9e28d2cd0e46769b10a0dad5d2afdad7eb379097379918ed49",
+        "strict_satcom_algorithms.m": "d829f93c25c838aab6d98f1271117a8fee8fd7a1eb2be01bbc91162703911503",
+        "strict_satcom_component_test.m": "70f4d04e89b7c57094141e3a87bae7d56cd0434f363cfe3b496b55d30e288a21",
+        "strict_satcom_core.m": "b2cc5284f0c3a5513572f5987e69d2c0a8977c232e278a820c0ccf5bd8de3c80",
+        "strict_satcom_model_test.m": "743f85fe5f5ff16f3c61e209d099579c733d9045267ae1cdf0004beaa145223a",
+        "strict_satcom_models.m": "2691ff7cc7a1582d8339afe4cfdc5041503d8890ea0514fb1a9022e413665277",
+        "strict_satcom_scenario.m": "1f3d0519039719fd995ead2789b4399894939db3161abf0916dd95f10e3d736b",
+        "termination.py": "b2ddf5f9f9be25dce18e0ebdeaed9f25926f348058970978bb66a1f34d7c5058",
+        "test_termination.py": "fe669d3fbb9233a7b550cbac375840b094adbc64473eb7dc339a76230a8c8a18"
+      }
+    },
+    {
+      "paper_id": "hotspot-satcom",
+      "compared_sections": [
+        "metrics",
+        "checks"
+      ],
+      "atol": 1e-06,
+      "rtol": 1e-05,
+      "evidence_sha256": {
+        "python": "1bd27998efc3544a29ad3871efe542bc77a53be63f095321b4689ebeed3973d5",
+        "matlab": "3a34874c64c1af8b89d84a8c0e7743a303063a42e04b81ff9693b48a8ad3e84f",
+        "parity": "f3484c33dcd813a4c3ac0e4d21ceb19e00426dcb2494fa883b7366b28b994b92"
+      },
+      "source_sha256": {
+        "core.py": "de932013f2000eaf2510ab4daea355f323419c37d42559c7e7121a5a1b38fc40",
+        "full_config.json": "dd8cf65741ec59a504d1f032571b7858feee4a103fb454e565279d65b661d80c",
+        "README.md": "4e37b9bef1c928caeeaa5227a213efcf842a8a6b361ac3b56bf463ae7649ca01",
+        "run.py": "5904f608615cc687894b9353af51ecc58ded4ce4209754429bd345b544eacda2",
+        "run_strict_hotspot_satcom.m": "ff37888e8b8855eacc7a3b6c660144fdeda6a014e8c91130e78c5e70e734c56a",
+        "scenario.py": "cf778ded5fc65e0ed18ebb85e2ab7388a69714e0a2c911943d341fc66460727c",
+        "source_contract.json": "756c2d429dd34240b7b1d2a442ee1776671321d5d6b0b0991b522810f341d8a3",
+        "source_map.json": "7a79db8ae5a9b15ac6ab33eaa4c8ae5ea855eb70cd10f98dd87677cd0a614982",
+        "strict_hotspot_component_test.m": "b8ccfefe65e437ba426eda6ea6b654c76c35596519bdb67f16c6e95cd71b7a68",
+        "strict_hotspot_core.m": "edcd894279953899d29c76db9ff0d3d05c0e3a4b615d453f7131795a5d4c2d33",
+        "strict_hotspot_scenario.m": "58bc38d5e20aebc66f2763888d324cd46671a98ee0c80f2a397dd7a2469c0745",
+        "strict_hotspot_termination.m": "fe5578137d98f3bad956b31dfffe96be3c22352bf060ef143ea5b7d3e92db4f0",
+        "termination.py": "f9e2c143f00c32abd0dfcf424f8f4e371e57ff04792d932aac3be26e6bffb90f",
+        "test_phase_method.py": "13cc3dc5dde29a2c1b6eab7b13bbf53101479bc7bd94879b3655f98193ac9484",
+        "test_termination.py": "4bd9ed9c47fa754f9b87fe578546a29aad959c0cea59ee50254d4f73919f14a4"
+      }
+    }
+  ],
+  "failures": [],
+  "limitations": [
+    "MATLAB and Python full experiment banks have not all converged/executed",
+    "Final publisher-version equivalence and original figure agreement remain unverified",
+    "Genuine source-formulation gaps remain explicit in package contracts"
+  ]
+}

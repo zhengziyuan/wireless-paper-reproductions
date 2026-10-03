@@ -1,0 +1,19 @@
+# Original-algorithm execution evidence — not full reproduction
+
+This evidence belongs to `strict/`, not the superseded reduced previews under `papers/`.
+
+The `components/` files are actual independent Python and MATLAB runtime outputs. Their shared-input comparisons check gradients, mathematical identities, original convex subproblems, objectives and physical residuals. Convex backends may return different nonunique optimizer vectors. The associated parity reports specify which sections and tolerances were compared. They do not claim every original figure or complete optimization chain has converged.
+
+The MIS sensing closed-form samples use the full 20×20 static / 16×16 movable surfaces, 9 targets and 91×361 angular grid. Reproduction-chosen target samples and phase-coordinate alignment are identified in the configuration. The original plotted numerical values have not been certified; this is not a replacement for the full RALM optimization.
+
+The failed full-size sensing attempt is preserved as a diagnostic. Its eight completed starts did not produce a feasible converged result. It was stopped for debugging with the original 6000 / 30 / 4000 budget intact. Subsequent complete 30×4000 single-start diagnostics distinguish common-step and original per-block versions, feasibility, projected KKT residual, and outer stopping. They are not 6000-start figure results. No relaxed tolerance, substituted optimizer, partial batch or failed solve is counted as full reproduction.
+
+The latest preserved full-size per-block trial (`diagnostics/sensing-full-start-four-alpha-v2-failed.json`) took 689.24 seconds and still failed: maximum constraint residual 1.69336e-6 exceeds 1e-6, final projected/KKT norm 3.32846e-5 exceeds the active 1.25893e-6 threshold, and the last outer step is 0.358955. Its 30 outer calls include 12 inner gradient stops, 14 caps and 4 block line-search failures. The subsequent raw-tangent/projected-displacement non-descent safeguard passed unit regressions and both-language component checks only; the corrected full-size scenario has not yet been revalidated. Old checkpoints cannot be reused with changed sources.
+
+The ISAC first full-size realization ran all six schemes with the original model, but 33 of 111 inner W calls exhausted the then-chosen 500 cap. The isolated initial-W trial with a 10000 cap reached the unchanged original relative stopping criterion at 2828 iterations; the first 500 objective values exactly match the original capped trial. MM-QCQP stationarity and the original nonconvex objective's KKT residual are separately recorded. This does not establish nonconvex stationarity, a RIS gain in that zero-bridge realization, or a complete 100-channel figure bank.
+
+Satellite bounded-chain outputs explicitly retain capped/not-converged algorithm statuses and primal/QT/SDR residuals. Their physical constraints passed within recorded tolerances, but their complete production sweeps have not been validated. The current formal Hotspot method is RGD/QT.
+
+`summary.json` binds the six component outputs and their numerical comparisons to the source hashes recorded at actual execution. MIS comparisons exercise the formal guarded per-block branch; literal printed diagnostics are separate. `matlab-source-analysis.json` records actual source diagnostics and MATLAB version, not a full numerical execution certificate. Closed-form samples are stored losslessly in the two ZIP archives; their parity report concerns the extracted original JSON bytes. The nine PNGs visualize those computed angular samples, not certified matches to original paper figures.
+
+Remaining analytical/source gaps and numerical convergence failures are listed in `../status.json`, package source contracts and READMEs. A green component workflow is never the full reproduction release gate.

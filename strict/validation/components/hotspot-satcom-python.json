@@ -1,0 +1,35 @@
+{
+  "paper_id": "hotspot-satcom",
+  "scope": "synthetic_full-dimensional_component_test_NOT_paper_reproduction",
+  "phase_method": "author_Algorithm_3-2_RGD_minimize_negative_F",
+  "dimensions": {
+    "N": 16,
+    "U": 6,
+    "K": 10,
+    "M": 25
+  },
+  "metrics": {
+    "initial_hu_rate": 0.008651849109027474,
+    "qt_hu_rate": 3.2063386799933973,
+    "sdr_rounded_hu_rate": 3.203065577399646,
+    "sdr_upper_bound": 2.741990204898534,
+    "rounded_surrogate": 2.741990214095719
+  },
+  "checks": {
+    "qt_identity_pass": true,
+    "qt_identity_error": 4.336808689942018e-19,
+    "physical_constraint_pass": true,
+    "physical_constraint_violation": 0.0,
+    "sdr_psd_pass": true,
+    "sdr_diagonal_pass": true,
+    "rounding_unit_modulus_pass": true,
+    "surrogate_bound_pass": true,
+    "phase_gradient_pass": true,
+    "phase_gradient_error": 8.556180514096567e-09,
+    "phase_gradient_tangent_pass": true,
+    "phase_lift_objective_identity_pass": true,
+    "phase_lift_objective_identity_error": 0.0,
+    "phase_criterion_monotone": true
+  },
+  "full_reproduction_pass": false
+}

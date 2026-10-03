@@ -1,0 +1,4323 @@
+{
+  "paper_id": "mis-communications",
+  "scope": "component_unit_test_not_paper_figure",
+  "solver_policy": {
+    "max_iterations": 40,
+    "gradient_tolerance": 1e-10,
+    "line_search_policy": "original_per_block_backtracking",
+    "initial_step": 1,
+    "armijo_constant": 0.0001,
+    "backtrack_factor": 0.5,
+    "max_backtracks": 60,
+    "non_descent_policy": "documented_non_descent_restart"
+  },
+  "metrics": {
+    "min_relaxed_snr": 0.9539294023156565,
+    "min_binary_snr": 0.9539294023156565,
+    "binary_schedule": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "checks": {
+    "gradient_errors": {
+      "phi": 1.0587253990168577e-10,
+      "theta": 1.4476954357522942e-11,
+      "X": 2.1107150749433146e-11
+    },
+    "gradient_pass": true,
+    "ordinary_transpose_amplitude_error": 2.974012346530022e-16,
+    "quadratic_identity_error": 3.67691171723707e-16,
+    "quartic_echo_identity_error": 6.765247200329107e-16,
+    "number_of_positions_correct": true,
+    "constraint_pass": true,
+    "production_line_search_regression": {
+      "circle_raw_slope_counterexample": 8.0,
+      "circle_initial_actual_slope_counterexample": -0.41917637216310577,
+      "raw_non_descent_restart_pass": true,
+      "projected_non_descent_restart_pass": true,
+      "empty_stationary_blocks_pass": true,
+      "closed_simplex_KKT_pass": true
+    }
+  },
+  "history": [
+    {
+      "mu": 1.3,
+      "inner": [
+        {
+          "iteration": 0,
+          "objective": 1.3111790666612102,
+          "gradient_norm": 0.12147867105532482,
+          "projected_kkt_norm": 0.12147867105532481,
+          "raw_pr_beta": {
+            "phi": 0.0,
+            "theta": 0.0,
+            "X": 0.0
+          },
+          "raw_pr_slope": -0.014757067521367814,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.0043088429313423975,
+            "theta": -0.0009492753567592507,
+            "X": -0.009498949233266166
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.004306724571931184,
+            "theta": -0.0009489084267470065,
+            "X": -0.009498949233266165
+          },
+          "raw_projected_displacement_slope": -0.014754582231944355,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.014754582231944355
+        },
+        {
+          "iteration": 1,
+          "objective": 1.2960235715010424,
+          "gradient_norm": 0.12820993607944003,
+          "projected_kkt_norm": 0.12820993607944003,
+          "raw_pr_beta": {
+            "phi": 0.10117662219723401,
+            "theta": 0.130971138978267,
+            "X": 0.03428184057638694
+          },
+          "raw_pr_slope": -0.017386932299755558,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.005601683950005359,
+            "theta": -0.0013196161818471459,
+            "X": -0.010465632167903053
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.005597810539776501,
+            "theta": -0.0013188313665851857,
+            "X": -0.010465632167903053
+          },
+          "raw_projected_displacement_slope": -0.01738227407426474,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.01738227407426474
+        },
+        {
+          "iteration": 2,
+          "objective": 1.2780915020098178,
+          "gradient_norm": 0.13634539325422826,
+          "projected_kkt_norm": 0.13634539325422826,
+          "raw_pr_beta": {
+            "phi": 0.10727618771977843,
+            "theta": 0.12278782584228523,
+            "X": 0.0435868605437658
+          },
+          "raw_pr_slope": -0.019900943465752913,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.006813549135768656,
+            "theta": -0.0016317536127838659,
+            "X": -0.011455640717200392
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.006807895431366824,
+            "theta": -0.0016305721674362292,
+            "X": -0.011455640717200392
+          },
+          "raw_projected_displacement_slope": -0.019894108316003446,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.019894108316003446
+        },
+        {
+          "iteration": 3,
+          "objective": 1.257527519014378,
+          "gradient_norm": 0.14553507787830317,
+          "projected_kkt_norm": 0.14553507787830317,
+          "raw_pr_beta": {
+            "phi": 0.10694473806677454,
+            "theta": 0.11142269771033543,
+            "X": 0.04989724441287855
+          },
+          "raw_pr_slope": -0.022774236127617146,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.008184302620534958,
+            "theta": -0.0019558631236234873,
+            "X": -0.0126340703834587
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.00817647286547871,
+            "theta": -0.0019542323957996858,
+            "X": -0.012634070383458703
+          },
+          "raw_projected_displacement_slope": -0.022764775644737098,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.022764775644737098
+        },
+        {
+          "iteration": 4,
+          "objective": 1.233969551773401,
+          "gradient_norm": 0.15567227691274207,
+          "projected_kkt_norm": 0.13694990842075433,
+          "raw_pr_beta": {
+            "phi": 0.10471087207699793,
+            "theta": 0.0992344439597129,
+            "X": 0.055246730473523666
+          },
+          "raw_pr_slope": -0.026113187494071717,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.009768534602894018,
+            "theta": -0.0022958658135317834,
+            "X": -0.014048787077645914
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.009758008885162036,
+            "theta": -0.0022937270151887046,
+            "X": -0.009212131782334257
+          },
+          "raw_projected_displacement_slope": -0.021263867682684998,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.021263867682684998
+        },
+        {
+          "iteration": 5,
+          "objective": 1.2121012752464742,
+          "gradient_norm": 0.16487917655905657,
+          "projected_kkt_norm": 0.13922817468933146,
+          "raw_pr_beta": {
+            "phi": 0.07402175827915988,
+            "theta": 0.03530934922336597,
+            "X": 0.06182453871134936
+          },
+          "raw_pr_slope": -0.028956837197174422,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.010835883015163358,
+            "theta": -0.0023076395960483923,
+            "X": -0.015813314585962673
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.01082397960957522,
+            "theta": -0.0023056444288283265,
+            "X": -0.007827649661097901
+          },
+          "raw_projected_displacement_slope": -0.02095727369950145,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.02095727369950145
+        },
+        {
+          "iteration": 6,
+          "objective": 1.1906037809990746,
+          "gradient_norm": 0.1737892706857585,
+          "projected_kkt_norm": 0.14583341088955312,
+          "raw_pr_beta": {
+            "phi": 0.06196372873760389,
+            "theta": 0.015962834127300714,
+            "X": 0.06206453910858837
+          },
+          "raw_pr_slope": -0.03198566969466209,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.011947394826932634,
+            "theta": -0.0023272195212712655,
+            "X": -0.017711055346458195
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.011934026138270375,
+            "theta": -0.0023252487429101603,
+            "X": -0.008219683573725937
+          },
+          "raw_projected_displacement_slope": -0.02247895845490647,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.02247895845490647
+        },
+        {
+          "iteration": 7,
+          "objective": 1.1675456383266827,
+          "gradient_norm": 0.182940751730696,
+          "projected_kkt_norm": 0.15329994284027285,
+          "raw_pr_beta": {
+            "phi": 0.05919742874885831,
+            "theta": 0.007731305851828739,
+            "X": 0.06179414848478005
+          },
+          "raw_pr_slope": -0.03538631701915744,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.013232075703310885,
+            "theta": -0.0023387379900331523,
+            "X": -0.019815503325813402
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.013216863127268549,
+            "theta": -0.0023367730975664422,
+            "X": -0.00918696218134194
+          },
+          "raw_projected_displacement_slope": -0.02474059840617693,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.02474059840617693
+        },
+        {
+          "iteration": 8,
+          "objective": 1.1421735180379808,
+          "gradient_norm": 0.19236029364060298,
+          "projected_kkt_norm": 0.15640787658188238,
+          "raw_pr_beta": {
+            "phi": 0.05678501292611811,
+            "theta": -0.0005370418366459929,
+            "X": 0.061490439730882744
+          },
+          "raw_pr_slope": -0.039077823316866676,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.014605950356810924,
+            "theta": -0.002312032763531836,
+            "X": -0.02215984019652392
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.01458867084775797,
+            "theta": -0.00231013473320926,
+            "X": -0.009075275305198489
+          },
+          "raw_projected_displacement_slope": -0.025974080886165717,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.025974080886165717
+        },
+        {
+          "iteration": 9,
+          "objective": 1.1156001682186072,
+          "gradient_norm": 0.20149513985220524,
+          "projected_kkt_norm": 0.15051414150818057,
+          "raw_pr_beta": {
+            "phi": 0.04686940575984905,
+            "theta": -0.007057946808094707,
+            "X": 0.06023287193569823
+          },
+          "raw_pr_slope": -0.04270600232370382,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.01573791533549225,
+            "theta": -0.0022578801422549204,
+            "X": -0.02471020684595665
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.015719151567853494,
+            "theta": -0.0022560574764198074,
+            "X": -0.00624586376092019
+          },
+          "raw_projected_displacement_slope": -0.02422107280519349,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.02422107280519349
+        },
+        {
+          "iteration": 10,
+          "objective": 1.091055157146292,
+          "gradient_norm": 0.20919733788174413,
+          "projected_kkt_norm": 0.14893138391377148,
+          "raw_pr_beta": {
+            "phi": 0.02762347134781639,
+            "theta": -0.03910192202781576,
+            "X": 0.057943074969378866
+          },
+          "raw_pr_slope": -0.04563315674797089,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.01622010114484,
+            "theta": -0.001991094967262047,
+            "X": -0.027421960635868846
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.016201539296936397,
+            "theta": -0.00198965790386853,
+            "X": -0.004838048433408173
+          },
+          "raw_projected_displacement_slope": -0.0230292456342131,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.0230292456342131
+        },
+        {
+          "iteration": 11,
+          "objective": 1.0678373637797556,
+          "gradient_norm": 0.21605453117004436,
+          "projected_kkt_norm": 0.15094150979724882,
+          "raw_pr_beta": {
+            "phi": 0.017860327196855326,
+            "theta": -0.049527019083853194,
+            "X": 0.053079141693624744
+          },
+          "raw_pr_slope": -0.048408341584482616,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.0165469814550131,
+            "theta": -0.0017523843024836922,
+            "X": -0.030108975826985823
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.01652834524976795,
+            "theta": -0.0017512623154423003,
+            "X": -0.004935180527635293
+          },
+          "raw_projected_displacement_slope": -0.023214788092845544,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.023214788092845544
+        },
+        {
+          "iteration": 12,
+          "objective": 1.044448588561942,
+          "gradient_norm": 0.22266312178247136,
+          "projected_kkt_norm": 0.14774962756668017,
+          "raw_pr_beta": {
+            "phi": 0.014873785439413345,
+            "theta": -0.046547595532335145,
+            "X": 0.048657931029593066
+          },
+          "raw_pr_slope": -0.05128288299281859,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.016896303666851534,
+            "theta": -0.0015704474796748764,
+            "X": -0.03281613184629218
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.016876782296340917,
+            "theta": -0.0015695572729767788,
+            "X": -0.004259082950049343
+          },
+          "raw_projected_displacement_slope": -0.02270542251936704,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.02270542251936704
+        },
+        {
+          "iteration": 13,
+          "objective": 1.0216169320636506,
+          "gradient_norm": 0.22886551142817718,
+          "projected_kkt_norm": 0.14375523418500802,
+          "raw_pr_beta": {
+            "phi": 0.009777158748784388,
+            "theta": -0.045835093040682534,
+            "X": 0.04489012383358215
+          },
+          "raw_pr_slope": -0.05401311642469082,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.01705255165001835,
+            "theta": -0.0014087613118484187,
+            "X": -0.03555180346282405
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.01703196243117484,
+            "theta": -0.00140807003465739,
+            "X": -0.0024068386072754926
+          },
+          "raw_projected_displacement_slope": -0.020846871073107724,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.020846871073107724
+        },
+        {
+          "iteration": 14,
+          "objective": 1.0007975430150704,
+          "gradient_norm": 0.2340888389089189,
+          "projected_kkt_norm": 0.14324635971668098,
+          "raw_pr_beta": {
+            "phi": -0.0015774787628926523,
+            "theta": -0.04778034363610035,
+            "X": 0.0408192881782574
+          },
+          "raw_pr_slope": -0.05621447814617715,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.016725864014162633,
+            "theta": -0.001261570924025152,
+            "X": -0.038227043207989364
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.016705064257233698,
+            "theta": -0.0012610317133674857,
+            "X": -0.0025426394602177933
+          },
+          "raw_projected_displacement_slope": -0.020508735430818978,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.020508735430818978
+        },
+        {
+          "iteration": 15,
+          "objective": 0.9803408543777175,
+          "gradient_norm": 0.23885856886397383,
+          "projected_kkt_norm": 0.14238562242574146,
+          "raw_pr_beta": {
+            "phi": -0.005154789661715116,
+            "theta": -0.04869878292891467,
+            "X": 0.03697215757441153
+          },
+          "raw_pr_slope": -0.05837298680625071,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.01641617614244192,
+            "theta": -0.0011276273467056435,
+            "X": -0.04082918331710314
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.01639499926689488,
+            "theta": -0.0011272127151661087,
+            "X": -0.0026830422002914875
+          },
+          "raw_projected_displacement_slope": -0.02020525418235248,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.02020525418235248
+        },
+        {
+          "iteration": 16,
+          "objective": 0.9602108476237389,
+          "gradient_norm": 0.24319586273151633,
+          "projected_kkt_norm": 0.141192192168715,
+          "raw_pr_beta": {
+            "phi": -0.008915526673868598,
+            "theta": -0.04813285050415862,
+            "X": 0.0336903625452617
+          },
+          "raw_pr_slope": -0.06036824136338531,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.015985730420700842,
+            "theta": -0.0010096212576330458,
+            "X": -0.04337288968505142
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.01596467987981154,
+            "theta": -0.0010093052756312477,
+            "X": -0.002837205739975233
+          },
+          "raw_projected_displacement_slope": -0.01981119089541802,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.01981119089541802
+        },
+        {
+          "iteration": 17,
+          "objective": 0.9404943768352925,
+          "gradient_norm": 0.2470976008060271,
+          "projected_kkt_norm": 0.13971720884910604,
+          "raw_pr_beta": {
+            "phi": -0.012670378894840817,
+            "theta": -0.04613897125009412,
+            "X": 0.0306192856304088
+          },
+          "raw_pr_slope": -0.06218092020869191,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.015445932337467192,
+            "theta": -0.0009083759108212532,
+            "X": -0.04582661196040347
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.015425609315423758,
+            "theta": -0.0009081361513383923,
+            "X": -0.003013030867221405
+          },
+          "raw_projected_displacement_slope": -0.019346776333983556,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.019346776333983556
+        },
+        {
+          "iteration": 18,
+          "objective": 0.9212557864259994,
+          "gradient_norm": 0.25057549393782813,
+          "projected_kkt_norm": 0.13804698943142643,
+          "raw_pr_beta": {
+            "phi": -0.016217391991524204,
+            "theta": -0.042565528300555724,
+            "X": 0.02772906522776161
+          },
+          "raw_pr_slope": -0.0638104705661342,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.014816281582060244,
+            "theta": -0.0008243716784758015,
+            "X": -0.048169817305598155
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.01479727537477973,
+            "theta": -0.0008241890850887985,
+            "X": -0.0032207868754048088
+          },
+          "raw_projected_displacement_slope": -0.018842251335273338,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.018842251335273338
+        },
+        {
+          "iteration": 19,
+          "objective": 0.902526858626802,
+          "gradient_norm": 0.2536550277680351,
+          "projected_kkt_norm": 0.13630582354957022,
+          "raw_pr_beta": {
+            "phi": -0.019299920070874242,
+            "theta": -0.037286467546396855,
+            "X": 0.02498749117371212
+          },
+          "raw_pr_slope": -0.06526483846522209,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.014125079468323046,
+            "theta": -0.0007576149639516481,
+            "X": -0.05038214403294739
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.014107858490852488,
+            "theta": -0.0007574739317023657,
+            "X": -0.0034718180751853716
+          },
+          "raw_projected_displacement_slope": -0.018337150497740224,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.018337150497740224
+        },
+        {
+          "iteration": 20,
+          "objective": 0.8842979539211304,
+          "gradient_norm": 0.2563721921292443,
+          "projected_kkt_norm": 0.1346516224246271,
+          "raw_pr_beta": {
+            "phi": -0.021642687644266384,
+            "theta": -0.030195804166126675,
+            "X": 0.022367711028741945
+          },
+          "raw_pr_slope": -0.06655813859957688,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.013406722028745452,
+            "theta": -0.0007079493233225667,
+            "X": -0.05244346724750886
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.01339155893106821,
+            "theta": -0.0007078374972050881,
+            "X": -0.003777933123686429
+          },
+          "raw_projected_displacement_slope": -0.017877329551959725,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.017877329551959725
+        },
+        {
+          "iteration": 21,
+          "objective": 0.8665125380102832,
+          "gradient_norm": 0.25876832898026025,
+          "projected_kkt_norm": 0.13326371591652245,
+          "raw_pr_beta": {
+            "phi": -0.022992598302073914,
+            "theta": -0.021279041761599605,
+            "X": 0.019851392277942647
+          },
+          "raw_pr_slope": -0.06770763915344447,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.01269772502581485,
+            "theta": -0.0006752207119554227,
+            "X": -0.054334693415674186
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.012684668651841336,
+            "theta": -0.0006751285674440252,
+            "X": -0.004150813084913231
+          },
+          "raw_projected_displacement_slope": -0.017510610304198593,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.017510610304198593
+        },
+        {
+          "iteration": 22,
+          "objective": 0.849066322998891,
+          "gradient_norm": 0.26088396117573537,
+          "projected_kkt_norm": 0.12951680227859846,
+          "raw_pr_beta": {
+            "phi": -0.023167247628739396,
+            "theta": -0.010733260473030519,
+            "X": 0.017429000329594598
+          },
+          "raw_pr_slope": -0.06873024348195736,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.012032225149748605,
+            "theta": -0.0006593158390999486,
+            "X": -0.056038702493108807
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.012021115361893556,
+            "theta": -0.0006592360509118629,
+            "X": -0.0040525139170389584
+          },
+          "raw_projected_displacement_slope": -0.016732865329844377,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.016732865329844377
+        },
+        {
+          "iteration": 23,
+          "objective": 0.8323944966972203,
+          "gradient_norm": 0.2626612419998178,
+          "projected_kkt_norm": 0.12796417990387238,
+          "raw_pr_beta": {
+            "phi": -0.02667736406934844,
+            "theta": 0.015509408197281383,
+            "X": 0.01538881372977681
+          },
+          "raw_pr_slope": -0.06956522982691253,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.011284264864214869,
+            "theta": -0.0006907308542058524,
+            "X": -0.05759023410849181
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.011274973299283942,
+            "theta": -0.0006906482574172831,
+            "X": -0.0041599655908452025
+          },
+          "raw_projected_displacement_slope": -0.016125587147546427,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.016125587147546427
+        },
+        {
+          "iteration": 24,
+          "objective": 0.8163200575922553,
+          "gradient_norm": 0.26418936534223875,
+          "projected_kkt_norm": 0.1263755489497525,
+          "raw_pr_beta": {
+            "phi": -0.028107072308121418,
+            "theta": 0.03171461443099795,
+            "X": 0.013523185292454805
+          },
+          "raw_pr_slope": -0.07030029465740911,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.010578334290841172,
+            "theta": -0.0007397827617577832,
+            "X": -0.058982177604810164
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.01057047508967531,
+            "theta": -0.0007396872171528707,
+            "X": -0.00443324684898196
+          },
+          "raw_projected_displacement_slope": -0.015743409155810142,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.015743409155810142
+        },
+        {
+          "iteration": 25,
+          "objective": 0.8005659017761786,
+          "gradient_norm": 0.26570613994324266,
+          "projected_kkt_norm": 0.12655544873837796,
+          "raw_pr_beta": {
+            "phi": -0.02290959886235004,
+            "theta": 0.03118162943916013,
+            "X": 0.01181152590885554
+          },
+          "raw_pr_slope": -0.0710920761055749,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.010093750333873757,
+            "theta": -0.0007814012394610814,
+            "X": -0.06021692453224006
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.010086771866712738,
+            "theta": -0.0007812913291498915,
+            "X": -0.004984727100778391
+          },
+          "raw_projected_displacement_slope": -0.01585279029664102,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.01585279029664102
+        },
+        {
+          "iteration": 26,
+          "objective": 0.7846819337444783,
+          "gradient_norm": 0.2670698081749746,
+          "projected_kkt_norm": 0.12705311552275456,
+          "raw_pr_beta": {
+            "phi": -0.02197602465302727,
+            "theta": 0.03459846203494691,
+            "X": 0.010442799800529602
+          },
+          "raw_pr_slope": -0.07177305887962984,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.009606691119421997,
+            "theta": -0.000834037738667423,
+            "X": -0.06133233002154042
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.009600418898742979,
+            "theta": -0.0008339042633431963,
+            "X": -0.005568802847003892
+          },
+          "raw_projected_displacement_slope": -0.01600312600909007,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.01600312600909007
+        },
+        {
+          "iteration": 27,
+          "objective": 0.7686326483505459,
+          "gradient_norm": 0.26824831494856566,
+          "projected_kkt_norm": 0.11091378188869445,
+          "raw_pr_beta": {
+            "phi": -0.021229772295185866,
+            "theta": 0.036614488440598995,
+            "X": 0.009069750387576923
+          },
+          "raw_pr_slope": -0.07235078906991277,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.009158786852497157,
+            "theta": -0.0008929725039516271,
+            "X": -0.06229902971346399
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.00915298038001695,
+            "theta": -0.0008928069268889915,
+            "X": -0.003565469427094607
+          },
+          "raw_projected_displacement_slope": -0.013611256734000548,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.013611256734000548
+        },
+        {
+          "iteration": 28,
+          "objective": 0.7550912048195128,
+          "gradient_norm": 0.26861762979475534,
+          "projected_kkt_norm": 0.09789731426972292,
+          "raw_pr_beta": {
+            "phi": -0.03568929796176301,
+            "theta": 0.03179205715981057,
+            "X": 0.007462437659873512
+          },
+          "raw_pr_slope": -0.0723386238300199,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.008334337824795597,
+            "theta": -0.0009385334112098323,
+            "X": -0.06306575259401448
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.008329398076411955,
+            "theta": -0.0009383201307354811,
+            "X": -2.641071455089728e-05
+          },
+          "raw_projected_displacement_slope": -0.009294128921698333,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.009294128921698333
+        },
+        {
+          "iteration": 29,
+          "objective": 0.7460214611326539,
+          "gradient_norm": 0.2680760355872283,
+          "projected_kkt_norm": 0.09323792723609442,
+          "raw_pr_beta": {
+            "phi": -0.05312805784504955,
+            "theta": 0.031120559487577706,
+            "X": 0.0055311882772300525
+          },
+          "raw_pr_slope": -0.0718281430775749,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.00726310033518224,
+            "theta": -0.0009834305418589665,
+            "X": -0.0635816122005337
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.007259208756071148,
+            "theta": -0.0009831395437429318,
+            "X": -5.99565854147217e-05
+          },
+          "raw_projected_displacement_slope": -0.008302304885228802,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.008302304885228802
+        },
+        {
+          "iteration": 30,
+          "objective": 0.7378898519480239,
+          "gradient_norm": 0.2675162587518854,
+          "projected_kkt_norm": 0.08945110743521216,
+          "raw_pr_beta": {
+            "phi": -0.04898554919083371,
+            "theta": 0.03042067472476043,
+            "X": 0.003906980709513801
+          },
+          "raw_pr_slope": -0.07150822546209833,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.006550181344258117,
+            "theta": -0.0010351791799213246,
+            "X": -0.06392286493791889
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.00654677815538952,
+            "theta": -0.0010348081087686969,
+            "X": -0.00011055202127263335
+          },
+          "raw_projected_displacement_slope": -0.00769213828543085,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.00769213828543085
+        },
+        {
+          "iteration": 31,
+          "objective": 0.7303302764763451,
+          "gradient_norm": 0.2669188995458895,
+          "projected_kkt_norm": 0.08643991724770833,
+          "raw_pr_beta": {
+            "phi": -0.04538918320424313,
+            "theta": 0.02967027592730883,
+            "X": 0.002633151259771778
+          },
+          "raw_pr_slope": -0.07116351990729973,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.005943523938411936,
+            "theta": -0.0010911814719016836,
+            "X": -0.06412881449698611
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.005940469789216302,
+            "theta": -0.0010907319410405323,
+            "X": -0.00018671887829367978
+          },
+          "raw_projected_displacement_slope": -0.007217920608550514,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.007217920608550514
+        },
+        {
+          "iteration": 32,
+          "objective": 0.72320724063425,
+          "gradient_norm": 0.26630216734182066,
+          "projected_kkt_norm": 0.08424793407047854,
+          "raw_pr_beta": {
+            "phi": -0.04045229460778842,
+            "theta": 0.027388174232686503,
+            "X": 0.001552760149255233
+          },
+          "raw_pr_slope": -0.07081758628353867,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.005461706191034673,
+            "theta": -0.001145325182423382,
+            "X": -0.06421055491008061
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.005458847581473505,
+            "theta": -0.0011448059631947814,
+            "X": -0.0002921309146823929
+          },
+          "raw_projected_displacement_slope": -0.006895784459350679,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.006895784459350679
+        },
+        {
+          "iteration": 33,
+          "objective": 0.7163711384685811,
+          "gradient_norm": 0.26569246847222905,
+          "projected_kkt_norm": 0.08289067193377297,
+          "raw_pr_beta": {
+            "phi": -0.03474532718860907,
+            "theta": 0.026724386037476303,
+            "X": 0.0007043295956774459
+          },
+          "raw_pr_slope": -0.07048678704389023,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.005086067922475892,
+            "theta": -0.0012030663747117595,
+            "X": -0.06419765274670258
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.0050832761599720845,
+            "theta": -0.0012024805352748664,
+            "X": -0.00043105565616715963
+          },
+          "raw_projected_displacement_slope": -0.0067168123514141104,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.0067168123514141104
+        },
+        {
+          "iteration": 34,
+          "objective": 0.7096785561034987,
+          "gradient_norm": 0.2651310476586489,
+          "projected_kkt_norm": 0.08241921062015499,
+          "raw_pr_beta": {
+            "phi": -0.02799090674327356,
+            "theta": 0.02783729266057847,
+            "X": 8.355880513060047e-05
+          },
+          "raw_pr_slope": -0.0701964595277012,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.004810693054046279,
+            "theta": -0.0012684982095297506,
+            "X": -0.06411726826412517
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.0048078399590246144,
+            "theta": -0.001267844564271277,
+            "X": -0.0006104045427871024
+          },
+          "raw_projected_displacement_slope": -0.006686089066082994,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.006686089066082994
+        },
+        {
+          "iteration": 35,
+          "objective": 0.702979042935534,
+          "gradient_norm": 0.2646706634078865,
+          "projected_kkt_norm": 0.08290451796726066,
+          "raw_pr_beta": {
+            "phi": -0.02008432475180263,
+            "theta": 0.030985688617035066,
+            "X": -0.00030576574787571426
+          },
+          "raw_pr_slope": -0.06997716351866963,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.004631770137755186,
+            "theta": -0.0013475359900817724,
+            "X": -0.06399785739083268
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.00462871744287504,
+            "theta": -0.0013468072171729315,
+            "X": -0.0008398194619229917
+          },
+          "raw_projected_displacement_slope": -0.006815344121970963,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.006815344121970963
+        },
+        {
+          "iteration": 36,
+          "objective": 0.6961085449078346,
+          "gradient_norm": 0.2643752431701522,
+          "projected_kkt_norm": 0.08442718709044379,
+          "raw_pr_beta": {
+            "phi": -0.010992344198916357,
+            "theta": 0.03610150675362451,
+            "X": -0.0004523908338931193
+          },
+          "raw_pr_slope": -0.06986548049956495,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.004548678297032239,
+            "theta": -0.0014470707648770033,
+            "X": -0.06386973143765572
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.004545263399451516,
+            "theta": -0.001446252240942347,
+            "X": -0.0011318825879850104
+          },
+          "raw_projected_displacement_slope": -0.0071233982283788735,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.0071233982283788735
+        },
+        {
+          "iteration": 37,
+          "objective": 0.6888824241239514,
+          "gradient_norm": 0.2643195465688632,
+          "projected_kkt_norm": 0.08706405507615747,
+          "raw_pr_beta": {
+            "phi": -0.0008463047132008507,
+            "theta": 0.042892471316600685,
+            "X": -0.00033709427834958993
+          },
+          "raw_pr_slope": -0.0699039483354273,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.004563126992604155,
+            "theta": -0.0015749198664123765,
+            "X": -0.06376590147641077
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.004559147112413852,
+            "theta": -0.0015739878667919826,
+            "X": -0.0015022889571480891
+          },
+          "raw_projected_displacement_slope": -0.007635423936353924,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.007635423936353924
+        },
+        {
+          "iteration": 38,
+          "objective": 0.6810893393466693,
+          "gradient_norm": 0.26458787794222643,
+          "projected_kkt_norm": 0.0908721470875654,
+          "raw_pr_beta": {
+            "phi": 0.009988695303016406,
+            "theta": 0.05079379396601697,
+            "X": 6.59306474549804e-05
+          },
+          "raw_pr_slope": -0.07014034551569337,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.004678080291204886,
+            "theta": -0.0017394351948027188,
+            "X": -0.06372283002968576
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.004673275667428,
+            "theta": -0.0017383544644241898,
+            "X": -0.0019697460293995506
+          },
+          "raw_projected_displacement_slope": -0.00838137616125174,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.00838137616125174
+        },
+        {
+          "iteration": 39,
+          "objective": 0.672487084578151,
+          "gradient_norm": 0.26526989971428355,
+          "projected_kkt_norm": 0.09586909478098991,
+          "raw_pr_beta": {
+            "phi": 0.020852643293402612,
+            "theta": 0.05895566349688648,
+            "X": 0.0007840547124116287
+          },
+          "raw_pr_slope": -0.07062497387753201,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.004895671136529921,
+            "theta": -0.0019486940046416607,
+            "X": -0.06378060873636043
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.004889711926465613,
+            "theta": -0.0019474147470358032,
+            "X": -0.002555197762453136
+          },
+          "raw_projected_displacement_slope": -0.009392324435954552,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.009392324435954552
+        }
+      ],
+      "stop": {
+        "reason": "iteration_cap",
+        "objective": 0.6628028340138692,
+        "gradient_norm": 0.26645113687887856,
+        "projected_kkt_norm": 0.10200946305352074,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "mu": 0.65,
+      "inner": [
+        {
+          "iteration": 0,
+          "objective": -0.028264285736643358,
+          "gradient_norm": 0.2709403071319228,
+          "projected_kkt_norm": 0.11433286178801672,
+          "raw_pr_beta": {
+            "phi": 0.0,
+            "theta": 0.0,
+            "X": 0.0
+          },
+          "raw_pr_slope": -0.07340865002874064,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.005473578043573627,
+            "theta": -0.0028650980442934634,
+            "X": -0.06506997394087355
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.005469546587936329,
+            "theta": -0.002862574777449921,
+            "X": -0.004733327196770629
+          },
+          "raw_projected_displacement_slope": -0.013065448562156879,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.013065448562156879
+        },
+        {
+          "iteration": 1,
+          "objective": -0.0415888118753292,
+          "gradient_norm": 0.2757169879674568,
+          "projected_kkt_norm": 0.11949267982272976,
+          "raw_pr_beta": {
+            "phi": 0.024841448283313774,
+            "theta": 0.03658495043538716,
+            "X": 0.01867983014046436
+          },
+          "raw_pr_slope": -0.07749884782690868,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.005731112748060655,
+            "theta": -0.0031451437986006973,
+            "X": -0.06862259128024732
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.005724576195631074,
+            "theta": -0.003142223764874572,
+            "X": -0.005741716183903963
+          },
+          "raw_projected_displacement_slope": -0.01460851614440961,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.01460851614440961
+        },
+        {
+          "iteration": 2,
+          "objective": -0.056621991084498835,
+          "gradient_norm": 0.28101575055856054,
+          "projected_kkt_norm": 0.1268984195224985,
+          "raw_pr_beta": {
+            "phi": 0.048682691528281995,
+            "theta": 0.05081093848623612,
+            "X": 0.0179363493475741
+          },
+          "raw_pr_slope": -0.08067131702923912,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.0062779213279140905,
+            "theta": -0.0034775877172479033,
+            "X": -0.07091580798407712
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.006267385330872177,
+            "theta": -0.003474258870971792,
+            "X": -0.006911828903051621
+          },
+          "raw_projected_displacement_slope": -0.01665347310489559,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.01665347310489559
+        },
+        {
+          "iteration": 3,
+          "objective": -0.07383224522976706,
+          "gradient_norm": 0.28663647131595166,
+          "projected_kkt_norm": 0.13561897338004922,
+          "raw_pr_beta": {
+            "phi": 0.05911572482214544,
+            "theta": 0.058536203316264836,
+            "X": 0.017432954958575306
+          },
+          "raw_pr_slope": -0.0840128170098417,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.0069442175265086725,
+            "theta": -0.0038808819639379296,
+            "X": -0.0731877175193951
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.006928747007032488,
+            "theta": -0.003876993213479145,
+            "X": -0.008296887539380968
+          },
+          "raw_projected_displacement_slope": -0.0191026277598926,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.0191026277598926
+        },
+        {
+          "iteration": 4,
+          "objective": -0.09356482366324126,
+          "gradient_norm": 0.2922763520935915,
+          "projected_kkt_norm": 0.14453534158309914,
+          "raw_pr_beta": {
+            "phi": 0.05695357942220893,
+            "theta": 0.05756063898544747,
+            "X": 0.0169210496590633
+          },
+          "raw_pr_slope": -0.08732589035418176,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.007584168780507786,
+            "theta": -0.004296603460470832,
+            "X": -0.07544511811320313
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.007564020863877316,
+            "theta": -0.0042920608627314664,
+            "X": -0.009806520952141922
+          },
+          "raw_projected_displacement_slope": -0.021662602678750704,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.021662602678750704
+        },
+        {
+          "iteration": 5,
+          "objective": -0.11583976138199892,
+          "gradient_norm": 0.2975012265688067,
+          "projected_kkt_norm": 0.15244353637691957,
+          "raw_pr_beta": {
+            "phi": 0.04428324478691232,
+            "theta": 0.048885872777506854,
+            "X": 0.01604118141550975
+          },
+          "raw_pr_slope": -0.09029737492408901,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.00803055485317258,
+            "theta": -0.00465574987051279,
+            "X": -0.07761107020040364
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.008007665896841864,
+            "theta": -0.0046505602651665985,
+            "X": -0.011285336694188255
+          },
+          "raw_projected_displacement_slope": -0.02394356285619672,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.02394356285619672
+        },
+        {
+          "iteration": 6,
+          "objective": -0.14027881828189048,
+          "gradient_norm": 0.30189222418839134,
+          "projected_kkt_norm": 0.15834107330764646,
+          "raw_pr_beta": {
+            "phi": 0.025715836279698485,
+            "theta": 0.03529365909844165,
+            "X": 0.01467285285446076
+          },
+          "raw_pr_slope": -0.092669635788123,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.008172042708406609,
+            "theta": -0.004900419250687547,
+            "X": -0.07959717382902884
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.008149431272643346,
+            "theta": -0.004894702285368875,
+            "X": -0.012552137577363206
+          },
+          "raw_projected_displacement_slope": -0.025596271135375426,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.025596271135375426
+        },
+        {
+          "iteration": 7,
+          "objective": -0.16618425027286654,
+          "gradient_norm": 0.30523996611313814,
+          "projected_kkt_norm": 0.1415520284110781,
+          "raw_pr_beta": {
+            "phi": 0.006400420332680434,
+            "theta": 0.02044794920840606,
+            "X": 0.013044300393565812
+          },
+          "raw_pr_slope": -0.09437465605942565,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.008000587476940232,
+            "theta": -0.00500864565151687,
+            "X": -0.08136542293096855
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.007980991885715383,
+            "theta": -0.005002585134286551,
+            "X": -0.009770942308215777
+          },
+          "raw_projected_displacement_slope": -0.02275451932821771,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.02275451932821771
+        },
+        {
+          "iteration": 8,
+          "objective": -0.18895602383992827,
+          "gradient_norm": 0.30752221208388425,
+          "projected_kkt_norm": 0.11088904809595104,
+          "raw_pr_beta": {
+            "phi": -0.024300737857950838,
+            "theta": -0.006433843322128733,
+            "X": 0.013253657953895683
+          },
+          "raw_pr_slope": -0.09544160263881221,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.007266273660221298,
+            "theta": -0.004792860351632377,
+            "X": -0.08338246862695854
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.007252469631613018,
+            "theta": -0.004787141500934654,
+            "X": -1.8644786906449134e-05
+          },
+          "raw_projected_displacement_slope": -0.01205825591945412,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.01205825591945412
+        },
+        {
+          "iteration": 9,
+          "objective": -0.20064238278615087,
+          "gradient_norm": 0.30952149760052466,
+          "projected_kkt_norm": 0.104068476815738,
+          "raw_pr_beta": {
+            "phi": -0.06223398943901599,
+            "theta": -0.04063663633999439,
+            "X": 0.01717439291784338
+          },
+          "raw_pr_slope": -0.09665460193480485,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.006000194184609824,
+            "theta": -0.00421665206070652,
+            "X": -0.08643775568948851
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.005992188631613254,
+            "theta": -0.004212003427228307,
+            "X": -1.0422278320007208e-05
+          },
+          "raw_projected_displacement_slope": -0.010214614337161568,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.010214614337161568
+        },
+        {
+          "iteration": 10,
+          "objective": -0.2105754821496395,
+          "gradient_norm": 0.31184205201014625,
+          "projected_kkt_norm": 0.09833075727107424,
+          "raw_pr_beta": {
+            "phi": -0.05720619100919741,
+            "theta": -0.03710699243604253,
+            "X": 0.015928195964139403
+          },
+          "raw_pr_slope": -0.09817276256681995,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.005289391164179152,
+            "theta": -0.0039037217363725985,
+            "X": -0.0889796496662682
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.0052838449067554565,
+            "theta": -0.0038994696482563397,
+            "X": -6.302553083039865e-06
+          },
+          "raw_projected_displacement_slope": -0.009189617108094836,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.009189617108094836
+        },
+        {
+          "iteration": 11,
+          "objective": -0.2195247968093872,
+          "gradient_norm": 0.31446893195801673,
+          "projected_kkt_norm": 0.09319763299784656,
+          "raw_pr_beta": {
+            "phi": -0.05486238420729684,
+            "theta": -0.035676299405287715,
+            "X": 0.015541112245193852
+          },
+          "raw_pr_slope": -0.09988848591753816,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.004664248567148491,
+            "theta": -0.0036124651019773905,
+            "X": -0.09161177224841227
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.004660450470275374,
+            "theta": -0.0036086423863543314,
+            "X": -4.144385564306292e-06
+          },
+          "raw_projected_displacement_slope": -0.008273237242194012,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.008273237242194012
+        },
+        {
+          "iteration": 12,
+          "objective": -0.22759425602943983,
+          "gradient_norm": 0.3173260488572175,
+          "projected_kkt_norm": 0.08861574030085806,
+          "raw_pr_beta": {
+            "phi": -0.051709557414489266,
+            "theta": -0.03491428988063345,
+            "X": 0.015086702191862913
+          },
+          "raw_pr_slope": -0.10174967449438296,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.004153998936764588,
+            "theta": -0.003347913595978122,
+            "X": -0.09424776196164025
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.004151322656096338,
+            "theta": -0.0033445061549594525,
+            "X": -3.089091839124986e-06
+          },
+          "raw_projected_displacement_slope": -0.007498917902894915,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.007498917902894915
+        },
+        {
+          "iteration": 13,
+          "objective": -0.23491833214821678,
+          "gradient_norm": 0.32034458240730196,
+          "projected_kkt_norm": 0.08449110819097043,
+          "raw_pr_beta": {
+            "phi": -0.04880427830204694,
+            "theta": -0.034353833761883196,
+            "X": 0.014611799964188646
+          },
+          "raw_pr_slope": -0.10371486435395477,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.0037273592464991782,
+            "theta": -0.003106866239658436,
+            "X": -0.09688063886779716
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.0037254106342425614,
+            "theta": -0.003103847313101066,
+            "X": -2.649490614376031e-06
+          },
+          "raw_projected_displacement_slope": -0.006831907437958004,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.006831907437958004
+        },
+        {
+          "iteration": 14,
+          "objective": -0.24159859928884442,
+          "gradient_norm": 0.323463770049288,
+          "projected_kkt_norm": 0.08074432874412668,
+          "raw_pr_beta": {
+            "phi": -0.04611780912271196,
+            "theta": -0.03410522958251248,
+            "X": 0.014102728557396728
+          },
+          "raw_pr_slope": -0.10574860420964391,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.00336781370732647,
+            "theta": -0.0028844828693533565,
+            "X": -0.09949630763296409
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.003366336374192218,
+            "theta": -0.0028818242075955157,
+            "X": -2.586232608120867e-06
+          },
+          "raw_projected_displacement_slope": -0.006250746814395854,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.006250746814395854
+        },
+        {
+          "iteration": 15,
+          "objective": -0.24771625108398698,
+          "gradient_norm": 0.3266290811372426,
+          "projected_kkt_norm": 0.07730520228327264,
+          "raw_pr_beta": {
+            "phi": -0.04384417642330526,
+            "theta": -0.03403960830093841,
+            "X": 0.01355285537347829
+          },
+          "raw_pr_slope": -0.10781763462059622,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.0030600553658760637,
+            "theta": -0.0026784422923328624,
+            "X": -0.1020791369623873
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.003058888187870461,
+            "theta": -0.0026761124351270147,
+            "X": -2.7808829105448294e-06
+          },
+          "raw_projected_displacement_slope": -0.00573778150590802,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.00573778150590802
+        },
+        {
+          "iteration": 16,
+          "objective": -0.253335814465681,
+          "gradient_norm": 0.3297936650661592,
+          "projected_kkt_norm": 0.07411444006648701,
+          "raw_pr_beta": {
+            "phi": -0.0420180658616198,
+            "theta": -0.034146225521758104,
+            "X": 0.012964499708952835
+          },
+          "raw_pr_slope": -0.10989317521682351,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.0027927176520495447,
+            "theta": -0.0024865208324698386,
+            "X": -0.10461393673230412
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.0027917608245660278,
+            "theta": -0.002484488358236805,
+            "X": -3.172826441048208e-06
+          },
+          "raw_projected_displacement_slope": -0.0052794220092438815,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.0052794220092438815
+        },
+        {
+          "iteration": 17,
+          "objective": -0.2585090422747981,
+          "gradient_norm": 0.33291802360821543,
+          "projected_kkt_norm": 0.07112344128695705,
+          "raw_pr_beta": {
+            "phi": -0.040652706107323175,
+            "theta": -0.03438491871494234,
+            "X": 0.012342975681503648
+          },
+          "raw_pr_slope": -0.11195032277672182,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.0025569665923203485,
+            "theta": -0.0023071768646200524,
+            "X": -0.10708617931978141
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.002556159429425154,
+            "theta": -0.0023054111113051763,
+            "X": -3.7243800598928524e-06
+          },
+          "raw_projected_displacement_slope": -0.004865294920790223,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.004865294920790223
+        },
+        {
+          "iteration": 18,
+          "objective": -0.2632779869970361,
+          "gradient_norm": 0.33596986867163753,
+          "projected_kkt_norm": 0.06829369443191645,
+          "raw_pr_beta": {
+            "phi": -0.039711188561514725,
+            "theta": -0.03473179961297432,
+            "X": 0.011696390446991256
+          },
+          "raw_pr_slope": -0.1139682413981614,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.002346256582811966,
+            "theta": -0.0021391841258459237,
+            "X": -0.10948280068950351
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.0023455624651389172,
+            "theta": -0.0021376560359135984,
+            "X": -4.405579206777154e-06
+          },
+          "raw_projected_displacement_slope": -0.004487624080259293,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.004487624080259293
+        },
+        {
+          "iteration": 19,
+          "objective": -0.2676774639367787,
+          "gradient_norm": 0.3389235932297296,
+          "projected_kkt_norm": 0.0655956708842116,
+          "raw_pr_beta": {
+            "phi": -0.03913814191498303,
+            "theta": -0.03516035589895484,
+            "X": 0.011033813504614019
+          },
+          "raw_pr_slope": -0.11592990437931605,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.002155759673159281,
+            "theta": -0.0019816238336461374,
+            "X": -0.11179252087251064
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.002155156321644247,
+            "theta": -0.0019803062899783398,
+            "X": -5.188744146766924e-06
+          },
+          "raw_projected_displacement_slope": -0.004140651355769354,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.004140651355769354
+        },
+        {
+          "iteration": 20,
+          "objective": -0.2717369509931291,
+          "gradient_norm": 0.3417596452370363,
+          "projected_kkt_norm": 0.06300748871828132,
+          "raw_pr_beta": {
+            "phi": -0.03886711684657517,
+            "theta": -0.03564798320684495,
+            "X": 0.010364459075231897
+          },
+          "raw_pr_slope": -0.11782184374502641,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.0019819767745707685,
+            "theta": -0.0018337818368686712,
+            "X": -0.11400608513358697
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.001981450100319568,
+            "theta": -0.0018326498531370272,
+            "X": -6.047944911477993e-06
+          },
+          "raw_projected_displacement_slope": -0.003820147898368073,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.003820147898368073
+        },
+        {
+          "iteration": 21,
+          "objective": -0.2754820161459445,
+          "gradient_norm": 0.3444638077301506,
+          "projected_kkt_norm": 0.060513505901463975,
+          "raw_pr_beta": {
+            "phi": -0.038832111287736226,
+            "theta": -0.036174136482937526,
+            "X": 0.009696962719183974
+          },
+          "raw_pr_slope": -0.11963380570817363,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.0018223823566941614,
+            "theta": -0.0016950965318398153,
+            "X": -0.11611632681963965
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.0018219227383417678,
+            "theta": -0.0016941272982327986,
+            "X": -6.960173421252213e-06
+          },
+          "raw_projected_displacement_slope": -0.0035230102099958185,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.0035230102099958185
+        },
+        {
+          "iteration": 22,
+          "objective": -0.27893535867015384,
+          "gradient_norm": 0.3470264655661681,
+          "projected_kkt_norm": 0.05810298155456362,
+          "raw_pr_beta": {
+            "phi": -0.03897253593168151,
+            "theta": -0.03672154251711904,
+            "X": 0.009038990572149106
+          },
+          "raw_pr_slope": -0.12135838859913975,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.0016751534576740872,
+            "theta": -0.001565106742793153,
+            "X": -0.11811812839867251
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.0016747535915514168,
+            "theta": -0.0015642796009853073,
+            "X": -7.906735555502888e-06
+          },
+          "raw_projected_displacement_slope": -0.003246939928092227,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.003246939928092227
+        },
+        {
+          "iteration": 23,
+          "objective": -0.2821175472130085,
+          "gradient_norm": 0.3494418925377433,
+          "projected_kkt_norm": 0.055768885841895474,
+          "raw_pr_beta": {
+            "phi": -0.03923634477226204,
+            "theta": -0.03727596552613206,
+            "X": 0.008397027088849218
+          },
+          "raw_pr_slope": -0.12299067123977055,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.001538958192330909,
+            "theta": -0.001443415705517853,
+            "X": -0.12000829734192178
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.0015386119309287246,
+            "theta": -0.0014427120747108348,
+            "X": -8.874201214851852e-06
+          },
+          "raw_projected_displacement_slope": -0.002990198206854411,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.002990198206854411
+        },
+        {
+          "iteration": 24,
+          "objective": -0.28504752778871434,
+          "gradient_norm": 0.3517075877198394,
+          "projected_kkt_norm": 0.053506897154465285,
+          "raw_pr_beta": {
+            "phi": -0.03958074117079346,
+            "theta": -0.03782616901946585,
+            "X": 0.007776316951975886
+          },
+          "raw_pr_slope": -0.12452785315301314,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.001412799853717959,
+            "theta": -0.001329663884013368,
+            "X": -0.12178538941528182
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.0014125016346084448,
+            "theta": -0.001329067158415765,
+            "X": -9.854774662425885e-06
+          },
+          "raw_projected_displacement_slope": -0.002751423567686636,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.002751423567686636
+        },
+        {
+          "iteration": 25,
+          "objective": -0.287742962939294,
+          "gradient_norm": 0.3538236744327925,
+          "projected_kkt_norm": 0.051314592967498344,
+          "raw_pr_beta": {
+            "phi": -0.039971808196332725,
+            "theta": -0.03836355691878114,
+            "X": 0.007180901707180584
+          },
+          "raw_pr_slope": -0.12596891512850913,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.001295904118378345,
+            "theta": -0.0012235108769492941,
+            "X": -0.12344950013318148
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.0012956487260441915,
+            "theta": -0.0012230063048964636,
+            "X": -1.0846169891060568e-05
+          },
+          "raw_projected_displacement_slope": -0.002529501200831716,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.002529501200831716
+        },
+        {
+          "iteration": 26,
+          "objective": -0.2902204510752975,
+          "gradient_norm": 0.3557923678717752,
+          "projected_kkt_norm": 0.04919082125201153,
+          "raw_pr_beta": {
+            "phi": -0.040383444326682436,
+            "theta": -0.03888180568771949,
+            "X": 0.006613716628517421
+          },
+          "raw_pr_slope": -0.12731430684317366,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.001187640351702931,
+            "theta": -0.0011246238654564053,
+            "X": -0.12500204262601433
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.001187422851552921,
+            "theta": -0.0011241984176701251,
+            "X": -1.1851160470614057e-05
+          },
+          "raw_projected_displacement_slope": -0.0023234724296936605,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.0023234724296936605
+        },
+        {
+          "iteration": 27,
+          "objective": -0.2924956638019075,
+          "gradient_norm": 0.35761751152404214,
+          "projected_kkt_norm": 0.047135229284298474,
+          "raw_pr_beta": {
+            "phi": -0.040796074915376214,
+            "theta": -0.03937646319937596,
+            "X": 0.006076718613976288
+          },
+          "raw_pr_slope": -0.12856566447102036,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.0010874683609185566,
+            "theta": -0.0010326711516390058,
+            "X": -0.12644552495846278
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.001087284110503692,
+            "theta": -0.0010323133836877268,
+            "X": -1.2876972451232512e-05
+          },
+          "raw_projected_displacement_slope": -0.0021324744666426513,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.0021324744666426513
+        },
+        {
+          "iteration": 28,
+          "objective": -0.2945834294315597,
+          "gradient_norm": 0.359304179377687,
+          "projected_kkt_norm": 0.045147923383150386,
+          "raw_pr_beta": {
+            "phi": -0.04119533911198645,
+            "theta": -0.039844583549948166,
+            "X": 0.00557102635308304
+          },
+          "raw_pr_slope": -0.12972555956050233,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.0009949037911315252,
+            "theta": -0.0009473192544545558,
+            "X": -0.12778333651491625
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.0009947484759191794,
+            "theta": -0.0009470191673820721,
+            "X": -1.393465597983815e-05
+          },
+          "raw_projected_displacement_slope": -0.0019557022992810896,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.0019557022992810896
+        },
+        {
+          "iteration": 29,
+          "objective": -0.2964977830685006,
+          "gradient_norm": 0.36085833912148274,
+          "projected_kkt_norm": 0.043229233807608125,
+          "raw_pr_beta": {
+            "phi": -0.04157088207910428,
+            "theta": -0.04028440218671208,
+            "X": 0.005097060141125071
+          },
+          "raw_pr_slope": -0.13079727903593633,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.0009094967025967242,
+            "theta": -0.0008682324325939835,
+            "X": -0.12901954990074563
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.0009093663698828183,
+            "theta": -0.000867981334862836,
+            "X": -1.5038528902839034e-05
+          },
+          "raw_projected_displacement_slope": -0.0017923862336484933,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.0017923862336484933
+        },
+        {
+          "iteration": 30,
+          "objective": -0.29825199753211584,
+          "gradient_norm": 0.3622865707413897,
+          "projected_kkt_norm": 0.04137956185167034,
+          "raw_pr_beta": {
+            "phi": -0.041915294832707395,
+            "theta": -0.04069506064152625,
+            "X": 0.004654673805867442
+          },
+          "raw_pr_slope": -0.13178463531526363,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.0008308192017368462,
+            "theta": -0.0007950737311013568,
+            "X": -0.13015874238242542
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.0008307102816407601,
+            "theta": -0.0007948641044097515,
+            "X": -1.620574757889115e-05
+          },
+          "raw_projected_displacement_slope": -0.0016417801336294027,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.0016417801336294027
+        },
+        {
+          "iteration": 31,
+          "objective": -0.2998586047494892,
+          "gradient_norm": 0.3635958346562536,
+          "projected_kkt_norm": 0.03959928980166946,
+          "raw_pr_beta": {
+            "phi": -0.04222320887255991,
+            "theta": -0.041076376551521195,
+            "X": 0.004243274525129143
+          },
+          "raw_pr_slope": -0.13269180489844548,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.000758459060263115,
+            "theta": -0.0007275068958598689,
+            "X": -0.1312058389423225
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.0007583683711715559,
+            "theta": -0.0007273322668620739,
+            "X": -1.7456030836738426e-05
+          },
+          "raw_projected_displacement_slope": -0.0015031566688703682,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.0015031566688703682
+        },
+        {
+          "iteration": 32,
+          "objective": -0.3013294138357464,
+          "gradient_norm": 0.36479328360066904,
+          "projected_kkt_norm": 0.03788873813265841,
+          "raw_pr_beta": {
+            "phi": -0.04249052837559146,
+            "theta": -0.041428654137205964,
+            "X": 0.0038619286123152525
+          },
+          "raw_pr_slope": -0.1335231933624363,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.0006920171218354272,
+            "theta": -0.0006651986841759516,
+            "X": -0.1321659775564249
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.0006919418618138611,
+            "theta": -0.000665053503648017,
+            "X": -1.881154331643757e-05
+          },
+          "raw_projected_displacement_slope": -0.0013758069087783157,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.0013758069087783157
+        },
+        {
+          "iteration": 33,
+          "objective": -0.30267552964134625,
+          "gradient_norm": 0.36588611270850246,
+          "projected_kkt_norm": 0.036248157721252235,
+          "raw_pr_beta": {
+            "phi": -0.04271377356083147,
+            "theta": -0.04175252834964201,
+            "X": 0.003509452815722122
+          },
+          "raw_pr_slope": -0.13428332443165975,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.0006311069572413937,
+            "theta": -0.0006078212501093535,
+            "X": -0.133044396224309
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.0006310446845979525,
+            "theta": -0.0006077007806427764,
+            "X": -2.0296932979152943e-05
+          },
+          "raw_projected_displacement_slope": -0.001259042398219882,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.001259042398219882
+        },
+        {
+          "iteration": 34,
+          "objective": -0.3039073738546658,
+          "gradient_norm": 0.36688144260385663,
+          "projected_kkt_norm": 0.03467774777466177,
+          "raw_pr_beta": {
+            "phi": -0.04288950492051664,
+            "theta": -0.04204883648363169,
+            "X": 0.0031844916074354615
+          },
+          "raw_pr_slope": -0.13497675065857984,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.000575355727172771,
+            "theta": -0.0005550543953583931,
+            "X": -0.13384634053604866
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.0005753043336713418,
+            "theta": -0.0005549546082451693,
+            "X": -2.1939512453795132e-05
+          },
+          "raw_projected_displacement_slope": -0.0011521984543703062,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.0011521984543703062
+        },
+        {
+          "iteration": 35,
+          "objective": -0.3050347096186121,
+          "gradient_norm": 0.3677862307215748,
+          "projected_kkt_norm": 0.033177692573486885,
+          "raw_pr_beta": {
+            "phi": -0.0430137979615396,
+            "theta": -0.04231851156973303,
+            "X": 0.0028855814859053523
+          },
+          "raw_pr_slope": -0.13560798322206644,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.0005244055746330602,
+            "theta": -0.0005065875602466227,
+            "X": -0.13457699008718677
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.0005243632545014272,
+            "theta": -0.0005065050418504424,
+            "X": -2.3769573199084208e-05
+          },
+          "raw_projected_displacement_slope": -0.0010546378695509538,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.0010546378695509538
+        },
+        {
+          "iteration": 36,
+          "objective": -0.30606666990089904,
+          "gradient_norm": 0.3686072065296328,
+          "projected_kkt_norm": 0.03174821201429997,
+          "raw_pr_beta": {
+            "phi": -0.04308173933377546,
+            "theta": -0.04256249274704038,
+            "X": 0.0026112036110309796
+          },
+          "raw_pr_slope": -0.13618143841259342,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.00047791512759363984,
+            "theta": -0.0004621214893538106,
+            "X": -0.13524140179564598
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.00047788034486037016,
+            "theta": -0.00046205335695235713,
+            "X": -2.5820823630351333e-05
+          },
+          "raw_projected_displacement_slope": -0.0009657545254430787,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.0009657545254430787
+        },
+        {
+          "iteration": 37,
+          "objective": -0.3070117894316534,
+          "gradient_norm": 0.3693508267913302,
+          "projected_kkt_norm": 0.03038962235398655,
+          "raw_pr_beta": {
+            "phi": -0.043086917138864214,
+            "theta": -0.042781648629041054,
+            "X": 0.0023598262144481626
+          },
+          "raw_pr_slope": -0.1367013985026371,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.0004355608716077395,
+            "theta": -0.0004213695482645866,
+            "X": -0.13584446808276476
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.000435532327646205,
+            "theta": -0.0004213133751005239,
+            "X": -2.8130946234152925e-05
+          },
+          "raw_projected_displacement_slope": -0.0008849766489808818,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.0008849766489808818
+        },
+        {
+          "iteration": 38,
+          "objective": -0.30787803980009676,
+          "gradient_norm": 0.3700232474712973,
+          "projected_kkt_norm": 0.029102404537113755,
+          "raw_pr_beta": {
+            "phi": -0.04302088049049937,
+            "theta": -0.04297671049115651,
+            "X": 0.002129938240630439
+          },
+          "raw_pr_slope": -0.1371719848793724,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.00039703827258891347,
+            "theta": -0.00038405869593463273,
+            "X": -0.13639088791084886
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.0003970148751550873,
+            "theta": -0.0003840124450265783,
+            "X": -3.074227350619489e-05
+          },
+          "raw_projected_displacement_slope": -0.0008117695936878604,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.0008117695936878604
+        },
+        {
+          "iteration": 39,
+          "objective": -0.3086728672180381,
+          "gradient_norm": 0.3706303093442249,
+          "projected_kkt_norm": 0.027887278053014768,
+          "raw_pr_beta": {
+            "phi": -0.0428725464108536,
+            "theta": -0.04314821291175012,
+            "X": 0.0019200756173986678
+          },
+          "raw_pr_slope": -0.13759714152786617,
+          "non_descent_restart": false,
+          "block_step_sizes": {
+            "phi": 1.0,
+            "theta": 1.0,
+            "X": 1.0
+          },
+          "block_backtracks": {
+            "phi": 0,
+            "theta": 0,
+            "X": 0
+          },
+          "block_non_descent_restarts": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "block_raw_direction_slopes": {
+            "phi": -0.00036206260815362025,
+            "theta": -0.0003499301348537918,
+            "X": -0.13688514878485877
+          },
+          "block_restart_reasons": {
+            "phi": [],
+            "theta": [],
+            "X": []
+          },
+          "raw_projected_displacement_slopes": {
+            "phi": -0.0003620434427180265,
+            "theta": -0.0003498921009886172,
+            "X": -3.370258786044908e-05
+          },
+          "raw_projected_displacement_slope": -0.0007456381315670928,
+          "inactive_projected_blocks": {
+            "phi": false,
+            "theta": false,
+            "X": false
+          },
+          "coupling_scale": 1.0,
+          "coupling_backtracks": 0,
+          "accepted_displacement_slope": -0.0007456381315670928
+        }
+      ],
+      "stop": {
+        "reason": "iteration_cap",
+        "objective": -0.30940323246415125,
+        "gradient_norm": 0.37117753480005167,
+        "projected_kkt_norm": 0.026745278425559203,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    }
+  ],
+  "state": {
+    "phi": {
+      "real": [
+        0.4504177353206769,
+        0.9941392691888219,
+        -0.3114092392430917,
+        -0.9850599439529164,
+        0.9984302379315978,
+        0.7905978018928211,
+        -0.5748482055598573,
+        -0.9781547765125389,
+        0.40200515557063343,
+        -0.6291992852663473,
+        -0.9987050450735027,
+        -0.6763106967791984
+      ],
+      "imag": [
+        0.892817934244487,
+        -0.10810695378519836,
+        -0.9502758997859722,
+        -0.17221180801407654,
+        0.056009463341947695,
+        -0.6123357866744676,
+        -0.818260069027331,
+        0.20787792856795761,
+        -0.9156374036127132,
+        -0.7772440153647489,
+        -0.05087467881700098,
+        0.7366164819103869
+      ]
+    },
+    "theta": {
+      "real": [
+        0.39839674223549915,
+        0.444926493220938,
+        0.673940776945663,
+        0.24892886753312415
+      ],
+      "imag": [
+        -0.9172131899270426,
+        -0.8955670916408882,
+        -0.7387853742257462,
+        -0.9685217699714737
+      ]
+    },
+    "X": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.8580194639851846,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.14198053601481544
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  }
+}

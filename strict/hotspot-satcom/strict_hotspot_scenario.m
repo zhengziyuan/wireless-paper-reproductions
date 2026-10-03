@@ -1,0 +1,49 @@
+function f=strict_hotspot_scenario(config)
+% Independent MATLAB generation of same thesis finite-Rician multibeam model.
+% Seed the caller once; shared cross-language fixtures are used for parity tests.
+p=config.reported; t=config.tuned_not_reported; N=p.N; J=p.J; U=p.U; K=p.K; M=p.M;
+assert(N==16 && J==16 && U+K==J,'Original 16-feed/16-user count required');
+lam=299792458/p.frequency_hz; noise=1.380649e-23*p.temperature_k*p.bandwidth_hz; H=p.leo_height_m;
+centers=zeros(N,2); index=0;
+for x=[-1.5,-0.5,0.5,1.5], for y=[-1.5,-0.5,0.5,1.5], index=index+1; centers(index,:)=[x,y]*t.feed_center_spacing_m; end, end
+if U==1, huPos=zeros(1,2); else, angles=(0:U-1).'*2*pi/U; huPos=[15*cos(angles),15*sin(angles)]; end
+% Stable tie order equals Python sorting by radius then original feed index.
+[~,order]=sortrows([sqrt(sum(centers.^2,2)),(1:N).'],[1,2]); nhuPos=centers(order(end-K+1:end),:);
+risPos=[p.ris_hu_distance_m,0]; gain=10^(p.satellite_gain_dbi/10); receive=10^(t.ground_receive_gain_dbi/10);
+area=prod(p.subsurface_elements)*prod(p.element_size_m); risGain=4*pi*area/lam^2;
+[dm,dv]=sat_moments(huPos,receive,centers,H,lam,noise,p.antenna_diameter_m,gain,p.kappa_satellite_db);
+[nm,nv]=sat_moments(nhuPos,receive,centers,H,lam,noise,p.antenna_diameter_m,gain,p.kappa_satellite_db);
+direct=dm+sqrt(dv).*cn([U,N]); nhu=nm+sqrt(nv).*cn([K,N]);
+[gm,gv]=sat_moments(risPos,risGain,centers,H,lam,noise,p.antenna_diameter_m,gain,p.kappa_satellite_db);
+mr=floor(sqrt(M)); while mod(M,mr)~=0, mr=mr-1; end
+mc=M/mr; coords=zeros(M,2); index=0;
+for a=0:mr-1, for b=0:mc-1, index=index+1; coords(index,:)=[a,b]*sqrt(area); end, end
+coords=coords-mean(coords,1); Gmean=repmat(gm,M,1); Gvar=repmat(gv,M,1); G=Gmean+sqrt(Gvar).*cn([M,N]);
+R=complex(zeros(U,M,N)); rm=complex(zeros(U,M)); rv=zeros(U,M); kg=10^(p.kappa_ground_db/10);
+for u=1:U
+    direction=huPos(u,:)-risPos; distance=norm(direction); amplitude=lam/(4*pi*distance)*sqrt(risGain*receive);
+    phase=exp(-2i*pi*(distance+coords*direction.'/distance)/lam);
+    rm(u,:)=amplitude*sqrt(kg/(1+kg))*phase.'; rv(u,:)=amplitude^2/(1+kg);
+    r=rm(u,:).'+sqrt(rv(u,:)).'.*cn([M,1]); R(u,:,:)=r.*G;
+end
+phi=exp(2i*pi*rand(1,M));
+means=struct('direct_mean',dm,'direct_variance',dv,'matrix_mean',Gmean,'matrix_variance',Gvar, ...
+    'ground_mean',rm,'ground_variance',rv,'nhu_mean',nm,'nhu_variance',nv);
+f=struct('direct',direct,'cascade',R,'nhu',nhu,'phi0',phi,'noise',1,'power',p.power_w, ...
+    'nhu_target',10^(p.nhu_sinr_db/10)*ones(K,1),'mean_inputs',means, ...
+    'geometry',struct('hu_xy_m',huPos,'nhu_xy_m',nhuPos,'ris_xy_m',risPos));
+end
+
+function [mu,variance]=sat_moments(pos,receiver,centers,H,lam,noise,diameter,gain,kappaDb)
+P=size(pos,1); N=size(centers,1); distance=sqrt(H^2+sum(pos.^2,2)); amplitude=zeros(P,N);
+for p=1:P
+    theta=atan(sqrt(sum((centers-pos(p,:)).^2,2))/H); nu=pi*diameter/lam*sin(theta);
+    pattern=ones(N,1); mask=abs(nu)>1e-8; x=nu(mask);
+    pattern(mask)=(besselj(1,x)./(2*x)+36*besselj(3,x)./x.^3).^2;
+    amplitude(p,:)=sqrt(pattern*gain*receiver).'*lam/(4*pi*distance(p))/sqrt(noise);
+end
+k=10^(kappaDb/10); mu=amplitude*sqrt(k/(1+k)).*exp(-2i*pi*distance/lam); variance=amplitude.^2/(1+k);
+end
+function x=cn(shape)
+x=(randn(shape)+1i*randn(shape))/sqrt(2);
+end

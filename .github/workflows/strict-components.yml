@@ -1,0 +1,29 @@
+name: Original-algorithm component checks (not full reproduction)
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  python-components:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r strict/requirements.txt
+      - run: python strict/validate_components.py --output-dir strict/outputs/ci-components
+      - run: python strict/rotatable-isac/test_metadata.py
+      - run: python strict/two-timescale-ma/test_metadata.py
+      - run: python strict/test_validation.py
+      - run: python strict/mis-communications/test_line_search.py
+      - run: python strict/mis-sensing/test_line_search.py
+      - run: python strict/cooperative-satcom/test_termination.py
+      - run: python strict/hotspot-satcom/test_termination.py
+      - run: python strict/hotspot-satcom/test_phase_method.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: original-algorithm-component-evidence-not-full-reproduction
+          path: strict/outputs/ci-components/

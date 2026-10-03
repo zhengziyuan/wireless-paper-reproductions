@@ -1,0 +1,20 @@
+{
+  "paper_id": "mis-sensing",
+  "scope": "Actual component-output comparison only; NOT full published-figure reproduction",
+  "compared_sections": [
+    "metrics",
+    "checks",
+    "history",
+    "state"
+  ],
+  "atol": 1e-07,
+  "rtol": 1e-06,
+  "component_parity_passed": true,
+  "full_published_figure_reproduction_passed": false,
+  "output_sha256": {
+    "python": "09c630182fac129692396a84d3347297bbbfa9d6fe9b2e5fc1a928326fe794a4",
+    "matlab": "0429e4d3f29436369e102207bece2354cdd67194a61582a1878c1bdbe6598a55"
+  },
+  "failures": [],
+  "schema_adapter": "Singleton MATLAB struct collections QCQP/restarts/BB normalized to lists only"
+}

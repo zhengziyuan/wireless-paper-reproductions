@@ -1,0 +1,33 @@
+{
+  "paper_id": "cooperative-satcom",
+  "doi": "10.1109/JSAC.2024.3460068",
+  "production_status": "author_model_full_runner_implemented_not_full_run",
+  "source_version":"public_author_manuscript_and_user_supplied_author_thesis",
+  "sources": [{"url": "https://www.eurecom.fr/publication/7869/download/comsys-publi-7869.pdf", "kind": "public_author_manuscript", "pages": 16, "publisher_pages": 18, "final_equation_conformance_verified": false}],
+  "final_source_required": "Final IEEE JSAC published PDF pp279-296 or final accepted source bundle; author16-page manuscript must be reconciled explicitly",
+  "source_verified_components": ["finite-Rician channel model Eq1", "statistical MR evaluator Eq24-26", "unrestricted MR quadratic-transform structure SectionIV/Algorithm2"],
+  "provisional_components": ["compact equivalent moment derivation including TTS fourth moment", "AP QT subproblem reconstructed from author model; final equation crosscheck pending"],
+  "full_scenario_candidate_defaults": {
+    "evidence": "author doctoral thesis Chapter4 candidate only; not final-publication verified",
+    "N": 16, "J": 3, "U": 2, "K": 1, "M": 25,
+    "leo_altitude_km": 550, "geo_altitude_km": 36000, "carrier_GHz": 12,
+    "leo_power_W": 50, "geo_power_W": 2000, "noise_dBm": -94,
+    "interference_noise_ratio_dB": -12.2, "subsurface_elements": [100, 100],
+    "element_size_m": [0.01, 0.01], "ris_lu_distance_m": 100,
+    "ground_rician_dB": 10, "leo_rician_dB": 20, "geo_rician_dB": 30
+  },
+  "sweeps": [
+    {"candidate_description": "minimum SINR vsLEO power, kappaL=20 and0dB", "exact_final_figure_id": null, "grid": null},
+    {"candidate_description": "minimum SINR vsprotected-GT interference bound, kappaL=20 and0dB", "exact_final_figure_id": null, "grid": null},
+    {"candidate_description": "minimum SINR vsRIS subsurface count M, kappaL=20 and0dB", "exact_final_figure_id": null, "grid": null},
+    {"candidate_description": "ground Rician -12 to30dB with leoRician0,10,20dB", "exact_final_figure_id": null, "grid": null},
+    {"candidate_description": "multi-vs-single satellite interference threshold comparison", "exact_final_figure_id": null, "grid": null}
+  ],
+  "required_unknowns": ["final published model/algorithm differences", "paperEq30d vsEq25c transmit-power coefficient reconciliation", "agreement with original published figure data"],
+  "tuned_not_reported":"full_config.json separately discloses user-authorized numerical gains/diameter/coordinates/seed/MC1000/grids/caps/thresholds. These are not claimed recovered original figure settings.",
+  "implemented":["All8 AP/MR statistical/TTS chains","Unrestricted J*U MRQT","APQT+per-LU RGD","ES+squared residual penalty RGD thenQT","Exact cascaded fourth moments/analytical phase gradients","Geographic finiteRician shared-r generator","Fair N48/P150 single vs3*N16/3*P50 at1.25/2.5deg","Full configured sweeps/no hidden downsize"],
+  "itu_pattern":{"formula":"Actual full ITU-R S.1428-1 recommends1 piecewise pattern; no S.465 envelope substitute","url":"https://www.itu.int/dms_pubrec/itu-r/rec/s/R-REC-S.1428-1-200102-I!!PDF-E.pdf","cross_reference":"S.1503 FSS antenna section referencesS1428; citededition3 itself not downloaded, finalversion detailsunverified","diameter":"1.2m explicit unreported numeric tuning"},
+  "compute_contract": {"full_run_started": false, "full_cpu_hours": null, "reason": "only full-dimensional components/gradient/bounded all8 chain tested; coordinated full benchmarks not done", "component_test_is_full_reproduction": false},
+  "dependencies": {"python": "NumPy,SciPy,CVXPY,CLARABEL/SCS", "matlab": "external officialCVX2.2.2+SDPT3, R2025b may need officialfunctions/vec_ onpath; not vendored"},
+  "production_gate_pass": false
+}

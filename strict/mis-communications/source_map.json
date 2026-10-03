@@ -1,0 +1,56 @@
+{
+  "paper_id": "mis-communications",
+  "doi": "10.1109/TWC.2025.3621083",
+  "public_sources": [
+    "https://doi.org/10.1109/TWC.2025.3621083",
+    "https://arxiv.org/abs/2412.19071",
+    "https://arxiv.org/html/2412.19071v1"
+  ],
+  "authoritative_revision": "author-supplied final R2 TeX; private manuscript excluded",
+  "source_sha256": "6E27FB9FD2BA0DECC9D7BCFC54BCB73612553F91F6DF923AB502E7D561058CB0",
+  "publisher_pdf_comparison": "pending; DOI browser/search did not expose final text",
+  "equations": [
+    {
+      "locator": "MIS Architecture Design; Equivalent Phase Shift Vectors",
+      "implementation": "Model.indices; fields",
+      "claim": "S_u theta + e_u, row-major integer rectangles, full U count"
+    },
+    {
+      "locator": "Signal Model and Problem Formulation, SNR equation (7)",
+      "implementation": "Model.metric communications",
+      "claim": "iota |c^T v|^2, ordinary transpose"
+    },
+    {
+      "locator": "Coverage Optimization, smoothing equations (9)-(10)",
+      "implementation": "communication_objective; communication_solve",
+      "claim": "relaxed scheduling and negative softmin, exact halving continuation"
+    },
+    {
+      "locator": "Manifold Optimization Algorithm, Euclidean gradients (20a)-(20c), Appendix A",
+      "implementation": "communication_objective; project",
+      "claim": "all phase and simplex derivatives finite-difference checked"
+    },
+    {
+      "locator": "Algorithm 1; label alg:general_solution",
+      "implementation": "rcg",
+      "claim": "Euclidean product geometry, block PR, stated transport and retraction",
+      "erratum": "minimize -f to respect P2 maximization; original distinct block step sizes retained, constants and the joint coupling Armijo safeguard inferred",
+      "independent_numerical_safeguard": "Closed-boundary simplex projection uses actual feasible-displacement Armijo, projected-displacement non-descent restart, and separately reported projected/KKT residual. Raw PR/transport/retraction and mu continuation remain unchanged; literal printed mode remains available."
+    },
+    {
+      "locator": "Appendix B Projection Algorithm onto the Simplex",
+      "implementation": "simplex",
+      "claim": "sort/cumsum Euclidean simplex projection"
+    },
+    {
+      "locator": "Validation Results / Numerical simulation Results; Figures 7-11",
+      "implementation": "figures.json; settings.json; run.py",
+      "claim": "full configurations preserved; unresolved numeric settings explicitly inferred"
+    }
+  ],
+  "excluded": [
+    "Rician statistical-CSI sum-throughput private scripts",
+    "hardware/FDTD/measurement reproduction",
+    "claim of original numerical figure parity"
+  ]
+}

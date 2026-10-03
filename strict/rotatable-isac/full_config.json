@@ -1,0 +1,48 @@
+{
+  "mode": "full",
+  "seed": 251220987,
+  "channel_realizations": 100,
+  "wavelength": 0.1,
+  "bs_center": [0,0,0], "ris_center": [10,0,0],
+  "bs_shape": [2,2], "ris_shape": [6,6],
+  "paths_per_link": 2,
+  "path_gain_variance_each": 1.0,
+  "noise_power": 0.001,
+  "initial_angles": [0,0,0,0,0,0],
+  "maximum_gain_rule": "power_normalized_halfspace_G0=2*(b+1)",
+  "rho": 10,
+  "sensing_azimuth_points": 11, "sensing_elevation_points": 6,
+  "desired_sectors_degrees": [[18,36,18,36],[126,144,0,18]],
+  "initial_sensing_amplitude": 0.1,
+  "initial_pseudoinverse_tolerance": 1e-12,
+  "iota_denominator_epsilon": 1e-14,
+  "verification_tolerance": 1e-7,
+  "AO_solver": {"maximum_iterations": 500, "relative_tolerance": 0.00001},
+  "W_solver": {"maximum_iterations": 10000, "relative_tolerance": 0.000001, "bisection_tolerance": 1e-12},
+  "RCG_solver": {"maximum_iterations": 500, "gradient_tolerance": 0.000001, "initial_step": 1.0, "armijo": 0.0001, "backtrack_factor": 0.5, "maximum_backtracks": 80, "mode": "documented_non_ascent_restart"},
+  "PGA_solver": {"maximum_iterations": 500, "gradient_tolerance": 0.000001, "relative_tolerance": 0.00000001,
+    "initial_step": 0.01, "minimum_step": 0.0000000001, "maximum_step": 1,
+    "armijo": 0.0001, "backtrack_factor": 0.5, "maximum_backtracks": 80, "BB_interpretation": "ascent_sign_correction"},
+  "sweeps": {
+    "power_dbm": [26,28,30,32,34], "bs_antenna_count": [4,5,6,7,8],
+    "users": [2,3,4,5,6], "rotation_degrees": [0,9,18,27,36,45,54,63,72,81,90],
+    "rho": [0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1,2,3,4,5,6,7,8,9,10,20,30,40,50,60,70,80,90,100,200,300,400,500,600,700,800,900,1000]
+  },
+  "rotation_legend_pairs": [
+    {"swept_array":"BS","other_fixed_half_width_deg":90},
+    {"swept_array":"BS","other_fixed_half_width_deg":45},
+    {"swept_array":"BS","other_fixed_half_width_deg":0},
+    {"swept_array":"RIS","other_fixed_half_width_deg":90},
+    {"swept_array":"RIS","other_fixed_half_width_deg":45},
+    {"swept_array":"RIS","other_fixed_half_width_deg":0}
+  ],
+  "parameter_provenance": {
+    "paper_explicit": ["100 independent channels", "BS2x2,RIS6x6,lambda0.1m,lambda/2 spacing", "L=Q=P=2", "azimuth[-pi,pi],elevation[-pi/3,pi/3]", "66-point sensing grid", "rho10", "b0/2", "rotation each Euler axis±pi/2", "six scheme families", "Fig17 37 rho points"],
+    "inferred_from_author_figure_ticks": ["power26:2:34dBm", "BScount4:8", "users2:6", "rotation0:9:90deg"],
+    "derived_from_pattern_normalization": "Integral G over sphere=2*pi*G0/(b+1)=4*pi, hence G0=2*(b+1). This follows unit-average power gain, not the G0=1 in some legacy scripts.",
+    "tuned_or_not_explicit_in_final_text": ["seed", "noise0.001", "per-path variance1", "two sector bounds from an earlier author script but not verified as final figure setup", "initial phases/orientations/sensing amplitude", "all numeric caps/tolerances/line-search constants", "rotation legend fixed widths", "No-RIS zeros entire BS-RIS bridge so sensing and communication reflected links both disappear"],
+    "retained_printed_rule": "PR coefficient remains untruncated. literal_printed RCG and as_printed BB are selectable diagnostics.",
+    "documented_numerical_safeguards_not_in_paper": ["Non-ascent RCG direction restarts to Riemannian gradient, recording raw PR and slope; no PR+ truncation", "Ascent BB uses -s^T delta_gradient, the secant curvature of the minimized -F; printed-sign diagnostics and evidence are retained"],
+    "W_budget_tuning_evidence": "Safety cap increased from unreported 500 to 10000 without changing the original QT/MM updates or 1e-6 stopping criterion. The first full-size initial W trial reached that criterion at 2828 iterations; its first 500 objective values exactly matched the earlier capped run. This does not certify all channels, original nonconvex KKT stationarity or full figures. Old input banks keep their immutable prior configuration."
+  }
+}

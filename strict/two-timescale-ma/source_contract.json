@@ -1,0 +1,55 @@
+{
+  "paper_id": "two-timescale-ma",
+  "title": "Two-Timescale Design for Movable Antenna-Enabled Multiuser MIMO Systems",
+  "doi": "10.1109/TCOMM.2025.3585515",
+  "primary_source": "https://arxiv.org/html/2410.05912v2",
+  "identity_source": "https://arxiv.org/abs/2410.05912v2",
+  "status": "FULL_DIMENSION_THEORETICAL_RUNNERS_IMPLEMENTED_FULL_FIGURES_NOT_EXECUTED_CORRELATED_ZF_FORMULA_BLOCKED",
+  "known_settings": {
+    "antenna_count": 6,
+    "user_count": 5,
+    "user_distance_m_uniform": [50, 70],
+    "path_loss_reference_db": -40,
+    "path_loss_exponent": 2.8,
+    "aod_elevation_uniform_rad": [-1.5707963267948966, 1.5707963267948966],
+    "aod_azimuth_uniform_rad": [-1.5707963267948966, 1.5707963267948966],
+    "rician_factor_linear": [6, 100],
+    "power_w": 1,
+    "noise_dbm": -80,
+    "region_A": 2,
+    "region_formula_in_wavelengths": "[-Nr*A/2,Nr*A/2] x [-Nc*A/2,Nc*A/2]",
+    "minimum_distance_in_wavelengths": 0.5,
+    "fractional_increase_threshold": 0.00005,
+    "small_scale_distribution": "independent circular complex Gaussian, mean zero, variance one"
+  },
+  "unreported_author_fields": [
+    "Nr_Nc_for_each_N", "geometry_realizations", "nlos_realizations_per_geometry",
+    "random_seed_or_exported_random_inputs", "initial_positions_for_each_figure",
+    "maximum_AO_iterations", "convex_solver_accuracy_and_failure_policy",
+    "exact_sweep_values_for_each_figure", "FPA_power_optimizer_and_OPT_beamformer_stopping_budgets",
+    "position_error_geometry_mapping", "brute_force_grid_sizes_and_search_protocol"
+  ],
+  "equation_map": {
+    "channel": "(1)-(4), (68)", "MRT_beamforming": "(10)", "MRT_ergodic_approximation": "(13)",
+    "MRT_AO_SCA": "(23)-(31), Algorithm 1", "ZF_beamforming": "(34)",
+    "ZF_statistical_lower_bound": "(37)-(39)", "ZF_AO_MM_SCA": "(41)-(67), Algorithm 2",
+    "correlated_MRT": "(69)", "correlated_ZF_blocked": "(72), (74), (75)"
+  },
+  "ambiguities": [
+    {"id": "MRT_CURVATURE", "equations": ["29a", "29b"], "description": "29a defines maximum eigenvalue of a real symmetric 2x2 matrix. The printed closed form 29b has minus 4*Psi12^2 instead of plus. No silent substitution is permitted; execution requires an explicit interpretation."},
+    {"id": "ZF_CROSS_REFERENCES", "equations": ["66", "67", "Algorithm 2"], "description": "Algorithm 2 names P3.n whereas its text defines P5.n; the displayed constraint reference names a curvature formula rather than the spacing inequality. Execution requires explicit use of the mathematically stated P5.n with spacing inequality (30)."},
+    {"id": "CORRELATED_ZF_DIMENSION", "equations": ["72", "74"], "description": "Omega is MxM but S(t) is NxN. Their printed products are undefined for the default N=6,M=5. No invented covariance reduction or replacement Wishart approximation is implemented."},
+    {"id": "CORRELATION_SQRT", "equations": ["1", "68"], "description": "Section II prose writes S*u while the extension explicitly writes S^(1/2)*u for covariance S. The correlated channel implementation is mapped only to (68)."}
+  ],
+  "full_figures": {
+    "3-4": "Algorithm 1/2 convergence, N=6,M=5,kappa=6/100",
+    "5-6": "power sweep, N=6,M=5,kappa=100/6",
+    "7-8": "Rician factor sweep, N=6,M=5 and N=4,M=3",
+    "9-10": "region size A sweep",
+    "11-12": "user count sweep, N=6 and N=8",
+    "13-16": "correlated versus iid extension; correlated ZF formula requires clarification",
+    "17-18": "user and antenna position errors",
+    "19-20": "discrete brute force: N4/M3 region [-1.6,1.6]^2 and N6/M5 region [-1.6,1.6]x[-1.6,2.4], in wavelengths, kappa=20dB"
+  },
+  "compute_note": "An original full run count cannot be inferred without Monte Carlo counts and sweep grids. Exhaustive D points per axis requires D^(2N) candidate evaluations before feasibility pruning; D=10 means 1e8 at N=4 and 1e12 at N=6. No timing or original numerical figure reproduction is claimed."
+}

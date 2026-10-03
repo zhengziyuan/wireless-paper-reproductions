@@ -1,0 +1,42 @@
+{
+  "paper_id": "hotspot-satcom",
+  "doi": "10.1109/TWC.2023.3309957",
+  "production_status": "instantaneous_author_thesis_full_runner_implemented_not_full_run_statistical_incomplete",
+  "source_version":"user_supplied_author_thesis",
+  "sources": [{"url": "https://ieeexplore.ieee.org/document/10258030/", "kind": "publisher_metadata_and_abstract", "final_fulltext_verified": false}],
+  "final_source_required": "Final IEEE TWC published PDF pp3648-3664 (17pages) or final accepted LaTeX/source bundle",
+  "source_verified_components": ["publisher abstract confirms AO and two-stage manifold method"],
+  "provisional_components": ["instantaneous complex QT/SOCP satellite subproblem", "RIS phase SDP relaxation and Gaussian randomization", "author-thesis model crosschecks; NOT final publication equivalence"],
+  "full_scenario_candidate_defaults": {
+    "evidence": "author doctoral thesis Chapter3 candidate only; not final-publication verified",
+    "N": 16, "total_users": 16, "U": 6, "K": 10, "M": 25,
+    "leo_altitude_km": 550, "carrier_GHz": 12, "total_power_W": 100,
+    "NHU_sinr_dB": 3, "NHU_statistical_los_sinr_dB": -3,
+    "bandwidth_MHz": 200, "receiver_temperature_K": 235.3,
+    "tx_gain_dBi": 50, "satellite_antenna_diameter_m": 0.5,
+    "subsurface_elements": [200,140], "element_size_m": [0.01,0.01],
+    "ris_hu_distance_m": 400, "hu_spacing_m_range": [10,20],
+    "ground_rician_dB": 0, "leo_rician_dB": 20
+  },
+  "sweeps": [
+    {"candidate_description": "convergence U6,M25,kappaS20dB; AO20/100 iterations", "exact_final_figure_id": null, "grid": null},
+    {"candidate_description": "CPU time vsHU count", "exact_final_figure_id": null, "grid": null},
+    {"candidate_description": "HU sum rate vsHU count, kappaS10/20dB", "exact_final_figure_id": null, "grid": null},
+    {"candidate_description": "sum-rate CDF and per-user rates, U6,kappaS20dB", "exact_final_figure_id": null, "grid": null},
+    {"candidate_description": "per-user rate ECDF, kappaS10/20dB", "exact_final_figure_id": null, "grid": null},
+    {"candidate_description": "sum rate vsRician factor, U6/U1", "exact_final_figure_id": null, "grid": null},
+    {"candidate_description": "sum rate vsreflecting-element count, U6,M25,kappaS12dB", "exact_final_figure_id": null, "grid": null},
+    {"candidate_description": "statistical-CSI low-overhead comparisons", "exact_final_figure_id": null, "grid": null}
+  ],
+  "required_unknowns": ["final fulltext conformance", "coherent statisticalCSI QoS/SOCP original equations", "original published figure agreement"],
+  "implemented":["Instantaneous trueQT/SOCP","Actual lifted complexSDP/randomization","AO refreshesQT a afteractiveW","Two-stage author Algorithm3-2 phaseRGD thenQT; noPR direction","NoRIS optimizedbyQT notZF","Full16-feed/16-user finiteRician physicalESA generator/shared satelliteRIS","Configured instantaneous MC sweeps/CDF/per-user samples/solver CPU times"],
+  "phase_method_contract":"Algorithm3-2 and Section3.4.3 explicitly selectRGD. Formal chain minimizes -F=f3-f2 so -grad(-F)=+grad(F), retaining Eq3-36 argmaxF. Printed prose -gradF sign conflicts withargmaxF; literal sign remains explicit diagnosticonly. PR+RCG function remains diagnosticonly, neverformal default.",
+  "uniquely_derived_author_typo_interpretations":["Derivatives are taken directly from Eq3-36 F=f2-|g|^2; the printed imaginary-term expansion afterEq3-37 has sign/sum inconsistencies.","Lift L includes quadratic auxiliary a conjugate as required by the original expressionEq3-18; Eq3-19/21 displayedL omitsit.","Phase interference sums all J excludingdesired HU, as inEq3-18, rather than inconsistent j inU onEq3-21."],
+  "unimplemented":["StatisticalCSI AO/two-stage","Full sweeps notrun","Final publication equivalence"],
+  "statistical_issue":"ThesisEq3-41b denominatorj inK excludesHU whileEq3-46 sumsJ. Eq3-46 usesnorm squared<=linear as purportedSOC and imaginary selfNLoS block cannot subtract a quadratic norm. General fullrank covarianceQoS notdirectlyconvexSOCP; noinstantaneous/LoS/SCA replacement.",
+  "tuned_not_reported":"full_config.json discloses authorized numerical coordinates/gains/MC1000/randomization1000/seed/caps/thresholds. Notoriginal figuredata.",
+  "solver_evidence":"CLARABEL passedsyntheticfullcountcomponent but failedphysicalQT; SCS eps1e-7,max100000 solves same originalconvex problem and passedbounded physicalchain; fullPython backendexplicitSCS, initializationClarabel.",
+  "compute_contract": {"full_run_started": false, "full_cpu_hours": null, "reason": "fullconfigured counts present; onlyfull-dimensional boundedchecks run, solverdependent fullbenchmarks required"},
+  "dependencies": {"python": "NumPy,SciPy,CVXPY,Clarabel initialization/SCS production", "matlab": "externalCVX2.2.2+SDPT3 documented successiveapproximationlog/exp; R2025b may needfunctions/vec_ onpath"},
+  "production_gate_pass": false
+}

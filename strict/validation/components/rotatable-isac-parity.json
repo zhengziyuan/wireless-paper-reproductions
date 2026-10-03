@@ -1,0 +1,19 @@
+{
+  "paper_id": "rotatable-isac",
+  "scope": "Actual component-output comparison only; NOT full published-figure reproduction",
+  "compared_sections": [
+    "metrics",
+    "checks",
+    "history"
+  ],
+  "atol": 1e-06,
+  "rtol": 1e-05,
+  "component_parity_passed": true,
+  "full_published_figure_reproduction_passed": false,
+  "output_sha256": {
+    "python": "ee6060c5a20c947acdd920ce3b29c1927b96e973c604965bc0a04cac7c35d11c",
+    "matlab": "ed712f5fcc0fa81754f96022b3ba0331e8f8f21c2c369ecea26209b6499169d2"
+  },
+  "failures": [],
+  "schema_adapter": "Singleton MATLAB struct collections QCQP/restarts/BB normalized to lists only"
+}

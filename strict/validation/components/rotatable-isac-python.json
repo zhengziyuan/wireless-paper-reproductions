@@ -1,0 +1,241 @@
+{
+  "paper_id": "rotatable-isac",
+  "mode": "component_test_not_full_run",
+  "metrics": {
+    "initial": {
+      "utility": -5.4577398581487575,
+      "rate": 4.541691030230821,
+      "nmse": 0.9999430888379578,
+      "iota": 27350.28496175672,
+      "pattern": [
+        0.0,
+        0.0,
+        0.0,
+        0.16943070307675914,
+        1.286392880750332,
+        1.7962343220614336,
+        0.0,
+        0.0,
+        0.0,
+        0.24898819473949815,
+        1.1766115563506903,
+        1.3241007100290423,
+        0.0,
+        0.0,
+        0.0,
+        0.08855247454577307,
+        0.9079887919210791,
+        0.6957252075730365,
+        0.0,
+        0.0,
+        0.0,
+        2.052187567391928,
+        20.1812322052683,
+        8.576694443227904,
+        0.0,
+        0.0,
+        0.0,
+        0.44206710696216944,
+        4.1035080515125255,
+        2.8465381652321957,
+        0.0,
+        0.0,
+        0.0,
+        0.2856563944453744,
+        1.8176868911290298,
+        5.838000473824349,
+        0.0,
+        0.0,
+        0.0,
+        0.6506793892327278,
+        2.980193551584909,
+        1.0119034265191227,
+        0.0,
+        0.0,
+        0.0,
+        3.743144404948588,
+        87.56444718950684,
+        276.6090865961373,
+        0.0,
+        0.0,
+        0.0,
+        0.06408895519086424,
+        2.34838173784951,
+        19.26712027040341,
+        0.0,
+        0.0,
+        0.0,
+        0.13287944713246744,
+        0.1631521359110867,
+        0.44179085565870146,
+        0.0,
+        0.0,
+        0.0,
+        0.16943070307675914,
+        1.2863928807503315,
+        1.7962343220614336
+      ],
+      "sinr": [
+        17.477212842048186,
+        0.2605171811474448
+      ]
+    },
+    "printed_BB_rotation": [
+      0.019322788021941633,
+      0.00880639203365207,
+      -0.016084252572107247,
+      0.005037349434765169,
+      0.0035718217845704947,
+      -0.04929238855663229
+    ],
+    "corrected_BB_rotation": [
+      -1.8817963109672708e-06,
+      0.02379552671510552,
+      -0.11138836709069244,
+      -0.09750894449715372,
+      -0.03502263353523087,
+      -0.10577356314258493
+    ]
+  },
+  "checks": {
+    "rotation_gradient_error": 4.6596960068256976e-08,
+    "RIS_gradient_error": 3.5202843973181075e-09,
+    "W_gradient_error": 3.0714216948647315e-09,
+    "gradient_pass": true,
+    "QT_MM_non_decrease": true,
+    "power_feasible": true,
+    "RCG_unit_modulus_error": 2.220446049250313e-16,
+    "NMSE_identity_error": 0.0,
+    "full_model_BS_count": 4,
+    "full_model_RIS_count": 36,
+    "full_model_sensing_grid": 66,
+    "printed_BB_negative_denominator_observed": true,
+    "printed_RCG_non_ascent_diagnostic": "Printed untruncated PR direction is not ascent. Literal diagnostic mode does not restart.",
+    "finite": true
+  },
+  "history": {
+    "W": {
+      "objective": [
+        -5.4577398581487575,
+        4.20059841196692
+      ],
+      "QCQP": [
+        {
+          "nu": 0.9824199403301463,
+          "bisection_steps": 40,
+          "stationarity_residual": 2.264880996411301e-14,
+          "power": 0.9999999999999329
+        }
+      ],
+      "converged": false,
+      "termination_reason": "maximum_iterations_without_criterion_stop",
+      "iterations": 1,
+      "iteration_budget": 1,
+      "budget_exhausted": true,
+      "capped_unconverged": true,
+      "relative_objective_improvement": 1.769658965275737,
+      "relative_step": 0.32578804519484966,
+      "relative_tolerance": 1e-06
+    },
+    "RIS": {
+      "objective": [
+        -5.4577398581487575,
+        -4.865118441831589
+      ],
+      "PR_coefficients": [
+        0.0,
+        0.10062985472229584
+      ],
+      "restarts": [
+        {
+          "iteration": 1,
+          "reason": "non_ascent_direction",
+          "raw_PR": 0.10062985472229584,
+          "raw_slope": -0.0011249779118494587
+        }
+      ],
+      "mode": "documented_non_ascent_restart",
+      "final_objective": -4.863861678717515,
+      "applicable": true,
+      "converged": false,
+      "termination_reason": "maximum_iterations_without_criterion_stop",
+      "iterations": 2,
+      "updates": 2,
+      "iteration_budget": 2,
+      "budget_exhausted": true,
+      "capped_unconverged": true,
+      "last_checked_normalized_gradient_norm": 0.03162725027788244,
+      "final_normalized_gradient_norm": 0.023054151606001484,
+      "gradient_tolerance": 1e-06
+    },
+    "PGA_printed": {
+      "objective": [
+        -5.4577398581487575,
+        -5.272790817525515
+      ],
+      "BB": [
+        {
+          "raw": -0.010239311558426783,
+          "clipped": 1e-10,
+          "denominator": -0.3103234244396995
+        }
+      ],
+      "steps": [
+        0.01,
+        1e-10
+      ],
+      "final_objective": -5.2727908168208035,
+      "converged": true,
+      "termination_reason": "relative_step_tolerance",
+      "iterations": 2,
+      "updates": 2,
+      "iteration_budget": 3,
+      "budget_exhausted": false,
+      "capped_unconverged": false,
+      "last_checked_projected_gradient_norm": 2.6543955299086477,
+      "final_projected_gradient_norm": 2.654395525922599,
+      "gradient_tolerance": 1e-06,
+      "relative_step": 2.6543955300936245e-10,
+      "relative_tolerance": 1e-08
+    },
+    "PGA_correction_diagnostic": {
+      "objective": [
+        -5.4577398581487575,
+        -5.272790817525515,
+        -5.206947010723817
+      ],
+      "BB": [
+        {
+          "raw": 0.010239311558426783,
+          "clipped": 0.010239311558426783,
+          "denominator": 0.3103234244396995
+        },
+        {
+          "raw": 0.055213558737860075,
+          "clipped": 0.055213558737860075,
+          "denominator": 0.013379104629270416
+        }
+      ],
+      "steps": [
+        0.01,
+        0.010239311558426783,
+        0.055213558737860075
+      ],
+      "final_objective": -5.0928431566376995,
+      "converged": false,
+      "termination_reason": "maximum_iterations_without_criterion_stop",
+      "iterations": 3,
+      "updates": 3,
+      "iteration_budget": 3,
+      "budget_exhausted": true,
+      "capped_unconverged": true,
+      "last_checked_projected_gradient_norm": 2.406063287365952,
+      "final_projected_gradient_norm": 7.274771080455218,
+      "gradient_tolerance": 1e-06,
+      "relative_step": 0.13284731664398872,
+      "relative_tolerance": 1e-08
+    }
+  },
+  "elapsed_seconds": 3.0550872000167146,
+  "implementation_fingerprint": "86b206cb59bd85a2c2e3c672b666df5ec7182228a8d4fee4d69bd478e8f2eb06"
+}

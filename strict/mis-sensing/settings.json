@@ -1,0 +1,66 @@
+{
+  "initialization": {
+    "method": "portable_park_miller_uniform_circle_and_simplex",
+    "seed": 241219071,
+    "eta_initial": 0,
+    "lambda_initial": 0
+  },
+  "line_search": {
+    "line_search_policy": "original_per_block_backtracking",
+    "non_descent_policy": "documented_non_descent_restart",
+    "initial_step": 1,
+    "armijo_constant": 0.0001,
+    "backtrack_factor": 0.5,
+    "max_backtracks": 60
+  },
+  "inferred_or_tuned": {
+    "line_search": "Original distinct per-block alpha backtracking: each block uses actual projected/retracted displacement Armijo. The jointly combined block step is checked with total actual-displacement Armijo and is commonly scaled only if necessary; this coupling safeguard and constants are not specified in the paper. Common-alpha mode remains diagnostic only.",
+    "initialization": "Portable Park-Miller phases, independent positive simplex entries then row normalization; seed not published.",
+    "scheduling_recovery": "Largest relaxed entry, smallest index on exact tie; paper specifies thresholding but not its threshold.",
+    "non_descent": "Raw per-block PR coefficients and slopes are preserved and recorded. A block restarts minus its current gradient if either its raw tangent slope or its initial-step feasible projected displacement slope is nonnegative; raw_non_descent and projected_non_descent reasons are recorded separately. Exact zero-gradient/empty blocks and zero projected boundary motions are inactive. The source specifies an open simplex but its Euclidean projection reaches the closed boundary; this documented numerical safeguard reports raw row-mean and projected/KKT norms separately, using the latter for guarded stopping. literal_printed retains raw-direction diagnostics. No feasibility tolerance is relaxed.",
+    "distance": "Ambient product norm for outer step; intrinsic product distance not numerically specified.",
+    "angles": "Azimuth endpoints 30 to 70 degrees; elevation cell midpoints within 0 to 90 degrees avoid physically duplicate theta=0 targets. Original exact samples not published.",
+    "closed_form_origin": "MS2 quadratic coordinates shifted by the maximum index span; physical displacement equals shift index minus maximum. This inferred origin/orientation aligns the published positive quadratic with ordinary-transpose G in the positive-angle region.",
+    "stopping": "Numerical paragraph AND chosen explicitly; Algorithm 2 says OR. Both retained as selectable options.",
+    "feasibility": "1e-6 max q feasibility tolerance selected; original best-feasible numerical tolerance absent.",
+    "pslr": "Guard 5 degrees Euclidean angular distance, clutter beta equal targets, epsilon 1e-12 and mu 10 halved to 1e-3 are inferred settings; original 60x60 grid retained.",
+    "ris_baseline": "Independent phase optimization per target by same RALM/RCG, continuous design followed by nearest phase quantization for 1-bit/2-bit. Original baseline optimizer not specified.",
+    "grids": "Sweep point grids recovered from EPS axis ticks/legends and integer geometry. These may differ from unpublished intermediate plotting samples."
+  },
+  "kind": "sensing",
+  "carrier_hz": 12000000000,
+  "wavelength_m": 0.025,
+  "spacing_over_wavelength": 0.3333333333333333,
+  "incidence_direction_cosines": [
+    0,
+    0
+  ],
+  "reference_echo_db": -73.88,
+  "power_dbm": 30,
+  "bs_antennas": 1,
+  "number_of_starts": 6000,
+  "outer_iterations": 30,
+  "rcg_max_iterations": 4000,
+  "epsilon_initial": 0.001,
+  "epsilon_min": 0.000001,
+  "rho_initial": 1,
+  "rho_factor": 1.2,
+  "iota_progress_ratio": 0.8,
+  "lambda_min": 0,
+  "lambda_max": 10000000000,
+  "minimum_step": 1e-10,
+  "outer_stopping_logic": "numerical_text_AND",
+  "feasibility_tolerance": 0.000001,
+  "azimuth_sampling": "inclusive_uniform_30_to_70",
+  "elevation_sampling": "uniform_cell_midpoints_in_0_to_90",
+  "pslr_grid": [
+    60,
+    60
+  ],
+  "pslr_mu_initial": 10,
+  "pslr_mu_terminal": 0.001,
+  "pslr_mu_factor": 0.5,
+  "pslr_epsilon": 1e-12,
+  "mainlobe_guard_deg": 5,
+  "clutter_relative_echo": 1
+}

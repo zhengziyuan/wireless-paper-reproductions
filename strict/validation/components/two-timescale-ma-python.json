@@ -1,0 +1,90 @@
+{
+  "paper_id": "two-timescale-ma",
+  "mode": "component_test_not_full_run",
+  "metrics": {
+    "mrt_statistical": 7.631633360635641,
+    "zf_statistical": 11.157068970008563,
+    "correlated_mrt": 7.656573086531797,
+    "mrt_one_coordinate": [
+      [
+        -0.2937686772420606,
+        -0.5530529605374312
+      ],
+      [
+        -0.25,
+        0.0
+      ],
+      [
+        -0.25,
+        0.5
+      ],
+      [
+        0.25,
+        -0.5
+      ],
+      [
+        0.25,
+        0.0
+      ],
+      [
+        0.25,
+        0.5
+      ]
+    ],
+    "zf_one_coordinate": [
+      [
+        -0.2552055224113657,
+        -0.505171361454075
+      ],
+      [
+        -0.25,
+        0.0
+      ],
+      [
+        -0.25,
+        0.5
+      ],
+      [
+        0.25,
+        -0.5
+      ],
+      [
+        0.25,
+        0.0
+      ],
+      [
+        0.25,
+        0.5
+      ]
+    ]
+  },
+  "checks": {
+    "mrt_gradient_max_error": 7.191549578067225e-10,
+    "gradient_pass": true,
+    "zf_woodbury_identity_error": 1.7208456881689926e-15,
+    "zf_MM_tangency_error": 3.0531133177191805e-16,
+    "Eq29a_corrected_closed_form_error": 0.0,
+    "mrt_surrogate_lower_bound_gap": 0.06562951609542367,
+    "zf_surrogate_lower_bound_gap": 0.015957999141042123,
+    "spacing_feasible": true,
+    "box_feasible": true,
+    "correlated_zf_closed_form_implemented": false,
+    "finite": true
+  },
+  "history": {
+    "mrt": {
+      "before": 7.631633360635641,
+      "after": 7.9533447441304626,
+      "surrogate": 7.887715228035039,
+      "lower_bound_gap": 0.06562951609542367
+    },
+    "zf": {
+      "before": 11.157068970008563,
+      "after": 11.189623436879362,
+      "surrogate": 11.17366543773832,
+      "lower_bound_gap": 0.015957999141042123
+    }
+  },
+  "elapsed_seconds": 2.8851952999830246,
+  "implementation_fingerprint": "43d33b3fc665dceae2b77f942c5a6a5683693d9cdfc4aa364c27f52658b932c0"
+}
