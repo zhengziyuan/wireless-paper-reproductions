@@ -117,7 +117,14 @@ def plan(paper, figure, settings_path=None):
         if paper=="hotspot-satcom" and figure==9:
             result.update(executor="hotspot_element_count.py / run_hotspot_element_count_matlab",
                           scientific_branch="original_count_only_aperture_gain_with_declared_frozen_unreported_centers",
-                          original_author_center_geometry_recovered=False,row_column_factorization_inferred=False)
+                          original_author_center_geometry_recovered=False,row_column_factorization_inferred=False,
+                          effective_execution_parameter_overrides={"U":6,"K":10,"M":25,"N":16,"J":16,
+                              "kappa_satellite_db":12,"reference_elements_per_subsurface":28000},
+                          effective_execution_grid=list(items[0]["x"]["values"]),
+                          independent_channel_realizations_per_count=1000,
+                          full_required_channel_realizations=7000,
+                          base_settings_shape_pairs_are_not_the_effective_count_grid=True,
+                          effective_configuration_comparison="Existing byte-bound full_count_configuration override; metadata only, no numerical model or execution change")
         if result["runnable"] and not sweeps:
             result.update(runnable=False,blocker="No validated numerical sweep exists for this illustration")
     result["plot_readiness"] = "Complete-bank source-mapped renderer available; partial, capped, changed-source banks are rejected"
@@ -282,7 +289,9 @@ def run_matlab(expression,matlab):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--paper", choices=PAPERS, required=True)
-    parser.add_argument("--figure", type=int, required=True)
+    artifact = parser.add_mutually_exclusive_group(required=True)
+    artifact.add_argument("--figure", type=int)
+    artifact.add_argument("--table", type=int, help="Source-qualified parameter-table plan/audit, never an optimizer")
     parser.add_argument("--language", choices=["python", "matlab"], default="python")
     parser.add_argument("--execute", action="store_true")
     parser.add_argument("--output-dir", type=Path)
@@ -292,6 +301,16 @@ def main():
     parser.add_argument('--settings',type=Path,help='Explicit scientific settings, including preserved printed or inferred normalization branches')
     parser.add_argument('--workers',type=int,default=1,choices=[1,2,3],help='CPU parallelism only; all scenario populations and budgets remain full')
     args = parser.parse_args()
+    if args.table is not None:
+        from table_reproduction import table_plan, execute_table
+        if args.settings or args.source_result or args.source_bank:
+            parser.error("Parameter-table audits bind canonical source evidence; figure overrides are not table inputs")
+        specification = table_plan(args.paper, args.table)
+        print(json.dumps(specification, indent=2))
+        if args.execute:
+            destination = args.output_dir or HERE / "outputs" / args.paper / f"table{args.table}-parameter-audit"
+            print(execute_table(specification, args.language, destination.resolve()))
+        return
     specification = plan(args.paper, args.figure,args.settings)
     print(json.dumps(specification, indent=2))
     if args.execute:

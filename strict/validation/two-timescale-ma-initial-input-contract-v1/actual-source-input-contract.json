@@ -1,0 +1,3709 @@
+{
+  "scope": "ACTUAL_source_lineage_and_all200_exported_input_contract_NO_new_simulation_or_fitting",
+  "supplied_author_source_sha256": "9ba173a0da8fcd472bb211155e0a4c1e7b9a0104a718bd88ac166808be876b19",
+  "title_matched_author_copy_sha256": "9ba173a0da8fcd472bb211155e0a4c1e7b9a0104a718bd88ac166808be876b19",
+  "supplied_author_source_copies_identical": true,
+  "source_line_anchors": {
+    "Rician_Eq1": [
+      129,
+      819
+    ],
+    "direction_and_distance_reference": [
+      135,
+      341,
+      361,
+      365,
+      390,
+      393,
+      400
+    ],
+    "unit_amplitude_LoS_Eq2": [
+      139
+    ],
+    "noise_variance_signal_model": [
+      156
+    ],
+    "MRT_total_realized_channel_power": [
+      227
+    ],
+    "ZF_equal_stream_power": [
+      505
+    ],
+    "distance_distribution": [
+      869
+    ],
+    "pathloss_power_coefficient": [
+      870
+    ],
+    "region_noise_dimensions_kappa_power": [
+      871
+    ],
+    "Figure3_4_stop_dimensions": [
+      900
+    ],
+    "Algorithm1_initialization": [
+      471,
+      796
+    ],
+    "Algorithm2_initialization": [
+      471,
+      796
+    ]
+  },
+  "actual_current_source_config_manifest_bindings_before": {
+    "bare_jrnl.tex0": "9ba173a0da8fcd472bb211155e0a4c1e7b9a0104a718bd88ac166808be876b19",
+    "bare_jrnl.tex1": "9ba173a0da8fcd472bb211155e0a4c1e7b9a0104a718bd88ac166808be876b19",
+    "run.py2": "32b5a7c87d4701847e2ecfcd5d3d4bdeb84fd5011edea18a7fc0b17c1d2fcbe8",
+    "core.py3": "f2b68eaf0a88392947a19dd4d332b2c442f28d1b99f250e02643a99fdbd09d24",
+    "figures.py4": "02ee1d5e1d2e13e937ee0f39298756d85aeef75392f8112ab88eaa4c72bbcd38",
+    "run_strict_two_timescale_ma_full_v2.m5": "efa6f46df3d486cc24db1699becb596db80de0c1efe15a485e8e3a478459503d",
+    "manifest.json6": "12f2894bb246049035cadd323a0b1fe63fa50a62649a8bc066ef2e4133873337",
+    "run_config.json7": "72bd6211cd90e238bfa34a25d4f8e56d29454b01c51aca32aa483488475a0d80"
+  },
+  "actual_current_source_config_manifest_bindings_after": {
+    "bare_jrnl.tex0": "9ba173a0da8fcd472bb211155e0a4c1e7b9a0104a718bd88ac166808be876b19",
+    "bare_jrnl.tex1": "9ba173a0da8fcd472bb211155e0a4c1e7b9a0104a718bd88ac166808be876b19",
+    "run.py2": "32b5a7c87d4701847e2ecfcd5d3d4bdeb84fd5011edea18a7fc0b17c1d2fcbe8",
+    "core.py3": "f2b68eaf0a88392947a19dd4d332b2c442f28d1b99f250e02643a99fdbd09d24",
+    "figures.py4": "02ee1d5e1d2e13e937ee0f39298756d85aeef75392f8112ab88eaa4c72bbcd38",
+    "run_strict_two_timescale_ma_full_v2.m5": "efa6f46df3d486cc24db1699becb596db80de0c1efe15a485e8e3a478459503d",
+    "manifest.json6": "12f2894bb246049035cadd323a0b1fe63fa50a62649a8bc066ef2e4133873337",
+    "run_config.json7": "72bd6211cd90e238bfa34a25d4f8e56d29454b01c51aca32aa483488475a0d80"
+  },
+  "all_actual_source_input_bytes_unchanged": true,
+  "actual_records": [
+    {
+      "input_filename": "case-000-mc-000.json",
+      "actual_input_sha256": "655a72a105a5feeaefe7a28311bc3fcb5688e3cbb783339927c57aa7a49ae386",
+      "realization": 0,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "2380c853dc4aab0a2f171d3840083a1a257333e6836e1eb830941d9e731e4b46",
+        "fdcf05788025cc49fb6a085359a7e4129b02a9780e84e723d649790b8ba4cab4"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-000-mc-001.json",
+      "actual_input_sha256": "4fc8ca128fa955d2e18976ace787b9e76c844542088c2de9f8bf9da2ec14b0c3",
+      "realization": 1,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "35f965cc7a8c4e74727a0eb6f8a0ffc5fe43f3a144ca906cdd1e5dcd6878c42a",
+        "4d010c135d6dca0f8d9e5f90b29891d0599fbbf2a560b9ac127e952c8f036b0c"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 5.329070518200751e-15
+    },
+    {
+      "input_filename": "case-000-mc-002.json",
+      "actual_input_sha256": "27376726cf9c445832aa1507942edffadaff43ab1933eeb0a5a8e695a004b0f4",
+      "realization": 2,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "586a8c59768d6cb9456ccd5b5c712d95ac75d49a19eb98fa2bd092f7f87bd40a",
+        "5349b51980468547c4d28820c2341869d1484c95c64be31ebaa9d03f34868a85"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-003.json",
+      "actual_input_sha256": "52381523553de5dc96041a12d6d17b2bfed56cc169d9c8c6f8aa3f64455cb3a8",
+      "realization": 3,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "92cf3454792d714c724f3ee1b3af6674b60531b2eaebb260a46bcfb57dcc4033",
+        "84fa2e4d4a0c0b20744451257404388e3a949b502fdb06eb0380118b57c2c07f"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-004.json",
+      "actual_input_sha256": "09b6b91404c1e3c2548c9ca4d502c776e99461d7b8a0865cc37e98bb31b580c6",
+      "realization": 4,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "735530f67ae8821ce2d1a35e2d3be3ddc6d5810b604d2599a82669335859e2e2",
+        "50ba5a2bd0e984fce2b941056fc91ffa185f8211a7ec5cc9e9fe285f3b38b67d"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-005.json",
+      "actual_input_sha256": "bb7427d237e9af882522f9d0c05aefb6b5f291410ac5a2bea536d7ab767b6450",
+      "realization": 5,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "e222dafa5c15fca0b7bbabe53b0a493d45b0d0c469d5ca632375d46d90de21a5",
+        "8a943493006206ed752dd647886669581ba33a7f67e304bcd8195d763dcd44cb"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-006.json",
+      "actual_input_sha256": "a9a75b8eb41e0524cb67cdfafc99ee00c60f9ad07242570a4ce39cbfc455cada",
+      "realization": 6,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "760237eab168da48a53f6b8b53d7fb6653aafacf6197fb3148b78f4077bc3cff",
+        "aa3ad78f4ce8ef236109329acb2184ec4d7b57650a97f0651104df083561cb58"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-007.json",
+      "actual_input_sha256": "7d72cabd1a5e7d059d5c809fb51459667a92e3d367b9cae2221b38aaf4f31e39",
+      "realization": 7,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "a4d9be215508d0d4d48a14254e18263ccf3ec2913c299ea8b90e16312153b882",
+        "ed3d6364593074e31fb6cfec5fb6b86da37358ec1f8ff06a7983a6d3953ee67e"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-008.json",
+      "actual_input_sha256": "b91887ffbe49dba93f4e10ab1f7c4a158539968e231ba3e0792a04aa5d43e2e1",
+      "realization": 8,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "d1022d85cac9f774caa17c2556696f8dcc242a9bc2b9cee6ed80dba661d76c30",
+        "1d934ec37d453bdf717b92801b69989277d766b1120e29b767dbafe40c86f227"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-000-mc-009.json",
+      "actual_input_sha256": "f256803789fb40eadf24e61ac1909389cfa69ccb356d263090fb94f8c54417e0",
+      "realization": 9,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "be3dbc4a6811552af0a7203b64979c85d625a3c1c64c1e2598f19cfa7667ba12",
+        "a4b5ba419d1e49627f9bc7e9c40820aec11f868e968823e59fa9130c25d3ff57"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-010.json",
+      "actual_input_sha256": "3d48c5e718f3985b3bc862be7caec3d6b7f2875cfb02cdfe8649375bfcec8f3e",
+      "realization": 10,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "d89783f427b68676c38d7743651e08ecdab0e7e104d602a50433261d5ddcbf70",
+        "8a77fe1fa70c376055107412d9e929f505325f6931c855d195e72c1d84f3af99"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 1.7763568394002505e-15
+    },
+    {
+      "input_filename": "case-000-mc-011.json",
+      "actual_input_sha256": "157b8830db753a0e3381fc3b16a995118272126efaa0630b180bf5cc3fcf2e2d",
+      "realization": 11,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "f4b61c28cf3a8eda613583cf73ac5f58f31a78eaced520528d5a2c4042aa7ee6",
+        "89ca24264982deac8f80456eeb2d4e3005a5544c09ed69b79580b1523e33cf54"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-012.json",
+      "actual_input_sha256": "290888c3d5ed4869ee5771ab37b48824d63362ce76ce3733ec1a09d6c1d66139",
+      "realization": 12,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "fe0f4cf8b88a0ae888f1544ff98100babcc0cce39934c332d3b33c2953a27bff",
+        "1e78f9611e24bcf6111607f2f1d96ab4463ae6b6f411fe0e2c647c35e0bf89c0"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-000-mc-013.json",
+      "actual_input_sha256": "824a9f9fcf181d503d19e1bd4e9e112ef76127d57cc67b71b5630fa7e8510508",
+      "realization": 13,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "a5b9e881c2adc370d3ffb4c7b52cf20175eed6309a1a7508e74c00be7b7e4c39",
+        "782776d458977c871e0c08294541e3d73dd6b14faed4f7bd585b215fbcf9bd32"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-000-mc-014.json",
+      "actual_input_sha256": "d44c527f50b45e8cd144dc001f5941bedff98b015b1acfb78bf1bf088484f1ec",
+      "realization": 14,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "a699260166284fd0d645a5d5f588758c6c9d91c8504ffdda83472c430b3e84a2",
+        "8bb61b4705bb35d662d9f64addc9bd8cb92daa19949552eb1ea55658e61d5e19"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-015.json",
+      "actual_input_sha256": "7cac7e243bae22248a57b8a1be9c829c6650aa6db2647f148cb0a8cf7299e120",
+      "realization": 15,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "2ca1dc8e50b77895953667b7cc16ef155a4cf76e5a5db1a210871fc43065e8b3",
+        "86518bba320f37df1dfb0ef2324ba3d73a577d419b120fc8a9ce8d6243ab18f7"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 7.105427357601002e-15
+    },
+    {
+      "input_filename": "case-000-mc-016.json",
+      "actual_input_sha256": "5aa6f6e7a04a8f4e651f4aa7fb10b140978150570be6e072667506ddd42f8cb6",
+      "realization": 16,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "b1cbb787be37020e32eb03aae2de98b65f8cb3a35a06caad5ab8554640e70bdb",
+        "d7efebfa238d7c3b096b649a97aad602af84c36c0c8346a57df9c3d0b1ef4921"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-000-mc-017.json",
+      "actual_input_sha256": "4747af691515275358552a4b7b4f334a67f631d280af1915b006f40c6dfd4511",
+      "realization": 17,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "9d14a3655ea42c5b9e916ffc48367c307cb65ad127237f37ed0f859f56e2dc28",
+        "9adfe9e3e90dbc9047842793c5aaea7fc0b8df491d6a56f6245202dc2254e886"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-000-mc-018.json",
+      "actual_input_sha256": "ded94edfc7bab08d3a94e7a17b9a733332bead3b4bb7198dbf682e26de014190",
+      "realization": 18,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "a674e6957da72fb7bad03df119040f498488c699b438bfc84dec78abb88b3eae",
+        "063437e1da1178e1464f1c1fa964d82125783455aacf6e6e7c03b1e024ba48c1"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 7.105427357601002e-15
+    },
+    {
+      "input_filename": "case-000-mc-019.json",
+      "actual_input_sha256": "46ad5e371e75a4ea406bfc41e7d44ce8204610268a547695aecb769d0ba20d70",
+      "realization": 19,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "41b9278301b203870ff114f5567a02dda04030509772ba8f6ba27d9bbb44653c",
+        "12ada9a689b391a970028bdabf10d2de0c307296797a78e56e517514f5a99ea1"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-020.json",
+      "actual_input_sha256": "4ef447db7f9ba25fd38f402b27627b8058353018c71268045adfd272b991b054",
+      "realization": 20,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "1017810b14a160ec2aca4e55b1c5a9b1f53b425b286fc96e5ab1d3f0737f97b3",
+        "0952e4f3ebd3e7a354caebe1f2f167a9848306cf3fe4427854bfda34097afd4e"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-000-mc-021.json",
+      "actual_input_sha256": "f30b9ac24609ee79602e407e192f088659c89ea8e0744794ef4c9972a4b27a24",
+      "realization": 21,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "c58e86a5de2ba790748a59b60e2956d92efb9b508cee53b9434501bbbf6dcd29",
+        "9ef1ec99c809b4f7166e6572b690bef15fabb5fab8279138b16374d55f14bbfd"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-000-mc-022.json",
+      "actual_input_sha256": "c84eabb1cebf5b3837af92b0ab8fa993c44f53ec792734abea11718a096255bb",
+      "realization": 22,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "b145f44460f59a527fe671de9950aa9e8e3432891d3c921d9dd99580512ec21d",
+        "650feb7c4df38c28085da8b7d30c9527f0ca26db599363b66c94445fc5d102e0"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 7.105427357601002e-15
+    },
+    {
+      "input_filename": "case-000-mc-023.json",
+      "actual_input_sha256": "1694715441fd67ddbec5b5c383e562f6109618a83a9d6909a286693c878af649",
+      "realization": 23,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "7c724fb83a082e51ea172749628a1521cacccd468ccdaae6d3b271ed59826a0e",
+        "7f10ef750ab5da89ca45cfda3a95c8f3484e5b651f86ad6168425318220d4863"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 7.105427357601002e-15
+    },
+    {
+      "input_filename": "case-000-mc-024.json",
+      "actual_input_sha256": "eb54ede06188a19c235f2ab73152379159a85732806cd7da39a1489c7ae5451c",
+      "realization": 24,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "b172a64bd8351f13d21210687236dd056124d0a3bc3aa84dff4a272f55ecab1e",
+        "ac36d95ed9a471bbf95649a87b56d708cb1309cddc1fe5f8643c9958723fe7eb"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-025.json",
+      "actual_input_sha256": "facbf3778df6bddf158a097e0fe01b60b9d445aab77574d88279aac3df26ffd2",
+      "realization": 25,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "0b88c1ee7b0cb010e9ddedd96fd168ab313551c5937f4e5e6c50ba6cf322c3a3",
+        "1091aba9eac45e4c4fb2e5fde971e0738a3abdf0f5d79804383bcd558fdc0a5c"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-026.json",
+      "actual_input_sha256": "32a1cf8d062185b96b0210eab8079288d54a11b16082dbea2e4d65ec3b658438",
+      "realization": 26,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "d803dbf178922dd2e7cfb606afa08374bddeccf58a8941ea2ab8bd0643173e2d",
+        "1881dc6b0878e9f47db55e2602fa8221938d327d7c566e747bd9bcfa7c92aad2"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 5.329070518200751e-15
+    },
+    {
+      "input_filename": "case-000-mc-027.json",
+      "actual_input_sha256": "7b94f5a1ae1b52c63b5210e8d0f9d7048248cb178e0b2da72a578249e906fc75",
+      "realization": 27,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "8c02b60c281c7bd799c6a304be20b3f6ad485481cdf355a9cad5235f76518b01",
+        "e698800d17669aaa26a0b2b17db7b0e63cf96db632b170e80f21c3a6a9e123d8"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 7.105427357601002e-15
+    },
+    {
+      "input_filename": "case-000-mc-028.json",
+      "actual_input_sha256": "43fe0ea03a83989bd2ae88def2a8a30f7b4f4fb35c99093593645ace022df8ed",
+      "realization": 28,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "be881da4d7c10f9cfa3248e5d08e319bfca9f568ed9f889b242fe4ee14057c3e",
+        "333991d0625b936d286fb9b0d373ad5727cfad6979847885bdf7bab0afe01041"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-000-mc-029.json",
+      "actual_input_sha256": "da54c07f014422df599b01a9e24d329a277ab3f2a33ac225fddb8b65fa1feab6",
+      "realization": 29,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "8b9a4133fe7e022999c4cb4edfcfaa246f24f02be97492d68be64da8ebd163bc",
+        "e3dd3c9e51172aad6b064814b4a93fb474b7fd3bbc4d4c7faad0534a9073463f"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-000-mc-030.json",
+      "actual_input_sha256": "f4c6bb82444091b522445c6eefe13c302913fc444d0ae3b506ae0d6fb210b435",
+      "realization": 30,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "6d2bc2090a9a940fcd976a597301d805b1195f61b2eeade5ee34d6e8b62496b2",
+        "58f32e5a57150d9c283ddb8f5132014d12c095ac215b1765dc4f3c5f4b7c29d6"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 1.7763568394002505e-15
+    },
+    {
+      "input_filename": "case-000-mc-031.json",
+      "actual_input_sha256": "8c760413a1d0e1e29f5c9b1019d9f98a8b8a68c75af512d4a80fcae0a8982afd",
+      "realization": 31,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "46c1a558fc12c65a11f02509ce6556c285a8f939f3fca482d57d4fe7e78832ee",
+        "4ef57b111e17275c271590cd66cf148302814f88fbab1a332eb68090383dcad2"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 1.7763568394002505e-15
+    },
+    {
+      "input_filename": "case-000-mc-032.json",
+      "actual_input_sha256": "1f4c17fa6ea02e1ed0c36a1fd8a84fe9ccfb768c3030787748b713c71927b17d",
+      "realization": 32,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "f0b91e8149b0452cf713d5df2e2327d6bf3c5c5644392f0eb1449c89547611c1",
+        "cfa87bb811b6b7838e2a273533c9ae80df60a0f76528c29fb737b81d7556dea3"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-033.json",
+      "actual_input_sha256": "a3203c10ec6d32b9e25260be9ddd26e48f01e07571983b67856616039c3d5b57",
+      "realization": 33,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "cf01742bbd1a818f8a201a76dc2ae16fc108ba36500f6d5bbe37fe71f34f180f",
+        "3ed5fde01d15c8bfe8394370471eaef5418bd5f031836d1bb705b911517d4ac5"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-034.json",
+      "actual_input_sha256": "261303ec6b46493a297e70c2fca7c4ccf811f84c607bcb7a7a328cc3652a4d6c",
+      "realization": 34,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "a5d98e0c56251b3e43edba7e33db8ffb5c4597e7f74743642b4ea7bcd5b4e2d7",
+        "364b2e62fdce284288fe7cb95a1b5d167d8e136090c7eb33f013ce7d87b7e8bd"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-035.json",
+      "actual_input_sha256": "3c03924f5787268cbbb4d815dc47fce7747021874ed486ae072f4cdde8f5ae84",
+      "realization": 35,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "c46a22f5a5af67dc0ede5011759bd2b7de1ac9d48f387c40d830dc994d7f49f0",
+        "5af1cce2c36d91469debdb25d717e590ce4da59ca4a9a2d2b0a6f108af9ae624"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-036.json",
+      "actual_input_sha256": "aa21f59c6b517f88937d1816fd40d39731317ebaea76ee90aaa9407a5abf6946",
+      "realization": 36,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "94937227eafd6f66cc123081077e308d1bdfcc2271a9af6fa2743accd39ab579",
+        "f5f9e28ad417d35cc5985a114eab547d33184c202fd95fc9ce337ae64dade516"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 7.105427357601002e-15
+    },
+    {
+      "input_filename": "case-000-mc-037.json",
+      "actual_input_sha256": "0e1fe1fad2151455f8d45f64d604291ee54f82d333bfa1f8c9a37f9ed2af2000",
+      "realization": 37,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "868b682e8d03639d4574aafac759913919c55402eb7a5e2983d9791b3e84702a",
+        "e1d47f6d68f680b012885bb95b3dcb3fcbb03d879b4f58d6dd0b7cd588028f1c"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-000-mc-038.json",
+      "actual_input_sha256": "091abe21f1d29bf7f8e8373f9db48bd1ee545eb6fc2396f27a632d5ee5294b81",
+      "realization": 38,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "bb7e9445e338a321bec1aeab0e968911b52cedcb3338e617a74de0f6a1cfea54",
+        "af27874a1add7cfc8cf720879c6508db7f2265c1276df9e2374801bb2adfb65c"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 7.105427357601002e-15
+    },
+    {
+      "input_filename": "case-000-mc-039.json",
+      "actual_input_sha256": "e7061b3cab5e894be3312b3e86e2ecb870677d1522b16115cf7ef58681fc720e",
+      "realization": 39,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "bf75fb626812bf11a1e4eba0fc0cbbbd55f3cdcc1cefdffa4434b4777b5fb0c2",
+        "6de447a3cddaec20fd99c638dd7640e60abe2f51ffcf69f87605abe22fa6177f"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-040.json",
+      "actual_input_sha256": "562489747b9eba9a1968dcc5427793c26b001b959e95d2fc96a415754aa8e685",
+      "realization": 40,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "9ab8a9b3be233ae86ea3301feabee23ceb9e0ed0de9704b7c6162fd9c1f2eb3f",
+        "5d0c26cca53b4f5b0f2147d786390ea027759fd1016295971fa7cc2dd617383d"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-000-mc-041.json",
+      "actual_input_sha256": "cf06d19d09e8b6877213f70a3abd5cc65860b9078aa6a27bd5d3bb1ebd75a415",
+      "realization": 41,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "2c42a1beda568acd7be7f611d30150f01b3b82e0260ff9fdc00acdc4a5bb4c3c",
+        "04f12e5e978b643c1132d8b6cc5e142d706f17215a9aec125559acc7f0f6a560"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-042.json",
+      "actual_input_sha256": "c9acb992363f4140f63d2829c4b71331f3953780c803770e7b87457a899fa8a8",
+      "realization": 42,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "7ebc66938cc136a2241965c2159f40abd30dc16f18844bbe6eaf816352e5959b",
+        "a378396537e46aaf55ba0d912889790bcbcc292d1c6f6b27994bd98b2dbc2f41"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 7.105427357601002e-15
+    },
+    {
+      "input_filename": "case-000-mc-043.json",
+      "actual_input_sha256": "b7a8076c4588482cd86a0e63fb690d2d79c0d8d2665dd7a8f17b0940ff252c41",
+      "realization": 43,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "63cdeea3a83f2292eeb4e6906100126aa994713d97db348621c7042c87e7be2b",
+        "aa42d638804863480816e65f0a53f380b6b0e100876359c7d6668668dab4b162"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-000-mc-044.json",
+      "actual_input_sha256": "5ea04677b4335c747c5b367397f5849bf9c387e17d74982c327195c04e9d5b03",
+      "realization": 44,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "1f2c9a5ab5a9c0e39f344b2bb2d21371d84af730172d6fdaff9b24db40f6b185",
+        "07b6ac1cadf4ff92bc8de2bac7ce9f7f2ca6c97673ce257e504517fb90a6a742"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-045.json",
+      "actual_input_sha256": "02192d7a7559ca6bda06901414598df709dec2e0b80252b679f81e5319b40155",
+      "realization": 45,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "6a7b402b8466b203e2a6d40ae3a4ecf6817ac7ef8e28244b2a28f3867e621e61",
+        "42a3af3ecb4b5ee5cb43fbc962c7981a4fa20b52b72dc2651fda9a715d69a541"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 7.105427357601002e-15
+    },
+    {
+      "input_filename": "case-000-mc-046.json",
+      "actual_input_sha256": "df74e14f3157bf8949a04f1098333aea02121886830d6d6591a2c3f5cab9d7af",
+      "realization": 46,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "e7e6471cf10164eaf3f80c1824aecbf25e7cc3e37a7a289070662c7518c23955",
+        "a5eb855ef9d69e305a77817b3848879c00f54babed5530ad577a42d0485cbff0"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-000-mc-047.json",
+      "actual_input_sha256": "4ab98deb6122d62f272686191408ce6c1e427445d9da4fd98847244efa17e024",
+      "realization": 47,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "9401259884b546c7305dfb170aed2ec322aeb226ecc930e652d7929b5d933661",
+        "903c41cf1667b6d903f4a924d07a87424885009a4643c1b5abc70218a88f957b"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-048.json",
+      "actual_input_sha256": "5236618f1d503570244227e383e214cae8f924a00b5f3ee8d67fa61577c255ad",
+      "realization": 48,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "543e41084262737287a4be0cd4485318f6b4065283cabb21fb30ef68e8f33008",
+        "9d834a0dea6e234efc29badd8558827129741f69189a344fc071c56793879a3f"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 7.105427357601002e-15
+    },
+    {
+      "input_filename": "case-000-mc-049.json",
+      "actual_input_sha256": "2e04397c97750226d1a1052126adc02effb24ecec6f1517acdc3eab4af793796",
+      "realization": 49,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "e1464725915c93a99495790fa00d6a12e24a8da480583c44b098b3b37a124d27",
+        "ae2a7e520cf8bd487582565a67f0e7daf27a6710d75560a348e5abe9aa3bd480"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-000-mc-050.json",
+      "actual_input_sha256": "d70c7daba1f00a3ddd261af12f4a183f0f1085f072a0c071b38a92080acd2c15",
+      "realization": 50,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "347d7f56b57dd798a8b810e0a9b104be046625e35588651e4147aaed40e758e6",
+        "f7a740ba59927a3f5a5511501a5e198502d2863c031ec6e89545975d53f7802e"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-000-mc-051.json",
+      "actual_input_sha256": "dddf2bba3fdd7f75879ab17fd4b59a9c38625a2167673028b67fd97fce51cab9",
+      "realization": 51,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "ad1df525c90ab5512317140f1d85c69cac54f538ae24780cf52e33b91ad0525c",
+        "4fc5909dcb98cfdf424e0a866cc6a901576db01efbbca0440a66f566a90e3869"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-000-mc-052.json",
+      "actual_input_sha256": "c5402a042ec893d3e1dccf4d5c9f3a20b65e9276aa47b51f23ba8727363f300d",
+      "realization": 52,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "111432a024e86a2ede71ced46c80ea201a29e3cb75fb81ed8616c52b3db1738b",
+        "de72ea415cf674884c3cf2e25584f130929417b970acc68694c2d1fcd031b13e"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-053.json",
+      "actual_input_sha256": "edbe0b72e59eab62ef5227c7eba07021f0463b52013e6e48afe508b8d27a5bad",
+      "realization": 53,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "e9c28190e6e838a397733f4405a3d357a285842cbb77afac109470d9202de0de",
+        "cec43e180aff10393c9afb59c1d1828981cd7fe0800984d3e3e0cdccb14f1c70"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-054.json",
+      "actual_input_sha256": "abf46822c9bf06606a38f275eb6cdcb7494f8767e04b786cbd10533fef735c24",
+      "realization": 54,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "fb68eff3a0feb75b8f397be54c4b5d56e528ab8f9d33578f2f191780a1669dfc",
+        "60f27c71ee3f794642bbb35326fd14a6518060b498a5fcf4288550fabbe37412"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 7.105427357601002e-15
+    },
+    {
+      "input_filename": "case-000-mc-055.json",
+      "actual_input_sha256": "900f7c506a935cf4c74c45f2e59605cc4d5c425274b6a23b4e61f41cedbb445e",
+      "realization": 55,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "daa1724edc2a1f6da1ae708854b29304e09d0b695e100ae8d69673e0900dcf5b",
+        "54bffb0817007dbd7c9d80dfbaf63cab8848e19e4a70e60c803893fc54c78549"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-000-mc-056.json",
+      "actual_input_sha256": "67898e9e8dd49843f1b3e0da403ee520c70e67a9b1ca5651b40e208ead3e0d83",
+      "realization": 56,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "cb629608ad9da956f8a764f8e51d5521cdff2d95e3f40b35368e815d42d83b80",
+        "b5a87fd875d172710ff5a16b5b86cc7817e1d8327c04c833b5553284e3b44ca7"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-000-mc-057.json",
+      "actual_input_sha256": "c648bb6bdfa857a59d434c8ebc62b7ee4a6d27ebc6ad99817276f369b2b8b5b2",
+      "realization": 57,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "9cddd48ce51aad112a2fa2383d72f45d0115b7b674c91a9370cb741bf8c66069",
+        "68b7e0222a06e5fb472c8ed22901a8caf1212ee19a84b4187ba591aca6ab7dbe"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-000-mc-058.json",
+      "actual_input_sha256": "9586dcab077ae8fc7f4ba8c107908abbd1501b7cf5977c7256216150ebebaf30",
+      "realization": 58,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "1cb516f8ea9503fe9686e8444914124384fb4667c943b3c5d443cc425c69a9b1",
+        "8ed6cd50ef5c56e1a7d0b1bb5b31e00ce9fd879e8c3c4da3186ac8a49e2ce956"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-059.json",
+      "actual_input_sha256": "2b93169a8f73966c1c29b586204c5ddda0c63b4a9572070b4de9a4b7af7d7de8",
+      "realization": 59,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "1b39cc8a64fa6b08316ced7c840115509021b3081617ae562be303a07f819719",
+        "7d5903c2e35e47a4abb343256111f0afe4c524b573cf78143ab3defc84c67a11"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-000-mc-060.json",
+      "actual_input_sha256": "16619b09b6ec204a66d3de3e2e1f07deea0ac5986d63742f2dbbf21b4cab4cf6",
+      "realization": 60,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "319821de9d99cfee3a2c1530e7c1296423568fcecf5002dbb7b6dea6bae7bd03",
+        "dfdb32cc862397a2cb4c9010a200ec55b3d0145c9d4a6011afeef793ed6f6f60"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 7.105427357601002e-15
+    },
+    {
+      "input_filename": "case-000-mc-061.json",
+      "actual_input_sha256": "11d3f4132eebf94fed24d6a1477b233aed642601e4541b7ddd3313d5f70575d7",
+      "realization": 61,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "cd2791b9d3cf23f54443fd652323340ecc7f27a19c63d4d918357f746bde0012",
+        "d17ff7da2d63c8e8efb0e65d88a85607c2b675e38e0729c14e42e0b58454e257"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-062.json",
+      "actual_input_sha256": "41c4fa6705ae680745dfef2be81a6faa8d4fe7b9d4c97c062a7df0c1560f07af",
+      "realization": 62,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "2e251be6fb2d0fb93d0016aa9082f65ca5259ad63afc6abe6c85eb775483ac11",
+        "78235fbe2ae2016904b4c159d6fa315071758f8ab820e6a8bd26ff868b529e0d"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 1.7763568394002505e-15
+    },
+    {
+      "input_filename": "case-000-mc-063.json",
+      "actual_input_sha256": "11d33ad9ed28becaf941b8567190aea7e2d5c1b26d14691971a576f132d76c1b",
+      "realization": 63,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "172eaadd43a5da2f3e5c2a97152e302c64bb0cc51ffd68c9696bd509bb564e95",
+        "21134cae472cf04364d5101a3bfd4b9b02be55f6890721d0072b502c75ebef5f"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-000-mc-064.json",
+      "actual_input_sha256": "035bce7a3db206d4ce09b88627b45433346986dc5d3301d88b2ee5250562c683",
+      "realization": 64,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "9449051c8c745a35a8509b0454082358ba1ec43ce6fc797587eed1d4dda64909",
+        "be8e826f40a6bab0a732e075ccb413e07e874103bc42469bb329dabef7dcb406"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-065.json",
+      "actual_input_sha256": "e65d52477d00badcb2e151695efee67c93486438143eda2598c8353f55213500",
+      "realization": 65,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "1834cff3aa498d98e28fa8ff56e62db44f03b8c8d4c3850b141b7fd124e722df",
+        "64d8970f3c431567f08c8414de75b5c5acd9b526477ad6dee9c28fc574de82a2"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-066.json",
+      "actual_input_sha256": "f59ea8ed284dd66074911da601b5681f625b397f8de241d5bc46d518a406d719",
+      "realization": 66,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "e59fde73f47a27a4b3e2d42eddc8dfcb74e41c9989e6a808ee90232a78b90580",
+        "34459a947110efe178f1c752841b0722e736ba4660fa524bcfc4867fca1c22c8"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 7.105427357601002e-15
+    },
+    {
+      "input_filename": "case-000-mc-067.json",
+      "actual_input_sha256": "96b0245513d24891bfb4ba4ed061cbdd71504740f2c5522edbe4bee92ffb4b8d",
+      "realization": 67,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "1fcc37d8aa70833af914e74348181212ebb27b536b7eb956d923936bbc90aa23",
+        "b6fb3cd638a6ceed0678a9842e759038bab8489b2596b5aa91a3ef162760e1de"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 7.105427357601002e-15
+    },
+    {
+      "input_filename": "case-000-mc-068.json",
+      "actual_input_sha256": "df312a0555fe935626bb1ae4f847a19e5d8f1e591ff6bac98b08b4a2e252e77f",
+      "realization": 68,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "74305ca5f310e85cc314b7501ba274b0442c3c7091d1c3301847ee561b7dd6d6",
+        "5079ef1ee4bb292c99648075b60e20fddaab12e8e75f8dc354ab5de923fe92bd"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-069.json",
+      "actual_input_sha256": "22e5989b5a0619fb7c19db3dc24e7a43377e2aec1bc007ca65914c05586734cf",
+      "realization": 69,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "3d54371e01c1adc1a28b55d2822f4e0a7bb7ff0974a5e0a0e7fc005ac22929f5",
+        "7d15b1d2da76e8b139b1345f0d904d6c3f81096f4b51fb887dccebfaa6aa11c4"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-070.json",
+      "actual_input_sha256": "bed756af6265f3a8e26644dc49a6975b00079521d9451b114374d7c28910485c",
+      "realization": 70,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "54ea5a477b4472c6258cd6022d8adb90f5e709f21a0e9603e1ba4c208e35c08c",
+        "48b985b9dfd6865a56349f50245b1f7bd6f57daa17a8b72abc68ad704e2b2f9d"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-000-mc-071.json",
+      "actual_input_sha256": "9bf27ec77ba3a43185ee4f69fcdc4ee6e42f04b5b8a8709b94649f3bde11cf64",
+      "realization": 71,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "3e1f414368d5cd23430c5c64f3ca9ffcfb8515674b6a8cba4eda82a4287acb36",
+        "df014453ce3bf46cacb4694d07325285c761e3662f318401dada090abf11e0ec"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-072.json",
+      "actual_input_sha256": "e505ff8e66f009f4bd92c12f04f978bffd3747bda51ad22b1a12b2968f02d6c1",
+      "realization": 72,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "e798766c9fbd48a41220a1baf2d97d90ac719248041dc4fbca623e27c79ad75b",
+        "0478f5d59f898314b6dc293e414d395dc36f9045efbb2d476bce95c7495c950e"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-073.json",
+      "actual_input_sha256": "caa38b176a0ffd643e32c83732da563845781dad15a409a7f95288a39cdd734f",
+      "realization": 73,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "b00518f4e2e499c05b440fca9cc9e6ce509b92586ae1ce181007afafa7759c75",
+        "266d56fd7c2af6991646282a279d17ff89d74e3caba0cb06bd643f812547800f"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-074.json",
+      "actual_input_sha256": "cde87e274a7294a78e5f01842501a2866c760c018487aa5c9e44f6dc301342c3",
+      "realization": 74,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "c4fe13dcad1fd3fe67c9f15423e96721c160528ad3ebba6cd07f492b3f3e9581",
+        "10088af452219912711badec4b828bc1acb7d27d5fc2f4f659c252373c59928d"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 7.105427357601002e-15
+    },
+    {
+      "input_filename": "case-000-mc-075.json",
+      "actual_input_sha256": "25547092a3964cd757dd2264275111243a8d7cdaef47bad745edec7a366146fc",
+      "realization": 75,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "07c1e337e9407db2918376cdd38eaeaa1f8b9f31a31dec8d31a19a5e8e853dce",
+        "1661b656f2b20aad9f863aa5996bc0c80b2f90a82886871dd4979e7256c0c38b"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-000-mc-076.json",
+      "actual_input_sha256": "2e230e51bfba0ea33cd8b483ca2f07c74c4191a4f79f28c7653384a3d96ea26a",
+      "realization": 76,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "a1875032d6dc52e8ceb37fb2b027c69b3635e581d10377950fd58d9b3a066a2d",
+        "af47a734c791fc3ac0eb5f69fd3405d6a42b6cc34f9056983569e6b0e278d46f"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-077.json",
+      "actual_input_sha256": "4f70a0ec571f2c14dc0b9a3ddd6c5c46dcc3e397d918a612308a52c6c01c3a6b",
+      "realization": 77,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "dbfb0c291fc276fa6baa1145f1aeec3852d91914a9be4e837f0c32beb34e1099",
+        "bfa2dd09011b46d47a9b253944309e969cd413e984a19b2854d271a47a51d9f2"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-000-mc-078.json",
+      "actual_input_sha256": "8ea980a08fa4fd72b4767c590774cc607a50e1abfbbeca22733475ba160873a4",
+      "realization": 78,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "d408ecf7101891fa110d389c3e7a7cea5d2a6437e2ef4204a653e2b6b682d747",
+        "0971ca535827a32aaec0e0f8908e51074e3f33b79829239976a62d17c318e776"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-000-mc-079.json",
+      "actual_input_sha256": "914022bcdaf7f13e9c5d8937fb3ff6315eba103ba5fe7b4e53dee3663eba64f5",
+      "realization": 79,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "297b8c01dffae0c8f2569a041a9eed9ed710710223512659618553221191af20",
+        "a04214f22e10c7e921a8a397cde1f4416657c1dd959869bde293904e09a5850d"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 7.105427357601002e-15
+    },
+    {
+      "input_filename": "case-000-mc-080.json",
+      "actual_input_sha256": "78d59ca3bc5742fdfadc3c229f12c5d7f1f01b4df6b898edf3d41cb3981e729b",
+      "realization": 80,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "152f228e646774ce28a5c9655c64c1dd43eb06deee0dd244a3803ded12bb9b56",
+        "f1fdf49b63821905fb00f2ccdaa606341aac175b2586169fbe40b32ba067b4a8"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 7.105427357601002e-15
+    },
+    {
+      "input_filename": "case-000-mc-081.json",
+      "actual_input_sha256": "78ededef81afc8f069f960af29cbbe2ebdd7a38029b4e876dbb91fbd6431699b",
+      "realization": 81,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "290be8b22f8781a82a65bdcfd8b8a6f018530d101408f16f9067d8f1a4110a29",
+        "5ef8437b15fa8e3dbca2dc95e9c7b0248db49fc30302adb153db870d07592a62"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 7.105427357601002e-15
+    },
+    {
+      "input_filename": "case-000-mc-082.json",
+      "actual_input_sha256": "48ccca35341bbb2b77a395fee933e18eaf013d8fe1a786567b736ff7cbbb0fc4",
+      "realization": 82,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "039d08fe35ba92a6b49de8d42865c1ea5b81a3e949d85e650e757a83c3151406",
+        "59685e61c36f5fd02ba0ff231341e3324feb4dc6d7d69a4d97b686b709507184"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-083.json",
+      "actual_input_sha256": "bfd90ec6698ce447692788a7705636934ad944034de2620aabbfa06d761b91cb",
+      "realization": 83,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "30ad1a742e77e1ed1af306eb964569f92e246837ea1ac4bbc2a9a4ecb6458246",
+        "d294914e8de159df5e774fc109753100ff094a475506dd9a0397d646b6c6762d"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-084.json",
+      "actual_input_sha256": "ed6b1a9530c20bd091adf83a523306a26f34675b7191dc0e2cc09faeef5f2bff",
+      "realization": 84,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "37d0d0dbe258af80ca7703d48c8c284d91f7c1e14a654a6ea77f06279e1985a1",
+        "1f65acb70c6db9874147ead91dcbff10586e54b9ab4cf20f2678cf4541762d3b"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-085.json",
+      "actual_input_sha256": "01dee74a7fb44fd41d2216adc744eabd7c48dd2bed36b4d3d8152b7c652602cd",
+      "realization": 85,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "93a70e3f36e97dbe4e8babad124d9a279335bc710c2cc9db93bf35a887785cae",
+        "ab590c7837cb754b705a17587bd558ec61a173b13c14fdddb468ff450fb22388"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-086.json",
+      "actual_input_sha256": "36a54da0072c6df00ad5528bc98724b3c58a317bf57191f660d0e1bfb45af91f",
+      "realization": 86,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "86fadb36a165b23abd1657580219ce8f2b24021599dd292771644673cdf6bc12",
+        "0fd1228c441e371c78cb3f640eef3369dcae7ce708503a0ad2b6b3187d2d99a5"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 7.105427357601002e-15
+    },
+    {
+      "input_filename": "case-000-mc-087.json",
+      "actual_input_sha256": "f432dcdddd284e6cbe5b30cd2967e057438d98ab9dcc3f56754a46690c898aed",
+      "realization": 87,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "c6e3486a6810d9072dfb66a0b6848a4b3ab04706e101bb5167f1ce7c02aca9ec",
+        "8c1b4645694008d0530217165db625d9441f6a68d42d6de4c189f813746f4d30"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-088.json",
+      "actual_input_sha256": "aafc722a3a7845174e3d8da7c287b63c4fbeb20696f0f3e073ac88d7f36e05e2",
+      "realization": 88,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "abfe227287c9a752620f86b8e758ec9cad8e0bc3ec821f974d8b4790059dc9b2",
+        "1664d8e413c16727550a9bf3eb8ab57e35e6e2c2c2095473e93e8c4b7f45b7e7"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-089.json",
+      "actual_input_sha256": "02796cf9e7b5dbcdc0456731f66a969556d65747df0777a7f584868448358535",
+      "realization": 89,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "1caa478f485458cb3e62f6738cbca98091df3bee0652a9bdfd65e65cbaeaf5fe",
+        "d892229121ff024c24bd7e1c57b7b618307bdd0747fe798795ce5f8913461cf3"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-000-mc-090.json",
+      "actual_input_sha256": "9b2abf95473964619479afc3b6ffab9029c23cbe0fc936203827682cdedb2ab2",
+      "realization": 90,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "beb6c7656ea6f702f410d9562fcf61aa47c8b572fb9f5df945dd72fb3992743c",
+        "d74384f2d88c55a5d6fa3e4c1709110a5788ad69b8bed9e6e7fd9594b825de84"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-000-mc-091.json",
+      "actual_input_sha256": "04236d336882e633d8807a913260da8c46ddeb02179b34b6ef42265fc246989d",
+      "realization": 91,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "ca76d56c6e2ff483576bce3cd54a07310efb4c97c7a195e0874fe976704a3471",
+        "edf809e32335fda508911553b371b160945d833c168145b2dbc475131b0a32a0"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 2.6645352591003757e-15,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-092.json",
+      "actual_input_sha256": "bc8ea558b1df97abee0f5944f54a727be0eaf6f86fa80e7ad2b902f50ec9dc05",
+      "realization": 92,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "811289a090e231ba9aad0afdefb483005b96c08bb28a8a8c9a3d13a0949cc6aa",
+        "ae871b18feaadf944f4c1c0db00fa5db5d96b2572ff1fb1c86cb66ade1e5e7ba"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-000-mc-093.json",
+      "actual_input_sha256": "d1e02aa5d17c65945aea4488072eb7c74f10b567a2e581bef122b77a1f6973a8",
+      "realization": 93,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "da51d3d37afd9f434abdc6691d97e00bef11facb7de59a718af5cfc4e87cdfed",
+        "ddea90539124802431a7f245cc315634be8eb88b50e0ed110f400704f62e9202"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-000-mc-094.json",
+      "actual_input_sha256": "d7cf06c373c6f84a261ef26483e6fd7d7f7234544b16c9a6572d640142843749",
+      "realization": 94,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "9b4d191202c0fbd4a9855c17f86ed38f1a73722ee80da69b48db44c39da06abc",
+        "c6a57220a00373ce7cb25e2dfa2aa1b748d83f561db53b27cf8cb03d6a9bdc1c"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-095.json",
+      "actual_input_sha256": "9422d2aea5c0fc32c74dda403a134a6ff5a5bc544ab6a39beaf74daaec571b07",
+      "realization": 95,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "17accabcc5d686a9e9dfdc9dfc4a7cf1c8d97de26f888401e78fb1591a339003",
+        "b4913e97386c5165c716a68ff6b02344ea1264ed339854b4636d6f589fb99cf7"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 7.105427357601002e-15
+    },
+    {
+      "input_filename": "case-000-mc-096.json",
+      "actual_input_sha256": "87905c7c3747ed4fd9a80f1e0d68b19eae7092cb9643dc80b05842b18912cf50",
+      "realization": 96,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "d9a1652fd9ff9ab071ae64e2bd9026f6bd1578c93f1bdb9cb896ff1be681f6a0",
+        "5322d2a2ec14b8c14f04b220fa256d8d37cb645d786d4c8d5dfe6fc6370369de"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 7.105427357601002e-15
+    },
+    {
+      "input_filename": "case-000-mc-097.json",
+      "actual_input_sha256": "6693280f8f04eb3edfa2d7861f3c20552ff98dec511a64f5bafc6f7dc6146fb5",
+      "realization": 97,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "600e0c1ac86539c809e230079bf4ceb8ce9ee41c1c0bb636cbaf1cb587d77db9",
+        "310e206fe22d3c9a2bed38219f6447a5fe333ab054e81c8a6e094f50a4d7df10"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-000-mc-098.json",
+      "actual_input_sha256": "761b3d74222d4e5dabfbf0ab36282499cdb4cf28a3a5943a8c2da468eac3bbfb",
+      "realization": 98,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "960dc706c351cf127bf528434d8c1e77fc64ab19a82a7a9135d0b03e7228697f",
+        "80f9fc7016109ad834cdf4e7e6a99cf5bd0044c68ef3edc63f10358afdf068a6"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-000-mc-099.json",
+      "actual_input_sha256": "13b165a5e10f59e9571f1234c751c0f1f802bbf0144d335df00125a5467bd882",
+      "realization": 99,
+      "kappa_linear": 6,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "a3cafc2814a2b63c5560578258f707246a866f7635eb937a5ad95ff3a824cee6",
+        "387109e85315392ba7b431155d32b68c46aa9f663f786058eded3dc1f6b232fb"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-001-mc-000.json",
+      "actual_input_sha256": "e903651a115ee3b7084270772daf66a3bc37a310425d372616a9af94ef9e5633",
+      "realization": 0,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "2380c853dc4aab0a2f171d3840083a1a257333e6836e1eb830941d9e731e4b46",
+        "fdcf05788025cc49fb6a085359a7e4129b02a9780e84e723d649790b8ba4cab4"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-001-mc-001.json",
+      "actual_input_sha256": "4d46f72b8ff39802319c38ddb485b78d1a3fce4d03c67aee20eab0f9f77587cf",
+      "realization": 1,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "35f965cc7a8c4e74727a0eb6f8a0ffc5fe43f3a144ca906cdd1e5dcd6878c42a",
+        "4d010c135d6dca0f8d9e5f90b29891d0599fbbf2a560b9ac127e952c8f036b0c"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 4.440892098500626e-15
+    },
+    {
+      "input_filename": "case-001-mc-002.json",
+      "actual_input_sha256": "a1544727a8ccc32ba8b47801ebe709e3822b1a1705c99ee95b63b7070bb8bd6c",
+      "realization": 2,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "586a8c59768d6cb9456ccd5b5c712d95ac75d49a19eb98fa2bd092f7f87bd40a",
+        "5349b51980468547c4d28820c2341869d1484c95c64be31ebaa9d03f34868a85"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 1.7763568394002505e-15
+    },
+    {
+      "input_filename": "case-001-mc-003.json",
+      "actual_input_sha256": "5f784cafe4cbc218b14b05a7c8820b7e16d9a75a3b4c5254e065ef6dfaee0638",
+      "realization": 3,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "92cf3454792d714c724f3ee1b3af6674b60531b2eaebb260a46bcfb57dcc4033",
+        "84fa2e4d4a0c0b20744451257404388e3a949b502fdb06eb0380118b57c2c07f"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 3.552713678800501e-15,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-001-mc-004.json",
+      "actual_input_sha256": "b560ea63fba29460608783f0af2b454e35b0f85e0061ee131ae02b36eb8c058a",
+      "realization": 4,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "735530f67ae8821ce2d1a35e2d3be3ddc6d5810b604d2599a82669335859e2e2",
+        "50ba5a2bd0e984fce2b941056fc91ffa185f8211a7ec5cc9e9fe285f3b38b67d"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-001-mc-005.json",
+      "actual_input_sha256": "bfc4b5d785fa42d16b771cfe54ada924c714087614f3c6bf666db12e8019dd15",
+      "realization": 5,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "e222dafa5c15fca0b7bbabe53b0a493d45b0d0c469d5ca632375d46d90de21a5",
+        "8a943493006206ed752dd647886669581ba33a7f67e304bcd8195d763dcd44cb"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-001-mc-006.json",
+      "actual_input_sha256": "9d691b0f993f304a2e98e816e60c8b3ead127b91319630cda12846cf2c212098",
+      "realization": 6,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "760237eab168da48a53f6b8b53d7fb6653aafacf6197fb3148b78f4077bc3cff",
+        "aa3ad78f4ce8ef236109329acb2184ec4d7b57650a97f0651104df083561cb58"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 3.552713678800501e-15,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-001-mc-007.json",
+      "actual_input_sha256": "dcd7dce830546ad6567d760ffbb2969db56b6a4b29bd8acb1bb8d54a6e9b4a63",
+      "realization": 7,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "a4d9be215508d0d4d48a14254e18263ccf3ec2913c299ea8b90e16312153b882",
+        "ed3d6364593074e31fb6cfec5fb6b86da37358ec1f8ff06a7983a6d3953ee67e"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 1.0658141036401503e-14
+    },
+    {
+      "input_filename": "case-001-mc-008.json",
+      "actual_input_sha256": "b24c1757297f45766bb7205f09d79aa0f177b77cd78efebb325536a21e997472",
+      "realization": 8,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "d1022d85cac9f774caa17c2556696f8dcc242a9bc2b9cee6ed80dba661d76c30",
+        "1d934ec37d453bdf717b92801b69989277d766b1120e29b767dbafe40c86f227"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 7.105427357601002e-15
+    },
+    {
+      "input_filename": "case-001-mc-009.json",
+      "actual_input_sha256": "6d006a678bc05c6d35c2659c5bfb819a43e3ebd3b8e8930c665cb36a3d06bebc",
+      "realization": 9,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "be3dbc4a6811552af0a7203b64979c85d625a3c1c64c1e2598f19cfa7667ba12",
+        "a4b5ba419d1e49627f9bc7e9c40820aec11f868e968823e59fa9130c25d3ff57"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-001-mc-010.json",
+      "actual_input_sha256": "cab7f1ed52dc1d84556a4fa251f91824bb55913d500d3ee7b774c8c802c663f2",
+      "realization": 10,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "d89783f427b68676c38d7743651e08ecdab0e7e104d602a50433261d5ddcbf70",
+        "8a77fe1fa70c376055107412d9e929f505325f6931c855d195e72c1d84f3af99"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 1.4210854715202004e-14
+    },
+    {
+      "input_filename": "case-001-mc-011.json",
+      "actual_input_sha256": "80290c53d7aaf670653512770438453a5e158c9531a134fc01441aee8d5fdd7e",
+      "realization": 11,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "f4b61c28cf3a8eda613583cf73ac5f58f31a78eaced520528d5a2c4042aa7ee6",
+        "89ca24264982deac8f80456eeb2d4e3005a5544c09ed69b79580b1523e33cf54"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-001-mc-012.json",
+      "actual_input_sha256": "06e46346352f2b08ad39b7e9e42196a49a9eec88b7a4e37411e8ac1d7775e7d9",
+      "realization": 12,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "fe0f4cf8b88a0ae888f1544ff98100babcc0cce39934c332d3b33c2953a27bff",
+        "1e78f9611e24bcf6111607f2f1d96ab4463ae6b6f411fe0e2c647c35e0bf89c0"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 3.552713678800501e-15,
+      "source_ZF_formula_difference": 2.4868995751603507e-14
+    },
+    {
+      "input_filename": "case-001-mc-013.json",
+      "actual_input_sha256": "03ea690a6e5bfb71811baad8aa8209dbe35d41d42249461b487fec74577aa9aa",
+      "realization": 13,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "a5b9e881c2adc370d3ffb4c7b52cf20175eed6309a1a7508e74c00be7b7e4c39",
+        "782776d458977c871e0c08294541e3d73dd6b14faed4f7bd585b215fbcf9bd32"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 4.884981308350689e-14
+    },
+    {
+      "input_filename": "case-001-mc-014.json",
+      "actual_input_sha256": "e85ffd7b9935312b7288f9b784083e29bc8f0097745a099fc929c238a48121fe",
+      "realization": 14,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "a699260166284fd0d645a5d5f588758c6c9d91c8504ffdda83472c430b3e84a2",
+        "8bb61b4705bb35d662d9f64addc9bd8cb92daa19949552eb1ea55658e61d5e19"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-001-mc-015.json",
+      "actual_input_sha256": "441460e7c61b0b0f88ffb18833473a53f2bc88565f10a8f7b6d52e5b92f46c22",
+      "realization": 15,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "2ca1dc8e50b77895953667b7cc16ef155a4cf76e5a5db1a210871fc43065e8b3",
+        "86518bba320f37df1dfb0ef2324ba3d73a577d419b120fc8a9ce8d6243ab18f7"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 3.552713678800501e-15,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-001-mc-016.json",
+      "actual_input_sha256": "3b3c2f05669852d462698cdf87e545cea31e17c0ae8cd4e78eeee548eddacb23",
+      "realization": 16,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "b1cbb787be37020e32eb03aae2de98b65f8cb3a35a06caad5ab8554640e70bdb",
+        "d7efebfa238d7c3b096b649a97aad602af84c36c0c8346a57df9c3d0b1ef4921"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-001-mc-017.json",
+      "actual_input_sha256": "6a990f20d0c83c2d38c2a586f2064665879083efffd96e206622cb1fe0e66116",
+      "realization": 17,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "9d14a3655ea42c5b9e916ffc48367c307cb65ad127237f37ed0f859f56e2dc28",
+        "9adfe9e3e90dbc9047842793c5aaea7fc0b8df491d6a56f6245202dc2254e886"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 1.7763568394002505e-14
+    },
+    {
+      "input_filename": "case-001-mc-018.json",
+      "actual_input_sha256": "1e861d0c65ebc851f4fca103400113957c87b92f28e784c756d1253280dc937a",
+      "realization": 18,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "a674e6957da72fb7bad03df119040f498488c699b438bfc84dec78abb88b3eae",
+        "063437e1da1178e1464f1c1fa964d82125783455aacf6e6e7c03b1e024ba48c1"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-001-mc-019.json",
+      "actual_input_sha256": "ea19e3c94ad9972435b63b15ebe6d55ed90728ca95553c4589fd827fa7608b3c",
+      "realization": 19,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "41b9278301b203870ff114f5567a02dda04030509772ba8f6ba27d9bbb44653c",
+        "12ada9a689b391a970028bdabf10d2de0c307296797a78e56e517514f5a99ea1"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-001-mc-020.json",
+      "actual_input_sha256": "df0e25747407128d8e18a5ca69f25323aee03c67dccbc2bfc586560eeaefc03e",
+      "realization": 20,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "1017810b14a160ec2aca4e55b1c5a9b1f53b425b286fc96e5ab1d3f0737f97b3",
+        "0952e4f3ebd3e7a354caebe1f2f167a9848306cf3fe4427854bfda34097afd4e"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 2.842170943040401e-14
+    },
+    {
+      "input_filename": "case-001-mc-021.json",
+      "actual_input_sha256": "4e66b70e57d81a599eea948fd08360467f8d049abf2dd9e74b8990302dbe0ae6",
+      "realization": 21,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "c58e86a5de2ba790748a59b60e2956d92efb9b508cee53b9434501bbbf6dcd29",
+        "9ef1ec99c809b4f7166e6572b690bef15fabb5fab8279138b16374d55f14bbfd"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 1.9539925233402755e-14
+    },
+    {
+      "input_filename": "case-001-mc-022.json",
+      "actual_input_sha256": "0f8c6523bc70b400706242ab442c93943d970258cf8c622ae02ff5c046183649",
+      "realization": 22,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "b145f44460f59a527fe671de9950aa9e8e3432891d3c921d9dd99580512ec21d",
+        "650feb7c4df38c28085da8b7d30c9527f0ca26db599363b66c94445fc5d102e0"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 2.6645352591003757e-15,
+      "source_ZF_formula_difference": 1.4210854715202004e-14
+    },
+    {
+      "input_filename": "case-001-mc-023.json",
+      "actual_input_sha256": "07913a9bbb0e6f1f703c37dacd8a79229e531f1d3d26d9b1e34e5a74dcf37e3d",
+      "realization": 23,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "7c724fb83a082e51ea172749628a1521cacccd468ccdaae6d3b271ed59826a0e",
+        "7f10ef750ab5da89ca45cfda3a95c8f3484e5b651f86ad6168425318220d4863"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 4.440892098500626e-16,
+      "source_ZF_formula_difference": 1.4210854715202004e-14
+    },
+    {
+      "input_filename": "case-001-mc-024.json",
+      "actual_input_sha256": "0030aafe6b4fad24e0a5b54f73102a6e1cf8cd3dd5c97fb485a39f9029e486eb",
+      "realization": 24,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "b172a64bd8351f13d21210687236dd056124d0a3bc3aa84dff4a272f55ecab1e",
+        "ac36d95ed9a471bbf95649a87b56d708cb1309cddc1fe5f8643c9958723fe7eb"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-001-mc-025.json",
+      "actual_input_sha256": "1f970a44702714aa8e53a8f5812acba21ea91831040d6241ac08960c306fcd87",
+      "realization": 25,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "0b88c1ee7b0cb010e9ddedd96fd168ab313551c5937f4e5e6c50ba6cf322c3a3",
+        "1091aba9eac45e4c4fb2e5fde971e0738a3abdf0f5d79804383bcd558fdc0a5c"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-001-mc-026.json",
+      "actual_input_sha256": "f04857ff2262446e0ce8e7ce74ff6fe55c8b108ccfdf921a6bb1587bcc181915",
+      "realization": 26,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "d803dbf178922dd2e7cfb606afa08374bddeccf58a8941ea2ab8bd0643173e2d",
+        "1881dc6b0878e9f47db55e2602fa8221938d327d7c566e747bd9bcfa7c92aad2"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 5.329070518200751e-15
+    },
+    {
+      "input_filename": "case-001-mc-027.json",
+      "actual_input_sha256": "4dc3af69aa811d5d16380f84a0201db681fc3ea4ca46f867ff01a0d0c3f53185",
+      "realization": 27,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "8c02b60c281c7bd799c6a304be20b3f6ad485481cdf355a9cad5235f76518b01",
+        "e698800d17669aaa26a0b2b17db7b0e63cf96db632b170e80f21c3a6a9e123d8"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 1.2434497875801753e-14
+    },
+    {
+      "input_filename": "case-001-mc-028.json",
+      "actual_input_sha256": "23ee1db81c280e7dab29b160be597147e8faba9905f8c865f2d3be607e6f1681",
+      "realization": 28,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "be881da4d7c10f9cfa3248e5d08e319bfca9f568ed9f889b242fe4ee14057c3e",
+        "333991d0625b936d286fb9b0d373ad5727cfad6979847885bdf7bab0afe01041"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-001-mc-029.json",
+      "actual_input_sha256": "b8ec663b23badf6645e427071f96ca5eb09a556cec79fcd20da3be3f5bbd6cfb",
+      "realization": 29,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "8b9a4133fe7e022999c4cb4edfcfaa246f24f02be97492d68be64da8ebd163bc",
+        "e3dd3c9e51172aad6b064814b4a93fb474b7fd3bbc4d4c7faad0534a9073463f"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 3.552713678800501e-15,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-001-mc-030.json",
+      "actual_input_sha256": "4bcec2e862419d38a16e59a47a0932842d7228f09865bb9e8a129ac633910a1f",
+      "realization": 30,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "6d2bc2090a9a940fcd976a597301d805b1195f61b2eeade5ee34d6e8b62496b2",
+        "58f32e5a57150d9c283ddb8f5132014d12c095ac215b1765dc4f3c5f4b7c29d6"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-001-mc-031.json",
+      "actual_input_sha256": "40f807a98508b943003d93d2f760fe8df8fa139b50c76edbd54c61885bb7626d",
+      "realization": 31,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "46c1a558fc12c65a11f02509ce6556c285a8f939f3fca482d57d4fe7e78832ee",
+        "4ef57b111e17275c271590cd66cf148302814f88fbab1a332eb68090383dcad2"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 4.440892098500626e-16,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-001-mc-032.json",
+      "actual_input_sha256": "37437443fedbd67e50f8aa1d514c9cd4a6ee4ac4f3847c316e56605e07cb32f6",
+      "realization": 32,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "f0b91e8149b0452cf713d5df2e2327d6bf3c5c5644392f0eb1449c89547611c1",
+        "cfa87bb811b6b7838e2a273533c9ae80df60a0f76528c29fb737b81d7556dea3"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 1.5987211554602254e-14
+    },
+    {
+      "input_filename": "case-001-mc-033.json",
+      "actual_input_sha256": "059b648fa63bcfef94238d7de5bb5a80d28b455da1f75f3419f8666f1f87fc2e",
+      "realization": 33,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "cf01742bbd1a818f8a201a76dc2ae16fc108ba36500f6d5bbe37fe71f34f180f",
+        "3ed5fde01d15c8bfe8394370471eaef5418bd5f031836d1bb705b911517d4ac5"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 7.105427357601002e-15
+    },
+    {
+      "input_filename": "case-001-mc-034.json",
+      "actual_input_sha256": "271d31e7bdbb76a394b6665b9f83ae26515af3e84dce6ad33fa48c00cc69abd4",
+      "realization": 34,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "a5d98e0c56251b3e43edba7e33db8ffb5c4597e7f74743642b4ea7bcd5b4e2d7",
+        "364b2e62fdce284288fe7cb95a1b5d167d8e136090c7eb33f013ce7d87b7e8bd"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-001-mc-035.json",
+      "actual_input_sha256": "c605a9887b36fc6558dde9b1da26fafe38d67d30535e973f8d94b2cbbee1f81e",
+      "realization": 35,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "c46a22f5a5af67dc0ede5011759bd2b7de1ac9d48f387c40d830dc994d7f49f0",
+        "5af1cce2c36d91469debdb25d717e590ce4da59ca4a9a2d2b0a6f108af9ae624"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-001-mc-036.json",
+      "actual_input_sha256": "eab02a5c5da07bfdff21e4163d74cf31bec9c1281232f135903f2cdc69e1ff7b",
+      "realization": 36,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "94937227eafd6f66cc123081077e308d1bdfcc2271a9af6fa2743accd39ab579",
+        "f5f9e28ad417d35cc5985a114eab547d33184c202fd95fc9ce337ae64dade516"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 1.7763568394002505e-15
+    },
+    {
+      "input_filename": "case-001-mc-037.json",
+      "actual_input_sha256": "92ea114f134acd37105e2b5cc95196336aa2678d5a2263ce54af648ee68ee3dd",
+      "realization": 37,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "868b682e8d03639d4574aafac759913919c55402eb7a5e2983d9791b3e84702a",
+        "e1d47f6d68f680b012885bb95b3dcb3fcbb03d879b4f58d6dd0b7cd588028f1c"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 5.329070518200751e-15
+    },
+    {
+      "input_filename": "case-001-mc-038.json",
+      "actual_input_sha256": "aca309f07e9dd6e2ff803a9d58ce372b13513a77cc3e6cf515ad8a17fba6de7e",
+      "realization": 38,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "bb7e9445e338a321bec1aeab0e968911b52cedcb3338e617a74de0f6a1cfea54",
+        "af27874a1add7cfc8cf720879c6508db7f2265c1276df9e2374801bb2adfb65c"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-001-mc-039.json",
+      "actual_input_sha256": "f1d357f47d0488515c44cd4641eaec475505cd3f37608062bc195b04c5a043c5",
+      "realization": 39,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "bf75fb626812bf11a1e4eba0fc0cbbbd55f3cdcc1cefdffa4434b4777b5fb0c2",
+        "6de447a3cddaec20fd99c638dd7640e60abe2f51ffcf69f87605abe22fa6177f"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 5.329070518200751e-15
+    },
+    {
+      "input_filename": "case-001-mc-040.json",
+      "actual_input_sha256": "b47ed070df7e34efbeb4c7c51f321edbfcb878cbd9ba770960954728f8eb76e2",
+      "realization": 40,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "9ab8a9b3be233ae86ea3301feabee23ceb9e0ed0de9704b7c6162fd9c1f2eb3f",
+        "5d0c26cca53b4f5b0f2147d786390ea027759fd1016295971fa7cc2dd617383d"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 1.0658141036401503e-14
+    },
+    {
+      "input_filename": "case-001-mc-041.json",
+      "actual_input_sha256": "25b21754a8e8c833bc5139131164dfb98bd6d767977e03bb1f873a9decc297ef",
+      "realization": 41,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "2c42a1beda568acd7be7f611d30150f01b3b82e0260ff9fdc00acdc4a5bb4c3c",
+        "04f12e5e978b643c1132d8b6cc5e142d706f17215a9aec125559acc7f0f6a560"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 3.730349362740526e-14
+    },
+    {
+      "input_filename": "case-001-mc-042.json",
+      "actual_input_sha256": "89173a61cedc311ab16268c8e27b83deae00db70c6570276354f0fb3eeabe1d9",
+      "realization": 42,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "7ebc66938cc136a2241965c2159f40abd30dc16f18844bbe6eaf816352e5959b",
+        "a378396537e46aaf55ba0d912889790bcbcc292d1c6f6b27994bd98b2dbc2f41"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-001-mc-043.json",
+      "actual_input_sha256": "1cdf4d13a8d46f0873898e2b7f97c42fafbdc5c10415d4ffabbeb42d690bd6f3",
+      "realization": 43,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "63cdeea3a83f2292eeb4e6906100126aa994713d97db348621c7042c87e7be2b",
+        "aa42d638804863480816e65f0a53f380b6b0e100876359c7d6668668dab4b162"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 1.7763568394002505e-15
+    },
+    {
+      "input_filename": "case-001-mc-044.json",
+      "actual_input_sha256": "9f32667910c42ecd6d1fc99971655483c0f348ef35627cd86c0129522283c3be",
+      "realization": 44,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "1f2c9a5ab5a9c0e39f344b2bb2d21371d84af730172d6fdaff9b24db40f6b185",
+        "07b6ac1cadf4ff92bc8de2bac7ce9f7f2ca6c97673ce257e504517fb90a6a742"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 1.4210854715202004e-14
+    },
+    {
+      "input_filename": "case-001-mc-045.json",
+      "actual_input_sha256": "b8ada805d7809a7b42aa7f5ed047107089ef2867e088f609060991b49f85043c",
+      "realization": 45,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "6a7b402b8466b203e2a6d40ae3a4ecf6817ac7ef8e28244b2a28f3867e621e61",
+        "42a3af3ecb4b5ee5cb43fbc962c7981a4fa20b52b72dc2651fda9a715d69a541"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 1.4210854715202004e-14
+    },
+    {
+      "input_filename": "case-001-mc-046.json",
+      "actual_input_sha256": "5abd2c61ca3c2b29c5420f60517fadf33ca7bb6253dc5014007129c705887d54",
+      "realization": 46,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "e7e6471cf10164eaf3f80c1824aecbf25e7cc3e37a7a289070662c7518c23955",
+        "a5eb855ef9d69e305a77817b3848879c00f54babed5530ad577a42d0485cbff0"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 4.263256414560601e-14
+    },
+    {
+      "input_filename": "case-001-mc-047.json",
+      "actual_input_sha256": "e8b04ac8725eb0e027abf1ab7e0cf26ae8c579ab4e5c1312c27a56bfd4a234e8",
+      "realization": 47,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "9401259884b546c7305dfb170aed2ec322aeb226ecc930e652d7929b5d933661",
+        "903c41cf1667b6d903f4a924d07a87424885009a4643c1b5abc70218a88f957b"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 1.0658141036401503e-14
+    },
+    {
+      "input_filename": "case-001-mc-048.json",
+      "actual_input_sha256": "a6ebb5842ef21c0b6c297ab632e9f3c5444247e0c06f0a981375e1221c8a09cb",
+      "realization": 48,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "543e41084262737287a4be0cd4485318f6b4065283cabb21fb30ef68e8f33008",
+        "9d834a0dea6e234efc29badd8558827129741f69189a344fc071c56793879a3f"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 1.0658141036401503e-14
+    },
+    {
+      "input_filename": "case-001-mc-049.json",
+      "actual_input_sha256": "f7f816f30f2082698b7b2b95e42913b7d6b56e33f608c44c6b3462a62dffa424",
+      "realization": 49,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "e1464725915c93a99495790fa00d6a12e24a8da480583c44b098b3b37a124d27",
+        "ae2a7e520cf8bd487582565a67f0e7daf27a6710d75560a348e5abe9aa3bd480"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-001-mc-050.json",
+      "actual_input_sha256": "77d45d3cbcf1ab5e732c9fe616935e08f3cd56dd5dace53ff977d4b88aca7028",
+      "realization": 50,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "347d7f56b57dd798a8b810e0a9b104be046625e35588651e4147aaed40e758e6",
+        "f7a740ba59927a3f5a5511501a5e198502d2863c031ec6e89545975d53f7802e"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-001-mc-051.json",
+      "actual_input_sha256": "b9f0db2350bcc94b5569cdc108e412a8e8e1309bcd1b20f42a704b0722aada32",
+      "realization": 51,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "ad1df525c90ab5512317140f1d85c69cac54f538ae24780cf52e33b91ad0525c",
+        "4fc5909dcb98cfdf424e0a866cc6a901576db01efbbca0440a66f566a90e3869"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-001-mc-052.json",
+      "actual_input_sha256": "d114ccbe260022d85c6c5b34178d9b31f696c655f27338c146ae5e4dc1dd91fe",
+      "realization": 52,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "111432a024e86a2ede71ced46c80ea201a29e3cb75fb81ed8616c52b3db1738b",
+        "de72ea415cf674884c3cf2e25584f130929417b970acc68694c2d1fcd031b13e"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-001-mc-053.json",
+      "actual_input_sha256": "deca08397b7ef1e3ebe58bd7c704ea097550ada775e287bcb5bbe83a09369459",
+      "realization": 53,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "e9c28190e6e838a397733f4405a3d357a285842cbb77afac109470d9202de0de",
+        "cec43e180aff10393c9afb59c1d1828981cd7fe0800984d3e3e0cdccb14f1c70"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 8.881784197001252e-15
+    },
+    {
+      "input_filename": "case-001-mc-054.json",
+      "actual_input_sha256": "a5d492cc2f5189b851f3956125854bcf1e21594aa8fa65dfa7e8c79d46b3cc21",
+      "realization": 54,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "fb68eff3a0feb75b8f397be54c4b5d56e528ab8f9d33578f2f191780a1669dfc",
+        "60f27c71ee3f794642bbb35326fd14a6518060b498a5fcf4288550fabbe37412"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 7.105427357601002e-15
+    },
+    {
+      "input_filename": "case-001-mc-055.json",
+      "actual_input_sha256": "c338387c360193cc7a2d4be2cb078c7d0544a6eb1774847c4759325563be6726",
+      "realization": 55,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "daa1724edc2a1f6da1ae708854b29304e09d0b695e100ae8d69673e0900dcf5b",
+        "54bffb0817007dbd7c9d80dfbaf63cab8848e19e4a70e60c803893fc54c78549"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-001-mc-056.json",
+      "actual_input_sha256": "a003e4730db5d96dedaa8e1e59436837344328ff85a8476d4e6f282e84bbc72d",
+      "realization": 56,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "cb629608ad9da956f8a764f8e51d5521cdff2d95e3f40b35368e815d42d83b80",
+        "b5a87fd875d172710ff5a16b5b86cc7817e1d8327c04c833b5553284e3b44ca7"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 1.7763568394002505e-14
+    },
+    {
+      "input_filename": "case-001-mc-057.json",
+      "actual_input_sha256": "741fed615e32f107df952d54ec4d56efd1f31316b7616f4f722632426f9e3172",
+      "realization": 57,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "9cddd48ce51aad112a2fa2383d72f45d0115b7b674c91a9370cb741bf8c66069",
+        "68b7e0222a06e5fb472c8ed22901a8caf1212ee19a84b4187ba591aca6ab7dbe"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 7.105427357601002e-15
+    },
+    {
+      "input_filename": "case-001-mc-058.json",
+      "actual_input_sha256": "b6eedcf314ee60d68e7881d72b1dbcd49f82c20b4b568d2f3533aff44739543b",
+      "realization": 58,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "1cb516f8ea9503fe9686e8444914124384fb4667c943b3c5d443cc425c69a9b1",
+        "8ed6cd50ef5c56e1a7d0b1bb5b31e00ce9fd879e8c3c4da3186ac8a49e2ce956"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-001-mc-059.json",
+      "actual_input_sha256": "2c8591ca09f5f350df65e68d4c83adfdc275f75cfa91aad512186e5b3278b1fe",
+      "realization": 59,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "1b39cc8a64fa6b08316ced7c840115509021b3081617ae562be303a07f819719",
+        "7d5903c2e35e47a4abb343256111f0afe4c524b573cf78143ab3defc84c67a11"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-001-mc-060.json",
+      "actual_input_sha256": "f13e63da3b4c0a210b678600cc4d6df9b0cdc393f753d97a53981d532aa228da",
+      "realization": 60,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "319821de9d99cfee3a2c1530e7c1296423568fcecf5002dbb7b6dea6bae7bd03",
+        "dfdb32cc862397a2cb4c9010a200ec55b3d0145c9d4a6011afeef793ed6f6f60"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-001-mc-061.json",
+      "actual_input_sha256": "ebbcb3d748c67418b55d8b09d9c6aea78dacfa9d3e5ff3cacc2caa2aca8a1a1e",
+      "realization": 61,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "cd2791b9d3cf23f54443fd652323340ecc7f27a19c63d4d918357f746bde0012",
+        "d17ff7da2d63c8e8efb0e65d88a85607c2b675e38e0729c14e42e0b58454e257"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 2.6645352591003757e-15,
+      "source_ZF_formula_difference": 1.7763568394002505e-14
+    },
+    {
+      "input_filename": "case-001-mc-062.json",
+      "actual_input_sha256": "8fafc49fabbdd9e880b8fe55d0a7804a60b85cc1b0b67ab01866626b892a97b0",
+      "realization": 62,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "2e251be6fb2d0fb93d0016aa9082f65ca5259ad63afc6abe6c85eb775483ac11",
+        "78235fbe2ae2016904b4c159d6fa315071758f8ab820e6a8bd26ff868b529e0d"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-001-mc-063.json",
+      "actual_input_sha256": "9cca541b336abc0638a73f0eb9706e10b7127a1025879c9617726a6852822839",
+      "realization": 63,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "172eaadd43a5da2f3e5c2a97152e302c64bb0cc51ffd68c9696bd509bb564e95",
+        "21134cae472cf04364d5101a3bfd4b9b02be55f6890721d0072b502c75ebef5f"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 3.2862601528904634e-14
+    },
+    {
+      "input_filename": "case-001-mc-064.json",
+      "actual_input_sha256": "d92b1da5e839727129655e7136ea82a0678e2a9d8ff65e109847d83740647719",
+      "realization": 64,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "9449051c8c745a35a8509b0454082358ba1ec43ce6fc797587eed1d4dda64909",
+        "be8e826f40a6bab0a732e075ccb413e07e874103bc42469bb329dabef7dcb406"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 1.7763568394002505e-15
+    },
+    {
+      "input_filename": "case-001-mc-065.json",
+      "actual_input_sha256": "1c8a9907feeafc738ea19bd80b04488b4dc708ecb94d570280e3714e575ee095",
+      "realization": 65,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "1834cff3aa498d98e28fa8ff56e62db44f03b8c8d4c3850b141b7fd124e722df",
+        "64d8970f3c431567f08c8414de75b5c5acd9b526477ad6dee9c28fc574de82a2"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 7.105427357601002e-15
+    },
+    {
+      "input_filename": "case-001-mc-066.json",
+      "actual_input_sha256": "a8f62f503d4966ec35fdd38036d4b79a16acea1b2be9a63547728b3e4f8e7f2b",
+      "realization": 66,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "e59fde73f47a27a4b3e2d42eddc8dfcb74e41c9989e6a808ee90232a78b90580",
+        "34459a947110efe178f1c752841b0722e736ba4660fa524bcfc4867fca1c22c8"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-001-mc-067.json",
+      "actual_input_sha256": "1da68f820a61264fd763ef42945b6cdd7392ee51672294932e16867065181059",
+      "realization": 67,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "1fcc37d8aa70833af914e74348181212ebb27b536b7eb956d923936bbc90aa23",
+        "b6fb3cd638a6ceed0678a9842e759038bab8489b2596b5aa91a3ef162760e1de"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 1.7763568394002505e-15
+    },
+    {
+      "input_filename": "case-001-mc-068.json",
+      "actual_input_sha256": "c3fc01c63f3da61adae3d7bd817470b502d93c5d52f1946d99c9d25ffd0298eb",
+      "realization": 68,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "74305ca5f310e85cc314b7501ba274b0442c3c7091d1c3301847ee561b7dd6d6",
+        "5079ef1ee4bb292c99648075b60e20fddaab12e8e75f8dc354ab5de923fe92bd"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 4.440892098500626e-16,
+      "source_ZF_formula_difference": 1.2434497875801753e-14
+    },
+    {
+      "input_filename": "case-001-mc-069.json",
+      "actual_input_sha256": "824b0618659ef64f59825a337f6d7a7f282b408fd5c41ae0be309a60f01bf4e6",
+      "realization": 69,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "3d54371e01c1adc1a28b55d2822f4e0a7bb7ff0974a5e0a0e7fc005ac22929f5",
+        "7d15b1d2da76e8b139b1345f0d904d6c3f81096f4b51fb887dccebfaa6aa11c4"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 8.881784197001252e-15
+    },
+    {
+      "input_filename": "case-001-mc-070.json",
+      "actual_input_sha256": "19a7139382f118f4c1b936e193a2c6901d34e37293a0fc59b7057f487e246525",
+      "realization": 70,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "54ea5a477b4472c6258cd6022d8adb90f5e709f21a0e9603e1ba4c208e35c08c",
+        "48b985b9dfd6865a56349f50245b1f7bd6f57daa17a8b72abc68ad704e2b2f9d"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 3.552713678800501e-15,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-001-mc-071.json",
+      "actual_input_sha256": "53a7b493b270475c7714eb549a731a1ad46a4706ba505f40093811963e241f7e",
+      "realization": 71,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "3e1f414368d5cd23430c5c64f3ca9ffcfb8515674b6a8cba4eda82a4287acb36",
+        "df014453ce3bf46cacb4694d07325285c761e3662f318401dada090abf11e0ec"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 3.552713678800501e-15,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-001-mc-072.json",
+      "actual_input_sha256": "8fd9805153e171b9881f8c34c8128825dd12e356b5d5404e121611052d35f55d",
+      "realization": 72,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "e798766c9fbd48a41220a1baf2d97d90ac719248041dc4fbca623e27c79ad75b",
+        "0478f5d59f898314b6dc293e414d395dc36f9045efbb2d476bce95c7495c950e"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 2.4868995751603507e-14
+    },
+    {
+      "input_filename": "case-001-mc-073.json",
+      "actual_input_sha256": "489100b5f3896a35da19a11455cf73eb15980b28c82d9b41a571c2938386df77",
+      "realization": 73,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "b00518f4e2e499c05b440fca9cc9e6ce509b92586ae1ce181007afafa7759c75",
+        "266d56fd7c2af6991646282a279d17ff89d74e3caba0cb06bd643f812547800f"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-001-mc-074.json",
+      "actual_input_sha256": "9bbd4156d78a0b115e4b4902a988d96ff8d70de7f7b62fa46458109249d7a0d8",
+      "realization": 74,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "c4fe13dcad1fd3fe67c9f15423e96721c160528ad3ebba6cd07f492b3f3e9581",
+        "10088af452219912711badec4b828bc1acb7d27d5fc2f4f659c252373c59928d"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 7.105427357601002e-15
+    },
+    {
+      "input_filename": "case-001-mc-075.json",
+      "actual_input_sha256": "ab872b9c765de2676552d19834e716db8f0090922dd93858dcef2319bc7fd679",
+      "realization": 75,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "07c1e337e9407db2918376cdd38eaeaa1f8b9f31a31dec8d31a19a5e8e853dce",
+        "1661b656f2b20aad9f863aa5996bc0c80b2f90a82886871dd4979e7256c0c38b"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 7.105427357601002e-15
+    },
+    {
+      "input_filename": "case-001-mc-076.json",
+      "actual_input_sha256": "8d4cbed0ee73e29b395b4d4fdd21af66a9ef5678187edb3186f40c4207e32a2a",
+      "realization": 76,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "a1875032d6dc52e8ceb37fb2b027c69b3635e581d10377950fd58d9b3a066a2d",
+        "af47a734c791fc3ac0eb5f69fd3405d6a42b6cc34f9056983569e6b0e278d46f"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 1.0658141036401503e-14
+    },
+    {
+      "input_filename": "case-001-mc-077.json",
+      "actual_input_sha256": "6012eab41d298ad88d1982cb48c6b5a0231968e7e1c1fa5114d6e1c53fdd4d10",
+      "realization": 77,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "dbfb0c291fc276fa6baa1145f1aeec3852d91914a9be4e837f0c32beb34e1099",
+        "bfa2dd09011b46d47a9b253944309e969cd413e984a19b2854d271a47a51d9f2"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 1.2434497875801753e-14
+    },
+    {
+      "input_filename": "case-001-mc-078.json",
+      "actual_input_sha256": "9a14ce0e7517ce911e3c76a2c63c2269b9f2bf1bcf4cfb94e952eee1ffaae695",
+      "realization": 78,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "d408ecf7101891fa110d389c3e7a7cea5d2a6437e2ef4204a653e2b6b682d747",
+        "0971ca535827a32aaec0e0f8908e51074e3f33b79829239976a62d17c318e776"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 1.7763568394002505e-15
+    },
+    {
+      "input_filename": "case-001-mc-079.json",
+      "actual_input_sha256": "01ac6666f6da4ce22a49236943185b80921f9c3fc2916d4f37f189294ce9dd07",
+      "realization": 79,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "297b8c01dffae0c8f2569a041a9eed9ed710710223512659618553221191af20",
+        "a04214f22e10c7e921a8a397cde1f4416657c1dd959869bde293904e09a5850d"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 2.6645352591003757e-15,
+      "source_ZF_formula_difference": 2.1316282072803006e-14
+    },
+    {
+      "input_filename": "case-001-mc-080.json",
+      "actual_input_sha256": "52b3451863e71386db4e59bed6f87f386ef879800cb0181495bd0d415edfbd4d",
+      "realization": 80,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "152f228e646774ce28a5c9655c64c1dd43eb06deee0dd244a3803ded12bb9b56",
+        "f1fdf49b63821905fb00f2ccdaa606341aac175b2586169fbe40b32ba067b4a8"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 1.7763568394002505e-15
+    },
+    {
+      "input_filename": "case-001-mc-081.json",
+      "actual_input_sha256": "225188e73b7c519ab7bf5324c2954d35c6d0e812d92269ddb6e98fd10ab9ad12",
+      "realization": 81,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "290be8b22f8781a82a65bdcfd8b8a6f018530d101408f16f9067d8f1a4110a29",
+        "5ef8437b15fa8e3dbca2dc95e9c7b0248db49fc30302adb153db870d07592a62"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 7.105427357601002e-15
+    },
+    {
+      "input_filename": "case-001-mc-082.json",
+      "actual_input_sha256": "7d05d71359a70794bc6df1e128d7ce44b11d6856d615c15ff6c3785bcee0c776",
+      "realization": 82,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "039d08fe35ba92a6b49de8d42865c1ea5b81a3e949d85e650e757a83c3151406",
+        "59685e61c36f5fd02ba0ff231341e3324feb4dc6d7d69a4d97b686b709507184"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-001-mc-083.json",
+      "actual_input_sha256": "05793babb0fbbf4e736f5985e29f5ae3f1b5ffc849999dbcbd32188b51802a44",
+      "realization": 83,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "30ad1a742e77e1ed1af306eb964569f92e246837ea1ac4bbc2a9a4ecb6458246",
+        "d294914e8de159df5e774fc109753100ff094a475506dd9a0397d646b6c6762d"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 1.9539925233402755e-14
+    },
+    {
+      "input_filename": "case-001-mc-084.json",
+      "actual_input_sha256": "f4bebc9f236434ca362b19a5fcd903dcdd033e5d25c984504b3b2234c90a860f",
+      "realization": 84,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "37d0d0dbe258af80ca7703d48c8c284d91f7c1e14a654a6ea77f06279e1985a1",
+        "1f65acb70c6db9874147ead91dcbff10586e54b9ab4cf20f2678cf4541762d3b"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 7.105427357601002e-15
+    },
+    {
+      "input_filename": "case-001-mc-085.json",
+      "actual_input_sha256": "13b5486dd9de9ac02de4608bb068c9b733151d16b0833345edf8800d32a54a97",
+      "realization": 85,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "93a70e3f36e97dbe4e8babad124d9a279335bc710c2cc9db93bf35a887785cae",
+        "ab590c7837cb754b705a17587bd558ec61a173b13c14fdddb468ff450fb22388"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 7.105427357601002e-15
+    },
+    {
+      "input_filename": "case-001-mc-086.json",
+      "actual_input_sha256": "0778367c633c9a1f8dafaac0430968f7fa24b0e38ffaa74988403d4d45520df3",
+      "realization": 86,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "86fadb36a165b23abd1657580219ce8f2b24021599dd292771644673cdf6bc12",
+        "0fd1228c441e371c78cb3f640eef3369dcae7ce708503a0ad2b6b3187d2d99a5"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 7.105427357601002e-15
+    },
+    {
+      "input_filename": "case-001-mc-087.json",
+      "actual_input_sha256": "efef37f300eba234d0efe94b9ff30e68c8c5b8c557570381010228d4991adadf",
+      "realization": 87,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "c6e3486a6810d9072dfb66a0b6848a4b3ab04706e101bb5167f1ce7c02aca9ec",
+        "8c1b4645694008d0530217165db625d9441f6a68d42d6de4c189f813746f4d30"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 1.7763568394002505e-15
+    },
+    {
+      "input_filename": "case-001-mc-088.json",
+      "actual_input_sha256": "7545e20acc57420a839d5b0ecf78f24f74b8e4e90306965995dc37e3d5102611",
+      "realization": 88,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "abfe227287c9a752620f86b8e758ec9cad8e0bc3ec821f974d8b4790059dc9b2",
+        "1664d8e413c16727550a9bf3eb8ab57e35e6e2c2c2095473e93e8c4b7f45b7e7"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 9.237055564881302e-14
+    },
+    {
+      "input_filename": "case-001-mc-089.json",
+      "actual_input_sha256": "00dfe6c7d42acd694a0f95d81769613d2b8d9210d79b81f01b2717d3e76e075e",
+      "realization": 89,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "1caa478f485458cb3e62f6738cbca98091df3bee0652a9bdfd65e65cbaeaf5fe",
+        "d892229121ff024c24bd7e1c57b7b618307bdd0747fe798795ce5f8913461cf3"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 1.0658141036401503e-14
+    },
+    {
+      "input_filename": "case-001-mc-090.json",
+      "actual_input_sha256": "0f6bd2f9528eff7d93f5055942d3776bfc5031402b5214f751f475a41da3123e",
+      "realization": 90,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "beb6c7656ea6f702f410d9562fcf61aa47c8b572fb9f5df945dd72fb3992743c",
+        "d74384f2d88c55a5d6fa3e4c1709110a5788ad69b8bed9e6e7fd9594b825de84"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-001-mc-091.json",
+      "actual_input_sha256": "f96ea6425519f555f1a74fbfbaf87256fd2c71bde8b32a725514d84da84fe58a",
+      "realization": 91,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "ca76d56c6e2ff483576bce3cd54a07310efb4c97c7a195e0874fe976704a3471",
+        "edf809e32335fda508911553b371b160945d833c168145b2dbc475131b0a32a0"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 2.6645352591003757e-15,
+      "source_ZF_formula_difference": 1.7763568394002505e-15
+    },
+    {
+      "input_filename": "case-001-mc-092.json",
+      "actual_input_sha256": "b7c9bc13ab5ba22825cb603b55788c1a85a930999032f637583d84ced7c0f220",
+      "realization": 92,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "811289a090e231ba9aad0afdefb483005b96c08bb28a8a8c9a3d13a0949cc6aa",
+        "ae871b18feaadf944f4c1c0db00fa5db5d96b2572ff1fb1c86cb66ade1e5e7ba"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 7.105427357601002e-15
+    },
+    {
+      "input_filename": "case-001-mc-093.json",
+      "actual_input_sha256": "1c19763c9ccaf5aaf9e592dc7f1bb9fd4e7e54db8fd6fbbfa6a962580297366f",
+      "realization": 93,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "da51d3d37afd9f434abdc6691d97e00bef11facb7de59a718af5cfc4e87cdfed",
+        "ddea90539124802431a7f245cc315634be8eb88b50e0ed110f400704f62e9202"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 3.552713678800501e-15,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-001-mc-094.json",
+      "actual_input_sha256": "164746d6515ebac2b7186f7344ecd59c2d561add2c17881c57648e9ec1f8c258",
+      "realization": 94,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "9b4d191202c0fbd4a9855c17f86ed38f1a73722ee80da69b48db44c39da06abc",
+        "c6a57220a00373ce7cb25e2dfa2aa1b748d83f561db53b27cf8cb03d6a9bdc1c"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 8.881784197001252e-15
+    },
+    {
+      "input_filename": "case-001-mc-095.json",
+      "actual_input_sha256": "9f6363eca4510f33ad2258887536404edceaa4870d04d1144bf7abf10b8a0ae5",
+      "realization": 95,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "17accabcc5d686a9e9dfdc9dfc4a7cf1c8d97de26f888401e78fb1591a339003",
+        "b4913e97386c5165c716a68ff6b02344ea1264ed339854b4636d6f589fb99cf7"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 8.881784197001252e-15
+    },
+    {
+      "input_filename": "case-001-mc-096.json",
+      "actual_input_sha256": "70a106fe2b526ca37441a9cb8dbbba6e8f07db003eb407d3a04d513f17820b83",
+      "realization": 96,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "d9a1652fd9ff9ab071ae64e2bd9026f6bd1578c93f1bdb9cb896ff1be681f6a0",
+        "5322d2a2ec14b8c14f04b220fa256d8d37cb645d786d4c8d5dfe6fc6370369de"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 1.7763568394002505e-15,
+      "source_ZF_formula_difference": 0.0
+    },
+    {
+      "input_filename": "case-001-mc-097.json",
+      "actual_input_sha256": "75479668da9f3eb1b4cb8207928a69542829162067fcfa1e05df18bb1b4e2130",
+      "realization": 97,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "600e0c1ac86539c809e230079bf4ceb8ce9ee41c1c0bb636cbaf1cb587d77db9",
+        "310e206fe22d3c9a2bed38219f6447a5fe333ab054e81c8a6e094f50a4d7df10"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 2.1316282072803006e-14
+    },
+    {
+      "input_filename": "case-001-mc-098.json",
+      "actual_input_sha256": "9ce3964de4d524fdd171d8fdd277d3b1f7cb2ab440883c1e3c5834b5e5cfc404",
+      "realization": 98,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "960dc706c351cf127bf528434d8c1e77fc64ab19a82a7a9135d0b03e7228697f",
+        "80f9fc7016109ad834cdf4e7e6a99cf5bd0044c68ef3edc63f10358afdf068a6"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 2.220446049250313e-16,
+      "source_MRT_formula_difference": 8.881784197001252e-16,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    },
+    {
+      "input_filename": "case-001-mc-099.json",
+      "actual_input_sha256": "f5554a056dbb3a116870b020b80c814c59148f75d93a5f58d65636f1d1cb979a",
+      "realization": 99,
+      "kappa_linear": 100,
+      "same_full_geometry_and_NLoS_pair_sha256": [
+        "a3cafc2814a2b63c5560578258f707246a866f7635eb937a5ad95ff3a824cee6",
+        "387109e85315392ba7b431155d32b68c46aa9f663f786058eded3dc1f6b232fb"
+      ],
+      "actual_input_dimensions": [
+        1000,
+        6,
+        5
+      ],
+      "source_LoS_unit_amplitude_error": 1.1102230246251565e-16,
+      "source_MRT_formula_difference": 0.0,
+      "source_ZF_formula_difference": 3.552713678800501e-15
+    }
+  ],
+  "all200_actual_input_source_contract_checks_pass": true,
+  "100_kappa6_vs100_geometry_and_full1000_NLoS_pairs_identical": true,
+  "distance_min_max_m": [
+    50.00298751318641,
+    69.91427637133634
+  ],
+  "actual_overall_mean_distance_m": 59.952597263760815,
+  "actual_mean_unit_variance_gaussian_sample_power": 1.0003032126470035,
+  "maximum_source_MRT_formula_difference": 3.552713678800501e-15,
+  "maximum_source_ZF_formula_difference": 9.237055564881302e-14,
+  "maximum_unit_amplitude_LoS_formula_error": 0.0,
+  "confirmed_Fig3_4_linkbudget_or_stream_or_LOS_normalization_implementation_conflict_found": false,
+  "absence_of_every_possible_implementation_bug_proved": false,
+  "source_confirmed_errors_not_attributed_to_Fig3_4_curve_gap": [
+    "Eq29b_minus_discriminant_vs_Eq29a",
+    "Algorithm2_problem_spacing_crossrefs",
+    "SectionII_covariance_S_vs_sqrtS_outside_iid_Fig3_4",
+    "energy_footnote_units_outside_rate_model"
+  ],
+  "historical_unreported_inputs": [
+    "Nr/Nc",
+    "initial_positions",
+    "seed_and_geometry_sample_count",
+    "actual_user_distance_angle_joint_draws",
+    "NLoS_draw_count_and_exact_draws",
+    "single_geometry_vs_ensemble_mean_convergence_curve_protocol"
+  ],
+  "historical_Fig3_4_inputs_recovered": false,
+  "curve_difference_cause_uniquely_identified": false,
+  "gain_noise_or_model_changed_or_fitted_to_reference": false,
+  "optimizer_or_full_MC_rate_evaluator_called": false,
+  "new_full_figure_or_historical_reproduction_certified": false,
+  "auditor_source_sha256": "50051a732d5da68d5da6706de96a0b1c215c2f5a02cef11a4d2ffab4033e8a7e"
+}

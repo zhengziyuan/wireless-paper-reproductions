@@ -1,0 +1,1197 @@
+{
+  "scope": "Actual two source table blocks read and36 parameter rows mapped without running any optimizer",
+  "collected_at_utc": "2026-10-03T23:45:50.372442+00:00",
+  "tables": [
+    {
+      "paper": "cooperative-satcom",
+      "source": {
+        "source_basename": "ch_4.tex",
+        "source_sha256": "786351541a13cf99f711a1e8d5a6ad8cfc38d03e728cf52ccb3e9d0aaad347a8",
+        "source_label": "tab:4-1",
+        "table_start_line": 778,
+        "table_end_line": 810,
+        "caption_read_from_actual_UTF8_source": "低轨对高轨干扰规避约束的多星多RIS系统仿真参数",
+        "caption_sha256": "8df5e750020a5dc83c3e5950456be495d391f5f5ccce1eb323709be7eb3a06de",
+        "table_local_block_sha256": "5ddf2755d8a50d7b908a30a81bea88f58b6948942cf01c75f2b6dfb30bbf4ce8",
+        "parameter_row_count": 16,
+        "row_locators": [
+          {
+            "source_line": 791,
+            "source_row_sha256": "a2a3fae690e8008e5bf1e2678f6ded8e223d18925c207eb7ff606516dfe091fa"
+          },
+          {
+            "source_line": 792,
+            "source_row_sha256": "598d02bb492e5b7de70eb31de9fa9ae910bd0656e5d6097ee1325b64dcb59f72"
+          },
+          {
+            "source_line": 793,
+            "source_row_sha256": "fc551a375527489459548919cdd59cc34423698ace8edd050109b650470e3d7b"
+          },
+          {
+            "source_line": 794,
+            "source_row_sha256": "ba735ce4aec94acdfa2131714f484b5de5cf359710b0a6f7342e14094bd57d75"
+          },
+          {
+            "source_line": 795,
+            "source_row_sha256": "6c80694dbfe7285ad3d9aba623943d2a2e504d66eda6d3a6fb512e336485ad32"
+          },
+          {
+            "source_line": 796,
+            "source_row_sha256": "d36aa0567e06846ef1e618e89cd139a61f52c24103a9fa4aeb4192f7d575b94a"
+          },
+          {
+            "source_line": 797,
+            "source_row_sha256": "ebf5aefa1058afec3e2357b6ee49c8b4b569b170eb271b3ec02c2cce1f05b8de"
+          },
+          {
+            "source_line": 798,
+            "source_row_sha256": "3517c8e787bd2ac5f10ddc348187e83250659c3ae0e18b692ded534ced53ec01"
+          },
+          {
+            "source_line": 799,
+            "source_row_sha256": "f7e8a935c4db9255c7fd0eaefd33393319e6571e46244fad793d9cabd3c0d30e"
+          },
+          {
+            "source_line": 800,
+            "source_row_sha256": "24602c04f4e220fcd874c633d9e818cf60489209165094c57a51ddc4bc153276"
+          },
+          {
+            "source_line": 801,
+            "source_row_sha256": "6593fb13470c6a8ae7a41af293bd2ab3e8d1847717fde717907be2959cfd371c"
+          },
+          {
+            "source_line": 802,
+            "source_row_sha256": "3931d1fd9f19dac52005c7d55820367fd47e785bfab1dddc6436badeb6971842"
+          },
+          {
+            "source_line": 803,
+            "source_row_sha256": "1f2dd3f3af98fa7c525a67cc8eac2754fd8a82b2d2b934407945e05324e0a3c7"
+          },
+          {
+            "source_line": 804,
+            "source_row_sha256": "d79ac369342bf3c1ff18c8c736b7686028759e51168b3c68d2cf7c693cf136c9"
+          },
+          {
+            "source_line": 805,
+            "source_row_sha256": "e7de2de9c2930f693e95ff430c04e3e2078d9a139bb2ed1222d749c7ef4cfb91"
+          },
+          {
+            "source_line": 806,
+            "source_row_sha256": "0cf60d2cb494b786b70aa6a6276aac952e5f6f3b0799347ad94f5f2a2106e8a4"
+          }
+        ],
+        "private_source_body_redistributed": false,
+        "source_version": "supplied_author_thesis; final publisher equivalent unverified"
+      },
+      "parameter_rows": [
+        {
+          "parameter_id": "orbit_heights",
+          "source_line": 791,
+          "bindings": [
+            {
+              "config_key": "leo_height_m",
+              "expected_SI_or_declared_value": 550000,
+              "unit": "m"
+            },
+            {
+              "config_key": "geo_height_m",
+              "expected_SI_or_declared_value": 36000000,
+              "unit": "m"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": null,
+          "checks": [
+            {
+              "config_key": "leo_height_m",
+              "expected_SI_or_declared_value": 550000,
+              "unit": "m",
+              "observed_value": 550000,
+              "matches": true
+            },
+            {
+              "config_key": "geo_height_m",
+              "expected_SI_or_declared_value": 36000000,
+              "unit": "m",
+              "observed_value": 36000000,
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "carrier",
+          "source_line": 792,
+          "bindings": [
+            {
+              "config_key": "frequency_hz",
+              "expected_SI_or_declared_value": 12000000000,
+              "unit": "Hz"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": null,
+          "checks": [
+            {
+              "config_key": "frequency_hz",
+              "expected_SI_or_declared_value": 12000000000,
+              "unit": "Hz",
+              "observed_value": 12000000000,
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "antenna_satellite_counts",
+          "source_line": 793,
+          "bindings": [
+            {
+              "config_key": "N",
+              "expected_SI_or_declared_value": 16,
+              "unit": "count"
+            },
+            {
+              "config_key": "J",
+              "expected_SI_or_declared_value": 3,
+              "unit": "count"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": null,
+          "checks": [
+            {
+              "config_key": "N",
+              "expected_SI_or_declared_value": 16,
+              "unit": "count",
+              "observed_value": 16,
+              "matches": true
+            },
+            {
+              "config_key": "J",
+              "expected_SI_or_declared_value": 3,
+              "unit": "count",
+              "observed_value": 3,
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "user_terminal_counts",
+          "source_line": 794,
+          "bindings": [
+            {
+              "config_key": "U",
+              "expected_SI_or_declared_value": 2,
+              "unit": "count"
+            },
+            {
+              "config_key": "K",
+              "expected_SI_or_declared_value": 1,
+              "unit": "count"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": null,
+          "checks": [
+            {
+              "config_key": "U",
+              "expected_SI_or_declared_value": 2,
+              "unit": "count",
+              "observed_value": 2,
+              "matches": true
+            },
+            {
+              "config_key": "K",
+              "expected_SI_or_declared_value": 1,
+              "unit": "count",
+              "observed_value": 1,
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "normalized_inter_system_interference",
+          "source_line": 795,
+          "bindings": [
+            {
+              "config_key": "interference_to_noise_db",
+              "expected_SI_or_declared_value": -12.2,
+              "unit": "dB relative to normalized noise"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": "Normalized INR, not -12.2 dBW or a physical-W limit.",
+          "checks": [
+            {
+              "config_key": "interference_to_noise_db",
+              "expected_SI_or_declared_value": -12.2,
+              "unit": "dB relative to normalized noise",
+              "observed_value": -12.2,
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "LEO_power",
+          "source_line": 796,
+          "bindings": [
+            {
+              "config_key": "power_w",
+              "expected_SI_or_declared_value": 50,
+              "unit": "W per LEO"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": null,
+          "checks": [
+            {
+              "config_key": "power_w",
+              "expected_SI_or_declared_value": 50,
+              "unit": "W per LEO",
+              "observed_value": 50,
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "GEO_equivalent_power",
+          "source_line": 797,
+          "bindings": [
+            {
+              "config_key": "geo_power_w",
+              "expected_SI_or_declared_value": 2000,
+              "unit": "W"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": null,
+          "checks": [
+            {
+              "config_key": "geo_power_w",
+              "expected_SI_or_declared_value": 2000,
+              "unit": "W",
+              "observed_value": 2000,
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "GT_pattern_reference",
+          "source_line": 798,
+          "bindings": [],
+          "verification_scope": "external_referenced_pattern_not_scalar",
+          "qualification": "Table cites ITU recommendations; current implementation explicitly uses S.1428-1 via S.1503. Matching scalar parameters does not certify the full pattern/reference interpretation.",
+          "checks": [],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "noise",
+          "source_line": 799,
+          "bindings": [
+            {
+              "config_key": "noise_dbm",
+              "expected_SI_or_declared_value": -94,
+              "unit": "dBm"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": null,
+          "checks": [
+            {
+              "config_key": "noise_dbm",
+              "expected_SI_or_declared_value": -94,
+              "unit": "dBm",
+              "observed_value": -94,
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "RIS_subsurface_count",
+          "source_line": 800,
+          "bindings": [
+            {
+              "config_key": "M",
+              "expected_SI_or_declared_value": 25,
+              "unit": "count"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": null,
+          "checks": [
+            {
+              "config_key": "M",
+              "expected_SI_or_declared_value": 25,
+              "unit": "count",
+              "observed_value": 25,
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "microelements",
+          "source_line": 801,
+          "bindings": [
+            {
+              "config_key": "subsurface_elements",
+              "expected_SI_or_declared_value": [
+                100,
+                100
+              ],
+              "unit": "counts per axis"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": null,
+          "checks": [
+            {
+              "config_key": "subsurface_elements",
+              "expected_SI_or_declared_value": [
+                100,
+                100
+              ],
+              "unit": "counts per axis",
+              "observed_value": [
+                100,
+                100
+              ],
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "element_size",
+          "source_line": 802,
+          "bindings": [
+            {
+              "config_key": "element_size_m",
+              "expected_SI_or_declared_value": [
+                0.01,
+                0.01
+              ],
+              "unit": "m per axis"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": null,
+          "checks": [
+            {
+              "config_key": "element_size_m",
+              "expected_SI_or_declared_value": [
+                0.01,
+                0.01
+              ],
+              "unit": "m per axis",
+              "observed_value": [
+                0.01,
+                0.01
+              ],
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "RIS_LU_distance",
+          "source_line": 803,
+          "bindings": [
+            {
+              "config_key": "ris_lu_distance_m",
+              "expected_SI_or_declared_value": 100,
+              "unit": "m"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": null,
+          "checks": [
+            {
+              "config_key": "ris_lu_distance_m",
+              "expected_SI_or_declared_value": 100,
+              "unit": "m",
+              "observed_value": 100,
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "ground_Rician",
+          "source_line": 804,
+          "bindings": [
+            {
+              "config_key": "kappa_ground_db",
+              "expected_SI_or_declared_value": 10,
+              "unit": "dB"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": null,
+          "checks": [
+            {
+              "config_key": "kappa_ground_db",
+              "expected_SI_or_declared_value": 10,
+              "unit": "dB",
+              "observed_value": 10,
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "GEO_Rician",
+          "source_line": 805,
+          "bindings": [
+            {
+              "config_key": "kappa_geo_db",
+              "expected_SI_or_declared_value": 30,
+              "unit": "dB"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": null,
+          "checks": [
+            {
+              "config_key": "kappa_geo_db",
+              "expected_SI_or_declared_value": 30,
+              "unit": "dB",
+              "observed_value": 30,
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "LEO_Rician",
+          "source_line": 806,
+          "bindings": [
+            {
+              "config_key": "kappa_leo_db",
+              "expected_SI_or_declared_value": 20,
+              "unit": "dB"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": null,
+          "checks": [
+            {
+              "config_key": "kappa_leo_db",
+              "expected_SI_or_declared_value": 20,
+              "unit": "dB",
+              "observed_value": 20,
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        }
+      ],
+      "current_public_inventory_caption_matches_actual_source": true,
+      "current_public_inventory_caption_has_replacement_characters": false,
+      "current_public_inventory_classification": "Needs explicit parameter/complexity/numerical/measurement classification",
+      "correct_read_only_classification": "parameter_table_not_numerical_optimizer_or_complexity_result",
+      "table_parameter_reconciliation_pass": true,
+      "final_publisher_table_equivalence_verified": false,
+      "reference_pattern_and_full_realized_geometry_certificate_claimed": false
+    },
+    {
+      "paper": "hotspot-satcom",
+      "source": {
+        "source_basename": "ch_third.tex",
+        "source_sha256": "684b2de6bb9dd18828fcec33a378d886a085aab7367fb535bac401f51b496794",
+        "source_label": "tab:3-1",
+        "table_start_line": 662,
+        "table_end_line": 696,
+        "caption_read_from_actual_UTF8_source": "RIS辅助预编码卫星系统的仿真参数",
+        "caption_sha256": "42b3664c420ff04b49565c51d11b0ac5bd9cc571135be8905e99e25fc27c6ee4",
+        "table_local_block_sha256": "4abc877be7d376124dc6dc388f3a0784ea82e8e3166b3ce6504b2d9d8be978ef",
+        "parameter_row_count": 20,
+        "row_locators": [
+          {
+            "source_line": 674,
+            "source_row_sha256": "10d17dad4a0645c945bd212c872e6f71e48feab599b9812f7598de620cc58322"
+          },
+          {
+            "source_line": 675,
+            "source_row_sha256": "82df180c1749dcba743c1c344a257c204e64cbd6f442c6b1f92a991c0eadf2dd"
+          },
+          {
+            "source_line": 676,
+            "source_row_sha256": "91e638642df1c504725d8c34a7064a1a8a386285d9730020c990d71d148fe68e"
+          },
+          {
+            "source_line": 677,
+            "source_row_sha256": "bb4e459dd6aaa87294bf7080721dca1da84a4f00e2116f96a9dde7379cc71ae1"
+          },
+          {
+            "source_line": 678,
+            "source_row_sha256": "2b268f6c4324fbdcbd2189acd2fbace65ea07210e5a8afa578241323dcfd7a0b"
+          },
+          {
+            "source_line": 679,
+            "source_row_sha256": "25df76363014bfc8a199066e53c6b652c4fba738e32a91edf1dc0f892b66a0c0"
+          },
+          {
+            "source_line": 680,
+            "source_row_sha256": "4a4ca497037cdad400f280a23c2bbe086dc54c3a281aeec1966845d2aefee74f"
+          },
+          {
+            "source_line": 681,
+            "source_row_sha256": "4adfc4de939794362fde5912231aaedb3b7fd37fc86722c3659d762f9f7a5a26"
+          },
+          {
+            "source_line": 682,
+            "source_row_sha256": "e0e1ba36dee81a87d8e532aa5d10bbd7446c02dab6db5a4c6887adf43c904cd5"
+          },
+          {
+            "source_line": 683,
+            "source_row_sha256": "327e6e1de4fdc6d0fb07a6cc30b6ebfd851b574026e4f1ca02f53636a7146d51"
+          },
+          {
+            "source_line": 684,
+            "source_row_sha256": "83ab86a614d9dee956c962859e7acfd6880903ec09d94929a8f25a9ec8d4081c"
+          },
+          {
+            "source_line": 685,
+            "source_row_sha256": "1c8f004974e4db87f605f1f69124b82dfccb51cf18081d5c5e3b658845ed7e71"
+          },
+          {
+            "source_line": 686,
+            "source_row_sha256": "080d63f102778f60e1437b7f59e624b0bcc7844a8482da27f66fe968485f4c59"
+          },
+          {
+            "source_line": 687,
+            "source_row_sha256": "6afe5c4c94c6d50616d413bee4e0302c29021acf10f5a27c19442a92080c5cec"
+          },
+          {
+            "source_line": 688,
+            "source_row_sha256": "ddf51550fe401ff4fab0bcced28420787df77737ff7e474c37ddc26dc8b9df31"
+          },
+          {
+            "source_line": 689,
+            "source_row_sha256": "2d668c99e38335b2ecdc0fca68df9595a0d8aef43f2668e3ec4d75161192de97"
+          },
+          {
+            "source_line": 690,
+            "source_row_sha256": "370840c5feb1550c1ebf6380e57103c999ac513d571170d63721f612d70822df"
+          },
+          {
+            "source_line": 691,
+            "source_row_sha256": "80d36abf9cd36e124b060282887242ce095ab5a7b36afb58ebab3279e5844ee2"
+          },
+          {
+            "source_line": 692,
+            "source_row_sha256": "3f607ccea65be108ad5c30f278872beec207773d56a403ee38b7424c04af4374"
+          },
+          {
+            "source_line": 693,
+            "source_row_sha256": "eef75d737e2ce279827a40b82941c4cc6c8fde2796a4f16cad13d15c75939e57"
+          }
+        ],
+        "private_source_body_redistributed": false,
+        "source_version": "supplied_author_thesis; final publisher equivalent unverified"
+      },
+      "parameter_rows": [
+        {
+          "parameter_id": "orbit",
+          "source_line": 674,
+          "bindings": [
+            {
+              "config_key": "leo_height_m",
+              "expected_SI_or_declared_value": 550000,
+              "unit": "m"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": null,
+          "checks": [
+            {
+              "config_key": "leo_height_m",
+              "expected_SI_or_declared_value": 550000,
+              "unit": "m",
+              "observed_value": 550000,
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "carrier",
+          "source_line": 675,
+          "bindings": [
+            {
+              "config_key": "frequency_hz",
+              "expected_SI_or_declared_value": 12000000000,
+              "unit": "Hz"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": null,
+          "checks": [
+            {
+              "config_key": "frequency_hz",
+              "expected_SI_or_declared_value": 12000000000,
+              "unit": "Hz",
+              "observed_value": 12000000000,
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "feeds",
+          "source_line": 676,
+          "bindings": [
+            {
+              "config_key": "N",
+              "expected_SI_or_declared_value": 16,
+              "unit": "count"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": null,
+          "checks": [
+            {
+              "config_key": "N",
+              "expected_SI_or_declared_value": 16,
+              "unit": "count",
+              "observed_value": 16,
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "streams",
+          "source_line": 677,
+          "bindings": [
+            {
+              "config_key": "J",
+              "expected_SI_or_declared_value": 16,
+              "unit": "count"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": null,
+          "checks": [
+            {
+              "config_key": "J",
+              "expected_SI_or_declared_value": 16,
+              "unit": "count",
+              "observed_value": 16,
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "hotspot_users",
+          "source_line": 678,
+          "bindings": [
+            {
+              "config_key": "U",
+              "expected_SI_or_declared_value": 6,
+              "unit": "count; figure may explicitly override"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": null,
+          "checks": [
+            {
+              "config_key": "U",
+              "expected_SI_or_declared_value": 6,
+              "unit": "count; figure may explicitly override",
+              "observed_value": 6,
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "non_hotspot_users",
+          "source_line": 679,
+          "bindings": [
+            {
+              "config_key": "K",
+              "expected_SI_or_declared_value": 10,
+              "unit": "count; derived J-U in user sweeps"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": null,
+          "checks": [
+            {
+              "config_key": "K",
+              "expected_SI_or_declared_value": 10,
+              "unit": "count; derived J-U in user sweeps",
+              "observed_value": 10,
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "NHU_SINR",
+          "source_line": 680,
+          "bindings": [
+            {
+              "config_key": "nhu_sinr_db",
+              "expected_SI_or_declared_value": 3,
+              "unit": "dB instantaneous"
+            },
+            {
+              "config_key": "nhu_statistical_sinr_db",
+              "expected_SI_or_declared_value": -3,
+              "unit": "dB statistical LoS-labelled source branch"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": null,
+          "checks": [
+            {
+              "config_key": "nhu_sinr_db",
+              "expected_SI_or_declared_value": 3,
+              "unit": "dB instantaneous",
+              "observed_value": 3,
+              "matches": true
+            },
+            {
+              "config_key": "nhu_statistical_sinr_db",
+              "expected_SI_or_declared_value": -3,
+              "unit": "dB statistical LoS-labelled source branch",
+              "observed_value": -3,
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "power",
+          "source_line": 681,
+          "bindings": [
+            {
+              "config_key": "power_w",
+              "expected_SI_or_declared_value": 100,
+              "unit": "W"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": null,
+          "checks": [
+            {
+              "config_key": "power_w",
+              "expected_SI_or_declared_value": 100,
+              "unit": "W",
+              "observed_value": 100,
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "ESA_pattern_reference",
+          "source_line": 682,
+          "bindings": [],
+          "verification_scope": "external_referenced_pattern_not_scalar",
+          "qualification": "Squared-power interpretation and historical reference convention remain independently qualified; no table-only pattern certificate.",
+          "checks": [],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "peak_transmit_gain",
+          "source_line": 683,
+          "bindings": [
+            {
+              "config_key": "satellite_gain_dbi",
+              "expected_SI_or_declared_value": 50,
+              "unit": "dBi"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": null,
+          "checks": [
+            {
+              "config_key": "satellite_gain_dbi",
+              "expected_SI_or_declared_value": 50,
+              "unit": "dBi",
+              "observed_value": 50,
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "antenna_diameter",
+          "source_line": 684,
+          "bindings": [
+            {
+              "config_key": "antenna_diameter_m",
+              "expected_SI_or_declared_value": 0.5,
+              "unit": "m"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": null,
+          "checks": [
+            {
+              "config_key": "antenna_diameter_m",
+              "expected_SI_or_declared_value": 0.5,
+              "unit": "m",
+              "observed_value": 0.5,
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "noise_temperature",
+          "source_line": 685,
+          "bindings": [
+            {
+              "config_key": "temperature_k",
+              "expected_SI_or_declared_value": 235.3,
+              "unit": "K"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": null,
+          "checks": [
+            {
+              "config_key": "temperature_k",
+              "expected_SI_or_declared_value": 235.3,
+              "unit": "K",
+              "observed_value": 235.3,
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "bandwidth",
+          "source_line": 686,
+          "bindings": [
+            {
+              "config_key": "bandwidth_hz",
+              "expected_SI_or_declared_value": 200000000,
+              "unit": "Hz"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": null,
+          "checks": [
+            {
+              "config_key": "bandwidth_hz",
+              "expected_SI_or_declared_value": 200000000,
+              "unit": "Hz",
+              "observed_value": 200000000,
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "RIS_subsurface_count",
+          "source_line": 687,
+          "bindings": [
+            {
+              "config_key": "M",
+              "expected_SI_or_declared_value": 25,
+              "unit": "count"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": null,
+          "checks": [
+            {
+              "config_key": "M",
+              "expected_SI_or_declared_value": 25,
+              "unit": "count",
+              "observed_value": 25,
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "microelements",
+          "source_line": 688,
+          "bindings": [
+            {
+              "config_key": "subsurface_elements",
+              "expected_SI_or_declared_value": [
+                200,
+                140
+              ],
+              "unit": "counts per axis; Fig9 count-only override keeps centers fixed"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": null,
+          "checks": [
+            {
+              "config_key": "subsurface_elements",
+              "expected_SI_or_declared_value": [
+                200,
+                140
+              ],
+              "unit": "counts per axis; Fig9 count-only override keeps centers fixed",
+              "observed_value": [
+                200,
+                140
+              ],
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "element_size",
+          "source_line": 689,
+          "bindings": [
+            {
+              "config_key": "element_size_m",
+              "expected_SI_or_declared_value": [
+                0.01,
+                0.01
+              ],
+              "unit": "m per axis"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": null,
+          "checks": [
+            {
+              "config_key": "element_size_m",
+              "expected_SI_or_declared_value": [
+                0.01,
+                0.01
+              ],
+              "unit": "m per axis",
+              "observed_value": [
+                0.01,
+                0.01
+              ],
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "RIS_HU_amplitude_distance",
+          "source_line": 690,
+          "bindings": [
+            {
+              "config_key": "ris_hu_distance_m",
+              "expected_SI_or_declared_value": 400,
+              "unit": "m common amplitude; user offsets still affect phase"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": null,
+          "checks": [
+            {
+              "config_key": "ris_hu_distance_m",
+              "expected_SI_or_declared_value": 400,
+              "unit": "m common amplitude; user offsets still affect phase",
+              "observed_value": 400,
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "ground_Rician",
+          "source_line": 691,
+          "bindings": [
+            {
+              "config_key": "kappa_ground_db",
+              "expected_SI_or_declared_value": 0,
+              "unit": "dB instantaneous"
+            },
+            {
+              "config_key": "kappa_ground_statistical_db",
+              "expected_SI_or_declared_value": 20,
+              "unit": "dB statistical LoS-labelled source branch"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": null,
+          "checks": [
+            {
+              "config_key": "kappa_ground_db",
+              "expected_SI_or_declared_value": 0,
+              "unit": "dB instantaneous",
+              "observed_value": 0,
+              "matches": true
+            },
+            {
+              "config_key": "kappa_ground_statistical_db",
+              "expected_SI_or_declared_value": 20,
+              "unit": "dB statistical LoS-labelled source branch",
+              "observed_value": 20,
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "satellite_Rician",
+          "source_line": 692,
+          "bindings": [
+            {
+              "config_key": "kappa_satellite_db",
+              "expected_SI_or_declared_value": 20,
+              "unit": "dB default; figures may override"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": null,
+          "checks": [
+            {
+              "config_key": "kappa_satellite_db",
+              "expected_SI_or_declared_value": 20,
+              "unit": "dB default; figures may override",
+              "observed_value": 20,
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        },
+        {
+          "parameter_id": "all_HU_pair_spacing",
+          "source_line": 693,
+          "bindings": [
+            {
+              "config_key": "hu_spacing_m_range",
+              "expected_SI_or_declared_value": [
+                10,
+                20
+              ],
+              "unit": "m all pair distances"
+            }
+          ],
+          "verification_scope": "machine_scalar_or_array_configuration",
+          "qualification": "Interval in config alone is not proof for realized geometry; fresh all-pair geometric checks still required.",
+          "checks": [
+            {
+              "config_key": "hu_spacing_m_range",
+              "expected_SI_or_declared_value": [
+                10,
+                20
+              ],
+              "unit": "m all pair distances",
+              "observed_value": [
+                10,
+                20
+              ],
+              "matches": true
+            }
+          ],
+          "machine_bindings_pass": true,
+          "pattern_or_realized_geometry_certified": false
+        }
+      ],
+      "current_public_inventory_caption_matches_actual_source": true,
+      "current_public_inventory_caption_has_replacement_characters": false,
+      "current_public_inventory_classification": "Needs explicit parameter/complexity/numerical/measurement classification",
+      "correct_read_only_classification": "parameter_table_not_numerical_optimizer_or_complexity_result",
+      "table_parameter_reconciliation_pass": true,
+      "final_publisher_table_equivalence_verified": false,
+      "reference_pattern_and_full_realized_geometry_certificate_claimed": false
+    }
+  ],
+  "negative_controls": [
+    {
+      "negative_control": "coop_GEO_kW_without_W_conversion",
+      "rejected": true
+    },
+    {
+      "negative_control": "coop_km_without_m_conversion",
+      "rejected": true
+    },
+    {
+      "negative_control": "coop_wrong_ground_Rician",
+      "rejected": true
+    },
+    {
+      "negative_control": "hot_instantaneous_minus3",
+      "rejected": true
+    },
+    {
+      "negative_control": "hot_statistical_plus3",
+      "rejected": true
+    },
+    {
+      "negative_control": "hot_statistical_zero_Rician",
+      "rejected": true
+    },
+    {
+      "negative_control": "hot_wrong_element_counts",
+      "rejected": true
+    },
+    {
+      "negative_control": "hot_wrong_distance",
+      "rejected": true
+    },
+    {
+      "negative_control": "hot_missing_interval",
+      "rejected": true
+    }
+  ],
+  "reported_table_row_count": 36,
+  "external_pattern_rows_not_machine_scalar_certificates": 2,
+  "machine_parameter_rows_passed": 34,
+  "source_and_execution_path_sha256": {
+    "wireless-paper-reproductions/strict/cooperative-satcom/spectral_config.json": "086d63de49ebfe19b1cec833ecebb76d49e75788e7ad244e8e06f03b5b5b6eef",
+    "wireless-paper-reproductions/strict/hotspot-satcom/instantaneous_geometry_config.json": "5423d02b19a7d1a634782f689f8c1cc14c511932865eaa3b554b3eaad75be669",
+    "wireless-paper-reproductions/strict/hotspot-satcom/statistical_validated_config.json": "7f75eeaca62d0a68b053f53e7e841101f31d6539e645ea1a4239ea867a4fbdce",
+    "wireless-paper-reproductions/strict/hotspot-satcom/run_statistical_validated.py": "d0140c1d538a40a1a679a4d295e72c05a791dfd4cb4fd36efe3f0307659686e4",
+    "wireless-paper-reproductions/strict/hotspot-satcom/run_strict_hotspot_statistical_validated.m": "49aa8b1825ac2a4f3bcb88e99bea20e3643cd374e57184d31bc4690f888fa6f8",
+    "wireless-paper-reproductions/strict/cooperative-satcom/scenario.py": "7dbc490944c2fd7aaa2fc862068508530faab10b8c2dcb63eccf5511c74a62ba",
+    "wireless-paper-reproductions/strict/hotspot-satcom/scenario.py": "ca0365b3a368b9869a3cf28857e02e2e47bd8a7e7c68761cb67519b66ead6db4"
+  },
+  "table_only_work_not_full_figure_or_model_certificate": true,
+  "publication_schema_should_exclude_private_paths_and_source_body": true
+}

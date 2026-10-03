@@ -459,6 +459,33 @@ from correctness of the supplied LaTeX/thesis model.
 
 ## Additional actual checkpoint: native full histories and explicit source units
 
+The [two parameter-table packet](validation/parameter-tables-source-qualified-v1/README.md)
+contains actual supplied-author source-read provenance and a fresh portable
+replay:36 mapped rows,34 numerical matches and9 negative controls. Numeric
+units and instantaneous/statistical branch differences are explicit. The two
+external pattern references, final publisher version and realized geometry
+are not certified by those scalar matches. The new `--table` route audits
+metadata only. Hotspot Fig9 now displays all7 existing source count overrides
+and7000 required full samples rather than leaving its base5 shape-pair grid
+unqualified; the original numerical implementation is unchanged.
+
+The superseded preview launchers now require explicit opt-in before any
+output creation or numerical call. Actual Python guard/negative tests pass;
+the native MATLAB guard has a static source-order test, not a new licensed
+dispatch receipt. Full original figure commands are shown on the root README.
+Historical preview data are neither deleted nor promoted to strict evidence.
+
+The [actual all200 MA initial/input audit](validation/two-timescale-ma-initial-input-contract-v1/README.md)
+checks units, LoS normalization, original initial MRT/ZF formulas and100
+paired geometries' complete1000 NLoS recipes. No confirmed Fig3/4 gain/noise,
+stream-count or same-vector bug was found in that inspected chain. Under the
+declared independent uniform angles the exact direction second moments are
+diag(1/4,1/2), so swapping2-by3 and3-by2 is not a distribution-equivalent
+rotation. Historical Nr/Nc, joint angles, initial positions and convergence
+aggregation remain unspecified; neither the seed alone nor this anisotropy
+is established as the cause of the reference gap. No optimizer was rerun or
+closer orientation selected by this input audit.
+
 The new [native MA Fig. 4 packet](validation/two-timescale-ma-native-figure04-full200-v1/README.md)
 independently checks all200 completed source ZF trajectories: 59813 recorded
 positions including200 initials, each with1000 original draws (59813000 sample

@@ -1,4 +1,8 @@
-"""Run independent per-paper implementations, without changing their fixtures."""
+"""Run superseded reduced previews only with explicit --legacy-preview opt-in.
+
+These papers/ fixtures are not the full original-algorithm reproduction.
+Use strict/reproduce.py for the current full-scene plan and execution entry.
+"""
 from __future__ import annotations
 
 import argparse
@@ -12,9 +16,14 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--legacy-preview", action="store_true",
+                        help="Explicitly request superseded reduced examples, not original figures")
     parser.add_argument("--paper", default="all")
     parser.add_argument("--output-dir", type=Path, default=ROOT / "outputs" / "python")
     args = parser.parse_args()
+    if not args.legacy_preview:
+        parser.error("Reduced historical previews are disabled by default. Use strict/reproduce.py; "
+                     "pass --legacy-preview only to inspect the superseded examples.")
     papers = json.loads((ROOT / "papers.json").read_text(encoding="utf-8"))
     selected = [p for p in papers if args.paper in ("all", p["id"])]
     if not selected:

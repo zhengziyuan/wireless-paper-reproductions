@@ -1,10 +1,37 @@
 """Source routing tests only; never numerical reproduction certificates."""
 import unittest
+import ast
+import copy
 from pathlib import Path
 from reproduce import plan,HERE,statistical_matlab_call,corrected_ma_matlab_call
 
 
 class Routing(unittest.TestCase):
+    def test_hotspot_count_plan_matches_the_actual_input_only_override(self):
+        # Compile only the pure configuration function: no model/solver import.
+        source=HERE/'hotspot_element_count.py'
+        tree=ast.parse(source.read_text(encoding='utf-8'))
+        function=next(node for node in tree.body if isinstance(node,ast.FunctionDef)
+                      and node.name=='full_count_configuration')
+        namespace={'copy':copy,'REFERENCE_COUNT':28000,'SOURCE_COUNTS':list(range(4000,28001,4000))}
+        exec(compile(ast.Module(body=[function],type_ignores=[]),str(source),'exec'),namespace)
+        p=plan('hotspot-satcom',9)
+        unchanged=copy.deepcopy(p['settings'])
+        actual=namespace['full_count_configuration'](p['settings'])
+        self.assertEqual(p['settings'],unchanged)
+        self.assertEqual(actual['sweeps'][0]['values'],p['effective_execution_grid'])
+        self.assertEqual(actual['tuned_not_reported']['monte_carlo_realizations'],
+                         p['independent_channel_realizations_per_count'])
+        self.assertEqual(len(actual['sweeps'][0]['values'])*actual['tuned_not_reported']['monte_carlo_realizations'],
+                         p['full_required_channel_realizations'])
+        for key,value in p['effective_execution_parameter_overrides'].items():
+            if key!='reference_elements_per_subsurface':
+                self.assertEqual(actual['reported'][key],value)
+        self.assertEqual(actual['reported']['subsurface_element_count'],28000)
+        native=(HERE/'run_hotspot_element_count_matlab.m').read_text(encoding='utf-8')
+        self.assertIn("'values',4000:4000:28000",native)
+        self.assertIn('monte_carlo_realizations==1000',native)
+
     def test_architecture_is_not_mislabelled_missing_hardware_measurements(self):
         for figure in (1,2,3):
             p=plan('mis-communications',figure)
@@ -93,6 +120,13 @@ class Routing(unittest.TestCase):
         self.assertTrue(count['runnable'])
         self.assertFalse(count['original_author_center_geometry_recovered'])
         self.assertFalse(count['row_column_factorization_inferred'])
+        self.assertEqual(count['effective_execution_grid'],list(range(4000,28001,4000)))
+        self.assertEqual(count['independent_channel_realizations_per_count'],1000)
+        self.assertEqual(count['full_required_channel_realizations'],7000)
+        self.assertEqual(count['effective_execution_parameter_overrides'],
+                         {'U':6,'K':10,'M':25,'N':16,'J':16,'kappa_satellite_db':12,
+                          'reference_elements_per_subsurface':28000})
+        self.assertTrue(count['base_settings_shape_pairs_are_not_the_effective_count_grid'])
         self.assertFalse(plan('hotspot-satcom',1)['runnable'])
 
     def test_cooperative_all_six_multi_single_subsweeps(self):

@@ -30,6 +30,30 @@ Each current package has its own MATLAB entry point, Python entry point, full co
 
 For current dependencies and commands, use the [strict implementation guide](strict/README.md). Actual execution outputs and dual-language comparisons are under [strict/validation](strict/validation); machine-readable status is in [strict/status.json](strict/status.json). **No package has yet passed complete published-figure reproduction.**
 
+To inspect the full original scenario first, then actually run every configured
+start for communication Fig7 (not a reduced demonstration):
+
+```sh
+python -m pip install -r strict/requirements.txt
+python strict/reproduce.py --paper mis-communications --figure 7
+python strict/reproduce.py --paper mis-communications --figure 7 --execute --language python --output-dir strict/outputs/full-communication-fig7
+```
+
+The first figure command is a read-only plan; `--execute` is a full12000-start
+calculation and may take a long time. The explicit two-element axis correction,
+all original baselines, stopping failures and reference checks stay visible.
+Other figure/language commands are in the strict guide. The newly verified
+[native recording and portable runtime entry](strict/validation/mis-communications-native-runtime-subset-v3/README.md)
+also separates saved-state replay from a fresh MATLAB optimization run.
+Historical preview launchers now refuse to run unless explicitly opted into;
+they are never the default route to these original figures.
+
+The [source-qualified parameter-table audit](strict/validation/parameter-tables-source-qualified-v1/README.md)
+checks all36 source rows and34 numeric parameter bindings without an optimizer.
+For example, `python strict/reproduce.py --paper hotspot-satcom --table 1`
+shows the plan; add `--execute` for the canonical-parameter replay. External
+pattern references and final-publisher conformance remain explicitly unverified.
+
 Original figures/tables, explicit full-budget execution and independent
 reference comparisons now have a [figure reproduction guide](strict/FIGURE_REPRODUCTION.md).
 The complete nine-target closed-form beam has actually run in both languages,
@@ -76,7 +100,7 @@ python -m pip install -r requirements.txt
 From this repository's root, run all Python examples and checks:
 
 ```sh
-python scripts/run_python.py
+python scripts/run_python.py --legacy-preview
 python scripts/validate_python.py
 python -m unittest discover -s tests -v
 ```
@@ -85,7 +109,7 @@ In MATLAB, from this repository's root:
 
 ```matlab
 addpath('scripts');
-run_all_matlab;
+run_all_matlab('all', '', true); % explicit superseded-preview opt-in
 ```
 
 Only after actually running both languages:
@@ -95,7 +119,7 @@ python scripts/validate_parity.py
 python scripts/plot_histories.py
 ```
 
-For one package: `python scripts/run_python.py --paper mis-communications` and `run_all_matlab('mis-communications')`. The `outputs/` folder is generated and ignored by Git. The checked-in [validation evidence](validation) records actual local outputs, parity thresholds, runtime versions, and fixture/source SHA-256 hashes. It is not a substitute for running your own changed fixture.
+For one historical preview: `python scripts/run_python.py --legacy-preview --paper mis-communications` and `run_all_matlab('mis-communications', '', true)`. The `outputs/` folder is generated and ignored by Git. The checked-in [validation evidence](validation) records actual local outputs, parity thresholds, runtime versions, and fixture/source SHA-256 hashes. It is not a substitute for running your own changed fixture.
 
 The initial local checks use Python 3.12, NumPy, and MATLAB R2025b. Numerical parity uses absolute tolerance `1e-7` plus relative tolerance `1e-6` on complete outputs, including iteration histories. Machine-scale deterministic tie breaking is documented in the MIS packages. GitHub Actions reruns Python core checks only; MATLAB parity is a separate licensed-runtime local check.
 

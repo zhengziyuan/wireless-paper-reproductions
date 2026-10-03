@@ -1,8 +1,14 @@
-function run_all_matlab(paper_id, output_dir)
-% Run deterministic independent implementations; this is not an original-figure campaign.
+function run_all_matlab(paper_id, output_dir, legacy_preview)
+% Superseded reduced previews only; explicit third argument true is required.
+% Current original-algorithm full-scene commands are in strict/README.md.
 arguments
     paper_id (1,:) char = 'all'
     output_dir (1,:) char = ''
+    legacy_preview (1,1) logical = false
+end
+if ~legacy_preview
+    error('reproduction:legacyPreviewDisabled', ...
+        'Reduced historical previews are disabled by default. Use strict/README.md; opt in explicitly only for old previews.');
 end
 root = fileparts(fileparts(mfilename('fullpath')));
 if isempty(output_dir), output_dir = fullfile(root, 'outputs', 'matlab'); end

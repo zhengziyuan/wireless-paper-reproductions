@@ -105,6 +105,15 @@ not pass reference agreement under either predeclared indexing convention.
 The full same-input Python bank remains incomplete. The
 old200 startup errors remain nonnumerical failures, not upgraded receipts.
 
+The new [all200 initial/input-contract packet](validation/two-timescale-ma-initial-input-contract-v1/README.md)
+independently rechecks declared units, steering, MRT/ZF initial formulas,
+all100 paired geometries and each full1000 NLoS recipe. Its portable replay
+passes. Current independent uniform angles have exact directional second
+moments diag(1/4,1/2): row/column swaps are not generally distribution-equivalent.
+The original Nr/Nc, joint angles, initialization and convergence averaging
+protocol remain unrecovered. This is not another AO run, all-trajectory
+gradient certificate or a causal explanation of the original discrepancy.
+
 The old complete cooperative183-point bank finishes154 valid/29 failed,
 including10 phase and19 MR QT failures, all retained. [All19 actual MR inputs](validation/cooperative-mr-precision19-python-v1/README.md)
 now have successful WORK components for an exact constant-factored version
@@ -124,6 +133,25 @@ not completion of a new183-point bank, independent saved final-phase gradients,
 or historical reference agreement.
 
 ## Original figure inventory
+
+Both supplied-author parameter tables now have [actual source-qualified row
+evidence and a portable canonical-parameter audit](validation/parameter-tables-source-qualified-v1/README.md).
+All36 rows are mapped and all34 numerical parameter rows match their source
+units and explicitly separate instantaneous/statistical configurations.
+The two external antenna-pattern references are not scalar certificates;
+final-publisher table equivalence and realized all-pair geometry checks are
+not inferred. The table route is a metadata audit, not a simulation:
+
+```sh
+python strict/reproduce.py --paper cooperative-satcom --table 1
+python strict/reproduce.py --paper hotspot-satcom --table 1 --execute --output-dir strict/outputs/hotspot-table1-audit
+```
+
+Hotspot Fig9's plan now explicitly exposes the existing execution override:
+all7 element counts4000:4000:28000,1000 full channel realizations per count,
+7000 total. The older5 shape pairs in the base configuration are not the
+effective execution grid. This changes only plan metadata; neither optimizer
+code nor an existing running bank is changed, and no7000-sample run is claimed.
 
 `figure-catalog/` inventories 85 captioned figures and two captioned parameter
 tables in the six supplied author sources. 73 figures require numerical
