@@ -15,6 +15,7 @@ single cases and component tests are recorded separately from complete figures.
 | --- | --- | --- |
 | MIS communications | Figure7's printed 2x1 orientation and Eq3 imply azimuth-even patterns, while the original two MIS curves are not even. The user markers also contradict the text's adjacent spacing. | [COMM_ERRATA.md](mis-communications/COMM_ERRATA.md) proves the conflict. The separately labelled 1x2 orientation preserves two elements, two patterns and four users. The complete actual Python12000-start bank has independent final physical/KKT and230400 recorded-stop checks. All1080 unfitted original vector samples agree within2.572838263652233e-7 linear SNR. Full native MATLAB12000-start certification remains pending. |
 | MIS communications | Subtracting nearly equal LSE costs can reverse a small decrease; a forced move at an already stationary point was a reconstruction bug. A numerically inactive phase block could block other legitimate descent. | Exact LSE increments, initial KKT checks, and a disclosed per-block KKT accuracy-share safeguard preserve objective, gradients, raw PR, full start counts and global tolerances. Independent Decimal tests and actual MATLAB checks are separate from full sweeps. |
+| MIS communications | The current native MATLAB aggregate `overall_full_success` is derived from the selected best start, not from every start's convergence. This is a reconstruction metadata limitation, not a paper-algorithm error. | That field alone is not accepted as a complete native12000-start certificate. Existing single-start/precision checks remain separate. A new recording-only native boundary is being prepared to retain every actual initial/final state, continuation history and failure and require the complete population; the frozen numerical implementation and earlier receipts are not silently edited. |
 | MIS sensing | Independent block PR does not generally possess product-CG conjugacy; the positive-simplex manifold conflicts with a projection that reaches its boundary. The source's compactness/exact-penalty claims require qualifications. | [SOLVER_ERRATUM.md](mis-sensing/SOLVER_ERRATUM.md) provides counterexamples, a separately named raw-product-PR correction, feasible tangent-cone/active-face handling and an independent original constrained KKT check. The printed branch remains selectable. No global-optimum claim is made. |
 | MIS sensing | Algorithm2's indexing/OR stopping differs from the numerical paragraph's early-AND rule. Requiring early stopping after the prescribed 30 iterations was a reconstruction metadata error. | Budget termination, early termination, every inner accuracy and original KKT are distinct fields. Last actually used inner epsilon is 1.2589254117941667e-6. Completing 30 alone is not convergence. |
 | MIS sensing | Section V's fixed positive denominator epsilon means the LSE limit as mu tends to zero is the epsilon-regularized ratio, not exactly the unregularized PSLR. | Preserve Eq54's regularization and the source's full60x60 opponent grid/guard. Describe computed values and KKT only as finite-mu/epsilon regularized PSLR; recovering the unregularized limit additionally needs epsilon to vanish and positive denominators. |
@@ -23,6 +24,7 @@ single cases and component tests are recorded separately from complete figures.
 | Two-timescale MA | Correlated-ZF products have incompatible N-antenna/M-user dimensions; the row-correlated Gram is not the asserted ordinary Wishart model. | [Exact evaluation](two-timescale-ma/CORRELATED_ZF_EXACT_EVALUATION.md) derives the original-model inverse-Gram expectation using conditional Schur complements and a one-dimensional Laplace integral. Actual full1000-draw MATLAB/Python checks agree. This corrects the bound, not the undefined printed closed form or automatically its historical plots. |
 | Two-timescale MA | Generic conic numerical solves failed on valid original coordinate subproblems. | A certified exact two-dimensional convex-subproblem backend preserves original MRT AO/SCA and ZF AO/MM. It verifies each coordinate's box/spacing feasibility and global concavity-gap certificate. It is not a new outer optimizer or a shrunken geometry/NLoS bank. Old failed solves remain preserved. |
 | Two-timescale MA | An original-size ZF case actually exhausted the reconstruction's unreported 1500 AO allowance. | A separate same-input cold replay with allowance10000 reached the unchanged5e-5 stop at1599 sweeps. The first1500 objectives,1501 positions and9000 coordinate records are bitwise identical; every accepted position is evaluated using all1000 original draws. The old failure remains a failure. Fresh full200 banks, not relabelled old outputs, are required. |
+| Two-timescale MA | The supplied source's energy footnote writes half a wavelength as25mm at12GHz, inconsistent with its own approximately1.28J/42-fold energy figures. | [Exact SI unit audit](validation/two-timescale-ma-energy-units-v1/README.md) binds supplied source SHA/line178. Half a wavelength is12.4913524167mm; the same stated motor model gives1.2757125872J and42.5237529078 times0.03J. Literal25mm instead gives2.5531914894J/85.1063829787. No simulation result is altered; final IEEE-version conformance and a causal explanation of historical-curve discrepancies are not claimed. |
 | Cooperative satellite | Complete original eight-scheme chains and final-publisher source equivalence remain to be verified. No paper error is inferred merely from incomplete execution. | Finite-Rician moments, statistical/two-timescale models, AP/MR QT and original RMO are retained. Original all-scheme execution is underway; capped or unfinished chains are never averaged as successful results. |
 | Hotspot satellite | Full-rank average-SINR QoS is not the printed scalar SOC; the interference index omits transmitted streams; imaginary norm factors cannot implement negative squared norms. Normalized-projector expectations and shared-G fourth moments need correct treatment. | [STATISTICAL_ERRATUM.md](hotspot-satcom/STATISTICAL_ERRATUM.md) derives exact vector-QT QoS auxiliaries within the original QT framework, full finite-Rician moments and normalized-projector integrals. The corrected branch is explicit, not silently described as the printed formula. Original instantaneous/LoS substitutions are forbidden. |
 | Hotspot satellite | The reconstruction used per-user path loss where the source specifies a common400m ground amplitude; conic epigraph conditioning and unreported RGD initial step lengths also caused numerical failures. | The shared400m amplitude must be restored without altering position-dependent phases, followed by source-matched reruns. Exact epigraph elimination/positive scaling solve the same original convex block. RGD retains its direction, retraction, Armijo and stopping threshold; numerical controls are disclosed rather than called author data. |
@@ -454,6 +456,45 @@ be regenerated from a numerical model: original measurement evidence must be
 used if available, otherwise that item remains explicitly unavailable rather
 than replaced by synthetic data. Final-publisher equivalence is also separate
 from correctness of the supplied LaTeX/thesis model.
+
+## Additional actual checkpoint: native full histories and explicit source units
+
+The new [native MA Fig. 4 packet](validation/two-timescale-ma-native-figure04-full200-v1/README.md)
+independently checks all200 completed source ZF trajectories: 59813 recorded
+positions including200 initials, each with1000 original draws (59813000 sample
+rates). Independent QR, power, relative ZF residuals, domains, design objectives
+and original stops pass. No positions were optimized again. Both fixed initial
+index conventions and all100 equally weighted geometries per kappa remain
+visible; the maximum unfitted original-curve discrepancy is4.795528605597891
+bit/s/Hz. This is correct physical evidence, **not** historical-curve recovery.
+Portable frozen verification and a fresh complete first-case replay passed;
+a second fresh portable all200 physical run is not claimed.
+
+The [MA energy footnote audit](validation/two-timescale-ma-energy-units-v1/README.md)
+binds the supplied R1 source line178. At12GHz, lambda/2 is12.4913524167mm,
+not its literal25mm. With the same6 antennas, two axes,8W motor and.94mm/ms
+speed, half-lambda movement requires1.2757125872J, about42.5237529078 times
+the.03J radio energy. Literal25mm instead gives2.5531914894J and85.1063829787.
+The seven exact-arithmetic checks and actual public arithmetic replay pass;
+the source is unchanged. This qualified author-source unit error is separate
+from the unresolved Fig. 3/4 discrepancy and is not a hardware measurement.
+
+The [native cooperative recording-v4 packet](validation/cooperative-recording-v4-native-two-fullcases-v3/README.md)
+contains actual M30(J3/U2/N16) and N48(J1/U2/M25) full cases, each with all8
+schemes. Independent checks cover every recorded phase endpoint in its own
+fixed W/p/mu context, every QT input/candidate and saved final matrix. Each
+native1000-draw RNG replay is bitwise. Actual public-path Python audits pass
+both cases without claiming a new MATLAB solve or a new RNG replay. Initial
+decoder/configuration metadata failures and an unclassified first portable
+process exit remain retained. The complete183-point scan, all performance
+trials, all raw QT duals atMP80 and historical curve recovery remain pending.
+
+The [fixed four ISAC cold cap100000 diagnostics](validation/rotatable-isac-correctness-v2/SPECTRAL_INITIAL_FIXED100000_DIAGNOSTIC.md)
+retain all full M4/N36/K2/A66 first-RCG-block attempts: three meet the original
+1e-6 gradient stop, while BB2/case001 remains capped at100000 with gradient
+1.6463678316404304e-4. All available old prefixes and fixed independent
+precision witnesses pass. This is **not** a complete-scene/500-bank repair;
+the failure is not discarded and these controls are not promoted to production.
 
 Machine-readable release status is [status.json](status.json). Complete-figure
 plans and independent comparisons are documented in

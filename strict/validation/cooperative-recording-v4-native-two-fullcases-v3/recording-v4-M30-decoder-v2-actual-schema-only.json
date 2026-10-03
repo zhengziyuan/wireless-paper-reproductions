@@ -1,0 +1,132 @@
+{
+  "scope": "ACTUAL_MATLAB_saved_HDF5_schema_decoder_only_plus_separate_SYNTHETIC_class_cell_regression_NOT_numerical_certification",
+  "checks": {
+    "actual_native_read_only_byte_identity": true,
+    "original_decoder_failure_actually_reproduced_before_numeric_audit": true,
+    "new_decoder_class_discrimination_only_source_reverse_proof": true,
+    "new_auditor_reader_route_only_numeric_body_reverse_proof": true,
+    "synthetic_direct_cell_is_scalar_struct_field": true,
+    "synthetic_numeric_column_not_flattened": true,
+    "synthetic_numeric_row_not_flattened": true,
+    "actual_complete_recorded_case_structure_and1000_draw_dimensions": true
+  },
+  "all_decoder_and_route_checks_pass": true,
+  "actual_native_saved_state_sha256": "d0018ed780b60d86004f7e992728751ae73ec6f8fd9c7c04405323cefd0f1710",
+  "actual_original_decoder_failure_reproduction": {
+    "exception_class": "ValueError",
+    "actual_exception_message": "Direct fields only supported for scalar struct"
+  },
+  "initial_auditor_v1_tool_observation": {
+    "session_id": 46865,
+    "exit_code": 1,
+    "raw_stderr_file_available": false,
+    "phase_QT_matrix_or_moment_audit_executed": false
+  },
+  "actual_numeric_shapes_without_flattenting": {
+    "d_mean": [
+      3,
+      2,
+      16
+    ],
+    "G_mean": [
+      3,
+      2,
+      16,
+      30
+    ],
+    "r_mean": [
+      2,
+      30
+    ],
+    "gt_second": [
+      3,
+      1,
+      16,
+      16
+    ],
+    "all1000_effective_channels": [
+      3,
+      2,
+      16,
+      1000
+    ]
+  },
+  "actual_phase_stage_count": 48,
+  "actual_QT_candidate_count": 33,
+  "actual_direct_class_cell_dataset_count": 36,
+  "actual_noncell_ref_field_dataset_count": 15,
+  "actual_direct_class_cell_schema_examples": [
+    {
+      "HDF5_object": "#refs#/1c/actual_solver_info/solver_diagnostics/same_original_QT_numerical_attempts",
+      "storage_shape": [
+        1,
+        1
+      ],
+      "MATLAB_class": "cell"
+    },
+    {
+      "HDF5_object": "#refs#/3c/actual_solver_info/solver_diagnostics/same_original_QT_numerical_attempts",
+      "storage_shape": [
+        1,
+        1
+      ],
+      "MATLAB_class": "cell"
+    },
+    {
+      "HDF5_object": "#refs#/5c/actual_solver_info/solver_diagnostics/same_original_QT_numerical_attempts",
+      "storage_shape": [
+        1,
+        1
+      ],
+      "MATLAB_class": "cell"
+    },
+    {
+      "HDF5_object": "#refs#/7c/actual_solver_info/solver_diagnostics/same_original_QT_numerical_attempts",
+      "storage_shape": [
+        1,
+        1
+      ],
+      "MATLAB_class": "cell"
+    },
+    {
+      "HDF5_object": "#refs#/9c/actual_solver_info/solver_diagnostics/same_original_QT_numerical_attempts",
+      "storage_shape": [
+        1,
+        1
+      ],
+      "MATLAB_class": "cell"
+    },
+    {
+      "HDF5_object": "#refs#/Ac/actual_solver_info/solver_diagnostics/same_original_QT_numerical_attempts",
+      "storage_shape": [
+        1,
+        1
+      ],
+      "MATLAB_class": "cell"
+    },
+    {
+      "HDF5_object": "#refs#/Cc/actual_solver_info/solver_diagnostics/same_original_QT_numerical_attempts",
+      "storage_shape": [
+        1,
+        1
+      ],
+      "MATLAB_class": "cell"
+    },
+    {
+      "HDF5_object": "#refs#/Ec/actual_solver_info/solver_diagnostics/same_original_QT_numerical_attempts",
+      "storage_shape": [
+        1,
+        1
+      ],
+      "MATLAB_class": "cell"
+    }
+  ],
+  "actual_numeric_finalstate_audit_pass": false,
+  "full183_or_historical_reproduction_pass": false,
+  "decoder_v1_sha256": "edfe4bafc07c1c852583e4bb56726345ccbafb85cf84f17a60ab0be111c1a5ca",
+  "decoder_v2_sha256": "dc6b32e1dee55fff6e7c494ca9cc2b0bdd0f9fc250dc26f068e39c877aaf3d3c",
+  "auditor_v1_sha256": "f54fdb2682c5eb4f5001704d5938fc0b685d30429907830fb1707ba85cdad51f",
+  "auditor_v2_sha256": "8b3e3717cbc3c566ab179d53d8fc9f06bcca6a923c412247a205ede9e14f5fa0",
+  "check_source_sha256": "acf9b05f207ea491a3db12d6a717b9b475899e3e7842d5f5f20494af6adc6a9f",
+  "synthetic_fixture_sha256": "6422b2a6e066dbb25990549c5c5bed2399718c5221ae93cb70487def012122f2"
+}

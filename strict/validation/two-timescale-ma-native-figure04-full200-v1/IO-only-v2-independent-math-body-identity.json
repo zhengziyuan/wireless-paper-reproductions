@@ -1,0 +1,55 @@
+{
+  "scope": "read_only_reverse_literal_source_and_exact_runtime_code_check_not_full200_completion",
+  "original_evaluator_sha256": "f014e63f98539482b5f788f81d1ab7c72c8ac61db7cfd77b284d06d9858f6139",
+  "IO_only_wrapper_sha256": "3c57022a312e8efc7286385b11c8077331479a790cfc663c604a77d024b22176",
+  "independent_reverse_check_entry_sha256": "5cad82c2b4c6393631d77a46d34f6fe8565f9b6206097966103846131bb888ff",
+  "all_original_numeric_loop_QR_SVD_design_calls_checks_source_and_code_properties_identical": true,
+  "original_prepare_code_preserved_and_called": true,
+  "all_fixed_tolerances_external_oracle_helper_source_identities_unchanged": true,
+  "only_module_attribute_rebindings": [
+    "prepare",
+    "atomic"
+  ],
+  "preserved_functions": {
+    "read": {
+      "all_exact_runtime_code_properties_equal": true,
+      "literal_function_source_equal": true,
+      "canonical_runtime_code_sha256": "36b8af8a517a7093b70d784e448a6adba7b4947f9f496ddb6ad1e141ae20d645"
+    },
+    "sha": {
+      "all_exact_runtime_code_properties_equal": true,
+      "literal_function_source_equal": true,
+      "canonical_runtime_code_sha256": "c4ef97ec608168ed0f16985af7330e595983536359fa98ddadf603ac3f68d479"
+    },
+    "independent_oracle": {
+      "all_exact_runtime_code_properties_equal": true,
+      "literal_function_source_equal": true,
+      "canonical_runtime_code_sha256": "901676ca3fd6193dc10e2fd1fd529e2466200cfd3e232436a1d5bc1b3574af6f"
+    },
+    "qr_samples": {
+      "all_exact_runtime_code_properties_equal": true,
+      "literal_function_source_equal": true,
+      "canonical_runtime_code_sha256": "858c43e7a970f16edea85aeeb202e97aa1591a66aa9d1eaab55d4ac78eab575d"
+    },
+    "scalar_svd_rates": {
+      "all_exact_runtime_code_properties_equal": true,
+      "literal_function_source_equal": true,
+      "canonical_runtime_code_sha256": "4cfc54d552ce48b80656fb0a5fca3d7a902a460ad4a379d26e4bfd427aa9ed24"
+    },
+    "audit_case": {
+      "all_exact_runtime_code_properties_equal": true,
+      "literal_function_source_equal": true,
+      "canonical_runtime_code_sha256": "566ad22a3321bf38970a9d6ecfc799159fd4e13da747b717b2ba7d4bb66b2e8a"
+    },
+    "main": {
+      "all_exact_runtime_code_properties_equal": true,
+      "literal_function_source_equal": true,
+      "canonical_runtime_code_sha256": "e53c1b811c1d5ef5e835a6dc8abe14d44c8d3567d67f40487c8711bbd827a5ec"
+    }
+  },
+  "earlier_v1_marshal_byte_comparator_failed": true,
+  "earlier_comparator_source_sha256": "f67cff62ad33c745fc2b19e25c10b550bd738f43a3833597417bfa836884bcbd",
+  "comparator_correction": "marshal interned-object reference encodings may differ for equal code objects; every literal source and exact code property now compared independently",
+  "any_numeric_source_or_live_entry_changed_to_fix_comparator": false,
+  "full200_actual_completion_or_original_curve_match_claimed_by_this_check": false
+}

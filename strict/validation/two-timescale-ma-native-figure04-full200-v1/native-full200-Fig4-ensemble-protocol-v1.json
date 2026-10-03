@@ -1,0 +1,1811 @@
+{
+  "scope": "actual_native_Fig4_all200_geometry_ensemble_protocol_distribution_not_historical_curve_recovery",
+  "source_hashes": {
+    "native-full200-Fig4-curves-and-reference-comparison-v1.json": "1a51da1994fc1c0e533ff92ed5a1bd058364ce2c63b36a7792a81c292d03e8e5",
+    "audit_full200_Fig4_ensemble_protocol_v1.py": "2b6fedc6b2a9f2cfab9fad6ca897005d705a6da81838fd7e62a29979a5afb25c"
+  },
+  "all200_original_record_and_input_hashes": [
+    {
+      "native_record_filename": "case-000-mc-000-native-figure04.json",
+      "native_record_sha256": "2fac2d2e3bc12258cad777ce045c0c782d3349273bc056261069a5014eaebf1e",
+      "job_filename": "case-000-mc-000.json",
+      "job_sha256": "655a72a105a5feeaefe7a28311bc3fcb5688e3cbb783339927c57aa7a49ae386"
+    },
+    {
+      "native_record_filename": "case-000-mc-001-native-figure04.json",
+      "native_record_sha256": "158e9fafd75d6dda38bf116897356c98f403c93f2323b503ea47efc402bcae00",
+      "job_filename": "case-000-mc-001.json",
+      "job_sha256": "4fc8ca128fa955d2e18976ace787b9e76c844542088c2de9f8bf9da2ec14b0c3"
+    },
+    {
+      "native_record_filename": "case-000-mc-002-native-figure04.json",
+      "native_record_sha256": "626a7b7c1c7e64228b716a735c2f2edbb5c17bd5c360db4f13a1d01197640f7b",
+      "job_filename": "case-000-mc-002.json",
+      "job_sha256": "27376726cf9c445832aa1507942edffadaff43ab1933eeb0a5a8e695a004b0f4"
+    },
+    {
+      "native_record_filename": "case-000-mc-003-native-figure04.json",
+      "native_record_sha256": "817f8a4d23203ed03acffdf866d9af5f039185ba9558c14afe754d0062b19256",
+      "job_filename": "case-000-mc-003.json",
+      "job_sha256": "52381523553de5dc96041a12d6d17b2bfed56cc169d9c8c6f8aa3f64455cb3a8"
+    },
+    {
+      "native_record_filename": "case-000-mc-004-native-figure04.json",
+      "native_record_sha256": "b378d2a2d326dd92443e139417bfb795c5f530ce064346fca3f21330745a3e3e",
+      "job_filename": "case-000-mc-004.json",
+      "job_sha256": "09b6b91404c1e3c2548c9ca4d502c776e99461d7b8a0865cc37e98bb31b580c6"
+    },
+    {
+      "native_record_filename": "case-000-mc-005-native-figure04.json",
+      "native_record_sha256": "b4544776c71c2d1eab7bbbfcd64331bf87daa732178cf2098258789b804eca4c",
+      "job_filename": "case-000-mc-005.json",
+      "job_sha256": "bb7427d237e9af882522f9d0c05aefb6b5f291410ac5a2bea536d7ab767b6450"
+    },
+    {
+      "native_record_filename": "case-000-mc-006-native-figure04.json",
+      "native_record_sha256": "fb30f3ea6447acb64675ec4052d4ae021d18ce5247fbb123621eb5731231b556",
+      "job_filename": "case-000-mc-006.json",
+      "job_sha256": "a9a75b8eb41e0524cb67cdfafc99ee00c60f9ad07242570a4ce39cbfc455cada"
+    },
+    {
+      "native_record_filename": "case-000-mc-007-native-figure04.json",
+      "native_record_sha256": "b921c7da43a2546adc7890fbde4e210bfdbc9316393ad482226a41c57d009d30",
+      "job_filename": "case-000-mc-007.json",
+      "job_sha256": "7d72cabd1a5e7d059d5c809fb51459667a92e3d367b9cae2221b38aaf4f31e39"
+    },
+    {
+      "native_record_filename": "case-000-mc-008-native-figure04.json",
+      "native_record_sha256": "b1666c401a3e41d74c0b4c1e1d43ea875997ca6370ec85493ef0fc8c0e21bfd8",
+      "job_filename": "case-000-mc-008.json",
+      "job_sha256": "b91887ffbe49dba93f4e10ab1f7c4a158539968e231ba3e0792a04aa5d43e2e1"
+    },
+    {
+      "native_record_filename": "case-000-mc-009-native-figure04.json",
+      "native_record_sha256": "ac1e7c83197251d645839e4bd0792cacf2971bc5f1574e1879d9aee262dab0d8",
+      "job_filename": "case-000-mc-009.json",
+      "job_sha256": "f256803789fb40eadf24e61ac1909389cfa69ccb356d263090fb94f8c54417e0"
+    },
+    {
+      "native_record_filename": "case-000-mc-010-native-figure04.json",
+      "native_record_sha256": "5b42ee6bbd1b1f5f73a8405f50c2faf7d9e85ee7014a975b8af2d64e76a2a4e6",
+      "job_filename": "case-000-mc-010.json",
+      "job_sha256": "3d48c5e718f3985b3bc862be7caec3d6b7f2875cfb02cdfe8649375bfcec8f3e"
+    },
+    {
+      "native_record_filename": "case-000-mc-011-native-figure04.json",
+      "native_record_sha256": "d3aaa361de83d1a79d93b404799b5f0822b871a0928ee7c979aaab9ec09e5d9d",
+      "job_filename": "case-000-mc-011.json",
+      "job_sha256": "157b8830db753a0e3381fc3b16a995118272126efaa0630b180bf5cc3fcf2e2d"
+    },
+    {
+      "native_record_filename": "case-000-mc-012-native-figure04.json",
+      "native_record_sha256": "2c93cc71eab17bd2e6ccb2554250652200633f38792a385ff6198e51431fdc81",
+      "job_filename": "case-000-mc-012.json",
+      "job_sha256": "290888c3d5ed4869ee5771ab37b48824d63362ce76ce3733ec1a09d6c1d66139"
+    },
+    {
+      "native_record_filename": "case-000-mc-013-native-figure04.json",
+      "native_record_sha256": "9c4d2efe20fd926a2d6065c86abffbc57f317aab583d51f1d52efaf77f942981",
+      "job_filename": "case-000-mc-013.json",
+      "job_sha256": "824a9f9fcf181d503d19e1bd4e9e112ef76127d57cc67b71b5630fa7e8510508"
+    },
+    {
+      "native_record_filename": "case-000-mc-014-native-figure04.json",
+      "native_record_sha256": "53d33c4a783d7321ad72208ee2dac8e71c187545ebfb2a0ab1ecd9a7df4d3fce",
+      "job_filename": "case-000-mc-014.json",
+      "job_sha256": "d44c527f50b45e8cd144dc001f5941bedff98b015b1acfb78bf1bf088484f1ec"
+    },
+    {
+      "native_record_filename": "case-000-mc-015-native-figure04.json",
+      "native_record_sha256": "74dc82a0a5e4dbc1c5e61bfd4d0dac3ceb0708b738aadcbbd712bcdb1bff7ecf",
+      "job_filename": "case-000-mc-015.json",
+      "job_sha256": "7cac7e243bae22248a57b8a1be9c829c6650aa6db2647f148cb0a8cf7299e120"
+    },
+    {
+      "native_record_filename": "case-000-mc-016-native-figure04.json",
+      "native_record_sha256": "67c10ce36cee6f714ad72a4816eef4e9913c274a102eb3493f0a0933e13b7f20",
+      "job_filename": "case-000-mc-016.json",
+      "job_sha256": "5aa6f6e7a04a8f4e651f4aa7fb10b140978150570be6e072667506ddd42f8cb6"
+    },
+    {
+      "native_record_filename": "case-000-mc-017-native-figure04.json",
+      "native_record_sha256": "10b646de70792fa1098b77bd106d2b369e4708876fa416cc9e07907956140e3a",
+      "job_filename": "case-000-mc-017.json",
+      "job_sha256": "4747af691515275358552a4b7b4f334a67f631d280af1915b006f40c6dfd4511"
+    },
+    {
+      "native_record_filename": "case-000-mc-018-native-figure04.json",
+      "native_record_sha256": "83bff5f905894720feb4e21457ca7874c8a8edbe1d3222fe02be91cf50c1b8b9",
+      "job_filename": "case-000-mc-018.json",
+      "job_sha256": "ded94edfc7bab08d3a94e7a17b9a733332bead3b4bb7198dbf682e26de014190"
+    },
+    {
+      "native_record_filename": "case-000-mc-019-native-figure04.json",
+      "native_record_sha256": "86b0f19ace4185e10d0e027a292af5e4903dd6574d9b7b036e838a34254b8e38",
+      "job_filename": "case-000-mc-019.json",
+      "job_sha256": "46ad5e371e75a4ea406bfc41e7d44ce8204610268a547695aecb769d0ba20d70"
+    },
+    {
+      "native_record_filename": "case-000-mc-020-native-figure04.json",
+      "native_record_sha256": "fbe232dfdedd45dee9cca2bc5c527c4f5affc44ed954022684dc1613a4b48635",
+      "job_filename": "case-000-mc-020.json",
+      "job_sha256": "4ef447db7f9ba25fd38f402b27627b8058353018c71268045adfd272b991b054"
+    },
+    {
+      "native_record_filename": "case-000-mc-021-native-figure04.json",
+      "native_record_sha256": "9c7d44c3ff8424a3bfed12fe7728b77e625654ebff844101d7a27c8081fdd63f",
+      "job_filename": "case-000-mc-021.json",
+      "job_sha256": "f30b9ac24609ee79602e407e192f088659c89ea8e0744794ef4c9972a4b27a24"
+    },
+    {
+      "native_record_filename": "case-000-mc-022-native-figure04.json",
+      "native_record_sha256": "0d0df99b59034035896229b9266c7fbd35cd5ad96f5c07ababfa6b25e29cc3f9",
+      "job_filename": "case-000-mc-022.json",
+      "job_sha256": "c84eabb1cebf5b3837af92b0ab8fa993c44f53ec792734abea11718a096255bb"
+    },
+    {
+      "native_record_filename": "case-000-mc-023-native-figure04.json",
+      "native_record_sha256": "849b2f7dcc22662c88947896ebbccde5552ec1b5011231968598b2ce87d24cbc",
+      "job_filename": "case-000-mc-023.json",
+      "job_sha256": "1694715441fd67ddbec5b5c383e562f6109618a83a9d6909a286693c878af649"
+    },
+    {
+      "native_record_filename": "case-000-mc-024-native-figure04.json",
+      "native_record_sha256": "6030f46c238081be70f00350216c34db20b5e8684e33d1e8ff3e1da080cc83c5",
+      "job_filename": "case-000-mc-024.json",
+      "job_sha256": "eb54ede06188a19c235f2ab73152379159a85732806cd7da39a1489c7ae5451c"
+    },
+    {
+      "native_record_filename": "case-000-mc-025-native-figure04.json",
+      "native_record_sha256": "38acd5a04d69e649c635eaee0679565bce6e41aee7d1b272d83dd113f89a0254",
+      "job_filename": "case-000-mc-025.json",
+      "job_sha256": "facbf3778df6bddf158a097e0fe01b60b9d445aab77574d88279aac3df26ffd2"
+    },
+    {
+      "native_record_filename": "case-000-mc-026-native-figure04.json",
+      "native_record_sha256": "734808b242aaac8b4f3ed1bf9514dcbb3d2f451aa0f0ac9fbf8521476efe03de",
+      "job_filename": "case-000-mc-026.json",
+      "job_sha256": "32a1cf8d062185b96b0210eab8079288d54a11b16082dbea2e4d65ec3b658438"
+    },
+    {
+      "native_record_filename": "case-000-mc-027-native-figure04.json",
+      "native_record_sha256": "c7ee925e559a75d16f61b5c3f0b0a910a862dba328a48ccd51b520c0e483eea3",
+      "job_filename": "case-000-mc-027.json",
+      "job_sha256": "7b94f5a1ae1b52c63b5210e8d0f9d7048248cb178e0b2da72a578249e906fc75"
+    },
+    {
+      "native_record_filename": "case-000-mc-028-native-figure04.json",
+      "native_record_sha256": "c391fb74831048615d95ed9da29d4795944f4b26682d6789b86d4ca146e1e565",
+      "job_filename": "case-000-mc-028.json",
+      "job_sha256": "43fe0ea03a83989bd2ae88def2a8a30f7b4f4fb35c99093593645ace022df8ed"
+    },
+    {
+      "native_record_filename": "case-000-mc-029-native-figure04.json",
+      "native_record_sha256": "ebbca386c575fc59113768558fa01bfdeb6270d4ee762d29f8284e7f7a38cd72",
+      "job_filename": "case-000-mc-029.json",
+      "job_sha256": "da54c07f014422df599b01a9e24d329a277ab3f2a33ac225fddb8b65fa1feab6"
+    },
+    {
+      "native_record_filename": "case-000-mc-030-native-figure04.json",
+      "native_record_sha256": "77209bb1770fcd31038289856e8a7c161239a98d6122e72ff0f49908857d3efa",
+      "job_filename": "case-000-mc-030.json",
+      "job_sha256": "f4c6bb82444091b522445c6eefe13c302913fc444d0ae3b506ae0d6fb210b435"
+    },
+    {
+      "native_record_filename": "case-000-mc-031-native-figure04.json",
+      "native_record_sha256": "fc65cc88504822d3903f3fc1076ac8f682a96d9f45733e61e00dffb4240282cb",
+      "job_filename": "case-000-mc-031.json",
+      "job_sha256": "8c760413a1d0e1e29f5c9b1019d9f98a8b8a68c75af512d4a80fcae0a8982afd"
+    },
+    {
+      "native_record_filename": "case-000-mc-032-native-figure04.json",
+      "native_record_sha256": "63fce6278f62944056d24e84c87c656c12028426b7185465b837993f2ddb22d2",
+      "job_filename": "case-000-mc-032.json",
+      "job_sha256": "1f4c17fa6ea02e1ed0c36a1fd8a84fe9ccfb768c3030787748b713c71927b17d"
+    },
+    {
+      "native_record_filename": "case-000-mc-033-native-figure04.json",
+      "native_record_sha256": "04b6c1e7a6c6a9b95dc5c8f47ae68bd749205725c6ceca78fe4f20551e7f2f21",
+      "job_filename": "case-000-mc-033.json",
+      "job_sha256": "a3203c10ec6d32b9e25260be9ddd26e48f01e07571983b67856616039c3d5b57"
+    },
+    {
+      "native_record_filename": "case-000-mc-034-native-figure04.json",
+      "native_record_sha256": "e3580b87855562bdd9e2f5682154560aa590d8e42d00441087bebf401805b752",
+      "job_filename": "case-000-mc-034.json",
+      "job_sha256": "261303ec6b46493a297e70c2fca7c4ccf811f84c607bcb7a7a328cc3652a4d6c"
+    },
+    {
+      "native_record_filename": "case-000-mc-035-native-figure04.json",
+      "native_record_sha256": "da8dbd56b4a6d9172caf7242db613c6eaeac7008b7269d97714931ca379b9321",
+      "job_filename": "case-000-mc-035.json",
+      "job_sha256": "3c03924f5787268cbbb4d815dc47fce7747021874ed486ae072f4cdde8f5ae84"
+    },
+    {
+      "native_record_filename": "case-000-mc-036-native-figure04.json",
+      "native_record_sha256": "9896cbca7edea4940c4f29291e20d176f0bfabcbbd1956f1a05df0712108ad29",
+      "job_filename": "case-000-mc-036.json",
+      "job_sha256": "aa21f59c6b517f88937d1816fd40d39731317ebaea76ee90aaa9407a5abf6946"
+    },
+    {
+      "native_record_filename": "case-000-mc-037-native-figure04.json",
+      "native_record_sha256": "208ea41112b4a73d71e44488d9d438fd585576063f414ef03a44e896ae773b74",
+      "job_filename": "case-000-mc-037.json",
+      "job_sha256": "0e1fe1fad2151455f8d45f64d604291ee54f82d333bfa1f8c9a37f9ed2af2000"
+    },
+    {
+      "native_record_filename": "case-000-mc-038-native-figure04.json",
+      "native_record_sha256": "d7d1efc5fd935fc0027d4c4a1bb80fbec4705f718e9323bd7085581ac4965636",
+      "job_filename": "case-000-mc-038.json",
+      "job_sha256": "091abe21f1d29bf7f8e8373f9db48bd1ee545eb6fc2396f27a632d5ee5294b81"
+    },
+    {
+      "native_record_filename": "case-000-mc-039-native-figure04.json",
+      "native_record_sha256": "9f13ae8c2ae4b83abbc14a89f36736195d8c579f069837ad7ee08d201577017f",
+      "job_filename": "case-000-mc-039.json",
+      "job_sha256": "e7061b3cab5e894be3312b3e86e2ecb870677d1522b16115cf7ef58681fc720e"
+    },
+    {
+      "native_record_filename": "case-000-mc-040-native-figure04.json",
+      "native_record_sha256": "5fce9f4c8c55648af3c50bd73e078609c694a8a2d4c31a6043f2fdb27c6cba9e",
+      "job_filename": "case-000-mc-040.json",
+      "job_sha256": "562489747b9eba9a1968dcc5427793c26b001b959e95d2fc96a415754aa8e685"
+    },
+    {
+      "native_record_filename": "case-000-mc-041-native-figure04.json",
+      "native_record_sha256": "bc5d333700943ac7aac1df3e4c4067b16d11feb50bf4c7ac637cba3390cd9dd6",
+      "job_filename": "case-000-mc-041.json",
+      "job_sha256": "cf06d19d09e8b6877213f70a3abd5cc65860b9078aa6a27bd5d3bb1ebd75a415"
+    },
+    {
+      "native_record_filename": "case-000-mc-042-native-figure04.json",
+      "native_record_sha256": "2a562dd8aea0a60b009af8554dcbdaf11e2942f8cbc4a6709ea5d25c476ca6cc",
+      "job_filename": "case-000-mc-042.json",
+      "job_sha256": "c9acb992363f4140f63d2829c4b71331f3953780c803770e7b87457a899fa8a8"
+    },
+    {
+      "native_record_filename": "case-000-mc-043-native-figure04.json",
+      "native_record_sha256": "3814744257eea0ff6dcbfe7448fe3d6ad966c3d2e80e8d101b74aae300184c73",
+      "job_filename": "case-000-mc-043.json",
+      "job_sha256": "b7a8076c4588482cd86a0e63fb690d2d79c0d8d2665dd7a8f17b0940ff252c41"
+    },
+    {
+      "native_record_filename": "case-000-mc-044-native-figure04.json",
+      "native_record_sha256": "a3d5ce22c635c5795a524f5d8ea1cbe8af0358f18f3b0ddbc8aafc8779ca4cb0",
+      "job_filename": "case-000-mc-044.json",
+      "job_sha256": "5ea04677b4335c747c5b367397f5849bf9c387e17d74982c327195c04e9d5b03"
+    },
+    {
+      "native_record_filename": "case-000-mc-045-native-figure04.json",
+      "native_record_sha256": "24cc0d84bc8f68d4adbbcb63e5836ec9cdedc7ea1e59ad6cc2ebce461de1738b",
+      "job_filename": "case-000-mc-045.json",
+      "job_sha256": "02192d7a7559ca6bda06901414598df709dec2e0b80252b679f81e5319b40155"
+    },
+    {
+      "native_record_filename": "case-000-mc-046-native-figure04.json",
+      "native_record_sha256": "7ebe1637974575d26650c83f1b4ea66afcaee45b4ff6fd4187dc84bcdc245a40",
+      "job_filename": "case-000-mc-046.json",
+      "job_sha256": "df74e14f3157bf8949a04f1098333aea02121886830d6d6591a2c3f5cab9d7af"
+    },
+    {
+      "native_record_filename": "case-000-mc-047-native-figure04.json",
+      "native_record_sha256": "2586304bb8a2e12eef4e6453730b2c00a22d4901964bb6e8343a4d8f5dc46bc8",
+      "job_filename": "case-000-mc-047.json",
+      "job_sha256": "4ab98deb6122d62f272686191408ce6c1e427445d9da4fd98847244efa17e024"
+    },
+    {
+      "native_record_filename": "case-000-mc-048-native-figure04.json",
+      "native_record_sha256": "b3eceb5a25f889ce22ad9a3efe580301e0a48f5fd67629af9eb4978cf7e5291e",
+      "job_filename": "case-000-mc-048.json",
+      "job_sha256": "5236618f1d503570244227e383e214cae8f924a00b5f3ee8d67fa61577c255ad"
+    },
+    {
+      "native_record_filename": "case-000-mc-049-native-figure04.json",
+      "native_record_sha256": "7c5d586abb2b815c14f14785b97c5137a70d022eaae7521bd749ebba2af84c74",
+      "job_filename": "case-000-mc-049.json",
+      "job_sha256": "2e04397c97750226d1a1052126adc02effb24ecec6f1517acdc3eab4af793796"
+    },
+    {
+      "native_record_filename": "case-000-mc-050-native-figure04.json",
+      "native_record_sha256": "451e1e10bb953066407d18c3618a899a3e1e4f0a7cbc07169aeb5ddcbe02a8b4",
+      "job_filename": "case-000-mc-050.json",
+      "job_sha256": "d70c7daba1f00a3ddd261af12f4a183f0f1085f072a0c071b38a92080acd2c15"
+    },
+    {
+      "native_record_filename": "case-000-mc-051-native-figure04.json",
+      "native_record_sha256": "08e306639abe935561b8196440858e72764fa8c0fc8baad9f92fe7d6c2e2d420",
+      "job_filename": "case-000-mc-051.json",
+      "job_sha256": "dddf2bba3fdd7f75879ab17fd4b59a9c38625a2167673028b67fd97fce51cab9"
+    },
+    {
+      "native_record_filename": "case-000-mc-052-native-figure04.json",
+      "native_record_sha256": "73e101f97858a5b4a32b2cf8dee32d7aadd4849bdb6e1543990f2491c2b64694",
+      "job_filename": "case-000-mc-052.json",
+      "job_sha256": "c5402a042ec893d3e1dccf4d5c9f3a20b65e9276aa47b51f23ba8727363f300d"
+    },
+    {
+      "native_record_filename": "case-000-mc-053-native-figure04.json",
+      "native_record_sha256": "f21bddd8d3dd421258edd4cdf95f0abb1e385ed6a3a702c1ac8fc7c73848cea0",
+      "job_filename": "case-000-mc-053.json",
+      "job_sha256": "edbe0b72e59eab62ef5227c7eba07021f0463b52013e6e48afe508b8d27a5bad"
+    },
+    {
+      "native_record_filename": "case-000-mc-054-native-figure04.json",
+      "native_record_sha256": "37cd731f020e34d03078a5504ba2f608e8c1a351570a3f10bf3c0284b4555534",
+      "job_filename": "case-000-mc-054.json",
+      "job_sha256": "abf46822c9bf06606a38f275eb6cdcb7494f8767e04b786cbd10533fef735c24"
+    },
+    {
+      "native_record_filename": "case-000-mc-055-native-figure04.json",
+      "native_record_sha256": "c99707d2c9be9d39e8a911afd6b54cbc30655279eda344dfd4ddfb171c41df56",
+      "job_filename": "case-000-mc-055.json",
+      "job_sha256": "900f7c506a935cf4c74c45f2e59605cc4d5c425274b6a23b4e61f41cedbb445e"
+    },
+    {
+      "native_record_filename": "case-000-mc-056-native-figure04.json",
+      "native_record_sha256": "9de1469dbaeb9c1a3f1a8bf79ec661794e1c25b37d7b2cd3a15832f62a4b0d72",
+      "job_filename": "case-000-mc-056.json",
+      "job_sha256": "67898e9e8dd49843f1b3e0da403ee520c70e67a9b1ca5651b40e208ead3e0d83"
+    },
+    {
+      "native_record_filename": "case-000-mc-057-native-figure04.json",
+      "native_record_sha256": "f3f22752db4310cd76551631cf45a11ddb2c4793745bb6b0169f1d1e28bd6dd5",
+      "job_filename": "case-000-mc-057.json",
+      "job_sha256": "c648bb6bdfa857a59d434c8ebc62b7ee4a6d27ebc6ad99817276f369b2b8b5b2"
+    },
+    {
+      "native_record_filename": "case-000-mc-058-native-figure04.json",
+      "native_record_sha256": "59550bdec6b983d38248ba5c8fd536ba779ca5e45aa91f4afc7670fa315479ab",
+      "job_filename": "case-000-mc-058.json",
+      "job_sha256": "9586dcab077ae8fc7f4ba8c107908abbd1501b7cf5977c7256216150ebebaf30"
+    },
+    {
+      "native_record_filename": "case-000-mc-059-native-figure04.json",
+      "native_record_sha256": "85bb693b0f9636fab0ae25426fc47383f5f86ce91f4085b3da497378c2057c6b",
+      "job_filename": "case-000-mc-059.json",
+      "job_sha256": "2b93169a8f73966c1c29b586204c5ddda0c63b4a9572070b4de9a4b7af7d7de8"
+    },
+    {
+      "native_record_filename": "case-000-mc-060-native-figure04.json",
+      "native_record_sha256": "e6b738d44693d34295269a8d82df50a318070082911341bbd215b0c27ae44fcb",
+      "job_filename": "case-000-mc-060.json",
+      "job_sha256": "16619b09b6ec204a66d3de3e2e1f07deea0ac5986d63742f2dbbf21b4cab4cf6"
+    },
+    {
+      "native_record_filename": "case-000-mc-061-native-figure04.json",
+      "native_record_sha256": "5486b69581e10675bf91db0cb64686aaa875e8268d23990e7f514d1940fea93a",
+      "job_filename": "case-000-mc-061.json",
+      "job_sha256": "11d3f4132eebf94fed24d6a1477b233aed642601e4541b7ddd3313d5f70575d7"
+    },
+    {
+      "native_record_filename": "case-000-mc-062-native-figure04.json",
+      "native_record_sha256": "3faa165012c5c23885244f50f315c60883e7930a898315d3196c6d6d7956f2c1",
+      "job_filename": "case-000-mc-062.json",
+      "job_sha256": "41c4fa6705ae680745dfef2be81a6faa8d4fe7b9d4c97c062a7df0c1560f07af"
+    },
+    {
+      "native_record_filename": "case-000-mc-063-native-figure04.json",
+      "native_record_sha256": "7562030ffa5c76dd296f6b46663ef8b53c1a1c324e4a96e67b727d3180816119",
+      "job_filename": "case-000-mc-063.json",
+      "job_sha256": "11d33ad9ed28becaf941b8567190aea7e2d5c1b26d14691971a576f132d76c1b"
+    },
+    {
+      "native_record_filename": "case-000-mc-064-native-figure04.json",
+      "native_record_sha256": "016be1e5ee026ff95ea296cb8839121f29f4d44571847b1be8e4aba234294ead",
+      "job_filename": "case-000-mc-064.json",
+      "job_sha256": "035bce7a3db206d4ce09b88627b45433346986dc5d3301d88b2ee5250562c683"
+    },
+    {
+      "native_record_filename": "case-000-mc-065-native-figure04.json",
+      "native_record_sha256": "981af700ef699be623ee3bfd605a6b87907f3291c7fd9f95d94f3220080b9df0",
+      "job_filename": "case-000-mc-065.json",
+      "job_sha256": "e65d52477d00badcb2e151695efee67c93486438143eda2598c8353f55213500"
+    },
+    {
+      "native_record_filename": "case-000-mc-066-native-figure04.json",
+      "native_record_sha256": "780cb5359def847eb957b5ac14c21b7304be29917ae792a88745ede8bc5ca4cc",
+      "job_filename": "case-000-mc-066.json",
+      "job_sha256": "f59ea8ed284dd66074911da601b5681f625b397f8de241d5bc46d518a406d719"
+    },
+    {
+      "native_record_filename": "case-000-mc-067-native-figure04.json",
+      "native_record_sha256": "b4d0db3691f0cefb170fa0fb453a1ca2162dc982bb176696f69d7db3fb1eb220",
+      "job_filename": "case-000-mc-067.json",
+      "job_sha256": "96b0245513d24891bfb4ba4ed061cbdd71504740f2c5522edbe4bee92ffb4b8d"
+    },
+    {
+      "native_record_filename": "case-000-mc-068-native-figure04.json",
+      "native_record_sha256": "33b87877c7c4a0fc37327d9e6fce9d779d5747b85153da749c86b4f6d33eec95",
+      "job_filename": "case-000-mc-068.json",
+      "job_sha256": "df312a0555fe935626bb1ae4f847a19e5d8f1e591ff6bac98b08b4a2e252e77f"
+    },
+    {
+      "native_record_filename": "case-000-mc-069-native-figure04.json",
+      "native_record_sha256": "a1a9f97dfa2b8821993f5d2b35709021e8b313b7d6346ae186e8936836e56898",
+      "job_filename": "case-000-mc-069.json",
+      "job_sha256": "22e5989b5a0619fb7c19db3dc24e7a43377e2aec1bc007ca65914c05586734cf"
+    },
+    {
+      "native_record_filename": "case-000-mc-070-native-figure04.json",
+      "native_record_sha256": "43bb3718c7031d67c06e3cac1f3137ede640d528ae42db31d589e9a47bb3a1ab",
+      "job_filename": "case-000-mc-070.json",
+      "job_sha256": "bed756af6265f3a8e26644dc49a6975b00079521d9451b114374d7c28910485c"
+    },
+    {
+      "native_record_filename": "case-000-mc-071-native-figure04.json",
+      "native_record_sha256": "4e253cfd13b8dd1be8ef6bf17efd5c94e7959f74242eca7cfce076bb1d97959a",
+      "job_filename": "case-000-mc-071.json",
+      "job_sha256": "9bf27ec77ba3a43185ee4f69fcdc4ee6e42f04b5b8a8709b94649f3bde11cf64"
+    },
+    {
+      "native_record_filename": "case-000-mc-072-native-figure04.json",
+      "native_record_sha256": "826ca1b7764b3489b150e336df50ca7de4ec9d53a308149daadcd7525ca0185c",
+      "job_filename": "case-000-mc-072.json",
+      "job_sha256": "e505ff8e66f009f4bd92c12f04f978bffd3747bda51ad22b1a12b2968f02d6c1"
+    },
+    {
+      "native_record_filename": "case-000-mc-073-native-figure04.json",
+      "native_record_sha256": "de843cd2e93b842d1906f2de8e4c0dc3e57c5ca4f24edf96781ef99c3a132425",
+      "job_filename": "case-000-mc-073.json",
+      "job_sha256": "caa38b176a0ffd643e32c83732da563845781dad15a409a7f95288a39cdd734f"
+    },
+    {
+      "native_record_filename": "case-000-mc-074-native-figure04.json",
+      "native_record_sha256": "51fd63ce73a8cdb76b0a96f11cb0aa90f5d724fd2fa2b65314c3b2db4def3e46",
+      "job_filename": "case-000-mc-074.json",
+      "job_sha256": "cde87e274a7294a78e5f01842501a2866c760c018487aa5c9e44f6dc301342c3"
+    },
+    {
+      "native_record_filename": "case-000-mc-075-native-figure04.json",
+      "native_record_sha256": "0cc2d59ac8aa04a5be3048a1c5920b103c905d3ee1877a9a0e6fde63f015e838",
+      "job_filename": "case-000-mc-075.json",
+      "job_sha256": "25547092a3964cd757dd2264275111243a8d7cdaef47bad745edec7a366146fc"
+    },
+    {
+      "native_record_filename": "case-000-mc-076-native-figure04.json",
+      "native_record_sha256": "c02f571d81d383d253654146f008704d32eb7dfd8b205097a66a4dcb996bb6e8",
+      "job_filename": "case-000-mc-076.json",
+      "job_sha256": "2e230e51bfba0ea33cd8b483ca2f07c74c4191a4f79f28c7653384a3d96ea26a"
+    },
+    {
+      "native_record_filename": "case-000-mc-077-native-figure04.json",
+      "native_record_sha256": "30a73e13f988ea9032cfb6c990b203829f6785aad90b2b18b8c988829680405f",
+      "job_filename": "case-000-mc-077.json",
+      "job_sha256": "4f70a0ec571f2c14dc0b9a3ddd6c5c46dcc3e397d918a612308a52c6c01c3a6b"
+    },
+    {
+      "native_record_filename": "case-000-mc-078-native-figure04.json",
+      "native_record_sha256": "8194951494834fb44aa4ed430ed8ce92c7aeaf30f08aa87259e64b1a54db48c4",
+      "job_filename": "case-000-mc-078.json",
+      "job_sha256": "8ea980a08fa4fd72b4767c590774cc607a50e1abfbbeca22733475ba160873a4"
+    },
+    {
+      "native_record_filename": "case-000-mc-079-native-figure04.json",
+      "native_record_sha256": "e539614e06d06571000f0c0916cd21732e22b7fce8ce2b3ecabd7f8e55d13442",
+      "job_filename": "case-000-mc-079.json",
+      "job_sha256": "914022bcdaf7f13e9c5d8937fb3ff6315eba103ba5fe7b4e53dee3663eba64f5"
+    },
+    {
+      "native_record_filename": "case-000-mc-080-native-figure04.json",
+      "native_record_sha256": "2cf74c1d813afee7bfc4f0a76544ee99348736add85ea4f2a19f7c4aab961d9f",
+      "job_filename": "case-000-mc-080.json",
+      "job_sha256": "78d59ca3bc5742fdfadc3c229f12c5d7f1f01b4df6b898edf3d41cb3981e729b"
+    },
+    {
+      "native_record_filename": "case-000-mc-081-native-figure04.json",
+      "native_record_sha256": "861b8d5c15a056d92e01f76da335c6beca19d296183c3dc6b9ffea5d44c71589",
+      "job_filename": "case-000-mc-081.json",
+      "job_sha256": "78ededef81afc8f069f960af29cbbe2ebdd7a38029b4e876dbb91fbd6431699b"
+    },
+    {
+      "native_record_filename": "case-000-mc-082-native-figure04.json",
+      "native_record_sha256": "7f086aaa209d47a760cf8d0513de2706d05429cffca1253bf578329d92de8f2c",
+      "job_filename": "case-000-mc-082.json",
+      "job_sha256": "48ccca35341bbb2b77a395fee933e18eaf013d8fe1a786567b736ff7cbbb0fc4"
+    },
+    {
+      "native_record_filename": "case-000-mc-083-native-figure04.json",
+      "native_record_sha256": "1ade3ecb998e8a71a408b1911e564e0d9340ece369fdc7c86f483a46bfbad528",
+      "job_filename": "case-000-mc-083.json",
+      "job_sha256": "bfd90ec6698ce447692788a7705636934ad944034de2620aabbfa06d761b91cb"
+    },
+    {
+      "native_record_filename": "case-000-mc-084-native-figure04.json",
+      "native_record_sha256": "717e77a09abb42f7803e64c7ea2564cce14aca29403b3dcd5cc78c3bbb267154",
+      "job_filename": "case-000-mc-084.json",
+      "job_sha256": "ed6b1a9530c20bd091adf83a523306a26f34675b7191dc0e2cc09faeef5f2bff"
+    },
+    {
+      "native_record_filename": "case-000-mc-085-native-figure04.json",
+      "native_record_sha256": "f16815fc234d54184b89ca9c9a079193a3813e81406583875c98f1dc5533c9c7",
+      "job_filename": "case-000-mc-085.json",
+      "job_sha256": "01dee74a7fb44fd41d2216adc744eabd7c48dd2bed36b4d3d8152b7c652602cd"
+    },
+    {
+      "native_record_filename": "case-000-mc-086-native-figure04.json",
+      "native_record_sha256": "9c317b8705c077cf99a4e5204c1486a6ba63c35db455ed434820d667cb668ceb",
+      "job_filename": "case-000-mc-086.json",
+      "job_sha256": "36a54da0072c6df00ad5528bc98724b3c58a317bf57191f660d0e1bfb45af91f"
+    },
+    {
+      "native_record_filename": "case-000-mc-087-native-figure04.json",
+      "native_record_sha256": "3e6a986b170e6a4f5dc637a7556d914c2f956de0fd0b9606ab46b0920bd0111c",
+      "job_filename": "case-000-mc-087.json",
+      "job_sha256": "f432dcdddd284e6cbe5b30cd2967e057438d98ab9dcc3f56754a46690c898aed"
+    },
+    {
+      "native_record_filename": "case-000-mc-088-native-figure04.json",
+      "native_record_sha256": "31b21cbc09ec4e2c3873f1f5c59d3293e3df0b1f2c55ad171ac2d39e52c955a9",
+      "job_filename": "case-000-mc-088.json",
+      "job_sha256": "aafc722a3a7845174e3d8da7c287b63c4fbeb20696f0f3e073ac88d7f36e05e2"
+    },
+    {
+      "native_record_filename": "case-000-mc-089-native-figure04.json",
+      "native_record_sha256": "3d9b4f2d171db8df79b162569b62a4df01ac8871427ff788da9a7bb1dab7295b",
+      "job_filename": "case-000-mc-089.json",
+      "job_sha256": "02796cf9e7b5dbcdc0456731f66a969556d65747df0777a7f584868448358535"
+    },
+    {
+      "native_record_filename": "case-000-mc-090-native-figure04.json",
+      "native_record_sha256": "79429993887a45e5d83bc1be9f80e9f7f28689647d026c477acbe1fd4dffd23f",
+      "job_filename": "case-000-mc-090.json",
+      "job_sha256": "9b2abf95473964619479afc3b6ffab9029c23cbe0fc936203827682cdedb2ab2"
+    },
+    {
+      "native_record_filename": "case-000-mc-091-native-figure04.json",
+      "native_record_sha256": "fb91518bf9b0a3dc9837ea0b486fc52ffdc06a6cc2b2978e2db6935bedad39d3",
+      "job_filename": "case-000-mc-091.json",
+      "job_sha256": "04236d336882e633d8807a913260da8c46ddeb02179b34b6ef42265fc246989d"
+    },
+    {
+      "native_record_filename": "case-000-mc-092-native-figure04.json",
+      "native_record_sha256": "53b3e868ac29839fdda4dcb5cb6ed5e0df40437fe9c46e258841155eb6dd6c24",
+      "job_filename": "case-000-mc-092.json",
+      "job_sha256": "bc8ea558b1df97abee0f5944f54a727be0eaf6f86fa80e7ad2b902f50ec9dc05"
+    },
+    {
+      "native_record_filename": "case-000-mc-093-native-figure04.json",
+      "native_record_sha256": "2dfa831c8c58c19dc19cf6ab68c1fd518c56589b5ab0e035a961569905deda08",
+      "job_filename": "case-000-mc-093.json",
+      "job_sha256": "d1e02aa5d17c65945aea4488072eb7c74f10b567a2e581bef122b77a1f6973a8"
+    },
+    {
+      "native_record_filename": "case-000-mc-094-native-figure04.json",
+      "native_record_sha256": "140c19e1c27ce6e81cdef16750cd3c924d653f7f3ce5ee16736a87e9308f1980",
+      "job_filename": "case-000-mc-094.json",
+      "job_sha256": "d7cf06c373c6f84a261ef26483e6fd7d7f7234544b16c9a6572d640142843749"
+    },
+    {
+      "native_record_filename": "case-000-mc-095-native-figure04.json",
+      "native_record_sha256": "9b5fb27fd8c7c55cc9c6f63035faae7a5619374cbb67e5b51fff2e3a98fa2181",
+      "job_filename": "case-000-mc-095.json",
+      "job_sha256": "9422d2aea5c0fc32c74dda403a134a6ff5a5bc544ab6a39beaf74daaec571b07"
+    },
+    {
+      "native_record_filename": "case-000-mc-096-native-figure04.json",
+      "native_record_sha256": "9cf72cc83a953b8af435eb6f52b49d4ee095ff2dad582fc955d2347c2793167e",
+      "job_filename": "case-000-mc-096.json",
+      "job_sha256": "87905c7c3747ed4fd9a80f1e0d68b19eae7092cb9643dc80b05842b18912cf50"
+    },
+    {
+      "native_record_filename": "case-000-mc-097-native-figure04.json",
+      "native_record_sha256": "441e840f9cb38cc223c44f5e35d297606fdabfe4090bbe3491e878fcc87ad48a",
+      "job_filename": "case-000-mc-097.json",
+      "job_sha256": "6693280f8f04eb3edfa2d7861f3c20552ff98dec511a64f5bafc6f7dc6146fb5"
+    },
+    {
+      "native_record_filename": "case-000-mc-098-native-figure04.json",
+      "native_record_sha256": "01a14835af254c2209a4c4fe964b37a57cfffb32e75d4de2c4aeb13c7a43394c",
+      "job_filename": "case-000-mc-098.json",
+      "job_sha256": "761b3d74222d4e5dabfbf0ab36282499cdb4cf28a3a5943a8c2da468eac3bbfb"
+    },
+    {
+      "native_record_filename": "case-000-mc-099-native-figure04.json",
+      "native_record_sha256": "88f2fc063e2a59b730b0893d089873e8241c1f42882cd16eab6354c95c21e0f5",
+      "job_filename": "case-000-mc-099.json",
+      "job_sha256": "13b165a5e10f59e9571f1234c751c0f1f802bbf0144d335df00125a5467bd882"
+    },
+    {
+      "native_record_filename": "case-001-mc-000-native-figure04.json",
+      "native_record_sha256": "ef050b951274b3346c5c72facc05fc2b72c8f3c55c9ecb8eb6c780647288eb0c",
+      "job_filename": "case-001-mc-000.json",
+      "job_sha256": "e903651a115ee3b7084270772daf66a3bc37a310425d372616a9af94ef9e5633"
+    },
+    {
+      "native_record_filename": "case-001-mc-001-native-figure04.json",
+      "native_record_sha256": "421407c85e825179fa72272a859ed49f90b4aa1081382f645bb6afa7a3062052",
+      "job_filename": "case-001-mc-001.json",
+      "job_sha256": "4d46f72b8ff39802319c38ddb485b78d1a3fce4d03c67aee20eab0f9f77587cf"
+    },
+    {
+      "native_record_filename": "case-001-mc-002-native-figure04.json",
+      "native_record_sha256": "295a8455d6e2cc50d32978cca5bbc975f44f405e7b563c5b880541fc0b7b64ec",
+      "job_filename": "case-001-mc-002.json",
+      "job_sha256": "a1544727a8ccc32ba8b47801ebe709e3822b1a1705c99ee95b63b7070bb8bd6c"
+    },
+    {
+      "native_record_filename": "case-001-mc-003-native-figure04.json",
+      "native_record_sha256": "fc5d44c2db85de389e3bea7f29c44227fc85cbffac83b508fba949334e8de655",
+      "job_filename": "case-001-mc-003.json",
+      "job_sha256": "5f784cafe4cbc218b14b05a7c8820b7e16d9a75a3b4c5254e065ef6dfaee0638"
+    },
+    {
+      "native_record_filename": "case-001-mc-004-native-figure04.json",
+      "native_record_sha256": "6bf00b09c4f22fa60dd9ffe8edd679560ca0f6f3c7a2e3167ec19d45d2f33bf5",
+      "job_filename": "case-001-mc-004.json",
+      "job_sha256": "b560ea63fba29460608783f0af2b454e35b0f85e0061ee131ae02b36eb8c058a"
+    },
+    {
+      "native_record_filename": "case-001-mc-005-native-figure04.json",
+      "native_record_sha256": "94b76c5414350ba40415811302a9186d55715be91e563014fd714270d189338d",
+      "job_filename": "case-001-mc-005.json",
+      "job_sha256": "bfc4b5d785fa42d16b771cfe54ada924c714087614f3c6bf666db12e8019dd15"
+    },
+    {
+      "native_record_filename": "case-001-mc-006-native-figure04.json",
+      "native_record_sha256": "3a03e1169732dc42174b3d83b15d6274dcb20fa078183e5680015348b1fafd56",
+      "job_filename": "case-001-mc-006.json",
+      "job_sha256": "9d691b0f993f304a2e98e816e60c8b3ead127b91319630cda12846cf2c212098"
+    },
+    {
+      "native_record_filename": "case-001-mc-007-native-figure04.json",
+      "native_record_sha256": "d1cded4098b8379e4a3da122918a83ec46d4881be37d33c00c01b0b13760905c",
+      "job_filename": "case-001-mc-007.json",
+      "job_sha256": "dcd7dce830546ad6567d760ffbb2969db56b6a4b29bd8acb1bb8d54a6e9b4a63"
+    },
+    {
+      "native_record_filename": "case-001-mc-008-native-figure04.json",
+      "native_record_sha256": "cf640b6596d16877e840e931663e01fc444d94947de2f231b8761360eecef7b1",
+      "job_filename": "case-001-mc-008.json",
+      "job_sha256": "b24c1757297f45766bb7205f09d79aa0f177b77cd78efebb325536a21e997472"
+    },
+    {
+      "native_record_filename": "case-001-mc-009-native-figure04.json",
+      "native_record_sha256": "94d430afba95a361eaa2d532bcce9971a38c1ac6ec026e19f1011a373fb31b15",
+      "job_filename": "case-001-mc-009.json",
+      "job_sha256": "6d006a678bc05c6d35c2659c5bfb819a43e3ebd3b8e8930c665cb36a3d06bebc"
+    },
+    {
+      "native_record_filename": "case-001-mc-010-native-figure04.json",
+      "native_record_sha256": "6b1bc5cfed2eec465a50d69b89595cf3480565629019a37a1aa8e97a7a42e24a",
+      "job_filename": "case-001-mc-010.json",
+      "job_sha256": "cab7f1ed52dc1d84556a4fa251f91824bb55913d500d3ee7b774c8c802c663f2"
+    },
+    {
+      "native_record_filename": "case-001-mc-011-native-figure04.json",
+      "native_record_sha256": "811adec736b0f70f8180a4b9f6079f3e07668f5daf68ad12ce867eaf6a9407a1",
+      "job_filename": "case-001-mc-011.json",
+      "job_sha256": "80290c53d7aaf670653512770438453a5e158c9531a134fc01441aee8d5fdd7e"
+    },
+    {
+      "native_record_filename": "case-001-mc-012-native-figure04.json",
+      "native_record_sha256": "4a691b93cc99134c4b80efe3b289408bf35b89986336d5af7699bce072a6ac38",
+      "job_filename": "case-001-mc-012.json",
+      "job_sha256": "06e46346352f2b08ad39b7e9e42196a49a9eec88b7a4e37411e8ac1d7775e7d9"
+    },
+    {
+      "native_record_filename": "case-001-mc-013-native-figure04.json",
+      "native_record_sha256": "ea881b397eb1e0bff42300f931780435d9764418e1a757039ef54cf26eef2af6",
+      "job_filename": "case-001-mc-013.json",
+      "job_sha256": "03ea690a6e5bfb71811baad8aa8209dbe35d41d42249461b487fec74577aa9aa"
+    },
+    {
+      "native_record_filename": "case-001-mc-014-native-figure04.json",
+      "native_record_sha256": "6b615612fb059fcf2509d4d02a88de466a397aa22a88d5f3dc9deca4637f2d3c",
+      "job_filename": "case-001-mc-014.json",
+      "job_sha256": "e85ffd7b9935312b7288f9b784083e29bc8f0097745a099fc929c238a48121fe"
+    },
+    {
+      "native_record_filename": "case-001-mc-015-native-figure04.json",
+      "native_record_sha256": "e2fe6bb081ac19f8a69bba1b8babdc0dfe06c17b0b6dcfbc7d5085c3ff06a5b9",
+      "job_filename": "case-001-mc-015.json",
+      "job_sha256": "441460e7c61b0b0f88ffb18833473a53f2bc88565f10a8f7b6d52e5b92f46c22"
+    },
+    {
+      "native_record_filename": "case-001-mc-016-native-figure04.json",
+      "native_record_sha256": "9397eff18879e7592f4643a491d0d504168972ed715ca8dc6bee3fc678b0d867",
+      "job_filename": "case-001-mc-016.json",
+      "job_sha256": "3b3c2f05669852d462698cdf87e545cea31e17c0ae8cd4e78eeee548eddacb23"
+    },
+    {
+      "native_record_filename": "case-001-mc-017-native-figure04.json",
+      "native_record_sha256": "128cb903a5f42d69082811587423616df1355c4c544cfed58049e0201a1c3844",
+      "job_filename": "case-001-mc-017.json",
+      "job_sha256": "6a990f20d0c83c2d38c2a586f2064665879083efffd96e206622cb1fe0e66116"
+    },
+    {
+      "native_record_filename": "case-001-mc-018-native-figure04.json",
+      "native_record_sha256": "41a9e3a65e66891ea5e61b4f31727fc9001bfc46cee37e3ced1de4b066644771",
+      "job_filename": "case-001-mc-018.json",
+      "job_sha256": "1e861d0c65ebc851f4fca103400113957c87b92f28e784c756d1253280dc937a"
+    },
+    {
+      "native_record_filename": "case-001-mc-019-native-figure04.json",
+      "native_record_sha256": "792453bac89fcfa3eeef75066e992973c8d6202a1a31b0e58e7a2ec15b2de0e0",
+      "job_filename": "case-001-mc-019.json",
+      "job_sha256": "ea19e3c94ad9972435b63b15ebe6d55ed90728ca95553c4589fd827fa7608b3c"
+    },
+    {
+      "native_record_filename": "case-001-mc-020-native-figure04.json",
+      "native_record_sha256": "5845e655b51d22f86899ed1ddb48e8e1a633c6d87cafc4189bc059b3610c80fb",
+      "job_filename": "case-001-mc-020.json",
+      "job_sha256": "df0e25747407128d8e18a5ca69f25323aee03c67dccbc2bfc586560eeaefc03e"
+    },
+    {
+      "native_record_filename": "case-001-mc-021-native-figure04.json",
+      "native_record_sha256": "1051c68998ca759ab345d5ce7e7090e160d8ba45ee8b58003e16b9171d7edcc6",
+      "job_filename": "case-001-mc-021.json",
+      "job_sha256": "4e66b70e57d81a599eea948fd08360467f8d049abf2dd9e74b8990302dbe0ae6"
+    },
+    {
+      "native_record_filename": "case-001-mc-022-native-figure04.json",
+      "native_record_sha256": "b97ae005d968b6ef99799f65264d7e6b56d777729cc1ac0bc18276d981a3fd5f",
+      "job_filename": "case-001-mc-022.json",
+      "job_sha256": "0f8c6523bc70b400706242ab442c93943d970258cf8c622ae02ff5c046183649"
+    },
+    {
+      "native_record_filename": "case-001-mc-023-native-figure04.json",
+      "native_record_sha256": "0eb95d54aed9e473a204612ac206b80e561f545a133e4ffc1244eaa8e049d908",
+      "job_filename": "case-001-mc-023.json",
+      "job_sha256": "07913a9bbb0e6f1f703c37dacd8a79229e531f1d3d26d9b1e34e5a74dcf37e3d"
+    },
+    {
+      "native_record_filename": "case-001-mc-024-native-figure04.json",
+      "native_record_sha256": "883b346594ce6e0995566ca66591c78d8919dfc33eba0ed983a99dd5c0ae925a",
+      "job_filename": "case-001-mc-024.json",
+      "job_sha256": "0030aafe6b4fad24e0a5b54f73102a6e1cf8cd3dd5c97fb485a39f9029e486eb"
+    },
+    {
+      "native_record_filename": "case-001-mc-025-native-figure04.json",
+      "native_record_sha256": "dd55f7fea31039f465174abb880e0f92900d1ce810abd505e88766f0b1f2fbc3",
+      "job_filename": "case-001-mc-025.json",
+      "job_sha256": "1f970a44702714aa8e53a8f5812acba21ea91831040d6241ac08960c306fcd87"
+    },
+    {
+      "native_record_filename": "case-001-mc-026-native-figure04.json",
+      "native_record_sha256": "f8bf1c56f0942698ca94e3ef4f664019cb6d70d292d125a35cee3bdf4510ee92",
+      "job_filename": "case-001-mc-026.json",
+      "job_sha256": "f04857ff2262446e0ce8e7ce74ff6fe55c8b108ccfdf921a6bb1587bcc181915"
+    },
+    {
+      "native_record_filename": "case-001-mc-027-native-figure04.json",
+      "native_record_sha256": "1d6ac779f7d5563bda75a5f89ed3af175d59be3ea9eed81f4a9f4487f94b3a1d",
+      "job_filename": "case-001-mc-027.json",
+      "job_sha256": "4dc3af69aa811d5d16380f84a0201db681fc3ea4ca46f867ff01a0d0c3f53185"
+    },
+    {
+      "native_record_filename": "case-001-mc-028-native-figure04.json",
+      "native_record_sha256": "52fcdccd5e214a8a93c3f6e36f5693108066ea030e969ea891458b49c3f49ea4",
+      "job_filename": "case-001-mc-028.json",
+      "job_sha256": "23ee1db81c280e7dab29b160be597147e8faba9905f8c865f2d3be607e6f1681"
+    },
+    {
+      "native_record_filename": "case-001-mc-029-native-figure04.json",
+      "native_record_sha256": "c8eacba3440afafbdb60081a10c5199ae1a6269cf5af2b283c9d483ef9deeb45",
+      "job_filename": "case-001-mc-029.json",
+      "job_sha256": "b8ec663b23badf6645e427071f96ca5eb09a556cec79fcd20da3be3f5bbd6cfb"
+    },
+    {
+      "native_record_filename": "case-001-mc-030-native-figure04.json",
+      "native_record_sha256": "24193252a71204e3ad64367c00d873abcda398c42c6388422152a052ccae1a6d",
+      "job_filename": "case-001-mc-030.json",
+      "job_sha256": "4bcec2e862419d38a16e59a47a0932842d7228f09865bb9e8a129ac633910a1f"
+    },
+    {
+      "native_record_filename": "case-001-mc-031-native-figure04.json",
+      "native_record_sha256": "e0c8c8ab6a8f0ed73614dcbfa69a637801aade53714badc4c00b3193d61e428e",
+      "job_filename": "case-001-mc-031.json",
+      "job_sha256": "40f807a98508b943003d93d2f760fe8df8fa139b50c76edbd54c61885bb7626d"
+    },
+    {
+      "native_record_filename": "case-001-mc-032-native-figure04.json",
+      "native_record_sha256": "268640ced4eb63999d06a7352ceae03beb3405730388ca7402f591eff482786a",
+      "job_filename": "case-001-mc-032.json",
+      "job_sha256": "37437443fedbd67e50f8aa1d514c9cd4a6ee4ac4f3847c316e56605e07cb32f6"
+    },
+    {
+      "native_record_filename": "case-001-mc-033-native-figure04.json",
+      "native_record_sha256": "3b9366ff3182885e10020c0c0fddd74ad302a707bf7452c704b88091231e83fd",
+      "job_filename": "case-001-mc-033.json",
+      "job_sha256": "059b648fa63bcfef94238d7de5bb5a80d28b455da1f75f3419f8666f1f87fc2e"
+    },
+    {
+      "native_record_filename": "case-001-mc-034-native-figure04.json",
+      "native_record_sha256": "b225229b86703d57a5b45ab3bc995880c7c2b4f6cd3e446434f1ef5db48e8a50",
+      "job_filename": "case-001-mc-034.json",
+      "job_sha256": "271d31e7bdbb76a394b6665b9f83ae26515af3e84dce6ad33fa48c00cc69abd4"
+    },
+    {
+      "native_record_filename": "case-001-mc-035-native-figure04.json",
+      "native_record_sha256": "32eadd6ea5174df250b84765225230bcc15ede182d5074f670233f8e32bcc9d8",
+      "job_filename": "case-001-mc-035.json",
+      "job_sha256": "c605a9887b36fc6558dde9b1da26fafe38d67d30535e973f8d94b2cbbee1f81e"
+    },
+    {
+      "native_record_filename": "case-001-mc-036-native-figure04.json",
+      "native_record_sha256": "c68c49015fda385bfa49f3861a887115fe4746f4fac96fd273b347287aae348b",
+      "job_filename": "case-001-mc-036.json",
+      "job_sha256": "eab02a5c5da07bfdff21e4163d74cf31bec9c1281232f135903f2cdc69e1ff7b"
+    },
+    {
+      "native_record_filename": "case-001-mc-037-native-figure04.json",
+      "native_record_sha256": "bc7b1d258f04afb687a8ec23c24b80b6b5b059cf522d85205e9c8f947fd2cbe4",
+      "job_filename": "case-001-mc-037.json",
+      "job_sha256": "92ea114f134acd37105e2b5cc95196336aa2678d5a2263ce54af648ee68ee3dd"
+    },
+    {
+      "native_record_filename": "case-001-mc-038-native-figure04.json",
+      "native_record_sha256": "711b7bf46950e152715cb21f99bcddd1483cd19ba7de73e50460be0c1ea82ffd",
+      "job_filename": "case-001-mc-038.json",
+      "job_sha256": "aca309f07e9dd6e2ff803a9d58ce372b13513a77cc3e6cf515ad8a17fba6de7e"
+    },
+    {
+      "native_record_filename": "case-001-mc-039-native-figure04.json",
+      "native_record_sha256": "ad7227e040b68acf05b192f1acee4ea91594007e13999e5befe4f4dcdfe8980f",
+      "job_filename": "case-001-mc-039.json",
+      "job_sha256": "f1d357f47d0488515c44cd4641eaec475505cd3f37608062bc195b04c5a043c5"
+    },
+    {
+      "native_record_filename": "case-001-mc-040-native-figure04.json",
+      "native_record_sha256": "438cc669849c1a698fa6ea8f70c861ce909a21c8deda17fc907c11d75f226006",
+      "job_filename": "case-001-mc-040.json",
+      "job_sha256": "b47ed070df7e34efbeb4c7c51f321edbfcb878cbd9ba770960954728f8eb76e2"
+    },
+    {
+      "native_record_filename": "case-001-mc-041-native-figure04.json",
+      "native_record_sha256": "905fca730885c561b178cb9613657af1280b17d3eb67fa6248cd78223a746be5",
+      "job_filename": "case-001-mc-041.json",
+      "job_sha256": "25b21754a8e8c833bc5139131164dfb98bd6d767977e03bb1f873a9decc297ef"
+    },
+    {
+      "native_record_filename": "case-001-mc-042-native-figure04.json",
+      "native_record_sha256": "aee235480b457df671adf4989aeabc34db9729696afbdc04898a578a786fc0c7",
+      "job_filename": "case-001-mc-042.json",
+      "job_sha256": "89173a61cedc311ab16268c8e27b83deae00db70c6570276354f0fb3eeabe1d9"
+    },
+    {
+      "native_record_filename": "case-001-mc-043-native-figure04.json",
+      "native_record_sha256": "2d292e7d2970a377f2f20db9093d0ae07be20985bcdb4b503606da9a60b51761",
+      "job_filename": "case-001-mc-043.json",
+      "job_sha256": "1cdf4d13a8d46f0873898e2b7f97c42fafbdc5c10415d4ffabbeb42d690bd6f3"
+    },
+    {
+      "native_record_filename": "case-001-mc-044-native-figure04.json",
+      "native_record_sha256": "1d77f91ff8aa984c91dd94a6e8ac3a1c51c9b241e4e10508903b36562d99f344",
+      "job_filename": "case-001-mc-044.json",
+      "job_sha256": "9f32667910c42ecd6d1fc99971655483c0f348ef35627cd86c0129522283c3be"
+    },
+    {
+      "native_record_filename": "case-001-mc-045-native-figure04.json",
+      "native_record_sha256": "530580965e3fd09f474c43edc4094e4a26089aaf50dbfd85910d1496cbb6fa93",
+      "job_filename": "case-001-mc-045.json",
+      "job_sha256": "b8ada805d7809a7b42aa7f5ed047107089ef2867e088f609060991b49f85043c"
+    },
+    {
+      "native_record_filename": "case-001-mc-046-native-figure04.json",
+      "native_record_sha256": "2f817220bb318402ea17a3544c7acd0b1c7d9c9fc4d704bcdb49bcb098219d0b",
+      "job_filename": "case-001-mc-046.json",
+      "job_sha256": "5abd2c61ca3c2b29c5420f60517fadf33ca7bb6253dc5014007129c705887d54"
+    },
+    {
+      "native_record_filename": "case-001-mc-047-native-figure04.json",
+      "native_record_sha256": "5bdeef3f8c0d73fec3b8a616c849de7018d4b74388fd685acd7ed383dfbf34d1",
+      "job_filename": "case-001-mc-047.json",
+      "job_sha256": "e8b04ac8725eb0e027abf1ab7e0cf26ae8c579ab4e5c1312c27a56bfd4a234e8"
+    },
+    {
+      "native_record_filename": "case-001-mc-048-native-figure04.json",
+      "native_record_sha256": "d9c238276403c84288ee6870769e6ef328c13ab24740d2837282630f2c0b7f92",
+      "job_filename": "case-001-mc-048.json",
+      "job_sha256": "a6ebb5842ef21c0b6c297ab632e9f3c5444247e0c06f0a981375e1221c8a09cb"
+    },
+    {
+      "native_record_filename": "case-001-mc-049-native-figure04.json",
+      "native_record_sha256": "3df58b1ba30df65e873aeae92f47cda019126a8388873996bbdee6a436415899",
+      "job_filename": "case-001-mc-049.json",
+      "job_sha256": "f7f816f30f2082698b7b2b95e42913b7d6b56e33f608c44c6b3462a62dffa424"
+    },
+    {
+      "native_record_filename": "case-001-mc-050-native-figure04.json",
+      "native_record_sha256": "d2900bfaf98a9cdf1eae6e001190986767edd7ecec55e68e7a9e982158a36f8c",
+      "job_filename": "case-001-mc-050.json",
+      "job_sha256": "77d45d3cbcf1ab5e732c9fe616935e08f3cd56dd5dace53ff977d4b88aca7028"
+    },
+    {
+      "native_record_filename": "case-001-mc-051-native-figure04.json",
+      "native_record_sha256": "ad68f7895f658c3c243c987c8e73724aee6b0ed77e633f79c13350ca5c437ed1",
+      "job_filename": "case-001-mc-051.json",
+      "job_sha256": "b9f0db2350bcc94b5569cdc108e412a8e8e1309bcd1b20f42a704b0722aada32"
+    },
+    {
+      "native_record_filename": "case-001-mc-052-native-figure04.json",
+      "native_record_sha256": "40778806eb2068fb128d68516fae83afb15b1b1c1675aa7e716aca50371d1f5b",
+      "job_filename": "case-001-mc-052.json",
+      "job_sha256": "d114ccbe260022d85c6c5b34178d9b31f696c655f27338c146ae5e4dc1dd91fe"
+    },
+    {
+      "native_record_filename": "case-001-mc-053-native-figure04.json",
+      "native_record_sha256": "60c69ea13e491f20680d1a40a00f93a0dbc269dcf8e7227b3e1bdea905864de3",
+      "job_filename": "case-001-mc-053.json",
+      "job_sha256": "deca08397b7ef1e3ebe58bd7c704ea097550ada775e287bcb5bbe83a09369459"
+    },
+    {
+      "native_record_filename": "case-001-mc-054-native-figure04.json",
+      "native_record_sha256": "b2b0bf246766f5f7334b825863eba47682a8195b30af0f766754bb6f4ba1a0b0",
+      "job_filename": "case-001-mc-054.json",
+      "job_sha256": "a5d492cc2f5189b851f3956125854bcf1e21594aa8fa65dfa7e8c79d46b3cc21"
+    },
+    {
+      "native_record_filename": "case-001-mc-055-native-figure04.json",
+      "native_record_sha256": "1583a09c703a61f8b1507bddd738345179e2115c394a7dfa362fb3f913b156ae",
+      "job_filename": "case-001-mc-055.json",
+      "job_sha256": "c338387c360193cc7a2d4be2cb078c7d0544a6eb1774847c4759325563be6726"
+    },
+    {
+      "native_record_filename": "case-001-mc-056-native-figure04.json",
+      "native_record_sha256": "5ab7dce7718deece006282ea121faa3d269c4e45f9e87d1febcc4f4ddc039d6c",
+      "job_filename": "case-001-mc-056.json",
+      "job_sha256": "a003e4730db5d96dedaa8e1e59436837344328ff85a8476d4e6f282e84bbc72d"
+    },
+    {
+      "native_record_filename": "case-001-mc-057-native-figure04.json",
+      "native_record_sha256": "bd40a9c1b0112aade515ca4f5b2422a0d792d18c8eda270608c28941d98b18a3",
+      "job_filename": "case-001-mc-057.json",
+      "job_sha256": "741fed615e32f107df952d54ec4d56efd1f31316b7616f4f722632426f9e3172"
+    },
+    {
+      "native_record_filename": "case-001-mc-058-native-figure04.json",
+      "native_record_sha256": "550a128daf6cc796c422465d459b82bca1f4a48768dec59aad78d21c1d2b483c",
+      "job_filename": "case-001-mc-058.json",
+      "job_sha256": "b6eedcf314ee60d68e7881d72b1dbcd49f82c20b4b568d2f3533aff44739543b"
+    },
+    {
+      "native_record_filename": "case-001-mc-059-native-figure04.json",
+      "native_record_sha256": "fcc52b4fb33e1e9fb1a37a5d35230528b4b094fc1d5c9e3b8759b2f24a667e76",
+      "job_filename": "case-001-mc-059.json",
+      "job_sha256": "2c8591ca09f5f350df65e68d4c83adfdc275f75cfa91aad512186e5b3278b1fe"
+    },
+    {
+      "native_record_filename": "case-001-mc-060-native-figure04.json",
+      "native_record_sha256": "06fe385e4f577230c4f8b4937623542b439e83884d8b5643c1cfb2ec29b98a44",
+      "job_filename": "case-001-mc-060.json",
+      "job_sha256": "f13e63da3b4c0a210b678600cc4d6df9b0cdc393f753d97a53981d532aa228da"
+    },
+    {
+      "native_record_filename": "case-001-mc-061-native-figure04.json",
+      "native_record_sha256": "802cac825f96a63602e16090dda916c117b6056be4245226f0011c54376d6cb4",
+      "job_filename": "case-001-mc-061.json",
+      "job_sha256": "ebbcb3d748c67418b55d8b09d9c6aea78dacfa9d3e5ff3cacc2caa2aca8a1a1e"
+    },
+    {
+      "native_record_filename": "case-001-mc-062-native-figure04.json",
+      "native_record_sha256": "40f0e779d1ecd9b49b5ed8b7f424c0d9d43b3df5a10078627b13d7b318e8fbcd",
+      "job_filename": "case-001-mc-062.json",
+      "job_sha256": "8fafc49fabbdd9e880b8fe55d0a7804a60b85cc1b0b67ab01866626b892a97b0"
+    },
+    {
+      "native_record_filename": "case-001-mc-063-native-figure04.json",
+      "native_record_sha256": "1ba23f5d1627e6cd9cf6e0dad57aa2878a0daecd8cb502351dd1b2fdcf2bba82",
+      "job_filename": "case-001-mc-063.json",
+      "job_sha256": "9cca541b336abc0638a73f0eb9706e10b7127a1025879c9617726a6852822839"
+    },
+    {
+      "native_record_filename": "case-001-mc-064-native-figure04.json",
+      "native_record_sha256": "4b977593d76a31e9f3734982d1214eb167cd6a2b801b19796392cac0cf0761b8",
+      "job_filename": "case-001-mc-064.json",
+      "job_sha256": "d92b1da5e839727129655e7136ea82a0678e2a9d8ff65e109847d83740647719"
+    },
+    {
+      "native_record_filename": "case-001-mc-065-native-figure04.json",
+      "native_record_sha256": "3a7c20a577c7bd257e0ae2923d710b536597d18fdb434e1d9c6ff7be80b610b5",
+      "job_filename": "case-001-mc-065.json",
+      "job_sha256": "1c8a9907feeafc738ea19bd80b04488b4dc708ecb94d570280e3714e575ee095"
+    },
+    {
+      "native_record_filename": "case-001-mc-066-native-figure04.json",
+      "native_record_sha256": "df8ab4ccb116b63f04eaed91bac4e5e81a216c2e50770e5db686c46e8a530821",
+      "job_filename": "case-001-mc-066.json",
+      "job_sha256": "a8f62f503d4966ec35fdd38036d4b79a16acea1b2be9a63547728b3e4f8e7f2b"
+    },
+    {
+      "native_record_filename": "case-001-mc-067-native-figure04.json",
+      "native_record_sha256": "05f2abc247295e9a9fa34fb578afba9deb42826a6040dca7cbf2ec7d02dda6d5",
+      "job_filename": "case-001-mc-067.json",
+      "job_sha256": "1da68f820a61264fd763ef42945b6cdd7392ee51672294932e16867065181059"
+    },
+    {
+      "native_record_filename": "case-001-mc-068-native-figure04.json",
+      "native_record_sha256": "f43e9ead1b2d6393d5ca146fc31d9b0c3ada580dba03c11c4784bd7a31e4c5a1",
+      "job_filename": "case-001-mc-068.json",
+      "job_sha256": "c3fc01c63f3da61adae3d7bd817470b502d93c5d52f1946d99c9d25ffd0298eb"
+    },
+    {
+      "native_record_filename": "case-001-mc-069-native-figure04.json",
+      "native_record_sha256": "ee682f5ad70ed1bcd3c6a8f6c0d533523f0a41677e8eddb3293621987784593d",
+      "job_filename": "case-001-mc-069.json",
+      "job_sha256": "824b0618659ef64f59825a337f6d7a7f282b408fd5c41ae0be309a60f01bf4e6"
+    },
+    {
+      "native_record_filename": "case-001-mc-070-native-figure04.json",
+      "native_record_sha256": "b9ccb4fd5001d9e48ad773e338f4dda59af9efa2039df822da2818b98bd48707",
+      "job_filename": "case-001-mc-070.json",
+      "job_sha256": "19a7139382f118f4c1b936e193a2c6901d34e37293a0fc59b7057f487e246525"
+    },
+    {
+      "native_record_filename": "case-001-mc-071-native-figure04.json",
+      "native_record_sha256": "b293b21499d502bd2c659ac45c660ef47bad2418fea981b9c9a2273b47e92c32",
+      "job_filename": "case-001-mc-071.json",
+      "job_sha256": "53a7b493b270475c7714eb549a731a1ad46a4706ba505f40093811963e241f7e"
+    },
+    {
+      "native_record_filename": "case-001-mc-072-native-figure04.json",
+      "native_record_sha256": "7ace157cd8c0223f1ca6bbd1c04fb51e0a9edb2e1dc571dece3192e71c037cf3",
+      "job_filename": "case-001-mc-072.json",
+      "job_sha256": "8fd9805153e171b9881f8c34c8128825dd12e356b5d5404e121611052d35f55d"
+    },
+    {
+      "native_record_filename": "case-001-mc-073-native-figure04.json",
+      "native_record_sha256": "830fe4d01ec913ad3e2b8305c845dbefb995669ec04c380470977cc32f3840af",
+      "job_filename": "case-001-mc-073.json",
+      "job_sha256": "489100b5f3896a35da19a11455cf73eb15980b28c82d9b41a571c2938386df77"
+    },
+    {
+      "native_record_filename": "case-001-mc-074-native-figure04.json",
+      "native_record_sha256": "fb100f97cd27ba6ca16343ca9e446d4b7b0d18057d642cad94c35bcdbb7e2ae3",
+      "job_filename": "case-001-mc-074.json",
+      "job_sha256": "9bbd4156d78a0b115e4b4902a988d96ff8d70de7f7b62fa46458109249d7a0d8"
+    },
+    {
+      "native_record_filename": "case-001-mc-075-native-figure04.json",
+      "native_record_sha256": "100bcbd9c150427758c3bf86d2a4efe9e6ac42aa4562c321398d4758eea4600b",
+      "job_filename": "case-001-mc-075.json",
+      "job_sha256": "ab872b9c765de2676552d19834e716db8f0090922dd93858dcef2319bc7fd679"
+    },
+    {
+      "native_record_filename": "case-001-mc-076-native-figure04.json",
+      "native_record_sha256": "2bb099945aab51642a4ffebaee3c273bd4bdf574ee28e1042015cf19832b4250",
+      "job_filename": "case-001-mc-076.json",
+      "job_sha256": "8d4cbed0ee73e29b395b4d4fdd21af66a9ef5678187edb3186f40c4207e32a2a"
+    },
+    {
+      "native_record_filename": "case-001-mc-077-native-figure04.json",
+      "native_record_sha256": "f6c1cd653673db1ff553e24720d00b28e18e346647ea726e3804ea0b66150a76",
+      "job_filename": "case-001-mc-077.json",
+      "job_sha256": "6012eab41d298ad88d1982cb48c6b5a0231968e7e1c1fa5114d6e1c53fdd4d10"
+    },
+    {
+      "native_record_filename": "case-001-mc-078-native-figure04.json",
+      "native_record_sha256": "e8a9e2fe5073b6680d1ef86cc2932ce4b88426562d79470cf99cea9930b1d6a8",
+      "job_filename": "case-001-mc-078.json",
+      "job_sha256": "9a14ce0e7517ce911e3c76a2c63c2269b9f2bf1bcf4cfb94e952eee1ffaae695"
+    },
+    {
+      "native_record_filename": "case-001-mc-079-native-figure04.json",
+      "native_record_sha256": "f003282fd74cac8cc7b2cf8e8963fbe700085c5aa68b5349f451ca4e1e037933",
+      "job_filename": "case-001-mc-079.json",
+      "job_sha256": "01ac6666f6da4ce22a49236943185b80921f9c3fc2916d4f37f189294ce9dd07"
+    },
+    {
+      "native_record_filename": "case-001-mc-080-native-figure04.json",
+      "native_record_sha256": "f52473e516f441da4b013dc60241c626f07d341ff87d813f06585cd1ea3bd017",
+      "job_filename": "case-001-mc-080.json",
+      "job_sha256": "52b3451863e71386db4e59bed6f87f386ef879800cb0181495bd0d415edfbd4d"
+    },
+    {
+      "native_record_filename": "case-001-mc-081-native-figure04.json",
+      "native_record_sha256": "e8e1902eb1e0528b04797ac3a7fe03fc31548fa4974ca855fed7702c7fdd02cd",
+      "job_filename": "case-001-mc-081.json",
+      "job_sha256": "225188e73b7c519ab7bf5324c2954d35c6d0e812d92269ddb6e98fd10ab9ad12"
+    },
+    {
+      "native_record_filename": "case-001-mc-082-native-figure04.json",
+      "native_record_sha256": "a5b5d7b4250a6cfe39f07145d10dbcf451cfd090c02ea2b9d3db893d02b0c907",
+      "job_filename": "case-001-mc-082.json",
+      "job_sha256": "7d05d71359a70794bc6df1e128d7ce44b11d6856d615c15ff6c3785bcee0c776"
+    },
+    {
+      "native_record_filename": "case-001-mc-083-native-figure04.json",
+      "native_record_sha256": "83d3ab7e90cced6c659d9519bcba36a0bfbe00c27a81c0f9ab9189390c7802e1",
+      "job_filename": "case-001-mc-083.json",
+      "job_sha256": "05793babb0fbbf4e736f5985e29f5ae3f1b5ffc849999dbcbd32188b51802a44"
+    },
+    {
+      "native_record_filename": "case-001-mc-084-native-figure04.json",
+      "native_record_sha256": "dd537bffd769eacbc2363c88033318b2fdd9e72c9f1e1d4f0a34ee4f315826bd",
+      "job_filename": "case-001-mc-084.json",
+      "job_sha256": "f4bebc9f236434ca362b19a5fcd903dcdd033e5d25c984504b3b2234c90a860f"
+    },
+    {
+      "native_record_filename": "case-001-mc-085-native-figure04.json",
+      "native_record_sha256": "8c8eaad08d51159bb00c6b1e4c4b74d6010e16c0d5c19165d6c5e981c7df5673",
+      "job_filename": "case-001-mc-085.json",
+      "job_sha256": "13b5486dd9de9ac02de4608bb068c9b733151d16b0833345edf8800d32a54a97"
+    },
+    {
+      "native_record_filename": "case-001-mc-086-native-figure04.json",
+      "native_record_sha256": "4dad6798986d418a95f9396ba577bf4472fe20cf1c8b69918f763a634a0309d2",
+      "job_filename": "case-001-mc-086.json",
+      "job_sha256": "0778367c633c9a1f8dafaac0430968f7fa24b0e38ffaa74988403d4d45520df3"
+    },
+    {
+      "native_record_filename": "case-001-mc-087-native-figure04.json",
+      "native_record_sha256": "8b1d94fd754f95da9cd2d75daa3c60fe8436f69c3b661433e30e9893b7432247",
+      "job_filename": "case-001-mc-087.json",
+      "job_sha256": "efef37f300eba234d0efe94b9ff30e68c8c5b8c557570381010228d4991adadf"
+    },
+    {
+      "native_record_filename": "case-001-mc-088-native-figure04.json",
+      "native_record_sha256": "dc26daaeac84d4b5ccc094243d5a0607ad396819a6d497af3b6b3ecc5952dd45",
+      "job_filename": "case-001-mc-088.json",
+      "job_sha256": "7545e20acc57420a839d5b0ecf78f24f74b8e4e90306965995dc37e3d5102611"
+    },
+    {
+      "native_record_filename": "case-001-mc-089-native-figure04.json",
+      "native_record_sha256": "ad8375a46c2f5dd2024501ffe107bb6f14771457511a7c156f2191bc14122dec",
+      "job_filename": "case-001-mc-089.json",
+      "job_sha256": "00dfe6c7d42acd694a0f95d81769613d2b8d9210d79b81f01b2717d3e76e075e"
+    },
+    {
+      "native_record_filename": "case-001-mc-090-native-figure04.json",
+      "native_record_sha256": "1b8ac888550fa92f3ea277992bcb19a8c51592ea6d2acd2734f3c5889e57f751",
+      "job_filename": "case-001-mc-090.json",
+      "job_sha256": "0f6bd2f9528eff7d93f5055942d3776bfc5031402b5214f751f475a41da3123e"
+    },
+    {
+      "native_record_filename": "case-001-mc-091-native-figure04.json",
+      "native_record_sha256": "3f0aa8daec0892e6fe815ecc9601c23f2773ca03bb7c3401f263cdd0d5fcf758",
+      "job_filename": "case-001-mc-091.json",
+      "job_sha256": "f96ea6425519f555f1a74fbfbaf87256fd2c71bde8b32a725514d84da84fe58a"
+    },
+    {
+      "native_record_filename": "case-001-mc-092-native-figure04.json",
+      "native_record_sha256": "010bba68c2021f1476686e8dfafb65c96ef298bbf267873f87ad77f7a17b5ff6",
+      "job_filename": "case-001-mc-092.json",
+      "job_sha256": "b7c9bc13ab5ba22825cb603b55788c1a85a930999032f637583d84ced7c0f220"
+    },
+    {
+      "native_record_filename": "case-001-mc-093-native-figure04.json",
+      "native_record_sha256": "bb7f99347173dea02c311a89be58a23849d923ed8cb0a9e7f48d106003f1b761",
+      "job_filename": "case-001-mc-093.json",
+      "job_sha256": "1c19763c9ccaf5aaf9e592dc7f1bb9fd4e7e54db8fd6fbbfa6a962580297366f"
+    },
+    {
+      "native_record_filename": "case-001-mc-094-native-figure04.json",
+      "native_record_sha256": "148abdcb2a314f3bd3f2309c876520c0cb8a0b740a6644765e9a2b6bf4c6488f",
+      "job_filename": "case-001-mc-094.json",
+      "job_sha256": "164746d6515ebac2b7186f7344ecd59c2d561add2c17881c57648e9ec1f8c258"
+    },
+    {
+      "native_record_filename": "case-001-mc-095-native-figure04.json",
+      "native_record_sha256": "be6b1e2645d3ffeb3d9b43bc4f41aea12be21a5e3bbfbff27e88afbc1d009bc5",
+      "job_filename": "case-001-mc-095.json",
+      "job_sha256": "9f6363eca4510f33ad2258887536404edceaa4870d04d1144bf7abf10b8a0ae5"
+    },
+    {
+      "native_record_filename": "case-001-mc-096-native-figure04.json",
+      "native_record_sha256": "7b74e6d67b10e5ad45f2d14d1fc5577c0772f8dd047599e98f3e4e8604e28e8b",
+      "job_filename": "case-001-mc-096.json",
+      "job_sha256": "70a106fe2b526ca37441a9cb8dbbba6e8f07db003eb407d3a04d513f17820b83"
+    },
+    {
+      "native_record_filename": "case-001-mc-097-native-figure04.json",
+      "native_record_sha256": "c691ea1048ad3883cb50a6c5740eac9a91a348a6f88caa42a9dca4299e120a44",
+      "job_filename": "case-001-mc-097.json",
+      "job_sha256": "75479668da9f3eb1b4cb8207928a69542829162067fcfa1e05df18bb1b4e2130"
+    },
+    {
+      "native_record_filename": "case-001-mc-098-native-figure04.json",
+      "native_record_sha256": "6865d957788fea81615a426fa664e3ac4e60939a489756b61ac7fb7a34b616b5",
+      "job_filename": "case-001-mc-098.json",
+      "job_sha256": "9ce3964de4d524fdd171d8fdd277d3b1f7cb2ab440883c1e3c5834b5e5cfc404"
+    },
+    {
+      "native_record_filename": "case-001-mc-099-native-figure04.json",
+      "native_record_sha256": "9c4991dc93c96bf3ae20ee184dcda8b2891febd7db94600e0c74c804ca432d39",
+      "job_filename": "case-001-mc-099.json",
+      "job_sha256": "f5554a056dbb3a116870b020b80c814c59148f75d93a5f58d65636f1d1cb979a"
+    }
+  ],
+  "both_kappas_use_the_same_fixed100_geometries_and1000_NLoS_arrays": true,
+  "paired_geometries": [
+    {
+      "geometry_id": 0,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 1,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 2,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 3,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 4,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 5,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 6,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 7,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 8,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 9,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 10,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 11,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 12,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 13,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 14,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 15,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 16,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 17,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 18,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 19,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 20,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 21,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 22,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 23,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 24,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 25,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 26,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 27,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 28,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 29,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 30,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 31,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 32,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 33,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 34,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 35,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 36,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 37,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 38,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 39,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 40,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 41,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 42,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 43,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 44,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 45,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 46,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 47,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 48,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 49,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 50,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 51,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 52,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 53,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 54,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 55,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 56,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 57,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 58,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 59,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 60,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 61,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 62,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 63,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 64,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 65,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 66,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 67,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 68,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 69,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 70,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 71,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 72,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 73,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 74,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 75,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 76,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 77,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 78,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 79,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 80,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 81,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 82,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 83,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 84,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 85,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 86,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 87,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 88,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 89,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 90,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 91,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 92,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 93,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 94,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 95,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 96,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 97,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 98,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    },
+    {
+      "geometry_id": 99,
+      "both_original_geometry_and1000_NLoS_arrays_equal": true
+    }
+  ],
+  "groups": [
+    {
+      "initial_MC": {
+        "count": 100,
+        "mean": 23.64510111132161,
+        "quantiles0_25_50_75_100": [
+          18.20629787548638,
+          21.10609678076169,
+          23.09035647009548,
+          25.366281773455082,
+          32.467656201243194
+        ]
+      },
+      "final_MC": {
+        "count": 100,
+        "mean": 28.409218067750295,
+        "quantiles0_25_50_75_100": [
+          20.44321139288334,
+          24.87516192686848,
+          29.830541771620382,
+          31.871897007980134,
+          35.30900392093831
+        ]
+      },
+      "plot_x599_MC": {
+        "count": 100,
+        "mean": 28.256228799375013,
+        "quantiles0_25_50_75_100": [
+          20.44321139288334,
+          24.58777082520649,
+          29.60744006862472,
+          31.839932593994952,
+          35.30900392093831
+        ]
+      },
+      "initial_design": {
+        "count": 100,
+        "mean": 17.471313873761474,
+        "quantiles0_25_50_75_100": [
+          14.455178727519256,
+          16.405972678619932,
+          17.270474029662427,
+          18.594422228508794,
+          22.318074162919157
+        ]
+      },
+      "final_design": {
+        "count": 100,
+        "mean": 19.875147499096382,
+        "quantiles0_25_50_75_100": [
+          15.669640228094567,
+          18.435935399379854,
+          20.219735738732403,
+          21.361394595458286,
+          24.33401615147872
+        ]
+      },
+      "plot_x599_design": {
+        "count": 100,
+        "mean": 19.801570982647437,
+        "quantiles0_25_50_75_100": [
+          15.669640228094567,
+          18.326648674034512,
+          20.04851573986312,
+          21.27448811863467,
+          24.33401615147872
+        ]
+      },
+      "stopped_sweeps": {
+        "count": 100,
+        "mean": 223.66,
+        "quantiles0_25_50_75_100": [
+          1.0,
+          57.25,
+          128.5,
+          260.75,
+          2796.0
+        ]
+      },
+      "MC_author_first_last_reference": [
+        24.277201365187715,
+        30.86013651877133
+      ],
+      "MC_author_final_inside_all100_final_range": true,
+      "MC_geometries_final_below_author_endpoint": 62,
+      "design_author_first_last_reference": [
+        18.29037542662116,
+        21.60211604095563
+      ],
+      "design_author_final_inside_all100_final_range": true,
+      "design_geometries_final_below_author_endpoint": 79,
+      "kappa": 6,
+      "geometries_stopped_within500_sweeps": 91,
+      "all100_geometries_kept_equally_weighted": true
+    },
+    {
+      "initial_MC": {
+        "count": 100,
+        "mean": 20.826074205451846,
+        "quantiles0_25_50_75_100": [
+          8.61710608978039,
+          15.799002903981584,
+          19.89791409651698,
+          25.452517989309133,
+          33.98184807175436
+        ]
+      },
+      "final_MC": {
+        "count": 100,
+        "mean": 28.871339504434058,
+        "quantiles0_25_50_75_100": [
+          13.335331768923533,
+          25.308077565512487,
+          31.742523096460577,
+          33.801402878460095,
+          36.949425658265554
+        ]
+      },
+      "plot_x599_MC": {
+        "count": 100,
+        "mean": 28.326571333749733,
+        "quantiles0_25_50_75_100": [
+          13.335331768923533,
+          22.541048820586248,
+          31.585262145732763,
+          33.546002025216524,
+          36.949425658265554
+        ]
+      },
+      "initial_design": {
+        "count": 100,
+        "mean": 12.4070847711242,
+        "quantiles0_25_50_75_100": [
+          5.050994462691287,
+          9.324740684894095,
+          11.93128560522928,
+          14.224354587079024,
+          21.54263905711145
+        ]
+      },
+      "final_design": {
+        "count": 100,
+        "mean": 18.00861866610875,
+        "quantiles0_25_50_75_100": [
+          8.582396863893228,
+          14.9842763141045,
+          19.397890518114387,
+          21.3444531912425,
+          24.34736223210784
+        ]
+      },
+      "plot_x599_design": {
+        "count": 100,
+        "mean": 17.651096278493835,
+        "quantiles0_25_50_75_100": [
+          8.582396863893228,
+          14.033526967290513,
+          19.31096018549517,
+          21.067708101080488,
+          24.34736223210784
+        ]
+      },
+      "stopped_sweeps": {
+        "count": 100,
+        "mean": 372.47,
+        "quantiles0_25_50_75_100": [
+          1.0,
+          73.25,
+          160.5,
+          410.5,
+          3386.0
+        ]
+      },
+      "MC_author_first_last_reference": [
+        22.730716723549488,
+        32.564914675767916
+      ],
+      "MC_author_final_inside_all100_final_range": true,
+      "MC_geometries_final_below_author_endpoint": 59,
+      "design_author_first_last_reference": [
+        13.208941979522184,
+        20.468805460750854
+      ],
+      "design_author_final_inside_all100_final_range": true,
+      "design_geometries_final_below_author_endpoint": 61,
+      "kappa": 100,
+      "geometries_stopped_within500_sweeps": 80,
+      "all100_geometries_kept_equally_weighted": true
+    }
+  ],
+  "all_source_inputs_and_native_MC_records_unchanged": true,
+  "plot_x599_uses_completed_terminal_hold_not_fictitious_updates": true,
+  "final_state_distribution_mean_is_not_the_599_sweep_plotted_mean": true,
+  "original_paper_MC_count_seed_and_convergence_averaging_protocol_unreported": true,
+  "source_endpoint_inside_geometry_range_does_not_identify_author_geometry": true,
+  "no_geometry_chosen_removed_or_reweighted_to_reduce_reference_discrepancy": true,
+  "not_a_unique_explanation_of_historical_curve_discrepancy": true,
+  "original_curve_closeness_verified": false,
+  "full_reproduction_pass": false
+}

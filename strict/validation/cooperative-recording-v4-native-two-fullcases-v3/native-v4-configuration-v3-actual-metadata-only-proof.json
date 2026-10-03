@@ -1,0 +1,67 @@
+{
+  "scope": "ACTUAL_native_result_configuration_serialization_metadata_and_auditor_source_reverse_proof_NOT_numeric_case_certification",
+  "cases": [
+    {
+      "case": "M30",
+      "actual_source_configuration_byte_sha256": "a8409a7a74515b22d5f046cf9247ced180384f4b69dcb76b03ec09f6f2755f4a",
+      "actual_native_result_sha256": "315429355cd4e6a89c794af8d1d5a10b19ce4dd1e884c8ed8ebd59d54eb435d6",
+      "actual_metadata_comparison": {
+        "scope": "exact_JSON_scalar_singleton_geometry_metadata_only_NOT_matrix_flattening",
+        "checks": {
+          "all_other_configuration_fields_exactly_unchanged": true,
+          "only_predeclared_J1_satellite_latitude_singleton_metadata_conversion": true
+        },
+        "all_metadata_conversion_checks_pass": true,
+        "actual_conversions": [],
+        "numerical_arrays_or_model_changed": false
+      },
+      "old_exact_JSON_dictionary_equality_pass": true,
+      "input_files_byte_unchanged": true
+    },
+    {
+      "case": "N48",
+      "actual_source_configuration_byte_sha256": "72552c2b4500cb2371bcf19a259e591e225492ce1536e62285d94e080e354a6c",
+      "actual_native_result_sha256": "13888795aff162ee968e2985c5dd6ff7d85c9ab5ea05ce3c2b80b59107064814",
+      "actual_metadata_comparison": {
+        "scope": "exact_JSON_scalar_singleton_geometry_metadata_only_NOT_matrix_flattening",
+        "checks": {
+          "all_other_configuration_fields_exactly_unchanged": true,
+          "only_predeclared_J1_satellite_latitude_singleton_metadata_conversion": true
+        },
+        "all_metadata_conversion_checks_pass": true,
+        "actual_conversions": [
+          {
+            "field": "configuration.tuned_not_reported.satellite_latitudes_deg",
+            "original_JSON_value": [
+              1.25
+            ],
+            "actual_native_JSON_value": 1.25,
+            "exact_singleton_value_equal": true,
+            "J_is_exactly_one": true
+          }
+        ],
+        "numerical_arrays_or_model_changed": false
+      },
+      "old_exact_JSON_dictionary_equality_pass": false,
+      "input_files_byte_unchanged": true
+    }
+  ],
+  "checks": {
+    "actual_immutable_configuration_files_bound_and_unchanged": true,
+    "exact_predeclared_singleton_conversion_and_all_other_fields_unchanged": true,
+    "v3_auditor_numeric_body_reverses_to_v2_without_changes": true
+  },
+  "old_N48_v2_audit_tool_observation": {
+    "session_id": 50820,
+    "exit_code": 1,
+    "failure_stage": "configuration_dictionary_assert_before_matrix_gradient_QT_moment_checks",
+    "raw_stderr_file_available": false
+  },
+  "v2_auditor_sha256": "8b3e3717cbc3c566ab179d53d8fc9f06bcca6a923c412247a205ede9e14f5fa0",
+  "v3_auditor_sha256": "b4b7015e28a535ae3dfe5c10de8efcaa8b2a9a15ebe97fc73754cadf20fdbd49",
+  "exact_configuration_metadata_helper_sha256": "ba55d5510ab6ffec58bc5a55e79c3af7fbce47934110428fcd895c5a8325f377",
+  "proof_source_sha256": "65406f3e01eb1534e15e9586c4cdc79cccccf278076099d71c1a9f40afc80052",
+  "actual_finalstate_audit_pass": false,
+  "full_reproduction_pass": false,
+  "all_metadata_and_source_proof_checks_pass": true
+}

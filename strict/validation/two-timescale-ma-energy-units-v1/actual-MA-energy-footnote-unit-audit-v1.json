@@ -1,0 +1,84 @@
+{
+  "scope": "exact_fraction_SI_unit_audit_of_MA_energy_footnote_not_figure_reproduction",
+  "arithmetic": {
+    "exact_SI_c_m_per_s": 299792458,
+    "frequency_Hz": 12000000000,
+    "wavelength_m": {
+      "numerator": 149896229,
+      "denominator": 6000000000,
+      "decimal_approximation": 0.024982704833333334
+    },
+    "half_wavelength_mm": {
+      "numerator": 149896229,
+      "denominator": 12000000,
+      "decimal_approximation": 12.491352416666667
+    },
+    "source_literal_displacement_mm": {
+      "numerator": 25,
+      "denominator": 1,
+      "decimal_approximation": 25.0
+    },
+    "per_antenna_motor_power_W": {
+      "numerator": 8,
+      "denominator": 1,
+      "decimal_approximation": 8.0
+    },
+    "antennas": 6,
+    "motor_speed_mm_per_ms": {
+      "numerator": 47,
+      "denominator": 50,
+      "decimal_approximation": 0.94
+    },
+    "two_axes_per_antenna": true,
+    "energy_for_physical_half_wavelength_J": {
+      "numerator": 149896229,
+      "denominator": 117500000,
+      "decimal_approximation": 1.2757125872340425
+    },
+    "energy_for_rounded_12_5_mm_J": {
+      "numerator": 60,
+      "denominator": 47,
+      "decimal_approximation": 1.2765957446808511
+    },
+    "energy_if_literal25_mm_is_used_J": {
+      "numerator": 120,
+      "denominator": 47,
+      "decimal_approximation": 2.5531914893617023
+    },
+    "transmit_energy_J": {
+      "numerator": 3,
+      "denominator": 100,
+      "decimal_approximation": 0.03
+    },
+    "physical_half_wavelength_move_to_radio_energy_ratio": {
+      "numerator": 149896229,
+      "denominator": 3525000,
+      "decimal_approximation": 42.523752907801416
+    },
+    "literal25mm_move_to_radio_energy_ratio": {
+      "numerator": 4000,
+      "denominator": 47,
+      "decimal_approximation": 85.1063829787234
+    },
+    "checks": {
+      "12_GHz_half_wavelength_not_25_mm": true,
+      "25_mm_is_approximately_one_wavelength_not_half": true,
+      "energy_1_28_J_matches_physical_half_wavelength_at_two_decimal_places": true,
+      "literal_25_mm_energy_is_about_2_55_J_not_1_28": true,
+      "radio_frame_energy_is_0_03_J": true,
+      "ratio_about42_requires_half_wavelength_not_literal25mm": true,
+      "literal25mm_ratio_is_about85": true
+    }
+  },
+  "audit_source_sha256": "4342e009485fdbcc91090092fa678843b6278079e80e893791e8911ba38ac775",
+  "supplied_author_source_literally_verified": true,
+  "final_IEEE_publisher_version_error_confirmed": false,
+  "simulation_parameters_or_results_modified": false,
+  "claimed_explanation_for_Fig3_or_Fig4_discrepancy": false,
+  "full_reproduction_pass": false,
+  "supplied_author_source_filename": "bare_jrnl.tex",
+  "supplied_author_source_sha256": "9ba173a0da8fcd472bb211155e0a4c1e7b9a0104a718bd88ac166808be876b19",
+  "source_footnote_line": 178,
+  "source_before_after_unchanged": true,
+  "source_units_identified_from_same_footnote": true
+}

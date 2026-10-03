@@ -1,0 +1,150 @@
+{
+  "scope": "actual_predeclared_all_four_first_RCG_blocks_not_complete_scenarios",
+  "actual_aggregate_sha256": "d95295ce615065cd9ac1bce174ef56869163b536fed65f98a00f24ba854d536a",
+  "pre_result_manifest_sha256": "1868b51ae88bad9d5001d482a7dbc1e2f112d42af970042cb1d9e0139c7b1143",
+  "large_raw_histories_retained_not_overwritten": {
+    "spectral-BB1-case001-cold100000-WORK-v3.json": {
+      "sha256": "8e93df922d2246ca59b104b8d8e3f32246e38896d0d8cfed6889350046fe1fa3",
+      "bytes": 103653884
+    },
+    "spectral-BB1-case002-cold100000-WORK-v3.json": {
+      "sha256": "6c09b0518302a3047862d1ffa3b9db5246ddf3884eecd65182828c4e36c6f866",
+      "bytes": 2857911
+    },
+    "spectral-BB2-case001-cold100000-WORK-v3.json": {
+      "sha256": "e0afbe9c802b1692e7c3608bbcf093439e71f3a1b827ec74df25d935b4441ca4",
+      "bytes": 123053554
+    },
+    "spectral-BB2-case002-cold100000-WORK-v3.json": {
+      "sha256": "00803729cb8305db81fcbd3c50fc280864f2e36d39e0063e19a7d23440c243b9",
+      "bytes": 37135376
+    }
+  },
+  "actual_evidence": {
+    "scope": "predeclared_fixed_four_serial_spectral_INITIAL_cold100000_diagnostics_no_live_changes",
+    "before_results_WORK_source_sha256": {
+      "test_spectral_initial_four_cold100000_work_v3.py": "5b9408f5f839eb88cb51e03e379c34316d3115beda62c72dd139111217cf9b30",
+      "SPECTRAL_INITIAL_FOUR_COLD100000_PLAN_V3.md": "006dd6814ee0b14c81a8d17241148b326d4cb983a0423dd9cf488c70fa6bed39",
+      "spectral_initial_armijo_seed_work_v1.py": "28ccd5cb93402d7eed24c16077259269c2401a45fb301e08e7386537c0ca993c",
+      "test_spectral_initial_seed_two_cases_work_v1.py": "c75e37444cd91ce10f079164290494350499212a0e6d93ad76c7b68acda567b8",
+      "stable_rcg_literal_work_v2.py": "6875a558fbecd3efc04fe9817c7990d8a7f02a1be5cfd0ce2a8bb89608ca01d9",
+      "stable_fixed_rotation_increment_work_v1.py": "6aae5f3ed807179f4c7136cefbd4b71d53f3443cbe3e210fb741f63f03406365",
+      "independent_highprecision_isac.py": "d14050078d636ca33bd78fb2206406735a22589eeb0aa14b0f28c3d443d893bc"
+    },
+    "production_fingerprint": "1e940a4c82564a8f8a8fb65a3bef2dd13702d7872e6eb9da761e4586c7a778fa",
+    "all_original_input_sha256": {
+      "case-000-mc-001.json": "e23f81cd2aa93f186f175f649fc85eb8448de53033fc36d60f1931df068f11d1",
+      "case-000-mc-002.json": "44cc8224c068f5a06bcd0b7c4ef9aabc780cdb44c4296cf256834e0254fb9ed2"
+    },
+    "prior10000_aggregate_sha256": "3f6a12769a32535a58944a97204fa483ae424929f18f2ad669bef58c4e37d538",
+    "all_four_prior10000_raw_sha256": {
+      "spectral-BB1-case002-cold10000-WORK-v2.json": "09bfd470d86ba9c116382ff5cac3b8e8c4f54fb5ce04dce6def01de5ed1c7795",
+      "spectral-BB1-case001-cold10000-WORK-v2.json": "4b71dc0e49ff1b3a31ab75e86db915249a72808fe0aabb9d1b649e9c4591992c",
+      "spectral-BB2-case001-cold10000-WORK-v2.json": "d9e736926e2d0a648da97ee01e711e116044b732bf2de5a92e6f65d76f5249ac",
+      "spectral-BB2-case002-cold10000-WORK-v2.json": "3c9a5355d8f448700f4833c6a260e9c139d31b45463af2915fa0e12ae2b36f36"
+    },
+    "separate_source_D3_exact_component_completed_before_launch_sha256": "aba3d198e9127c3109696eef724e9199770772a682a0bfda2fbc562b900311eb",
+    "fixed_population_and_order": [
+      [
+        "BB1",
+        1
+      ],
+      [
+        "BB1",
+        2
+      ],
+      [
+        "BB2",
+        1
+      ],
+      [
+        "BB2",
+        2
+      ]
+    ],
+    "maximum_computation_workers": 1,
+    "BLAS_threads": 1,
+    "only_unreported_safety_cap_changed10000_to100000": true,
+    "original_implemented_gradient_epsilon": 1e-06,
+    "raw_PR_transport_direction_restart_retraction_Armijo_backtrack_W_physical_model_unchanged": true,
+    "all_available10000_prefixes_require_bitwise_match_no_selected_successful_branch": true,
+    "fixed_MP50_80_probe_updates": [
+      0,
+      249,
+      499,
+      999,
+      4999,
+      9999,
+      19999,
+      49999,
+      99999
+    ],
+    "all_outcomes_failures_and_previous_receipts_retained": true,
+    "full_scenario_all500_bank_original_graphs_global_convergence_or_MATLAB_parity_claimed": false,
+    "actual_all_four_records": [
+      {
+        "strategy": "BB1",
+        "case": "case-000-mc-001",
+        "raw_file": "spectral-BB1-case001-cold100000-WORK-v3.json",
+        "raw_sha256": "8e93df922d2246ca59b104b8d8e3f32246e38896d0d8cfed6889350046fe1fa3",
+        "actual_exception": null,
+        "all_prior_available10000_prefix_bitwise_equal": true,
+        "actual_original_gradient_stop_passed": true,
+        "iterations": 81732,
+        "final_normalized_gradient": 7.315247010535248e-07,
+        "fixed_MP50_80_checks_passed": true,
+        "endpoint_gradient_check_passed": true,
+        "elapsed_seconds": 421.33257209998555
+      },
+      {
+        "strategy": "BB1",
+        "case": "case-000-mc-002",
+        "raw_file": "spectral-BB1-case002-cold100000-WORK-v3.json",
+        "raw_sha256": "6c09b0518302a3047862d1ffa3b9db5246ddf3884eecd65182828c4e36c6f866",
+        "actual_exception": null,
+        "all_prior_available10000_prefix_bitwise_equal": true,
+        "actual_original_gradient_stop_passed": true,
+        "iterations": 2048,
+        "final_normalized_gradient": 9.008723391934559e-07,
+        "fixed_MP50_80_checks_passed": true,
+        "endpoint_gradient_check_passed": true,
+        "elapsed_seconds": 32.554539199976716
+      },
+      {
+        "strategy": "BB2",
+        "case": "case-000-mc-001",
+        "raw_file": "spectral-BB2-case001-cold100000-WORK-v3.json",
+        "raw_sha256": "e0afbe9c802b1692e7c3608bbcf093439e71f3a1b827ec74df25d935b4441ca4",
+        "actual_exception": null,
+        "all_prior_available10000_prefix_bitwise_equal": true,
+        "actual_original_gradient_stop_passed": false,
+        "iterations": 100000,
+        "final_normalized_gradient": 0.00016463678316404304,
+        "fixed_MP50_80_checks_passed": true,
+        "endpoint_gradient_check_passed": true,
+        "elapsed_seconds": 278.7723497999832
+      },
+      {
+        "strategy": "BB2",
+        "case": "case-000-mc-002",
+        "raw_file": "spectral-BB2-case002-cold100000-WORK-v3.json",
+        "raw_sha256": "00803729cb8305db81fcbd3c50fc280864f2e36d39e0063e19a7d23440c243b9",
+        "actual_exception": null,
+        "all_prior_available10000_prefix_bitwise_equal": true,
+        "actual_original_gradient_stop_passed": true,
+        "iterations": 30555,
+        "final_normalized_gradient": 9.923370642534066e-07,
+        "fixed_MP50_80_checks_passed": true,
+        "endpoint_gradient_check_passed": true,
+        "elapsed_seconds": 97.63276710000355
+      }
+    ],
+    "all4_actual_original_gradient_stops_passed": false,
+    "all4_prior_available10000_prefixes_bitwise_equal": true,
+    "all4_fixed_physical_MP50_80_and_endpoint_checks_passed": true,
+    "all_production_WORK_inputs_prior_raw_sources_unchanged": true,
+    "elapsed_seconds": 856.8136557999533,
+    "production_or_complete_full_bank_promotion_claimed": false
+  },
+  "full_bank_or_all_six_schemes_or_MATLAB_parity_or_historical_graph_claimed": false
+}

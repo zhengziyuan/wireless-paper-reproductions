@@ -1,0 +1,1451 @@
+{
+  "scope": "ACTUAL_native_recording_v4_one_full_original8_chain_matrix_QT_gradient_and_moment_audit_NOT183_or_historical_figures",
+  "actual_configuration_serialization_equivalence": {
+    "scope": "exact_JSON_scalar_singleton_geometry_metadata_only_NOT_matrix_flattening",
+    "checks": {
+      "all_other_configuration_fields_exactly_unchanged": true,
+      "only_predeclared_J1_satellite_latitude_singleton_metadata_conversion": true
+    },
+    "all_metadata_conversion_checks_pass": true,
+    "actual_conversions": [
+      {
+        "field": "configuration.tuned_not_reported.satellite_latitudes_deg",
+        "original_JSON_value": [
+          1.25
+        ],
+        "actual_native_JSON_value": 1.25,
+        "exact_singleton_value_equal": true,
+        "J_is_exactly_one": true
+      }
+    ],
+    "numerical_arrays_or_model_changed": false
+  },
+  "actual_inputs_sha256": {
+    "recording-v4-N48-actual-matlab-v1.json": "13888795aff162ee968e2985c5dd6ff7d85c9ab5ea05ce3c2b80b59107064814",
+    "recording-v4-N48-actual-matlab-v1.json.states.mat": "bc11f1f6578f6262b230a995a6d77a5c3d89b0bc5f235f485210adef2373f718",
+    "recording-v4-N48-actual-matlab-v1-runtime.json": "6d3488e780e317796128ff4f73f4e79a54bec1824a4a43f10c8f9f8e9d3577ea",
+    "N48-configuration.json": "72552c2b4500cb2371bcf19a259e591e225492ce1536e62285d94e080e354a6c"
+  },
+  "full_dimensions": {
+    "J": 1,
+    "U": 2,
+    "N": 48,
+    "M": 25,
+    "K": 1
+  },
+  "independent_auditor_sources_before": {
+    "audit_cooperative_native_v4_actual_v3_work.py": "b4b7015e28a535ae3dfe5c10de8efcaa8b2a9a15ebe97fc73754cadf20fdbd49",
+    "mat73_readonly_v2_work.py": "dc6b32e1dee55fff6e7c494ca9cc2b0bdd0f9fc250dc26f068e39c877aaf3d3c",
+    "audit_recording_v4_actual_work.py": "de132fed06811d95bcc08f0a954b406704b4cf9d7a933785a5728a5f07d204b7",
+    "models.py": "ce974bbe26e97481425a603b4dc2cbfc7317b284bb192f482d49d71a28e5819e",
+    "scenario.py": "7dbc490944c2fd7aaa2fc862068508530faab10b8c2dcb63eccf5511c74a62ba",
+    "core.py": "fdbe81b3d19e1c1aa62a015969017f24accdcdb6e7a709a65540576b49f0abf2",
+    "native_configuration_equivalence_v3_work.py": "ba55d5510ab6ffec58bc5a55e79c3af7fbce47934110428fcd895c5a8325f377"
+  },
+  "independent_auditor_sources_after": {
+    "audit_cooperative_native_v4_actual_v3_work.py": "b4b7015e28a535ae3dfe5c10de8efcaa8b2a9a15ebe97fc73754cadf20fdbd49",
+    "mat73_readonly_v2_work.py": "dc6b32e1dee55fff6e7c494ca9cc2b0bdd0f9fc250dc26f068e39c877aaf3d3c",
+    "audit_recording_v4_actual_work.py": "de132fed06811d95bcc08f0a954b406704b4cf9d7a933785a5728a5f07d204b7",
+    "models.py": "ce974bbe26e97481425a603b4dc2cbfc7317b284bb192f482d49d71a28e5819e",
+    "scenario.py": "7dbc490944c2fd7aaa2fc862068508530faab10b8c2dcb63eccf5511c74a62ba",
+    "core.py": "fdbe81b3d19e1c1aa62a015969017f24accdcdb6e7a709a65540576b49f0abf2",
+    "native_configuration_equivalence_v3_work.py": "ba55d5510ab6ffec58bc5a55e79c3af7fbce47934110428fcd895c5a8325f377"
+  },
+  "checks": {
+    "actual_original_summary_four_gates_pass": true,
+    "actual_input_source_selected_runtime_interval_pass": true,
+    "independent_auditor_and_oracle_source_interval_pass": true,
+    "all_eight_final_matrix_metrics_pass": true,
+    "all_eight_original_final_physical_constraints_pass": true,
+    "all_original_recorded_stop_residuals_pass": true,
+    "all_actual_phase_final_gradients_original_threshold_pass": true,
+    "all_original_QT_candidates_constraints_bound_monotonicity_pass": true,
+    "all1000_recorded_draw_moment_metrics_rebuilt_pass": true,
+    "all_original1000_native_draws_and_final_rng_bitwise_replayed": true
+  },
+  "all_independent_native_implemented_numerical_checks_pass": true,
+  "actual_scheme_records": [
+    {
+      "scheme": "AP-NoRIS",
+      "rebuilt_metrics": {
+        "sinr": [
+          0.019471799686113223,
+          0.019471799686448087
+        ],
+        "denominator": [
+          1.1541464268324515,
+          1.1551351366293097
+        ],
+        "satellite_power": [
+          0.0061063406824014965
+        ],
+        "gt_interference": [
+          0.019999999999992087
+        ]
+      },
+      "reported_metric_maximum_errors": {
+        "sinr": 6.938893903907228e-18,
+        "denominator": 0.0,
+        "satellite_power": 0.0,
+        "gt_interference": 0.0
+      },
+      "matrix_metric_pass": true,
+      "unit_modulus_maximum_error": 1.1102230246251565e-16,
+      "absolute_original_physical_violation": 0.0,
+      "original_final_physical_gate_pass": true,
+      "all_recorded_original_stop_residuals_pass": true,
+      "recorded_stop_count": 1
+    },
+    {
+      "scheme": "AP-AO",
+      "rebuilt_metrics": {
+        "sinr": [
+          2.2229071852576126,
+          2.2229082065796075
+        ],
+        "denominator": [
+          1.0744927917550957,
+          1.0953458281373265
+        ],
+        "satellite_power": [
+          0.006495341532378651
+        ],
+        "gt_interference": [
+          0.01999999999999876
+        ]
+      },
+      "reported_metric_maximum_errors": {
+        "sinr": 8.881784197001252e-16,
+        "denominator": 0.0,
+        "satellite_power": 8.673617379884035e-19,
+        "gt_interference": 0.0
+      },
+      "matrix_metric_pass": true,
+      "unit_modulus_maximum_error": 2.220446049250313e-16,
+      "absolute_original_physical_violation": 0.0,
+      "original_final_physical_gate_pass": true,
+      "all_recorded_original_stop_residuals_pass": true,
+      "recorded_stop_count": 6
+    },
+    {
+      "scheme": "MR-S-NoRIS",
+      "rebuilt_metrics": {
+        "sinr": [
+          0.018719856587078674,
+          0.018719856587728706
+        ],
+        "denominator": [
+          1.1549983317358057,
+          1.15507790345701
+        ],
+        "satellite_power": [
+          0.005749143036934113
+        ],
+        "gt_interference": [
+          0.020000000000025116
+        ]
+      },
+      "reported_metric_maximum_errors": {
+        "sinr": 3.469446951953614e-18,
+        "denominator": 2.220446049250313e-16,
+        "satellite_power": 0.0,
+        "gt_interference": 0.0
+      },
+      "matrix_metric_pass": true,
+      "unit_modulus_maximum_error": 1.1102230246251565e-16,
+      "absolute_original_physical_violation": 2.5115326485192213e-14,
+      "original_final_physical_gate_pass": true,
+      "all_recorded_original_stop_residuals_pass": true,
+      "recorded_stop_count": 1
+    },
+    {
+      "scheme": "MR-S-PA",
+      "rebuilt_metrics": {
+        "sinr": [
+          1.9441354938062698,
+          1.9441354938704487
+        ],
+        "denominator": [
+          1.1789606319786048,
+          1.1814477089410063
+        ],
+        "satellite_power": [
+          0.0059723179461958435
+        ],
+        "gt_interference": [
+          0.019999999999907987
+        ]
+      },
+      "reported_metric_maximum_errors": {
+        "sinr": 1.7763568394002505e-15,
+        "denominator": 1.1102230246251565e-15,
+        "satellite_power": 0.0,
+        "gt_interference": 0.0
+      },
+      "matrix_metric_pass": true,
+      "unit_modulus_maximum_error": 2.220446049250313e-16,
+      "absolute_original_physical_violation": 0.0,
+      "original_final_physical_gate_pass": true,
+      "all_recorded_original_stop_residuals_pass": true,
+      "recorded_stop_count": 1
+    },
+    {
+      "scheme": "MR-S-TS",
+      "rebuilt_metrics": {
+        "sinr": [
+          1.6411882586632025,
+          1.6411884300317454
+        ],
+        "denominator": [
+          1.1460737730734563,
+          1.158046348628295
+        ],
+        "satellite_power": [
+          0.005688651566405601
+        ],
+        "gt_interference": [
+          0.019999999999987552
+        ]
+      },
+      "reported_metric_maximum_errors": {
+        "sinr": 6.661338147750939e-16,
+        "denominator": 4.440892098500626e-16,
+        "satellite_power": 8.673617379884035e-19,
+        "gt_interference": 0.0
+      },
+      "matrix_metric_pass": true,
+      "unit_modulus_maximum_error": 2.220446049250313e-16,
+      "absolute_original_physical_violation": 0.0,
+      "original_final_physical_gate_pass": true,
+      "all_recorded_original_stop_residuals_pass": true,
+      "recorded_stop_count": 21
+    },
+    {
+      "scheme": "MR-TTS-NoRIS",
+      "rebuilt_metrics": {
+        "sinr": [
+          0.06953982814618381,
+          0.0695398281461177
+        ],
+        "denominator": [
+          1.1565137922732618,
+          1.1566560942895872
+        ],
+        "satellite_power": [
+          0.010692645837241724
+        ],
+        "gt_interference": [
+          0.019999999999931288
+        ]
+      },
+      "reported_metric_maximum_errors": {
+        "sinr": 0.0,
+        "denominator": 0.0,
+        "satellite_power": 0.0,
+        "gt_interference": 3.469446951953614e-18
+      },
+      "matrix_metric_pass": true,
+      "unit_modulus_maximum_error": 1.1102230246251565e-16,
+      "absolute_original_physical_violation": 0.0,
+      "original_final_physical_gate_pass": true,
+      "all_recorded_original_stop_residuals_pass": true,
+      "recorded_stop_count": 1
+    },
+    {
+      "scheme": "MR-TTS-PA",
+      "rebuilt_metrics": {
+        "sinr": [
+          2.1076689113800264,
+          2.107668911447893
+        ],
+        "denominator": [
+          1.1917403858044222,
+          1.1954834704937936
+        ],
+        "satellite_power": [
+          0.00622074765151367
+        ],
+        "gt_interference": [
+          0.02000000000002052
+        ]
+      },
+      "reported_metric_maximum_errors": {
+        "sinr": 8.881784197001252e-16,
+        "denominator": 4.440892098500626e-16,
+        "satellite_power": 8.673617379884035e-19,
+        "gt_interference": 0.0
+      },
+      "matrix_metric_pass": true,
+      "unit_modulus_maximum_error": 2.220446049250313e-16,
+      "absolute_original_physical_violation": 2.0518309273853674e-14,
+      "original_final_physical_gate_pass": true,
+      "all_recorded_original_stop_residuals_pass": true,
+      "recorded_stop_count": 1
+    },
+    {
+      "scheme": "MR-TTS-TS",
+      "rebuilt_metrics": {
+        "sinr": [
+          1.8407317258241005,
+          1.8407318709951128
+        ],
+        "denominator": [
+          1.1608510789365667,
+          1.1730196901781171
+        ],
+        "satellite_power": [
+          0.005986901671545005
+        ],
+        "gt_interference": [
+          0.020000000000027968
+        ]
+      },
+      "reported_metric_maximum_errors": {
+        "sinr": 3.1086244689504383e-15,
+        "denominator": 1.5543122344752192e-15,
+        "satellite_power": 8.673617379884035e-19,
+        "gt_interference": 3.469446951953614e-18
+      },
+      "matrix_metric_pass": true,
+      "unit_modulus_maximum_error": 2.220446049250313e-16,
+      "absolute_original_physical_violation": 2.7967211879698084e-14,
+      "original_final_physical_gate_pass": true,
+      "all_recorded_original_stop_residuals_pass": true,
+      "recorded_stop_count": 21
+    }
+  ],
+  "actual_phase_stage_records": [
+    {
+      "phase_stage": 0,
+      "kind": "AP",
+      "iterations": 70,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 9.041760155846681e-07,
+      "actual_saved_gradient_norm": 9.041760156107672e-07,
+      "maximum_gradient_error": 5.4278593410292075e-17,
+      "maximum_criterion_error": 4.440892098500626e-16,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 1,
+      "kind": "AP",
+      "iterations": 13,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 6.80024734136759e-07,
+      "actual_saved_gradient_norm": 6.800247341164895e-07,
+      "maximum_gradient_error": 8.970773475757943e-17,
+      "maximum_criterion_error": 1.7763568394002505e-15,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 2,
+      "kind": "AP",
+      "iterations": 7,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 7.958666154806018e-07,
+      "actual_saved_gradient_norm": 7.958666156030239e-07,
+      "maximum_gradient_error": 1.1909903743491237e-16,
+      "maximum_criterion_error": 0.0,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 3,
+      "kind": "AP",
+      "iterations": 4,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 7.369085580955544e-07,
+      "actual_saved_gradient_norm": 7.369085581230696e-07,
+      "maximum_gradient_error": 1.2733025601819968e-16,
+      "maximum_criterion_error": 4.440892098500626e-16,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 4,
+      "kind": "AP",
+      "iterations": 2,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 5.754802326521618e-07,
+      "actual_saved_gradient_norm": 5.754802326628355e-07,
+      "maximum_gradient_error": 1.3880303604722348e-16,
+      "maximum_criterion_error": 4.440892098500626e-16,
+      "reported_residual_error": 1.0587911840678754e-22,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 5,
+      "kind": "MR-S",
+      "iterations": 142,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 1.8597346842253537e-07,
+      "actual_saved_gradient_norm": 1.8597347029604405e-07,
+      "maximum_gradient_error": 1.861913401235214e-13,
+      "maximum_criterion_error": 1.7763568394002505e-13,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 6,
+      "kind": "MR-S",
+      "iterations": 0,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 1.8597346842253537e-07,
+      "actual_saved_gradient_norm": 1.8597347029604405e-07,
+      "maximum_gradient_error": 1.861913401235214e-13,
+      "maximum_criterion_error": 1.7763568394002505e-13,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 7,
+      "kind": "MR-S",
+      "iterations": 46,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 8.094037422091681e-07,
+      "actual_saved_gradient_norm": 8.094037409623697e-07,
+      "maximum_gradient_error": 2.5656560221492164e-14,
+      "maximum_criterion_error": 1.0658141036401503e-14,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 8,
+      "kind": "MR-S",
+      "iterations": 0,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 8.094037422091681e-07,
+      "actual_saved_gradient_norm": 8.094037409623697e-07,
+      "maximum_gradient_error": 2.5656560221492164e-14,
+      "maximum_criterion_error": 1.0658141036401503e-14,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 9,
+      "kind": "MR-S",
+      "iterations": 67,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 3.6591635488624474e-07,
+      "actual_saved_gradient_norm": 3.6591587955272507e-07,
+      "maximum_gradient_error": 4.4707987311632095e-13,
+      "maximum_criterion_error": 1.7763568394002505e-14,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 10,
+      "kind": "MR-S",
+      "iterations": 0,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 3.6591635488624474e-07,
+      "actual_saved_gradient_norm": 3.6591587955272507e-07,
+      "maximum_gradient_error": 4.4707987311632095e-13,
+      "maximum_criterion_error": 1.7763568394002505e-14,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 11,
+      "kind": "MR-S",
+      "iterations": 51,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 4.860337638602743e-07,
+      "actual_saved_gradient_norm": 4.860337635143263e-07,
+      "maximum_gradient_error": 2.585744118820652e-13,
+      "maximum_criterion_error": 5.3290705182007514e-14,
+      "reported_residual_error": 1.0587911840678754e-22,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 12,
+      "kind": "MR-S",
+      "iterations": 0,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 4.860337638602743e-07,
+      "actual_saved_gradient_norm": 4.860337635143263e-07,
+      "maximum_gradient_error": 2.585744118820652e-13,
+      "maximum_criterion_error": 5.3290705182007514e-14,
+      "reported_residual_error": 1.0587911840678754e-22,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 13,
+      "kind": "MR-S",
+      "iterations": 70,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 6.222703386917836e-07,
+      "actual_saved_gradient_norm": 6.222699481650442e-07,
+      "maximum_gradient_error": 4.126664288064007e-13,
+      "maximum_criterion_error": 3.375077994860476e-14,
+      "reported_residual_error": 1.0587911840678754e-22,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 14,
+      "kind": "MR-S",
+      "iterations": 0,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 6.222703386917836e-07,
+      "actual_saved_gradient_norm": 6.222699481650442e-07,
+      "maximum_gradient_error": 4.126664288064007e-13,
+      "maximum_criterion_error": 3.375077994860476e-14,
+      "reported_residual_error": 1.0587911840678754e-22,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 15,
+      "kind": "MR-S",
+      "iterations": 59,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 5.130874997219179e-07,
+      "actual_saved_gradient_norm": 5.130877421303647e-07,
+      "maximum_gradient_error": 7.565059689634278e-13,
+      "maximum_criterion_error": 1.0658141036401503e-14,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 16,
+      "kind": "MR-S",
+      "iterations": 0,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 5.130874997219179e-07,
+      "actual_saved_gradient_norm": 5.130877421303647e-07,
+      "maximum_gradient_error": 7.565059689634278e-13,
+      "maximum_criterion_error": 1.0658141036401503e-14,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 17,
+      "kind": "MR-S",
+      "iterations": 63,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 9.187634749444813e-07,
+      "actual_saved_gradient_norm": 9.187634812496041e-07,
+      "maximum_gradient_error": 1.0335482466065268e-14,
+      "maximum_criterion_error": 1.4210854715202004e-14,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 18,
+      "kind": "MR-S",
+      "iterations": 0,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 9.187634749444813e-07,
+      "actual_saved_gradient_norm": 9.187634812496041e-07,
+      "maximum_gradient_error": 1.0335482466065268e-14,
+      "maximum_criterion_error": 1.4210854715202004e-14,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 19,
+      "kind": "MR-S",
+      "iterations": 65,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 8.653920142758873e-07,
+      "actual_saved_gradient_norm": 8.653932027089117e-07,
+      "maximum_gradient_error": 9.36107441562511e-12,
+      "maximum_criterion_error": 2.842170943040401e-14,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 20,
+      "kind": "MR-S",
+      "iterations": 0,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 8.653920142758873e-07,
+      "actual_saved_gradient_norm": 8.653932027089117e-07,
+      "maximum_gradient_error": 9.36107441562511e-12,
+      "maximum_criterion_error": 2.842170943040401e-14,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 21,
+      "kind": "MR-S",
+      "iterations": 58,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 7.405833158414095e-07,
+      "actual_saved_gradient_norm": 7.405807015649903e-07,
+      "maximum_gradient_error": 7.249211647622756e-12,
+      "maximum_criterion_error": 1.9539925233402755e-14,
+      "reported_residual_error": 1.0587911840678754e-22,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 22,
+      "kind": "MR-S",
+      "iterations": 0,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 7.405833158414095e-07,
+      "actual_saved_gradient_norm": 7.405807015649903e-07,
+      "maximum_gradient_error": 7.249211647622756e-12,
+      "maximum_criterion_error": 1.9539925233402755e-14,
+      "reported_residual_error": 1.0587911840678754e-22,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 23,
+      "kind": "MR-S",
+      "iterations": 61,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 8.44578245391055e-07,
+      "actual_saved_gradient_norm": 8.44578392400704e-07,
+      "maximum_gradient_error": 3.140754323286678e-11,
+      "maximum_criterion_error": 2.1316282072803006e-14,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 24,
+      "kind": "MR-S",
+      "iterations": 0,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 8.44578245391055e-07,
+      "actual_saved_gradient_norm": 8.44578392400704e-07,
+      "maximum_gradient_error": 3.140754323286678e-11,
+      "maximum_criterion_error": 2.1316282072803006e-14,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 25,
+      "kind": "MR-TTS",
+      "iterations": 930,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 9.801064162565232e-07,
+      "actual_saved_gradient_norm": 9.801065136574237e-07,
+      "maximum_gradient_error": 1.149080830508735e-13,
+      "maximum_criterion_error": 2.4868995751603507e-14,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 26,
+      "kind": "MR-TTS",
+      "iterations": 0,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 9.801064162565232e-07,
+      "actual_saved_gradient_norm": 9.801065136574237e-07,
+      "maximum_gradient_error": 1.149080830508735e-13,
+      "maximum_criterion_error": 2.4868995751603507e-14,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 27,
+      "kind": "MR-TTS",
+      "iterations": 159,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 6.973850572351565e-07,
+      "actual_saved_gradient_norm": 6.973850617045835e-07,
+      "maximum_gradient_error": 1.6775469902094196e-13,
+      "maximum_criterion_error": 1.9539925233402755e-13,
+      "reported_residual_error": 1.0587911840678754e-22,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 28,
+      "kind": "MR-TTS",
+      "iterations": 0,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 6.973850572351565e-07,
+      "actual_saved_gradient_norm": 6.973850617045835e-07,
+      "maximum_gradient_error": 1.6775469902094196e-13,
+      "maximum_criterion_error": 1.9539925233402755e-13,
+      "reported_residual_error": 1.0587911840678754e-22,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 29,
+      "kind": "MR-TTS",
+      "iterations": 58,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 8.538030567595494e-07,
+      "actual_saved_gradient_norm": 8.538030079522216e-07,
+      "maximum_gradient_error": 4.805600362192344e-13,
+      "maximum_criterion_error": 5.684341886080802e-14,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 30,
+      "kind": "MR-TTS",
+      "iterations": 0,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 8.538030567595494e-07,
+      "actual_saved_gradient_norm": 8.538030079522216e-07,
+      "maximum_gradient_error": 4.805600362192344e-13,
+      "maximum_criterion_error": 5.684341886080802e-14,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 31,
+      "kind": "MR-TTS",
+      "iterations": 82,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 9.78421620567851e-07,
+      "actual_saved_gradient_norm": 9.784216224771382e-07,
+      "maximum_gradient_error": 1.4360734823615308e-13,
+      "maximum_criterion_error": 1.0658141036401503e-14,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 32,
+      "kind": "MR-TTS",
+      "iterations": 0,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 9.78421620567851e-07,
+      "actual_saved_gradient_norm": 9.784216224771382e-07,
+      "maximum_gradient_error": 1.4360734823615308e-13,
+      "maximum_criterion_error": 1.0658141036401503e-14,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 33,
+      "kind": "MR-TTS",
+      "iterations": 77,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 8.771862406492673e-07,
+      "actual_saved_gradient_norm": 8.771856380210344e-07,
+      "maximum_gradient_error": 1.2994605391779105e-12,
+      "maximum_criterion_error": 9.237055564881302e-14,
+      "reported_residual_error": 1.0587911840678754e-22,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 34,
+      "kind": "MR-TTS",
+      "iterations": 0,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 8.771862406492673e-07,
+      "actual_saved_gradient_norm": 8.771856380210344e-07,
+      "maximum_gradient_error": 1.2994605391779105e-12,
+      "maximum_criterion_error": 9.237055564881302e-14,
+      "reported_residual_error": 1.0587911840678754e-22,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 35,
+      "kind": "MR-TTS",
+      "iterations": 68,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 8.948534237170911e-07,
+      "actual_saved_gradient_norm": 8.948521870262206e-07,
+      "maximum_gradient_error": 1.5563106359195057e-12,
+      "maximum_criterion_error": 6.927791673660977e-14,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 36,
+      "kind": "MR-TTS",
+      "iterations": 0,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 8.948534237170911e-07,
+      "actual_saved_gradient_norm": 8.948521870262206e-07,
+      "maximum_gradient_error": 1.5563106359195057e-12,
+      "maximum_criterion_error": 6.927791673660977e-14,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 37,
+      "kind": "MR-TTS",
+      "iterations": 59,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 8.448307008287051e-07,
+      "actual_saved_gradient_norm": 8.448307663693661e-07,
+      "maximum_gradient_error": 2.079780792030393e-12,
+      "maximum_criterion_error": 9.769962616701378e-14,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 38,
+      "kind": "MR-TTS",
+      "iterations": 0,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 8.448307008287051e-07,
+      "actual_saved_gradient_norm": 8.448307663693661e-07,
+      "maximum_gradient_error": 2.079780792030393e-12,
+      "maximum_criterion_error": 9.769962616701378e-14,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 39,
+      "kind": "MR-TTS",
+      "iterations": 62,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 8.699563320774176e-07,
+      "actual_saved_gradient_norm": 8.699563337163293e-07,
+      "maximum_gradient_error": 1.0645984094277686e-11,
+      "maximum_criterion_error": 5.3290705182007514e-14,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 40,
+      "kind": "MR-TTS",
+      "iterations": 0,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 8.699563320774176e-07,
+      "actual_saved_gradient_norm": 8.699563337163293e-07,
+      "maximum_gradient_error": 1.0645984094277686e-11,
+      "maximum_criterion_error": 5.3290705182007514e-14,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 41,
+      "kind": "MR-TTS",
+      "iterations": 40,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 9.504127739604513e-07,
+      "actual_saved_gradient_norm": 9.504045191977685e-07,
+      "maximum_gradient_error": 7.400136059488911e-12,
+      "maximum_criterion_error": 4.618527782440651e-14,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 42,
+      "kind": "MR-TTS",
+      "iterations": 0,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 9.504127739604513e-07,
+      "actual_saved_gradient_norm": 9.504045191977685e-07,
+      "maximum_gradient_error": 7.400136059488911e-12,
+      "maximum_criterion_error": 4.618527782440651e-14,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 43,
+      "kind": "MR-TTS",
+      "iterations": 110,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 8.936161906363627e-07,
+      "actual_saved_gradient_norm": 8.93640106984523e-07,
+      "maximum_gradient_error": 8.335898638023268e-11,
+      "maximum_criterion_error": 3.019806626980426e-14,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    },
+    {
+      "phase_stage": 44,
+      "kind": "MR-TTS",
+      "iterations": 0,
+      "iteration_cap": 100000,
+      "original_threshold": 1e-06,
+      "independent_scalar_coordinate_gradient_norm": 8.936161906363627e-07,
+      "actual_saved_gradient_norm": 8.93640106984523e-07,
+      "maximum_gradient_error": 8.335898638023268e-11,
+      "maximum_criterion_error": 3.019806626980426e-14,
+      "reported_residual_error": 0.0,
+      "original_real_stop_and_record_length_pass": true,
+      "independent_gradient_original_threshold_pass": true,
+      "saved_gradient_and_scalar_oracle_pass": true,
+      "actual_fixed_phase_stage_context_not_later_final_power_used": true
+    }
+  ],
+  "actual_QT_records": [
+    {
+      "original_QT_call": 0,
+      "kind": "ap",
+      "original_physical_relative_violation": 0.0,
+      "original_conic_user_violation": 0.0,
+      "original_QT_bound_violation": 0.0,
+      "original_objective_increase": 0.0025797522981482503,
+      "maximum_auxiliary_identity_error": 6.938893903907228e-18,
+      "original_primal_gate_pass": true,
+      "original_QT_bound_gate_pass": true,
+      "original_monotonicity_gate_pass": true,
+      "recorded_before_after_matrix_metrics_pass": true,
+      "same_current_auxiliary_identity_pass": true
+    },
+    {
+      "original_QT_call": 1,
+      "kind": "ap",
+      "original_physical_relative_violation": 0.0,
+      "original_conic_user_violation": 0.0,
+      "original_QT_bound_violation": 0.0,
+      "original_objective_increase": 8.12876795749165e-05,
+      "maximum_auxiliary_identity_error": 1.3877787807814457e-17,
+      "original_primal_gate_pass": true,
+      "original_QT_bound_gate_pass": true,
+      "original_monotonicity_gate_pass": true,
+      "recorded_before_after_matrix_metrics_pass": true,
+      "same_current_auxiliary_identity_pass": true
+    },
+    {
+      "original_QT_call": 2,
+      "kind": "ap",
+      "original_physical_relative_violation": 0.0,
+      "original_conic_user_violation": 0.0,
+      "original_QT_bound_violation": 0.0,
+      "original_objective_increase": 1.7396607834840871e-09,
+      "maximum_auxiliary_identity_error": 1.0408340855860843e-17,
+      "original_primal_gate_pass": true,
+      "original_QT_bound_gate_pass": true,
+      "original_monotonicity_gate_pass": true,
+      "recorded_before_after_matrix_metrics_pass": true,
+      "same_current_auxiliary_identity_pass": true
+    },
+    {
+      "original_QT_call": 3,
+      "kind": "ap",
+      "original_physical_relative_violation": 0.0,
+      "original_conic_user_violation": 0.0,
+      "original_QT_bound_violation": 0.0,
+      "original_objective_increase": 4.0599756070698774e-05,
+      "maximum_auxiliary_identity_error": 5.551115123125783e-17,
+      "original_primal_gate_pass": true,
+      "original_QT_bound_gate_pass": true,
+      "original_monotonicity_gate_pass": true,
+      "recorded_before_after_matrix_metrics_pass": true,
+      "same_current_auxiliary_identity_pass": true
+    },
+    {
+      "original_QT_call": 4,
+      "kind": "ap",
+      "original_physical_relative_violation": 0.0,
+      "original_conic_user_violation": 0.0,
+      "original_QT_bound_violation": 0.0,
+      "original_objective_increase": 1.6902889271539607,
+      "maximum_auxiliary_identity_error": 8.881784197001252e-16,
+      "original_primal_gate_pass": true,
+      "original_QT_bound_gate_pass": true,
+      "original_monotonicity_gate_pass": true,
+      "recorded_before_after_matrix_metrics_pass": true,
+      "same_current_auxiliary_identity_pass": true
+    },
+    {
+      "original_QT_call": 5,
+      "kind": "ap",
+      "original_physical_relative_violation": 0.0,
+      "original_conic_user_violation": 0.0,
+      "original_QT_bound_violation": 0.0,
+      "original_objective_increase": 0.03535756900846421,
+      "maximum_auxiliary_identity_error": 1.3322676295501878e-15,
+      "original_primal_gate_pass": true,
+      "original_QT_bound_gate_pass": true,
+      "original_monotonicity_gate_pass": true,
+      "recorded_before_after_matrix_metrics_pass": true,
+      "same_current_auxiliary_identity_pass": true
+    },
+    {
+      "original_QT_call": 6,
+      "kind": "ap",
+      "original_physical_relative_violation": 0.0,
+      "original_conic_user_violation": 0.0,
+      "original_QT_bound_violation": 0.0,
+      "original_objective_increase": 0.0035145915538334904,
+      "maximum_auxiliary_identity_error": 4.440892098500626e-16,
+      "original_primal_gate_pass": true,
+      "original_QT_bound_gate_pass": true,
+      "original_monotonicity_gate_pass": true,
+      "recorded_before_after_matrix_metrics_pass": true,
+      "same_current_auxiliary_identity_pass": true
+    },
+    {
+      "original_QT_call": 7,
+      "kind": "ap",
+      "original_physical_relative_violation": 0.0,
+      "original_conic_user_violation": 0.0,
+      "original_QT_bound_violation": 0.0,
+      "original_objective_increase": 5.541330243685749e-05,
+      "maximum_auxiliary_identity_error": 8.881784197001252e-16,
+      "original_primal_gate_pass": true,
+      "original_QT_bound_gate_pass": true,
+      "original_monotonicity_gate_pass": true,
+      "recorded_before_after_matrix_metrics_pass": true,
+      "same_current_auxiliary_identity_pass": true
+    },
+    {
+      "original_QT_call": 8,
+      "kind": "mr",
+      "original_physical_relative_violation": 4.1167069753100805e-13,
+      "original_conic_user_violation": 0.0,
+      "original_QT_bound_violation": 0.0,
+      "original_objective_increase": 0.0010158449105555113,
+      "maximum_auxiliary_identity_error": 3.469446951953614e-18,
+      "original_primal_gate_pass": true,
+      "original_QT_bound_gate_pass": true,
+      "original_monotonicity_gate_pass": true,
+      "recorded_before_after_matrix_metrics_pass": true,
+      "same_current_auxiliary_identity_pass": true
+    },
+    {
+      "original_QT_call": 9,
+      "kind": "mr",
+      "original_physical_relative_violation": 0.0,
+      "original_conic_user_violation": 0.0,
+      "original_QT_bound_violation": 0.0,
+      "original_objective_increase": 9.85825847096139e-06,
+      "maximum_auxiliary_identity_error": 0.0,
+      "original_primal_gate_pass": true,
+      "original_QT_bound_gate_pass": true,
+      "original_monotonicity_gate_pass": true,
+      "recorded_before_after_matrix_metrics_pass": true,
+      "same_current_auxiliary_identity_pass": true
+    },
+    {
+      "original_QT_call": 10,
+      "kind": "mr",
+      "original_physical_relative_violation": 1.255662240851052e-12,
+      "original_conic_user_violation": 0.0,
+      "original_QT_bound_violation": 0.0,
+      "original_objective_increase": 7.531594098386662e-11,
+      "maximum_auxiliary_identity_error": 3.469446951953614e-18,
+      "original_primal_gate_pass": true,
+      "original_QT_bound_gate_pass": true,
+      "original_monotonicity_gate_pass": true,
+      "recorded_before_after_matrix_metrics_pass": true,
+      "same_current_auxiliary_identity_pass": true
+    },
+    {
+      "original_QT_call": 11,
+      "kind": "mr",
+      "original_physical_relative_violation": 0.0,
+      "original_conic_user_violation": 0.0,
+      "original_QT_bound_violation": 0.0,
+      "original_objective_increase": 0.2866639704123475,
+      "maximum_auxiliary_identity_error": 2.220446049250313e-16,
+      "original_primal_gate_pass": true,
+      "original_QT_bound_gate_pass": true,
+      "original_monotonicity_gate_pass": true,
+      "recorded_before_after_matrix_metrics_pass": true,
+      "same_current_auxiliary_identity_pass": true
+    },
+    {
+      "original_QT_call": 12,
+      "kind": "mr",
+      "original_physical_relative_violation": 0.0,
+      "original_conic_user_violation": 4.967723663569055e-13,
+      "original_QT_bound_violation": 0.0,
+      "original_objective_increase": 0.0015658997904757221,
+      "maximum_auxiliary_identity_error": 2.220446049250313e-16,
+      "original_primal_gate_pass": true,
+      "original_QT_bound_gate_pass": true,
+      "original_monotonicity_gate_pass": true,
+      "recorded_before_after_matrix_metrics_pass": true,
+      "same_current_auxiliary_identity_pass": true
+    },
+    {
+      "original_QT_call": 13,
+      "kind": "mr",
+      "original_physical_relative_violation": 0.0,
+      "original_conic_user_violation": 0.0,
+      "original_QT_bound_violation": 0.0,
+      "original_objective_increase": 1.608193591406959e-06,
+      "maximum_auxiliary_identity_error": 2.220446049250313e-16,
+      "original_primal_gate_pass": true,
+      "original_QT_bound_gate_pass": true,
+      "original_monotonicity_gate_pass": true,
+      "recorded_before_after_matrix_metrics_pass": true,
+      "same_current_auxiliary_identity_pass": true
+    },
+    {
+      "original_QT_call": 14,
+      "kind": "mr",
+      "original_physical_relative_violation": 0.0,
+      "original_conic_user_violation": 8.865067672722212e-13,
+      "original_QT_bound_violation": 0.0,
+      "original_objective_increase": 0.01193701397333613,
+      "maximum_auxiliary_identity_error": 2.220446049250313e-16,
+      "original_primal_gate_pass": true,
+      "original_QT_bound_gate_pass": true,
+      "original_monotonicity_gate_pass": true,
+      "recorded_before_after_matrix_metrics_pass": true,
+      "same_current_auxiliary_identity_pass": true
+    },
+    {
+      "original_QT_call": 15,
+      "kind": "mr",
+      "original_physical_relative_violation": 0.0,
+      "original_conic_user_violation": 0.0,
+      "original_QT_bound_violation": 0.0,
+      "original_objective_increase": 0.00013957407428644153,
+      "maximum_auxiliary_identity_error": 2.220446049250313e-16,
+      "original_primal_gate_pass": true,
+      "original_QT_bound_gate_pass": true,
+      "original_monotonicity_gate_pass": true,
+      "recorded_before_after_matrix_metrics_pass": true,
+      "same_current_auxiliary_identity_pass": true
+    },
+    {
+      "original_QT_call": 16,
+      "kind": "mr",
+      "original_physical_relative_violation": 0.0,
+      "original_conic_user_violation": 2.1055975219860436e-13,
+      "original_QT_bound_violation": 0.0,
+      "original_objective_increase": 0.003940480161464782,
+      "maximum_auxiliary_identity_error": 0.0,
+      "original_primal_gate_pass": true,
+      "original_QT_bound_gate_pass": true,
+      "original_monotonicity_gate_pass": true,
+      "recorded_before_after_matrix_metrics_pass": true,
+      "same_current_auxiliary_identity_pass": true
+    },
+    {
+      "original_QT_call": 17,
+      "kind": "mr",
+      "original_physical_relative_violation": 0.0,
+      "original_conic_user_violation": 0.0,
+      "original_QT_bound_violation": 0.0,
+      "original_objective_increase": 4.234539594519249e-05,
+      "maximum_auxiliary_identity_error": 1.3877787807814457e-17,
+      "original_primal_gate_pass": true,
+      "original_QT_bound_gate_pass": true,
+      "original_monotonicity_gate_pass": true,
+      "recorded_before_after_matrix_metrics_pass": true,
+      "same_current_auxiliary_identity_pass": true
+    },
+    {
+      "original_QT_call": 18,
+      "kind": "mr",
+      "original_physical_relative_violation": 0.0,
+      "original_conic_user_violation": 0.0,
+      "original_QT_bound_violation": 0.0,
+      "original_objective_increase": 5.670331426621544e-10,
+      "maximum_auxiliary_identity_error": 1.3877787807814457e-17,
+      "original_primal_gate_pass": true,
+      "original_QT_bound_gate_pass": true,
+      "original_monotonicity_gate_pass": true,
+      "recorded_before_after_matrix_metrics_pass": true,
+      "same_current_auxiliary_identity_pass": true
+    },
+    {
+      "original_QT_call": 19,
+      "kind": "mr",
+      "original_physical_relative_violation": 0.0,
+      "original_conic_user_violation": 0.0,
+      "original_QT_bound_violation": 0.0,
+      "original_objective_increase": 0.2953652183012654,
+      "maximum_auxiliary_identity_error": 4.440892098500626e-16,
+      "original_primal_gate_pass": true,
+      "original_QT_bound_gate_pass": true,
+      "original_monotonicity_gate_pass": true,
+      "recorded_before_after_matrix_metrics_pass": true,
+      "same_current_auxiliary_identity_pass": true
+    },
+    {
+      "original_QT_call": 20,
+      "kind": "mr",
+      "original_physical_relative_violation": 0.0,
+      "original_conic_user_violation": 0.0,
+      "original_QT_bound_violation": 0.0,
+      "original_objective_increase": 0.001509943340865405,
+      "maximum_auxiliary_identity_error": 4.440892098500626e-16,
+      "original_primal_gate_pass": true,
+      "original_QT_bound_gate_pass": true,
+      "original_monotonicity_gate_pass": true,
+      "recorded_before_after_matrix_metrics_pass": true,
+      "same_current_auxiliary_identity_pass": true
+    },
+    {
+      "original_QT_call": 21,
+      "kind": "mr",
+      "original_physical_relative_violation": 1.0258460747536446e-12,
+      "original_conic_user_violation": 4.636383176183188e-13,
+      "original_QT_bound_violation": 1.6683099346437302e-11,
+      "original_objective_increase": 1.3206992135472717e-06,
+      "maximum_auxiliary_identity_error": 4.440892098500626e-16,
+      "original_primal_gate_pass": true,
+      "original_QT_bound_gate_pass": true,
+      "original_monotonicity_gate_pass": true,
+      "recorded_before_after_matrix_metrics_pass": true,
+      "same_current_auxiliary_identity_pass": true
+    },
+    {
+      "original_QT_call": 22,
+      "kind": "mr",
+      "original_physical_relative_violation": 0.0,
+      "original_conic_user_violation": 0.0,
+      "original_QT_bound_violation": 0.0,
+      "original_objective_increase": 0.013205456775329694,
+      "maximum_auxiliary_identity_error": 2.220446049250313e-16,
+      "original_primal_gate_pass": true,
+      "original_QT_bound_gate_pass": true,
+      "original_monotonicity_gate_pass": true,
+      "recorded_before_after_matrix_metrics_pass": true,
+      "same_current_auxiliary_identity_pass": true
+    },
+    {
+      "original_QT_call": 23,
+      "kind": "mr",
+      "original_physical_relative_violation": 1.3982148772129221e-12,
+      "original_conic_user_violation": 4.964051469787489e-12,
+      "original_QT_bound_violation": 0.0,
+      "original_objective_increase": 0.00014283837919237818,
+      "maximum_auxiliary_identity_error": 2.220446049250313e-16,
+      "original_primal_gate_pass": true,
+      "original_QT_bound_gate_pass": true,
+      "original_monotonicity_gate_pass": true,
+      "recorded_before_after_matrix_metrics_pass": true,
+      "same_current_auxiliary_identity_pass": true
+    }
+  ],
+  "phase_stage_count": 45,
+  "QT_candidate_count": 24,
+  "declared_scene_Python_regeneration_numeric_comparison": {
+    "d_mean": {
+      "maximum_error": 5.371707865454129e-16,
+      "numeric_comparison_pass": true
+    },
+    "d_var": {
+      "maximum_error": 0.0,
+      "numeric_comparison_pass": true
+    },
+    "G_mean": {
+      "maximum_error": 1.6241614390081823e-12,
+      "numeric_comparison_pass": true
+    },
+    "G_var": {
+      "maximum_error": 0.0,
+      "numeric_comparison_pass": true
+    },
+    "r_mean": {
+      "maximum_error": 4.336808689942018e-19,
+      "numeric_comparison_pass": true
+    },
+    "r_var": {
+      "maximum_error": 0.0,
+      "numeric_comparison_pass": true
+    },
+    "gt_second": {
+      "maximum_error": 5.562216194652243e-17,
+      "numeric_comparison_pass": true
+    },
+    "geo_d_mean": {
+      "maximum_error": 0.0,
+      "numeric_comparison_pass": true
+    },
+    "geo_d_var": {
+      "maximum_error": 0.0,
+      "numeric_comparison_pass": true
+    },
+    "geo_G_mean": {
+      "maximum_error": 1.5500209170342208e-12,
+      "numeric_comparison_pass": true
+    },
+    "geo_G_var": {
+      "maximum_error": 2.220446049250313e-15,
+      "numeric_comparison_pass": true
+    }
+  },
+  "declared_scene_regeneration_bitwise_claimed": false,
+  "independent_MC_second_error": 0.007791290072091062,
+  "independent_MC_fourth_error": 0.01297751344168655,
+  "native_RNG_replay_receipt_sha256": "cc9085067b8a66bd1d2d8dd7eb9d9dcbc68f202575ce94fa7897083e6a4a641d",
+  "native_RNG_receipt_present_and_actual": true,
+  "native_recording_decoder_dependency_versions": {
+    "h5py": "3.16.0",
+    "HDF5": "2.0.0",
+    "numpy": "2.5.3",
+    "read_only_mode": "r",
+    "dependency_scope": "WORK isolated h5py wheel --no-deps; existing repro-venv NumPy",
+    "official_reference_documentation": [
+      "https://docs.h5py.org/en/stable/refs.html",
+      "https://docs.h5py.org/en/stable/high/dataset.html"
+    ]
+  },
+  "audit_source_sha256": "b4b7015e28a535ae3dfe5c10de8efcaa8b2a9a15ebe97fc73754cadf20fdbd49",
+  "decoder_source_sha256": "dc6b32e1dee55fff6e7c494ca9cc2b0bdd0f9fc250dc26f068e39c877aaf3d3c",
+  "reused_frozen_independent_oracle_sha256": "de132fed06811d95bcc08f0a954b406704b4cf9d7a933785a5728a5f07d204b7",
+  "full_QT_dual_MP80_certification": false,
+  "phase_gradient_MP80_certification": false,
+  "optimized_performance1000_MC_claimed": false,
+  "full183_executed": false,
+  "original_historical_geometry_or_publisher_conformance_recovered": false,
+  "full_reproduction_pass": false,
+  "audit_seconds": 15.631558199995197
+}
