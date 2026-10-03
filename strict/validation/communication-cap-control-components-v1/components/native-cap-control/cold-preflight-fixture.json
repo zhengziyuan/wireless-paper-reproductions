@@ -1,0 +1,29 @@
+{
+  "figure": {
+    "id": "fig8",
+    "objective": "communications",
+    "points": [
+      {
+        "ms1": [
+          2,
+          2
+        ],
+        "ms2": [
+          1,
+          1
+        ],
+        "K": 4
+      }
+    ],
+    "baselines": [
+      "SMS"
+    ]
+  },
+  "initial_start": 66,
+  "baseline": "MIS",
+  "baseline_cap": 4000,
+  "new_unreported_cap": 100000,
+  "original_global_stationarity_threshold": 0.000001,
+  "scope": "independent full M4 N1 U4 K4 cold input; NOT full12000",
+  "cap_status": "Both 4000 and 100000 are independently selected implementation caps, not published communication-paper values"
+}

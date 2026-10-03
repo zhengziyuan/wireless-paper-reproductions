@@ -1,0 +1,65 @@
+{
+  "schema_version": 4,
+  "scope": "publication-only redaction supplement; no new numerical run or solver promotion",
+  "historical_v3_source_freeze_sha256": "ee1d6aa7445e5ce86379334af237939d31916d12f10b3f682753550ffa20e80b",
+  "original_raw_runtime_binder_sha256": "774c9212535984985b8cc53348f69eef503f6946d9494dce51f20cf2c968aad5",
+  "raw_binder_unpublished_and_preserved_in_WORK": true,
+  "replaces_public_copy_only": "components/same-cone-v2/sorted_cone_v2_native_binding-20261004-v1.json",
+  "explicit_redacted_binder": "components/same-cone-v2/sorted_cone_v2_native_binding-redacted-public-v1.json",
+  "redaction_scope": "private workspace-root prefixes only; all hashes and numerical results unchanged",
+  "actual_1010_plus6_checks_pass": true,
+  "actual_old_v1_strict_failures": 3,
+  "source_sha256_before": {
+    "original_v1_helper": "6c47eebf6b2556447f6181fd33e6cda2614d354ed3d7809252db580d1fee6387",
+    "v2_helper": "f11097f4af7fbba53f89283757b9ac23686207806db7d1b8778d9f22f00a29eb",
+    "shared_fixture": "ba1531842021b0b9419f19407e953ae76eb8669179f83af96d0b8c396c2c6869",
+    "exact_raw_order_witnesses": "8f118b6576479e2586984b33a89ee2a52e60fe503f9fbcf96900d9fc84a7622b",
+    "binding_wrapper": "e3dcbcec78963b0aebc4dafefee4229efd5f9235902e2a0d0030743c96f77c09"
+  },
+  "source_sha256_after": {
+    "original_v1_helper": "6c47eebf6b2556447f6181fd33e6cda2614d354ed3d7809252db580d1fee6387",
+    "v2_helper": "f11097f4af7fbba53f89283757b9ac23686207806db7d1b8778d9f22f00a29eb",
+    "shared_fixture": "ba1531842021b0b9419f19407e953ae76eb8669179f83af96d0b8c396c2c6869",
+    "exact_raw_order_witnesses": "8f118b6576479e2586984b33a89ee2a52e60fe503f9fbcf96900d9fc84a7622b",
+    "binding_wrapper": "e3dcbcec78963b0aebc4dafefee4229efd5f9235902e2a0d0030743c96f77c09"
+  },
+  "component_source_files_byte_identical_to_actual_runtime": true,
+  "public_files": [
+    {
+      "relative_path": "components/same-cone-v2/matlab_centered_optional_order_exact_counterexamples.json",
+      "sha256": "8f118b6576479e2586984b33a89ee2a52e60fe503f9fbcf96900d9fc84a7622b"
+    },
+    {
+      "relative_path": "components/same-cone-v2/README.md",
+      "sha256": "25526eb4583c3cc20d5b586a1255f213bbf6089122c775c43b56c855cac617b1"
+    },
+    {
+      "relative_path": "components/same-cone-v2/run_sorted_cone_v2_bound_regression.m",
+      "sha256": "e3dcbcec78963b0aebc4dafefee4229efd5f9235902e2a0d0030743c96f77c09"
+    },
+    {
+      "relative_path": "components/same-cone-v2/sorted_cone_rows_exact_binary.m",
+      "sha256": "6c47eebf6b2556447f6181fd33e6cda2614d354ed3d7809252db580d1fee6387"
+    },
+    {
+      "relative_path": "components/same-cone-v2/sorted_cone_rows_exact_binary_v2.m",
+      "sha256": "f11097f4af7fbba53f89283757b9ac23686207806db7d1b8778d9f22f00a29eb"
+    },
+    {
+      "relative_path": "components/same-cone-v2/sorted_cone_shared_exact_fixture.json",
+      "sha256": "ba1531842021b0b9419f19407e953ae76eb8669179f83af96d0b8c396c2c6869"
+    },
+    {
+      "relative_path": "components/same-cone-v2/sorted_cone_v2_native_binding-redacted-public-v1.json",
+      "sha256": "c8eb3aadbc1b80e38cb0a6feaed16d6b3972a27a88d4da17a49cacd4c5652551"
+    },
+    {
+      "relative_path": "components/same-cone-v2/sorted_cone_v2_native_component-20261004-v1.json",
+      "sha256": "b819abd816906c69ebab9d65e1bf677546f1ea6590270062e3115df17c159659"
+    }
+  ],
+  "immutable_v1_v2_v3_manifests_not_rewritten": true,
+  "live_v4_source_changed": false,
+  "full_figure_reproduction_pass": false,
+  "executed_freezer_sha256": "d06fc608c8cab2e8b712060469a24cbc1b4d4bc4e751ed322256d09a6ad35b30"
+}

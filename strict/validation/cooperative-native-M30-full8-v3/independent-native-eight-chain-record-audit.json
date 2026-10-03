@@ -1,0 +1,2367 @@
+{
+  "scope": "independent_actual_native_M30_full_eight_chain_RECORD_and_runtime_audit_NOT_final_matrix_or_rawMC_replay",
+  "actual_complete_chains": 8,
+  "actual_QT_updates": 33,
+  "actual_phase_stop_blocks": 48,
+  "all_recorded_original_implementation_checks_pass": true,
+  "original_physical_scene_preserved": true,
+  "source_input_configuration_and_actual_backend_interval_verified": true,
+  "current_all_recorded_scientific_CVX_backend_MAT_and_MEX_hashes_verified": true,
+  "actual_native_elapsed_seconds": 438.4089921,
+  "actual_outer_elapsed_seconds": 440.2664656,
+  "actual_schemes": [
+    {
+      "scheme": "AP-NoRIS",
+      "checks": {
+        "recorded_physical_constraints_independently_checked": true,
+        "all_recorded_original_stopping_residuals_counts_thresholds_pass": true,
+        "all_saved_outer_QT_histories_counts_relative_stops_final_SINR_pass": true,
+        "all_original_QT_attempt_precision_and_monotonicity_records_pass": true,
+        "all_available_TS_phase_history_counts_and_smoothing_repeat_stops_pass": true
+      },
+      "all_recorded_implementation_checks_pass": true,
+      "actual_evaluation": {
+        "sinr": [
+          0.29881504721518404,
+          0.29915326123891706
+        ],
+        "denominator": [
+          1.1536420488924437,
+          1.227950072633981
+        ],
+        "satellite_power": [
+          0.04271719824907226,
+          3.5809052406614876e-31,
+          0.12753189203934334
+        ],
+        "gt_interference": 0.06025596313132661
+      },
+      "actual_power_limits_w": [
+        50,
+        50,
+        50
+      ],
+      "actual_normalized_GT_interference_limits": [
+        0.06025595860743578
+      ],
+      "independently_computed_physical_maximum_violation": 4.523890831387156e-09,
+      "actual_recorded_original_stops": [
+        {
+          "converged": true,
+          "termination": "relative_improvement",
+          "iterations": 3,
+          "iteration_cap": 200,
+          "stop_rule": "signed_relative_objective_increase",
+          "threshold": 0.0001,
+          "final_residual": 2.2841034105060705e-05
+        }
+      ],
+      "actual_saved_final_QT_outer_history": [
+        6.289846044852199e-06,
+        0.29872224912889206,
+        0.2988082221263916,
+        0.29881504721518404
+      ],
+      "independently_recomputed_relative_stop_residual": 2.2841034105060705e-05,
+      "independently_checked_final_history_minimum_SINR_error": 0.0,
+      "actual_original_QT_attempts": [
+        {
+          "QT_step": 1,
+          "numerical_precision": "high",
+          "solver_status": "Solved",
+          "primal_relative_violation": 0,
+          "qt_bound_violation": 0,
+          "before_minimum_sinr": 6.289846044852199e-06,
+          "after_minimum_sinr": 0.29872224912889206,
+          "accepted": true,
+          "independently_recomputed_original_QT_monotonicity_violation": 0
+        },
+        {
+          "QT_step": 2,
+          "numerical_precision": "high",
+          "solver_status": "Inaccurate/Solved",
+          "primal_relative_violation": 0,
+          "qt_bound_violation": 0,
+          "before_minimum_sinr": 0.29872224912889206,
+          "after_minimum_sinr": 0.2988082221263916,
+          "accepted": true,
+          "independently_recomputed_original_QT_monotonicity_violation": 0
+        },
+        {
+          "QT_step": 3,
+          "numerical_precision": "high",
+          "solver_status": "Inaccurate/Solved",
+          "primal_relative_violation": 7.507789989702474e-08,
+          "qt_bound_violation": 0,
+          "before_minimum_sinr": 0.2988082221263916,
+          "after_minimum_sinr": 0.29881504721518404,
+          "accepted": true,
+          "independently_recomputed_original_QT_monotonicity_violation": 0
+        }
+      ],
+      "actual_TS_phase_records": [],
+      "actual_QT_updates": 3,
+      "actual_phase_stop_blocks": 0,
+      "actual_recorded_phase_steps": 0,
+      "maximum_actual_recorded_phase_steps": 0,
+      "maximum_primal_relative_violation": 7.507789989702474e-08,
+      "maximum_QT_bound_violation": 0,
+      "AP_AO_phase_objective_histories_saved": null,
+      "all_phase_Armijo_increments_independently_recomputed": false,
+      "final_phase_gradient_independently_recomputed": false,
+      "final_W_or_power_physical_metrics_independently_recomputed": false,
+      "every_QT_primal_dual_state_independently_certified80digits": false
+    },
+    {
+      "scheme": "AP-AO",
+      "checks": {
+        "recorded_physical_constraints_independently_checked": true,
+        "all_recorded_original_stopping_residuals_counts_thresholds_pass": true,
+        "all_saved_outer_QT_histories_counts_relative_stops_final_SINR_pass": true,
+        "all_original_QT_attempt_precision_and_monotonicity_records_pass": true,
+        "all_available_TS_phase_history_counts_and_smoothing_repeat_stops_pass": true
+      },
+      "all_recorded_implementation_checks_pass": true,
+      "actual_evaluation": {
+        "sinr": [
+          41.986607537558,
+          41.986590465719694
+        ],
+        "denominator": [
+          1.2369450602109209,
+          7.307264111403946
+        ],
+        "satellite_power": [
+          6.236848735470123e-09,
+          1.201875534902719e-56,
+          1.1452328925590975
+        ],
+        "gt_interference": 0.06025595860905634
+      },
+      "actual_power_limits_w": [
+        50,
+        50,
+        50
+      ],
+      "actual_normalized_GT_interference_limits": [
+        0.06025595860743578
+      ],
+      "independently_computed_physical_maximum_violation": 1.6205578545758215e-12,
+      "actual_recorded_original_stops": [
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 113,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 3.1834129424559e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 54,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 7.221107637709521e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 66,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 9.032203217490594e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 112,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 9.039600169362234e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 65,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 9.36452512301397e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 52,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 9.6707589066433e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 48,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 7.641509679204108e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 15,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 6.544713412564969e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "relative_improvement",
+          "iterations": 8,
+          "iteration_cap": 200,
+          "stop_rule": "signed_relative_objective_increase",
+          "threshold": 0.0001,
+          "final_residual": 4.88247736230444e-05
+        }
+      ],
+      "actual_saved_final_QT_outer_history": [
+        0.11525692373235825,
+        1.1596418648771993,
+        25.09768554731268,
+        26.325041316001776,
+        26.967709957059686,
+        34.30432035086512,
+        41.95787221354627,
+        41.984540580030206,
+        41.986590465719694
+      ],
+      "independently_recomputed_relative_stop_residual": 4.88247736230444e-05,
+      "independently_checked_final_history_minimum_SINR_error": 0.0,
+      "actual_original_QT_attempts": [
+        {
+          "QT_step": 1,
+          "numerical_precision": "high",
+          "solver_status": "Solved",
+          "primal_relative_violation": 0,
+          "qt_bound_violation": 0,
+          "before_minimum_sinr": 0.11525692373235825,
+          "after_minimum_sinr": 0.11542425954428445,
+          "accepted": true,
+          "independently_recomputed_original_QT_monotonicity_violation": 0
+        },
+        {
+          "QT_step": 2,
+          "numerical_precision": "high",
+          "solver_status": "Inaccurate/Solved",
+          "primal_relative_violation": 1.8840928817098757e-11,
+          "qt_bound_violation": 0,
+          "before_minimum_sinr": 1.1596418648771993,
+          "after_minimum_sinr": 25.0967555116813,
+          "accepted": true,
+          "independently_recomputed_original_QT_monotonicity_violation": 0
+        },
+        {
+          "QT_step": 3,
+          "numerical_precision": "high",
+          "solver_status": "Solved",
+          "primal_relative_violation": 0,
+          "qt_bound_violation": 0,
+          "before_minimum_sinr": 25.09768554731268,
+          "after_minimum_sinr": 26.288324568384354,
+          "accepted": true,
+          "independently_recomputed_original_QT_monotonicity_violation": 0
+        },
+        {
+          "QT_step": 4,
+          "numerical_precision": "high",
+          "solver_status": "Solved",
+          "primal_relative_violation": 1.6669554625536875e-11,
+          "qt_bound_violation": 0,
+          "before_minimum_sinr": 26.325041316001776,
+          "after_minimum_sinr": 26.799042972202074,
+          "accepted": true,
+          "independently_recomputed_original_QT_monotonicity_violation": 0
+        },
+        {
+          "QT_step": 5,
+          "numerical_precision": "high",
+          "solver_status": "Solved",
+          "primal_relative_violation": 5.254019441736091e-12,
+          "qt_bound_violation": 0,
+          "before_minimum_sinr": 26.967709957059686,
+          "after_minimum_sinr": 33.96673970777127,
+          "accepted": true,
+          "independently_recomputed_original_QT_monotonicity_violation": 0
+        },
+        {
+          "QT_step": 6,
+          "numerical_precision": "high",
+          "solver_status": "Solved",
+          "primal_relative_violation": 8.540967932901822e-11,
+          "qt_bound_violation": 0,
+          "before_minimum_sinr": 34.30432035086512,
+          "after_minimum_sinr": 41.85360919318647,
+          "accepted": true,
+          "independently_recomputed_original_QT_monotonicity_violation": 0
+        },
+        {
+          "QT_step": 7,
+          "numerical_precision": "high",
+          "solver_status": "Solved",
+          "primal_relative_violation": 1.929656434640492e-11,
+          "qt_bound_violation": 0,
+          "before_minimum_sinr": 41.95787221354627,
+          "after_minimum_sinr": 41.984459166557386,
+          "accepted": true,
+          "independently_recomputed_original_QT_monotonicity_violation": 0
+        },
+        {
+          "QT_step": 8,
+          "numerical_precision": "high",
+          "solver_status": "Inaccurate/Solved",
+          "primal_relative_violation": 2.6894486637729642e-11,
+          "qt_bound_violation": 0,
+          "before_minimum_sinr": 41.984540580030206,
+          "after_minimum_sinr": 41.98659045091836,
+          "accepted": true,
+          "independently_recomputed_original_QT_monotonicity_violation": 0
+        }
+      ],
+      "actual_TS_phase_records": [],
+      "actual_QT_updates": 8,
+      "actual_phase_stop_blocks": 8,
+      "actual_recorded_phase_steps": 525,
+      "maximum_actual_recorded_phase_steps": 113,
+      "maximum_primal_relative_violation": 8.540967932901822e-11,
+      "maximum_QT_bound_violation": 0,
+      "AP_AO_phase_objective_histories_saved": false,
+      "all_phase_Armijo_increments_independently_recomputed": false,
+      "final_phase_gradient_independently_recomputed": false,
+      "final_W_or_power_physical_metrics_independently_recomputed": false,
+      "every_QT_primal_dual_state_independently_certified80digits": false
+    },
+    {
+      "scheme": "MR-S-NoRIS",
+      "checks": {
+        "recorded_physical_constraints_independently_checked": true,
+        "all_recorded_original_stopping_residuals_counts_thresholds_pass": true,
+        "all_saved_outer_QT_histories_counts_relative_stops_final_SINR_pass": true,
+        "all_original_QT_attempt_precision_and_monotonicity_records_pass": true,
+        "all_available_TS_phase_history_counts_and_smoothing_repeat_stops_pass": true
+      },
+      "all_recorded_implementation_checks_pass": true,
+      "actual_evaluation": {
+        "sinr": [
+          0.2558859796655164,
+          0.2558836730214478
+        ],
+        "denominator": [
+          1.1930761634004754,
+          1.2398909908641371
+        ],
+        "satellite_power": [
+          0.036724738611356084,
+          8.587999910113998e-19,
+          0.09998808321462346
+        ],
+        "gt_interference": 0.0602559586074314
+      },
+      "actual_power_limits_w": [
+        50,
+        50,
+        50
+      ],
+      "actual_normalized_GT_interference_limits": [
+        0.06025595860743578
+      ],
+      "independently_computed_physical_maximum_violation": 0.0,
+      "actual_recorded_original_stops": [
+        {
+          "converged": true,
+          "termination": "relative_improvement",
+          "iterations": 4,
+          "iteration_cap": 200,
+          "stop_rule": "signed_relative_objective_increase",
+          "threshold": 0.0001,
+          "final_residual": 2.973893762136833e-05
+        }
+      ],
+      "actual_saved_final_QT_outer_history": [
+        6.62089008457901e-06,
+        0.25029050220444693,
+        0.2556042069884068,
+        0.25587606353915543,
+        0.2558836730214478
+      ],
+      "independently_recomputed_relative_stop_residual": 2.973893762136833e-05,
+      "independently_checked_final_history_minimum_SINR_error": 0.0,
+      "actual_original_QT_attempts": [
+        {
+          "QT_step": 1,
+          "numerical_precision": "high",
+          "solver_status": "Solved",
+          "primal_relative_violation": 0,
+          "qt_bound_violation": 0,
+          "before_minimum_sinr": 6.62089008457901e-06,
+          "after_minimum_sinr": 0.25029050220444693,
+          "accepted": true,
+          "independently_recomputed_original_QT_monotonicity_violation": 0
+        },
+        {
+          "QT_step": 2,
+          "numerical_precision": "high",
+          "solver_status": "Solved",
+          "primal_relative_violation": 5.462963414970545e-12,
+          "qt_bound_violation": 0,
+          "before_minimum_sinr": 0.25029050220444693,
+          "after_minimum_sinr": 0.2556042069884068,
+          "accepted": true,
+          "independently_recomputed_original_QT_monotonicity_violation": 0
+        },
+        {
+          "QT_step": 3,
+          "numerical_precision": "high",
+          "solver_status": "Solved",
+          "primal_relative_violation": 0,
+          "qt_bound_violation": 0,
+          "before_minimum_sinr": 0.2556042069884068,
+          "after_minimum_sinr": 0.25587606353915543,
+          "accepted": true,
+          "independently_recomputed_original_QT_monotonicity_violation": 0
+        },
+        {
+          "QT_step": 4,
+          "numerical_precision": "high",
+          "solver_status": "Solved",
+          "primal_relative_violation": 3.4880431876160856e-13,
+          "qt_bound_violation": 0,
+          "before_minimum_sinr": 0.25587606353915543,
+          "after_minimum_sinr": 0.2558836730214478,
+          "accepted": true,
+          "independently_recomputed_original_QT_monotonicity_violation": 0
+        }
+      ],
+      "actual_TS_phase_records": [],
+      "actual_QT_updates": 4,
+      "actual_phase_stop_blocks": 0,
+      "actual_recorded_phase_steps": 0,
+      "maximum_actual_recorded_phase_steps": 0,
+      "maximum_primal_relative_violation": 5.462963414970545e-12,
+      "maximum_QT_bound_violation": 0,
+      "AP_AO_phase_objective_histories_saved": null,
+      "all_phase_Armijo_increments_independently_recomputed": false,
+      "final_phase_gradient_independently_recomputed": false,
+      "final_W_or_power_physical_metrics_independently_recomputed": false,
+      "every_QT_primal_dual_state_independently_certified80digits": false
+    },
+    {
+      "scheme": "MR-S-PA",
+      "checks": {
+        "recorded_physical_constraints_independently_checked": true,
+        "all_recorded_original_stopping_residuals_counts_thresholds_pass": true,
+        "all_saved_outer_QT_histories_counts_relative_stops_final_SINR_pass": true,
+        "all_original_QT_attempt_precision_and_monotonicity_records_pass": true,
+        "all_available_TS_phase_history_counts_and_smoothing_repeat_stops_pass": true
+      },
+      "all_recorded_implementation_checks_pass": true,
+      "actual_evaluation": {
+        "sinr": [
+          3.8129401452649905,
+          3.8129399679008604
+        ],
+        "denominator": [
+          11.1198572074778,
+          9.361635156228921
+        ],
+        "satellite_power": [
+          8.693669811722933e-10,
+          1.3605310036867307e-17,
+          0.17052179698321251
+        ],
+        "gt_interference": 0.06025595860741611
+      },
+      "actual_power_limits_w": [
+        50,
+        50,
+        50
+      ],
+      "actual_normalized_GT_interference_limits": [
+        0.06025595860743578
+      ],
+      "independently_computed_physical_maximum_violation": 0.0,
+      "actual_recorded_original_stops": [
+        {
+          "converged": true,
+          "termination": "relative_improvement",
+          "iterations": 4,
+          "iteration_cap": 200,
+          "stop_rule": "signed_relative_objective_increase",
+          "threshold": 0.0001,
+          "final_residual": 2.752944449970719e-05
+        }
+      ],
+      "actual_saved_final_QT_outer_history": [
+        1.8982455186694427,
+        3.21970836711541,
+        3.777203471616372,
+        3.812835002671268,
+        3.8129399679008604
+      ],
+      "independently_recomputed_relative_stop_residual": 2.752944449970719e-05,
+      "independently_checked_final_history_minimum_SINR_error": 0.0,
+      "actual_original_QT_attempts": [
+        {
+          "QT_step": 1,
+          "numerical_precision": "high",
+          "solver_status": "Inaccurate/Solved",
+          "primal_relative_violation": 0,
+          "qt_bound_violation": 0,
+          "before_minimum_sinr": 1.8982455186694427,
+          "after_minimum_sinr": 3.21970836711541,
+          "accepted": true,
+          "independently_recomputed_original_QT_monotonicity_violation": 0
+        },
+        {
+          "QT_step": 2,
+          "numerical_precision": "high",
+          "solver_status": "Solved",
+          "primal_relative_violation": 0,
+          "qt_bound_violation": 0,
+          "before_minimum_sinr": 3.21970836711541,
+          "after_minimum_sinr": 3.777203471616372,
+          "accepted": true,
+          "independently_recomputed_original_QT_monotonicity_violation": 0
+        },
+        {
+          "QT_step": 3,
+          "numerical_precision": "high",
+          "solver_status": "Solved",
+          "primal_relative_violation": 0,
+          "qt_bound_violation": 0,
+          "before_minimum_sinr": 3.777203471616372,
+          "after_minimum_sinr": 3.812835002671268,
+          "accepted": true,
+          "independently_recomputed_original_QT_monotonicity_violation": 0
+        },
+        {
+          "QT_step": 4,
+          "numerical_precision": "high",
+          "solver_status": "Solved",
+          "primal_relative_violation": 0,
+          "qt_bound_violation": 0,
+          "before_minimum_sinr": 3.812835002671268,
+          "after_minimum_sinr": 3.8129399679008604,
+          "accepted": true,
+          "independently_recomputed_original_QT_monotonicity_violation": 0
+        }
+      ],
+      "actual_TS_phase_records": [],
+      "actual_QT_updates": 4,
+      "actual_phase_stop_blocks": 0,
+      "actual_recorded_phase_steps": 0,
+      "maximum_actual_recorded_phase_steps": 0,
+      "maximum_primal_relative_violation": 0,
+      "maximum_QT_bound_violation": 0,
+      "AP_AO_phase_objective_histories_saved": null,
+      "all_phase_Armijo_increments_independently_recomputed": false,
+      "final_phase_gradient_independently_recomputed": false,
+      "final_W_or_power_physical_metrics_independently_recomputed": false,
+      "every_QT_primal_dual_state_independently_certified80digits": false
+    },
+    {
+      "scheme": "MR-S-TS",
+      "checks": {
+        "recorded_physical_constraints_independently_checked": true,
+        "all_recorded_original_stopping_residuals_counts_thresholds_pass": true,
+        "all_saved_outer_QT_histories_counts_relative_stops_final_SINR_pass": true,
+        "all_original_QT_attempt_precision_and_monotonicity_records_pass": true,
+        "all_available_TS_phase_history_counts_and_smoothing_repeat_stops_pass": true
+      },
+      "all_recorded_implementation_checks_pass": true,
+      "actual_evaluation": {
+        "sinr": [
+          8.651147245732483,
+          8.651147246247614
+        ],
+        "denominator": [
+          1.2212947941789523,
+          3.594608455987423
+        ],
+        "satellite_power": [
+          0.06355120580580904,
+          8.230041809402788e-18,
+          0.13428431334983046
+        ],
+        "gt_interference": 0.06025595860848138
+      },
+      "actual_power_limits_w": [
+        50,
+        50,
+        50
+      ],
+      "actual_normalized_GT_interference_limits": [
+        0.06025595860743578
+      ],
+      "independently_computed_physical_maximum_violation": 1.0456011056980685e-12,
+      "actual_recorded_original_stops": [
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 257,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 9.71230258137476e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 0,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 9.71230258137476e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 146,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 7.359966455895055e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 0,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 7.359966455895055e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 132,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 9.187409277168025e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 0,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 9.187409277168025e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 145,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 8.323139784410295e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 0,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 8.323139784410295e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 118,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 9.002002463935408e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 0,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 9.002002463935408e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 155,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 8.69887099918966e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 0,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 8.69887099918966e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 144,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 5.44286008922446e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 0,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 5.44286008922446e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 152,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 9.91802713914635e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 0,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 9.91802713914635e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 136,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 8.059848619107805e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 0,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 8.059848619107805e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 255,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 9.245478845982909e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 0,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 9.245478845982909e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "relative_improvement",
+          "iterations": 3,
+          "iteration_cap": 200,
+          "stop_rule": "signed_relative_objective_increase",
+          "threshold": 0.0001,
+          "final_residual": 6.117931431841601e-08
+        }
+      ],
+      "actual_saved_final_QT_outer_history": [
+        7.881990336314197,
+        8.647579791802286,
+        8.651146716461259,
+        8.651147245732483
+      ],
+      "independently_recomputed_relative_stop_residual": 6.117931431841601e-08,
+      "independently_checked_final_history_minimum_SINR_error": 0.0,
+      "actual_original_QT_attempts": [
+        {
+          "QT_step": 1,
+          "numerical_precision": "high",
+          "solver_status": "Inaccurate/Solved",
+          "primal_relative_violation": 1.8403056856186595e-12,
+          "qt_bound_violation": 0,
+          "before_minimum_sinr": 7.881990336314197,
+          "after_minimum_sinr": 8.647579791802286,
+          "accepted": true,
+          "independently_recomputed_original_QT_monotonicity_violation": 0
+        },
+        {
+          "QT_step": 2,
+          "numerical_precision": "high",
+          "solver_status": "Inaccurate/Solved",
+          "primal_relative_violation": 4.8163417698532385e-12,
+          "qt_bound_violation": 0,
+          "before_minimum_sinr": 8.647579791802286,
+          "after_minimum_sinr": 8.651146716461259,
+          "accepted": true,
+          "independently_recomputed_original_QT_monotonicity_violation": 0
+        },
+        {
+          "QT_step": 3,
+          "numerical_precision": "high",
+          "solver_status": "Inaccurate/Solved",
+          "primal_relative_violation": 1.7352563830286272e-11,
+          "qt_bound_violation": 1.4059686748169042e-10,
+          "before_minimum_sinr": 8.651146716461259,
+          "after_minimum_sinr": 8.651147245732483,
+          "accepted": true,
+          "independently_recomputed_original_QT_monotonicity_violation": 0
+        }
+      ],
+      "actual_TS_phase_records": [
+        {
+          "mu": 1,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 257,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 9.71230258137476e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 258,
+            "first": 0.3591201695121601,
+            "last": 52.328291947819416,
+            "little_endian_float64_sha256": "6ec0a6c324a8080341dabdf233f942d5ab26626fc162ffb1a6d9e16af7a66734",
+            "minimum_recorded_direct_objective_increment": -1.2434497875801753e-12
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 1,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 0,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 9.71230258137476e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 1,
+            "first": 52.328291947819416,
+            "last": 52.328291947819416,
+            "little_endian_float64_sha256": "d16a5bd1375bf0aa61e3ff266ad31f3e69c2c5afca47387f14f64958114fdec5",
+            "minimum_recorded_direct_objective_increment": null
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.5,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 146,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 7.359966455895055e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 147,
+            "first": 52.477168267587736,
+            "last": 52.54172151525651,
+            "little_endian_float64_sha256": "6f6069f46a91ce6282db7b81545a05e13459c6b96e34347c255ee87f1ae53867",
+            "minimum_recorded_direct_objective_increment": -2.0108359422010835e-12
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.5,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 0,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 7.359966455895055e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 1,
+            "first": 52.54172151525651,
+            "last": 52.54172151525651,
+            "little_endian_float64_sha256": "0266b14724716ac325b6a94c013962969da62bc3f9f3669bf5e830658edefc6b",
+            "minimum_recorded_direct_objective_increment": null
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.25,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 132,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 9.187409277168025e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 133,
+            "first": 52.61672873501283,
+            "last": 52.648829239692155,
+            "little_endian_float64_sha256": "988b8edf80aff4fb126ee7291b830d1d5cb725f64143f9f55d37c7c6515deddf",
+            "minimum_recorded_direct_objective_increment": -1.2860823517257813e-12
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.25,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 0,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 9.187409277168025e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 1,
+            "first": 52.648829239692155,
+            "last": 52.648829239692155,
+            "little_endian_float64_sha256": "009e7f13de41dccafb56cee0129076587d780c1b0dda1534c32fc2c711ce8d56",
+            "minimum_recorded_direct_objective_increment": null
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.125,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 145,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 8.323139784410295e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 146,
+            "first": 52.686477471395094,
+            "last": 52.7024823409796,
+            "little_endian_float64_sha256": "4c86ac648904911a1fc431e411c09642d8f37dc12aedab3f018c694f73acee21",
+            "minimum_recorded_direct_objective_increment": -1.2292389328649733e-12
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.125,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 0,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 8.323139784410295e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 1,
+            "first": 52.7024823409796,
+            "last": 52.7024823409796,
+            "little_endian_float64_sha256": "821b932e3781007784dccf249bd7fc5750ada7d6a57553bd7342425e7f5f2b88",
+            "minimum_recorded_direct_objective_increment": null
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.0625,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 118,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 9.002002463935408e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 119,
+            "first": 52.72134290274286,
+            "last": 52.72933382564899,
+            "little_endian_float64_sha256": "ad085adabe04ce830abea91e8f00b296f2bec3408cf9b80d0214bf8c2f5b16fd",
+            "minimum_recorded_direct_objective_increment": -1.9326762412674725e-12
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.0625,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 0,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 9.002002463935408e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 1,
+            "first": 52.72933382564899,
+            "last": 52.72933382564899,
+            "little_endian_float64_sha256": "f9bd7f4b817ced3425c6c90afb00bffb3805e5b3851fe2fd22a2121139d9a746",
+            "minimum_recorded_direct_objective_increment": null
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.03125,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 155,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 8.69887099918966e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 156,
+            "first": 52.73877325570071,
+            "last": 52.74276581694422,
+            "little_endian_float64_sha256": "ca2d92be76cae09f77a5eb2b9b47695576f16e68710dfceaf0284e30396b9841",
+            "minimum_recorded_direct_objective_increment": -1.5276668818842154e-12
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.03125,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 0,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 8.69887099918966e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 1,
+            "first": 52.74276581694422,
+            "last": 52.74276581694422,
+            "little_endian_float64_sha256": "34f20c59f52154b705024144d78cd4377bdd5f7d565ff908f1003248ed93d4c7",
+            "minimum_recorded_direct_objective_increment": null
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.015625,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 144,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 5.44286008922446e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 145,
+            "first": 52.74748782342801,
+            "last": 52.749483376757034,
+            "little_endian_float64_sha256": "c9dde0345e1af6245270313cf4ffac67b91b2619b15c648130ede56ae6ada9ab",
+            "minimum_recorded_direct_objective_increment": -1.9895196601282805e-12
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.015625,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 0,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 5.44286008922446e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 1,
+            "first": 52.749483376757034,
+            "last": 52.749483376757034,
+            "little_endian_float64_sha256": "dabf16a5b56e8820b23ca6930ef7f2b435c7f64c4ffe9275c4779ee9f24f3e2f",
+            "minimum_recorded_direct_objective_increment": null
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.0078125,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 152,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 9.91802713914635e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 153,
+            "first": 52.75184495367705,
+            "last": 52.7528425479441,
+            "little_endian_float64_sha256": "f73eb8b6e54dc4e6f24843a1d15ba3907a8e9c74d3d06a604b7f0ca35b2faf9e",
+            "minimum_recorded_direct_objective_increment": -2.2311041902867146e-12
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.0078125,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 0,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 9.91802713914635e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 1,
+            "first": 52.7528425479441,
+            "last": 52.7528425479441,
+            "little_endian_float64_sha256": "702a5278f5fb739a38cb4ecc4610d8e6dd2c47504341c3927b24a67e65a834c1",
+            "minimum_recorded_direct_objective_increment": null
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.00390625,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 136,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 8.059848619107805e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 137,
+            "first": 52.754023479720196,
+            "last": 52.754522231390716,
+            "little_endian_float64_sha256": "5f05b84e42e80cb2586a1a8d7752406d40a2784209fbfef100a02fd0ef895d7a",
+            "minimum_recorded_direct_objective_increment": -2.1174173525650986e-12
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.00390625,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 0,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 8.059848619107805e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 1,
+            "first": 52.754522231390716,
+            "last": 52.754522231390716,
+            "little_endian_float64_sha256": "337011636a5c69e639264c5db4ffef64e40de8b713eee1ddddec5266032a6674",
+            "minimum_recorded_direct_objective_increment": null
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.001953125,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 255,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 9.245478845982909e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 256,
+            "first": 52.755112733163884,
+            "last": 52.75536209757911,
+            "little_endian_float64_sha256": "0d6ea44acc0e235244938bb5df3ef6f4dd80bf2557dfc6bb69e344956a9405ef",
+            "minimum_recorded_direct_objective_increment": -1.9539925233402755e-12
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.001953125,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 0,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 9.245478845982909e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 1,
+            "first": 52.75536209757911,
+            "last": 52.75536209757911,
+            "little_endian_float64_sha256": "6ef359ed7d06ffb53fe2ca0235596cd29f052db22d318bdc0eda5dbb7b603287",
+            "minimum_recorded_direct_objective_increment": null
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        }
+      ],
+      "actual_QT_updates": 3,
+      "actual_phase_stop_blocks": 20,
+      "actual_recorded_phase_steps": 1640,
+      "maximum_actual_recorded_phase_steps": 257,
+      "maximum_primal_relative_violation": 1.7352563830286272e-11,
+      "maximum_QT_bound_violation": 1.4059686748169042e-10,
+      "AP_AO_phase_objective_histories_saved": null,
+      "all_phase_Armijo_increments_independently_recomputed": false,
+      "final_phase_gradient_independently_recomputed": false,
+      "final_W_or_power_physical_metrics_independently_recomputed": false,
+      "every_QT_primal_dual_state_independently_certified80digits": false
+    },
+    {
+      "scheme": "MR-TTS-NoRIS",
+      "checks": {
+        "recorded_physical_constraints_independently_checked": true,
+        "all_recorded_original_stopping_residuals_counts_thresholds_pass": true,
+        "all_saved_outer_QT_histories_counts_relative_stops_final_SINR_pass": true,
+        "all_original_QT_attempt_precision_and_monotonicity_records_pass": true,
+        "all_available_TS_phase_history_counts_and_smoothing_repeat_stops_pass": true
+      },
+      "all_recorded_implementation_checks_pass": true,
+      "actual_evaluation": {
+        "sinr": [
+          0.26069679334480234,
+          0.26069445604721087
+        ],
+        "denominator": [
+          1.1933858856601773,
+          1.240190788529004
+        ],
+        "satellite_power": [
+          0.03705456366082391,
+          8.007885833305305e-18,
+          0.10088419735017988
+        ],
+        "gt_interference": 0.06025595860758543
+      },
+      "actual_power_limits_w": [
+        50,
+        50,
+        50
+      ],
+      "actual_normalized_GT_interference_limits": [
+        0.06025595860743578
+      ],
+      "independently_computed_physical_maximum_violation": 1.496511248255672e-13,
+      "actual_recorded_original_stops": [
+        {
+          "converged": true,
+          "termination": "relative_improvement",
+          "iterations": 4,
+          "iteration_cap": 200,
+          "stop_rule": "signed_relative_objective_increase",
+          "threshold": 0.0001,
+          "final_residual": 3.0019152632904168e-05
+        }
+      ],
+      "actual_saved_final_QT_outer_history": [
+        6.74675023269882e-06,
+        0.2549852725595622,
+        0.26040834134981533,
+        0.26068663045546187,
+        0.26069445604721087
+      ],
+      "independently_recomputed_relative_stop_residual": 3.0019152632904168e-05,
+      "independently_checked_final_history_minimum_SINR_error": 0.0,
+      "actual_original_QT_attempts": [
+        {
+          "QT_step": 1,
+          "numerical_precision": "high",
+          "solver_status": "Solved",
+          "primal_relative_violation": 0,
+          "qt_bound_violation": 0,
+          "before_minimum_sinr": 6.74675023269882e-06,
+          "after_minimum_sinr": 0.2549852725595622,
+          "accepted": true,
+          "independently_recomputed_original_QT_monotonicity_violation": 0
+        },
+        {
+          "QT_step": 2,
+          "numerical_precision": "high",
+          "solver_status": "Solved",
+          "primal_relative_violation": 2.0228263508670352e-12,
+          "qt_bound_violation": 0,
+          "before_minimum_sinr": 0.2549852725595622,
+          "after_minimum_sinr": 0.26040834134981533,
+          "accepted": true,
+          "independently_recomputed_original_QT_monotonicity_violation": 0
+        },
+        {
+          "QT_step": 3,
+          "numerical_precision": "high",
+          "solver_status": "Inaccurate/Solved",
+          "primal_relative_violation": 0,
+          "qt_bound_violation": 0,
+          "before_minimum_sinr": 0.26040834134981533,
+          "after_minimum_sinr": 0.26068663045546187,
+          "accepted": true,
+          "independently_recomputed_original_QT_monotonicity_violation": 0
+        },
+        {
+          "QT_step": 4,
+          "numerical_precision": "high",
+          "solver_status": "Solved",
+          "primal_relative_violation": 2.483568906086475e-12,
+          "qt_bound_violation": 0,
+          "before_minimum_sinr": 0.26068663045546187,
+          "after_minimum_sinr": 0.26069445604721087,
+          "accepted": true,
+          "independently_recomputed_original_QT_monotonicity_violation": 0
+        }
+      ],
+      "actual_TS_phase_records": [],
+      "actual_QT_updates": 4,
+      "actual_phase_stop_blocks": 0,
+      "actual_recorded_phase_steps": 0,
+      "maximum_actual_recorded_phase_steps": 0,
+      "maximum_primal_relative_violation": 2.483568906086475e-12,
+      "maximum_QT_bound_violation": 0,
+      "AP_AO_phase_objective_histories_saved": null,
+      "all_phase_Armijo_increments_independently_recomputed": false,
+      "final_phase_gradient_independently_recomputed": false,
+      "final_W_or_power_physical_metrics_independently_recomputed": false,
+      "every_QT_primal_dual_state_independently_certified80digits": false
+    },
+    {
+      "scheme": "MR-TTS-PA",
+      "checks": {
+        "recorded_physical_constraints_independently_checked": true,
+        "all_recorded_original_stopping_residuals_counts_thresholds_pass": true,
+        "all_saved_outer_QT_histories_counts_relative_stops_final_SINR_pass": true,
+        "all_original_QT_attempt_precision_and_monotonicity_records_pass": true,
+        "all_available_TS_phase_history_counts_and_smoothing_repeat_stops_pass": true
+      },
+      "all_recorded_implementation_checks_pass": true,
+      "actual_evaluation": {
+        "sinr": [
+          3.767114696919757,
+          3.7671144764924454
+        ],
+        "denominator": [
+          11.284664647216417,
+          9.589712380964855
+        ],
+        "satellite_power": [
+          1.1396305282511125e-09,
+          1.1116114476375696e-17,
+          0.17096228540697442
+        ],
+        "gt_interference": 0.06025595860738907
+      },
+      "actual_power_limits_w": [
+        50,
+        50,
+        50
+      ],
+      "actual_normalized_GT_interference_limits": [
+        0.06025595860743578
+      ],
+      "independently_computed_physical_maximum_violation": 0.0,
+      "actual_recorded_original_stops": [
+        {
+          "converged": true,
+          "termination": "relative_improvement",
+          "iterations": 4,
+          "iteration_cap": 200,
+          "stop_rule": "signed_relative_objective_increase",
+          "threshold": 0.0001,
+          "final_residual": 2.684757986084441e-05
+        }
+      ],
+      "actual_saved_final_QT_outer_history": [
+        1.8938525463008808,
+        3.199241665137843,
+        3.733242857115772,
+        3.767013341300928,
+        3.7671144764924454
+      ],
+      "independently_recomputed_relative_stop_residual": 2.684757986084441e-05,
+      "independently_checked_final_history_minimum_SINR_error": 0.0,
+      "actual_original_QT_attempts": [
+        {
+          "QT_step": 1,
+          "numerical_precision": "high",
+          "solver_status": "Solved",
+          "primal_relative_violation": 4.671957265500737e-14,
+          "qt_bound_violation": 0,
+          "before_minimum_sinr": 1.8938525463008808,
+          "after_minimum_sinr": 3.199241665137843,
+          "accepted": true,
+          "independently_recomputed_original_QT_monotonicity_violation": 0
+        },
+        {
+          "QT_step": 2,
+          "numerical_precision": "high",
+          "solver_status": "Inaccurate/Solved",
+          "primal_relative_violation": 5.753175713607561e-13,
+          "qt_bound_violation": 0,
+          "before_minimum_sinr": 3.199241665137843,
+          "after_minimum_sinr": 3.733242857115772,
+          "accepted": true,
+          "independently_recomputed_original_QT_monotonicity_violation": 0
+        },
+        {
+          "QT_step": 3,
+          "numerical_precision": "high",
+          "solver_status": "Solved",
+          "primal_relative_violation": 8.866588019351695e-12,
+          "qt_bound_violation": 0,
+          "before_minimum_sinr": 3.733242857115772,
+          "after_minimum_sinr": 3.767013341300928,
+          "accepted": true,
+          "independently_recomputed_original_QT_monotonicity_violation": 0
+        },
+        {
+          "QT_step": 4,
+          "numerical_precision": "high",
+          "solver_status": "Solved",
+          "primal_relative_violation": 2.778055563368298e-13,
+          "qt_bound_violation": 0,
+          "before_minimum_sinr": 3.767013341300928,
+          "after_minimum_sinr": 3.7671144764924454,
+          "accepted": true,
+          "independently_recomputed_original_QT_monotonicity_violation": 0
+        }
+      ],
+      "actual_TS_phase_records": [],
+      "actual_QT_updates": 4,
+      "actual_phase_stop_blocks": 0,
+      "actual_recorded_phase_steps": 0,
+      "maximum_actual_recorded_phase_steps": 0,
+      "maximum_primal_relative_violation": 8.866588019351695e-12,
+      "maximum_QT_bound_violation": 0,
+      "AP_AO_phase_objective_histories_saved": null,
+      "all_phase_Armijo_increments_independently_recomputed": false,
+      "final_phase_gradient_independently_recomputed": false,
+      "final_W_or_power_physical_metrics_independently_recomputed": false,
+      "every_QT_primal_dual_state_independently_certified80digits": false
+    },
+    {
+      "scheme": "MR-TTS-TS",
+      "checks": {
+        "recorded_physical_constraints_independently_checked": true,
+        "all_recorded_original_stopping_residuals_counts_thresholds_pass": true,
+        "all_saved_outer_QT_histories_counts_relative_stops_final_SINR_pass": true,
+        "all_original_QT_attempt_precision_and_monotonicity_records_pass": true,
+        "all_available_TS_phase_history_counts_and_smoothing_repeat_stops_pass": true
+      },
+      "all_recorded_implementation_checks_pass": true,
+      "actual_evaluation": {
+        "sinr": [
+          8.176299834558446,
+          8.176299834642265
+        ],
+        "denominator": [
+          1.3317209359407318,
+          4.8531155249757845
+        ],
+        "satellite_power": [
+          0.06216172484967866,
+          2.001978846349074e-18,
+          0.1436747679950524
+        ],
+        "gt_interference": 0.06025595860742036
+      },
+      "actual_power_limits_w": [
+        50,
+        50,
+        50
+      ],
+      "actual_normalized_GT_interference_limits": [
+        0.06025595860743578
+      ],
+      "independently_computed_physical_maximum_violation": 0.0,
+      "actual_recorded_original_stops": [
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 47572,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 9.985604164128848e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 0,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 9.985604164128848e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 142,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 9.843940214456442e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 0,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 9.843940214456442e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 159,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 9.272456955737814e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 0,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 9.272456955737814e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 154,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 9.541690060829964e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 0,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 9.541690060829964e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 132,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 9.816916121412177e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 0,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 9.816916121412177e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 176,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 8.340571128549085e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 0,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 8.340571128549085e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 138,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 8.642883703199005e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 0,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 8.642883703199005e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 176,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 9.585125007650233e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 0,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 9.585125007650233e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 191,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 9.453007992599664e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 0,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 9.453007992599664e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 225,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 9.948819234716501e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "gradient_tolerance",
+          "iterations": 0,
+          "iteration_cap": 100000,
+          "stop_rule": "Riemannian_gradient_norm",
+          "threshold": 1e-06,
+          "final_residual": 9.948819234716501e-07,
+          "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+          "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+        },
+        {
+          "converged": true,
+          "termination": "relative_improvement",
+          "iterations": 3,
+          "iteration_cap": 200,
+          "stop_rule": "signed_relative_objective_increase",
+          "threshold": 0.0001,
+          "final_residual": 2.527537945464144e-08
+        }
+      ],
+      "actual_saved_final_QT_outer_history": [
+        7.569291638503726,
+        8.173693404857959,
+        8.17629962789937,
+        8.176299834558446
+      ],
+      "independently_recomputed_relative_stop_residual": 2.527537945464144e-08,
+      "independently_checked_final_history_minimum_SINR_error": 0.0,
+      "actual_original_QT_attempts": [
+        {
+          "QT_step": 1,
+          "numerical_precision": "high",
+          "solver_status": "Solved",
+          "primal_relative_violation": 2.1582735598713043e-13,
+          "qt_bound_violation": 0,
+          "before_minimum_sinr": 7.569291638503726,
+          "after_minimum_sinr": 8.173693404857959,
+          "accepted": true,
+          "independently_recomputed_original_QT_monotonicity_violation": 0
+        },
+        {
+          "QT_step": 2,
+          "numerical_precision": "high",
+          "solver_status": "Solved",
+          "primal_relative_violation": 7.227551890309769e-13,
+          "qt_bound_violation": 0,
+          "before_minimum_sinr": 8.173693404857959,
+          "after_minimum_sinr": 8.17629962789937,
+          "accepted": true,
+          "independently_recomputed_original_QT_monotonicity_violation": 0
+        },
+        {
+          "QT_step": 3,
+          "numerical_precision": "high",
+          "solver_status": "Solved",
+          "primal_relative_violation": 8.486544800234697e-13,
+          "qt_bound_violation": 1.2933654147673224e-11,
+          "before_minimum_sinr": 8.17629962789937,
+          "after_minimum_sinr": 8.176299834558446,
+          "accepted": true,
+          "independently_recomputed_original_QT_monotonicity_violation": 0
+        }
+      ],
+      "actual_TS_phase_records": [
+        {
+          "mu": 1,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 47572,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 9.985604164128848e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 47573,
+            "first": 0.3748225626557366,
+            "last": 33.30858116749211,
+            "little_endian_float64_sha256": "20af84d34b3a54ff6918e0562a66f4cc00e7339fae645746c881968bc1890f1f",
+            "minimum_recorded_direct_objective_increment": -2.1174173525650986e-12
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 1,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 0,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 9.985604164128848e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 1,
+            "first": 33.30858116749211,
+            "last": 33.30858116749211,
+            "little_endian_float64_sha256": "8cf814cc3575d1e3b79f08418bc894233f4c48efdaf90f345d08e8448f469009",
+            "minimum_recorded_direct_objective_increment": null
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.5,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 142,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 9.843940214456442e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 143,
+            "first": 33.50855207254217,
+            "last": 33.565135240085475,
+            "little_endian_float64_sha256": "b4d5da8784a98bde28acc21387fd984b608715c2c43be71039fa6794d086cb4f",
+            "minimum_recorded_direct_objective_increment": -9.734435479913373e-13
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.5,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 0,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 9.843940214456442e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 1,
+            "first": 33.565135240085475,
+            "last": 33.565135240085475,
+            "little_endian_float64_sha256": "c506d09a24a2c3d4216a832b0656e8ed924769cf06374099f993ea0571fb4ef7",
+            "minimum_recorded_direct_objective_increment": null
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.25,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 159,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 9.272456955737814e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 160,
+            "first": 33.66618237772157,
+            "last": 33.69402359660408,
+            "little_endian_float64_sha256": "2b92f0b9ffb5697521acee1e40d1df2c1e05b272925eda9727ab00d5cb5df14a",
+            "minimum_recorded_direct_objective_increment": -6.608047442568932e-13
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.25,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 0,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 9.272456955737814e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 1,
+            "first": 33.69402359660408,
+            "last": 33.69402359660408,
+            "little_endian_float64_sha256": "fe17d750af5bab466beaa0e0c40db4e6b297506e4af4305c573fa251007c6267",
+            "minimum_recorded_direct_objective_increment": null
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.125,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 154,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 9.541690060829964e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 155,
+            "first": 33.74481638455691,
+            "last": 33.75862162315877,
+            "little_endian_float64_sha256": "4a4e12d08d147a6727dc680ac8dd8275b7449db4da60903dff11941863bcc85f",
+            "minimum_recorded_direct_objective_increment": -5.968558980384842e-13
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.125,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 0,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 9.541690060829964e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 1,
+            "first": 33.75862162315877,
+            "last": 33.75862162315877,
+            "little_endian_float64_sha256": "8126fa80eceb445fec0fe1963fb9fa972df0167c8473e8a36cc940ffc78a85de",
+            "minimum_recorded_direct_objective_increment": null
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.0625,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 132,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 9.816916121412177e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 133,
+            "first": 33.784085765643006,
+            "last": 33.79095921320708,
+            "little_endian_float64_sha256": "583bc4f29f5ea044551f616a9ba243106239f0aa373cdde130c0925bcaaffea0",
+            "minimum_recorded_direct_objective_increment": -7.318590178329032e-13
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.0625,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 0,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 9.816916121412177e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 1,
+            "first": 33.79095921320708,
+            "last": 33.79095921320708,
+            "little_endian_float64_sha256": "acbf4dc37c89a051a12ba07a2746baa8bc7c2cef7325104c227a0917e8ca1732",
+            "minimum_recorded_direct_objective_increment": null
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.03125,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 176,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 8.340571128549085e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 177,
+            "first": 33.803708275453936,
+            "last": 33.80713766597343,
+            "little_endian_float64_sha256": "a8cfca1d3e2b464e9970d5f69158cbeed04e584ae7016969c483d6b397a3bd44",
+            "minimum_recorded_direct_objective_increment": -1.4637180356658064e-12
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.03125,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 0,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 8.340571128549085e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 1,
+            "first": 33.80713766597343,
+            "last": 33.80713766597343,
+            "little_endian_float64_sha256": "f9fd004f760b9bfb487a6837b5c0a2b8730fe898958ab3c53d07f7318c3c09c0",
+            "minimum_recorded_direct_objective_increment": null
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.015625,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 138,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 8.642883703199005e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 139,
+            "first": 33.8135164512888,
+            "last": 33.81522930843727,
+            "little_endian_float64_sha256": "289e7631de13c9901cce93153e601135b972bbde8652f48edf8649c879ff6f26",
+            "minimum_recorded_direct_objective_increment": -1.7053025658242404e-12
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.015625,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 0,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 8.642883703199005e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 1,
+            "first": 33.81522930843727,
+            "last": 33.81522930843727,
+            "little_endian_float64_sha256": "16ddbf155399a525aac41024f420ec529b185ca7e71e9277c26769dd57a157cb",
+            "minimum_recorded_direct_objective_increment": null
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.0078125,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 176,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 9.585125007650233e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 177,
+            "first": 33.81841976568071,
+            "last": 33.81927573389358,
+            "little_endian_float64_sha256": "3cbfe30722fad07176281795b759ea72e913ff97dc4c39612fefee9d294ba790",
+            "minimum_recorded_direct_objective_increment": -1.5276668818842154e-12
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.0078125,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 0,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 9.585125007650233e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 1,
+            "first": 33.81927573389358,
+            "last": 33.81927573389358,
+            "little_endian_float64_sha256": "ad23cfb9f80d282101f084a09ba92a8a61c37f47f6f5d18f5f298e10e6b5d51d",
+            "minimum_recorded_direct_objective_increment": null
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.00390625,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 191,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 9.453007992599664e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 192,
+            "first": 33.820871228480115,
+            "last": 33.82129909770488,
+            "little_endian_float64_sha256": "7f9df2232ffcd0529a94299b8bedb5f0e2768f5138f5df56991a5ce011a2d218",
+            "minimum_recorded_direct_objective_increment": -1.6768808563938364e-12
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.00390625,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 0,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 9.453007992599664e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 1,
+            "first": 33.82129909770488,
+            "last": 33.82129909770488,
+            "little_endian_float64_sha256": "c19347a4184dabc88c4155ef99b1856cb4f0e261a5b692be5686da6995f8bfe2",
+            "minimum_recorded_direct_objective_increment": null
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.001953125,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 225,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 9.948819234716501e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 226,
+            "first": 33.82209691166862,
+            "last": 33.822310817385656,
+            "little_endian_float64_sha256": "9a605acbb08616f109147b9e2a832a0ada79a1f5f4fe9b6f98b52dd6ca18e7c4",
+            "minimum_recorded_direct_objective_increment": -1.5063505998114124e-12
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        },
+        {
+          "mu": 0.001953125,
+          "recorded_stop": {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 0,
+            "iteration_cap": 100000,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 9.948819234716501e-07,
+            "initial_step_contract": "alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation",
+            "objective_increment_contract": "exact_original_moment_polynomial_ratio_logsumexp_increment"
+          },
+          "actual_history_identity": {
+            "count": 1,
+            "first": 33.822310817385656,
+            "last": 33.822310817385656,
+            "little_endian_float64_sha256": "964dba3e34c310780ab906aac93d1c97a6605ce2dcf7faf3b07b36544e501f51",
+            "minimum_recorded_direct_objective_increment": null
+          },
+          "gradient_independently_recomputed_from_final_phase": false
+        }
+      ],
+      "actual_QT_updates": 3,
+      "actual_phase_stop_blocks": 20,
+      "actual_recorded_phase_steps": 49065,
+      "maximum_actual_recorded_phase_steps": 47572,
+      "maximum_primal_relative_violation": 8.486544800234697e-13,
+      "maximum_QT_bound_violation": 1.2933654147673224e-11,
+      "AP_AO_phase_objective_histories_saved": null,
+      "all_phase_Armijo_increments_independently_recomputed": false,
+      "final_phase_gradient_independently_recomputed": false,
+      "final_W_or_power_physical_metrics_independently_recomputed": false,
+      "every_QT_primal_dual_state_independently_certified80digits": false
+    }
+  ],
+  "recorded_channel_moment_validation": {
+    "count": 1000,
+    "second_moment_max_relative_error": 0.017141046056120383,
+    "fourth_moment_max_relative_error": 0.03612662915208527,
+    "purpose": "Independent finite-Rician channel validation, not fabricated performance data"
+  },
+  "native1000_draw_loop_configuration_and_source_contract_verified": true,
+  "raw_native_MATLAB_1000_draws_independently_replayed": false,
+  "optimized_performance_1000_draws_executed": false,
+  "phase_or_W_final_matrices_saved_by_this_v3_runner": false,
+  "final_phase_gradient_independently_recomputed": false,
+  "final_W_or_power_physical_metrics_independently_recomputed": false,
+  "old_native_M30_v2_failure_sha256": "b4d6705866ecfae5c0b3563d6f2d18aa892e2d847622571f1e3467c1a24ca166",
+  "old_native_M30_v2_failure_not_upgraded": true,
+  "old183_bank_154_valid_29_failed_not_upgraded": true,
+  "new_complete183_bank_verified": false,
+  "historical_author_inputs_or_published_figures_recovered": false,
+  "all_source_constraints_verified": false,
+  "full_reproduction_pass": false
+}

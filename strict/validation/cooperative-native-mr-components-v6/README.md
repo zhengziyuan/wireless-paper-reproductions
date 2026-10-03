@@ -1,0 +1,7 @@
+# Actual native MATLAB MR-QT components: two inputs, eight attempts
+
+Both generated original fixed inputs executed SDPT3 high/best and SeDuMi high/best. All8 attempts passed the unchanged original physical/primal/QT/monotonicity gates. Only4 SeDuMi attempts passed the additional strict80-digit raw-primal/dual test. All4 SDPT3 extra strict failures are retained: their raw reported objective exceeds the true feasible dual witness by roughly1e-11, while their true feasible-primal/dual gaps remain tiny. No gate is relaxed and no extra strict flag is upgraded.
+
+The same exact positive coordinate constant is factored outside the original square-root cone. Native construction required a left named-dual annotation on identical inequalities; an error-only CVX cleanup occurs in the owning provider workspace. An actual operation probe separately identifies the old right-dual colon construction exception. Metadata/type/constructor failures are not original model or solver numerical failures. The older genuine native M30 MR-QT monotonicity failure also remains unchanged.
+
+Generated numeric inputs, actual returned-state/result hashes, actual source/runtime bindings, and independent80-digit results are preserved. Absolute private paths, raw error stacks and author manuscripts/artwork are excluded. This is NOT an entire eight-scheme native run, a new183-point bank, or a published-figure reproduction certificate.

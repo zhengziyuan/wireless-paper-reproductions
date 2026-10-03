@@ -1,0 +1,119 @@
+{
+  "scope": "WORK_independent_saved_actual_MATLAB_CDF41_complete_TwoStage_final_state_AND80digit_gradient_NOT_Python_resolve",
+  "checks": {
+    "actual_saved_states_and_runtime_source_identity_pass": true,
+    "all_actual_nativeMAT_original_stops_and_precision_gates_pass": true,
+    "independent80digit_actual_final_gradient_original1e6_pass": true,
+    "independent_actual_final_metric_and_SINR_parity_pass": true,
+    "independent_original_power_and_QoS_pass": true,
+    "independent_original_QT_stop_pass": true,
+    "actual_final_unit_modulus_pass": true,
+    "MATLAB_cold_prefix_same_original5000_pass": true
+  },
+  "all_independent_checks_pass": true,
+  "independent_actual_final_metric": {
+    "sinr": [
+      2.780105007218511e-07,
+      8.428917529027891e-08,
+      1083.344300225778,
+      3.0292305088887186e-08,
+      1.4901286850931445e-06,
+      8.204492457566165e-06,
+      1.9952623150115507,
+      1.995262314998588,
+      1.9952623150004525,
+      1.9952623149978577,
+      1.995262315000211,
+      1.995262315000197,
+      1.9952623149950008,
+      1.9952623150027142,
+      1.9952623150062463,
+      1.9952623150052946
+    ],
+    "hu_sum_rate": 10.082621750312933,
+    "total_power": 99.99999999998815
+  },
+  "metric_SINR_maximum_PyMAT_error": 1.4210854715202004e-14,
+  "independent_original_physical_violation": 0,
+  "independent_QT_relative_residual": 1.8534185033733586e-06,
+  "independent80digit_actual_final_gradient": {
+    "precision_decimal_digits": 80,
+    "criterion": "11.594051415438284748551266202233341785067610016871890068085067364",
+    "riemannian_gradient_norm": "0.00000036573737947384080192635821881546465663510472405634983798885252228",
+    "gradient_tangent_max_error": "4.6557771200140692080010679270464018808298629277402260488712994545e-89",
+    "float64_gradient_norm": 3.6573737954465374e-07,
+    "float64_gradient_max_error_against80digits": 6.580023721428143e-16,
+    "float64_criterion_error_against80digits": 2.424039871040773e-16,
+    "original1e6_gradient_stop_pass": true,
+    "original_gradient_formula_not_changed": true
+  },
+  "actual_nativeMAT_phase_stop": {
+    "converged": true,
+    "termination": "gradient_tolerance",
+    "iterations": 6819,
+    "iteration_cap": 100000,
+    "stop_rule": "Riemannian_gradient_norm",
+    "threshold": 1e-06,
+    "final_residual": 3.657373795099561e-07,
+    "phase_method": "author_Algorithm_3-2_RGD_minimize_negative_F",
+    "printed_sign_interpretation": "argmax_F_equivalent_minimize_negative_F"
+  },
+  "actual_nativeMAT_QT_stop": {
+    "converged": true,
+    "termination": "relative_improvement",
+    "iterations": 3,
+    "iteration_cap": 200,
+    "stop_rule": "signed_relative_objective_increase",
+    "threshold": 0.0001,
+    "final_residual": 1.8534185033733586e-06
+  },
+  "actual_receipt_sha256": "b152e07af238a44739c2f28ad34fdc670f7af348892a69efdcdfc0e6aaaef1b7",
+  "actual_returned_states_sha256": "c73073ee9b25f4fd428d10c3a0ff5f2b6d9449e2189575aa051236e184600dce",
+  "actual_executed_MATLAB_source_hashes": [
+    {
+      "filename": "run_cdf41_original_TS_cold_chain_work.m",
+      "sha256": "f7a13357f8a85b66747bd3f3f5b6e3208dd9dbc06e7bf64a7b292d106a5a9769"
+    },
+    {
+      "filename": "strict_hotspot_core.m",
+      "sha256": "875c05cb50659fb8cae6f7bddcd41bd88de321548df3e5656f0128ee1dc7ca95"
+    },
+    {
+      "filename": "strict_hotspot_termination.m",
+      "sha256": "fe5578137d98f3bad956b31dfffe96be3c22352bf060ef143ea5b7d3e92db4f0"
+    },
+    {
+      "filename": "cdf41-native-canonical-double-20261004-v3.mat",
+      "sha256": "c3be9c2c27dceea2110a12f6bf33817b5a5e49dded17095599be7388a40f4cb9"
+    },
+    {
+      "filename": "instantaneous_geometry_config.json",
+      "sha256": "5423d02b19a7d1a634782f689f8c1cc14c511932865eaa3b554b3eaad75be669"
+    },
+    {
+      "filename": "cvx_begin.m",
+      "sha256": "48520362f711704d85b9e9377c5ac1f1ccef449952528381121d17c63c2210ad"
+    },
+    {
+      "filename": "cvx_end.m",
+      "sha256": "d0a3fd444b1706d22f7df0b4086932bb78987fd1519e3e2f74cb4487055366b9"
+    },
+    {
+      "filename": "cvx_precision.m",
+      "sha256": "ca0b329b07eb8b590ef185706ea6209ba91a54459408e426610181f450f1875e"
+    },
+    {
+      "filename": "cvx_solver.m",
+      "sha256": "1dadc97e348770eeb54b4bd377e73c45c5f6dc9909f61530c219e9cba2335f81"
+    }
+  ],
+  "independent_Python_evaluator_source_sha256": "5269cd3d86b109994335be7c94b0506211f08136a8e684df84f10e0afa69b322",
+  "WORK_source_hashes": {
+    "verify_cdf41_actual_matlab_TS.py": "21341ac0b485b079323e896fe8afe00e3a44cd5d9656a6963df32530e6075eca",
+    "complete_cdf41_original_TS_cold_chain.py": "e8d3ea0d40bb79383de34443de39ce9bece5cbb55469de01f32a0a487bdeb929"
+  },
+  "no_new_Python_or_MATLAB_optimization_run": true,
+  "old_sample41_failure_not_upgraded": true,
+  "complete_CDF_reproduction_pass": false,
+  "full_reproduction_pass": false
+}

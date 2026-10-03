@@ -1,0 +1,70 @@
+{
+  "scope": "retained_source_snapshots_and_root_observed_terminal_startup_errors_NOT_machine_failure_receipts",
+  "original_failure_terminal_transcripts_preserved": false,
+  "machine_generated_failure_receipts_available": false,
+  "failure_observations_authority": "root agent actual terminal observations; no raw transcript saved",
+  "retained_source_snapshots_and_verified_metadata_only_repairs": [
+    {
+      "filename": "run_cdf41_native_double_boundary_work.m",
+      "preserved_failed_startup_source_sha256": "95c0a2a706b4439b24d21654065d0e4b0d157701ba7ab130c50b9ca03b7c2ef7",
+      "actual_v3_source_sha256": "dfcc16f9ec7cf37cc5b24e8b4dadd9b3d92802fb0323f490054ed265a02ffb99",
+      "only_repair": "append the .m extension to own metadata hash filename; numeric body unchanged"
+    },
+    {
+      "filename": "run_cdf41_original_TS_cold_chain_work.m",
+      "preserved_failed_startup_source_sha256": "24e5914f6599abe0a556d3474046820b86fd947a7bcbd3df4b317ae8f7340336",
+      "actual_v3_source_sha256": "f7a13357f8a85b66747bd3f3f5b6e3208dd9dbc06e7bf64a7b292d106a5a9769",
+      "only_repair": "append the .m extension to own metadata hash filename; numeric body unchanged"
+    }
+  ],
+  "observed_failures": [
+    {
+      "actual_owned_terminal_session": 39579,
+      "observed_exit_code": 1,
+      "failure_classification": "metadata hashing own filename missing .m extension before canonical fixture save",
+      "observed_function_and_line_stack": [
+        {
+          "name": "run_cdf41_native_double_boundary_work>hash_file",
+          "line": 41
+        },
+        {
+          "name": "run_cdf41_native_double_boundary_work>hashes",
+          "line": 38
+        },
+        {
+          "name": "run_cdf41_native_double_boundary_work",
+          "line": 24
+        }
+      ],
+      "canonical_fixture_written": false,
+      "phase_or_QT_started": false,
+      "numerical_case_failure_or_success": false
+    },
+    {
+      "actual_owned_terminal_session": 25845,
+      "observed_exit_code": 1,
+      "failure_classification": "inner metadata hashing own filename missing .m extension after canonical fixture save",
+      "observed_function_and_line_stack": [
+        {
+          "name": "run_cdf41_original_TS_cold_chain_work>hashes",
+          "line": 67
+        },
+        {
+          "name": "run_cdf41_original_TS_cold_chain_work",
+          "line": 13
+        },
+        {
+          "name": "run_cdf41_native_double_boundary_work",
+          "line": 26
+        }
+      ],
+      "canonical_fixture_written": true,
+      "preserved_canonical_v2_fixture_sha256": "78d503271a16da1e3267526e1870e1ab999238cd941a61805e05659357199cb8",
+      "phase_or_QT_started": false,
+      "numerical_case_failure_or_success": false
+    }
+  ],
+  "old_actual_5000_phase_cap_failure_remains_false": true,
+  "old_full_sample41_failure_sha256": "35ceadf160bcc028c408861efdd65a5e9ef61e6cdc3a413de5a49f30d3d719d5",
+  "old_fullCDF_not_promoted": true
+}

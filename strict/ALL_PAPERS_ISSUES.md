@@ -154,6 +154,18 @@ the observed failure.
 
 ## Execution gates that remain mandatory
 
+Native cooperative v3 has now actually completed the full M30 physical scene
+(J3/U2/N16/K1/M30), all8 original chains and1000 moment draws. All original
+implementation gates and actual selected CVX/SDPT3 source/binary interval
+bindings pass. This does not erase the old v2 M30 numerical failure. The
+M30 independent saved-record audit now also passes every retained stop,
+physical margin, QT acceptance and outer residual. The N48 full-scene run
+has also actually completed all8 chains with the original gates passing;
+its independent record audit remains a distinct requirement.
+Final phase/precoder matrices were not retained
+by this old recording schema, so no independent final-gradient certificate is
+claimed from its boolean flags. The new183-point bank remains unexecuted.
+
 The complete analytical MIS sensing Fig2 has now actually run in both
 languages. A third independent finite-array evaluator, importing neither
 production solver, checks all nine 91x361 hemisphere gain/SINR maps, all
@@ -218,6 +230,53 @@ range does not establish a recovered historical protocol and does not permit
 selecting the nearest scene, weights, gain or ordinate.
 
 ### Completed runs do not erase source discrepancies
+
+The sensing v4 campaign was found to have actually stopped after376 durable
+progress records on the known floating active-threshold projection exception.
+It is no longer described as running. Additional completed raw files are
+preserved and will be inventoried separately; this is not6000 numerical cases
+or a final full-result receipt. The same exact Euclidean-projection numerical
+repair has independent component proofs, but a fresh version, cold full30
+checks and a complete6000 population are still required. The paper-reported
+4000 inner cap remains unchanged, and capped outcomes remain capped.
+
+The original hotspot sample41 TwoStage chain now has actual native MATLAB
+and independent saved-state MP80 checks, in addition to the separately
+completed Python cold chain. Native phase converges at6819 updates with
+gradient3.6573737951e-7; the original QT stop is met after3 updates. Its own
+old5000 prefix is bitwise identical, and all16 transmitted streams remain.
+An independent physical evaluation of the actual native final state agrees
+within1.4210854715e-14. Native/Python iterates are not claimed bitwise equal.
+Two earlier source-hash metadata startup failures did not execute the phase
+and are not numerical cases; only their source snapshots and observed tool
+errors exist, not fabricated machine receipts. See [the native full-chain
+supplement](validation/hotspot-cdf41-native-full-TS-v3/README.md). This is not
+the complete1000-sample CDF or the other schemes for this realization.
+
+Subsequent prospective cooperative v3 preflights actually complete all10
+previous phase-failed physical scenes, all80 original algorithm chains and
+all10000 finite-Rician moment draws. An independent audit verifies every
+recorded stop/history and replays the full moment population bitwise. The
+old154/29 result is not overwritten. This is not a complete183-point bank,
+native MATLAB full-scene certificate, or a historical-curve agreement claim.
+Final phase matrices were not retained by that runner; their gradients are
+not independently reevaluated from saved states. See [the frozen full10
+preflight](validation/cooperative-v3-full10-preflight-python-v1/README.md).
+
+Native MATLAB same-MR-QT components now construct and solve both an original
+N48 failure input and the actual full-M30 call20 failure input under allfour
+fixed SDPT3/SeDuMi high/best controls. The right-side CVX dual annotation on
+a CVX-valued RHS caused a construction-only MATLAB colon-dispatch exception;
+operation-level probes isolate it, and the documented left-side annotation
+constructs the same inequalities. Integer fixture conversion and provider-
+scope exception cleanup are interface repairs, not new mathematical updates.
+All8 original physical/primal/QT/monotonicity gates pass. All4 SeDuMi results
+also pass the stricter MP80 raw-primal/feasible-dual checks. All4 SDPT3 raw
+gap checks still fail because the raw objective exceeds the independently
+feasible dual upper by only1.43e-11 or6.23e-11; these failures are retained,
+not hidden by the tiny positive true-feasible gaps. The original1e-5 gates
+and the extra stricter audit gates are explicitly distinct. See [the native
+component scope](validation/cooperative-native-mr-components-v6/README.md).
 
 The old complete cooperative-satellite183-point bank actually finishes with
 154 valid and29 failed points:10 phase line-search and19 MR QT failures.

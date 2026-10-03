@@ -1,0 +1,221 @@
+{
+  "scope": "WORK_fresh_ALL10_old_phase_failed_original_scenarios_full8_preflight_NOT_formal183_or_historicalfigure",
+  "required_cases": 10,
+  "actually_executed_cases": 10,
+  "actual_results": [
+    {
+      "index": 0,
+      "old_sweep": "subsurfaces_kL20",
+      "old_value": 30,
+      "actual_receipt": "case-00-full8-python.json",
+      "actual_receipt_sha256": "21e397ac3d4c14f8a827beb374e254a129602901977849cb15b5e9d5dc43d517",
+      "checks": {
+        "constraint_pass": true,
+        "convergence_pass": true,
+        "solver_primal_pass": true,
+        "qt_bound_pass": true
+      },
+      "actual_all8_chains_pass": true,
+      "actual_schemes_completed": 8,
+      "actual_moment_samples": 1000,
+      "source_unchanged_during_run": true,
+      "actual_failure": null,
+      "elapsed_seconds": 182.31170630000997
+    },
+    {
+      "index": 1,
+      "old_sweep": "subsurfaces_kL20",
+      "old_value": 35,
+      "actual_receipt": "case-01-full8-python.json",
+      "actual_receipt_sha256": "c9f77b8acd309d071c60943bcc5c6a9ed2e0039b5eec0f5ae61405ef8a75a17c",
+      "checks": {
+        "constraint_pass": true,
+        "convergence_pass": true,
+        "solver_primal_pass": true,
+        "qt_bound_pass": true
+      },
+      "actual_all8_chains_pass": true,
+      "actual_schemes_completed": 8,
+      "actual_moment_samples": 1000,
+      "source_unchanged_during_run": true,
+      "actual_failure": null,
+      "elapsed_seconds": 57.27420579997124
+    },
+    {
+      "index": 2,
+      "old_sweep": "subsurfaces_kL20",
+      "old_value": 45,
+      "actual_receipt": "case-02-full8-python.json",
+      "actual_receipt_sha256": "6c0cf0ea7f8819c575756226b42e7c38c9c6145c3c60fc88758a2e6094d8c3a6",
+      "checks": {
+        "constraint_pass": true,
+        "convergence_pass": true,
+        "solver_primal_pass": true,
+        "qt_bound_pass": true
+      },
+      "actual_all8_chains_pass": true,
+      "actual_schemes_completed": 8,
+      "actual_moment_samples": 1000,
+      "source_unchanged_during_run": true,
+      "actual_failure": null,
+      "elapsed_seconds": 506.33628019999014
+    },
+    {
+      "index": 3,
+      "old_sweep": "subsurfaces_kL0",
+      "old_value": 30,
+      "actual_receipt": "case-03-full8-python.json",
+      "actual_receipt_sha256": "163870b90e95f95a89b2f4e9dd5e6ffd8ba59e22a3e1d18c4ca417e407d84268",
+      "checks": {
+        "constraint_pass": true,
+        "convergence_pass": true,
+        "solver_primal_pass": true,
+        "qt_bound_pass": true
+      },
+      "actual_all8_chains_pass": true,
+      "actual_schemes_completed": 8,
+      "actual_moment_samples": 1000,
+      "source_unchanged_during_run": true,
+      "actual_failure": null,
+      "elapsed_seconds": 49.435889299958944
+    },
+    {
+      "index": 4,
+      "old_sweep": "subsurfaces_kL0",
+      "old_value": 35,
+      "actual_receipt": "case-04-full8-python.json",
+      "actual_receipt_sha256": "67586c65ea9112f02d8fba4a8c871aaead2c86bc9267d13f81fc7c25fa925723",
+      "checks": {
+        "constraint_pass": true,
+        "convergence_pass": true,
+        "solver_primal_pass": true,
+        "qt_bound_pass": true
+      },
+      "actual_all8_chains_pass": true,
+      "actual_schemes_completed": 8,
+      "actual_moment_samples": 1000,
+      "source_unchanged_during_run": true,
+      "actual_failure": null,
+      "elapsed_seconds": 56.73763660003897
+    },
+    {
+      "index": 5,
+      "old_sweep": "subsurfaces_kL0",
+      "old_value": 45,
+      "actual_receipt": "case-05-full8-python.json",
+      "actual_receipt_sha256": "0c4ca1ad300bbcabfdb4b38fe8da0eb5288d22cade518d68b65760ab0dafd797",
+      "checks": {
+        "constraint_pass": true,
+        "convergence_pass": true,
+        "solver_primal_pass": true,
+        "qt_bound_pass": true
+      },
+      "actual_all8_chains_pass": true,
+      "actual_schemes_completed": 8,
+      "actual_moment_samples": 1000,
+      "source_unchanged_during_run": true,
+      "actual_failure": null,
+      "elapsed_seconds": 74.10118810000131
+    },
+    {
+      "index": 6,
+      "old_sweep": "ground_kL0",
+      "old_value": 24,
+      "actual_receipt": "case-06-full8-python.json",
+      "actual_receipt_sha256": "d5b12e1852339f1e7f70df7b4ed1136b57d3e031d55766ffaa7d053591bc7f7c",
+      "checks": {
+        "constraint_pass": true,
+        "convergence_pass": true,
+        "solver_primal_pass": true,
+        "qt_bound_pass": true
+      },
+      "actual_all8_chains_pass": true,
+      "actual_schemes_completed": 8,
+      "actual_moment_samples": 1000,
+      "source_unchanged_during_run": true,
+      "actual_failure": null,
+      "elapsed_seconds": 98.3717433999991
+    },
+    {
+      "index": 7,
+      "old_sweep": "ground_kL0",
+      "old_value": 27,
+      "actual_receipt": "case-07-full8-python.json",
+      "actual_receipt_sha256": "7d179f6e93621aa20a2f1f3fa7b59bf7514eebe3abaf58bde8ce14f23568eed7",
+      "checks": {
+        "constraint_pass": true,
+        "convergence_pass": true,
+        "solver_primal_pass": true,
+        "qt_bound_pass": true
+      },
+      "actual_all8_chains_pass": true,
+      "actual_schemes_completed": 8,
+      "actual_moment_samples": 1000,
+      "source_unchanged_during_run": true,
+      "actual_failure": null,
+      "elapsed_seconds": 201.0495955000515
+    },
+    {
+      "index": 8,
+      "old_sweep": "ground_kL0",
+      "old_value": 30,
+      "actual_receipt": "case-08-full8-python.json",
+      "actual_receipt_sha256": "e2dfb3d3e6e3c9bc5c5c8473dc42f6a9488a35b1037bdc84ca4b8c714dd8b4df",
+      "checks": {
+        "constraint_pass": true,
+        "convergence_pass": true,
+        "solver_primal_pass": true,
+        "qt_bound_pass": true
+      },
+      "actual_all8_chains_pass": true,
+      "actual_schemes_completed": 8,
+      "actual_moment_samples": 1000,
+      "source_unchanged_during_run": true,
+      "actual_failure": null,
+      "elapsed_seconds": 204.140987199964
+    },
+    {
+      "index": 9,
+      "old_sweep": "multi_vs_single_single_2.5_kL20",
+      "old_value": 0.09,
+      "actual_receipt": "case-09-full8-python.json",
+      "actual_receipt_sha256": "fd782b065148274847d9ecd72ece359d9e566331bc467d190d03a2ae046a4c7d",
+      "checks": {
+        "constraint_pass": true,
+        "convergence_pass": true,
+        "solver_primal_pass": true,
+        "qt_bound_pass": true
+      },
+      "actual_all8_chains_pass": true,
+      "actual_schemes_completed": 8,
+      "actual_moment_samples": 1000,
+      "source_unchanged_during_run": true,
+      "actual_failure": null,
+      "elapsed_seconds": 53.23191600001883
+    }
+  ],
+  "all_required_full8_preflight_cases_pass": true,
+  "actual_elapsed_seconds": 1483.8821292000357,
+  "source_unchanged_during_batch": true,
+  "executed_source_hashes": {
+    "core.py": "fdbe81b3d19e1c1aa62a015969017f24accdcdb6e7a709a65540576b49f0abf2",
+    "models.py": "ce974bbe26e97481425a603b4dc2cbfc7317b284bb192f482d49d71a28e5819e",
+    "increments.py": "384114958637e7d86dbce3894ef653cd6fd6edd2e40883b6b3774a65767fa7ea",
+    "increments_v2.py": "d17b31e55dcca33f6737a1811def539c205eed63ba100b6175491d518ba362a7",
+    "algorithms.py": "3106b9c673757b73ccb350846c78aeae64739837e960b9c80b3fc62a3feaa5b2",
+    "spectral_rmo.py": "2d8ebbcb44801a99d5dfdfd0c954530e1d4a8653b4dfa467885be3068e3edeb1",
+    "core_qt_factored_v3.py": "4ec1d1825581f826a82d9b46a401b388d835c8533241b65e67633b07939b3120",
+    "qt_numerical_guard_v3.py": "654f69da5d949211900366e4c5520237e0106d97c7c42b9a7030dd4e9ef17312",
+    "termination.py": "5b25d0365aa9a21dca886250858221379b02f766ecaaa35277a560eef2ad685d",
+    "scenario.py": "7dbc490944c2fd7aaa2fc862068508530faab10b8c2dcb63eccf5511c74a62ba",
+    "run.py": "d9d064f05c7ec8f08b2b9c5a389f5d6cd5117701c15c1609dac6913f3d236131",
+    "receipts.py": "8b74e8581df67419913d3a48d3326f9fd35aacd4b1480668f5692d880fd1490d",
+    "run_cooperative_v3.py": "35ff78dd8609b148ec6dba8b3bf183f905d586706ed007dd17a6558a517514e7",
+    "v3_config.json": "6f308ede659338a3ac66cd2b2b162a7bf4b9aa2d968a0ddc55c162dada56a8a8"
+  },
+  "WORK_driver_sha256": "6010298f3249413e891978aa40f6294fc9087aabb945957e448743b981a202f1",
+  "original183_failed_points_not_upgraded": true,
+  "new_formal183_bank_executed": false,
+  "nativeMAT_v3_full_preflight_verified": false,
+  "full_reproduction_pass": false
+}

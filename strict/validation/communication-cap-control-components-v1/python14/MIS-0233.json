@@ -1,0 +1,741 @@
+{
+  "scope": "WORK_one_actual_fig8_MIS_start_cold_original_RCG_unreported_cap_only_NOT_full12000",
+  "original_start": 233,
+  "baseline": "MIS",
+  "original_cap": 4000,
+  "new_unreported_safety_cap": 100000,
+  "first_original_capped_stage": 18,
+  "original_threshold": 1e-06,
+  "old_failed_start_sha256": "ef3282979e0b1388afeaa8efff113de7fd66fba8aa4f7449986e1c31b2ee33c9",
+  "immutable_bank_manifest_sha256": "6235877aad7f790874b76fb624467c46454eedd178a393d9747312d15056ee76",
+  "science_digest_before": "5474db104d313a5a2b184444e8f82d58c235b338ce72ac64f8ee988ab64debc9",
+  "science_digest_after": "5474db104d313a5a2b184444e8f82d58c235b338ce72ac64f8ee988ab64debc9",
+  "scientific_sources": {
+    "source": {
+      "engine.py": "eb90ca857df1cf3aed094c91c1ccee1461e571a96f15e42f7545768acaa1de77",
+      "mis_communications_strict_engine.m": "763a55bbcd74561c56f4bf668ef634863546b2cf235d16ab1854102d32da2108",
+      "plot_beampatterns.py": "1f4dfe523361e86ce13aae3a4a3a09b50831e7b8b6a7a681a9876d60f0675a7d",
+      "run.py": "33f52db44bce2bcc49d48c50210f10392520870748bfa62c47fd3466839bfe09",
+      "run_mis_communications.m": "a875b183f281efcb4786109467d9ff8e37edd2c7aac9d53fa68752e495e34bf1",
+      "source_map.json": "beb4dba92d7ec45b163c57616548d9cdf9cee9bdf88a42b240064732f2c19b71",
+      "test_communication_increment.py": "af0f99a0614c97794c4c4bc2650c2baf4a6db811448fab9ad02d0adce11a34ee",
+      "test_figure_inputs.py": "d25f2164a461d5b219d67612b125ef50aad283e823e98f167ead1999ce53b314",
+      "test_line_search.py": "1f3d775fa911988f4aeb7f4bb169c8beb555aa9f58b23637ccbf124adccee855"
+    },
+    "runtime": {
+      "python": "3.12.14",
+      "numpy": "2.5.3",
+      "cpu_count": 22,
+      "thread_environment": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1"
+      }
+    }
+  },
+  "executed_WORK_script_sha256": "311389faf21e000f8c1920f9db6198e38d7993fcc47ce5bfae0333c149a5fa4b",
+  "source_and_old_result_unchanged": true,
+  "cold_original_prefix_checks": [
+    {
+      "stage": 0,
+      "mu": 550,
+      "old_actual_record_count": 759,
+      "all_old_inner_records_bitwise_equal": true,
+      "old_stop": {
+        "reason": "gradient_tolerance",
+        "objective": 762.3651122098092,
+        "gradient_norm": 0.03342607147707157,
+        "projected_kkt_norm": 9.95998175328789e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "new_stop": {
+        "reason": "gradient_tolerance",
+        "objective": 762.3651122098092,
+        "gradient_norm": 0.03342607147707157,
+        "projected_kkt_norm": 9.95998175328789e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "stage": 1,
+      "mu": 275.0,
+      "old_actual_record_count": 13,
+      "all_old_inner_records_bitwise_equal": true,
+      "old_stop": {
+        "reason": "gradient_tolerance",
+        "objective": 381.1341639103965,
+        "gradient_norm": 0.03342538914339961,
+        "projected_kkt_norm": 9.756015877655572e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "new_stop": {
+        "reason": "gradient_tolerance",
+        "objective": 381.1341639103965,
+        "gradient_norm": 0.03342538914339961,
+        "projected_kkt_norm": 9.756015877655572e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "stage": 2,
+      "mu": 137.5,
+      "old_actual_record_count": 27,
+      "all_old_inner_records_bitwise_equal": true,
+      "old_stop": {
+        "reason": "gradient_tolerance",
+        "objective": 190.51869127344887,
+        "gradient_norm": 0.03342407413892875,
+        "projected_kkt_norm": 9.633937371028169e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "new_stop": {
+        "reason": "gradient_tolerance",
+        "objective": 190.51869127344887,
+        "gradient_norm": 0.03342407413892875,
+        "projected_kkt_norm": 9.633937371028169e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "stage": 3,
+      "mu": 68.75,
+      "old_actual_record_count": 39,
+      "all_old_inner_records_bitwise_equal": true,
+      "old_stop": {
+        "reason": "gradient_tolerance",
+        "objective": 95.21095798020649,
+        "gradient_norm": 0.03342148255658783,
+        "projected_kkt_norm": 9.952105624681536e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "new_stop": {
+        "reason": "gradient_tolerance",
+        "objective": 95.21095798020649,
+        "gradient_norm": 0.03342148255658783,
+        "projected_kkt_norm": 9.952105624681536e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "stage": 4,
+      "mu": 34.375,
+      "old_actual_record_count": 54,
+      "all_old_inner_records_bitwise_equal": true,
+      "old_stop": {
+        "reason": "gradient_tolerance",
+        "objective": 47.55709738288346,
+        "gradient_norm": 0.03341633411201087,
+        "projected_kkt_norm": 9.764019292787892e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "new_stop": {
+        "reason": "gradient_tolerance",
+        "objective": 47.55709738288346,
+        "gradient_norm": 0.03341633411201087,
+        "projected_kkt_norm": 9.764019292787892e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "stage": 5,
+      "mu": 17.1875,
+      "old_actual_record_count": 70,
+      "all_old_inner_records_bitwise_equal": true,
+      "old_stop": {
+        "reason": "gradient_tolerance",
+        "objective": 23.73017917816545,
+        "gradient_norm": 0.03340606980940925,
+        "projected_kkt_norm": 9.74238665816562e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "new_stop": {
+        "reason": "gradient_tolerance",
+        "objective": 23.73017917816545,
+        "gradient_norm": 0.03340606980940925,
+        "projected_kkt_norm": 9.74238665816562e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "stage": 6,
+      "mu": 8.59375,
+      "old_actual_record_count": 87,
+      "all_old_inner_records_bitwise_equal": true,
+      "old_stop": {
+        "reason": "gradient_tolerance",
+        "objective": 11.816744245000073,
+        "gradient_norm": 0.03338563046479482,
+        "projected_kkt_norm": 9.88842684714905e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "new_stop": {
+        "reason": "gradient_tolerance",
+        "objective": 11.816744245000073,
+        "gradient_norm": 0.03338563046479482,
+        "projected_kkt_norm": 9.88842684714905e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "stage": 7,
+      "mu": 4.296875,
+      "old_actual_record_count": 106,
+      "all_old_inner_records_bitwise_equal": true,
+      "old_stop": {
+        "reason": "gradient_tolerance",
+        "objective": 5.860075041405056,
+        "gradient_norm": 0.03334508470032832,
+        "projected_kkt_norm": 9.730767248037459e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "new_stop": {
+        "reason": "gradient_tolerance",
+        "objective": 5.860075041405056,
+        "gradient_norm": 0.03334508470032832,
+        "projected_kkt_norm": 9.730767248037459e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "stage": 8,
+      "mu": 2.1484375,
+      "old_actual_record_count": 125,
+      "all_old_inner_records_bitwise_equal": true,
+      "old_stop": {
+        "reason": "gradient_tolerance",
+        "objective": 2.8818366590202844,
+        "gradient_norm": 0.03326526862056529,
+        "projected_kkt_norm": 9.841874806124382e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "new_stop": {
+        "reason": "gradient_tolerance",
+        "objective": 2.8818366590202844,
+        "gradient_norm": 0.03326526862056529,
+        "projected_kkt_norm": 9.841874806124382e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "stage": 9,
+      "mu": 1.07421875,
+      "old_actual_record_count": 145,
+      "all_old_inner_records_bitwise_equal": true,
+      "old_stop": {
+        "reason": "gradient_tolerance",
+        "objective": 1.3929086411899931,
+        "gradient_norm": 0.03311076351811332,
+        "projected_kkt_norm": 9.690918002997724e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "new_stop": {
+        "reason": "gradient_tolerance",
+        "objective": 1.3929086411899931,
+        "gradient_norm": 0.03311076351811332,
+        "projected_kkt_norm": 9.690918002997724e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "stage": 10,
+      "mu": 0.537109375,
+      "old_actual_record_count": 164,
+      "all_old_inner_records_bitwise_equal": true,
+      "old_stop": {
+        "reason": "gradient_tolerance",
+        "objective": 0.6488216133240607,
+        "gradient_norm": 0.0328223818211869,
+        "projected_kkt_norm": 9.66917894126933e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "new_stop": {
+        "reason": "gradient_tolerance",
+        "objective": 0.6488216133240607,
+        "gradient_norm": 0.0328223818211869,
+        "projected_kkt_norm": 9.66917894126933e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "stage": 11,
+      "mu": 0.2685546875,
+      "old_actual_record_count": 181,
+      "all_old_inner_records_bitwise_equal": true,
+      "old_stop": {
+        "reason": "gradient_tolerance",
+        "objective": 0.27750834217685927,
+        "gradient_norm": 0.03232806713459663,
+        "projected_kkt_norm": 9.709295867184246e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "new_stop": {
+        "reason": "gradient_tolerance",
+        "objective": 0.27750834217685927,
+        "gradient_norm": 0.03232806713459663,
+        "projected_kkt_norm": 9.709295867184246e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "stage": 12,
+      "mu": 0.13427734375,
+      "old_actual_record_count": 195,
+      "all_old_inner_records_bitwise_equal": true,
+      "old_stop": {
+        "reason": "gradient_tolerance",
+        "objective": 0.09320249760420202,
+        "gradient_norm": 0.03164904146946359,
+        "projected_kkt_norm": 9.7799937665538e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "new_stop": {
+        "reason": "gradient_tolerance",
+        "objective": 0.09320249760420202,
+        "gradient_norm": 0.03164904146946359,
+        "projected_kkt_norm": 9.7799937665538e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "stage": 13,
+      "mu": 0.067138671875,
+      "old_actual_record_count": 210,
+      "all_old_inner_records_bitwise_equal": true,
+      "old_stop": {
+        "reason": "gradient_tolerance",
+        "objective": 0.003252110268032321,
+        "gradient_norm": 0.031185301845640452,
+        "projected_kkt_norm": 9.918268979683728e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "new_stop": {
+        "reason": "gradient_tolerance",
+        "objective": 0.003252110268032321,
+        "gradient_norm": 0.031185301845640452,
+        "projected_kkt_norm": 9.918268979683728e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "stage": 14,
+      "mu": 0.0335693359375,
+      "old_actual_record_count": 213,
+      "all_old_inner_records_bitwise_equal": true,
+      "old_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -0.039086601088052536,
+        "gradient_norm": 0.031448682548875506,
+        "projected_kkt_norm": 9.900718887996236e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "new_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -0.039086601088052536,
+        "gradient_norm": 0.031448682548875506,
+        "projected_kkt_norm": 9.900718887996236e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "stage": 15,
+      "mu": 0.01678466796875,
+      "old_actual_record_count": 185,
+      "all_old_inner_records_bitwise_equal": true,
+      "old_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -0.05835990215864198,
+        "gradient_norm": 0.032134043252272405,
+        "projected_kkt_norm": 9.933513337259344e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "new_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -0.05835990215864198,
+        "gradient_norm": 0.032134043252272405,
+        "projected_kkt_norm": 9.933513337259344e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "stage": 16,
+      "mu": 0.008392333984375,
+      "old_actual_record_count": 155,
+      "all_old_inner_records_bitwise_equal": true,
+      "old_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -0.0671360029597137,
+        "gradient_norm": 0.03292797323034441,
+        "projected_kkt_norm": 9.72577527677035e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "new_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -0.0671360029597137,
+        "gradient_norm": 0.03292797323034441,
+        "projected_kkt_norm": 9.72577527677035e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "stage": 17,
+      "mu": 0.0041961669921875,
+      "old_actual_record_count": 132,
+      "all_old_inner_records_bitwise_equal": true,
+      "old_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -0.07120776903789676,
+        "gradient_norm": 0.03363903809892471,
+        "projected_kkt_norm": 9.973484980151944e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "new_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -0.07120776903789676,
+        "gradient_norm": 0.03363903809892471,
+        "projected_kkt_norm": 9.973484980151944e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "stage": 18,
+      "mu": 0.00209808349609375,
+      "old_actual_record_count": 4000,
+      "all_old_inner_records_bitwise_equal": true,
+      "old_stop": {
+        "reason": "iteration_cap",
+        "objective": -0.0732884002174703,
+        "gradient_norm": 0.03406421985096524,
+        "projected_kkt_norm": 0.00034013320739610897,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "new_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -0.07369816856493967,
+        "gradient_norm": 0.03638800726397924,
+        "projected_kkt_norm": 9.862914876433492e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    }
+  ],
+  "stages": [
+    {
+      "stage": 0,
+      "mu": 550,
+      "actual_records": 759,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": 762.3651122098092,
+        "gradient_norm": 0.03342607147707157,
+        "projected_kkt_norm": 9.95998175328789e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "old_prefix_applicable": true
+    },
+    {
+      "stage": 1,
+      "mu": 275.0,
+      "actual_records": 13,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": 381.1341639103965,
+        "gradient_norm": 0.03342538914339961,
+        "projected_kkt_norm": 9.756015877655572e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "old_prefix_applicable": true
+    },
+    {
+      "stage": 2,
+      "mu": 137.5,
+      "actual_records": 27,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": 190.51869127344887,
+        "gradient_norm": 0.03342407413892875,
+        "projected_kkt_norm": 9.633937371028169e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "old_prefix_applicable": true
+    },
+    {
+      "stage": 3,
+      "mu": 68.75,
+      "actual_records": 39,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": 95.21095798020649,
+        "gradient_norm": 0.03342148255658783,
+        "projected_kkt_norm": 9.952105624681536e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "old_prefix_applicable": true
+    },
+    {
+      "stage": 4,
+      "mu": 34.375,
+      "actual_records": 54,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": 47.55709738288346,
+        "gradient_norm": 0.03341633411201087,
+        "projected_kkt_norm": 9.764019292787892e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "old_prefix_applicable": true
+    },
+    {
+      "stage": 5,
+      "mu": 17.1875,
+      "actual_records": 70,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": 23.73017917816545,
+        "gradient_norm": 0.03340606980940925,
+        "projected_kkt_norm": 9.74238665816562e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "old_prefix_applicable": true
+    },
+    {
+      "stage": 6,
+      "mu": 8.59375,
+      "actual_records": 87,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": 11.816744245000073,
+        "gradient_norm": 0.03338563046479482,
+        "projected_kkt_norm": 9.88842684714905e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "old_prefix_applicable": true
+    },
+    {
+      "stage": 7,
+      "mu": 4.296875,
+      "actual_records": 106,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": 5.860075041405056,
+        "gradient_norm": 0.03334508470032832,
+        "projected_kkt_norm": 9.730767248037459e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "old_prefix_applicable": true
+    },
+    {
+      "stage": 8,
+      "mu": 2.1484375,
+      "actual_records": 125,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": 2.8818366590202844,
+        "gradient_norm": 0.03326526862056529,
+        "projected_kkt_norm": 9.841874806124382e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "old_prefix_applicable": true
+    },
+    {
+      "stage": 9,
+      "mu": 1.07421875,
+      "actual_records": 145,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": 1.3929086411899931,
+        "gradient_norm": 0.03311076351811332,
+        "projected_kkt_norm": 9.690918002997724e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "old_prefix_applicable": true
+    },
+    {
+      "stage": 10,
+      "mu": 0.537109375,
+      "actual_records": 164,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": 0.6488216133240607,
+        "gradient_norm": 0.0328223818211869,
+        "projected_kkt_norm": 9.66917894126933e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "old_prefix_applicable": true
+    },
+    {
+      "stage": 11,
+      "mu": 0.2685546875,
+      "actual_records": 181,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": 0.27750834217685927,
+        "gradient_norm": 0.03232806713459663,
+        "projected_kkt_norm": 9.709295867184246e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "old_prefix_applicable": true
+    },
+    {
+      "stage": 12,
+      "mu": 0.13427734375,
+      "actual_records": 195,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": 0.09320249760420202,
+        "gradient_norm": 0.03164904146946359,
+        "projected_kkt_norm": 9.7799937665538e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "old_prefix_applicable": true
+    },
+    {
+      "stage": 13,
+      "mu": 0.067138671875,
+      "actual_records": 210,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": 0.003252110268032321,
+        "gradient_norm": 0.031185301845640452,
+        "projected_kkt_norm": 9.918268979683728e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "old_prefix_applicable": true
+    },
+    {
+      "stage": 14,
+      "mu": 0.0335693359375,
+      "actual_records": 213,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": -0.039086601088052536,
+        "gradient_norm": 0.031448682548875506,
+        "projected_kkt_norm": 9.900718887996236e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "old_prefix_applicable": true
+    },
+    {
+      "stage": 15,
+      "mu": 0.01678466796875,
+      "actual_records": 185,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": -0.05835990215864198,
+        "gradient_norm": 0.032134043252272405,
+        "projected_kkt_norm": 9.933513337259344e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "old_prefix_applicable": true
+    },
+    {
+      "stage": 16,
+      "mu": 0.008392333984375,
+      "actual_records": 155,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": -0.0671360029597137,
+        "gradient_norm": 0.03292797323034441,
+        "projected_kkt_norm": 9.72577527677035e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "old_prefix_applicable": true
+    },
+    {
+      "stage": 17,
+      "mu": 0.0041961669921875,
+      "actual_records": 132,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": -0.07120776903789676,
+        "gradient_norm": 0.03363903809892471,
+        "projected_kkt_norm": 9.973484980151944e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "old_prefix_applicable": true
+    },
+    {
+      "stage": 18,
+      "mu": 0.00209808349609375,
+      "actual_records": 9547,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": -0.07369816856493967,
+        "gradient_norm": 0.03638800726397924,
+        "projected_kkt_norm": 9.862914876433492e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "old_prefix_applicable": true
+    },
+    {
+      "stage": 19,
+      "mu": 0.001049041748046875,
+      "actual_records": 187,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": -0.07443840344329819,
+        "gradient_norm": 0.03656410050464084,
+        "projected_kkt_norm": 9.992862079519998e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "old_prefix_applicable": false
+    }
+  ],
+  "metrics": {
+    "minimum_binary_SNR": 0.0751655960696765,
+    "minimum_relaxed_SNR": 0.0751655960696765
+  },
+  "domain_feasible": true,
+  "all_original_inner_stops_pass": true,
+  "original_failed_bank_promoted": false,
+  "full_reproduction_pass": false,
+  "elapsed_seconds": 17.566315700009,
+  "final_state": {
+    "phi": {
+      "real": [
+        -0.42984426878523735,
+        0.42984442368174375,
+        0.4369582680349521,
+        -0.43695823056404454
+      ],
+      "imag": [
+        0.9029030427418464,
+        -0.9029029690003847,
+        0.8994817796908924,
+        -0.8994817978938425
+      ]
+    },
+    "theta": {
+      "real": [
+        -0.7249260101057043
+      ],
+      "imag": [
+        0.6888267415484274
+      ]
+    },
+    "X": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    ]
+  }
+}

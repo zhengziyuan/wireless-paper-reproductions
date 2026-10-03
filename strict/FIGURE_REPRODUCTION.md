@@ -18,6 +18,14 @@ same-two-element1x2 **corrected-axis** result, not recovery of the contradictory
 literal2x1 source text, not a publisher-approved erratum, and not completion of
 the independent full MATLAB bank or the remaining communication figures.
 The complete original Fig8 12000-start bank has now started separately.
+An additional fresh12000-start cap-control campaign has also been launched
+only after source-bound native cold66 and independent17-stage checks passed.
+It changes the unreported4000 safety cap to100000, retains the implemented
+1e-6 stop and every full-size scene/input, and never reuses old checkpoints.
+All14 failed starts in a prior immutable partial snapshot separately pass
+fresh cold runs with identical old prefixes. See [the exact scope and
+portable native component](validation/communication-cap-control-components-v1/README.md).
+Neither running campaign is a complete figure certificate.
 
 The corrected statistical-hotspot Python scope has also actually completed
 all18 cases, all243 declared starts and all54 selected designs'1000 fresh
@@ -47,7 +55,17 @@ now have successful WORK components for an exact constant-factored version
 of the same QT subproblem, with the unchanged physical/primal/QT gates and
 independent80-digit PSD-dual precision checks. This is not completion of
 a new183-point sweep, all19 independent MATLAB solves, or original-reference
-agreement; the10 phase failures remain separate outstanding work.
+agreement. A separately frozen v3 cold Python preflight now actually completes
+all10 prior phase-failed full physical scenes, all80 original algorithm chains,
+10000 moment draws and541 recorded stops. No original failure is upgraded.
+The native v3 M30 full scene has also completed all8 chains and1000 moment
+draws with original implementation gates and actual selected-runtime interval
+bindings passing; its independent record audit is separate from those flags.
+The native N48 full-scene preflight has also actually completed all8 original
+chains with its source/runtime interval and original implementation gates
+passing; its independent record audit remains separate. These are preflights,
+not completion of a new183-point bank, independent saved final-phase gradients,
+or historical reference agreement.
 
 ## Original figure inventory
 

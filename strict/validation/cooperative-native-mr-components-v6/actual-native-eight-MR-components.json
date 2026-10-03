@@ -1,0 +1,1684 @@
+{
+  "scope": "actual_nativeMAT_two_fixed_original_MR_QT_inputs_four_numerical_controls_NOT_whole_algorithm_or_figures",
+  "actual_fixed_inputs": 2,
+  "actual_native_attempts": 8,
+  "all_original_precision_gates_pass_count": 8,
+  "extra_strict_MP80_pass_count": 4,
+  "extra_strict_MP80_fail_count_retained": 4,
+  "extra_strict_failed_controls": "SDPT3 high/best on bothinputs; actual rawgamma is slightly above truefeasible-dual upper",
+  "all_true_feasible_primal_dual_gaps_at_most": 2.334407576746534e-10,
+  "actual_components": [
+    {
+      "input_id": "N48",
+      "actual_native_attempt": {
+        "actual_cvx_solver": "SDPT3",
+        "numerical_precision": "high",
+        "solver_status": "Inaccurate/Solved",
+        "reported_solver_tolerance": 3.5018882271498763e-12,
+        "original_primal_relative_violation": 9.173550807872743e-12,
+        "original_QT_bound_violation": 0,
+        "original_QT_tightness_error": 4.440892098500626e-16,
+        "before_minimum_physical_SINR": 1.9425811030285045,
+        "after_minimum_physical_SINR": 1.9441339123848511,
+        "original_monotonicity_residual": 0,
+        "all_original_gates_pass": true,
+        "actual_seconds": 7.1496433,
+        "actual_selected_backend_name": "SDPT3",
+        "actual_selected_backend_version": "4.0",
+        "raw_dual_sum_to_one_error": 0,
+        "raw_dual_minimum_nonnegative_entry": 3.881660291746449e-14,
+        "raw_dual_quadratic_H_smallest_eigenvalue": 1885.7870526305908,
+        "raw_stationarity_max_residual": 3.3432852539760916e-06,
+        "raw_dual_objective_NOT_certified_until_PSD_and_equality_recheck": 1.9441331400691064,
+        "raw_primal_dual_gap_NOT_certified": -1.4318102259380794e-11,
+        "backend_sources_unchanged": true
+      },
+      "actual_native_before_and_after": {
+        "before": {
+          "sinr": [
+            1.9425811030285045,
+            1.9540159816406146
+          ],
+          "denominator": [
+            1.1795058946028707,
+            1.1814703869518235
+          ],
+          "satellite_power": 0.005986902274664626,
+          "gt_interference": 0.01999999999559834
+        },
+        "after": {
+          "sinr": [
+            1.9441339123848511,
+            1.944145541908157
+          ],
+          "denominator": [
+            1.1789611863156542,
+            1.1814477319549468
+          ],
+          "satellite_power": 0.0059723327776035895,
+          "gt_interference": 0.02000000000018347
+        }
+      },
+      "actual_native_candidate": [
+        [
+          3.7208322598673163e-06,
+          4.055316264521311e-06
+        ]
+      ],
+      "actual_independent80digit_proof": {
+        "checks": {
+          "dual_nonnegative_and_normalized": true,
+          "dual_positive_scalar_quadratic_coefficients": true,
+          "true_feasible_primal_dual_gap_original1e5": true,
+          "actual_raw_primal_dual_gap_original1e5": false
+        },
+        "all_independent80digit_precision_pass": false,
+        "precision_decimal_digits": 80,
+        "independent_feasible_primal_objective": "1.94413314006313437906685173913376689386242790281047805056688",
+        "independent_dual_upper": "1.94413314006910630060899798181784979208202773254795342117409",
+        "true_feasible_primal_dual_gap": "0.00000000000597192154214624268408289821959982973747537060720137215243851",
+        "actual_raw_primal_dual_gap": "-0.0000000000143182262692771918401896287610966571004840788259145661302698",
+        "dual_quadratic_H_minimum": "1885.78705263059047183279554698392425109667518947239310107137",
+        "diagnostic_feasible_p_scale_not_optimizer_change": "0.999999999990826390108658142570776168995535274819139826775293",
+        "dual_alpha_sum_before_explicit_feasibility_normalization": 1.0,
+        "explicit80digit_arithmetic_floor": "3.455292061635874034664084319956600666046142578125e-59",
+        "proof": "max_{p>=0}(2c*sqrt(p)-H*p)=c^2/H; nonnegative duals with sumalpha=1 give same original QT upper",
+        "actual_cvx_solver": "SDPT3",
+        "numerical_precision": "high",
+        "actual_original_precision_gates_pass": true,
+        "complete_precision_pass": false
+      },
+      "all_original_precision_gates_pass": true,
+      "extra_strict_MP80_pass": false,
+      "actual_backend_runtime_files_count": 135,
+      "actual_complete_backend_filename_SHA_bindings_digest": "a68fb0e83d668ac614f58337f234f50a87cbb8f4e4ad83db014f420a7e850fe2",
+      "actual_backend_entrypoint_and_MEX_bindings": [
+        {
+          "filename": "sdpt3.m",
+          "sha256": "921bd02e82d050bd2e0a458ff3658b1a0c924064ef2396d11845044a608b50a0"
+        },
+        {
+          "filename": "cvx_sdpt3.m",
+          "sha256": "c0fce2601a79a45ed2374ca579608132718a610a2aafe4a84ccd54ba8c82a0bf"
+        },
+        {
+          "filename": "sdpt3.m",
+          "sha256": "921bd02e82d050bd2e0a458ff3658b1a0c924064ef2396d11845044a608b50a0"
+        },
+        {
+          "filename": "sqlp.m",
+          "sha256": "828807356ab1a9da046083cae465eb2b975ddafd72ecc7e23cf12b015c5b5f1b"
+        },
+        {
+          "filename": "mexMatvec.mexw64",
+          "sha256": "8cbc1e9d98bb69a7c3fae1546e955b5273074c8ced51fa43469adb30c43aa38f"
+        },
+        {
+          "filename": "mexProd2.mexw64",
+          "sha256": "73a8af4babfc0a3ea7e472a62429f85fa4c8828a452912ed921694707df99b85"
+        },
+        {
+          "filename": "mexProd2nz.mexw64",
+          "sha256": "f5774cc7c9bef0ffaf5710fc6160b0c15277b3079912f3c27ef84a887f512356"
+        },
+        {
+          "filename": "mexexpand.mexw64",
+          "sha256": "f6c318185bc0bd050f0b3dbbe12ae33254cf621aba9abf5d10b633911da5670e"
+        },
+        {
+          "filename": "mexinprod.mexw64",
+          "sha256": "66a1b413ccb11c99842809bc4119ac2a7b732a8b84deb4abb5f1adb439479e1e"
+        },
+        {
+          "filename": "mexmat.mexw64",
+          "sha256": "d7c9485948447f819380a0914631e76456b981da3f597139d387b705ddd20500"
+        },
+        {
+          "filename": "mexnnz.mexw64",
+          "sha256": "5e5a625200c7e3403da2b26296bc1b4afbe375df1e4b02c6cc768e5bc85de2c8"
+        },
+        {
+          "filename": "mexqops.mexw64",
+          "sha256": "b4f4a6c0a88b1fafddf2fbd72a2e2746a1a6e11c26908c92162f9b0330cdec9f"
+        },
+        {
+          "filename": "mexschur.mexw64",
+          "sha256": "0d6ac2ef5ab392c115872a3aa1d4cd238553f241eeae147d1814204f2bdb544c"
+        },
+        {
+          "filename": "mexschurfun.mexw64",
+          "sha256": "b977ba542d241b1c73fc0fbed39c52c6fcca4db9022bfeab4686449c3d538e94"
+        },
+        {
+          "filename": "mexskron.mexw64",
+          "sha256": "a47a87bf151b74ff2abf76fccf4d3b367202dab04685c5d2099f3c0ea026ae2a"
+        },
+        {
+          "filename": "mexsmat.mexw64",
+          "sha256": "931b78c7a3055bc6bb4180a8264fc32511b27b242b7f94d265335448101d1a60"
+        },
+        {
+          "filename": "mexsvec.mexw64",
+          "sha256": "72b1188487141e793a615ec6cb50f6d370ea99dd03243566d0e795ebee7af492"
+        },
+        {
+          "filename": "mextriang.mexw64",
+          "sha256": "218055488ac683909279a39a57c6939c52149be07b597cd598970d60f60dd34f"
+        },
+        {
+          "filename": "mextriangsp.mexw64",
+          "sha256": "5f2121005746acc3e5c624a11068f4ed73e793947f3e4b49e2b42c25ea74cb0a"
+        }
+      ],
+      "whole_scheme_chain_or_figure_certified": false
+    },
+    {
+      "input_id": "N48",
+      "actual_native_attempt": {
+        "actual_cvx_solver": "SDPT3",
+        "numerical_precision": "best",
+        "solver_status": "Solved",
+        "reported_solver_tolerance": 3.5018882271498763e-12,
+        "original_primal_relative_violation": 9.173550807872743e-12,
+        "original_QT_bound_violation": 0,
+        "original_QT_tightness_error": 4.440892098500626e-16,
+        "before_minimum_physical_SINR": 1.9425811030285045,
+        "after_minimum_physical_SINR": 1.9441339123848511,
+        "original_monotonicity_residual": 0,
+        "all_original_gates_pass": true,
+        "actual_seconds": 2.5541272,
+        "actual_selected_backend_name": "SDPT3",
+        "actual_selected_backend_version": "4.0",
+        "raw_dual_sum_to_one_error": 0,
+        "raw_dual_minimum_nonnegative_entry": 3.881660291746449e-14,
+        "raw_dual_quadratic_H_smallest_eigenvalue": 1885.7870526305908,
+        "raw_stationarity_max_residual": 3.3432852539760916e-06,
+        "raw_dual_objective_NOT_certified_until_PSD_and_equality_recheck": 1.9441331400691064,
+        "raw_primal_dual_gap_NOT_certified": -1.4318102259380794e-11,
+        "backend_sources_unchanged": true
+      },
+      "actual_native_before_and_after": {
+        "before": {
+          "sinr": [
+            1.9425811030285045,
+            1.9540159816406146
+          ],
+          "denominator": [
+            1.1795058946028707,
+            1.1814703869518235
+          ],
+          "satellite_power": 0.005986902274664626,
+          "gt_interference": 0.01999999999559834
+        },
+        "after": {
+          "sinr": [
+            1.9441339123848511,
+            1.944145541908157
+          ],
+          "denominator": [
+            1.1789611863156542,
+            1.1814477319549468
+          ],
+          "satellite_power": 0.0059723327776035895,
+          "gt_interference": 0.02000000000018347
+        }
+      },
+      "actual_native_candidate": [
+        [
+          3.7208322598673163e-06,
+          4.055316264521311e-06
+        ]
+      ],
+      "actual_independent80digit_proof": {
+        "checks": {
+          "dual_nonnegative_and_normalized": true,
+          "dual_positive_scalar_quadratic_coefficients": true,
+          "true_feasible_primal_dual_gap_original1e5": true,
+          "actual_raw_primal_dual_gap_original1e5": false
+        },
+        "all_independent80digit_precision_pass": false,
+        "precision_decimal_digits": 80,
+        "independent_feasible_primal_objective": "1.94413314006313437906685173913376689386242790281047805056688",
+        "independent_dual_upper": "1.94413314006910630060899798181784979208202773254795342117409",
+        "true_feasible_primal_dual_gap": "0.00000000000597192154214624268408289821959982973747537060720137215243851",
+        "actual_raw_primal_dual_gap": "-0.0000000000143182262692771918401896287610966571004840788259145661302698",
+        "dual_quadratic_H_minimum": "1885.78705263059047183279554698392425109667518947239310107137",
+        "diagnostic_feasible_p_scale_not_optimizer_change": "0.999999999990826390108658142570776168995535274819139826775293",
+        "dual_alpha_sum_before_explicit_feasibility_normalization": 1.0,
+        "explicit80digit_arithmetic_floor": "3.455292061635874034664084319956600666046142578125e-59",
+        "proof": "max_{p>=0}(2c*sqrt(p)-H*p)=c^2/H; nonnegative duals with sumalpha=1 give same original QT upper",
+        "actual_cvx_solver": "SDPT3",
+        "numerical_precision": "best",
+        "actual_original_precision_gates_pass": true,
+        "complete_precision_pass": false
+      },
+      "all_original_precision_gates_pass": true,
+      "extra_strict_MP80_pass": false,
+      "actual_backend_runtime_files_count": 135,
+      "actual_complete_backend_filename_SHA_bindings_digest": "a68fb0e83d668ac614f58337f234f50a87cbb8f4e4ad83db014f420a7e850fe2",
+      "actual_backend_entrypoint_and_MEX_bindings": [
+        {
+          "filename": "sdpt3.m",
+          "sha256": "921bd02e82d050bd2e0a458ff3658b1a0c924064ef2396d11845044a608b50a0"
+        },
+        {
+          "filename": "cvx_sdpt3.m",
+          "sha256": "c0fce2601a79a45ed2374ca579608132718a610a2aafe4a84ccd54ba8c82a0bf"
+        },
+        {
+          "filename": "sdpt3.m",
+          "sha256": "921bd02e82d050bd2e0a458ff3658b1a0c924064ef2396d11845044a608b50a0"
+        },
+        {
+          "filename": "sqlp.m",
+          "sha256": "828807356ab1a9da046083cae465eb2b975ddafd72ecc7e23cf12b015c5b5f1b"
+        },
+        {
+          "filename": "mexMatvec.mexw64",
+          "sha256": "8cbc1e9d98bb69a7c3fae1546e955b5273074c8ced51fa43469adb30c43aa38f"
+        },
+        {
+          "filename": "mexProd2.mexw64",
+          "sha256": "73a8af4babfc0a3ea7e472a62429f85fa4c8828a452912ed921694707df99b85"
+        },
+        {
+          "filename": "mexProd2nz.mexw64",
+          "sha256": "f5774cc7c9bef0ffaf5710fc6160b0c15277b3079912f3c27ef84a887f512356"
+        },
+        {
+          "filename": "mexexpand.mexw64",
+          "sha256": "f6c318185bc0bd050f0b3dbbe12ae33254cf621aba9abf5d10b633911da5670e"
+        },
+        {
+          "filename": "mexinprod.mexw64",
+          "sha256": "66a1b413ccb11c99842809bc4119ac2a7b732a8b84deb4abb5f1adb439479e1e"
+        },
+        {
+          "filename": "mexmat.mexw64",
+          "sha256": "d7c9485948447f819380a0914631e76456b981da3f597139d387b705ddd20500"
+        },
+        {
+          "filename": "mexnnz.mexw64",
+          "sha256": "5e5a625200c7e3403da2b26296bc1b4afbe375df1e4b02c6cc768e5bc85de2c8"
+        },
+        {
+          "filename": "mexqops.mexw64",
+          "sha256": "b4f4a6c0a88b1fafddf2fbd72a2e2746a1a6e11c26908c92162f9b0330cdec9f"
+        },
+        {
+          "filename": "mexschur.mexw64",
+          "sha256": "0d6ac2ef5ab392c115872a3aa1d4cd238553f241eeae147d1814204f2bdb544c"
+        },
+        {
+          "filename": "mexschurfun.mexw64",
+          "sha256": "b977ba542d241b1c73fc0fbed39c52c6fcca4db9022bfeab4686449c3d538e94"
+        },
+        {
+          "filename": "mexskron.mexw64",
+          "sha256": "a47a87bf151b74ff2abf76fccf4d3b367202dab04685c5d2099f3c0ea026ae2a"
+        },
+        {
+          "filename": "mexsmat.mexw64",
+          "sha256": "931b78c7a3055bc6bb4180a8264fc32511b27b242b7f94d265335448101d1a60"
+        },
+        {
+          "filename": "mexsvec.mexw64",
+          "sha256": "72b1188487141e793a615ec6cb50f6d370ea99dd03243566d0e795ebee7af492"
+        },
+        {
+          "filename": "mextriang.mexw64",
+          "sha256": "218055488ac683909279a39a57c6939c52149be07b597cd598970d60f60dd34f"
+        },
+        {
+          "filename": "mextriangsp.mexw64",
+          "sha256": "5f2121005746acc3e5c624a11068f4ed73e793947f3e4b49e2b42c25ea74cb0a"
+        }
+      ],
+      "whole_scheme_chain_or_figure_certified": false
+    },
+    {
+      "input_id": "N48",
+      "actual_native_attempt": {
+        "actual_cvx_solver": "SeDuMi",
+        "numerical_precision": "high",
+        "solver_status": "Solved",
+        "reported_solver_tolerance": 1.6899128905997298e-14,
+        "original_primal_relative_violation": 0,
+        "original_QT_bound_violation": 0,
+        "original_QT_tightness_error": 4.440892098500626e-16,
+        "before_minimum_physical_SINR": 1.9425811030285045,
+        "after_minimum_physical_SINR": 1.9441339123722365,
+        "original_monotonicity_residual": 0,
+        "all_original_gates_pass": true,
+        "actual_seconds": 3.3727009,
+        "actual_selected_backend_name": "SeDuMi",
+        "actual_selected_backend_version": "1.02,",
+        "raw_dual_sum_to_one_error": 0,
+        "raw_dual_minimum_nonnegative_entry": -2.6195744696849268e-14,
+        "raw_dual_quadratic_H_smallest_eigenvalue": 1885.786593967653,
+        "raw_stationarity_max_residual": 1.3709673403639044e-05,
+        "raw_dual_objective_NOT_certified_until_PSD_and_equality_recheck": 1.9441331400675999,
+        "raw_primal_dual_gap_NOT_certified": 2.014166611274959e-12,
+        "backend_sources_unchanged": true
+      },
+      "actual_native_before_and_after": {
+        "before": {
+          "sinr": [
+            1.9425811030285045,
+            1.9540159816406146
+          ],
+          "denominator": [
+            1.1795058946028707,
+            1.1814703869518235
+          ],
+          "satellite_power": 0.005986902274664626,
+          "gt_interference": 0.01999999999559834
+        },
+        "after": {
+          "sinr": [
+            1.9441339123722365,
+            1.9441455418673086
+          ],
+          "denominator": [
+            1.178961186313209,
+            1.1814477319538592
+          ],
+          "satellite_power": 0.005972332777511649,
+          "gt_interference": 0.019999999999995636
+        }
+      },
+      "actual_native_candidate": [
+        [
+          3.720832259835457e-06,
+          4.055316264432372e-06
+        ]
+      ],
+      "actual_independent80digit_proof": {
+        "checks": {
+          "dual_nonnegative_and_normalized": true,
+          "dual_positive_scalar_quadratic_coefficients": true,
+          "true_feasible_primal_dual_gap_original1e5": true,
+          "actual_raw_primal_dual_gap_original1e5": true
+        },
+        "all_independent80digit_precision_pass": true,
+        "precision_decimal_digits": 80,
+        "independent_feasible_primal_objective": "1.94413314006657145540240896692526375491265987036916579959546",
+        "independent_dual_upper": "1.94413314006850541843218381492723592133371681796618738396994",
+        "true_feasible_primal_dual_gap": "0.00000000000193396302977484800197216642105694759702158437448123924542698",
+        "actual_raw_primal_dual_gap": "0.00000000000291973306898073152941532940714211093493738396994242609416714",
+        "dual_quadratic_H_minimum": "1885.78659396765327599456970789078820947454821631849615816664",
+        "diagnostic_feasible_p_scale_not_optimizer_change": "1.0",
+        "dual_alpha_sum_before_explicit_feasibility_normalization": 1.0,
+        "explicit80digit_arithmetic_floor": "3.455292061635874034664084319956600666046142578125e-59",
+        "proof": "max_{p>=0}(2c*sqrt(p)-H*p)=c^2/H; nonnegative duals with sumalpha=1 give same original QT upper",
+        "actual_cvx_solver": "SeDuMi",
+        "numerical_precision": "high",
+        "actual_original_precision_gates_pass": true,
+        "complete_precision_pass": true
+      },
+      "all_original_precision_gates_pass": true,
+      "extra_strict_MP80_pass": true,
+      "actual_backend_runtime_files_count": 132,
+      "actual_complete_backend_filename_SHA_bindings_digest": "4c5edb1cad035b894f56feb28d88ed3d6320ed9b5646d7e0a25ab6491d298d48",
+      "actual_backend_entrypoint_and_MEX_bindings": [
+        {
+          "filename": "sedumi.m",
+          "sha256": "89bed3e4c9aec9de9d72c84692d59f354813ba2aaaf37bb5d95428b421e909bf"
+        },
+        {
+          "filename": "cvx_sedumi.m",
+          "sha256": "4d40ac7666cf4ecb7d850ba2998c654b18e607cad8a73a0aac2fff4332363f48"
+        },
+        {
+          "filename": "sedumi.m",
+          "sha256": "89bed3e4c9aec9de9d72c84692d59f354813ba2aaaf37bb5d95428b421e909bf"
+        },
+        {
+          "filename": "adendotd.mexw64",
+          "sha256": "ef55d86b049be30e672bf9e442ba284b2354b54cbd21cea2e10d890a13449256"
+        },
+        {
+          "filename": "adenscale.mexw64",
+          "sha256": "39df3fec68a2b5fc25fbe31393e102e551abf451a4036587445ab2aed14e4bd5"
+        },
+        {
+          "filename": "blkchol.mexw64",
+          "sha256": "cabd1d325da57a9636f0a587ae9e10d01cdabbdd6e6f1b346ec7ffe62854c072"
+        },
+        {
+          "filename": "bwblkslv.mexw64",
+          "sha256": "2f0da91624fed1fd3edabfaad117a5f804c074bdca114f5c61a6f056415de03f"
+        },
+        {
+          "filename": "bwdpr1.mexw64",
+          "sha256": "715208cd77ccc72605d2808834582b8210342dadb9f777459dc8c5b001202c50"
+        },
+        {
+          "filename": "cholsplit.mexw64",
+          "sha256": "f82d0174c7765299186d888b71475548fff1f999e824919f882f49abf9785332"
+        },
+        {
+          "filename": "choltmpsiz.mexw64",
+          "sha256": "5a100606be6ecdf0cadd4f6429b06bed934e67dd09c8ba8f26d31e485173c888"
+        },
+        {
+          "filename": "ddot.mexw64",
+          "sha256": "700cb508cfe233460d7875c421bcf89aab7bc4321ba26a680ed67d6560e154e8"
+        },
+        {
+          "filename": "dpr1fact.mexw64",
+          "sha256": "a8ae329f8309a058656dcf0e6ddaae54610674aaf176a7b28a164fcf0c80b4ff"
+        },
+        {
+          "filename": "extractA.mexw64",
+          "sha256": "585a0fbf1bc3f07feb5b31754cb9f70b62df09f72d4f98945c15ec9c21d1e188"
+        },
+        {
+          "filename": "findblks.mexw64",
+          "sha256": "3c8edd460ae54b87cd0dc959fe77f6b77220c34f6a5726bd13a9244ad9bf1136"
+        },
+        {
+          "filename": "finsymbden.mexw64",
+          "sha256": "93368e0dcf15cd660bb92f083ea0b1298fdaa4c018d2eab56d8a40acc9d1032f"
+        },
+        {
+          "filename": "fwblkslv.mexw64",
+          "sha256": "c184af9fee410f45f7e167321d0a7ae0e805353b30db306c5923d24fa315669b"
+        },
+        {
+          "filename": "fwdpr1.mexw64",
+          "sha256": "70da2cc4bcd72cb34e9e38f7ddbdf65069da2e19444b972e8c4e11b8c31d0f1b"
+        },
+        {
+          "filename": "getada1.mexw64",
+          "sha256": "b653dcf7e9530d0f9957edb287409ae6709c1206cb3970f0bbdfee12fb057caa"
+        },
+        {
+          "filename": "getada2.mexw64",
+          "sha256": "efd71d01f0fa709a67232fa8469f1d1171c8a41baf63d37443f696def23a1acc"
+        },
+        {
+          "filename": "getada3.mexw64",
+          "sha256": "9b6d6d7953f54e9de1f8c4672d1b4039fa3ce34ff56ef16f9a605f6705d0425f"
+        },
+        {
+          "filename": "givensrot.mexw64",
+          "sha256": "c3b22d11d3c41755ca72d4d7f6a3e15dc9049374fa49e9f52edd44c639bcbbb9"
+        },
+        {
+          "filename": "incorder.mexw64",
+          "sha256": "d80fe35d7aada15b80a631e6ff1a77dc4e2e510a505db760bd555e1fd50299b3"
+        },
+        {
+          "filename": "invcholfac.mexw64",
+          "sha256": "4b3b1951706bf7cc49143d4e37beedd50fb07c4d07357eff32c5143843d7067d"
+        },
+        {
+          "filename": "iswnbr.mexw64",
+          "sha256": "843ef1d1672ecf269cae954e73e00d8ca2520bd334615d1105897431e106ba07"
+        },
+        {
+          "filename": "ordmmdmex.mexw64",
+          "sha256": "1ba52fc9cb37dfd6fd685b65f974b6f5fd4bdb0b1e0b0579d26e0f521e65b440"
+        },
+        {
+          "filename": "partitA.mexw64",
+          "sha256": "21e7cdaf281e06cfd51219e59dee11c4cb183344e7e70e4e89cb6c8f76515f03"
+        },
+        {
+          "filename": "psdframeit.mexw64",
+          "sha256": "07380382eaf1e10a551c5f46ce4b63fa7fb0b50c3e458c74687533da055bb644"
+        },
+        {
+          "filename": "psdinvjmul.mexw64",
+          "sha256": "8992d858ee7a7fe7487c3355b5234977d54723dda61957a491cd4c95fba3dea3"
+        },
+        {
+          "filename": "qblkmul.mexw64",
+          "sha256": "66de8d8e43d972bd28e2e21b8069c2e81900c3b5965db9a0f675e4c3921dbff4"
+        },
+        {
+          "filename": "qrK.mexw64",
+          "sha256": "12f13b983daa745ad4fa2cc110e11195b7804b9e4e19740ee0baab7eb48d6514"
+        },
+        {
+          "filename": "quadadd.mexw64",
+          "sha256": "c76b784bbe8687b0c205ce1945306012a81b39dc8d57642c1070e5bb199ee0ef"
+        },
+        {
+          "filename": "sortnnz.mexw64",
+          "sha256": "594a85343488f1145adfeeb2db787ee6f8501ec81f446a2e7409a6d7f26065f9"
+        },
+        {
+          "filename": "sqrtinv.mexw64",
+          "sha256": "961fcf984646eee5294f1965831c4a897441d0f61e4315cf8af6cfe77c979f2a"
+        },
+        {
+          "filename": "symbfwblk.mexw64",
+          "sha256": "970b6a4375c8cd4c915ed5dbb0fa2a911bb44ec980a3760d18aa631f7f511838"
+        },
+        {
+          "filename": "symfctmex.mexw64",
+          "sha256": "2cc8c71513b5c37c08412e9302c8b2b2b2cdfe7ed701fcad3c6da0490b47f813"
+        },
+        {
+          "filename": "urotorder.mexw64",
+          "sha256": "eb967d21ab71fbb77d5eb3e734f0aa937c50e704d54fcbb600ef655b767dac11"
+        },
+        {
+          "filename": "vecsym.mexw64",
+          "sha256": "38e4b55494ab6c2349b55a8385a4389171e59d20bcdf8ed6e8cd92c2bb8f79dc"
+        }
+      ],
+      "whole_scheme_chain_or_figure_certified": false
+    },
+    {
+      "input_id": "N48",
+      "actual_native_attempt": {
+        "actual_cvx_solver": "SeDuMi",
+        "numerical_precision": "best",
+        "solver_status": "Solved",
+        "reported_solver_tolerance": 2.4700309941729557e-15,
+        "original_primal_relative_violation": 0,
+        "original_QT_bound_violation": 0,
+        "original_QT_tightness_error": 4.440892098500626e-16,
+        "before_minimum_physical_SINR": 1.9425811030285045,
+        "after_minimum_physical_SINR": 1.9441339123733459,
+        "original_monotonicity_residual": 0,
+        "all_original_gates_pass": true,
+        "actual_seconds": 2.6179906,
+        "actual_selected_backend_name": "SeDuMi",
+        "actual_selected_backend_version": "1.02,",
+        "raw_dual_sum_to_one_error": 0,
+        "raw_dual_minimum_nonnegative_entry": -2.564668265371135e-16,
+        "raw_dual_quadratic_H_smallest_eigenvalue": 1885.787212556197,
+        "raw_stationarity_max_residual": 3.1470881367567927e-07,
+        "raw_dual_objective_NOT_certified_until_PSD_and_equality_recheck": 1.9441331400676898,
+        "raw_primal_dual_gap_NOT_certified": 4.0190073491430667e-14,
+        "backend_sources_unchanged": true
+      },
+      "actual_native_before_and_after": {
+        "before": {
+          "sinr": [
+            1.9425811030285045,
+            1.9540159816406146
+          ],
+          "denominator": [
+            1.1795058946028707,
+            1.1814703869518235
+          ],
+          "satellite_power": 0.005986902274664626,
+          "gt_interference": 0.01999999999559834
+        },
+        "after": {
+          "sinr": [
+            1.9441339123733459,
+            1.9441455418630447
+          ],
+          "denominator": [
+            1.178961186312978,
+            1.1814477319538725
+          ],
+          "satellite_power": 0.005972332777506084,
+          "gt_interference": 0.01999999999999996
+        }
+      },
+      "actual_native_candidate": [
+        [
+          3.7208322598368506e-06,
+          4.055316264423524e-06
+        ]
+      ],
+      "actual_independent80digit_proof": {
+        "checks": {
+          "dual_nonnegative_and_normalized": true,
+          "dual_positive_scalar_quadratic_coefficients": true,
+          "true_feasible_primal_dual_gap_original1e5": true,
+          "actual_raw_primal_dual_gap_original1e5": true
+        },
+        "all_independent80digit_precision_pass": true,
+        "precision_decimal_digits": 80,
+        "independent_feasible_primal_objective": "1.94413314006767950565660235790931881611729707259083243125161",
+        "independent_dual_upper": "1.94413314006769886201259991853128197850852899706680871519157",
+        "true_feasible_primal_dual_gap": "0.0000000000000193563559975606219631623912319244759762839399545286776101631",
+        "actual_raw_primal_dual_gap": "0.0000000000000492720466186691248138553109734550746212151915664355302978072",
+        "dual_quadratic_H_minimum": "1885.78721255619692414932183102191168611748207518000276721777",
+        "diagnostic_feasible_p_scale_not_optimizer_change": "1.0",
+        "dual_alpha_sum_before_explicit_feasibility_normalization": 1.0,
+        "explicit80digit_arithmetic_floor": "3.455292061635874034664084319956600666046142578125e-59",
+        "proof": "max_{p>=0}(2c*sqrt(p)-H*p)=c^2/H; nonnegative duals with sumalpha=1 give same original QT upper",
+        "actual_cvx_solver": "SeDuMi",
+        "numerical_precision": "best",
+        "actual_original_precision_gates_pass": true,
+        "complete_precision_pass": true
+      },
+      "all_original_precision_gates_pass": true,
+      "extra_strict_MP80_pass": true,
+      "actual_backend_runtime_files_count": 132,
+      "actual_complete_backend_filename_SHA_bindings_digest": "4c5edb1cad035b894f56feb28d88ed3d6320ed9b5646d7e0a25ab6491d298d48",
+      "actual_backend_entrypoint_and_MEX_bindings": [
+        {
+          "filename": "sedumi.m",
+          "sha256": "89bed3e4c9aec9de9d72c84692d59f354813ba2aaaf37bb5d95428b421e909bf"
+        },
+        {
+          "filename": "cvx_sedumi.m",
+          "sha256": "4d40ac7666cf4ecb7d850ba2998c654b18e607cad8a73a0aac2fff4332363f48"
+        },
+        {
+          "filename": "sedumi.m",
+          "sha256": "89bed3e4c9aec9de9d72c84692d59f354813ba2aaaf37bb5d95428b421e909bf"
+        },
+        {
+          "filename": "adendotd.mexw64",
+          "sha256": "ef55d86b049be30e672bf9e442ba284b2354b54cbd21cea2e10d890a13449256"
+        },
+        {
+          "filename": "adenscale.mexw64",
+          "sha256": "39df3fec68a2b5fc25fbe31393e102e551abf451a4036587445ab2aed14e4bd5"
+        },
+        {
+          "filename": "blkchol.mexw64",
+          "sha256": "cabd1d325da57a9636f0a587ae9e10d01cdabbdd6e6f1b346ec7ffe62854c072"
+        },
+        {
+          "filename": "bwblkslv.mexw64",
+          "sha256": "2f0da91624fed1fd3edabfaad117a5f804c074bdca114f5c61a6f056415de03f"
+        },
+        {
+          "filename": "bwdpr1.mexw64",
+          "sha256": "715208cd77ccc72605d2808834582b8210342dadb9f777459dc8c5b001202c50"
+        },
+        {
+          "filename": "cholsplit.mexw64",
+          "sha256": "f82d0174c7765299186d888b71475548fff1f999e824919f882f49abf9785332"
+        },
+        {
+          "filename": "choltmpsiz.mexw64",
+          "sha256": "5a100606be6ecdf0cadd4f6429b06bed934e67dd09c8ba8f26d31e485173c888"
+        },
+        {
+          "filename": "ddot.mexw64",
+          "sha256": "700cb508cfe233460d7875c421bcf89aab7bc4321ba26a680ed67d6560e154e8"
+        },
+        {
+          "filename": "dpr1fact.mexw64",
+          "sha256": "a8ae329f8309a058656dcf0e6ddaae54610674aaf176a7b28a164fcf0c80b4ff"
+        },
+        {
+          "filename": "extractA.mexw64",
+          "sha256": "585a0fbf1bc3f07feb5b31754cb9f70b62df09f72d4f98945c15ec9c21d1e188"
+        },
+        {
+          "filename": "findblks.mexw64",
+          "sha256": "3c8edd460ae54b87cd0dc959fe77f6b77220c34f6a5726bd13a9244ad9bf1136"
+        },
+        {
+          "filename": "finsymbden.mexw64",
+          "sha256": "93368e0dcf15cd660bb92f083ea0b1298fdaa4c018d2eab56d8a40acc9d1032f"
+        },
+        {
+          "filename": "fwblkslv.mexw64",
+          "sha256": "c184af9fee410f45f7e167321d0a7ae0e805353b30db306c5923d24fa315669b"
+        },
+        {
+          "filename": "fwdpr1.mexw64",
+          "sha256": "70da2cc4bcd72cb34e9e38f7ddbdf65069da2e19444b972e8c4e11b8c31d0f1b"
+        },
+        {
+          "filename": "getada1.mexw64",
+          "sha256": "b653dcf7e9530d0f9957edb287409ae6709c1206cb3970f0bbdfee12fb057caa"
+        },
+        {
+          "filename": "getada2.mexw64",
+          "sha256": "efd71d01f0fa709a67232fa8469f1d1171c8a41baf63d37443f696def23a1acc"
+        },
+        {
+          "filename": "getada3.mexw64",
+          "sha256": "9b6d6d7953f54e9de1f8c4672d1b4039fa3ce34ff56ef16f9a605f6705d0425f"
+        },
+        {
+          "filename": "givensrot.mexw64",
+          "sha256": "c3b22d11d3c41755ca72d4d7f6a3e15dc9049374fa49e9f52edd44c639bcbbb9"
+        },
+        {
+          "filename": "incorder.mexw64",
+          "sha256": "d80fe35d7aada15b80a631e6ff1a77dc4e2e510a505db760bd555e1fd50299b3"
+        },
+        {
+          "filename": "invcholfac.mexw64",
+          "sha256": "4b3b1951706bf7cc49143d4e37beedd50fb07c4d07357eff32c5143843d7067d"
+        },
+        {
+          "filename": "iswnbr.mexw64",
+          "sha256": "843ef1d1672ecf269cae954e73e00d8ca2520bd334615d1105897431e106ba07"
+        },
+        {
+          "filename": "ordmmdmex.mexw64",
+          "sha256": "1ba52fc9cb37dfd6fd685b65f974b6f5fd4bdb0b1e0b0579d26e0f521e65b440"
+        },
+        {
+          "filename": "partitA.mexw64",
+          "sha256": "21e7cdaf281e06cfd51219e59dee11c4cb183344e7e70e4e89cb6c8f76515f03"
+        },
+        {
+          "filename": "psdframeit.mexw64",
+          "sha256": "07380382eaf1e10a551c5f46ce4b63fa7fb0b50c3e458c74687533da055bb644"
+        },
+        {
+          "filename": "psdinvjmul.mexw64",
+          "sha256": "8992d858ee7a7fe7487c3355b5234977d54723dda61957a491cd4c95fba3dea3"
+        },
+        {
+          "filename": "qblkmul.mexw64",
+          "sha256": "66de8d8e43d972bd28e2e21b8069c2e81900c3b5965db9a0f675e4c3921dbff4"
+        },
+        {
+          "filename": "qrK.mexw64",
+          "sha256": "12f13b983daa745ad4fa2cc110e11195b7804b9e4e19740ee0baab7eb48d6514"
+        },
+        {
+          "filename": "quadadd.mexw64",
+          "sha256": "c76b784bbe8687b0c205ce1945306012a81b39dc8d57642c1070e5bb199ee0ef"
+        },
+        {
+          "filename": "sortnnz.mexw64",
+          "sha256": "594a85343488f1145adfeeb2db787ee6f8501ec81f446a2e7409a6d7f26065f9"
+        },
+        {
+          "filename": "sqrtinv.mexw64",
+          "sha256": "961fcf984646eee5294f1965831c4a897441d0f61e4315cf8af6cfe77c979f2a"
+        },
+        {
+          "filename": "symbfwblk.mexw64",
+          "sha256": "970b6a4375c8cd4c915ed5dbb0fa2a911bb44ec980a3760d18aa631f7f511838"
+        },
+        {
+          "filename": "symfctmex.mexw64",
+          "sha256": "2cc8c71513b5c37c08412e9302c8b2b2b2cdfe7ed701fcad3c6da0490b47f813"
+        },
+        {
+          "filename": "urotorder.mexw64",
+          "sha256": "eb967d21ab71fbb77d5eb3e734f0aa937c50e704d54fcbb600ef655b767dac11"
+        },
+        {
+          "filename": "vecsym.mexw64",
+          "sha256": "38e4b55494ab6c2349b55a8385a4389171e59d20bcdf8ed6e8cd92c2bb8f79dc"
+        }
+      ],
+      "whole_scheme_chain_or_figure_certified": false
+    },
+    {
+      "input_id": "M30-call20",
+      "actual_native_attempt": {
+        "actual_cvx_solver": "SDPT3",
+        "numerical_precision": "high",
+        "solver_status": "Inaccurate/Solved",
+        "reported_solver_tolerance": 9.293702705182735e-12,
+        "original_primal_relative_violation": 2.2930102261398133e-11,
+        "original_QT_bound_violation": 0,
+        "original_QT_tightness_error": 1.7763568394002505e-15,
+        "before_minimum_physical_SINR": 7.88200366557602,
+        "after_minimum_physical_SINR": 8.647588170846607,
+        "original_monotonicity_residual": 0,
+        "all_original_gates_pass": true,
+        "actual_seconds": 3.0042528,
+        "actual_selected_backend_name": "SDPT3",
+        "actual_selected_backend_version": "4.0",
+        "raw_dual_sum_to_one_error": 0,
+        "raw_dual_minimum_nonnegative_entry": 6.379395439703559e-14,
+        "raw_dual_quadratic_H_smallest_eigenvalue": 4.844393344050305e-09,
+        "raw_stationarity_max_residual": 0.0013945216584217168,
+        "raw_dual_objective_NOT_certified_until_PSD_and_equality_recheck": 8.645336619188235,
+        "raw_primal_dual_gap_NOT_certified": -6.225953086413938e-11,
+        "backend_sources_unchanged": true
+      },
+      "actual_native_before_and_after": {
+        "before": {
+          "sinr": [
+            8.92782125647547,
+            7.88200366557602
+          ],
+          "denominator": [
+            1.2211473524882202,
+            3.5686964700457935
+          ],
+          "satellite_power": [
+            0.06557564324140545,
+            1.723580436322977e-17,
+            0.12146356809556681
+          ],
+          "gt_interference": 0.06025595860743579
+        },
+        "after": {
+          "sinr": [
+            8.647588170846607,
+            8.661002014325307
+          ],
+          "denominator": [
+            1.22129669768427,
+            3.5949449854676168
+          ],
+          "satellite_power": [
+            0.06352507410637698,
+            2.820831852631988e-17,
+            0.13444980535422046
+          ],
+          "gt_interference": 0.06025595860881746
+        }
+      },
+      "actual_native_candidate": [
+        [
+          0.00038209748500909633,
+          2.7891292132294172e-14
+        ],
+        [
+          1.9632656572941467e-19,
+          5.434264359379666e-19
+        ],
+        [
+          0.00012632839595201717,
+          0.0005805771863796053
+        ]
+      ],
+      "actual_independent80digit_proof": {
+        "checks": {
+          "dual_nonnegative_and_normalized": true,
+          "dual_positive_scalar_quadratic_coefficients": true,
+          "true_feasible_primal_dual_gap_original1e5": true,
+          "actual_raw_primal_dual_gap_original1e5": false
+        },
+        "all_independent80digit_precision_pass": false,
+        "precision_decimal_digits": 80,
+        "independent_feasible_primal_objective": "8.64533661895479477136897288598055280216046351648713602229235",
+        "independent_dual_upper": "8.64533661918823552904362626030881541603279409267244883638657",
+        "true_feasible_primal_dual_gap": "0.000000000233440757674653374328262613872330576185312814094220834159636",
+        "actual_raw_primal_dual_gap": "-0.0000000000622592627559842785650060809307068838900511636134275366498753",
+        "dual_quadratic_H_minimum": "0.00000000484439334405030473701081937698287432656836413402699447881643",
+        "diagnostic_feasible_p_scale_not_optimizer_change": "0.999999999977069858857901444029086299305939510278020473113361",
+        "dual_alpha_sum_before_explicit_feasibility_normalization": 1.0,
+        "explicit80digit_arithmetic_floor": "3.901801174786370296487802988849580287933349609375e-59",
+        "proof": "max_{p>=0}(2c*sqrt(p)-H*p)=c^2/H; nonnegative duals with sumalpha=1 give same original QT upper",
+        "actual_cvx_solver": "SDPT3",
+        "numerical_precision": "high",
+        "actual_original_precision_gates_pass": true,
+        "complete_precision_pass": false
+      },
+      "all_original_precision_gates_pass": true,
+      "extra_strict_MP80_pass": false,
+      "actual_backend_runtime_files_count": 135,
+      "actual_complete_backend_filename_SHA_bindings_digest": "a68fb0e83d668ac614f58337f234f50a87cbb8f4e4ad83db014f420a7e850fe2",
+      "actual_backend_entrypoint_and_MEX_bindings": [
+        {
+          "filename": "sdpt3.m",
+          "sha256": "921bd02e82d050bd2e0a458ff3658b1a0c924064ef2396d11845044a608b50a0"
+        },
+        {
+          "filename": "cvx_sdpt3.m",
+          "sha256": "c0fce2601a79a45ed2374ca579608132718a610a2aafe4a84ccd54ba8c82a0bf"
+        },
+        {
+          "filename": "sdpt3.m",
+          "sha256": "921bd02e82d050bd2e0a458ff3658b1a0c924064ef2396d11845044a608b50a0"
+        },
+        {
+          "filename": "sqlp.m",
+          "sha256": "828807356ab1a9da046083cae465eb2b975ddafd72ecc7e23cf12b015c5b5f1b"
+        },
+        {
+          "filename": "mexMatvec.mexw64",
+          "sha256": "8cbc1e9d98bb69a7c3fae1546e955b5273074c8ced51fa43469adb30c43aa38f"
+        },
+        {
+          "filename": "mexProd2.mexw64",
+          "sha256": "73a8af4babfc0a3ea7e472a62429f85fa4c8828a452912ed921694707df99b85"
+        },
+        {
+          "filename": "mexProd2nz.mexw64",
+          "sha256": "f5774cc7c9bef0ffaf5710fc6160b0c15277b3079912f3c27ef84a887f512356"
+        },
+        {
+          "filename": "mexexpand.mexw64",
+          "sha256": "f6c318185bc0bd050f0b3dbbe12ae33254cf621aba9abf5d10b633911da5670e"
+        },
+        {
+          "filename": "mexinprod.mexw64",
+          "sha256": "66a1b413ccb11c99842809bc4119ac2a7b732a8b84deb4abb5f1adb439479e1e"
+        },
+        {
+          "filename": "mexmat.mexw64",
+          "sha256": "d7c9485948447f819380a0914631e76456b981da3f597139d387b705ddd20500"
+        },
+        {
+          "filename": "mexnnz.mexw64",
+          "sha256": "5e5a625200c7e3403da2b26296bc1b4afbe375df1e4b02c6cc768e5bc85de2c8"
+        },
+        {
+          "filename": "mexqops.mexw64",
+          "sha256": "b4f4a6c0a88b1fafddf2fbd72a2e2746a1a6e11c26908c92162f9b0330cdec9f"
+        },
+        {
+          "filename": "mexschur.mexw64",
+          "sha256": "0d6ac2ef5ab392c115872a3aa1d4cd238553f241eeae147d1814204f2bdb544c"
+        },
+        {
+          "filename": "mexschurfun.mexw64",
+          "sha256": "b977ba542d241b1c73fc0fbed39c52c6fcca4db9022bfeab4686449c3d538e94"
+        },
+        {
+          "filename": "mexskron.mexw64",
+          "sha256": "a47a87bf151b74ff2abf76fccf4d3b367202dab04685c5d2099f3c0ea026ae2a"
+        },
+        {
+          "filename": "mexsmat.mexw64",
+          "sha256": "931b78c7a3055bc6bb4180a8264fc32511b27b242b7f94d265335448101d1a60"
+        },
+        {
+          "filename": "mexsvec.mexw64",
+          "sha256": "72b1188487141e793a615ec6cb50f6d370ea99dd03243566d0e795ebee7af492"
+        },
+        {
+          "filename": "mextriang.mexw64",
+          "sha256": "218055488ac683909279a39a57c6939c52149be07b597cd598970d60f60dd34f"
+        },
+        {
+          "filename": "mextriangsp.mexw64",
+          "sha256": "5f2121005746acc3e5c624a11068f4ed73e793947f3e4b49e2b42c25ea74cb0a"
+        }
+      ],
+      "whole_scheme_chain_or_figure_certified": false
+    },
+    {
+      "input_id": "M30-call20",
+      "actual_native_attempt": {
+        "actual_cvx_solver": "SDPT3",
+        "numerical_precision": "best",
+        "solver_status": "Solved",
+        "reported_solver_tolerance": 9.293702705182735e-12,
+        "original_primal_relative_violation": 2.2930102261398133e-11,
+        "original_QT_bound_violation": 0,
+        "original_QT_tightness_error": 1.7763568394002505e-15,
+        "before_minimum_physical_SINR": 7.88200366557602,
+        "after_minimum_physical_SINR": 8.647588170846607,
+        "original_monotonicity_residual": 0,
+        "all_original_gates_pass": true,
+        "actual_seconds": 2.2076721,
+        "actual_selected_backend_name": "SDPT3",
+        "actual_selected_backend_version": "4.0",
+        "raw_dual_sum_to_one_error": 0,
+        "raw_dual_minimum_nonnegative_entry": 6.379395439703559e-14,
+        "raw_dual_quadratic_H_smallest_eigenvalue": 4.844393344050305e-09,
+        "raw_stationarity_max_residual": 0.0013945216584217168,
+        "raw_dual_objective_NOT_certified_until_PSD_and_equality_recheck": 8.645336619188235,
+        "raw_primal_dual_gap_NOT_certified": -6.225953086413938e-11,
+        "backend_sources_unchanged": true
+      },
+      "actual_native_before_and_after": {
+        "before": {
+          "sinr": [
+            8.92782125647547,
+            7.88200366557602
+          ],
+          "denominator": [
+            1.2211473524882202,
+            3.5686964700457935
+          ],
+          "satellite_power": [
+            0.06557564324140545,
+            1.723580436322977e-17,
+            0.12146356809556681
+          ],
+          "gt_interference": 0.06025595860743579
+        },
+        "after": {
+          "sinr": [
+            8.647588170846607,
+            8.661002014325307
+          ],
+          "denominator": [
+            1.22129669768427,
+            3.5949449854676168
+          ],
+          "satellite_power": [
+            0.06352507410637698,
+            2.820831852631988e-17,
+            0.13444980535422046
+          ],
+          "gt_interference": 0.06025595860881746
+        }
+      },
+      "actual_native_candidate": [
+        [
+          0.00038209748500909633,
+          2.7891292132294172e-14
+        ],
+        [
+          1.9632656572941467e-19,
+          5.434264359379666e-19
+        ],
+        [
+          0.00012632839595201717,
+          0.0005805771863796053
+        ]
+      ],
+      "actual_independent80digit_proof": {
+        "checks": {
+          "dual_nonnegative_and_normalized": true,
+          "dual_positive_scalar_quadratic_coefficients": true,
+          "true_feasible_primal_dual_gap_original1e5": true,
+          "actual_raw_primal_dual_gap_original1e5": false
+        },
+        "all_independent80digit_precision_pass": false,
+        "precision_decimal_digits": 80,
+        "independent_feasible_primal_objective": "8.64533661895479477136897288598055280216046351648713602229235",
+        "independent_dual_upper": "8.64533661918823552904362626030881541603279409267244883638657",
+        "true_feasible_primal_dual_gap": "0.000000000233440757674653374328262613872330576185312814094220834159636",
+        "actual_raw_primal_dual_gap": "-0.0000000000622592627559842785650060809307068838900511636134275366498753",
+        "dual_quadratic_H_minimum": "0.00000000484439334405030473701081937698287432656836413402699447881643",
+        "diagnostic_feasible_p_scale_not_optimizer_change": "0.999999999977069858857901444029086299305939510278020473113361",
+        "dual_alpha_sum_before_explicit_feasibility_normalization": 1.0,
+        "explicit80digit_arithmetic_floor": "3.901801174786370296487802988849580287933349609375e-59",
+        "proof": "max_{p>=0}(2c*sqrt(p)-H*p)=c^2/H; nonnegative duals with sumalpha=1 give same original QT upper",
+        "actual_cvx_solver": "SDPT3",
+        "numerical_precision": "best",
+        "actual_original_precision_gates_pass": true,
+        "complete_precision_pass": false
+      },
+      "all_original_precision_gates_pass": true,
+      "extra_strict_MP80_pass": false,
+      "actual_backend_runtime_files_count": 135,
+      "actual_complete_backend_filename_SHA_bindings_digest": "a68fb0e83d668ac614f58337f234f50a87cbb8f4e4ad83db014f420a7e850fe2",
+      "actual_backend_entrypoint_and_MEX_bindings": [
+        {
+          "filename": "sdpt3.m",
+          "sha256": "921bd02e82d050bd2e0a458ff3658b1a0c924064ef2396d11845044a608b50a0"
+        },
+        {
+          "filename": "cvx_sdpt3.m",
+          "sha256": "c0fce2601a79a45ed2374ca579608132718a610a2aafe4a84ccd54ba8c82a0bf"
+        },
+        {
+          "filename": "sdpt3.m",
+          "sha256": "921bd02e82d050bd2e0a458ff3658b1a0c924064ef2396d11845044a608b50a0"
+        },
+        {
+          "filename": "sqlp.m",
+          "sha256": "828807356ab1a9da046083cae465eb2b975ddafd72ecc7e23cf12b015c5b5f1b"
+        },
+        {
+          "filename": "mexMatvec.mexw64",
+          "sha256": "8cbc1e9d98bb69a7c3fae1546e955b5273074c8ced51fa43469adb30c43aa38f"
+        },
+        {
+          "filename": "mexProd2.mexw64",
+          "sha256": "73a8af4babfc0a3ea7e472a62429f85fa4c8828a452912ed921694707df99b85"
+        },
+        {
+          "filename": "mexProd2nz.mexw64",
+          "sha256": "f5774cc7c9bef0ffaf5710fc6160b0c15277b3079912f3c27ef84a887f512356"
+        },
+        {
+          "filename": "mexexpand.mexw64",
+          "sha256": "f6c318185bc0bd050f0b3dbbe12ae33254cf621aba9abf5d10b633911da5670e"
+        },
+        {
+          "filename": "mexinprod.mexw64",
+          "sha256": "66a1b413ccb11c99842809bc4119ac2a7b732a8b84deb4abb5f1adb439479e1e"
+        },
+        {
+          "filename": "mexmat.mexw64",
+          "sha256": "d7c9485948447f819380a0914631e76456b981da3f597139d387b705ddd20500"
+        },
+        {
+          "filename": "mexnnz.mexw64",
+          "sha256": "5e5a625200c7e3403da2b26296bc1b4afbe375df1e4b02c6cc768e5bc85de2c8"
+        },
+        {
+          "filename": "mexqops.mexw64",
+          "sha256": "b4f4a6c0a88b1fafddf2fbd72a2e2746a1a6e11c26908c92162f9b0330cdec9f"
+        },
+        {
+          "filename": "mexschur.mexw64",
+          "sha256": "0d6ac2ef5ab392c115872a3aa1d4cd238553f241eeae147d1814204f2bdb544c"
+        },
+        {
+          "filename": "mexschurfun.mexw64",
+          "sha256": "b977ba542d241b1c73fc0fbed39c52c6fcca4db9022bfeab4686449c3d538e94"
+        },
+        {
+          "filename": "mexskron.mexw64",
+          "sha256": "a47a87bf151b74ff2abf76fccf4d3b367202dab04685c5d2099f3c0ea026ae2a"
+        },
+        {
+          "filename": "mexsmat.mexw64",
+          "sha256": "931b78c7a3055bc6bb4180a8264fc32511b27b242b7f94d265335448101d1a60"
+        },
+        {
+          "filename": "mexsvec.mexw64",
+          "sha256": "72b1188487141e793a615ec6cb50f6d370ea99dd03243566d0e795ebee7af492"
+        },
+        {
+          "filename": "mextriang.mexw64",
+          "sha256": "218055488ac683909279a39a57c6939c52149be07b597cd598970d60f60dd34f"
+        },
+        {
+          "filename": "mextriangsp.mexw64",
+          "sha256": "5f2121005746acc3e5c624a11068f4ed73e793947f3e4b49e2b42c25ea74cb0a"
+        }
+      ],
+      "whole_scheme_chain_or_figure_certified": false
+    },
+    {
+      "input_id": "M30-call20",
+      "actual_native_attempt": {
+        "actual_cvx_solver": "SeDuMi",
+        "numerical_precision": "high",
+        "solver_status": "Solved",
+        "reported_solver_tolerance": 2.567079471236985e-13,
+        "original_primal_relative_violation": 0,
+        "original_QT_bound_violation": 0,
+        "original_QT_tightness_error": 1.7763568394002505e-15,
+        "before_minimum_physical_SINR": 7.88200366557602,
+        "after_minimum_physical_SINR": 8.647588170613405,
+        "original_monotonicity_residual": 0,
+        "all_original_gates_pass": true,
+        "actual_seconds": 2.7614192,
+        "actual_selected_backend_name": "SeDuMi",
+        "actual_selected_backend_version": "1.02,",
+        "raw_dual_sum_to_one_error": 0,
+        "raw_dual_minimum_nonnegative_entry": -5.123005006555917e-13,
+        "raw_dual_quadratic_H_smallest_eigenvalue": 4.844391420670115e-09,
+        "raw_stationarity_max_residual": 0.0013289171913712316,
+        "raw_dual_objective_NOT_certified_until_PSD_and_equality_recheck": 8.645336619143837,
+        "raw_primal_dual_gap_NOT_certified": 9.167244741092873e-11,
+        "backend_sources_unchanged": true
+      },
+      "actual_native_before_and_after": {
+        "before": {
+          "sinr": [
+            8.92782125647547,
+            7.88200366557602
+          ],
+          "denominator": [
+            1.2211473524882202,
+            3.5686964700457935
+          ],
+          "satellite_power": [
+            0.06557564324140545,
+            1.723580436322977e-17,
+            0.12146356809556681
+          ],
+          "gt_interference": 0.06025595860743579
+        },
+        "after": {
+          "sinr": [
+            8.647588170613405,
+            8.661002014356733
+          ],
+          "denominator": [
+            1.2212966976789872,
+            3.594944985465119
+          ],
+          "satellite_power": [
+            0.0635250741043718,
+            2.5613649327559385e-17,
+            0.13444980533877912
+          ],
+          "gt_interference": 0.06025595860739949
+        }
+      },
+      "actual_native_candidate": [
+        [
+          0.00038209748499713937,
+          1.706038426018024e-14
+        ],
+        [
+          1.7828946215906216e-19,
+          4.934344469511854e-19
+        ],
+        [
+          0.00011414053812182804,
+          0.000580577186381309
+        ]
+      ],
+      "actual_independent80digit_proof": {
+        "checks": {
+          "dual_nonnegative_and_normalized": true,
+          "dual_positive_scalar_quadratic_coefficients": true,
+          "true_feasible_primal_dual_gap_original1e5": true,
+          "actual_raw_primal_dual_gap_original1e5": true
+        },
+        "all_independent80digit_precision_pass": true,
+        "precision_decimal_digits": 80,
+        "independent_feasible_primal_objective": "8.6453366190747380755587770207786212265331077744978983721429",
+        "independent_dual_upper": "8.64533661920365713017822570426162225429480007776310746505722",
+        "true_feasible_primal_dual_gap": "0.00000000012891905461944868348300102776169230326520909291432037192506",
+        "actual_raw_primal_dual_gap": "0.000000000151492579497653129769078318519043241825607465057217804401446",
+        "dual_quadratic_H_minimum": "0.00000000484439142068342741889389194847116058021224949754517222821021",
+        "diagnostic_feasible_p_scale_not_optimizer_change": "1.0",
+        "dual_alpha_sum_before_explicit_feasibility_normalization": 1.0,
+        "explicit80digit_arithmetic_floor": "3.901801174786370296487802988849580287933349609375e-59",
+        "proof": "max_{p>=0}(2c*sqrt(p)-H*p)=c^2/H; nonnegative duals with sumalpha=1 give same original QT upper",
+        "actual_cvx_solver": "SeDuMi",
+        "numerical_precision": "high",
+        "actual_original_precision_gates_pass": true,
+        "complete_precision_pass": true
+      },
+      "all_original_precision_gates_pass": true,
+      "extra_strict_MP80_pass": true,
+      "actual_backend_runtime_files_count": 132,
+      "actual_complete_backend_filename_SHA_bindings_digest": "4c5edb1cad035b894f56feb28d88ed3d6320ed9b5646d7e0a25ab6491d298d48",
+      "actual_backend_entrypoint_and_MEX_bindings": [
+        {
+          "filename": "sedumi.m",
+          "sha256": "89bed3e4c9aec9de9d72c84692d59f354813ba2aaaf37bb5d95428b421e909bf"
+        },
+        {
+          "filename": "cvx_sedumi.m",
+          "sha256": "4d40ac7666cf4ecb7d850ba2998c654b18e607cad8a73a0aac2fff4332363f48"
+        },
+        {
+          "filename": "sedumi.m",
+          "sha256": "89bed3e4c9aec9de9d72c84692d59f354813ba2aaaf37bb5d95428b421e909bf"
+        },
+        {
+          "filename": "adendotd.mexw64",
+          "sha256": "ef55d86b049be30e672bf9e442ba284b2354b54cbd21cea2e10d890a13449256"
+        },
+        {
+          "filename": "adenscale.mexw64",
+          "sha256": "39df3fec68a2b5fc25fbe31393e102e551abf451a4036587445ab2aed14e4bd5"
+        },
+        {
+          "filename": "blkchol.mexw64",
+          "sha256": "cabd1d325da57a9636f0a587ae9e10d01cdabbdd6e6f1b346ec7ffe62854c072"
+        },
+        {
+          "filename": "bwblkslv.mexw64",
+          "sha256": "2f0da91624fed1fd3edabfaad117a5f804c074bdca114f5c61a6f056415de03f"
+        },
+        {
+          "filename": "bwdpr1.mexw64",
+          "sha256": "715208cd77ccc72605d2808834582b8210342dadb9f777459dc8c5b001202c50"
+        },
+        {
+          "filename": "cholsplit.mexw64",
+          "sha256": "f82d0174c7765299186d888b71475548fff1f999e824919f882f49abf9785332"
+        },
+        {
+          "filename": "choltmpsiz.mexw64",
+          "sha256": "5a100606be6ecdf0cadd4f6429b06bed934e67dd09c8ba8f26d31e485173c888"
+        },
+        {
+          "filename": "ddot.mexw64",
+          "sha256": "700cb508cfe233460d7875c421bcf89aab7bc4321ba26a680ed67d6560e154e8"
+        },
+        {
+          "filename": "dpr1fact.mexw64",
+          "sha256": "a8ae329f8309a058656dcf0e6ddaae54610674aaf176a7b28a164fcf0c80b4ff"
+        },
+        {
+          "filename": "extractA.mexw64",
+          "sha256": "585a0fbf1bc3f07feb5b31754cb9f70b62df09f72d4f98945c15ec9c21d1e188"
+        },
+        {
+          "filename": "findblks.mexw64",
+          "sha256": "3c8edd460ae54b87cd0dc959fe77f6b77220c34f6a5726bd13a9244ad9bf1136"
+        },
+        {
+          "filename": "finsymbden.mexw64",
+          "sha256": "93368e0dcf15cd660bb92f083ea0b1298fdaa4c018d2eab56d8a40acc9d1032f"
+        },
+        {
+          "filename": "fwblkslv.mexw64",
+          "sha256": "c184af9fee410f45f7e167321d0a7ae0e805353b30db306c5923d24fa315669b"
+        },
+        {
+          "filename": "fwdpr1.mexw64",
+          "sha256": "70da2cc4bcd72cb34e9e38f7ddbdf65069da2e19444b972e8c4e11b8c31d0f1b"
+        },
+        {
+          "filename": "getada1.mexw64",
+          "sha256": "b653dcf7e9530d0f9957edb287409ae6709c1206cb3970f0bbdfee12fb057caa"
+        },
+        {
+          "filename": "getada2.mexw64",
+          "sha256": "efd71d01f0fa709a67232fa8469f1d1171c8a41baf63d37443f696def23a1acc"
+        },
+        {
+          "filename": "getada3.mexw64",
+          "sha256": "9b6d6d7953f54e9de1f8c4672d1b4039fa3ce34ff56ef16f9a605f6705d0425f"
+        },
+        {
+          "filename": "givensrot.mexw64",
+          "sha256": "c3b22d11d3c41755ca72d4d7f6a3e15dc9049374fa49e9f52edd44c639bcbbb9"
+        },
+        {
+          "filename": "incorder.mexw64",
+          "sha256": "d80fe35d7aada15b80a631e6ff1a77dc4e2e510a505db760bd555e1fd50299b3"
+        },
+        {
+          "filename": "invcholfac.mexw64",
+          "sha256": "4b3b1951706bf7cc49143d4e37beedd50fb07c4d07357eff32c5143843d7067d"
+        },
+        {
+          "filename": "iswnbr.mexw64",
+          "sha256": "843ef1d1672ecf269cae954e73e00d8ca2520bd334615d1105897431e106ba07"
+        },
+        {
+          "filename": "ordmmdmex.mexw64",
+          "sha256": "1ba52fc9cb37dfd6fd685b65f974b6f5fd4bdb0b1e0b0579d26e0f521e65b440"
+        },
+        {
+          "filename": "partitA.mexw64",
+          "sha256": "21e7cdaf281e06cfd51219e59dee11c4cb183344e7e70e4e89cb6c8f76515f03"
+        },
+        {
+          "filename": "psdframeit.mexw64",
+          "sha256": "07380382eaf1e10a551c5f46ce4b63fa7fb0b50c3e458c74687533da055bb644"
+        },
+        {
+          "filename": "psdinvjmul.mexw64",
+          "sha256": "8992d858ee7a7fe7487c3355b5234977d54723dda61957a491cd4c95fba3dea3"
+        },
+        {
+          "filename": "qblkmul.mexw64",
+          "sha256": "66de8d8e43d972bd28e2e21b8069c2e81900c3b5965db9a0f675e4c3921dbff4"
+        },
+        {
+          "filename": "qrK.mexw64",
+          "sha256": "12f13b983daa745ad4fa2cc110e11195b7804b9e4e19740ee0baab7eb48d6514"
+        },
+        {
+          "filename": "quadadd.mexw64",
+          "sha256": "c76b784bbe8687b0c205ce1945306012a81b39dc8d57642c1070e5bb199ee0ef"
+        },
+        {
+          "filename": "sortnnz.mexw64",
+          "sha256": "594a85343488f1145adfeeb2db787ee6f8501ec81f446a2e7409a6d7f26065f9"
+        },
+        {
+          "filename": "sqrtinv.mexw64",
+          "sha256": "961fcf984646eee5294f1965831c4a897441d0f61e4315cf8af6cfe77c979f2a"
+        },
+        {
+          "filename": "symbfwblk.mexw64",
+          "sha256": "970b6a4375c8cd4c915ed5dbb0fa2a911bb44ec980a3760d18aa631f7f511838"
+        },
+        {
+          "filename": "symfctmex.mexw64",
+          "sha256": "2cc8c71513b5c37c08412e9302c8b2b2b2cdfe7ed701fcad3c6da0490b47f813"
+        },
+        {
+          "filename": "urotorder.mexw64",
+          "sha256": "eb967d21ab71fbb77d5eb3e734f0aa937c50e704d54fcbb600ef655b767dac11"
+        },
+        {
+          "filename": "vecsym.mexw64",
+          "sha256": "38e4b55494ab6c2349b55a8385a4389171e59d20bcdf8ed6e8cd92c2bb8f79dc"
+        }
+      ],
+      "whole_scheme_chain_or_figure_certified": false
+    },
+    {
+      "input_id": "M30-call20",
+      "actual_native_attempt": {
+        "actual_cvx_solver": "SeDuMi",
+        "numerical_precision": "best",
+        "solver_status": "Solved",
+        "reported_solver_tolerance": 5.351427118565521e-14,
+        "original_primal_relative_violation": 0,
+        "original_QT_bound_violation": 0,
+        "original_QT_tightness_error": 1.7763568394002505e-15,
+        "before_minimum_physical_SINR": 7.88200366557602,
+        "after_minimum_physical_SINR": 8.647588170693776,
+        "original_monotonicity_residual": 0,
+        "all_original_gates_pass": true,
+        "actual_seconds": 2.7778542,
+        "actual_selected_backend_name": "SeDuMi",
+        "actual_selected_backend_version": "1.02,",
+        "raw_dual_sum_to_one_error": 0,
+        "raw_dual_minimum_nonnegative_entry": -1.1237750108538672e-13,
+        "raw_dual_quadratic_H_smallest_eigenvalue": 4.844393110585473e-09,
+        "raw_stationarity_max_residual": 0.0006358586438463369,
+        "raw_dual_objective_NOT_certified_until_PSD_and_equality_recheck": 8.645336619168765,
+        "raw_primal_dual_gap_NOT_certified": 1.823075024276477e-11,
+        "backend_sources_unchanged": true
+      },
+      "actual_native_before_and_after": {
+        "before": {
+          "sinr": [
+            8.92782125647547,
+            7.88200366557602
+          ],
+          "denominator": [
+            1.2211473524882202,
+            3.5686964700457935
+          ],
+          "satellite_power": [
+            0.06557564324140545,
+            1.723580436322977e-17,
+            0.12146356809556681
+          ],
+          "gt_interference": 0.06025595860743579
+        },
+        "after": {
+          "sinr": [
+            8.647588170693776,
+            8.661002014378457
+          ],
+          "denominator": [
+            1.2212966976762836,
+            3.5949449854643625
+          ],
+          "satellite_power": [
+            0.06352507410480088,
+            5.861648537916003e-18,
+            0.13444980522487077
+          ],
+          "gt_interference": 0.06025595860742713
+        }
+      },
+      "actual_native_candidate": [
+        [
+          0.00038209748499984467,
+          4.1050489197137114e-15
+        ],
+        [
+          4.0817865776960126e-20,
+          1.129169285808652e-19
+        ],
+        [
+          2.623473838336194e-05,
+          0.0005805771863826437
+        ]
+      ],
+      "actual_independent80digit_proof": {
+        "checks": {
+          "dual_nonnegative_and_normalized": true,
+          "dual_positive_scalar_quadratic_coefficients": true,
+          "true_feasible_primal_dual_gap_original1e5": true,
+          "actual_raw_primal_dual_gap_original1e5": true
+        },
+        "all_independent80digit_precision_pass": true,
+        "precision_decimal_digits": 80,
+        "independent_feasible_primal_objective": "8.64533661915671173372511495651231035545367217426395655789541",
+        "independent_dual_upper": "8.64533661918189113195894381940545207051717684775930056575609",
+        "true_feasible_primal_dual_gap": "0.0000000000251793982338288628931417150635046734953440078606773208861812",
+        "actual_raw_primal_dual_gap": "0.0000000000313572685829035749304450133272354415093005657560869859326594",
+        "dual_quadratic_H_minimum": "0.00000000484439311058839155288772271049998255381247743639446813907802",
+        "diagnostic_feasible_p_scale_not_optimizer_change": "1.0",
+        "dual_alpha_sum_before_explicit_feasibility_normalization": 1.0,
+        "explicit80digit_arithmetic_floor": "3.901801174786370296487802988849580287933349609375e-59",
+        "proof": "max_{p>=0}(2c*sqrt(p)-H*p)=c^2/H; nonnegative duals with sumalpha=1 give same original QT upper",
+        "actual_cvx_solver": "SeDuMi",
+        "numerical_precision": "best",
+        "actual_original_precision_gates_pass": true,
+        "complete_precision_pass": true
+      },
+      "all_original_precision_gates_pass": true,
+      "extra_strict_MP80_pass": true,
+      "actual_backend_runtime_files_count": 132,
+      "actual_complete_backend_filename_SHA_bindings_digest": "4c5edb1cad035b894f56feb28d88ed3d6320ed9b5646d7e0a25ab6491d298d48",
+      "actual_backend_entrypoint_and_MEX_bindings": [
+        {
+          "filename": "sedumi.m",
+          "sha256": "89bed3e4c9aec9de9d72c84692d59f354813ba2aaaf37bb5d95428b421e909bf"
+        },
+        {
+          "filename": "cvx_sedumi.m",
+          "sha256": "4d40ac7666cf4ecb7d850ba2998c654b18e607cad8a73a0aac2fff4332363f48"
+        },
+        {
+          "filename": "sedumi.m",
+          "sha256": "89bed3e4c9aec9de9d72c84692d59f354813ba2aaaf37bb5d95428b421e909bf"
+        },
+        {
+          "filename": "adendotd.mexw64",
+          "sha256": "ef55d86b049be30e672bf9e442ba284b2354b54cbd21cea2e10d890a13449256"
+        },
+        {
+          "filename": "adenscale.mexw64",
+          "sha256": "39df3fec68a2b5fc25fbe31393e102e551abf451a4036587445ab2aed14e4bd5"
+        },
+        {
+          "filename": "blkchol.mexw64",
+          "sha256": "cabd1d325da57a9636f0a587ae9e10d01cdabbdd6e6f1b346ec7ffe62854c072"
+        },
+        {
+          "filename": "bwblkslv.mexw64",
+          "sha256": "2f0da91624fed1fd3edabfaad117a5f804c074bdca114f5c61a6f056415de03f"
+        },
+        {
+          "filename": "bwdpr1.mexw64",
+          "sha256": "715208cd77ccc72605d2808834582b8210342dadb9f777459dc8c5b001202c50"
+        },
+        {
+          "filename": "cholsplit.mexw64",
+          "sha256": "f82d0174c7765299186d888b71475548fff1f999e824919f882f49abf9785332"
+        },
+        {
+          "filename": "choltmpsiz.mexw64",
+          "sha256": "5a100606be6ecdf0cadd4f6429b06bed934e67dd09c8ba8f26d31e485173c888"
+        },
+        {
+          "filename": "ddot.mexw64",
+          "sha256": "700cb508cfe233460d7875c421bcf89aab7bc4321ba26a680ed67d6560e154e8"
+        },
+        {
+          "filename": "dpr1fact.mexw64",
+          "sha256": "a8ae329f8309a058656dcf0e6ddaae54610674aaf176a7b28a164fcf0c80b4ff"
+        },
+        {
+          "filename": "extractA.mexw64",
+          "sha256": "585a0fbf1bc3f07feb5b31754cb9f70b62df09f72d4f98945c15ec9c21d1e188"
+        },
+        {
+          "filename": "findblks.mexw64",
+          "sha256": "3c8edd460ae54b87cd0dc959fe77f6b77220c34f6a5726bd13a9244ad9bf1136"
+        },
+        {
+          "filename": "finsymbden.mexw64",
+          "sha256": "93368e0dcf15cd660bb92f083ea0b1298fdaa4c018d2eab56d8a40acc9d1032f"
+        },
+        {
+          "filename": "fwblkslv.mexw64",
+          "sha256": "c184af9fee410f45f7e167321d0a7ae0e805353b30db306c5923d24fa315669b"
+        },
+        {
+          "filename": "fwdpr1.mexw64",
+          "sha256": "70da2cc4bcd72cb34e9e38f7ddbdf65069da2e19444b972e8c4e11b8c31d0f1b"
+        },
+        {
+          "filename": "getada1.mexw64",
+          "sha256": "b653dcf7e9530d0f9957edb287409ae6709c1206cb3970f0bbdfee12fb057caa"
+        },
+        {
+          "filename": "getada2.mexw64",
+          "sha256": "efd71d01f0fa709a67232fa8469f1d1171c8a41baf63d37443f696def23a1acc"
+        },
+        {
+          "filename": "getada3.mexw64",
+          "sha256": "9b6d6d7953f54e9de1f8c4672d1b4039fa3ce34ff56ef16f9a605f6705d0425f"
+        },
+        {
+          "filename": "givensrot.mexw64",
+          "sha256": "c3b22d11d3c41755ca72d4d7f6a3e15dc9049374fa49e9f52edd44c639bcbbb9"
+        },
+        {
+          "filename": "incorder.mexw64",
+          "sha256": "d80fe35d7aada15b80a631e6ff1a77dc4e2e510a505db760bd555e1fd50299b3"
+        },
+        {
+          "filename": "invcholfac.mexw64",
+          "sha256": "4b3b1951706bf7cc49143d4e37beedd50fb07c4d07357eff32c5143843d7067d"
+        },
+        {
+          "filename": "iswnbr.mexw64",
+          "sha256": "843ef1d1672ecf269cae954e73e00d8ca2520bd334615d1105897431e106ba07"
+        },
+        {
+          "filename": "ordmmdmex.mexw64",
+          "sha256": "1ba52fc9cb37dfd6fd685b65f974b6f5fd4bdb0b1e0b0579d26e0f521e65b440"
+        },
+        {
+          "filename": "partitA.mexw64",
+          "sha256": "21e7cdaf281e06cfd51219e59dee11c4cb183344e7e70e4e89cb6c8f76515f03"
+        },
+        {
+          "filename": "psdframeit.mexw64",
+          "sha256": "07380382eaf1e10a551c5f46ce4b63fa7fb0b50c3e458c74687533da055bb644"
+        },
+        {
+          "filename": "psdinvjmul.mexw64",
+          "sha256": "8992d858ee7a7fe7487c3355b5234977d54723dda61957a491cd4c95fba3dea3"
+        },
+        {
+          "filename": "qblkmul.mexw64",
+          "sha256": "66de8d8e43d972bd28e2e21b8069c2e81900c3b5965db9a0f675e4c3921dbff4"
+        },
+        {
+          "filename": "qrK.mexw64",
+          "sha256": "12f13b983daa745ad4fa2cc110e11195b7804b9e4e19740ee0baab7eb48d6514"
+        },
+        {
+          "filename": "quadadd.mexw64",
+          "sha256": "c76b784bbe8687b0c205ce1945306012a81b39dc8d57642c1070e5bb199ee0ef"
+        },
+        {
+          "filename": "sortnnz.mexw64",
+          "sha256": "594a85343488f1145adfeeb2db787ee6f8501ec81f446a2e7409a6d7f26065f9"
+        },
+        {
+          "filename": "sqrtinv.mexw64",
+          "sha256": "961fcf984646eee5294f1965831c4a897441d0f61e4315cf8af6cfe77c979f2a"
+        },
+        {
+          "filename": "symbfwblk.mexw64",
+          "sha256": "970b6a4375c8cd4c915ed5dbb0fa2a911bb44ec980a3760d18aa631f7f511838"
+        },
+        {
+          "filename": "symfctmex.mexw64",
+          "sha256": "2cc8c71513b5c37c08412e9302c8b2b2b2cdfe7ed701fcad3c6da0490b47f813"
+        },
+        {
+          "filename": "urotorder.mexw64",
+          "sha256": "eb967d21ab71fbb77d5eb3e734f0aa937c50e704d54fcbb600ef655b767dac11"
+        },
+        {
+          "filename": "vecsym.mexw64",
+          "sha256": "38e4b55494ab6c2349b55a8385a4389171e59d20bcdf8ed6e8cd92c2bb8f79dc"
+        }
+      ],
+      "whole_scheme_chain_or_figure_certified": false
+    }
+  ],
+  "original_precision_threshold_unchanged": 1e-05,
+  "exact_numeric_identity": "sqrt(scale*v)=sqrt(scale)*sqrt(v), scale>0",
+  "native_construct_boundary_correction": "left named dual annotation on identical inequalities; error-only CVX owner workspace cleanup",
+  "actual_native_scientific_sources_unchanged": true,
+  "native_whole_v3_algorithm_preflight_verified": false,
+  "new_complete183_bank_verified": false,
+  "historical_source_geometry_or_figure_agreement_verified": false,
+  "full_reproduction_pass": false
+}

@@ -1,0 +1,128 @@
+{
+  "scope": "retained_native_WRAPPER_constructor_metadata_failures_NOT_original_solver_model_failure",
+  "right_dual_actual_probe_sha256": "6d6b7520f487c18506eade633ad4f533237343a1244cb767ffec50b4325d7437",
+  "left_dual_actual_probe_sha256": "09dbbc5b0d68fed9a0726b2035f215aae616541a51e6a20eb209328df0b713a5",
+  "right_dual_actual_executed_operations": [
+    {
+      "operation": "denominator",
+      "class": "cvx"
+    },
+    {
+      "operation": "numeric_square_root",
+      "class": "double"
+    },
+    {
+      "operation": "CVX_square_root",
+      "class": "cvx"
+    },
+    {
+      "operation": "constant_times_CVX_radical",
+      "class": "cvx"
+    },
+    {
+      "operation": "sum_of_radicals",
+      "class": "cvx"
+    },
+    {
+      "operation": "weighted_denominator",
+      "class": "cvx"
+    },
+    {
+      "operation": "scaled_QT_expression",
+      "class": "cvx"
+    },
+    {
+      "operation": "cell_dual_selection",
+      "class": "cvxdual"
+    }
+  ],
+  "right_dual_actual_failure": {
+    "operation": "constraint_and_dual_binding",
+    "message": "\u8f93\u5165\u5fc5\u987b\u4e3a\u6570\u503c\u3001\u5b57\u7b26\u6216\u903b\u8f91\u503c\u3002",
+    "identifier": "MATLAB:colon:inputsMustBeNumericCharLogical"
+  },
+  "right_dual_stack_function_and_line_only": [
+    {
+      "name": "probe_native_factored_mr_construction_work",
+      "line": 43
+    }
+  ],
+  "left_dual_actual_executed_operations": [
+    {
+      "operation": "denominator",
+      "class": "cvx"
+    },
+    {
+      "operation": "numeric_square_root",
+      "class": "double"
+    },
+    {
+      "operation": "CVX_square_root",
+      "class": "cvx"
+    },
+    {
+      "operation": "constant_times_CVX_radical",
+      "class": "cvx"
+    },
+    {
+      "operation": "sum_of_radicals",
+      "class": "cvx"
+    },
+    {
+      "operation": "weighted_denominator",
+      "class": "cvx"
+    },
+    {
+      "operation": "scaled_QT_expression",
+      "class": "cvx"
+    },
+    {
+      "operation": "cell_dual_selection",
+      "class": "cvxdual"
+    },
+    {
+      "operation": "left_dual_constraint_binding",
+      "class": "constructed"
+    }
+  ],
+  "left_dual_constructor_pass_not_solver_or_full_case": true,
+  "retained_failures": [
+    {
+      "failure_classification": "wrapper_backend_metadata_startup_before_numeric_component",
+      "actual_preserved_failure_receipt_sha256": "f0119223badfc4ec23fb25bebfd5d4813f3353cc8a50b338c0d4aae9872c7f92",
+      "actual_preserved_bytes": 643,
+      "not_reclassified_as_solver_numerical_failure_or_success": true
+    },
+    {
+      "failure_classification": "generated_fixture_integer_double_deserialization_exception_before_solver",
+      "actual_preserved_failure_receipt_sha256": "d5d593330b63201665440a671987a45e2708bca2df4e723a29e5f8e25fd5debc",
+      "actual_preserved_bytes": 668,
+      "not_reclassified_as_solver_numerical_failure_or_success": true
+    },
+    {
+      "failure_classification": "constructor_exception_and_CVX_owner_scope_cleanup_before_solver",
+      "actual_preserved_failure_receipt_sha256": "e02fcec8e9390b5a77ca2dfd5fab432df7a7df92a0238cb97f691fcd72b06a59",
+      "actual_preserved_bytes": 605,
+      "not_reclassified_as_solver_numerical_failure_or_success": true
+    },
+    {
+      "failure_classification": "native_constructor_failure_before_solver",
+      "preserved_actual_receipt_sha256": "8fd67660ad89db6752d536354105167250233f6257fb2d11211e5c4d2595cdac",
+      "actual_attempt_count": 4,
+      "all_original_success_flags_remain_false": true
+    },
+    {
+      "failure_classification": "native_constructor_failure_before_solver",
+      "preserved_actual_receipt_sha256": "637310340de4e52eff7b1ec904ab30e66295b5b7e3a7d7c72e1dd9b8f7727971",
+      "actual_attempt_count": 4,
+      "all_original_success_flags_remain_false": true
+    }
+  ],
+  "full_reproduction_pass": false,
+  "separate_genuine_old_native_M30_QT_failure": {
+    "actual_native_full_failure_sha256": "b4d6705866ecfae5c0b3563d6f2d18aa892e2d847622571f1e3467c1a24ca166",
+    "actual_MR_call20_generated_input_sha256": "b7e577dfad4c9cc799b82b2e1a9efb5d6a0a317aad2dd0d538e39e5eb959f4dd",
+    "classification": "genuine_solver_precision_monotonicity_failure_in_original_MR_QT_high_best_NOT_APwarning_or_constructor_error",
+    "old_native_complete_case_failure_retained": true
+  }
+}

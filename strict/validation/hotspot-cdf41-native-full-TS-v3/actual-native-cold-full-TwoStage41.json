@@ -1,0 +1,214 @@
+{
+  "scope": "WORK_actual_nativeMAT_full_dimension_original_CDF41_TwoStage_cold_chain_NOT_completeCDF",
+  "sample_index": 41,
+  "only_changed_numerical_control": {
+    "rgd_iteration_cap": {
+      "old": 5000,
+      "new": 100000
+    }
+  },
+  "original_cap_number5000_not_reported_in_paper": true,
+  "same_original_cold_phi0_and_given_cold_W0": true,
+  "old_nativeMAT_phase_stop": {
+    "converged": false,
+    "termination": "configured_iteration_cap",
+    "iterations": 5000,
+    "iteration_cap": 5000,
+    "stop_rule": "Riemannian_gradient_norm",
+    "threshold": 1e-06,
+    "final_residual": 2.6436809812178025e-05,
+    "phase_method": "author_Algorithm_3-2_RGD_minimize_negative_F",
+    "printed_sign_interpretation": "argmax_F_equivalent_minimize_negative_F"
+  },
+  "nativeMAT_phase_stop": {
+    "converged": true,
+    "termination": "gradient_tolerance",
+    "iterations": 6819,
+    "iteration_cap": 100000,
+    "stop_rule": "Riemannian_gradient_norm",
+    "threshold": 1e-06,
+    "final_residual": 3.657373795099561e-07,
+    "phase_method": "author_Algorithm_3-2_RGD_minimize_negative_F",
+    "printed_sign_interpretation": "argmax_F_equivalent_minimize_negative_F"
+  },
+  "nativeMAT_QT_stop": {
+    "converged": true,
+    "termination": "relative_improvement",
+    "iterations": 3,
+    "iteration_cap": 200,
+    "stop_rule": "signed_relative_objective_increase",
+    "threshold": 0.0001,
+    "final_residual": 1.8534185033733586e-06
+  },
+  "QT_history": [
+    0.006130401988614399,
+    10.028311344103058,
+    10.082603063029854,
+    10.082621750312933
+  ],
+  "QT_diagnostics": [
+    {
+      "solver": "external_CVX",
+      "status": "Solved",
+      "reported_solver_tolerance": 3.63889008680844e-13,
+      "constraint_max_relative_violation": 2.3493101577025263e-16,
+      "qt_bound_max_violation": 0,
+      "epigraph_scaling": "exact_monotone_lambda_gamma_elimination_weighted_QT"
+    },
+    {
+      "solver": "external_CVX",
+      "status": "Solved",
+      "reported_solver_tolerance": 1.1499824215815134e-12,
+      "constraint_max_relative_violation": 1.56578703866692e-16,
+      "qt_bound_max_violation": 0,
+      "epigraph_scaling": "exact_monotone_lambda_gamma_elimination_weighted_QT"
+    },
+    {
+      "solver": "external_CVX",
+      "status": "Inaccurate/Solved",
+      "reported_solver_tolerance": 2.508342546511266e-11,
+      "constraint_max_relative_violation": 2.346947384719114e-16,
+      "qt_bound_max_violation": 0,
+      "epigraph_scaling": "exact_monotone_lambda_gamma_elimination_weighted_QT"
+    }
+  ],
+  "checks": {
+    "same_nativeMAT_cold_prefix_bitwise_pass": true,
+    "original_gradient_stop_pass": true,
+    "original_QT_stop_pass": true,
+    "phase_unit_modulus_pass": true,
+    "physical_constraint_pass": true,
+    "solver_primal_pass": true,
+    "qt_bound_pass": true,
+    "executed_source_interval_pass": true
+  },
+  "all_complete_TwoStage_original_gates_pass": true,
+  "same_physical_rate_evaluation": {
+    "sinr": [
+      2.7801050072185233e-07,
+      8.428917529027874e-08,
+      1083.344300225778,
+      3.029230508888727e-08,
+      1.4901286850931422e-06,
+      8.204492457566162e-06,
+      1.9952623150115512,
+      1.995262314998587,
+      1.9952623150004543,
+      1.9952623149978594,
+      1.9952623150002113,
+      1.9952623150001965,
+      1.9952623149950008,
+      1.9952623150027142,
+      1.9952623150062463,
+      1.9952623150052955
+    ],
+    "hu_sum_rate": 10.082621750312933,
+    "total_power": 99.99999999998816
+  },
+  "physical_constraint_maximum_violation": 0,
+  "scheme_status": {
+    "converged": true,
+    "termination": "all_original_stop_rules_reached",
+    "blocks": [
+      {
+        "converged": true,
+        "termination": "gradient_tolerance",
+        "iterations": 6819,
+        "iteration_cap": 100000,
+        "stop_rule": "Riemannian_gradient_norm",
+        "threshold": 1e-06,
+        "final_residual": 3.657373795099561e-07,
+        "phase_method": "author_Algorithm_3-2_RGD_minimize_negative_F",
+        "printed_sign_interpretation": "argmax_F_equivalent_minimize_negative_F"
+      },
+      {
+        "converged": true,
+        "termination": "relative_improvement",
+        "iterations": 3,
+        "iteration_cap": 200,
+        "stop_rule": "signed_relative_objective_increase",
+        "threshold": 0.0001,
+        "final_residual": 1.8534185033733586e-06
+      }
+    ],
+    "numerical": {
+      "solver_primal_pass": true,
+      "qt_sdr_bound_pass": true,
+      "solver_primal_relative_tolerance": 1e-05,
+      "qt_bound_tolerance": 1e-05,
+      "maximum_primal_relative_violation": 2.3493101577025263e-16,
+      "maximum_qt_sdr_bound_violation": 0
+    },
+    "algorithm_success": true
+  },
+  "final_criterion": 11.594051415438283,
+  "final_gradient_norm": 3.657373795099561e-07,
+  "elapsed_seconds": 208.1032298,
+  "actual_selected_CVX_solver": "SDPT3",
+  "source_unchanged_during_run": true,
+  "oldPython_sample41_failure_not_upgraded": true,
+  "MATLAB_Python_iterates_bitwise_equivalence_claimed": false,
+  "actual_entire_sample_all_schemes_rerun": false,
+  "historical_author_inputs_recovered": false,
+  "full_reproduction_pass": false,
+  "actual_full_dimensions": {
+    "N": 16,
+    "J": 16,
+    "U": 6,
+    "K": 10,
+    "M": 25
+  },
+  "physical_reported_parameters": {
+    "N": 16,
+    "J": 16,
+    "U": 6,
+    "K": 10,
+    "M": 25,
+    "leo_height_m": 550000,
+    "frequency_hz": 12000000000.0,
+    "power_w": 100,
+    "bandwidth_hz": 200000000.0,
+    "temperature_k": 235.3,
+    "satellite_gain_dbi": 50,
+    "antenna_diameter_m": 0.5,
+    "nhu_sinr_db": 3,
+    "kappa_satellite_db": 20,
+    "kappa_ground_db": 0,
+    "ris_hu_distance_m": 400,
+    "hu_spacing_m_range": [
+      10,
+      20
+    ],
+    "subsurface_elements": [
+      200,
+      140
+    ],
+    "element_size_m": [
+      0.01,
+      0.01
+    ]
+  },
+  "actual_old5000_history_identity": {
+    "float64_values": 5001,
+    "little_endian_float64_sha256": "9edb713d7265f0c77d264f02c536ae4c68cd75b2825068373a1910c532a4f49d",
+    "first": -49.900690896594114,
+    "last": 11.594051415061108
+  },
+  "actual_phase_history_identity": {
+    "float64_values": 6820,
+    "little_endian_float64_sha256": "97d46a9f67ea2c16f724f8860536220680d673cb8d36e8e46b3f0e1893385bc6",
+    "first": -49.900690896594114,
+    "last": 11.594051415438283
+  },
+  "native_cold5000_prefix_independently_rechecked_bitwise": true,
+  "actual_QT_history_identity": {
+    "float64_values": 4,
+    "little_endian_float64_sha256": "a5ff73cf24726a0e08327a8c49a8bd5d7b19d9c84132780b9d7af29844711e23",
+    "first": 0.006130401988614399,
+    "last": 10.082621750312933
+  },
+  "complete_native_TwoStage41_executed_and_verified": true,
+  "all_source_constraints_verified": false,
+  "source_historical_geometry_recovered": false,
+  "complete_CDF_reproduction_pass": false
+}

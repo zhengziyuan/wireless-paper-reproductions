@@ -1,0 +1,43 @@
+{
+  "scope": "ACTUAL fresh native cone v2 component and regression execution, actual selected bytes bound before/after; not retrofit or full solver certificate",
+  "matlab_version": "25.2.0.2998904 (R2025b)",
+  "computer": "PCWIN64",
+  "actual_selected_source_paths": {
+    "original_v1_helper": "work/sensing-correctness-audit/sorted_cone_rows_exact_binary.m",
+    "v2_helper": "work/sensing-correctness-audit/sorted_cone_rows_exact_binary_v2.m",
+    "shared_fixture": "work/sensing-correctness-audit/sorted_cone_shared_exact_fixture.json",
+    "exact_raw_order_witnesses": "work/sensing-correctness-audit/matlab_centered_optional_order_exact_counterexamples.json",
+    "binding_wrapper": "work/sensing-correctness-audit/run_sorted_cone_v2_bound_regression.m"
+  },
+  "expected_frozen_component_hashes": {
+    "original_v1_helper": "6c47eebf6b2556447f6181fd33e6cda2614d354ed3d7809252db580d1fee6387",
+    "v2_helper": "f11097f4af7fbba53f89283757b9ac23686207806db7d1b8778d9f22f00a29eb",
+    "shared_fixture": "ba1531842021b0b9419f19407e953ae76eb8669179f83af96d0b8c396c2c6869",
+    "exact_raw_order_witnesses": "8f118b6576479e2586984b33a89ee2a52e60fe503f9fbcf96900d9fc84a7622b"
+  },
+  "source_sha256_before": {
+    "original_v1_helper": "6c47eebf6b2556447f6181fd33e6cda2614d354ed3d7809252db580d1fee6387",
+    "v2_helper": "f11097f4af7fbba53f89283757b9ac23686207806db7d1b8778d9f22f00a29eb",
+    "shared_fixture": "ba1531842021b0b9419f19407e953ae76eb8669179f83af96d0b8c396c2c6869",
+    "exact_raw_order_witnesses": "8f118b6576479e2586984b33a89ee2a52e60fe503f9fbcf96900d9fc84a7622b",
+    "binding_wrapper": "e3dcbcec78963b0aebc4dafefee4229efd5f9235902e2a0d0030743c96f77c09"
+  },
+  "source_sha256_after": {
+    "original_v1_helper": "6c47eebf6b2556447f6181fd33e6cda2614d354ed3d7809252db580d1fee6387",
+    "v2_helper": "f11097f4af7fbba53f89283757b9ac23686207806db7d1b8778d9f22f00a29eb",
+    "shared_fixture": "ba1531842021b0b9419f19407e953ae76eb8669179f83af96d0b8c396c2c6869",
+    "exact_raw_order_witnesses": "8f118b6576479e2586984b33a89ee2a52e60fe503f9fbcf96900d9fc84a7622b",
+    "binding_wrapper": "e3dcbcec78963b0aebc4dafefee4229efd5f9235902e2a0d0030743c96f77c09"
+  },
+  "source_unchanged": true,
+  "component_output_sha256": "b819abd816906c69ebab9d65e1bf677546f1ea6590270062e3115df17c159659",
+  "component_output_path": "work/sensing-correctness-audit/sorted_cone_v2_native_component-20261004-v1.json",
+  "component_all_checks_pass": true,
+  "shared_case_count": 1010,
+  "strict_raw_order_case_count": 6,
+  "actual_old_v1_failure_count": 3,
+  "all_checks_pass": true,
+  "publication_copy_kind": "explicitly_redacted_runtime_binder_not_byte_identical_raw_receipt",
+  "path_redaction": "Only local workspace-root prefixes removed; source/output hashes and all numerical assertions are unchanged.",
+  "original_raw_runtime_binder_sha256": "774c9212535984985b8cc53348f69eef503f6946d9494dce51f20cf2c968aad5"
+}

@@ -1,0 +1,56 @@
+{
+  "scope": "actual_nativeMAT_two_fixed_original_MR_QT_inputs_four_numerical_controls_NOT_whole_algorithm_or_figures",
+  "actual_input_result_and_state_bindings": [
+    {
+      "input_id": "N48",
+      "generated_original_fixture_sha256": "0a2a2415bcd753519152e2cc0f269fdb43ff69872859a8e63c4c667994c841b7",
+      "actual_native_receipt_sha256": "83023514c7ad883b4851c6a89a0b1d1682290a452edbca8a469ea7750acb8d78",
+      "actual_native_returned_states_sha256": "2478c741bbca126e49a546269e39b33b9db658da7f9226498af0149106e39cb9",
+      "actual_independent80digit_proof_sha256": "bc6851d6603092103de7b5f55d8c337ee72387d0da065d41a4240a27b46e3fbe",
+      "native_elapsed_seconds": 17.1877482
+    },
+    {
+      "input_id": "M30-call20",
+      "generated_original_fixture_sha256": "b7e577dfad4c9cc799b82b2e1a9efb5d6a0a317aad2dd0d538e39e5eb959f4dd",
+      "actual_native_receipt_sha256": "bc774e013016453abb8d87cb570b5a97af776ecd7ce378048018a9aa2eaf150c",
+      "actual_native_returned_states_sha256": "545f9bff26efbe505b958b9ad02e759479fd106bf967937c1ce7d585cdc8dc56",
+      "actual_independent80digit_proof_sha256": "9ad8d1cc79d095f7edf0a48aeedb94e32b69a02902ba2222217b9fed6e6ff020",
+      "native_elapsed_seconds": 12.2127036
+    }
+  ],
+  "actual_executed_native_scientific_and_WRAPPER_sources": {
+    "test_factored_mr_backend_controls_work.m": "7efd41f24586cc8a9d67b0dc286ad1cb7407ecd9174ef8eec6bfce139288e20d",
+    "solve_original_ap_qt_with_duals_work.m": "a95f9932a2ce593c31b9105222972664df92bf38fb964488c88852af2a83fe28",
+    "solve_original_mr_qt_factored_work.m": "139106685321267d21b9bca3edc63dee808d2e39c8e0bff86db2764c483ba298",
+    "strict_satcom_core.m": "b2cc5284f0c3a5513572f5987e69d2c0a8977c232e278a820c0ccf5bd8de3c80",
+    "mr-QT-numerical-input-72b59733fcf550ec.mat": "0a2a2415bcd753519152e2cc0f269fdb43ff69872859a8e63c4c667994c841b7",
+    "same-QT-first-failure-mr-call20.mat": "b7e577dfad4c9cc799b82b2e1a9efb5d6a0a317aad2dd0d538e39e5eb959f4dd"
+  },
+  "independent_MP80_checker_sha256": "9880109eefb35d5b1063187de1f020eb923981bf98f1c75a66f2f34e1827dedf",
+  "independent_MP80_math_helper_sha256": "348376cd61fc15eae51f9b47fcd1298d6facc5c60ca5a745eda891dce6ff0c7a",
+  "freezer_source_sha256": "9a9a5beaa2be73fcefb2b1763e9f1644685f0f60a5a9b292435eedf9fd240c9b",
+  "public_files": {
+    "actual-native-eight-MR-components.json": {
+      "sha256": "5dbfde03717d1daa21b85b25c844a1b45c33d0d6d98e716a133394994c02255b",
+      "bytes": 69001
+    },
+    "generated-original-two-input-bindings.json": {
+      "sha256": "1bccc73f694acf0de9ec51137735b8ff2451f8089d494b13e49e29463650fc4d",
+      "bytes": 4304
+    },
+    "README.md": {
+      "sha256": "ba8e7f257cff36092edfe06d2621cc3a7d74806285486733ab2c725780b13b75",
+      "bytes": 1427
+    },
+    "retained-native-failure-classification.json": {
+      "sha256": "1e77286b78fdf0069f850a3548dd5c14bc91f4563b8e7a94c66f13a78fe476f7",
+      "bytes": 4420
+    }
+  },
+  "all_original_precision_pass_count": 8,
+  "additional_strict_MP80_pass_count": 4,
+  "additional_strict_MP80_fail_count_retained": 4,
+  "native_whole_v3_case_certified": false,
+  "new_full183_certified": false,
+  "full_reproduction_pass": false
+}

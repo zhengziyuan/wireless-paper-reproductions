@@ -1,0 +1,2859 @@
+{
+  "scope": "fresh_independent_native_MATLAB_full_Fig8_start_cap_control_NOT_full12000",
+  "paper_id": "mis-communications",
+  "figure": "fig8",
+  "baseline": "MIS",
+  "start": 66,
+  "configuration": {
+    "ms1": [
+      2,
+      2
+    ],
+    "ms2": [
+      1,
+      1
+    ],
+    "K": 4
+  },
+  "M": 4,
+  "N": 1,
+  "U": 4,
+  "K": 4,
+  "caps_not_published": true,
+  "old_implementation_cap": 4000,
+  "new_unreported_implementation_cap": 100000,
+  "unchanged_stationarity_threshold": 1e-06,
+  "rng_before_initialize": 2092167238.0,
+  "rng_after_initialize": 182811848.0,
+  "initial_state": {
+    "phi": {
+      "real": [
+        0.4801827124965163,
+        0.9942914140907447,
+        0.9588059185031571,
+        -0.9528805185492284
+      ],
+      "imag": [
+        0.8771684915792906,
+        -0.10669856543284563,
+        0.28406198380514985,
+        0.3033458708625412
+      ]
+    },
+    "theta": {
+      "real": 0.8603310705299451,
+      "imag": 0.5097356658904679
+    },
+    "X": [
+      [
+        0.027630031789337674,
+        0.34355014831008,
+        0.359657828711456,
+        0.2691619911891262
+      ],
+      [
+        0.27962032357980565,
+        0.04464823428935711,
+        0.3619378382640296,
+        0.31379360386680755
+      ],
+      [
+        0.1292697829334924,
+        0.33908443777315994,
+        0.1623530742891282,
+        0.36929270500421946
+      ],
+      [
+        0.027088325191336086,
+        0.5426580432546068,
+        0.18018275460625982,
+        0.2500708769477972
+      ]
+    ]
+  },
+  "model_config": {
+    "ms1": [
+      2,
+      2
+    ],
+    "ms2": [
+      1,
+      1
+    ],
+    "azimuth_deg": [
+      -60,
+      -20,
+      20,
+      60
+    ],
+    "elevation_deg": [
+      45,
+      45,
+      45,
+      45
+    ],
+    "spacing_over_wavelength": 0.5,
+    "incidence_direction_cosines": [
+      0,
+      0
+    ],
+    "number_of_targets": 4,
+    "reference_snr": 0.01
+  },
+  "coefficients": {
+    "real": [
+      [
+        1,
+        -0.34574104434877917,
+        0.4440158403262133,
+        0.6872469198049824
+      ],
+      [
+        1,
+        0.7249891196495339,
+        -0.49399261869764316,
+        0.24071447172346644
+      ],
+      [
+        1,
+        0.7249891196495339,
+        -0.49399261869764316,
+        -0.956993019209411
+      ],
+      [
+        1,
+        -0.34574104434877917,
+        0.4440158403262133,
+        -0.9942759204885538
+      ]
+    ],
+    "imag": [
+      [
+        0,
+        -0.9383299687490619,
+        0.8960189359268066,
+        -0.726423892241
+      ],
+      [
+        0,
+        -0.6887603185359866,
+        0.8694660963328271,
+        0.9705959731540681
+      ],
+      [
+        0,
+        0.6887603185359866,
+        0.8694660963328271,
+        0.29011094633683826
+      ],
+      [
+        0,
+        0.9383299687490619,
+        0.8960189359268066,
+        0.1068428469137684
+      ]
+    ]
+  },
+  "original_numerical_suffix_byte_identical": true,
+  "original_local_suffix_sha256": "748dfdeb2674b0377abb1680103d3d436f1dbe886244f65c75ea8e55a7a5a89b",
+  "selected_adapter_function": "work/communication-axis-audit/cap100000-v1/communication_cap_cold_bound.m",
+  "sources_before": [
+    {
+      "relative_path": "wireless-paper-reproductions/strict/mis-communications/engine.py",
+      "sha256": "eb90ca857df1cf3aed094c91c1ccee1461e571a96f15e42f7545768acaa1de77"
+    },
+    {
+      "relative_path": "wireless-paper-reproductions/strict/mis-communications/mis_communications_strict_engine.m",
+      "sha256": "763a55bbcd74561c56f4bf668ef634863546b2cf235d16ab1854102d32da2108"
+    },
+    {
+      "relative_path": "wireless-paper-reproductions/strict/mis-communications/plot_beampatterns.py",
+      "sha256": "1f4dfe523361e86ce13aae3a4a3a09b50831e7b8b6a7a681a9876d60f0675a7d"
+    },
+    {
+      "relative_path": "wireless-paper-reproductions/strict/mis-communications/run.py",
+      "sha256": "33f52db44bce2bcc49d48c50210f10392520870748bfa62c47fd3466839bfe09"
+    },
+    {
+      "relative_path": "wireless-paper-reproductions/strict/mis-communications/run_mis_communications.m",
+      "sha256": "a875b183f281efcb4786109467d9ff8e37edd2c7aac9d53fa68752e495e34bf1"
+    },
+    {
+      "relative_path": "wireless-paper-reproductions/strict/mis-communications/source_map.json",
+      "sha256": "beb4dba92d7ec45b163c57616548d9cdf9cee9bdf88a42b240064732f2c19b71"
+    },
+    {
+      "relative_path": "wireless-paper-reproductions/strict/mis-communications/test_communication_increment.py",
+      "sha256": "af0f99a0614c97794c4c4bc2650c2baf4a6db811448fab9ad02d0adce11a34ee"
+    },
+    {
+      "relative_path": "wireless-paper-reproductions/strict/mis-communications/test_figure_inputs.py",
+      "sha256": "d25f2164a461d5b219d67612b125ef50aad283e823e98f167ead1999ce53b314"
+    },
+    {
+      "relative_path": "wireless-paper-reproductions/strict/mis-communications/test_line_search.py",
+      "sha256": "1f3d775fa911988f4aeb7f4bb169c8beb555aa9f58b23637ccbf124adccee855"
+    },
+    {
+      "relative_path": "wireless-paper-reproductions/strict/mis-communications/settings.json",
+      "sha256": "5a9107ff6a293b9d32e6a6eb45ae3bec2507e39d10e5cb79fd969f9a7dbc7f71"
+    },
+    {
+      "relative_path": "wireless-paper-reproductions/strict/mis-communications/figures.json",
+      "sha256": "2463594c5e4d85980e15eb6b2baf2465cd6962ad49df616f96f3899db59ef487"
+    },
+    {
+      "relative_path": "wireless-paper-reproductions/strict/execute_mis_communications.py",
+      "sha256": "2e4d922e4d9c47d6a9c54b568323d1025159a9b8cc8e4e2d0024d0171197a952"
+    },
+    {
+      "relative_path": "work/communication-axis-audit/cap100000-v1/communication_cap_cold_bound.m",
+      "sha256": "7df861f3404fe85f9e10bacc873abed2c6f8f7436f4dbb8d3e6175a764ce27ec"
+    },
+    {
+      "relative_path": "work/communication-axis-audit/cap100000-v1/settings-cap100000.json",
+      "sha256": "55c5a0c6ba503e5c3f0a044532b6208f4a08ef7de391126a6c45631eeda5b46e"
+    },
+    {
+      "relative_path": "work/communication-axis-audit/cap100000-v1/cold-preflight-fixture.json",
+      "sha256": "57153006dcbe34cc881cb85abe1ba0968245a9eb4be407fa7d23f2f05e9627e5"
+    }
+  ],
+  "sources_after": [
+    {
+      "relative_path": "wireless-paper-reproductions/strict/mis-communications/engine.py",
+      "sha256": "eb90ca857df1cf3aed094c91c1ccee1461e571a96f15e42f7545768acaa1de77"
+    },
+    {
+      "relative_path": "wireless-paper-reproductions/strict/mis-communications/mis_communications_strict_engine.m",
+      "sha256": "763a55bbcd74561c56f4bf668ef634863546b2cf235d16ab1854102d32da2108"
+    },
+    {
+      "relative_path": "wireless-paper-reproductions/strict/mis-communications/plot_beampatterns.py",
+      "sha256": "1f4dfe523361e86ce13aae3a4a3a09b50831e7b8b6a7a681a9876d60f0675a7d"
+    },
+    {
+      "relative_path": "wireless-paper-reproductions/strict/mis-communications/run.py",
+      "sha256": "33f52db44bce2bcc49d48c50210f10392520870748bfa62c47fd3466839bfe09"
+    },
+    {
+      "relative_path": "wireless-paper-reproductions/strict/mis-communications/run_mis_communications.m",
+      "sha256": "a875b183f281efcb4786109467d9ff8e37edd2c7aac9d53fa68752e495e34bf1"
+    },
+    {
+      "relative_path": "wireless-paper-reproductions/strict/mis-communications/source_map.json",
+      "sha256": "beb4dba92d7ec45b163c57616548d9cdf9cee9bdf88a42b240064732f2c19b71"
+    },
+    {
+      "relative_path": "wireless-paper-reproductions/strict/mis-communications/test_communication_increment.py",
+      "sha256": "af0f99a0614c97794c4c4bc2650c2baf4a6db811448fab9ad02d0adce11a34ee"
+    },
+    {
+      "relative_path": "wireless-paper-reproductions/strict/mis-communications/test_figure_inputs.py",
+      "sha256": "d25f2164a461d5b219d67612b125ef50aad283e823e98f167ead1999ce53b314"
+    },
+    {
+      "relative_path": "wireless-paper-reproductions/strict/mis-communications/test_line_search.py",
+      "sha256": "1f3d775fa911988f4aeb7f4bb169c8beb555aa9f58b23637ccbf124adccee855"
+    },
+    {
+      "relative_path": "wireless-paper-reproductions/strict/mis-communications/settings.json",
+      "sha256": "5a9107ff6a293b9d32e6a6eb45ae3bec2507e39d10e5cb79fd969f9a7dbc7f71"
+    },
+    {
+      "relative_path": "wireless-paper-reproductions/strict/mis-communications/figures.json",
+      "sha256": "2463594c5e4d85980e15eb6b2baf2465cd6962ad49df616f96f3899db59ef487"
+    },
+    {
+      "relative_path": "wireless-paper-reproductions/strict/execute_mis_communications.py",
+      "sha256": "2e4d922e4d9c47d6a9c54b568323d1025159a9b8cc8e4e2d0024d0171197a952"
+    },
+    {
+      "relative_path": "work/communication-axis-audit/cap100000-v1/communication_cap_cold_bound.m",
+      "sha256": "7df861f3404fe85f9e10bacc873abed2c6f8f7436f4dbb8d3e6175a764ce27ec"
+    },
+    {
+      "relative_path": "work/communication-axis-audit/cap100000-v1/settings-cap100000.json",
+      "sha256": "55c5a0c6ba503e5c3f0a044532b6208f4a08ef7de391126a6c45631eeda5b46e"
+    },
+    {
+      "relative_path": "work/communication-axis-audit/cap100000-v1/cold-preflight-fixture.json",
+      "sha256": "57153006dcbe34cc881cb85abe1ba0968245a9eb4be407fa7d23f2f05e9627e5"
+    }
+  ],
+  "source_unchanged_during_run": true,
+  "binding_file_sha256": "268e785caeab806fb98d67a35a1b73c2bce0b37c1ea5dc7963a6e5fccec847f0",
+  "first_native_4000_capped_stage_1based": 16,
+  "native_4000_cap_actually_observed": true,
+  "cold_original_prefix_checks": [
+    {
+      "stage": 0,
+      "mu": 100,
+      "old_records": 975,
+      "new_records": 975,
+      "every_old_history_record_bitwise_equal": true,
+      "earlier_stop_equal_or_first_changed_stage": true
+    },
+    {
+      "stage": 1,
+      "mu": 50,
+      "old_records": 43,
+      "new_records": 43,
+      "every_old_history_record_bitwise_equal": true,
+      "earlier_stop_equal_or_first_changed_stage": true
+    },
+    {
+      "stage": 2,
+      "mu": 25,
+      "old_records": 61,
+      "new_records": 61,
+      "every_old_history_record_bitwise_equal": true,
+      "earlier_stop_equal_or_first_changed_stage": true
+    },
+    {
+      "stage": 3,
+      "mu": 12.5,
+      "old_records": 78,
+      "new_records": 78,
+      "every_old_history_record_bitwise_equal": true,
+      "earlier_stop_equal_or_first_changed_stage": true
+    },
+    {
+      "stage": 4,
+      "mu": 6.25,
+      "old_records": 96,
+      "new_records": 96,
+      "every_old_history_record_bitwise_equal": true,
+      "earlier_stop_equal_or_first_changed_stage": true
+    },
+    {
+      "stage": 5,
+      "mu": 3.125,
+      "old_records": 115,
+      "new_records": 115,
+      "every_old_history_record_bitwise_equal": true,
+      "earlier_stop_equal_or_first_changed_stage": true
+    },
+    {
+      "stage": 6,
+      "mu": 1.5625,
+      "old_records": 134,
+      "new_records": 134,
+      "every_old_history_record_bitwise_equal": true,
+      "earlier_stop_equal_or_first_changed_stage": true
+    },
+    {
+      "stage": 7,
+      "mu": 0.78125,
+      "old_records": 153,
+      "new_records": 153,
+      "every_old_history_record_bitwise_equal": true,
+      "earlier_stop_equal_or_first_changed_stage": true
+    },
+    {
+      "stage": 8,
+      "mu": 0.390625,
+      "old_records": 172,
+      "new_records": 172,
+      "every_old_history_record_bitwise_equal": true,
+      "earlier_stop_equal_or_first_changed_stage": true
+    },
+    {
+      "stage": 9,
+      "mu": 0.1953125,
+      "old_records": 188,
+      "new_records": 188,
+      "every_old_history_record_bitwise_equal": true,
+      "earlier_stop_equal_or_first_changed_stage": true
+    },
+    {
+      "stage": 10,
+      "mu": 0.09765625,
+      "old_records": 201,
+      "new_records": 201,
+      "every_old_history_record_bitwise_equal": true,
+      "earlier_stop_equal_or_first_changed_stage": true
+    },
+    {
+      "stage": 11,
+      "mu": 0.048828125,
+      "old_records": 216,
+      "new_records": 216,
+      "every_old_history_record_bitwise_equal": true,
+      "earlier_stop_equal_or_first_changed_stage": true
+    },
+    {
+      "stage": 12,
+      "mu": 0.0244140625,
+      "old_records": 203,
+      "new_records": 203,
+      "every_old_history_record_bitwise_equal": true,
+      "earlier_stop_equal_or_first_changed_stage": true
+    },
+    {
+      "stage": 13,
+      "mu": 0.01220703125,
+      "old_records": 170,
+      "new_records": 170,
+      "every_old_history_record_bitwise_equal": true,
+      "earlier_stop_equal_or_first_changed_stage": true
+    },
+    {
+      "stage": 14,
+      "mu": 0.006103515625,
+      "old_records": 144,
+      "new_records": 144,
+      "every_old_history_record_bitwise_equal": true,
+      "earlier_stop_equal_or_first_changed_stage": true
+    },
+    {
+      "stage": 15,
+      "mu": 0.0030517578125,
+      "old_records": 4000,
+      "new_records": 9207,
+      "every_old_history_record_bitwise_equal": true,
+      "earlier_stop_equal_or_first_changed_stage": true
+    }
+  ],
+  "all_native_old_prefix_records_equal": true,
+  "elapsed_seconds": 28.3154732,
+  "full_figure_execution_complete": false,
+  "full_figure_reproduction_pass": false,
+  "old_failed_bank_promoted": false,
+  "original4000": {
+    "all_actual_stage_stops_and_independent_physical_gradient_pass": false,
+    "complete_prescribed_mu_chain": true,
+    "domain_feasible": true,
+    "maximum_actual_stage_KKT": 0.00018300273171752786,
+    "maximum_used_record_count": 4000,
+    "metrics": {
+      "min_relaxed_snr": 0.07515432799034062,
+      "min_binary_snr": 0.07515432799034062
+    },
+    "final_state": {
+      "phi": {
+        "real": [
+          0.10060936087292803,
+          -0.10060935155426359,
+          0.8407188419881483,
+          -0.8407184291432459
+        ],
+        "imag": [
+          0.9949260055424931,
+          -0.9949260064848193,
+          0.5414719094524727,
+          -0.5414725504574662
+        ]
+      },
+      "theta": {
+        "real": -0.7069001250475465,
+        "imag": 0.7073133769467131
+      },
+      "X": [
+        [
+          0.7490215554010672,
+          0,
+          0.25097844459893276,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0.7490215550404449,
+          0,
+          0.2509784449595552
+        ]
+      ]
+    },
+    "full_reproduction_pass": false,
+    "stages": [
+      {
+        "mu": 100,
+        "stop": {
+          "reason": "gradient_tolerance",
+          "objective": 138.53265424416864,
+          "gradient_norm": 0.033423178352260885,
+          "projected_kkt_norm": 9.90690818933607e-07,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 975,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 9.906908189385458e-07,
+          "phi_residual_norm": 9.899855966816895e-07,
+          "theta_residual_norm": 3.7374016266990125e-08,
+          "X_residual_norm": 0,
+          "objective": 138.53265424416864,
+          "metrics": {
+            "min_relaxed_snr": 0.06347857389435287,
+            "min_binary_snr": 0.06347857389435287
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              -0.30219713557042244,
+              0.3022132727443147,
+              0.9865207097823543,
+              -0.9865120162133325
+            ],
+            "imag": [
+              0.9532454517347732,
+              -0.9532403357900728,
+              0.16363645428363496,
+              -0.16368885688007573
+            ]
+          },
+          "theta": {
+            "real": 0.05148349084240846,
+            "imag": 0.998673845742783
+          },
+          "X": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "mu": 50,
+        "stop": {
+          "reason": "gradient_tolerance",
+          "objective": 69.21794173423162,
+          "gradient_norm": 0.03341956158363633,
+          "projected_kkt_norm": 9.944292914894243e-07,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 43,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 9.944292914862177e-07,
+          "phi_residual_norm": 4.3696738441241665e-07,
+          "theta_residual_norm": 8.932799789122962e-07,
+          "X_residual_norm": 0,
+          "objective": 69.21794173423162,
+          "metrics": {
+            "min_relaxed_snr": 0.06348245399766181,
+            "min_binary_snr": 0.06348245399766181
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              -0.30217736509385273,
+              0.30218320176813596,
+              0.9865136509577183,
+              -0.9865105177024258
+            ],
+            "imag": [
+              0.9532517191303338,
+              -0.9532498689059223,
+              0.1636790043776948,
+              -0.16369788777651348
+            ]
+          },
+          "theta": {
+            "real": 0.05138319192558075,
+            "imag": 0.9986790112881813
+          },
+          "X": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "mu": 25,
+        "stop": {
+          "reason": "gradient_tolerance",
+          "objective": 34.56059379585242,
+          "gradient_norm": 0.033412481951982126,
+          "projected_kkt_norm": 9.757258058866768e-07,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 61,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 9.757258058823074e-07,
+          "phi_residual_norm": 1.2357404467934458e-07,
+          "theta_residual_norm": 9.6786894967566e-07,
+          "X_residual_norm": 0,
+          "objective": 34.56059379585242,
+          "metrics": {
+            "min_relaxed_snr": 0.06348822009171254,
+            "min_binary_snr": 0.06348822009171254
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              -0.30212706092604347,
+              0.3021284463444976,
+              0.9865034346096851,
+              -0.9865026908807748
+            ],
+            "imag": [
+              0.9532676639098754,
+              -0.9532672248165569,
+              0.16374056767733128,
+              -0.16374504842892385
+            ]
+          },
+          "theta": {
+            "real": 0.05113805562843393,
+            "imag": 0.9986915936697092
+          },
+          "X": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "mu": 12.5,
+        "stop": {
+          "reason": "gradient_tolerance",
+          "objective": 17.231936451024158,
+          "gradient_norm": 0.03339839289715044,
+          "projected_kkt_norm": 9.67572363462008e-07,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 78,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 9.67572363463968e-07,
+          "phi_residual_norm": 3.8813745848479925e-08,
+          "theta_residual_norm": 9.66793551732974e-07,
+          "X_residual_norm": 0,
+          "objective": 17.231936451024158,
+          "metrics": {
+            "min_relaxed_snr": 0.06349847042663617,
+            "min_binary_snr": 0.06349847042663617
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              -0.30202487327924243,
+              0.3020250838780498,
+              0.9864854604274147,
+              -0.9864853468490306
+            ],
+            "imag": [
+              0.9533000450648565,
+              -0.9532999783428389,
+              0.16384882167813042,
+              -0.16384950549863772
+            ]
+          },
+          "theta": {
+            "real": 0.05064261107828275,
+            "imag": 0.9987168397214368
+          },
+          "X": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "mu": 6.25,
+        "stop": {
+          "reason": "gradient_tolerance",
+          "objective": 8.567640991879275,
+          "gradient_norm": 0.03337037718679191,
+          "projected_kkt_norm": 9.671545757476261e-07,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 96,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 9.671545757486536e-07,
+          "phi_residual_norm": 1.4568415243198997e-07,
+          "theta_residual_norm": 9.561192923070481e-07,
+          "X_residual_norm": 0,
+          "objective": 8.567640991879275,
+          "metrics": {
+            "min_relaxed_snr": 0.0635186015366046,
+            "min_binary_snr": 0.0635186015366046
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              -0.30181998991681064,
+              0.3018199428788357,
+              0.9864501326132157,
+              -0.9864501581947727
+            ],
+            "imag": [
+              0.9533649320625425,
+              -0.9533649469540069,
+              0.16406137835386256,
+              -0.16406122453982847
+            ]
+          },
+          "theta": {
+            "real": 0.049649968959848155,
+            "imag": 0.9987666797517257
+          },
+          "X": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "mu": 3.125,
+        "stop": {
+          "reason": "gradient_tolerance",
+          "objective": 4.235559545411849,
+          "gradient_norm": 0.03331495532308973,
+          "projected_kkt_norm": 9.663005904048538e-07,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 115,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 9.66300590406637e-07,
+          "phi_residual_norm": 2.4142602427754775e-07,
+          "theta_residual_norm": 9.356550143197825e-07,
+          "X_residual_norm": 0,
+          "objective": 4.235559545411849,
+          "metrics": {
+            "min_relaxed_snr": 0.06355887692793984,
+            "min_binary_snr": 0.06355887692793984
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              -0.3014069616086652,
+              0.3014069683015698,
+              0.9863789875870503,
+              -0.9863789838668374
+            ],
+            "imag": [
+              0.9534955917537493,
+              -0.953495589638073,
+              0.16448857968486932,
+              -0.16448860199365056
+            ]
+          },
+          "theta": {
+            "real": 0.04766088125867811,
+            "imag": 0.9988635744673275
+          },
+          "X": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "mu": 1.5625,
+        "stop": {
+          "reason": "gradient_tolerance",
+          "objective": 2.06965080179843,
+          "gradient_norm": 0.03320652656828998,
+          "projected_kkt_norm": 9.838929586289797e-07,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 134,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 9.838929586296647e-07,
+          "phi_residual_norm": 3.1589616566475646e-07,
+          "theta_residual_norm": 9.318019996540788e-07,
+          "X_residual_norm": 0,
+          "objective": 2.06965080179843,
+          "metrics": {
+            "min_relaxed_snr": 0.06363970128804824,
+            "min_binary_snr": 0.06363970128804824
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              -0.3005648668372647,
+              0.3005648666419099,
+              0.986233350062925,
+              -0.9862333501763118
+            ],
+            "imag": [
+              0.9537613751998439,
+              -0.9537613752614073,
+              0.16535954530555652,
+              -0.16535954462929817
+            ]
+          },
+          "theta": {
+            "real": 0.04367059527301538,
+            "imag": 0.9990459844814454
+          },
+          "X": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "mu": 0.78125,
+        "stop": {
+          "reason": "gradient_tolerance",
+          "objective": 0.9869579421201076,
+          "gradient_norm": 0.032999384990246516,
+          "projected_kkt_norm": 9.97274212020985e-07,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 153,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 9.972742120240812e-07,
+          "phi_residual_norm": 3.586407296011045e-07,
+          "theta_residual_norm": 9.305550392316618e-07,
+          "X_residual_norm": 0,
+          "objective": 0.9869579421201076,
+          "metrics": {
+            "min_relaxed_snr": 0.06380253880527634,
+            "min_binary_snr": 0.06380253880527634
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              -0.2988129331396766,
+              0.29881293313679747,
+              0.9859280314943005,
+              -0.9859280314961562
+            ],
+            "imag": [
+              0.9543117053607082,
+              -0.9543117053616099,
+              0.1671703224671576,
+              -0.1671703224562141
+            ]
+          },
+          "theta": {
+            "real": 0.035642659378634936,
+            "imag": 0.9993645985487071
+          },
+          "X": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "mu": 0.390625,
+        "stop": {
+          "reason": "gradient_tolerance",
+          "objective": 0.4461239786256075,
+          "gradient_norm": 0.03262419895371794,
+          "projected_kkt_norm": 9.732088013174319e-07,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 172,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 9.732088013191522e-07,
+          "phi_residual_norm": 3.452901725092097e-07,
+          "theta_residual_norm": 9.098956356273072e-07,
+          "X_residual_norm": 0,
+          "objective": 0.4461239786256075,
+          "metrics": {
+            "min_relaxed_snr": 0.06413249465628101,
+            "min_binary_snr": 0.06413249465628101
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              -0.2950387824580575,
+              0.2950387824580421,
+              0.9852596075324844,
+              -0.9852596075324964
+            ],
+            "imag": [
+              0.9554852781941056,
+              -0.9554852781941103,
+              0.17106579367288766,
+              -0.1710657936728182
+            ]
+          },
+          "theta": {
+            "real": 0.01942334287271526,
+            "imag": 0.99981134908124
+          },
+          "X": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "mu": 0.1953125,
+        "stop": {
+          "reason": "gradient_tolerance",
+          "objective": 0.17668420571140914,
+          "gradient_norm": 0.03202745864704831,
+          "projected_kkt_norm": 9.655005352982567e-07,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 188,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 9.655005352944162e-07,
+          "phi_residual_norm": 2.3603699070581982e-07,
+          "theta_residual_norm": 9.362039428844257e-07,
+          "X_residual_norm": 0,
+          "objective": 0.1766842057114091,
+          "metrics": {
+            "min_relaxed_snr": 0.06480450785559363,
+            "min_binary_snr": 0.06480450785559363
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              -0.2864624627436233,
+              0.28646246274362336,
+              0.9836866832075744,
+              -0.9836866832075744
+            ],
+            "imag": [
+              0.9580914661131568,
+              -0.9580914661131568,
+              0.17989027010953462,
+              -0.17989027010953443
+            ]
+          },
+          "theta": {
+            "real": -0.013442777437548993,
+            "imag": 0.9999096417850787
+          },
+          "X": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "mu": 0.09765625,
+        "stop": {
+          "reason": "gradient_tolerance",
+          "objective": 0.043696310243064224,
+          "gradient_norm": 0.03136636220762118,
+          "projected_kkt_norm": 9.978881562994382e-07,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 201,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 9.978881562980212e-07,
+          "phi_residual_norm": 1.7029211913368325e-07,
+          "theta_residual_norm": 9.832504089197336e-07,
+          "X_residual_norm": 0,
+          "objective": 0.04369631024306424,
+          "metrics": {
+            "min_relaxed_snr": 0.06615006846357599,
+            "min_binary_snr": 0.06615006846357599
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              -0.2659838861482873,
+              0.2659838861482873,
+              0.9796305512137462,
+              -0.9796305512137462
+            ],
+            "imag": [
+              0.9639774750010787,
+              -0.9639774750010787,
+              0.20080832435098875,
+              -0.2008083243509887
+            ]
+          },
+          "theta": {
+            "real": -0.07895755266633991,
+            "imag": 0.9968779789306925
+          },
+          "X": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "mu": 0.048828125,
+        "stop": {
+          "reason": "gradient_tolerance",
+          "objective": -0.020274967131536405,
+          "gradient_norm": 0.031218626977992717,
+          "projected_kkt_norm": 9.705982414680653e-07,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 216,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 9.70598241466857e-07,
+          "phi_residual_norm": 6.864747317701264e-07,
+          "theta_residual_norm": 6.861584284840405e-07,
+          "X_residual_norm": 0,
+          "objective": -0.02027496713153639,
+          "metrics": {
+            "min_relaxed_snr": 0.06850335326678982,
+            "min_binary_snr": 0.06850335326678982
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              -0.22029815704027883,
+              0.22029815704027883,
+              0.9690885033901309,
+              -0.9690885033901309
+            ],
+            "imag": [
+              0.9754325819884512,
+              -0.9754325819884514,
+              0.24671334093858074,
+              -0.24671334093858072
+            ]
+          },
+          "theta": {
+            "real": -0.19549661701195395,
+            "imag": 0.9807043758120392
+          },
+          "X": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "mu": 0.0244140625,
+        "stop": {
+          "reason": "gradient_tolerance",
+          "objective": -0.0498343260378194,
+          "gradient_norm": 0.03173781314303996,
+          "projected_kkt_norm": 9.672571187755731e-07,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 203,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 9.67257118781303e-07,
+          "phi_residual_norm": 9.007478341905017e-07,
+          "theta_residual_norm": 3.524764857890919e-07,
+          "X_residual_norm": 0,
+          "objective": -0.0498343260378194,
+          "metrics": {
+            "min_relaxed_snr": 0.07124323719568111,
+            "min_binary_snr": 0.07124323719568111
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              -0.1489062958468979,
+              0.1489062958468978,
+              0.9486217059147921,
+              -0.9486217059147921
+            ],
+            "imag": [
+              0.988851310894189,
+              -0.988851310894189,
+              0.3164124824770823,
+              -0.3164124824770822
+            ]
+          },
+          "theta": {
+            "real": -0.34359846638364405,
+            "imag": 0.9391166561715365
+          },
+          "X": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "mu": 0.01220703125,
+        "stop": {
+          "reason": "gradient_tolerance",
+          "objective": -0.06323777000591743,
+          "gradient_norm": 0.03249705131388673,
+          "projected_kkt_norm": 9.931089162160548e-07,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 170,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 9.931089162209219e-07,
+          "phi_residual_norm": 9.853101628532535e-07,
+          "theta_residual_norm": 1.242143407807226e-07,
+          "X_residual_norm": 0,
+          "objective": -0.06323777000591743,
+          "metrics": {
+            "min_relaxed_snr": 0.07314395677237412,
+            "min_binary_snr": 0.07314395677237412
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              -0.07965341508992367,
+              0.07965341508992364,
+              0.9242730356116445,
+              -0.9242730356116445
+            ],
+            "imag": [
+              0.9968226188567915,
+              -0.9968226188567915,
+              0.381732046914109,
+              -0.38173204691410895
+            ]
+          },
+          "theta": {
+            "real": -0.4668877828208643,
+            "imag": 0.8843165712868993
+          },
+          "X": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "mu": 0.006103515625,
+        "stop": {
+          "reason": "gradient_tolerance",
+          "objective": -0.06938872375330635,
+          "gradient_norm": 0.03327479506992091,
+          "projected_kkt_norm": 9.799650034910558e-07,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 144,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 9.799650034987444e-07,
+          "phi_residual_norm": 8.029240141842144e-07,
+          "theta_residual_norm": 5.61822423483258e-07,
+          "X_residual_norm": 0,
+          "objective": -0.06938872375330632,
+          "metrics": {
+            "min_relaxed_snr": 0.07411860124364265,
+            "min_binary_snr": 0.07411860124364265
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              -0.029416941768230228,
+              0.029416941768230107,
+              0.9039038660937228,
+              -0.9039038660937228
+            ],
+            "imag": [
+              0.9995672281227533,
+              -0.9995672281227533,
+              0.42773566704311844,
+              -0.4277356670431182
+            ]
+          },
+          "theta": {
+            "real": -0.5472554476226833,
+            "imag": 0.836965635523524
+          },
+          "X": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "mu": 0.0030517578125,
+        "stop": {
+          "reason": "iteration_cap",
+          "objective": -0.07229724063931448,
+          "gradient_norm": 0.033741483272576055,
+          "projected_kkt_norm": 0.00012999261729047646,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 4000,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 0.00012999261729048774,
+          "phi_residual_norm": 1.0834041755771389e-05,
+          "theta_residual_norm": 3.543236936169e-07,
+          "X_residual_norm": 0.0001295398724099478,
+          "objective": -0.07229724063931449,
+          "metrics": {
+            "min_relaxed_snr": 0.07462295487051397,
+            "min_binary_snr": 0.07462295487051397
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              0.013191647283029639,
+              -0.013191647283029443,
+              0.8848616205430252,
+              -0.8848616205430252
+            ],
+            "imag": [
+              0.9999129864352998,
+              -0.9999129864352998,
+              0.4658539604747087,
+              -0.4658539604747088
+            ]
+          },
+          "theta": {
+            "real": -0.5924128322935185,
+            "imag": 0.8056345549527848
+          },
+          "X": [
+            [
+              0.1582579289829663,
+              0,
+              0.8417420710170336,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0.15825792898296345,
+              0,
+              0.8417420710170365
+            ]
+          ]
+        }
+      },
+      {
+        "mu": 0.00152587890625,
+        "stop": {
+          "reason": "iteration_cap",
+          "objective": -0.07407078315967458,
+          "gradient_norm": 0.03594401682672576,
+          "projected_kkt_norm": 0.00018300273171752786,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 4000,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 0.0001830027317175257,
+          "phi_residual_norm": 3.1044410695083016e-06,
+          "theta_residual_norm": 2.0866373153106606e-05,
+          "X_residual_norm": 0.0001817827184667397,
+          "objective": -0.07407078315967458,
+          "metrics": {
+            "min_relaxed_snr": 0.07515432799034062,
+            "min_binary_snr": 0.07515432799034062
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              0.10060936087292803,
+              -0.10060935155426359,
+              0.8407188419881483,
+              -0.8407184291432459
+            ],
+            "imag": [
+              0.9949260055424931,
+              -0.9949260064848193,
+              0.5414719094524727,
+              -0.5414725504574662
+            ]
+          },
+          "theta": {
+            "real": -0.7069001250475465,
+            "imag": 0.7073133769467131
+          },
+          "X": [
+            [
+              0.7490215554010672,
+              0,
+              0.25097844459893276,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0.7490215550404449,
+              0,
+              0.2509784449595552
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "extended100000": {
+    "all_actual_stage_stops_and_independent_physical_gradient_pass": true,
+    "complete_prescribed_mu_chain": true,
+    "domain_feasible": true,
+    "maximum_actual_stage_KKT": 9.993683155877433e-07,
+    "maximum_used_record_count": 9207,
+    "metrics": {
+      "min_relaxed_snr": 0.0751655387780349,
+      "min_binary_snr": 0.0751655387780349
+    },
+    "final_state": {
+      "phi": {
+        "real": [
+          0.10175908901321504,
+          -0.1017590890292394,
+          0.8400922981853826,
+          -0.8400923303241496
+        ],
+        "imag": [
+          0.9948090710298136,
+          -0.9948090710281745,
+          0.5424434814149787,
+          -0.5424434316410698
+        ]
+      },
+      "theta": {
+        "real": -0.7242033810453947,
+        "imag": 0.6895864433719815
+      },
+      "X": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ]
+      ]
+    },
+    "full_reproduction_pass": false,
+    "stages": [
+      {
+        "mu": 100,
+        "stop": {
+          "reason": "gradient_tolerance",
+          "objective": 138.53265424416864,
+          "gradient_norm": 0.033423178352260885,
+          "projected_kkt_norm": 9.90690818933607e-07,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 975,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 9.906908189385458e-07,
+          "phi_residual_norm": 9.899855966816895e-07,
+          "theta_residual_norm": 3.7374016266990125e-08,
+          "X_residual_norm": 0,
+          "objective": 138.53265424416864,
+          "metrics": {
+            "min_relaxed_snr": 0.06347857389435287,
+            "min_binary_snr": 0.06347857389435287
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              -0.30219713557042244,
+              0.3022132727443147,
+              0.9865207097823543,
+              -0.9865120162133325
+            ],
+            "imag": [
+              0.9532454517347732,
+              -0.9532403357900728,
+              0.16363645428363496,
+              -0.16368885688007573
+            ]
+          },
+          "theta": {
+            "real": 0.05148349084240846,
+            "imag": 0.998673845742783
+          },
+          "X": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "mu": 50,
+        "stop": {
+          "reason": "gradient_tolerance",
+          "objective": 69.21794173423162,
+          "gradient_norm": 0.03341956158363633,
+          "projected_kkt_norm": 9.944292914894243e-07,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 43,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 9.944292914862177e-07,
+          "phi_residual_norm": 4.3696738441241665e-07,
+          "theta_residual_norm": 8.932799789122962e-07,
+          "X_residual_norm": 0,
+          "objective": 69.21794173423162,
+          "metrics": {
+            "min_relaxed_snr": 0.06348245399766181,
+            "min_binary_snr": 0.06348245399766181
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              -0.30217736509385273,
+              0.30218320176813596,
+              0.9865136509577183,
+              -0.9865105177024258
+            ],
+            "imag": [
+              0.9532517191303338,
+              -0.9532498689059223,
+              0.1636790043776948,
+              -0.16369788777651348
+            ]
+          },
+          "theta": {
+            "real": 0.05138319192558075,
+            "imag": 0.9986790112881813
+          },
+          "X": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "mu": 25,
+        "stop": {
+          "reason": "gradient_tolerance",
+          "objective": 34.56059379585242,
+          "gradient_norm": 0.033412481951982126,
+          "projected_kkt_norm": 9.757258058866768e-07,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 61,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 9.757258058823074e-07,
+          "phi_residual_norm": 1.2357404467934458e-07,
+          "theta_residual_norm": 9.6786894967566e-07,
+          "X_residual_norm": 0,
+          "objective": 34.56059379585242,
+          "metrics": {
+            "min_relaxed_snr": 0.06348822009171254,
+            "min_binary_snr": 0.06348822009171254
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              -0.30212706092604347,
+              0.3021284463444976,
+              0.9865034346096851,
+              -0.9865026908807748
+            ],
+            "imag": [
+              0.9532676639098754,
+              -0.9532672248165569,
+              0.16374056767733128,
+              -0.16374504842892385
+            ]
+          },
+          "theta": {
+            "real": 0.05113805562843393,
+            "imag": 0.9986915936697092
+          },
+          "X": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "mu": 12.5,
+        "stop": {
+          "reason": "gradient_tolerance",
+          "objective": 17.231936451024158,
+          "gradient_norm": 0.03339839289715044,
+          "projected_kkt_norm": 9.67572363462008e-07,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 78,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 9.67572363463968e-07,
+          "phi_residual_norm": 3.8813745848479925e-08,
+          "theta_residual_norm": 9.66793551732974e-07,
+          "X_residual_norm": 0,
+          "objective": 17.231936451024158,
+          "metrics": {
+            "min_relaxed_snr": 0.06349847042663617,
+            "min_binary_snr": 0.06349847042663617
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              -0.30202487327924243,
+              0.3020250838780498,
+              0.9864854604274147,
+              -0.9864853468490306
+            ],
+            "imag": [
+              0.9533000450648565,
+              -0.9532999783428389,
+              0.16384882167813042,
+              -0.16384950549863772
+            ]
+          },
+          "theta": {
+            "real": 0.05064261107828275,
+            "imag": 0.9987168397214368
+          },
+          "X": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "mu": 6.25,
+        "stop": {
+          "reason": "gradient_tolerance",
+          "objective": 8.567640991879275,
+          "gradient_norm": 0.03337037718679191,
+          "projected_kkt_norm": 9.671545757476261e-07,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 96,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 9.671545757486536e-07,
+          "phi_residual_norm": 1.4568415243198997e-07,
+          "theta_residual_norm": 9.561192923070481e-07,
+          "X_residual_norm": 0,
+          "objective": 8.567640991879275,
+          "metrics": {
+            "min_relaxed_snr": 0.0635186015366046,
+            "min_binary_snr": 0.0635186015366046
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              -0.30181998991681064,
+              0.3018199428788357,
+              0.9864501326132157,
+              -0.9864501581947727
+            ],
+            "imag": [
+              0.9533649320625425,
+              -0.9533649469540069,
+              0.16406137835386256,
+              -0.16406122453982847
+            ]
+          },
+          "theta": {
+            "real": 0.049649968959848155,
+            "imag": 0.9987666797517257
+          },
+          "X": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "mu": 3.125,
+        "stop": {
+          "reason": "gradient_tolerance",
+          "objective": 4.235559545411849,
+          "gradient_norm": 0.03331495532308973,
+          "projected_kkt_norm": 9.663005904048538e-07,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 115,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 9.66300590406637e-07,
+          "phi_residual_norm": 2.4142602427754775e-07,
+          "theta_residual_norm": 9.356550143197825e-07,
+          "X_residual_norm": 0,
+          "objective": 4.235559545411849,
+          "metrics": {
+            "min_relaxed_snr": 0.06355887692793984,
+            "min_binary_snr": 0.06355887692793984
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              -0.3014069616086652,
+              0.3014069683015698,
+              0.9863789875870503,
+              -0.9863789838668374
+            ],
+            "imag": [
+              0.9534955917537493,
+              -0.953495589638073,
+              0.16448857968486932,
+              -0.16448860199365056
+            ]
+          },
+          "theta": {
+            "real": 0.04766088125867811,
+            "imag": 0.9988635744673275
+          },
+          "X": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "mu": 1.5625,
+        "stop": {
+          "reason": "gradient_tolerance",
+          "objective": 2.06965080179843,
+          "gradient_norm": 0.03320652656828998,
+          "projected_kkt_norm": 9.838929586289797e-07,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 134,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 9.838929586296647e-07,
+          "phi_residual_norm": 3.1589616566475646e-07,
+          "theta_residual_norm": 9.318019996540788e-07,
+          "X_residual_norm": 0,
+          "objective": 2.06965080179843,
+          "metrics": {
+            "min_relaxed_snr": 0.06363970128804824,
+            "min_binary_snr": 0.06363970128804824
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              -0.3005648668372647,
+              0.3005648666419099,
+              0.986233350062925,
+              -0.9862333501763118
+            ],
+            "imag": [
+              0.9537613751998439,
+              -0.9537613752614073,
+              0.16535954530555652,
+              -0.16535954462929817
+            ]
+          },
+          "theta": {
+            "real": 0.04367059527301538,
+            "imag": 0.9990459844814454
+          },
+          "X": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "mu": 0.78125,
+        "stop": {
+          "reason": "gradient_tolerance",
+          "objective": 0.9869579421201076,
+          "gradient_norm": 0.032999384990246516,
+          "projected_kkt_norm": 9.97274212020985e-07,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 153,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 9.972742120240812e-07,
+          "phi_residual_norm": 3.586407296011045e-07,
+          "theta_residual_norm": 9.305550392316618e-07,
+          "X_residual_norm": 0,
+          "objective": 0.9869579421201076,
+          "metrics": {
+            "min_relaxed_snr": 0.06380253880527634,
+            "min_binary_snr": 0.06380253880527634
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              -0.2988129331396766,
+              0.29881293313679747,
+              0.9859280314943005,
+              -0.9859280314961562
+            ],
+            "imag": [
+              0.9543117053607082,
+              -0.9543117053616099,
+              0.1671703224671576,
+              -0.1671703224562141
+            ]
+          },
+          "theta": {
+            "real": 0.035642659378634936,
+            "imag": 0.9993645985487071
+          },
+          "X": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "mu": 0.390625,
+        "stop": {
+          "reason": "gradient_tolerance",
+          "objective": 0.4461239786256075,
+          "gradient_norm": 0.03262419895371794,
+          "projected_kkt_norm": 9.732088013174319e-07,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 172,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 9.732088013191522e-07,
+          "phi_residual_norm": 3.452901725092097e-07,
+          "theta_residual_norm": 9.098956356273072e-07,
+          "X_residual_norm": 0,
+          "objective": 0.4461239786256075,
+          "metrics": {
+            "min_relaxed_snr": 0.06413249465628101,
+            "min_binary_snr": 0.06413249465628101
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              -0.2950387824580575,
+              0.2950387824580421,
+              0.9852596075324844,
+              -0.9852596075324964
+            ],
+            "imag": [
+              0.9554852781941056,
+              -0.9554852781941103,
+              0.17106579367288766,
+              -0.1710657936728182
+            ]
+          },
+          "theta": {
+            "real": 0.01942334287271526,
+            "imag": 0.99981134908124
+          },
+          "X": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "mu": 0.1953125,
+        "stop": {
+          "reason": "gradient_tolerance",
+          "objective": 0.17668420571140914,
+          "gradient_norm": 0.03202745864704831,
+          "projected_kkt_norm": 9.655005352982567e-07,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 188,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 9.655005352944162e-07,
+          "phi_residual_norm": 2.3603699070581982e-07,
+          "theta_residual_norm": 9.362039428844257e-07,
+          "X_residual_norm": 0,
+          "objective": 0.1766842057114091,
+          "metrics": {
+            "min_relaxed_snr": 0.06480450785559363,
+            "min_binary_snr": 0.06480450785559363
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              -0.2864624627436233,
+              0.28646246274362336,
+              0.9836866832075744,
+              -0.9836866832075744
+            ],
+            "imag": [
+              0.9580914661131568,
+              -0.9580914661131568,
+              0.17989027010953462,
+              -0.17989027010953443
+            ]
+          },
+          "theta": {
+            "real": -0.013442777437548993,
+            "imag": 0.9999096417850787
+          },
+          "X": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "mu": 0.09765625,
+        "stop": {
+          "reason": "gradient_tolerance",
+          "objective": 0.043696310243064224,
+          "gradient_norm": 0.03136636220762118,
+          "projected_kkt_norm": 9.978881562994382e-07,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 201,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 9.978881562980212e-07,
+          "phi_residual_norm": 1.7029211913368325e-07,
+          "theta_residual_norm": 9.832504089197336e-07,
+          "X_residual_norm": 0,
+          "objective": 0.04369631024306424,
+          "metrics": {
+            "min_relaxed_snr": 0.06615006846357599,
+            "min_binary_snr": 0.06615006846357599
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              -0.2659838861482873,
+              0.2659838861482873,
+              0.9796305512137462,
+              -0.9796305512137462
+            ],
+            "imag": [
+              0.9639774750010787,
+              -0.9639774750010787,
+              0.20080832435098875,
+              -0.2008083243509887
+            ]
+          },
+          "theta": {
+            "real": -0.07895755266633991,
+            "imag": 0.9968779789306925
+          },
+          "X": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "mu": 0.048828125,
+        "stop": {
+          "reason": "gradient_tolerance",
+          "objective": -0.020274967131536405,
+          "gradient_norm": 0.031218626977992717,
+          "projected_kkt_norm": 9.705982414680653e-07,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 216,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 9.70598241466857e-07,
+          "phi_residual_norm": 6.864747317701264e-07,
+          "theta_residual_norm": 6.861584284840405e-07,
+          "X_residual_norm": 0,
+          "objective": -0.02027496713153639,
+          "metrics": {
+            "min_relaxed_snr": 0.06850335326678982,
+            "min_binary_snr": 0.06850335326678982
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              -0.22029815704027883,
+              0.22029815704027883,
+              0.9690885033901309,
+              -0.9690885033901309
+            ],
+            "imag": [
+              0.9754325819884512,
+              -0.9754325819884514,
+              0.24671334093858074,
+              -0.24671334093858072
+            ]
+          },
+          "theta": {
+            "real": -0.19549661701195395,
+            "imag": 0.9807043758120392
+          },
+          "X": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "mu": 0.0244140625,
+        "stop": {
+          "reason": "gradient_tolerance",
+          "objective": -0.0498343260378194,
+          "gradient_norm": 0.03173781314303996,
+          "projected_kkt_norm": 9.672571187755731e-07,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 203,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 9.67257118781303e-07,
+          "phi_residual_norm": 9.007478341905017e-07,
+          "theta_residual_norm": 3.524764857890919e-07,
+          "X_residual_norm": 0,
+          "objective": -0.0498343260378194,
+          "metrics": {
+            "min_relaxed_snr": 0.07124323719568111,
+            "min_binary_snr": 0.07124323719568111
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              -0.1489062958468979,
+              0.1489062958468978,
+              0.9486217059147921,
+              -0.9486217059147921
+            ],
+            "imag": [
+              0.988851310894189,
+              -0.988851310894189,
+              0.3164124824770823,
+              -0.3164124824770822
+            ]
+          },
+          "theta": {
+            "real": -0.34359846638364405,
+            "imag": 0.9391166561715365
+          },
+          "X": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "mu": 0.01220703125,
+        "stop": {
+          "reason": "gradient_tolerance",
+          "objective": -0.06323777000591743,
+          "gradient_norm": 0.03249705131388673,
+          "projected_kkt_norm": 9.931089162160548e-07,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 170,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 9.931089162209219e-07,
+          "phi_residual_norm": 9.853101628532535e-07,
+          "theta_residual_norm": 1.242143407807226e-07,
+          "X_residual_norm": 0,
+          "objective": -0.06323777000591743,
+          "metrics": {
+            "min_relaxed_snr": 0.07314395677237412,
+            "min_binary_snr": 0.07314395677237412
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              -0.07965341508992367,
+              0.07965341508992364,
+              0.9242730356116445,
+              -0.9242730356116445
+            ],
+            "imag": [
+              0.9968226188567915,
+              -0.9968226188567915,
+              0.381732046914109,
+              -0.38173204691410895
+            ]
+          },
+          "theta": {
+            "real": -0.4668877828208643,
+            "imag": 0.8843165712868993
+          },
+          "X": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "mu": 0.006103515625,
+        "stop": {
+          "reason": "gradient_tolerance",
+          "objective": -0.06938872375330635,
+          "gradient_norm": 0.03327479506992091,
+          "projected_kkt_norm": 9.799650034910558e-07,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 144,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 9.799650034987444e-07,
+          "phi_residual_norm": 8.029240141842144e-07,
+          "theta_residual_norm": 5.61822423483258e-07,
+          "X_residual_norm": 0,
+          "objective": -0.06938872375330632,
+          "metrics": {
+            "min_relaxed_snr": 0.07411860124364265,
+            "min_binary_snr": 0.07411860124364265
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              -0.029416941768230228,
+              0.029416941768230107,
+              0.9039038660937228,
+              -0.9039038660937228
+            ],
+            "imag": [
+              0.9995672281227533,
+              -0.9995672281227533,
+              0.42773566704311844,
+              -0.4277356670431182
+            ]
+          },
+          "theta": {
+            "real": -0.5472554476226833,
+            "imag": 0.836965635523524
+          },
+          "X": [
+            [
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "mu": 0.0030517578125,
+        "stop": {
+          "reason": "gradient_tolerance",
+          "objective": -0.07297758549548315,
+          "gradient_norm": 0.035975956622071995,
+          "projected_kkt_norm": 9.993683155877433e-07,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 9207,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 9.99368315587845e-07,
+          "phi_residual_norm": 7.546950775137299e-07,
+          "theta_residual_norm": 6.551124866596817e-07,
+          "X_residual_norm": 0,
+          "objective": -0.07297758549548317,
+          "metrics": {
+            "min_relaxed_snr": 0.07514888361471027,
+            "min_binary_snr": 0.07514888361471027
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              0.11033302243185134,
+              -0.11033302243185138,
+              0.8353838794021873,
+              -0.8353838794021871
+            ],
+            "imag": [
+              0.9938946745812922,
+              -0.9938946745812922,
+              0.5496669664760218,
+              -0.549666966476022
+            ]
+          },
+          "theta": {
+            "real": -0.7115400164879905,
+            "imag": 0.7026455756185122
+          },
+          "X": [
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "mu": 0.00152587890625,
+        "stop": {
+          "reason": "gradient_tolerance",
+          "objective": -0.07410626542938031,
+          "gradient_norm": 0.03653175009457075,
+          "projected_kkt_norm": 9.92320182678463e-07,
+          "stationarity_measure": "projected_simplex_KKT"
+        },
+        "actual_record_count": 202,
+        "independent_physical_gradient": {
+          "projected_kkt_norm": 9.923201828186397e-07,
+          "phi_residual_norm": 2.3341182543372854e-07,
+          "theta_residual_norm": 9.644782345791497e-07,
+          "X_residual_norm": 0,
+          "objective": -0.07410626542938033,
+          "metrics": {
+            "min_relaxed_snr": 0.0751655387780349,
+            "min_binary_snr": 0.0751655387780349
+          }
+        },
+        "state": {
+          "phi": {
+            "real": [
+              0.10175908901321504,
+              -0.1017590890292394,
+              0.8400922981853826,
+              -0.8400923303241496
+            ],
+            "imag": [
+              0.9948090710298136,
+              -0.9948090710281745,
+              0.5424434814149787,
+              -0.5424434316410698
+            ]
+          },
+          "theta": {
+            "real": -0.7242033810453947,
+            "imag": 0.6895864433719815
+          },
+          "X": [
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "publication_copy_kind": "explicitly compacted and workspace-prefix-redacted ACTUAL runtime receipt",
+  "original_full_history_receipt_sha256": "05af5d2b5013ae5a30f4bf2da3c873f2b88e75b2710033c01cf3aff204848f9e",
+  "compact_transform": "inner histories omitted; actual prefix comparison results/counts/stops/states and all source hashes preserved",
+  "no_new_execution_claimed": true
+}

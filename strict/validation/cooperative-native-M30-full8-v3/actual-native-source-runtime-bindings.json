@@ -1,0 +1,615 @@
+{
+  "scope": "actual_begin_end_scientific_config_and_selected_CVX_SDPT3_MAT_MEX_identity_rechecked",
+  "actual_source_interval_records_match": true,
+  "current_actual_hashes_match": true,
+  "unique_actual_source_and_runtime_bindings": [
+    {
+      "filename": "strict_satcom_core.m",
+      "sha256": "b2cc5284f0c3a5513572f5987e69d2c0a8977c232e278a820c0ccf5bd8de3c80"
+    },
+    {
+      "filename": "strict_satcom_core_v3.m",
+      "sha256": "b056ebe5da8bc45bfe663eed8cfa54b564663143edb1bd579d6aba35a5069c73"
+    },
+    {
+      "filename": "strict_satcom_mr_qt_factored_v3.m",
+      "sha256": "765cd5905f72e424542bfc5433b05eff540b3d87917fd12299133b8784fe0d7f"
+    },
+    {
+      "filename": "strict_satcom_models.m",
+      "sha256": "d5e6d4901dbb15aed78e3bed683de3b8f7db81113b6ca2edc58233da41d16746"
+    },
+    {
+      "filename": "strict_satcom_scenario.m",
+      "sha256": "d441703d0f05762e779516d146caffafb8d6b7baf63b5d985041c6810bd857c4"
+    },
+    {
+      "filename": "strict_satcom_algorithms_v3.m",
+      "sha256": "c5e5de256fa713fcf77e9a749c1f618c5e4372ba0b540e9813f55b7c2b1184b9"
+    },
+    {
+      "filename": "strict_satcom_increments_v2.m",
+      "sha256": "4a66db30ba0864017181297f2a017874d4938101fc8caccc5f507144f3000ec5"
+    },
+    {
+      "filename": "strict_satcom_qt_guard_v3.m",
+      "sha256": "09a2cffb0d8a90e20dddad504df9feebbdb916fe37e355e1150399382038c45b"
+    },
+    {
+      "filename": "strict_satcom_v3_hashes.m",
+      "sha256": "91732e67e676ea4071aeab382d3701096dd0965e9072d9254e9565fae9a8e9c2"
+    },
+    {
+      "filename": "run_strict_cooperative_v3.m",
+      "sha256": "c1fa9a6cd80454717ba47f8306b5c859577de8661990c62207fb1daa82fc9b64"
+    },
+    {
+      "filename": "case-00-configuration.json",
+      "sha256": "a8409a7a74515b22d5f046cf9247ced180384f4b69dcb76b03ec09f6f2755f4a"
+    },
+    {
+      "filename": "cvx_begin.m",
+      "sha256": "48520362f711704d85b9e9377c5ac1f1ccef449952528381121d17c63c2210ad"
+    },
+    {
+      "filename": "cvx_end.m",
+      "sha256": "d0a3fd444b1706d22f7df0b4086932bb78987fd1519e3e2f74cb4487055366b9"
+    },
+    {
+      "filename": "cvx_solver.m",
+      "sha256": "1dadc97e348770eeb54b4bd377e73c45c5f6dc9909f61530c219e9cba2335f81"
+    },
+    {
+      "filename": "cvx_precision.m",
+      "sha256": "ca0b329b07eb8b590ef185706ea6209ba91a54459408e426610181f450f1875e"
+    },
+    {
+      "filename": "run_cooperative_v3_native_checked_work.m",
+      "sha256": "42b5de8d949fd11f575f482dea9f45c6c479b4dcc1a52305cfd1d7b940551b0c"
+    },
+    {
+      "filename": "sdpt3.m",
+      "sha256": "921bd02e82d050bd2e0a458ff3658b1a0c924064ef2396d11845044a608b50a0"
+    },
+    {
+      "filename": "cvx_sdpt3.m",
+      "sha256": "c0fce2601a79a45ed2374ca579608132718a610a2aafe4a84ccd54ba8c82a0bf"
+    },
+    {
+      "filename": "install_sdpt3.m",
+      "sha256": "318742357d1c8582efe5a87a12d1ccb6e0c6ff68109811fba30d042cf120527e"
+    },
+    {
+      "filename": "Asum.m",
+      "sha256": "d1ad9d10d11f22483f4d51eb0bd23939e03f9ae11e9ae841375d97bb8c71c4b7"
+    },
+    {
+      "filename": "Doptdesign.m",
+      "sha256": "836bb21dc6171945ae44cb2b88ed635e7bfa76ba9ed5f6a60f5bf0f7c111856f"
+    },
+    {
+      "filename": "ToeplitzApprox.m",
+      "sha256": "7f7d5630d435c3b0c100d5272be1813328458fc969b781767320b9ba5314dae5"
+    },
+    {
+      "filename": "ToeplitzApproxSQQ.m",
+      "sha256": "1d7158e6dd2d8c996433b6517f83650909cc15f92eb959cd5563dd9a63e7a506"
+    },
+    {
+      "filename": "adjmat.m",
+      "sha256": "baa0377be427f48fe926365b5b33b1e3b627f2d3e3700da0d2c951aac8f5d7a6"
+    },
+    {
+      "filename": "cheby0.m",
+      "sha256": "fc93a3f9e777f3d45acafa1fff8c0a5e60cdee032febb0b9354ccc8a631cd592"
+    },
+    {
+      "filename": "chebyinf.m",
+      "sha256": "e07e4c0f177caa9b5f92802ba687ce946f2aaf31f21584c1151aab3d2f0eb883"
+    },
+    {
+      "filename": "chebymat.m",
+      "sha256": "8734882a63177179effe9df6f22c35dfb554d0637e2513f5218183d93c763e7e"
+    },
+    {
+      "filename": "control.m",
+      "sha256": "0a1f7b1238f4c34fe6b9860b6ac06d2ec647bea9dc35e5ecb0a5ce7727b262db"
+    },
+    {
+      "filename": "corrmat.m",
+      "sha256": "62c85328c4333cfc787b2e64eb74f3ab0181fe6cbad689d0bcde3c0e690502db"
+    },
+    {
+      "filename": "dwd.m",
+      "sha256": "9cc258c691898cc75e408544b8362303c93d13f2e80c32c16d1c5f5057c47ac1"
+    },
+    {
+      "filename": "etp.m",
+      "sha256": "ae7ed5e1bc22a0540595352791567495057e8fe21bf5e131c90019727ac17a67"
+    },
+    {
+      "filename": "geometric_mean.m",
+      "sha256": "b53561fec1f74377ddad12e9e68ff00e341d1b3e1aed98af96733d57a8e10b78"
+    },
+    {
+      "filename": "gpp.m",
+      "sha256": "d307315a117a6ad57350e369bc05b35844be868c35cd2d0c3eb0e808a4982372"
+    },
+    {
+      "filename": "gppschur.m",
+      "sha256": "96c8490f9125904fe3951b9b50d12f14492807ec410480e0443e8047c239fa80"
+    },
+    {
+      "filename": "igmres.m",
+      "sha256": "35a1f25fab26c4b5b08ef0d4dcc19b498ca8e901ee24d6ce4fb41efc5f8d9b74"
+    },
+    {
+      "filename": "lmiexamp1.m",
+      "sha256": "131fbe64450431942e6abb4aec73ff865dd0c21827b682acf7e7cf2c767c69ae"
+    },
+    {
+      "filename": "lmiexamp2.m",
+      "sha256": "ae7abc7a1ee7427f79bd73fd9a4900f47f495fb36df83f74f14933a9d269ab27"
+    },
+    {
+      "filename": "lmiexamp3.m",
+      "sha256": "686f579e2c2851279d84e6ffa242ef6fcf7ce1737b56b821b354ca5756d50b45"
+    },
+    {
+      "filename": "lmifun.m",
+      "sha256": "42260ef2431dceb59b8199c4cfc3b56333e43fdc6d582a36412e063109055daa"
+    },
+    {
+      "filename": "lmifun2.m",
+      "sha256": "313c7c9a8071db13c93361bdae4501ca40d7b97a7915b9d68cf31629eca97268"
+    },
+    {
+      "filename": "logcheby.m",
+      "sha256": "87b26a36366aa01030fd03e4f0141a0a38e31c0cb04740a7766b6702afc501a8"
+    },
+    {
+      "filename": "logchebyRcone.m",
+      "sha256": "d0278fed4967cf541f865b2ee3b84b0b137d6786138d81a905f964976dda585d"
+    },
+    {
+      "filename": "max_kcut.m",
+      "sha256": "48e6f352d5174ac96e13ec5f70c65520d4f60739389457e3b41991eda8b5ae23"
+    },
+    {
+      "filename": "maxcut.m",
+      "sha256": "fabb0da3172f3fff2eb4517d174569eaa211a603d9c43a33477a65bca9dcd062"
+    },
+    {
+      "filename": "mcpschur.m",
+      "sha256": "ce83873731805bcefbaaad9fd73ca0c3d44c6bf973a6a3dd735ec1916d15a5c2"
+    },
+    {
+      "filename": "minEpts.m",
+      "sha256": "f1b148e663d2c3d65a834df9222968d4a40d6249dbd0b4b45c2a57a0ba37a46b"
+    },
+    {
+      "filename": "norm_min.m",
+      "sha256": "6a47d045467d56c5cb06dfa6695e1b7fc014fff9cc530e822ed210723fa9f5f0"
+    },
+    {
+      "filename": "orthbasis.m",
+      "sha256": "a7095a7d063b7ece61bf559e05dc61b6e41463488f5ee71a922c30c3a1925506"
+    },
+    {
+      "filename": "randinfsdp.m",
+      "sha256": "e4795d24fa8ed46f727962784957b16177801d6a9187b833f5940a4f0cb437c9"
+    },
+    {
+      "filename": "randlowranksdp.m",
+      "sha256": "2d1208c2bd65f612751e16b57cf07ccdfd98aeca3595f5fbfcfba1e5faaeeec4"
+    },
+    {
+      "filename": "randmaxdet.m",
+      "sha256": "b62b64b18b2bbd994b28d8079cc808c2dd12534c88e98725f0aad0c98d4f086f"
+    },
+    {
+      "filename": "randsdp.m",
+      "sha256": "d2209a3dbb301abb0f8479040c94048618e8185d67fa5d84912bf57c6c803911"
+    },
+    {
+      "filename": "sdphankel.m",
+      "sha256": "6b3f1d784e3df5a1228f2879862570a9d24f3c107e235efd1da1a13ada20830b"
+    },
+    {
+      "filename": "thetaproblem.m",
+      "sha256": "616a95b82048a374860e546cbfebe1d1ef31486458340e9953f75e31ea5ba298"
+    },
+    {
+      "filename": "viewgraph.m",
+      "sha256": "86c9d6436a5ef0b29a5a7802f166cd11a824dcd60d2863120f28c1782c8da109"
+    },
+    {
+      "filename": "HSDHKMcorr.m",
+      "sha256": "d238aaed51fd909e6bfd6a058798b21cb60b4914f14baa0030e45c849d54b7c1"
+    },
+    {
+      "filename": "HSDHKMdirfun.m",
+      "sha256": "08cf85a78035a8d18b4089dac36717c2e89d367fda4293dcdf7c795eef4696c8"
+    },
+    {
+      "filename": "HSDHKMpred.m",
+      "sha256": "2ee927889bb6f37ba515bfb9c4da7cba27702bb10e6bd370ae6b2f7e7af8cb38"
+    },
+    {
+      "filename": "HSDHKMrhsfun.m",
+      "sha256": "19bd2f0814b334514fa76ed8488c124e0f010409afdbf380c6d14f3407218ae4"
+    },
+    {
+      "filename": "HSDNTcorr.m",
+      "sha256": "f92f0802036cb0fc2d33cdf204d30366a9adacb6062704379d1079afebe1851f"
+    },
+    {
+      "filename": "HSDNTdirfun.m",
+      "sha256": "458a58031161337aa8686464086ea3fbcd0764be45f23bb33c344e398b619a92"
+    },
+    {
+      "filename": "HSDNTpred.m",
+      "sha256": "83fd4136d7bc027d56815dc1ce50877ea43014ba872a080a96c28ccb50166c89"
+    },
+    {
+      "filename": "HSDNTrhsfun.m",
+      "sha256": "88b6d09b729381bc39ffafd0078a3137c317607a3e231b701615cfa64d647904"
+    },
+    {
+      "filename": "HSDbicgstab.m",
+      "sha256": "39917f635162b1b3f454f5f4b417ed02069bbb94b4e55ddc56c8e2af5e404aeb"
+    },
+    {
+      "filename": "HSDlinsysolve.m",
+      "sha256": "ac529e2372dadddffd6fe181d23be55c52cfa226b0bf99cb0ecef111f1c3570b"
+    },
+    {
+      "filename": "HSDsortA.m",
+      "sha256": "f5169913b877fc544265357a535bfaefd5085b46278ed81b9e32becf656d399c"
+    },
+    {
+      "filename": "HSDsqlp.m",
+      "sha256": "c85323246075a3dbfcae5c1d7b5bb12f243c20e568fb579138d3b36df2c1ce96"
+    },
+    {
+      "filename": "HSDsqlpCpert.m",
+      "sha256": "b339053a78b0c7e8c1c4b93a3f1dee3c62c24469e373bc235a66f43dad3c2e68"
+    },
+    {
+      "filename": "HSDsqlpcheckconvg.m",
+      "sha256": "94085befd7d7fc686ecdd3b59e2147cb5a7e22b46f92f905e8f5ad22de727061"
+    },
+    {
+      "filename": "HSDsqlpmain.m",
+      "sha256": "b69f338e448a913f09f0b59e00477b574a0b3ab5531e21bd145a8eb58aed5c2f"
+    },
+    {
+      "filename": "HSDsqlpmisc.m",
+      "sha256": "d81a4bb907037a42999acb83c20d8ad25b2678b8cb09df72d8ccae45b06d3746"
+    },
+    {
+      "filename": "AXfun.m",
+      "sha256": "18d9e1eba16d73948a7a00a017657082b5e4a51890354eece1e91e5c1e9ca653"
+    },
+    {
+      "filename": "Arrow.m",
+      "sha256": "2c06b278cabd1cf39f96279f5adb3b0ada326d44f0cfbcbf3cbef1a130c688ea"
+    },
+    {
+      "filename": "Atyfun.m",
+      "sha256": "a60acfb3cf9a846812d0f949456501aa9bb1fe24c1574d6b15b75e118d242957"
+    },
+    {
+      "filename": "HKMcorr.m",
+      "sha256": "eb64462b948f0b181a7388518de7f1be75a0a55d2aae4c38c0da342c7a9891be"
+    },
+    {
+      "filename": "HKMdirfun.m",
+      "sha256": "83476e6e677b609f0f934fd3d85be87db4302f3f7b3b74a10f8979cd181ae070"
+    },
+    {
+      "filename": "HKMpred.m",
+      "sha256": "8d6bfe2ea1320a9ec319a3961f8e01aaee8aae65b156fd80c6a9ca96b974bb07"
+    },
+    {
+      "filename": "HKMrhsfun.m",
+      "sha256": "116730002361a0dacff136e6e0de65921debadd387bc7a21a654d494fb60cbc6"
+    },
+    {
+      "filename": "NTcorr.m",
+      "sha256": "5215b49006b489b2d69ddc87e4ea8d18a969a5ad92fe5adf34e110984b6f418c"
+    },
+    {
+      "filename": "NTdirfun.m",
+      "sha256": "693999de022bae6eaaf04b3baf47a4165b590842b309dda52a20423f980ef2e0"
+    },
+    {
+      "filename": "NTpred.m",
+      "sha256": "2f5f5db819b12b5890b69608ff8315918b126bd8f259a8aff5e6593d5943e0c2"
+    },
+    {
+      "filename": "NTrhsfun.m",
+      "sha256": "ca90847686f5952fd544210805f320edc08685eeaed220b084dc49843cd0b95e"
+    },
+    {
+      "filename": "NTscaling.m",
+      "sha256": "0df129a1396656063cd3c1af55a2729601c8589ef312a955b3f69589edfd29be"
+    },
+    {
+      "filename": "Prod2.m",
+      "sha256": "749250d16615e076aeabf61b61f9267c9625a150851265c4ff97b807380beed9"
+    },
+    {
+      "filename": "Prod3.m",
+      "sha256": "bb7c7e34c7aa81f1906688b81149674bdba987d35ca266531a859af33a14d267"
+    },
+    {
+      "filename": "SDPT3data_SEDUMIdata.m",
+      "sha256": "4dfa7b2cae66bd4a5f5188e4b60e4d4c4d60ef9522d01a0201648110bf6fecab"
+    },
+    {
+      "filename": "SDPT3soln_SEDUMIsoln.m",
+      "sha256": "d386e2fea2652e36554107bdf9b61de002ea9b0a39e5ce2933e34da3a06b974a"
+    },
+    {
+      "filename": "SDPvalBounds.m",
+      "sha256": "d51c757bb13176a183550d0883796cfe6e99dca5a047adcada0993314f712546"
+    },
+    {
+      "filename": "blkbarrier.m",
+      "sha256": "3c27cf61a330f702c40e4fa8373a190c67bf9218f3619cd37f1a21b8ba80744e"
+    },
+    {
+      "filename": "blkcholfun.m",
+      "sha256": "0121fda208e422528b611dbcc20574f103647e55fd871db30a60435ec6755dbd"
+    },
+    {
+      "filename": "blkeig.m",
+      "sha256": "6cbaaae1ab5eea3b497f7104bf2a798aaae65761ee4cc693510426fee6a1a9d0"
+    },
+    {
+      "filename": "blktrace.m",
+      "sha256": "b1e4cb18ffd958c8e533ec5fc5faa04866e131841d176bfef6e17ad98d518876"
+    },
+    {
+      "filename": "checkdense.m",
+      "sha256": "e4141f1fab870335a6ac32aa6469a2afd1dee8e983a5029de9ddaa8c38244403"
+    },
+    {
+      "filename": "checkdepconstr.m",
+      "sha256": "7719f7b8a732eafaed1f8cf5eb55f7c64b81e58a7b933296c1e57dd41bea4d21"
+    },
+    {
+      "filename": "combine_blk.m",
+      "sha256": "35fcc584918d5efa00c5db4fb05cb31a4588eb973628ae9148f9542f637bb676"
+    },
+    {
+      "filename": "convertRcone.m",
+      "sha256": "2cae875e5ec2ff66ad62a25b163715e668874d4f4d1bffbec2e992ec20101e2e"
+    },
+    {
+      "filename": "convertcmpsdp.m",
+      "sha256": "5e234b2372b47ba6b3414da8a618acf589b54cb498bbfdcd5b49f5f06401d2bf"
+    },
+    {
+      "filename": "degeneracy.m",
+      "sha256": "314ad4f1ae7d87bb9de17ecb46da319fa76e0bc81d44713ae4282b2f86ed03a9"
+    },
+    {
+      "filename": "detect_lblk.m",
+      "sha256": "58bee490e0f14cfdb0c4694e2943ac2844f1865cb1a89236bcbc87497c6dcbdb"
+    },
+    {
+      "filename": "detect_ublk.m",
+      "sha256": "1175a8a4824b8647651d686b66c43cc8c604bb2c944ed760b9032d886c9404db"
+    },
+    {
+      "filename": "gdcomp.m",
+      "sha256": "ea0faf9b296416a04c7139eecd7cc508b55cada165172d93912adf60c78d1a1a"
+    },
+    {
+      "filename": "gpcomp.m",
+      "sha256": "c7b6a02b5ab7e4e96ced85667b84996900c216da9a51111c5fc6a223b9dfa620"
+    },
+    {
+      "filename": "infeaspt.m",
+      "sha256": "52c96fc3e18ffdee97536d3c8451cfbcab70a8ec5a98c417e1edfd48f4d9436d"
+    },
+    {
+      "filename": "linsysolve.m",
+      "sha256": "8dbfebc5fcbe7dd2dd59be03012c8ee8fbfa736bf2e475c549210abcd2a0b0a2"
+    },
+    {
+      "filename": "linsysolvefun.m",
+      "sha256": "e04f35a962e9b8bc2fa4e66a2d8db2c15aa957be949e446699e79300b83ded5d"
+    },
+    {
+      "filename": "mybicgstab.m",
+      "sha256": "185782716c87bf6647d872142060efa788b58bd0d3e7d2d1b990a2ffa486400b"
+    },
+    {
+      "filename": "mytime.m",
+      "sha256": "ba926a6a34bff6bdf5b675c1a92f48c84094409d98d6ce3af641d4663a0238a4"
+    },
+    {
+      "filename": "nzlist.m",
+      "sha256": "d355a5fe58166aa63d486728b061f9c5aa91c0a12ea43786a8e4e100677bdf84"
+    },
+    {
+      "filename": "ops.m",
+      "sha256": "915c34e3e00921f575da9f14968babcedf7ea2ffdf285a43ef180b0782e932c0"
+    },
+    {
+      "filename": "qops.m",
+      "sha256": "7ffaff35c914d09c51c8b0afb1bdccd8d9db9f2707bc8f52022e6dc6f902f2df"
+    },
+    {
+      "filename": "qprod.m",
+      "sha256": "20bd1716887c6a148f2f705acd882cf8b52927afefa8a363d5f1d89743b24ca4"
+    },
+    {
+      "filename": "randmat.m",
+      "sha256": "fd472afcc4b2a28a0d1641249d24505812dcea23f8401a2525bec28c30d57db7"
+    },
+    {
+      "filename": "read_sdpa.m",
+      "sha256": "76951631ee62db77c4735977739c7d4166c81af90e0e660752619b393b3b78ea"
+    },
+    {
+      "filename": "read_sedumi.m",
+      "sha256": "0cff52be8d4a4fb8f4dac14209d3e40fdc5e176dffef53f424b3fe04a06b1368"
+    },
+    {
+      "filename": "scaling.m",
+      "sha256": "b23d6b10e5e7427f860e63e908e6fadde3a521fb7e3c08d3b030caff999d9bd7"
+    },
+    {
+      "filename": "schurmat_lblk.m",
+      "sha256": "030d86c83dccd1e1951409756933cc4128d63a6e50b178b26dfd65f47caf9d6a"
+    },
+    {
+      "filename": "schurmat_qblk.m",
+      "sha256": "9127c7d8b4348951d4c07c3ea4753d068a9631d38feb2dee82b19b46b76ecd05"
+    },
+    {
+      "filename": "schurmat_sblk.m",
+      "sha256": "1d78680e8e56d088d753afc0c6addefcfbcacec1547f2f0dc94d437502d84f0a"
+    },
+    {
+      "filename": "skron.m",
+      "sha256": "ed01352312ff407dedcf38ae65587c3ba6aaf0c924c7aae76b4bff1721241ca9"
+    },
+    {
+      "filename": "smat.m",
+      "sha256": "cab135007059f1e3d7a4234cb1f2c3bf0fad23d3e2a40afb8386085134526174"
+    },
+    {
+      "filename": "sortA.m",
+      "sha256": "d1c8ea4e42d76ebbcda498f9de232b6d38d3443fe81088e3dec06451fdb4f58d"
+    },
+    {
+      "filename": "sqlp.m",
+      "sha256": "828807356ab1a9da046083cae465eb2b975ddafd72ecc7e23cf12b015c5b5f1b"
+    },
+    {
+      "filename": "sqlparameters.m",
+      "sha256": "a472658c36afee0989a46a9be4d571b67792f6ad8aaa75b9044871d880206147"
+    },
+    {
+      "filename": "sqlpcheckconvg.m",
+      "sha256": "7af4dc9adf192a0988dda96fc5f9873f4f8c215830c7ed6cb27140de26d7d657"
+    },
+    {
+      "filename": "sqlpdemo.m",
+      "sha256": "b9319e4258b8b520699a1572370ee7347c812927159dba2a07984adc996b0137"
+    },
+    {
+      "filename": "sqlpmain.m",
+      "sha256": "12169ad33ed85e8b45cc89055f594b76ddedeea5bb9fb28d4afea27d1b1d22a3"
+    },
+    {
+      "filename": "sqlpmisc.m",
+      "sha256": "658f81463d47bc4edbde354a927a95226591dc8cae3def2cdb01e5a9b00f57ad"
+    },
+    {
+      "filename": "sqlpsummary.m",
+      "sha256": "cde1d930bac1979bf99160720608265e88ef1080e982ef542d94d5c319e38911"
+    },
+    {
+      "filename": "sqlptermcode.m",
+      "sha256": "9ca7e0b1b14baa112aef0a09b2a887dcf5978d3bae3704e31e1646fa14974842"
+    },
+    {
+      "filename": "sqlpu2lblk.m",
+      "sha256": "b1a538197212b59550709624d329154c3a1e6175a871c51ed0bfb3064109c74d"
+    },
+    {
+      "filename": "steplength.m",
+      "sha256": "293b74f61a699171b09be1397968af877da2459a5ae226956405aaa8466f23d6"
+    },
+    {
+      "filename": "svec.m",
+      "sha256": "c6f5c01b3cbcb8820b77de2d4d96a69fc974e937a2260fb10f1805aecbe5ea3e"
+    },
+    {
+      "filename": "symqmr.m",
+      "sha256": "dd5d25929888f6f0f0ead953dbc9131a6e53f30bc569fe0e940152066a7ae2dc"
+    },
+    {
+      "filename": "validate.m",
+      "sha256": "005b5e542130adeb99c350e3a1185bc12171fdeb78ec9de591d4b4ac45dcc5fc"
+    },
+    {
+      "filename": "validate_startpoint.m",
+      "sha256": "f8001e3886c46b4906fd5f31ce03812ba4ee6c9038e63c6cae467c7fba5d9f1f"
+    },
+    {
+      "filename": "mexMatvec.mexw64",
+      "sha256": "8cbc1e9d98bb69a7c3fae1546e955b5273074c8ced51fa43469adb30c43aa38f"
+    },
+    {
+      "filename": "mexProd2.mexw64",
+      "sha256": "73a8af4babfc0a3ea7e472a62429f85fa4c8828a452912ed921694707df99b85"
+    },
+    {
+      "filename": "mexProd2nz.mexw64",
+      "sha256": "f5774cc7c9bef0ffaf5710fc6160b0c15277b3079912f3c27ef84a887f512356"
+    },
+    {
+      "filename": "mexexpand.mexw64",
+      "sha256": "f6c318185bc0bd050f0b3dbbe12ae33254cf621aba9abf5d10b633911da5670e"
+    },
+    {
+      "filename": "mexinprod.mexw64",
+      "sha256": "66a1b413ccb11c99842809bc4119ac2a7b732a8b84deb4abb5f1adb439479e1e"
+    },
+    {
+      "filename": "mexmat.mexw64",
+      "sha256": "d7c9485948447f819380a0914631e76456b981da3f597139d387b705ddd20500"
+    },
+    {
+      "filename": "mexnnz.mexw64",
+      "sha256": "5e5a625200c7e3403da2b26296bc1b4afbe375df1e4b02c6cc768e5bc85de2c8"
+    },
+    {
+      "filename": "mexqops.mexw64",
+      "sha256": "b4f4a6c0a88b1fafddf2fbd72a2e2746a1a6e11c26908c92162f9b0330cdec9f"
+    },
+    {
+      "filename": "mexschur.mexw64",
+      "sha256": "0d6ac2ef5ab392c115872a3aa1d4cd238553f241eeae147d1814204f2bdb544c"
+    },
+    {
+      "filename": "mexschurfun.mexw64",
+      "sha256": "b977ba542d241b1c73fc0fbed39c52c6fcca4db9022bfeab4686449c3d538e94"
+    },
+    {
+      "filename": "mexskron.mexw64",
+      "sha256": "a47a87bf151b74ff2abf76fccf4d3b367202dab04685c5d2099f3c0ea026ae2a"
+    },
+    {
+      "filename": "mexsmat.mexw64",
+      "sha256": "931b78c7a3055bc6bb4180a8264fc32511b27b242b7f94d265335448101d1a60"
+    },
+    {
+      "filename": "mexsvec.mexw64",
+      "sha256": "72b1188487141e793a615ec6cb50f6d370ea99dd03243566d0e795ebee7af492"
+    },
+    {
+      "filename": "mextriang.mexw64",
+      "sha256": "218055488ac683909279a39a57c6939c52149be07b597cd598970d60f60dd34f"
+    },
+    {
+      "filename": "mextriangsp.mexw64",
+      "sha256": "5f2121005746acc3e5c624a11068f4ed73e793947f3e4b49e2b42c25ea74cb0a"
+    }
+  ],
+  "actual_full_result_sha256": "faec66a2ee454cd2eca1e7f45015247f5a25f9a4820fc0bb3e2305b8de136b0b",
+  "actual_runtime_receipt_sha256": "9f75842301d278a5220eae562dbec033da3a5f8c8a1e4fec3f80bc59efb4509e",
+  "actual_selected_backend": "SDPT3",
+  "actual_selected_backend_version": "4.0",
+  "actual_backend_callback_sha256": "c0fce2601a79a45ed2374ca579608132718a610a2aafe4a84ccd54ba8c82a0bf",
+  "all_recorded_runtime_binaries_independently_hash_verified": true,
+  "final_phase_matrices_independently_verified": false,
+  "full_reproduction_pass": false
+}
