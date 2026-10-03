@@ -1,0 +1,118 @@
+{
+  "paper_id": "mis-sensing",
+  "release_scope": "independent_core_model_and_reduced_RALM",
+  "public_sources": [
+    {
+      "url": "https://arxiv.org/html/2509.15627v1",
+      "version": "v1",
+      "checked": true
+    },
+    {
+      "url": "https://doi.org/10.1109/JSTSP.2026.3681476",
+      "role": "published_article_identity"
+    }
+  ],
+  "equation_numbering": "Public arXiv v1 with article-source clarifications",
+  "mapping": [
+    {
+      "component": "composite_aperture",
+      "section": "II-B MIS Equivalent Phase Shift Vectors",
+      "equations": [
+        "(1)"
+      ],
+      "related_section": "III-B Problem Formulation",
+      "related_equations": [
+        "(10)"
+      ],
+      "implementation": [
+        "MISModel.evaluate",
+        "evaluate_model"
+      ],
+      "checks": [
+        "unit_modulus_error"
+      ]
+    },
+    {
+      "component": "two_way_echo_and_SINR",
+      "section": "III-B Problem Formulation",
+      "equations": [
+        "(9)",
+        "(10)",
+        "(11)",
+        "(12)",
+        "(13)"
+      ],
+      "implemented_expression": "beta_k^2*abs(c_k^T v_u)^4/(sum_i_not_k beta_i^2*abs(c_i^T v_u)^4+sigma_k^2/P), L=1",
+      "implementation": [
+        "MISModel.evaluate",
+        "MISModel.selected"
+      ],
+      "checks": [
+        "quadratic_amplitude_identity_error",
+        "quartic_echo_identity_error",
+        "rate_gradient_relative_error",
+        "selected_rate_identity_error"
+      ]
+    },
+    {
+      "component": "inequality_augmented_Lagrangian",
+      "section": "IV-B2 Minimizing augmented Lagrangian in inner loop",
+      "equations": [
+        "(24)",
+        "(25a)-(25d)",
+        "(26)"
+      ],
+      "implementation": [
+        "augmented_lagrangian",
+        "ralm"
+      ],
+      "checks": [
+        "ralm_gradient_relative_error",
+        "inner_accepted_objective_monotonicity_error",
+        "returned_epigraph_feasibility_error"
+      ]
+    },
+    {
+      "component": "multiplier_update",
+      "section": "IV-B3 Updating multipliers and penalty in outer loop",
+      "equations": [
+        "(28)"
+      ],
+      "implementation": [
+        "ralm"
+      ],
+      "deviation": "clip upper bound 1e6 for this reduced fixture"
+    },
+    {
+      "component": "quadratic_opposite_phase_baseline",
+      "section": "V Heuristic Closed-Form MIS Design",
+      "public_preprint_equations": [
+        "(48)",
+        "(50)"
+      ],
+      "locally_cross_checked_article_equations": [
+        "(62)",
+        "(64)"
+      ],
+      "implementation": [
+        "MISModel.quadratic_phases",
+        "quadratic_phases"
+      ],
+      "deviation": "Discretized fixed curvature, finite full aperture, exact best-position scheduling; not continuous overlap-only approximation."
+    }
+  ],
+  "source_clarifications": [
+    "Hermitian G=conj(c)c^T is consistent with the stated PSD quadratic form and the locally checked article source; unconjugated HTML v1 Eq(11) is not executed.",
+    "One BS antenna makes public preprint PL^2 and article P denominators identical.",
+    "Max_u is the objective; the preprint displayed argmax is interpreted as selecting the maximizing value.",
+    "Penalty safeguard intentionally grows when progress is insufficient, not the opposite inequality displayed in public v1 Eq(29)."
+  ],
+  "deviations": [
+    "Exact scheduling eliminates the relaxed multinomial manifold.",
+    "Steepest-descent inner circle steps replace RCG; original convergence guarantees do not transfer.",
+    "Reduced deterministic budget 10x60x3, not 30x4000x6000.",
+    "No PSLR, original stochastic sweeps, full waveform detector or hardware results."
+  ],
+  "private_source_files_included": false
+}
+

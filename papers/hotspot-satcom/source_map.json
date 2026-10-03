@@ -1,0 +1,22 @@
+{
+  "paper_id": "hotspot-satcom",
+  "doi": "10.1109/TWC.2023.3309957",
+  "implementation_kind": "independent_ris_design_core_with_zf_baseline",
+  "source_verification_level": "publisher_abstract_and_author_thesis_crosscheck",
+  "final_publisher_pdf_verified": false,
+  "final_publisher_equation_labels_verified": false,
+  "sources": [
+    {"id": "publisher", "url": "https://ieeexplore.ieee.org/document/10258030/", "type": "publisher_record", "verified": "exact title, DOI, publication identity, abstract's algorithm description; full text inaccessible"},
+    {"id": "doi", "url": "https://doi.org/10.1109/TWC.2023.3309957", "type": "persistent_publisher_identifier"},
+    {"id": "thesis_crosscheck", "url": null, "type": "author_supplied_doctoral_thesis", "document_section": "Chapter 3", "public_availability": "not established", "verified": "exact DOI/title mapping in publications list; system model, phase design criterion and algorithms", "redistributed": false}
+  ],
+  "mapping": [
+    {"implementation": "build_model, effective", "source": "thesis_crosscheck", "document_section": "3.2", "equations": [], "verification": "thesis model checked; final journal labels not asserted", "restriction": "deterministic normalized LoS fixture, not original orbit/Rician inputs"},
+    {"implementation": "objective_gradient", "source": "thesis_crosscheck", "document_section": "3.4.1-3.4.2", "thesis_equation_labels": ["3-25", "3-34", "3-35", "3-36"], "publisher_equation_labels": [], "verification": "author-thesis criterion verified; final publication equivalence pending"},
+    {"implementation": "optimize", "source": "thesis_crosscheck", "document_section": "3.4.1.2; Algorithm 3-2 stage 1", "thesis_equation_labels": ["3-30", "3-37"], "publisher_equation_labels": [], "verification": "unit-circle tangent/retraction framework checked", "deviation": "analytic phase-coordinate derivatives independently derived; maximization uses ascent with Armijo checks"},
+    {"implementation": "SINR and QoS checks", "source": "thesis_crosscheck", "document_section": "3.2; 3.3", "thesis_equation_labels": ["3-8"], "publisher_equation_labels": [], "verification": "thesis downlink model checked"},
+    {"implementation": "zf_qos_baseline", "source": null, "verification": "independent baseline, not paper algorithm", "deviation": "ZF with exact fixed-direction QoS/water-filling replaces the paper's unimplemented QT/SOCP precoder stage for evaluation only"}
+  ],
+  "not_reproduced": ["final journal full text equivalence", "QT/SOCP satellite stage", "full AO/SDR", "statistical CSI extension", "original orbital/Monte Carlo figures"],
+  "fixture": {"file": "fixture.json", "original_publication_inputs": false, "random_number_generator": "none"}
+}

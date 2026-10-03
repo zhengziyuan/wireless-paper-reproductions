@@ -1,0 +1,62 @@
+{
+  "scope": "Shared-fixture numerical and core-check parity, not original-paper figure reproduction",
+  "atol": 1e-07,
+  "rtol": 1e-06,
+  "papers": [
+    {
+      "paper_id": "mis-communications",
+      "passed": true,
+      "failures": [],
+      "output_sha256": {
+        "python": "d585d19a451e1b1d0a6fd06a34d33c654d01ca934387759f54d505710ead1109",
+        "matlab": "eeab4a8dc722587e17e2753c4840af46dfb0216291ae43ce40f3924308089e88"
+      }
+    },
+    {
+      "paper_id": "mis-sensing",
+      "passed": true,
+      "failures": [],
+      "output_sha256": {
+        "python": "5fd86ed9a0be83896f7f7e203a5e8aa751ceeee42d35e231b4a95bb4e3773b98",
+        "matlab": "623090907d6211aba59178dc2d6b48d6d6f7c57e97b05b1875230017e43c1405"
+      }
+    },
+    {
+      "paper_id": "rotatable-isac",
+      "passed": true,
+      "failures": [],
+      "output_sha256": {
+        "python": "dd4cc7d46c603837842345900357a587194ee4a01f1ec6e69eaa10837f497aff",
+        "matlab": "266fd872d4dff8f2a771775110ef55cc1bae48979ee39832657b826d09f7da68"
+      }
+    },
+    {
+      "paper_id": "two-timescale-ma",
+      "passed": true,
+      "failures": [],
+      "output_sha256": {
+        "python": "523886f645e5750f6dd4b593536189016ee6703c6d53e4b68f6a9981d59cacc8",
+        "matlab": "e8c523bfe7063ede62616edadefa23a9adec598035c650a6c7b6368919cbe3cb"
+      }
+    },
+    {
+      "paper_id": "cooperative-satcom",
+      "passed": true,
+      "failures": [],
+      "output_sha256": {
+        "python": "4973a67ea1f73d1b81e5be1f0cf84427c42a5e6c94d4aea5629a48999715ee10",
+        "matlab": "06c49496c851a913447eb158eda258e1209352dc4e12fe5333200b329a2d665a"
+      }
+    },
+    {
+      "paper_id": "hotspot-satcom",
+      "passed": true,
+      "failures": [],
+      "output_sha256": {
+        "python": "20676d3332adb4b9210330781e01d09ce70d37017487394627ab60d8e821fcfa",
+        "matlab": "a2c5001d5bd3c30efd917503325ba964123ddb8ba19ba9397101e9b060876cc9"
+      }
+    }
+  ],
+  "passed": true
+}

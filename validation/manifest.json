@@ -1,0 +1,84 @@
+{
+  "created_utc": "2026-10-03T06:44:09.493427+00:00",
+  "scope": "Core-model and reduced-fixture checks; not a full published-figure campaign",
+  "runtimes": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "matlab": "25.2.0.2998904 (R2025b)"
+  },
+  "packages": [
+    {
+      "paper_id": "mis-communications",
+      "sha256": {
+        "papers/mis-communications/fixture.json": "10ea540816ff6649d2caed945c40f47aeb10ab4b8baf6772b510c04bb66b0a64",
+        "papers/mis-communications/model.py": "533ed2725cdcab460dfd70f1553fae07b684daff28e08bcab15b681ac81608a8",
+        "papers/mis-communications/README.md": "98eae3bb9144563fc0be5dca3516a21274c937785a2fce98ee6629090ccec0f7",
+        "papers/mis-communications/run.py": "080b66a45a683ac747003aff221c2f71abdeccb4ffc32fd6e27f73543ad3845f",
+        "papers/mis-communications/run_mis_communications.m": "3a1fca954aae0ad1b4624b18bf5f3495d8bdc6696b72f65708de449fe5b4ace4",
+        "papers/mis-communications/source_map.json": "7ffaf8f78079b2d1ad5becabfb06a281364d3a8ef22761eee82bf1bca036b73d"
+      }
+    },
+    {
+      "paper_id": "mis-sensing",
+      "sha256": {
+        "papers/mis-sensing/fixture.json": "0c7c6724cd1cd236eca82dce70aade39e838493dcffdc8ab22a6e61c2f12c631",
+        "papers/mis-sensing/model.py": "533ed2725cdcab460dfd70f1553fae07b684daff28e08bcab15b681ac81608a8",
+        "papers/mis-sensing/README.md": "b080c977768739a708ed7b2a0ce76f88c4e5dbe994506f776bd5ef17b215ffbf",
+        "papers/mis-sensing/run.py": "57b4d640e25c66ae030f0344a23fdfa71d9ee46344f204949269fd448dd3e521",
+        "papers/mis-sensing/run_mis_sensing.m": "9965e3f92c59febcc1a01c44ef56bd03b29e5dbf291a2b883c614345d9d1fcab",
+        "papers/mis-sensing/source_map.json": "cfa553e1850030c2ebbe069a5eac5c046a5e73ec7590538123236fba22b452d7"
+      }
+    },
+    {
+      "paper_id": "rotatable-isac",
+      "sha256": {
+        "papers/rotatable-isac/fixture.json": "1d352375befe7df738071e7ce31256e4353a031637f8a026a4c6712fed7576c9",
+        "papers/rotatable-isac/README.md": "845e6c2ac6654efb97c3cb3dff07bf7bcbfd8617bb8dfca583e4a2c2479c485f",
+        "papers/rotatable-isac/run.py": "115b4e0b30e081754b3679ec6334dcc9a8d153bfd03ff1337d51f7f6b5a40911",
+        "papers/rotatable-isac/run_rotatable_isac.m": "612260b55ce612c42b874a91b63f860091d3385f7c383cc9d9960dd8e645d64d",
+        "papers/rotatable-isac/source_map.json": "3518e18efb8dbd39942f8a6b016517e81a0da31c09635b432f60a061e5d6a1a6"
+      }
+    },
+    {
+      "paper_id": "two-timescale-ma",
+      "sha256": {
+        "papers/two-timescale-ma/fixture.json": "7e3d5a96260ec03745e06cf82921f431325418f613c3a24c0b3dd1e943201112",
+        "papers/two-timescale-ma/README.md": "123f4b5f3309d0a2ef15fe06b82c7cc91ce3a0af5fb29d49ec1358ab695deb31",
+        "papers/two-timescale-ma/run.py": "e506cb1e0932b9212cee3a650c48a19df717f5b6bb2131d08fa2938b0805758c",
+        "papers/two-timescale-ma/run_two_timescale_ma.m": "46e2cf1fb5ac2dc847780d849c2b2f1cfaf0562b5b7b9647d0d0d2fe6884c1be",
+        "papers/two-timescale-ma/source_map.json": "0d415aa9d8a924442da2ee5f8f4f1a58a76efbce7a24e65aa4ea1c86e33653e9"
+      }
+    },
+    {
+      "paper_id": "cooperative-satcom",
+      "sha256": {
+        "papers/cooperative-satcom/fixture.json": "a24e0b5a291ad4b7328c177aeb39b6ee1e04e029a127df6cf7112706a2bcdcaa",
+        "papers/cooperative-satcom/outputs/python.json": "4973a67ea1f73d1b81e5be1f0cf84427c42a5e6c94d4aea5629a48999715ee10",
+        "papers/cooperative-satcom/README.md": "9e296aad76fbef516b8c2fbd23b461c0d37db2e4a5989b4f58c10aecd1c85555",
+        "papers/cooperative-satcom/run.py": "61345639cd5a99c644fccb953d19586682eb9af76f1a7b07e9f7cb03a910f0ca",
+        "papers/cooperative-satcom/run_cooperative_satcom.m": "cef2e300d9dde14ec5b0861f7f9813ce5051e16d66c2950b0bc1e0aa9cfeb33c",
+        "papers/cooperative-satcom/source_map.json": "5da5e5a787beb7c36ae35f3e563ccfe523abb6564fc564666674ec0209824124"
+      }
+    },
+    {
+      "paper_id": "hotspot-satcom",
+      "sha256": {
+        "papers/hotspot-satcom/fixture.json": "45f47d8df9b74702581cffd732dc29205ef44f9c15a632f1c6fe58037cb70a23",
+        "papers/hotspot-satcom/outputs/python.json": "20676d3332adb4b9210330781e01d09ce70d37017487394627ab60d8e821fcfa",
+        "papers/hotspot-satcom/README.md": "dbcc878430e615126e2a5330acfb05360b77dfbf02bd4239d1ae587b6a02a945",
+        "papers/hotspot-satcom/run.py": "654635e08415a46d9284441e51648727283358450e8b0fd6b198ae564c093633",
+        "papers/hotspot-satcom/run_hotspot_satcom.m": "9abe08c7fd373a8605af29ae1941764a783ba5d62d53496cc2827e0aa605b937",
+        "papers/hotspot-satcom/source_map.json": "f1f9cbfa31b7ffc8dc5c2ee68e3251789d0efe843292fb25787b19d79a21dc65"
+      }
+    }
+  ],
+  "tooling_sha256": {
+    "scripts/export_validation.py": "6b3e1e06c11d5b2d4068c6a12ac99ac4d97a93abc79c2f813b7d3baff0400704",
+    "scripts/plot_histories.py": "55afd358d471ff348dffa7544b022e877b092985645caaf48230a6ce9610ea6f",
+    "scripts/run_all_matlab.m": "7c2033a6f6f0c31d668fef8122b18814abf1efa0af0e81efe58e2b6d13584a14",
+    "scripts/run_python.py": "6fab8e92aa5eb702764e9c4187f4ec72a84a06e6165f2d2aa94d870b0ccdb362",
+    "scripts/validate_parity.py": "6d78b18de35318712702017c3557ed86af219b0bbff5941965285e547989a320",
+    "scripts/validate_python.py": "cc355651ab7dc880f9b10f990b532798b7ff74a917a3ede8abf69f23038cfd94",
+    "tests/test_models.py": "3751b709106f56bd16e93b68aefad49a36934a2f7ce72667887d87e2509ba813"
+  }
+}

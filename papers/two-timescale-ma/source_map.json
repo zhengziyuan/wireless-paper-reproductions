@@ -1,0 +1,21 @@
+{
+  "paper_id": "two-timescale-ma",
+  "title": "Two-Timescale Design for Movable Antenna-Enabled Multiuser MIMO Systems",
+  "doi": "10.1109/TCOMM.2025.3585515",
+  "primary_source": "https://arxiv.org/html/2410.05912v2",
+  "identity_source": "https://arxiv.org/abs/2410.05912v2",
+  "release_scope": "independent reduced-size MRT AO/SCA core-algorithm reproduction; not all published figures",
+  "equations": [
+    {"labels": ["1", "2"], "implementation": "instantaneous / ttsma_instantaneous", "scope": "Rician model, i.i.d. NLoS core model; fixed numerical fixture for parity"},
+    {"labels": ["4", "5", "7", "10"], "implementation": "instantaneous / ttsma_instantaneous", "scope": "instantaneous SINR, MRT channel-proportional allocation, actual total-power normalization"},
+    {"labels": ["13", "14", "19", "20", "29a", "30", "31"], "implementation": "statistical, optimize, project_surrogate / ttsma_statistical, ttsma_project", "scope": "MRT closed-form approximation, analytic gradient, antenna-wise SCA quadratic surrogate and convexified distance constraints"},
+    {"labels": ["32", "34", "35", "37", "38", "39"], "implementation": "zf_lower_bound, instantaneous / ttsma_zf_bound, ttsma_instantaneous", "scope": "ZF statistical bound and instantaneous equal-user-power ZF evaluation only; no ZF position optimizer"}
+  ],
+  "disclosures": [
+    "Dimensionless wavelength-normalized 6-antenna/3-user scene differs from published figure scenarios.",
+    "The 2D convex quadratic surrogate subproblem is solved by exact projection onto a clipped convex polygon rather than CVX.",
+    "The Hessian curvature uses the spectral eigenvalue formula in Eq29a; the displayed closed-form Eq29b has a negative sign before the offdiagonal-square term, inconsistent with the eigenvalue identity, and is not used.",
+    "Three explicit deterministic NLoS arrays are test fixtures, not independent random Gaussian realizations or estimates of the ergodic expectation.",
+    "No spatially correlated extension, energy model, ZF position AO/MM, or 20-figure sweep is implemented."
+  ]
+}

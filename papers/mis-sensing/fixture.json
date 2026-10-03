@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "ms1_shape": [
+    4,
+    4
+  ],
+  "ms2_shape": [
+    2,
+    2
+  ],
+  "initial_ms1_phases": [
+    0.17,
+    -0.44,
+    0.91,
+    1.38,
+    -0.28,
+    0.72,
+    -1.11,
+    2.02,
+    0.53,
+    -1.42,
+    1.76,
+    -0.83,
+    2.31,
+    0.34,
+    -2.14,
+    1.09
+  ],
+  "initial_ms2_phases": [
+    1.2,
+    -0.7,
+    0.33,
+    2.4
+  ],
+  "paper_id": "mis-sensing",
+  "mode": "sensing",
+  "cascaded_spatial_frequencies": [
+    [
+      -0.1,
+      -0.22
+    ],
+    [
+      -0.28,
+      -0.03
+    ],
+    [
+      -0.18,
+      -0.16
+    ]
+  ],
+  "beta_squared": [
+    1,
+    0.81,
+    1.21
+  ],
+  "noise_power": [
+    2500,
+    2700,
+    2300
+  ],
+  "transmit_power": 1,
+  "power_sweep": [
+    0.5,
+    1,
+    2
+  ],
+  "quadratic_curvature": 0.42,
+  "static_iterations": 100,
+  "smoothing_mu": 0.18,
+  "outer_iterations": 10,
+  "inner_iterations": 60,
+  "initial_penalty": 1,
+  "penalty_growth": 1.5
+}
+

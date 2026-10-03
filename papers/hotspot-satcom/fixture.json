@@ -1,0 +1,22 @@
+{
+  "description": "Independent normalized deterministic channel fixture, not the original orbital/Monte-Carlo campaign. The nearby HU steering frequencies create correlated direct channels; one common RIS serves the HUs.",
+  "antennas": 4,
+  "hotspot_users": 2,
+  "nonhotspot_users": 2,
+  "subsurfaces": 4,
+  "hotspot_frequency": [0.035, 0.075],
+  "hotspot_amplitude": [0.42, 0.40],
+  "nonhotspot_frequency": [-0.56, 0.71],
+  "nonhotspot_amplitude": [0.65, 0.70],
+  "satellite_ris_frequency": 0.09,
+  "ris_arrival_frequency": 0.22,
+  "satellite_ris_amplitude": 0.24,
+  "ris_user_frequency": [-0.37, 0.42],
+  "ris_user_amplitude": [0.72, 0.68],
+  "initial_phase": [0.20, -0.60, 1.10, -0.35],
+  "noise": 0.01,
+  "total_power": 12.0,
+  "nonhotspot_sinr_target": [1.9952623149688795, 1.9952623149688795],
+  "iterations": 100,
+  "gradient_step": 1e-6
+}

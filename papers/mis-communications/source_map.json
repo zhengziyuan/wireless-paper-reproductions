@@ -1,0 +1,93 @@
+{
+  "paper_id": "mis-communications",
+  "release_scope": "independent_core_model_and_altered_solver",
+  "public_sources": [
+    {
+      "url": "https://arxiv.org/html/2412.19071v1",
+      "version": "v1",
+      "checked": true
+    },
+    {
+      "url": "https://doi.org/10.1109/TWC.2025.3621083",
+      "role": "published_article_identity"
+    }
+  ],
+  "equation_numbering": "arXiv v1, locally cross-checked article source",
+  "mapping": [
+    {
+      "component": "finite_positions",
+      "section": "II-B MIS Beam Steering Mechanism",
+      "equations": [
+        "(1a)-(1c)",
+        "(2)"
+      ],
+      "implementation": [
+        "MISModel.__init__",
+        "initialize_model"
+      ],
+      "checks": [
+        "number_of_positions_correct"
+      ]
+    },
+    {
+      "component": "selection_and_padding",
+      "section": "III-B Transmission Signal Model",
+      "equations": [
+        "(4)",
+        "(5a)-(5b)"
+      ],
+      "implementation": [
+        "MISModel.evaluate",
+        "evaluate_model"
+      ],
+      "checks": [
+        "unit_modulus_error"
+      ]
+    },
+    {
+      "component": "MRT_SNR",
+      "section": "III-C Joint MIS Phase Shifts Design and Position Selection Problem Formulation",
+      "equations": [
+        "(7c)",
+        "(8a)-(8e)"
+      ],
+      "implemented_expression": "iota_k * abs(c_k^T v_u)^2",
+      "implementation": [
+        "MISModel.evaluate",
+        "MISModel.selected"
+      ],
+      "checks": [
+        "quadratic_amplitude_identity_error",
+        "selected_rate_identity_error",
+        "one_hot_row_sum_error"
+      ]
+    },
+    {
+      "component": "soft_minimum",
+      "section": "IV-A Smoothing for the non-smooth Max-Min Function",
+      "equations": [
+        "(9)",
+        "(10)",
+        "(11)"
+      ],
+      "implementation": [
+        "MISModel.softmin",
+        "phase_ascent"
+      ],
+      "checks": [
+        "softmin_lower_bound_error",
+        "softmin_upper_bound_error",
+        "rate_gradient_relative_error",
+        "accepted_objective_monotonicity_error"
+      ]
+    }
+  ],
+  "deviations": [
+    "Normalized cascaded planar spatial frequencies replace ambiguous preprint angle notation; one canonical 2*pi plane-wave factor is used.",
+    "Exact row-wise scheduling replaces the relaxed simplex optimization.",
+    "Exponential circle steepest-ascent replaces RCG and fixed mu replaces continuation.",
+    "Reduced deterministic fixture; no original Monte Carlo, sweep figures or hardware results."
+  ],
+  "private_source_files_included": false
+}
+

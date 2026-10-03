@@ -1,0 +1,3 @@
+# Preserve the exact bytes referenced by source/fixture/output SHA-256 evidence.
+# Both runtimes accept LF or CRLF; avoid Git's implicit platform conversion.
+* -text

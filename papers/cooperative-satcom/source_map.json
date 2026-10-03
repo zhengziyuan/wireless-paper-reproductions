@@ -1,0 +1,21 @@
+{
+  "paper_id": "cooperative-satcom",
+  "doi": "10.1109/JSAC.2024.3460068",
+  "implementation_kind": "independent_reduced_core",
+  "source_verification_level": "public_author_manuscript_and_author_thesis_crosscheck",
+  "final_publisher_pdf_verified": false,
+  "sources": [
+    {"id": "publisher", "url": "https://doi.org/10.1109/JSAC.2024.3460068", "type": "publisher_record", "verified": "title, abstract, bibliographic identity and sections"},
+    {"id": "author_fulltext", "url": "https://www.eurecom.fr/publication/7869/download/comsys-publi-7869.pdf", "type": "author_institution_fulltext", "pages": 16, "verified": "channel and MR evaluator equations; sections II, IV, V; Algorithm 2"},
+    {"id": "thesis_crosscheck", "url": null, "type": "author_supplied_doctoral_thesis", "document_section": "Chapter 4", "public_availability": "not established", "verified": "corresponding MR evaluator, phase penalty and algorithm descriptions", "redistributed": false}
+  ],
+  "mapping": [
+    {"implementation": "build_model, channels", "source": "author_fulltext", "section": "II-A/B", "equations": ["(1a)-(1c)"], "verification": "verified", "restriction": "deterministic LoS limit; 1-by-N UPA; normalized fixture link amplitudes"},
+    {"implementation": "evaluate, explicit-W identity", "source": "author_fulltext", "section": "IV-A", "equations": ["(24a)-(24b)", "(25b)-(25d)", "(26a)"], "verification": "verified", "restriction": "expectations reduce to deterministic values; noncoherent powers are summed"},
+    {"implementation": "utility_gradient, optimize", "source": "author_fulltext", "section": "V", "equations": [], "verification": "section-level method checked; equation numbers deliberately not asserted", "restriction": "fixed smoothing; analytic derivatives independently derived for LoS limit; one fixed-power phase stage"},
+    {"implementation": "allocate", "source": "author_fulltext", "section": "IV-A/B", "equations": ["(25a)-(25c)"], "verification": "underlying constraints verified", "deviation": "fixed satellite shares and exact linear feasibility bisection; not Algorithm 2 QT/CVX"},
+    {"implementation": "feasible candidate safeguard", "source": null, "verification": "independent implementation addition", "deviation": "phase candidate must improve feasible minimum SINR after power reoptimization"}
+  ],
+  "not_reproduced": ["finite-Rician statistical closed forms", "two-timescale channel design", "adaptive precoding AO", "unrestricted power allocation", "smoothing continuation", "original orbital figures and Monte Carlo campaign"],
+  "fixture": {"file": "fixture.json", "original_publication_inputs": false, "random_number_generator": "none"}
+}

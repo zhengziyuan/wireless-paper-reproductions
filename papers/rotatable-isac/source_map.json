@@ -1,0 +1,23 @@
+{
+  "paper_id": "rotatable-isac",
+  "title": "Low-Altitude ISAC with Rotatable Active and Passive Arrays",
+  "doi": "10.1109/JSTSP.2026.3693227",
+  "primary_source": "https://arxiv.org/html/2512.20987",
+  "identity_source": "https://arxiv.org/abs/2512.20987",
+  "release_scope": "independent reduced-size paper-model reproduction with explicitly different projected-ascent AO subsolvers; not all figures or original Algorithm1-4",
+  "equations": [
+    {"labels": ["2", "3", "4", "7", "9", "10", "11"], "implementation": "rotation, response / risac_rotation, risac_response", "scope": "Euler RxRyRz, actual rotated coordinates, one-sided directivity and analytic Jacobians"},
+    {"labels": ["12", "13", "14"], "implementation": "channels / risac_channels", "scope": "geometry multipath direct and reflected communication/sensing channels; Eq12b Hermitian bridge convention used literally"},
+    {"labels": ["17", "18b", "22", "23", "24"], "implementation": "evaluate / risac_evaluate", "scope": "dedicated sensing beams interfere with data, actual beampattern, normalized NMSE, exact scaling, weighted utility and hardware constraints"},
+    {"labels": ["Section III-A", "Section III-D"], "implementation": "optimize / risac_optimize", "scope": "outer fixed-iota AO; analytic gradient Armijo projection under angle box constraints"}
+  ],
+  "disclosures": [
+    "Deterministic two-user, 2x2 BS and 2x2 RIS, six-look normalized fixture differs from published figure scenes and 100-realization averages.",
+    "The precoder block uses analytic projected gradient ascent on the power ball, not the paper's QT/MM QCQP update.",
+    "The RIS phase block uses analytic phase-gradient ascent, not Riemannian conjugate gradient.",
+    "Angle updates use analytic Euler Jacobians and Armijo box projection, without the paper's Barzilai-Borwein initialization.",
+    "RIS begins with Rx(pi) to make its one-sided reflecting face visible to reciprocal BR directions; limits are centered on this initial frame.",
+    "Eq12b is used with its stated Hermitian outer-product bridge. No undocumented reciprocal-transpose convention correction is applied.",
+    "No QT/MM or RCG reproduction claim, global-optimum claim, exhaustive trade-off frontier, or full published sweep is made."
+  ]
+}
