@@ -245,6 +245,16 @@ agreement. `test_figures.py` exercises negative cases for missing curves/samples
 reference misuse and partial banks. Old failed solver receipts remain preserved
 with their original source hashes; they do not describe new-version residuals.
 
+`compare_sensing_closed_form.py` independently reconstructs the finite
+one-padded arrays without either production solver and checks the actual full
+Fig2 outputs from both languages: all nine91x361 gain/SINR maps, every phase,
+target metric and original nearest displacement. The fixed1e-10 relative
+and absolute comparison gates pass in the actual recorded check, available
+under `validation/sensing-correctness-v4/figure02-all9-full-map-independent-matlab-python-check.json`.
+This is a complete declared-convention analytical computation, not certification
+of the original historical figure or unpublished normalization. No schedule
+optimization or reference-ordinate fitting is used to conceal discrepancies.
+
 The complete-size ISAC case0 with a disclosed larger unreported W cap passed
 its original stopping/physical checks across all six schemes, but is one
 realization, not100. Its zero BS-RIS bridge is retained, not used to manufacture

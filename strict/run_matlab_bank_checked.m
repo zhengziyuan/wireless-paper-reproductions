@@ -9,14 +9,16 @@ manifest=jsondecode(fileread(manifestPath));assert(manifest.realizations_per_cas
 if strcmp(paper,'two-timescale-ma'),assert(manifest.nlos_per_geometry==1000);end
 assert(manifest.input_bank_complete&&manifest.expected_jobs==manifest.case_count*100);
 if ~isfolder(outputFolder),mkdir(outputFolder);end
-clear strict_ma_implementation_fingerprint strict_isac_implementation_fingerprint
+clear strict_ma_implementation_fingerprint strict_ma_full_v2_implementation_fingerprint strict_isac_implementation_fingerprint
 before=source_identity(base,package,paper);
-implementationBefore=engine_fingerprint(paper);
-binding=struct('paper_id',paper,'source_identity',before,'matlab_version',version, ...
+implementationBefore=engine_fingerprint(paper,configPath);
+binding=struct('paper_id',paper,'source_identity',{before},'matlab_version',version, ...
     'runtime_implementation_fingerprint',implementationBefore, ...
     'manifest_sha256',file_hash(manifestPath),'configuration_sha256',file_hash(configPath), ...
     'plan_sha256',file_hash(fullfile(bankFolder,'plan.json')),'expected_jobs',manifest.expected_jobs);
-startPath=fullfile(outputFolder,'execution-start-identity.json');
+% The versioned MA executor has its own numerical-engine start receipt.
+% Keep the outer wrapper binding separate so neither can overwrite the other.
+startPath=fullfile(outputFolder,'execution-wrapper-start-identity.json');
 if isfile(startPath)
     previous=jsondecode(fileread(startPath));
     % jsondecode can convert cell-of-struct arrays into struct arrays.
@@ -39,12 +41,12 @@ if strcmp(paper,'rotatable-isac')
     run_full_isac_figure(fullfile(bankFolder,'jobs'),outputFolder,configPath);
     implementation=strict_isac_implementation_fingerprint();
 else
-    run_full_ma_figure(fullfile(bankFolder,'jobs'),outputFolder,configPath);
-    implementation=strict_ma_implementation_fingerprint();
+    run_full_ma_figure_v2(fullfile(bankFolder,'jobs'),outputFolder,configPath);
+    implementation=strict_ma_full_v2_implementation_fingerprint(configPath);
 end
 % Force a new dependency/runtime digest, not the engine's persistent cache.
-clear strict_ma_implementation_fingerprint strict_isac_implementation_fingerprint
-implementationAfter=engine_fingerprint(paper);
+clear strict_ma_implementation_fingerprint strict_ma_full_v2_implementation_fingerprint strict_isac_implementation_fingerprint
+implementationAfter=engine_fingerprint(paper,configPath);
 after=source_identity(base,package,paper);items=cell(numel(manifest.files),1);valid=true;
 for index=1:numel(manifest.files)
     entry=manifest.files(index);[~,stem]=fileparts(entry.filename);
@@ -63,7 +65,7 @@ for index=1:numel(manifest.files)
 end
 receipt=struct('paper_id',paper,'engine','matlab', ...
     'scope','actual_full_bank_execution_time_source_identity_NOT_convergence_or_reference_certificate', ...
-    'binding',binding,'implementation_fingerprint',implementation,'sources_before',before,'sources_after',after, ...
+    'binding',binding,'implementation_fingerprint',implementation,'sources_before',{before},'sources_after',{after}, ...
     'runtime_implementation_fingerprint_after',implementationAfter, ...
     'runtime_dependency_identity_unchanged',strcmp(implementationBefore,implementationAfter)&&strcmp(implementation,implementationBefore), ...
     'source_unchanged_during_run',isequal(before,after),'expected_jobs',manifest.expected_jobs, ...
@@ -74,19 +76,23 @@ assert(receipt.source_unchanged_during_run,'MATLAB sources changed during actual
 assert(receipt.runtime_dependency_identity_unchanged,'MATLAB engine/runtime dependency digest changed during actual full execution');
 end
 
-function value=engine_fingerprint(paper)
+function value=engine_fingerprint(paper,configPath)
 if strcmp(paper,'rotatable-isac'),value=strict_isac_implementation_fingerprint();
-else,value=strict_ma_implementation_fingerprint();end
+else,value=strict_ma_full_v2_implementation_fingerprint(configPath);end
 end
 
 function records=source_identity(base,package,paper)
 if strcmp(paper,'rotatable-isac')
     names={'run_strict_rotatable_isac.m','run_full_isac_figure.m','strict_isac_implementation_fingerprint.m'};
 else
-    names={'run_strict_two_timescale_ma.m','run_full_ma_figure.m','strict_ma_implementation_fingerprint.m','ma_exact_coordinate.m'};
+    names={'run_strict_two_timescale_ma_full_v2.m','run_full_ma_figure_v2.m','strict_ma_full_v2_implementation_fingerprint.m','ma_exact_coordinate.m'};
 end
 records=cell(numel(names)+1,1);
-for k=1:numel(names),records{k}=struct('relative_path',[paper,'/',names{k}],'sha256',file_hash(fullfile(package,names{k})));end
+for k=1:numel(names)
+    expected=fullfile(package,names{k});[~,functionName]=fileparts(names{k});
+    assert(strcmpi(which(functionName),expected),'Selected MATLAB source is shadowed by another path');
+    records{k}=struct('relative_path',[paper,'/',names{k}],'sha256',file_hash(expected));
+end
 records{end}=struct('relative_path','run_matlab_bank_checked.m','sha256',file_hash(fullfile(base,'run_matlab_bank_checked.m')));
 end
 

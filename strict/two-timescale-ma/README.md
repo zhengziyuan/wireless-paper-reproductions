@@ -234,12 +234,29 @@ here. The primary base-MATLAB commands are:
 
 ```matlab
 addpath(pwd)
-run_strict_two_timescale_ma('component-matlab.json',[],...
+run_strict_two_timescale_ma_full_v2('component-matlab.json',[],...
     'configs/full-ao10000-fig03-18-v2.json');
-run_strict_two_timescale_ma('scenario-matlab.json',...
+run_strict_two_timescale_ma_full_v2('scenario-matlab.json',...
     'output/figure5/jobs/case-000-mc-000.json','output/figure5/run_config.json');
-run_full_ma_figure('output/figure5/jobs','output/figure5/matlab');
+run_full_ma_figure_v2('output/figure5/jobs','output/figure5/matlab-full-v2');
 ```
+
+The separately versioned MATLAB-full-v2 entry repairs the first assignment to
+an empty history struct array; every numerical helper is otherwise exactly
+text-identical to the preserved frozen engine. The original MATLAB engine,
+its failed startup receipts, and the live Python implementation are unchanged.
+The old batch's200 startup-error files are **not200 numerical scenarios**.
+A WORK first full N6/M5 case has actually executed, and an independent oracle
+recomputed all5×1000 physical sample rates, all accepted design objectives,
+coordinate certificates and the original5e-5 stopping conditions; it also
+matched the shared-input Python positions and curves. See
+[the independent full-case receipt](../validation/two-timescale-ma-corrected-zf/first-full-job-matlab-recordfix-independent-validation-v1.json)
+and [the exact numerical-source body proof](../validation/two-timescale-ma-corrected-zf/matlab-full-v2-source-body-identity.json).
+These establish one full case, **not the new200-case bank or historical-figure
+closeness**. The new executor uses fresh before/after source/runtime identities,
+checks complete100×1000 exported inputs and criterion stops, and retains every
+failed/stale attempt. It needs a fresh output folder; do not relabel the old
+startup files as this version.
 
 For the optional SDPT3 branch only, run CVX setup/add its paths. In the tested
 official CVX2.2.2 layout the `double vec` compatibility path points to CVX's

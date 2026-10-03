@@ -28,6 +28,7 @@ jobs:
       - run: python strict/test_hotspot_statistical_reference.py
       - run: python strict/test_matlab_bank_render.py
       - run: python strict/test_sensing_full_state_compare.py
+      - run: python strict/test_sensing_closed_form_compare.py
       - run: python strict/mis-communications/test_figure_inputs.py
       - run: python strict/mis-sensing/test_figure_inputs.py
       - run: python strict/two-timescale-ma/test_correlated_derivatives.py

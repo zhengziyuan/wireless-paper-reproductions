@@ -1,0 +1,165 @@
+{
+  "scope": "independent_direct_finite_array_all_nine_full_scene_analytical_panels_NOT_historical_figure_certificate",
+  "original_dimensions": {
+    "ms1": 400,
+    "ms2": 256,
+    "positions": 25,
+    "targets": 9
+  },
+  "angular_samples_per_panel": 32851,
+  "all_nine_maps_both_languages_independently_verified": true,
+  "errors": [
+    {
+      "language": "python",
+      "phi_error": 0.0,
+      "theta_error": 0.0,
+      "schedule_error": 0.0,
+      "minimum_metric_error": 4.440892098500626e-16,
+      "panels": [
+        {
+          "target": 0,
+          "normalized_gain_error": 4.440892098500626e-16,
+          "sinr_error": 1.4210854715202004e-13,
+          "target_metric_error": 0.0
+        },
+        {
+          "target": 1,
+          "normalized_gain_error": 4.440892098500626e-16,
+          "sinr_error": 1.4210854715202004e-13,
+          "target_metric_error": 0.0
+        },
+        {
+          "target": 2,
+          "normalized_gain_error": 6.661338147750939e-16,
+          "sinr_error": 1.7053025658242404e-13,
+          "target_metric_error": 0.0
+        },
+        {
+          "target": 3,
+          "normalized_gain_error": 3.3306690738754696e-16,
+          "sinr_error": 6.394884621840902e-14,
+          "target_metric_error": 1.4210854715202004e-14
+        },
+        {
+          "target": 4,
+          "normalized_gain_error": 5.551115123125783e-16,
+          "sinr_error": 2.2737367544323206e-13,
+          "target_metric_error": 0.0
+        },
+        {
+          "target": 5,
+          "normalized_gain_error": 3.3306690738754696e-16,
+          "sinr_error": 5.684341886080802e-14,
+          "target_metric_error": 1.4210854715202004e-14
+        },
+        {
+          "target": 6,
+          "normalized_gain_error": 4.440892098500626e-16,
+          "sinr_error": 8.526512829121202e-14,
+          "target_metric_error": 7.105427357601002e-14
+        },
+        {
+          "target": 7,
+          "normalized_gain_error": 3.3306690738754696e-16,
+          "sinr_error": 4.263256414560601e-14,
+          "target_metric_error": 0.0
+        },
+        {
+          "target": 8,
+          "normalized_gain_error": 2.220446049250313e-15,
+          "sinr_error": 4.121147867408581e-13,
+          "target_metric_error": 1.4210854715202004e-14
+        }
+      ]
+    },
+    {
+      "language": "matlab",
+      "phi_error": 1.1102230246251565e-16,
+      "theta_error": 1.1102230246251565e-16,
+      "schedule_error": 0.0,
+      "minimum_metric_error": 6.439293542825908e-15,
+      "panels": [
+        {
+          "target": 0,
+          "normalized_gain_error": 3.885780586188048e-15,
+          "sinr_error": 9.663381206337363e-13,
+          "target_metric_error": 9.663381206337363e-13
+        },
+        {
+          "target": 1,
+          "normalized_gain_error": 2.9976021664879227e-15,
+          "sinr_error": 7.958078640513122e-13,
+          "target_metric_error": 6.439293542825908e-15
+        },
+        {
+          "target": 2,
+          "normalized_gain_error": 2.55351295663786e-15,
+          "sinr_error": 6.536993168992922e-13,
+          "target_metric_error": 5.115907697472721e-13
+        },
+        {
+          "target": 3,
+          "normalized_gain_error": 2.3314683517128287e-15,
+          "sinr_error": 4.121147867408581e-13,
+          "target_metric_error": 2.0605739337042905e-13
+        },
+        {
+          "target": 4,
+          "normalized_gain_error": 2.886579864025407e-15,
+          "sinr_error": 7.389644451905042e-13,
+          "target_metric_error": 1.4210854715202004e-13
+        },
+        {
+          "target": 5,
+          "normalized_gain_error": 3.1086244689504383e-15,
+          "sinr_error": 3.197442310920451e-13,
+          "target_metric_error": 4.263256414560601e-14
+        },
+        {
+          "target": 6,
+          "normalized_gain_error": 2.220446049250313e-15,
+          "sinr_error": 5.258016244624741e-13,
+          "target_metric_error": 1.0658141036401503e-13
+        },
+        {
+          "target": 7,
+          "normalized_gain_error": 2.4424906541753444e-15,
+          "sinr_error": 3.126388037344441e-13,
+          "target_metric_error": 7.283063041541027e-14
+        },
+        {
+          "target": 8,
+          "normalized_gain_error": 1.3322676295501878e-15,
+          "sinr_error": 2.2737367544323206e-13,
+          "target_metric_error": 4.263256414560601e-14
+        }
+      ]
+    }
+  ],
+  "fixed_numerical_gate": {
+    "relative": 1e-10,
+    "absolute": 1e-10
+  },
+  "target_sinr_db": [
+    22.27224410558162,
+    0.8050065155970396,
+    22.272244105581635,
+    17.8382524584043,
+    18.345882094147264,
+    17.83825245840429,
+    17.83307727429523,
+    11.144165556393528,
+    17.83307727429522
+  ],
+  "production_solver_imported": false,
+  "unpublished_normalization_or_origin_recovered": false,
+  "original_figure_reproduction_certified": false,
+  "all_iterative_paper_figures_completed": false,
+  "input_file_sha256": {
+    "python": "5853855e9da437c97481e5c14f81f41bc6856cbf06b12bfc1f813c5743aed7dd",
+    "matlab": "efb658a311d927ff2944a5e7851f4f5e05608cdad3a0169ee8fd2859d3ebb0a1"
+  },
+  "independent_evaluator_sha256": "346b971ba9877e11e52f767ca4843d0ff626958493a2971fda52622b4cc3b838",
+  "independent_evaluation_source_unchanged": true,
+  "prior_execution_interval_identity_not_added_post_hoc": true
+}

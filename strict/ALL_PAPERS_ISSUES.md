@@ -154,6 +154,53 @@ the observed failure.
 
 ## Execution gates that remain mandatory
 
+The complete analytical MIS sensing Fig2 has now actually run in both
+languages. A third independent finite-array evaluator, importing neither
+production solver, checks all nine 91x361 hemisphere gain/SINR maps, all
+400/256 phases, all25 possible overlaps, the source nearest-grid schedule
+and every target metric under the declared literal inverse-W/single-PRI
+normalization. [The actual full-map receipt](validation/sensing-correctness-v4/figure02-all9-full-map-independent-matlab-python-check.json)
+passes the fixed1e-10 relative/absolute gate. This is numerical correctness
+of the declared analytical convention, **not recovery of the original
+unpublished phase/noise convention or historical Fig2**. In particular the
+second target's coarse nearest displacement gives0.8050dB; that discrepancy
+is not hidden by optimizing a replacement schedule.
+
+ISAC's RCG/PGA500 caps and1e-6/1e-8 controls are reconstructed, not values
+assigned in the author manuscript. Its100-channel count and physical
+dimensions are reported and remain fixed. Separate10000-cap work replays
+preserve all500 original trajectory/evaluation records bitwise but still
+fail the true gradient/step criteria. A second complete live scenario also
+retains four RIS line-search failures. See [the direct source-control audit](rotatable-isac/SOURCE_BUDGET_AUDIT.md).
+Neither larger budgets alone nor exact-cache equivalence establishes a remedy.
+
+Cooperative-satellite v2's72 broad exact-increment components have now passed
+independent MATLAB evaluation, but its actual full M30 MATLAB preflight is
+**failed**: the unchanged original QT physical/primal/monotonicity gates
+reject the backend solution. That full raw failure is retained and is not
+replaced by the successful Python preflight. Hotspot CDF samples12 and22
+have work-only same-SDP positive-scaling diagnostics with independently
+80-digit PSD-dual/feasible-primal gap checks below the unchanged1e-5 gate;
+MATLAB and a new complete source-bound CDF chain remain to be checked.
+
+The first independent MATLAB Fig3 AO10000 batch fails before the numerical
+optimization: an empty zero-field struct array rejects the first populated
+coordinate record. All200 startup-error receipts are preserved;200 output
+files do **not** mean200 numerical cases were executed. A separately versioned
+MATLAB recording-container repair must be tested on a complete original
+input before a fresh full batch. The original Python numerical engine is not
+changed by this MATLAB serialization fix. The surrounding execution wrapper
+also expanded a cell-valued source identity into a struct array; that invalid
+receipt is rejected, and the scalar-wrapper correction does not retrofit
+an old successful execution certificate. These are reconstruction/serialization
+errors, not errors in the paper's physical model or algorithms.
+The separately versioned production MATLAB-full-v2 entry has now actually
+completed the same full first N6/M5 input with all five1000-sample schemes,
+both original stops and all132/240 coordinate records present. The source
+body is unchanged except the recording-container repair; this one-case
+check does not retroactively validate the old200 startup receipts or finish
+a new200-case bank. The outer/inner start bindings now use distinct files.
+
 1. Bind immutable source, configuration, runtime and shared input identities.
 2. Execute all original dimensions, starts/Monte Carlo samples, subproblems,
    schemes and panels; never count preparation, timeouts or partial banks as

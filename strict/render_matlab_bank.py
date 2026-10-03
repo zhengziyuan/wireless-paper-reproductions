@@ -129,6 +129,7 @@ def read_bank(paper,bank,results):
         require(manifest.get('nlos_per_geometry')==1000 and config.get('geometry_realizations')==100
                 and config.get('nlos_realizations_per_geometry')==1000,'Full100 x1000 MA population required')
     identity=load(results/'execution-identity.json')
+    require(isinstance(identity,dict),'Scalar actual execution-time identity required; malformed arrays cannot acquire a post-hoc certificate')
     require(identity.get('paper_id')==paper and identity.get('engine')=='matlab'
             and identity.get('source_unchanged_during_run') is True and identity.get('all_result_identities_pass') is True,
             'Actual independent MATLAB execution-time identities required; no post-hoc certificate')

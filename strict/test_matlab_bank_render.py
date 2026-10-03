@@ -1,6 +1,9 @@
 """Synthetic serialization/gate tests only, NOT executed scientific banks."""
 import copy
 import unittest
+from pathlib import Path
+from unittest.mock import patch
+import render_matlab_bank
 from render_matlab_bank import ISAC_NAMES,MA_NAMES,normalize_isac,normalize_ma,inner_complete,hold
 
 
@@ -30,6 +33,15 @@ def ma_mock():
 
 
 class MatlabSchema(unittest.TestCase):
+    def test_malformed_execution_identity_array_is_rejected_explicitly(self):
+        manifest=dict(input_bank_complete=True,realizations_per_case=100,expected_jobs=100,
+                      case_count=1,config_sha256='frozen',nlos_per_geometry=1000)
+        config=dict(geometry_realizations=100,nlos_realizations_per_geometry=1000)
+        with patch.object(render_matlab_bank,'load',side_effect=[manifest,{'cases':[{}]},config,[{'paper_id':'two-timescale-ma'}]]), \
+             patch.object(render_matlab_bank,'sha',return_value='frozen'):
+            with self.assertRaisesRegex(ValueError,'Scalar actual execution-time identity'):
+                render_matlab_bank.read_bank('two-timescale-ma',Path('bank'),Path('results'))
+
     def test_six_matlab_arrays_normalize_without_python_metric_substitution(self):
         raw=isac_mock();result=normalize_isac(raw)
         for index,name in enumerate(ISAC_NAMES):self.assertEqual(result['metrics'][name],raw['metrics'][index])

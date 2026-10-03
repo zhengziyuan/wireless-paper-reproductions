@@ -1,0 +1,166 @@
+{
+  "scope": "independent_validation_one_complete_shared_input_MATLAB_WORK_record_storage_fix_not_full200_or_historical_figure",
+  "input_fingerprint": "4b58e1dae7ffc2f28ce4aa6654272d7d65032b5917929a3e3b12b2875a19ad43",
+  "source_files_sha256": {
+    "work\\ma-quadrature-audit\\first-full-job-matlab-work-recordfix.json": "35c4fc159e6c0d259fb6120da62d12eddc2f65163bcf323d9a550ed31af458d9",
+    "work\\full-paper-banks\\ma-figure03-20261004-ao10000-v2\\case-000-mc-000-python.json": "9e0d718fa2e9c8ad2f04156f3ae2594b48982408a7b67438516fb86d59105625",
+    "work\\full-paper-banks\\ma-figure03-20261004-ao10000-v2\\jobs\\case-000-mc-000.json": "655a72a105a5feeaefe7a28311bc3fcb5688e3cbb783339927c57aa7a49ae386",
+    "work\\full-paper-banks\\ma-figure03-20261004-ao10000-v2\\run_config.json": "72bd6211cd90e238bfa34a25d4f8e56d29454b01c51aca32aa483488475a0d80"
+  },
+  "MATLAB_original_frozen_implementation_fingerprint": "bfd601ba59ef0048ff887c1cef1893ba95a774c899bd6c9e9e25cff15d2b7d6f",
+  "MATLAB_WORK_record_storage_fix_fingerprint": "3ea038292cf4ebd4b436b6edb9aa76daa17ce27f677d0a172ac2c38b303e2ed7",
+  "Python_scientific_fingerprint": "b3b8134f4c9be5213dee91930e240792be509003a1b840848131e1f2621ee5ef",
+  "same_runtime_as_old_MATLAB_bank_claimed": false,
+  "independent_physical_algorithms_reimport_production_core": false,
+  "full_N": 6,
+  "full_M": 5,
+  "nlos_per_scheme": 1000,
+  "schemes": {
+    "MA-MRT": {
+      "sample_count": 1000,
+      "all_samples_freshly_recomputed": true,
+      "max_sample_rate_abs_error": 7.105427357601002e-15,
+      "sample_rate_atol": 1e-07,
+      "all_rate_checks_pass": true,
+      "mean_raw_sample_identity_abs_error": 3.552713678800501e-15,
+      "all1000_fixed_QT_or_waterfill_stops": true,
+      "maximum_power_excess": 4.440892098500626e-16,
+      "power_feasible": true,
+      "reported_nonconverged_samples": 0
+    },
+    "MA-ZF": {
+      "sample_count": 1000,
+      "all_samples_freshly_recomputed": true,
+      "max_sample_rate_abs_error": 1.7763568394002505e-14,
+      "sample_rate_atol": 1e-07,
+      "all_rate_checks_pass": true,
+      "mean_raw_sample_identity_abs_error": 3.552713678800501e-15,
+      "all1000_fixed_QT_or_waterfill_stops": true,
+      "maximum_power_excess": 4.440892098500626e-16,
+      "power_feasible": true,
+      "reported_nonconverged_samples": 0
+    },
+    "FPA-MRT": {
+      "sample_count": 1000,
+      "all_samples_freshly_recomputed": true,
+      "max_sample_rate_abs_error": 5.684341886080802e-14,
+      "sample_rate_atol": 1e-07,
+      "all_rate_checks_pass": true,
+      "mean_raw_sample_identity_abs_error": 0.0,
+      "all1000_fixed_QT_or_waterfill_stops": true,
+      "maximum_power_excess": 6.661338147750939e-16,
+      "power_feasible": true,
+      "reported_nonconverged_samples": 0
+    },
+    "FPA-ZF": {
+      "sample_count": 1000,
+      "all_samples_freshly_recomputed": true,
+      "max_sample_rate_abs_error": 5.684341886080802e-14,
+      "sample_rate_atol": 1e-07,
+      "all_rate_checks_pass": true,
+      "mean_raw_sample_identity_abs_error": 7.105427357601002e-15,
+      "all1000_fixed_QT_or_waterfill_stops": true,
+      "maximum_power_excess": -2.220446049250313e-15,
+      "power_feasible": true,
+      "reported_nonconverged_samples": 0
+    },
+    "FPA-OPT": {
+      "sample_count": 1000,
+      "all_samples_freshly_recomputed": true,
+      "max_sample_rate_abs_error": 6.892264536872972e-13,
+      "sample_rate_atol": 1e-07,
+      "all_rate_checks_pass": true,
+      "mean_raw_sample_identity_abs_error": 3.552713678800501e-15,
+      "all1000_fixed_QT_or_waterfill_stops": true,
+      "maximum_power_excess": 1.1102230246251565e-15,
+      "power_feasible": true,
+      "reported_nonconverged_samples": 0
+    }
+  },
+  "design_and_certificates": {
+    "mrt": {
+      "accepted_position_count": 23,
+      "all_position_constraints": true,
+      "all_design_objectives_recomputed": true,
+      "max_design_objective_abs_error": 1.7763568394002505e-15,
+      "final_fractional_increase": 2.247172225329863e-05,
+      "original_threshold": 5e-05,
+      "criterion_stop_verified": true,
+      "coordinate_count": 132,
+      "all_coordinate_certificates_and_minorant_identities_verified": true,
+      "max_gap_to_tolerance_ratio": 2.93577638733553e-06,
+      "max_constraint_to_tolerance_ratio": 1.5556295496044533e-07,
+      "minimum_reported_minorant_gap": 0
+    },
+    "zf": {
+      "accepted_position_count": 41,
+      "all_position_constraints": true,
+      "all_design_objectives_recomputed": true,
+      "max_design_objective_abs_error": 7.105427357601002e-15,
+      "final_fractional_increase": 4.791621020515417e-05,
+      "original_threshold": 5e-05,
+      "criterion_stop_verified": true,
+      "coordinate_count": 240,
+      "all_coordinate_certificates_and_minorant_identities_verified": true,
+      "max_gap_to_tolerance_ratio": 0.0007862924561409127,
+      "max_constraint_to_tolerance_ratio": 1.2492230167807186e-07,
+      "minimum_reported_minorant_gap": 1.8351685319828448e-05
+    }
+  },
+  "mrt_all_accepted_positions_all1000_MC_recomputed": true,
+  "mrt_history_max_MC_mean_abs_error": 5.329070518200751e-15,
+  "paired_Python_MATLAB": {
+    "mrt": {
+      "same_sweep_count": true,
+      "max_position_abs_error": 3.3306690738754696e-16,
+      "max_objective_abs_error": 3.552713678800501e-15,
+      "position_atol": 1e-08,
+      "objective_atol": 1e-08,
+      "all_paired_positions_objectives_within_declared_tolerance": true
+    },
+    "zf": {
+      "same_sweep_count": true,
+      "max_position_abs_error": 7.049916206369744e-15,
+      "max_objective_abs_error": 7.105427357601002e-15,
+      "position_atol": 1e-08,
+      "objective_atol": 1e-08,
+      "all_paired_positions_objectives_within_declared_tolerance": true
+    },
+    "MA-MRT": {
+      "sample_count": 1000,
+      "max_sample_rate_abs_error": 1.4210854715202004e-14,
+      "sample_rate_atol": 1e-07,
+      "all_sample_rates_within_declared_tolerance": true
+    },
+    "MA-ZF": {
+      "sample_count": 1000,
+      "max_sample_rate_abs_error": 2.6645352591003757e-13,
+      "sample_rate_atol": 1e-07,
+      "all_sample_rates_within_declared_tolerance": true
+    },
+    "FPA-MRT": {
+      "sample_count": 1000,
+      "max_sample_rate_abs_error": 5.684341886080802e-14,
+      "sample_rate_atol": 1e-07,
+      "all_sample_rates_within_declared_tolerance": true
+    },
+    "FPA-ZF": {
+      "sample_count": 1000,
+      "max_sample_rate_abs_error": 5.684341886080802e-14,
+      "sample_rate_atol": 1e-07,
+      "all_sample_rates_within_declared_tolerance": true
+    },
+    "FPA-OPT": {
+      "sample_count": 1000,
+      "max_sample_rate_abs_error": 6.892264536872972e-13,
+      "sample_rate_atol": 1e-07,
+      "all_sample_rates_within_declared_tolerance": true
+    }
+  },
+  "all_independent_physical_gates_passed": true,
+  "all_paired_tolerance_gates_passed": true,
+  "unchanged_inputs_raw_outputs": true,
+  "full200_completed": false,
+  "historical_figure_closeness_verified": false,
+  "elapsed_seconds": 91.07758669997565
+}
