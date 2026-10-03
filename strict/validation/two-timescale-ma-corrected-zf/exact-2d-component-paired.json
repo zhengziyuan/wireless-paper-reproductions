@@ -1,0 +1,79 @@
+{
+  "paper_id": "two-timescale-ma",
+  "scope": "actual_full_N6_M5_two_original_coordinate_subproblems_physical_pairing",
+  "physical_point_objective_and_certificate_parity_passed": true,
+  "relative_tolerance": 1e-09,
+  "absolute_tolerance": 1e-10,
+  "modes": {
+    "mrt": {
+      "maximum_full_array_position_difference": 0.0,
+      "independent_checks": {
+        "Python": {
+          "before": 7.631633360635641,
+          "after": 7.953344744129561,
+          "source_surrogate": 7.887715228035038,
+          "gap_recomputed_from_original_minorant_gradient_and_all_polygon_vertices": 1.7510403131416741e-15,
+          "maximum_primal_violation": 0.0,
+          "source_gap_tolerance": 7.631633360635642e-10,
+          "all_other_antennas_unchanged": true,
+          "independent_source_certificate_passed": true
+        },
+        "MATLAB": {
+          "before": 7.631633360635641,
+          "after": 7.953344744129561,
+          "source_surrogate": 7.887715228035038,
+          "gap_recomputed_from_original_minorant_gradient_and_all_polygon_vertices": 1.7510403131416741e-15,
+          "maximum_primal_violation": 0.0,
+          "source_gap_tolerance": 7.631633360635644e-10,
+          "all_other_antennas_unchanged": true,
+          "independent_source_certificate_passed": true
+        }
+      }
+    },
+    "zf": {
+      "maximum_full_array_position_difference": 0.0,
+      "independent_checks": {
+        "Python": {
+          "before": 11.157068970008563,
+          "after": 11.189623467034766,
+          "source_surrogate": 11.173665437738336,
+          "gap_recomputed_from_original_minorant_gradient_and_all_polygon_vertices": 2.0128181518402428e-14,
+          "maximum_primal_violation": 0.0,
+          "source_gap_tolerance": 1.1157068970008564e-09,
+          "all_other_antennas_unchanged": true,
+          "independent_source_certificate_passed": true
+        },
+        "MATLAB": {
+          "before": 11.157068970008563,
+          "after": 11.189623467034766,
+          "source_surrogate": 11.173665437738336,
+          "gap_recomputed_from_original_minorant_gradient_and_all_polygon_vertices": 2.0128181518402428e-14,
+          "maximum_primal_violation": 0.0,
+          "source_gap_tolerance": 1.1157068970008541e-09,
+          "all_other_antennas_unchanged": true,
+          "independent_source_certificate_passed": true
+        }
+      }
+    }
+  },
+  "nonphysical_bookkeeping_retained_not_required_equal": {
+    "mrt": {
+      "Python_finite_candidate_count": 10,
+      "MATLAB_finite_candidate_count": 10,
+      "Python_solver_iterations": null,
+      "MATLAB_solver_iterations": []
+    },
+    "zf": {
+      "Python_finite_candidate_count": 7,
+      "MATLAB_finite_candidate_count": 8,
+      "Python_solver_iterations": null,
+      "MATLAB_solver_iterations": []
+    }
+  },
+  "all_fields_or_bitwise_parity_claimed": false,
+  "state_field_available": false,
+  "full100_geometry_figure_complete": false,
+  "original_curve_closeness_verified": false,
+  "Python_result_sha256": "d4159466ef72c718cfd91004c3b6499c8b23e2ae778b8b5779cef0d1a1ac38a6",
+  "MATLAB_result_sha256": "fcdc957d37231b0cb9bf97b1cfc13e14b420186c66f18d0770e8b6770f41a608"
+}

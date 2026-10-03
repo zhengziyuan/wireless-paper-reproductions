@@ -14,6 +14,9 @@
     "max_backtracks": 60
   },
   "inferred_or_tuned": {
+    "fig7_geometry_erratum": "COMM-GEOMETRY-FIG7: literal2x1 Eq3 implies even azimuth fields, contradicting original EPS. Figure uses same two elements in1x2 orientation with source shape retained. No phase/spacing fitted to original curves.",
+    "stable_objective_difference": "Same LSE minimized objective, evaluated by exact field increments and stable log1p/expm1 for small changes; independent75-digit Decimal full-dimension tests. No accepted-value slack.",
+    "accuracy_share_guard": "After exhausting raw PR and recorded steepest-block retries, a block below tolerance/sqrt(number_of_blocks) may remain unchanged; the full actual global KKT measure must still meet the unchanged threshold. This prevents machine-precision inactive blocks obstructing active blocks, and is not an early convergence certificate.",
     "line_search": "Original distinct per-block alpha backtracking: each block uses actual projected/retracted displacement Armijo. The jointly combined block step is checked with total actual-displacement Armijo and is commonly scaled only if necessary; this coupling safeguard and constants are not specified in the paper. Common-alpha mode remains diagnostic only.",
     "initialization": "Portable Park-Miller phases, independent positive simplex entries then row normalization; seed not published.",
     "scheduling_recovery": "Largest relaxed entry, smallest index on exact tie; paper specifies thresholding but not its threshold.",

@@ -11,6 +11,8 @@ from core import (effective_rows,evaluate,active_qt_update,phase_sdr_update,
                   criterion_gradient,phase_rgd,phase_surrogate,qt_parameters,ao,two_stage,qt_loop)
 from scenario import sample_scenario
 from termination import scheme_status,numerical_gate
+from run_support import source_hashes,unchanged,save_receipt,checkpoint_contract,load_checkpoint
+from instantaneous_sdr_guard import install as install_original_sdr_numerical_guard
 
 
 def numerical_json(value):
@@ -53,9 +55,12 @@ def chain_test(config):
             'physical_constraint_violation':float(violation),'ao_monotone_pass':bool(np.all(np.diff(h)>=-1e-5))},'full_reproduction_pass':False}
 
 
-def full_run(config,sweep_id=None,csi='instantaneous'):
+def full_run(config,sweep_id=None,csi='instantaneous',checkpoint_dir=None):
     if csi!='instantaneous':
-        raise RuntimeError(config['statistical_csi_issue']+' Statistical branch is not implemented; no LoS/SCA substitute run.')
+        if sweep_id not in (None,'statistical'):raise ValueError('Statistical CSI uses its own original figure3-10 grid; select --sweep statistical or omit --sweep.')
+        from run_statistical import run
+        return run(config,True,checkpoint_dir)
+    hashes=source_hashes(['core.py','scenario.py','termination.py','run.py','run_support.py','instantaneous_sdr_guard.py','full_config.json'])
     sweeps=config['sweeps'] if sweep_id is None else [s for s in config['sweeps'] if s['id']==sweep_id]
     if sweep_id=='base': sweeps=[{'id':'base','parameter':'power_w','values':[config['reported']['power_w']]}]
     if not sweeps: raise ValueError('Unknown sweep id')
@@ -67,13 +72,21 @@ def full_run(config,sweep_id=None,csi='instantaneous'):
                 if k in sweep: scene['reported'][k]=sweep[k]
             scene['reported']['K']=scene['reported']['J']-scene['reported']['U']; t=scene['tuned_not_reported']
             rng=np.random.default_rng(t['seed']); samples=[]
+            contract=checkpoint_contract(scene,hashes)
+            point_dir=None if checkpoint_dir is None else Path(checkpoint_dir)/(sweep['id']+'-'+contract['sha256'][:16])
             for index in range(t['monte_carlo_realizations']):
+                checkpoint=None if point_dir is None else point_dir/f'sample-{index:04d}.json'
+                cached=None if checkpoint is None else load_checkpoint(checkpoint,contract)
+                if cached is not None:
+                    samples.append(cached['sample']);rng.bit_generator.state=cached['rng_state_after'];continue
                 try:
                     sample=full_sample(scene,rng); sample['index']=index
                 except (RuntimeError,ValueError,cp.error.SolverError) as error:
-                    sample={'index':index,'status':'failed','error':str(error),'physical_constraint_pass':False,
+                    sample={'index':index,'status':'failed','error':str(error),'failure_receipt':getattr(error,'receipt',None),'physical_constraint_pass':False,
                             'convergence_pass':False,'solver_primal_pass':False,'qt_sdr_bound_pass':False,'valid_sample':False}
                 samples.append(sample)
+                if not unchanged(hashes):raise RuntimeError('Executed numerical sources changed; mixed-source Monte Carlo bank is not certified.')
+                if checkpoint is not None:save_receipt(checkpoint,{'contract':contract,'sample':sample,'rng_state_after':rng.bit_generator.state})
                 print(json.dumps({'progress':sweep['id'],'value':value,'completed_mc':index+1,'required_mc':t['monte_carlo_realizations'],'elapsed_seconds':time.perf_counter()-started}),flush=True)
             raw={scheme:float(np.mean([x[scheme]['hu_sum_rate'] for x in samples])) if all(scheme in x for x in samples) else None for scheme in ('AO','AO20','AO100','TwoStage','NoRIS','RandRIS')}
             valid=bool(len(samples)==t['monte_carlo_realizations'] and all(x['valid_sample'] for x in samples))
@@ -89,7 +102,8 @@ def full_run(config,sweep_id=None,csi='instantaneous'):
             'checks':{key:all(x[key] for r in results for x in r['samples']) for key in ('physical_constraint_pass','convergence_pass','solver_primal_pass','qt_sdr_bound_pass')},
             'overall_implemented_scope_success':bool(results and all(r['valid_figure_point'] for r in results)),
             'all_configured_sweeps_requested':sweep_id is None,
-            'full_reproduction_pass':False,'remaining':['Statistical CSI original mathematical consistency','Final publication equivalence','Agreement with published figure data']}
+            'full_reproduction_pass':False,'remaining':['Statistical CSI is explicit corrected QT erratum, not printed invalid SOC','Final publication equivalence','Agreement with published figure data'],
+            'executed_source_hashes':hashes,'source_unchanged_during_run':unchanged(hashes),'configuration':config}
 
 
 def full_case(config):
@@ -121,6 +135,7 @@ def full_case(config):
 
 def full_sample(scene,rng,progress=None):
     """One intact MC sample, retaining original updates plus independent receipts."""
+    install_original_sdr_numerical_guard()
     t=scene['tuned_not_reported']; f=sample_scenario(scene,rng)
     direct,R,nhu,phi=(f[k] for k in ('direct','cascade','nhu','phi0')); U=direct.shape[0]
     hu=effective_rows(direct,R,phi); noise,power,target=f['noise'],f['power'],f['nhu_target']
@@ -252,6 +267,7 @@ if __name__=='__main__':
     parser.add_argument('--config',type=Path,default=Path(__file__).with_name('full_config.json')); parser.add_argument('--sweep')
     parser.add_argument('--csi',default='instantaneous',choices=['instantaneous','statistical'])
     parser.add_argument('--output',type=Path); parser.add_argument('--fixture-output',type=Path)
+    parser.add_argument('--checkpoint-dir',type=Path,help='Persist every full Monte Carlo realization, with exact source/configuration and RNG state matching on resume')
     args=parser.parse_args()
     config=json.loads(args.config.read_text())
     if args.component_test:
@@ -261,11 +277,17 @@ if __name__=='__main__':
         result=component_test(fixture)
     elif args.scenario_test: result=scene_test(config)
     elif args.chain_test: result=chain_test(config)
-    elif args.full_case: result=full_case(config)
-    elif args.full: result=full_run(config,args.sweep,args.csi)
+    elif args.full_case:
+        if args.csi=='statistical':
+            from run_statistical import run
+            result=run(config,False,args.checkpoint_dir)
+        else:
+            hashes=source_hashes(['core.py','scenario.py','termination.py','run.py','run_support.py','instantaneous_sdr_guard.py','full_config.json'])
+            result=full_case(config);result.update(executed_source_hashes=hashes,source_unchanged_during_run=unchanged(hashes))
+    elif args.full: result=full_run(config,args.sweep,args.csi,args.checkpoint_dir)
     else: raise SystemExit('Choose explicit --component-test, --scenario-test or --full. Full configured 1000 MC realizations and 1000 SDP randomizations are never silently reduced.')
     if args.output:
         args.output.parent.mkdir(parents=True,exist_ok=True); args.output.write_text(json.dumps(result,indent=2,allow_nan=False,default=numerical_json)+'\n')
-    print(json.dumps(result,indent=2,allow_nan=False,default=numerical_json))
+    print(json.dumps({'output':str(args.output),'checks':result['checks'],'full_reproduction_pass':False,'source_unchanged_during_run':result.get('source_unchanged_during_run')},default=numerical_json),flush=True)
     if not all(v for k,v in result['checks'].items() if k.endswith('_pass')):
         raise SystemExit(1)

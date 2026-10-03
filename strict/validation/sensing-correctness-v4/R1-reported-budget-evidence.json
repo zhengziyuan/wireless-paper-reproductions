@@ -1,0 +1,44 @@
+{
+  "scope": "Source-budget evidence and acceptance-boundary correction, not numerical execution or figure certification",
+  "source_file": "D:/北邮课程报告/论文素材库/Wireless_Sensing_with_Movable_Intelligent_Surface_R1 (1)/bare_jrnl.tex",
+  "source_sha256": "b0ac3782b11cdb7d2b0d1dfe581bfcfbe17c72c52f64aef3e55cd0bfce25592a",
+  "source_line_one_based": 934,
+  "short_budget_excerpt": "The RALM uses $I_{\\mathrm{out}}=30$ outer iterations with an inner RCG solver capped at $I_{\\mathrm{RCG}}=4000$ iterations per outer loop.",
+  "reported_number_of_random_initializations": 6000,
+  "reported_outer_iteration_cap": 30,
+  "reported_inner_RCG_iteration_cap": 4000,
+  "reported_inner_epsilon_initial": 0.001,
+  "reported_inner_epsilon_minimum": 0.000001,
+  "geometric_factor_exponent": "1 / I_out",
+  "last_used_inner_epsilon_in_the_30_outer_execution": 0.0000012589254117941667,
+  "next_epsilon_after_outer_30": 0.000001,
+  "reported_outer_early_stop": "step <= 1e-10 AND epsilon <= epsilon_min; an early-stop option, not a requirement that forbids completing the prescribed 30-outer budget",
+  "reported_multistart_selection": "run 6000 random initializations and report the best feasible solution",
+  "unreported_initial_values_source_check": {
+    "scope": "Complete manuscript search of every lambda, multiplier and initialization occurrence, not just the numerical paragraph",
+    "search_terms": ["\\lambda", "multiplier", "initialize", "initializ"],
+    "eta_initial_requirement_line": 577,
+    "eta_initial_requirement": "Initialize eta^(0), phi^(0), theta^(0), Xi^(0) within their respective manifolds; no numerical eta0 value supplied",
+    "lambda_initial_requirement_line": 609,
+    "lambda_initial_requirement": "lambda^(0) in R^K, supplied as an algorithm input; no numerical lambda0 value supplied",
+    "numerical_settings_line": 934,
+    "numerical_settings_distinction": "rho0=1 and lambda bounds [0,1e10] are specified, but lambda0 and eta0 values are not",
+    "source_does_not_recover_author_rng_or_initial_lambda_eta": true,
+    "initialization_trial_authorization_scope": "Disclosed WORK controls only; no claim of recovered author initialization; original random phase/scheduling draws preserved, no physical gain/reference fitting, no later eta block update replacement"
+  },
+  "not_unreported": [
+    "4000 inner RCG cap",
+    "30 outer cap",
+    "6000 original initializations",
+    "geometric epsilon schedule"
+  ],
+  "numerical_acceptance_boundaries": [
+    "A final original-problem constrained KKT certificate does not certify earlier capped inner ALM solves.",
+    "Increasing the 4000 cap can be a separately labeled work diagnostic, never undisclosed original-paper reproduction.",
+    "An extended diagnostic must retain the genuine original4000 failure and prove its full4000 trajectory is the exact same prefix, not resume from a capped state with reset PR memory.",
+    "Completing30 outers does not require the optional early-stop AND condition, but inner precision, primal feasibility, dual feasibility and complementarity remain independently checked.",
+    "Neither a lower objective change, a feasible eta, a passing final KKT nor a different multistart survivor may overwrite an inner cap/failure record."
+  ],
+  "current_production_implementation_digest": "bf41284cc32086f63e1b340b6f180bd1b1f00507950f55e3ab6df0e9aa4553cb",
+  "source_mutated_for_this_evidence": false
+}

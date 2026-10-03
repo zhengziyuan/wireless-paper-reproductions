@@ -1,9 +1,15 @@
-function result=run_strict_rotatable_isac(outputPath,scenarioPath,configPath)
+function result=run_strict_rotatable_isac(outputPath,scenarioPath,configPath,diagnosticMode,diagnosticScenePath)
 % Original QT/MM, RCG, PGA/BB; documented safeguards are selectable.
 % One-argument call is a full-dimension component test, not a full MC run.
 base=fileparts(mfilename('fullpath'));
 if nargin<3 || isempty(configPath),configPath=fullfile(base,'full_config.json');end
-if nargin<2 || isempty(scenarioPath)
+if nargin>=4 && strcmp(diagnosticMode,'fixed_channel_cache_equivalence')
+    c=jsondecode(fileread(scenarioPath));result=is_fixed_channel_test(c);
+elseif nargin>=4 && strcmp(diagnosticMode,'fixed_rotation_base_cache_equivalence')
+    c=jsondecode(fileread(scenarioPath));active=c;
+    if nargin>=5 && ~isempty(diagnosticScenePath),active=jsondecode(fileread(diagnosticScenePath));end
+    result=is_fixed_rotation_base_test(c,active);
+elseif nargin<2 || isempty(scenarioPath)
     c=jsondecode(fileread(fullfile(base,'fixture.json')));
     result=is_component(c);
 else
@@ -43,7 +49,7 @@ for d=1:3
 end
 end
 
-function [f,jac,B,g]=is_channels(theta,r,c)
+function base=is_channel_base(r,c)
 cb=c.bs_coordinates;cr=c.ris_coordinates;M=size(cb,1);N=size(cr,1);K=numel(c.noise);A=size(c.bt_directions,1);links=K+A;
 h=zeros(M,links);g=zeros(N,links);dh=zeros(M,links,6);dg=zeros(N,links,6);
 for k=1:K
@@ -65,12 +71,22 @@ for p=1:size(c.br_directions,1)
     gain=c.br_gain_re(p)+1i*c.br_gain_im(p);B=B+gain*ab*ar';
     for d=1:3,dB(:,:,d)=dB(:,:,d)+gain*dab(:,d)*ar';dB(:,:,d+3)=dB(:,:,d+3)+gain*ab*dar(:,d)';end
 end
-f=h+B*(theta.*g);jac=zeros(M,links,6);
+base={h,g,dh,dg,B,dB};
+end
+
+function [f,jac,B,g]=is_channels(theta,r,c,fixedRotationBase)
+if nargin<4 || isempty(fixedRotationBase),fixedRotationBase=is_channel_base(r,c);end
+h=fixedRotationBase{1};g=fixedRotationBase{2};dh=fixedRotationBase{3};dg=fixedRotationBase{4};B=fixedRotationBase{5};dB=fixedRotationBase{6};
+[M,links]=size(h);f=h+B*(theta.*g);jac=zeros(M,links,6);
 for d=1:6,jac(:,:,d)=dh(:,:,d)+dB(:,:,d)*(theta.*g)+B*(theta.*dg(:,:,d));end
 end
 
-function [metric,gw,gt,gr]=is_evaluate(W,theta,r,c,iota)
-[f,jac,B,g]=is_channels(theta,r,c);K=numel(c.noise);fc=f(:,1:K);fs=f(:,K+1:end);Y=fc'*W;Z=fs'*W;
+function [metric,gw,gt,gr]=is_evaluate(W,theta,r,c,iota,fixedChannelBundle,fixedRotationBase)
+% Full bundle: fixed-theta W block; base: fixed-r RIS block. No stale reuse.
+if nargin<6 || isempty(fixedChannelBundle)
+    if nargin<7,[f,jac,B,g]=is_channels(theta,r,c);else,[f,jac,B,g]=is_channels(theta,r,c,fixedRotationBase);end
+else,f=fixedChannelBundle{1};jac=fixedChannelBundle{2};B=fixedChannelBundle{3};g=fixedChannelBundle{4};end
+K=numel(c.noise);fc=f(:,1:K);fs=f(:,K+1:end);Y=fc'*W;Z=fs'*W;
 total=sum(abs(Y).^2,2)+c.noise(:);signal=abs(diag(Y(:,1:K))).^2;interference=total-signal;
 rate=sum(log2(total./interference));p=sum(abs(Z).^2,2);pd=c.desired_pattern(:);energy=pd'*pd;
 if nargin<5 || isempty(iota)
@@ -100,10 +116,13 @@ gram=fc'*fc;[u,s,v]=svd(gram);sing=diag(s);inverse=zeros(size(sing));active=sing
 V=fc*v*diag(inverse)*u';W=[V,eye(M)*c.initial_sensing_amplitude];W=W*sqrt(c.power)/norm(W,'fro');
 end
 
-function [W,hist]=is_update_w(W,theta,r,c,iota)
-f=is_channels(theta,r,c);K=numel(c.noise);fc=f(:,1:K);fs=f(:,K+1:end);M=size(W,1);pd=c.desired_pattern(:);D=iota^2*(pd'*pd);
+function [W,hist]=is_update_w(W,theta,r,c,iota,useFixedChannels)
+if nargin<6,useFixedChannels=true;end
+[f,jac,B,g]=is_channels(theta,r,c);fixedChannelBundle={f,jac,B,g};K=numel(c.noise);fc=f(:,1:K);fs=f(:,K+1:end);M=size(W,1);pd=c.desired_pattern(:);D=iota^2*(pd'*pd);
 norms=sum(abs(fs).^2,1)';lip=12*c.power*norms.^2+4*iota*pd.*norms;spec=c.W_solver;
-met=is_evaluate(W,theta,r,c,iota);objective=met.utility;
+if useFixedChannels,met=is_evaluate(W,theta,r,c,iota,fixedChannelBundle);
+else,met=is_evaluate(W,theta,r,c,iota);end
+objective=met.utility;
 records=struct('nu',{},'bisection_steps',{},'stationarity_residual',{},'power',{});
 converged=false;reason='maximum_iterations_without_criterion_stop';relativeObjective=[];relative=[];
 for iteration=1:spec.maximum_iterations
@@ -123,7 +142,9 @@ for iteration=1:spec.maximum_iterations
         end
         nu=hi;
     end
-    new=U*(projected./(lambda+nu));met=is_evaluate(new,theta,r,c,iota);
+    new=U*(projected./(lambda+nu));
+    if useFixedChannels,met=is_evaluate(new,theta,r,c,iota,fixedChannelBundle);
+    else,met=is_evaluate(new,theta,r,c,iota);end
     if met.utility<objective(end)-c.verification_tolerance,error('QT/MM actual objective decreased.');end
     relative=norm(new-W,'fro')/max(norm(W,'fro'),realmin);
     records(end+1)=struct('nu',nu,'bisection_steps',bisects,'stationarity_residual',norm((Q+nu*eye(M))*new-P,'fro'),'power',sum(abs(new(:)).^2)); %#ok<AGROW>
@@ -133,20 +154,52 @@ for iteration=1:spec.maximum_iterations
         converged=true;if relativeObjective<spec.relative_tolerance,reason='relative_objective_tolerance';else,reason='relative_step_tolerance';end;break;
     end
 end
+
 hist=struct('objective',objective,'QCQP',records,'converged',converged,'termination_reason',reason,...
     'iterations',numel(records),'iteration_budget',spec.maximum_iterations,'budget_exhausted',numel(records)>=spec.maximum_iterations,...
     'capped_unconverged',~converged,'relative_objective_improvement',relativeObjective,'relative_step',relative,'relative_tolerance',spec.relative_tolerance);
+end
+
+function result=is_fixed_channel_test(c)
+% The false branch retains original uncached is_evaluate calls/arithmetic.
+% No budget, stopping condition, channel or original update is replaced.
+assert(size(c.bs_coordinates,1)==4&&size(c.ris_coordinates,1)==36&&numel(c.desired_pattern)==66);
+names={'Rot-BS & Rot-RIS','Rot-BS & Fix-RIS','Fix-BS & Rot-RIS','Fix-BS & Fix-RIS','Rot-BS & No-RIS','Fix-BS & No-RIS'};
+groups=cell(2,1);schemeChecks=cell(6,1);
+for scheme=1:6
+    scene=c;group=1;if scheme>=5,group=2;scene.br_gain_re(:)=0;scene.br_gain_im(:)=0;end
+    [W,theta,r]=is_initialize(scene);met=is_evaluate(W,theta,r,scene);iota=met.iota;
+    if isempty(groups{group})
+        started=tic;[original,oldHist]=is_update_w(W,theta,r,scene,iota,false);oldSeconds=toc(started);
+        started=tic;[cached,newHist]=is_update_w(W,theta,r,scene,iota,true);newSeconds=toc(started);
+        assert(isequal(original,cached)&&isequal(oldHist,newHist),'Full W states/objectives/QCQP/stop gates changed');
+        groups{group}=struct('original_W_budget',scene.W_solver.maximum_iterations,'iterations',oldHist.iterations,'converged',oldHist.converged,...
+            'all_objectives_states_QCQP_and_stop_gates_bitwise_equal',true,'original_seconds',oldSeconds,'new_production_seconds',newSeconds,...
+            'speedup',oldSeconds/newSeconds,'W_re',real(cached),'W_im',imag(cached),'history',newHist);
+    end
+    W=groups{group}.W_re+1i*groups{group}.W_im;
+    [f,jac,B,g]=is_channels(theta,r,scene);bundle={f,jac,B,g};
+    [a,aw,at,ar]=is_evaluate(W,theta,r,scene,iota);[b,bw,bt,br]=is_evaluate(W,theta,r,scene,iota,bundle);
+    assert(isequal(a,b)&&isequal(aw,bw)&&isequal(at,bt)&&isequal(ar,br),'Full metrics/gradients cache changed arithmetic');
+    schemeChecks{scheme}=struct('scheme',names{scheme},'full_original_dimensions_preserved',true,...
+        'cached_vs_uncached_metrics_and_all_gradients_bitwise_equal',true,'full_W_prefix_and_stops_bitwise_equal',true,'W_group',group);
+end
+result=struct('paper_id','rotatable-isac','mode','full_dimension_fixed_channel_cache_equivalence_not_full_bank',...
+    'dimensions',struct('BS',4,'RIS',36,'sensing_samples',66,'schemes',6),'W_runs',{groups},'scheme_checks',{schemeChecks},...
+    'all_six_schemes_verified',true,'new_full500_job_bank_or_figures_completed',false);
 end
 
 function v=is_tangent(theta,v)
 v=v-real(v.*conj(theta)).*theta;
 end
 
-function [theta,hist]=is_update_theta(W,theta,r,c,iota)
+function [theta,hist]=is_update_theta(W,theta,r,c,iota,useFixedRotationBase)
+if nargin<6,useFixedRotationBase=true;end
+fixedRotationBase=[];if useFixedRotationBase,fixedRotationBase=is_channel_base(r,c);end
 spec=c.RCG_solver;objective=[];coefficients=[];restarts=struct('iteration',{},'reason',{},'raw_PR',{},'raw_slope',{});oldg=[];oldd=[];
 converged=false;reason='maximum_iterations_without_criterion_stop';checkedGradient=[];
 for iteration=0:spec.maximum_iterations-1
-    [met,~,ambient]=is_evaluate(W,theta,r,c,iota);g=is_tangent(theta,ambient);objective(end+1)=met.utility; %#ok<AGROW>
+    [met,~,ambient]=is_evaluate(W,theta,r,c,iota,[],fixedRotationBase);g=is_tangent(theta,ambient);objective(end+1)=met.utility; %#ok<AGROW>
     checkedGradient=norm(g)/sqrt(numel(theta));
     if checkedGradient<=spec.gradient_tolerance,converged=true;reason='gradient_tolerance';break;end
     beta=0;if ~isempty(oldg),beta=real(g'*(g-is_tangent(theta,oldg)))/real(oldg'*oldg);end
@@ -160,13 +213,13 @@ for iteration=0:spec.maximum_iterations-1
     end
     alpha=spec.initial_step;accepted=false;
     for backtrack=1:spec.maximum_backtracks
-        trial=theta+alpha*direction;trial=trial./abs(trial);candidate=is_evaluate(W,trial,r,c,iota);
+        trial=theta+alpha*direction;trial=trial./abs(trial);candidate=is_evaluate(W,trial,r,c,iota,[],fixedRotationBase);
         if candidate.utility>=met.utility+spec.armijo*alpha*slope,oldg=g;oldd=direction;theta=trial;accepted=true;break;end
         alpha=alpha*spec.backtrack_factor;
     end
     if ~accepted,error('Printed RCG Armijo line search failed.');end
 end
-[met,~,ambient]=is_evaluate(W,theta,r,c,iota);hist=struct('objective',objective,'PR_coefficients',coefficients,'restarts',restarts,'mode',spec.mode,'final_objective',met.utility,...
+[met,~,ambient]=is_evaluate(W,theta,r,c,iota,[],fixedRotationBase);hist=struct('objective',objective,'PR_coefficients',coefficients,'restarts',restarts,'mode',spec.mode,'final_objective',met.utility,...
     'applicable',true,'converged',converged,'termination_reason',reason,'iterations',numel(objective),'updates',numel(coefficients),...
     'iteration_budget',spec.maximum_iterations,'budget_exhausted',numel(objective)>=spec.maximum_iterations,'capped_unconverged',~converged,...
     'last_checked_normalized_gradient_norm',checkedGradient,'final_normalized_gradient_norm',norm(is_tangent(theta,ambient))/sqrt(numel(theta)),'gradient_tolerance',spec.gradient_tolerance);
@@ -204,13 +257,14 @@ hist=struct('objective',objective,'BB',bb,'steps',steps,'final_objective',met.ut
     'gradient_tolerance',spec.gradient_tolerance,'relative_step',relative,'relative_tolerance',spec.relative_tolerance);
 end
 
-function [W,theta,r,hist]=is_optimize(c,lower,upper,withRIS)
+function [W,theta,r,hist]=is_optimize(c,lower,upper,withRIS,useFixedRotationBase)
+if nargin<5,useFixedRotationBase=true;end
 [W,theta,r]=is_initialize(c);objective=[];blocks=struct('iota',{},'W',{},'RIS',{},'rotation',{});converged=false;relativeObjective=[];
 for iteration=1:c.AO_solver.maximum_iterations
     met=is_evaluate(W,theta,r,c,[]);iota=met.iota;if isempty(objective),objective=met.utility;end
     [W,hw]=is_update_w(W,theta,r,c,iota);
     ht=struct('applicable',false,'converged',true,'capped_unconverged',false,'termination_reason','not_applicable_no_RIS','iterations',0,'iteration_budget',0,'budget_exhausted',false);
-    if withRIS,[theta,ht]=is_update_theta(W,theta,r,c,iota);end
+    if withRIS,[theta,ht]=is_update_theta(W,theta,r,c,iota,useFixedRotationBase);end
     [r,hr]=is_update_rotation(W,theta,r,c,iota,lower,upper);met=is_evaluate(W,theta,r,c,[]);objective(end+1)=met.utility; %#ok<AGROW>
     if objective(end)<objective(end-1)-c.verification_tolerance,error('AO utility decreased.');end
     blocks(end+1)=struct('iota',iota,'W',hw,'RIS',ht,'rotation',hr); %#ok<AGROW>
@@ -249,7 +303,8 @@ result=struct('paper_id','rotatable-isac','mode','component_test_not_full_run','
     'checks',checks,'history',struct('W',hw,'RIS',ht,'PGA_printed',hp,'PGA_correction_diagnostic',hc));
 end
 
-function result=is_full_scenario(c)
+function result=is_full_scenario(c,useFixedRotationBase)
+if nargin<2,useFixedRotationBase=true;end
 names={'Rot-BS & Rot-RIS','Rot-BS & Fix-RIS','Fix-BS & Rot-RIS','Fix-BS & Fix-RIS','Rot-BS & No-RIS','Fix-BS & No-RIS'};
 flags=[1,1,1;1,0,1;0,1,1;0,0,1;1,0,0;0,0,0];metrics=cell(1,6);histories=cell(1,6);checks=cell(1,6);
 for s=1:6
@@ -259,11 +314,51 @@ for s=1:6
     if isfield(c,'rotation_bs_half_width'),width(1:3)=c.rotation_bs_half_width*flags(s,1);end
     if isfield(c,'rotation_ris_half_width'),width(4:6)=c.rotation_ris_half_width*flags(s,2);end
     try
-        [W,theta,r,hist]=is_optimize(scene,-width,width,logical(flags(s,3)));met=is_evaluate(W,theta,r,scene,[]);
+        [W,theta,r,hist]=is_optimize(scene,-width,width,logical(flags(s,3)),useFixedRotationBase);met=is_evaluate(W,theta,r,scene,[]);
         met.w_re=real(W);met.w_im=imag(W);met.theta_re=real(theta)';met.theta_im=imag(theta)';met.rotation=r';metrics{s}=met;histories{s}=hist;
         checks{s}=struct('status','executed','converged',hist.converged,'inner_all_converged',hist.inner_all_converged,'full_converged',hist.full_converged,'power_feasible',sum(abs(W(:)).^2)<=c.power+c.verification_tolerance,...
             'unit_modulus_error',max(abs(abs(theta)-1)),'rotation_feasible',all(abs(r)<=width+1e-12));
     catch exception,metrics{s}=struct('status','failed','error',exception.message);checks{s}=struct('status','failed');end
 end
 result=struct('paper_id','rotatable-isac','mode','full_scenario','scheme_names',{names},'metrics',{metrics},'checks',{checks},'history',{histories});
+end
+
+function result=is_fixed_rotation_base_test(c,active)
+% Independent in-language exact arithmetic test, not a full100-channel figure.
+assert(size(c.bs_coordinates,1)==4&&size(c.ris_coordinates,1)==36&&numel(c.desired_pattern)==66);
+assert(active.RCG_solver.maximum_iterations==500&&c.RCG_solver.maximum_iterations==500,'Original selected budget unchanged');
+previousRng=rng;restoreRng=onCleanup(@()rng(previousRng));rng(24605,'twister'); %#ok<NASGU>
+names={'Rot-BS & Rot-RIS','Rot-BS & Fix-RIS','Fix-BS & Rot-RIS','Fix-BS & Fix-RIS','Rot-BS & No-RIS','Fix-BS & No-RIS'};
+groups=cell(2,1);checks=cell(6,1);
+for scheme=1:6
+    scene=active;group=1;if scheme>=5,group=2;scene.br_gain_re(:)=0;scene.br_gain_im(:)=0;end
+    [W,theta,r]=is_initialize(scene);theta=exp(1i*(2*pi*rand(size(theta))-pi));
+    W=randn(size(W))+1i*randn(size(W));W=W*sqrt(scene.power)/norm(W,'fro');
+    base=is_channel_base(r,scene);[f,jac,B,g]=is_channels(theta,r,scene);[cf,cjac,cB,cg]=is_channels(theta,r,scene,base);
+    assert(isequal(f,cf)&&isequal(jac,cjac)&&isequal(B,cB)&&isequal(g,cg),'Original full channel/jac arithmetic differs');
+    [a,aw,at,ar]=is_evaluate(W,theta,r,scene,[]);[b,bw,bt,br]=is_evaluate(W,theta,r,scene,[],[],base);
+    assert(isequal(a,b)&&isequal(aw,bw)&&isequal(at,bt)&&isequal(ar,br),'A physical metric/gradient changed');
+    if isempty(groups{group})
+        started=tic;[original,oldHist]=is_update_theta(W,theta,r,scene,a.iota,false);oldSeconds=toc(started);
+        started=tic;[cached,newHist]=is_update_theta(W,theta,r,scene,a.iota,true);newSeconds=toc(started);
+        assert(isequal(original,cached)&&isequal(oldHist,newHist),'Full RCG theta/rawPR/restarts/Armijo/stops changed');
+        groups{group}=struct('original_RCG_budget',scene.RCG_solver.maximum_iterations,'iterations',oldHist.iterations,...
+            'converged',oldHist.converged,'capped_unconverged',oldHist.capped_unconverged,...
+            'full_states_rawPR_objectives_and_stop_fields_bitwise_equal',true,'original_seconds',oldSeconds,'cached_seconds',newSeconds,...
+            'speedup',oldSeconds/newSeconds,'theta_re',real(cached)','theta_im',imag(cached)','history',newHist);
+    end
+    checks{scheme}=struct('scheme',names{scheme},'channel_jac_all_metrics_and_three_gradients_bitwise_equal',true,...
+        'RIS_ambient_gradient_norm',norm(at),'full_original4_36_66_dimensions_retained',true,'RCG_group',group);
+end
+Wchecks=is_fixed_channel_test(c);
+started=tic;oldScenario=is_full_scenario(c,false);oldSeconds=toc(started);
+started=tic;newScenario=is_full_scenario(c,true);newSeconds=toc(started);
+assert(isequal(oldScenario,newScenario),'Entire same-input/all6 metrics/states/histories/stops changed');
+result=struct('paper_id','rotatable-isac','mode','full_dimension_fixed_rotation_base_cache_equivalence_not_full_bank',...
+    'all_six_channel_metric_gradient_checks_passed',true,'RCG_runs',{groups},'scheme_checks',{checks},'full_W_cache_checks',Wchecks,...
+    'all_six_same_input_whole_scenario_metrics_states_histories_stops_bitwise_equal',true,...
+    'original_whole_scenario_seconds',oldSeconds,'cached_whole_scenario_seconds',newSeconds,...
+    'whole_scenario_checks',{newScenario.checks},'whole_scenario_histories',{newScenario.history},...
+    'whole_scenario_metrics',{newScenario.metrics},'MC100_channel_points_or_full500_bank_complete',false,...
+    'all_stop_thresholds_500_RCG_budget_and_rawPR_unchanged',true);
 end

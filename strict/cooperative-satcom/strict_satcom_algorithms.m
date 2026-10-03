@@ -53,25 +53,38 @@ end
 status=scheme_status({relative_stop(history,s.qt_max_iterations,s.relative_tolerance)},records,s);
 end
 
-function [phi,history,status]=rmo(phi,fg,s,vectorObjective)
+function [phi,history,status]=rmo(phi,fg,s,vectorObjective,increment)
 [value,g]=fg(phi); history=min(value);
+if vectorObjective,initialSlope=sum(abs(g).^2,2);else,initialSlope=sum(abs(g(:)).^2);end
+seed=1./sqrt(max(initialSlope,realmin));
 for it=1:s.rmo_max_iterations
     if norm(g(:))<s.gradient_tolerance, break; end
     if vectorObjective, slope=sum(abs(g).^2,2); else, slope=sum(abs(g(:)).^2); end
-    alpha=1; accepted=false;
+    alpha=seed;accepted=false;
+    if vectorObjective
+        stationary=sqrt(slope)<s.gradient_tolerance/sqrt(numel(slope));alpha(stationary)=0;slope(stationary)=0;
+    end
     for search=1:60
-        candidate=phi+alpha*g; candidate=candidate./abs(candidate); [trial,newg]=fg(candidate);
-        if all(trial>=value+1e-4*alpha*slope-1e-12), accepted=true; break; end
-        alpha=alpha/2;
+        candidate=phi+alpha.*g; candidate=candidate./abs(candidate); [trial,newg]=fg(candidate);
+        if vectorObjective,candidate(stationary,:)=phi(stationary,:);[trial,newg]=fg(candidate);end
+        if nargin<5,difference=trial-value;else,difference=increment(phi,candidate);end
+        failed=difference<1e-4*alpha.*slope;
+        if ~any(failed), accepted=true; break; end
+        if vectorObjective,alpha(failed)=alpha(failed)/2;else,alpha=alpha/2;end
     end
     assert(accepted,'Original RGD Armijo search failed');
+    step=angle(conj(phi).*candidate);oldTheta=real(conj(1i*phi).*g);newTheta=real(conj(1i*candidate).*newg);
+    if vectorObjective
+        curvature=sum(step.*(oldTheta-newTheta),2);distance=sum(step.^2,2);seed=2*alpha;positive=curvature>0&distance>0;seed(positive)=distance(positive)./curvature(positive);
+    else
+        curvature=sum(sum(step.*(oldTheta-newTheta)));distance=sum(step(:).^2);if curvature>0&&distance>0,seed=distance/curvature;else,seed=2*alpha;end
+    end
+    seed=min(max(seed,1e-12),1e12);
     improvement=min(trial)-min(value); phi=candidate; value=trial; g=newg; history(end+1)=min(value); %#ok<AGROW>
-    if improvement>=0 && improvement<1e-12 && norm(g(:))<10*s.gradient_tolerance, break; end
 end
 status=gradient_stop(norm(g(:)),numel(history)-1,s.rmo_max_iterations,s.gradient_tolerance);
-if ~status.converged&&numel(history)>1&&history(end)-history(end-1)>=0&&history(end)-history(end-1)<1e-12&&norm(g(:))<10*s.gradient_tolerance
-    status.converged=true;status.termination='tiny_progress_and_near_stationary_gradient';status.stop_rule='progress_below_1e-12_and_gradient_below_10_times_tolerance';status.threshold=10*s.gradient_tolerance;
-end
+status.initial_step_contract='positive_BB_seed_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation';
+if nargin>=5,status.objective_increment_contract='exact_original_moment_polynomial_ratio_logsumexp_increment';else,status.objective_increment_contract='direct_objective_difference';end
 end
 
 function [W,history,status]=ap_no_ris(data,phi,powerLimit,interferenceLimit,s)
@@ -98,7 +111,7 @@ function [phi,W,history,status]=ap_ao(data,phi,W,powerLimit,interferenceLimit,s)
 [mu,C,~,~,off]=strict_satcom_models('moments',data,phi); e=strict_satcom_core('ap_evaluate',W,mu,C,data.gt_second,off); history=min(e.sinr);records={};stops={};
 for it=1:s.ao_max_iterations
     [W,info]=strict_satcom_core('ap_qt_update',W,mu,C,data.gt_second,off,powerLimit,interferenceLimit);records{end+1}=solver_record(info); %#ok<AGROW>
-    fg=@(x) strict_satcom_models('ap_phase',data,x,W); [phi,~,stop]=rmo(phi,fg,s,true);stops{end+1}=stop; %#ok<AGROW>
+    fg=@(x) strict_satcom_models('ap_phase',data,x,W);increment=@(a,b)strict_satcom_increments('ap',data,a,b,W);[phi,~,stop]=rmo(phi,fg,s,true,increment);stops{end+1}=stop; %#ok<AGROW>
     [mu,C,~,~,off]=strict_satcom_models('moments',data,phi); e=strict_satcom_core('ap_evaluate',W,mu,C,data.gt_second,off); value=min(e.sinr);
     assert(value>=history(end)-s.solver_objective_tolerance,'AP-AO monotonicity failure'); history(end+1)=value; %#ok<AGROW>
     if (value-history(end-1))/max(abs(history(end-1)),1e-12)<s.relative_tolerance, break; end
@@ -111,7 +124,7 @@ mu=s.smoothing_initial; phases=struct('mu',{},'objective',{});stops={};
 while mu>=s.smoothing_final
     fg=@(x) strict_satcom_models('mr_phase',data,x,p0,mu,interferenceLimit,tts); stopped=false;
     for inner=1:s.smoothing_max_repeats
-        before=fg(phi); [phi,h,stop]=rmo(phi,fg,s,false);stops{end+1}=stop;phases(end+1)=struct('mu',mu,'objective',h); %#ok<AGROW>
+        before=fg(phi);increment=@(a,b)strict_satcom_increments('mr',data,a,b,p0,mu,interferenceLimit,tts);[phi,h,stop]=rmo(phi,fg,s,false,increment);stops{end+1}=stop;phases(end+1)=struct('mu',mu,'objective',h); %#ok<AGROW>
         if h(end)-before<=s.smoothing_progress_tolerance, stopped=true; break; end
     end
     assert(stopped,'Smoothing repeat cap reached while improving'); mu=mu/2;
@@ -150,5 +163,5 @@ end
 function valid=stop_valid(s)
 valid=isfield(s,'converged')&&isequal(s.converged,true)&&isfield(s,'final_residual')&&isfield(s,'threshold')&&isfield(s,'stop_rule');
 if ~valid,return;end
-v=s.final_residual;t=s.threshold;valid=isscalar(v)&&isfinite(v)&&isscalar(t)&&isfinite(t)&&t>0&&v<t&&any(strcmp(s.stop_rule,{'signed_relative_objective_increase','Riemannian_gradient_norm','progress_below_1e-12_and_gradient_below_10_times_tolerance'}));
+v=s.final_residual;t=s.threshold;valid=isscalar(v)&&isfinite(v)&&isscalar(t)&&isfinite(t)&&t>0&&v<t&&any(strcmp(s.stop_rule,{'signed_relative_objective_increase','Riemannian_gradient_norm'}));
 end

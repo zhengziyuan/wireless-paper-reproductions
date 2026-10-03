@@ -49,15 +49,21 @@ def sha(path):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--directory", type=Path, required=True)
+    parser.add_argument("--directory", type=Path)
+    parser.add_argument("--python-input", type=Path)
+    parser.add_argument("--matlab-input", type=Path)
     parser.add_argument("--paper", required=True)
     parser.add_argument("--sections", nargs="+", default=["metrics", "checks", "history", "state"])
     parser.add_argument("--atol", type=float, default=1e-7)
     parser.add_argument("--rtol", type=float, default=1e-6)
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
-    py_path = args.directory / (args.paper + "-python.json")
-    mat_path = args.directory / (args.paper + "-matlab.json")
+    if (args.python_input is None) != (args.matlab_input is None):
+        parser.error('Provide both explicit language inputs, not one')
+    if args.python_input is None and args.directory is None:
+        parser.error('Provide --directory or both --python-input/--matlab-input')
+    py_path = args.python_input or args.directory / (args.paper + "-python.json")
+    mat_path = args.matlab_input or args.directory / (args.paper + "-matlab.json")
     py = json.loads(py_path.read_text(encoding="utf-8-sig"))
     mat = json.loads(mat_path.read_text(encoding="utf-8-sig"))
     failures = []

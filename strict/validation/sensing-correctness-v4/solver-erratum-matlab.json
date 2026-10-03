@@ -1,0 +1,24 @@
+{
+  "scope": "corrected_paper_M400_N256_U25_K9_solver_checks_NOT_6000_start_figure",
+  "orthogonal_transport_identity_errors": [
+    3.5527136788005009E-15,
+    3.5527136788005009E-15
+  ],
+  "cone_feasibility_verified": true,
+  "coupled_quadratic_product_conjugacy_verified": true,
+  "checkpoint_stop": {
+    "reason": "gradient_tolerance",
+    "objective": -49.527728475365521,
+    "gradient_norm": 16.207106633493705,
+    "projected_kkt_norm": 9.9051632404921728E-7,
+    "stationarity_measure": "projected_simplex_KKT",
+    "solver_branch": "corrected_paper_product_raw_PR_with_curvature_line_search"
+  },
+  "checkpoint_iterations": 371,
+  "all_accepted_lines_armijo_and_curvature_verified": true,
+  "stationary_initial_no_move_verified": true,
+  "raw_product_PR_not_clipped": true,
+  "printed_raw_block_branch_preserved": true,
+  "all_checks_pass": true,
+  "original_figure_reproduction_certified": false
+}

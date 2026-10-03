@@ -151,6 +151,42 @@ class Model:
         eu = {"phi":sign*gp,"theta":sign*gt,"X":sign*weights[:,None]*gamma}
         return sign*f, eu, {"softmin":f,"min_relaxed_snr":float(np.min(g))}
 
+    def communication_difference(self, base, candidate, mu, convention):
+        """Exact LSE increment, avoiding the unrelated mu*log(K) offset.
+
+        The objective and gradients are unchanged. For small changes, log1p
+        and expm1 evaluate log(sum(weights*exp(-dg/mu))) without subtracting
+        near-equal LSE objectives. Large changes use a safe shifted LSE.
+        """
+        oldbar, _, q, a = self.fields(base)
+        newbar = np.ones_like(oldbar)
+        for u, ix in enumerate(self.indices):
+            newbar[u, ix] = candidate["theta"]
+        dv = oldbar*(candidate["phi"]-base["phi"])[None, :]
+        dv += (newbar-oldbar)*candidate["phi"][None, :]
+        dq = self.c@dv.T
+        da = 2*np.real(np.conj(q)*dq)+np.abs(dq)**2
+        gamma = self.config["reference_snr"]*a
+        dgamma = self.config["reference_snr"]*da
+        g = np.sum(base["X"]*gamma, axis=1)
+        dg = np.sum((candidate["X"]-base["X"])*gamma
+                    +candidate["X"]*dgamma, axis=1)
+        mn = np.min(g)
+        oldex = np.exp(-(g-mn)/mu)
+        if np.max(np.abs(dg/mu)) <= .25:
+            weights = oldex/np.sum(oldex)
+            difference = mu*np.log1p(np.sum(weights*np.expm1(-dg/mu)))
+        else:
+            newg = g+dg
+            newmn = np.min(newg)
+            difference = -(newmn-mn)+mu*(np.log(np.sum(np.exp(-(newg-newmn)/mu)))
+                                          -np.log(np.sum(oldex)))
+        if convention == "maximize_negative_softmin":
+            return float(difference)
+        if convention == "literal_paper_descent_of_f":
+            return float(-difference)
+        raise ValueError("Explicit resolution of source sign contradiction required")
+
     def augmented(self,z,lam,rho,objective):
         gamma = self.metric(z,objective)
         q = float(z["eta"])-np.sum(z["X"]*gamma,axis=1)
@@ -193,11 +229,37 @@ def block_backtracking(z,g,raw_d,evaluate,f,options):
             candidate=retract(z,{b:d[b]},alpha)
             actual_slope=inner(g[b],candidate[b]-z[b])
             predicted=actual_slope if guard else alpha*raw_slope
-            trial=evaluate(candidate)[0]
-            if np.isfinite(trial) and predicted<0 and trial<=f+options["armijo_constant"]*predicted:
+            difference = (evaluate.stable_difference(z, candidate)
+                          if hasattr(evaluate, "stable_difference") else evaluate(candidate)[0]-f)
+            if np.isfinite(difference) and predicted<0 and difference<=options["armijo_constant"]*predicted:
                 accepted=True; break
             alpha*=options["backtrack_factor"]
         alphas[b]=float(alpha); backtracks[b]=ls
+        if not accepted and guard:
+            # Raw PR is retained above. A failed block direction may restart
+            # as steepest descent, with exactly the same Armijo inequality.
+            d[b]=-g[b]; restarts[b]=True
+            restart_reasons[b].append("backtracking_exhausted_raw_PR")
+            alpha=options.get("initial_steps",{}).get(b,options["initial_step"])
+            for retry in range(options["max_backtracks"]):
+                candidate=retract(z,{b:d[b]},alpha)
+                predicted=inner(g[b],candidate[b]-z[b])
+                difference=(evaluate.stable_difference(z,candidate)
+                            if hasattr(evaluate,"stable_difference") else evaluate(candidate)[0]-f)
+                if np.isfinite(difference) and predicted<0 and difference<=options["armijo_constant"]*predicted:
+                    accepted=True;break
+                alpha*=options["backtrack_factor"]
+            alphas[b]=float(alpha);backtracks[b]=options["max_backtracks"]+retry
+        if not accepted and guard:
+            contribution=(np.linalg.norm(z["X"]-simplex(z["X"]-g["X"]))
+                          if b=="X" else np.linalg.norm(g[b]))
+            if contribution<=options["gradient_tolerance"]/np.sqrt(len(g)):
+                # Never loosen the global KKT check. Do not let a block
+                # already within its accuracy share prevent other blocks
+                # from taking genuine descent steps at machine precision.
+                d[b]=np.zeros_like(g[b]);alphas[b]=0.;inactive[b]=True
+                restart_reasons[b].append("exhausted_block_within_KKT_accuracy_share")
+                accepted=True
         if not accepted:
             info={"block_step_sizes":alphas,"block_backtracks":backtracks,"block_non_descent_restarts":restarts,
                   "block_raw_direction_slopes":raw_slopes,"block_restart_reasons":restart_reasons,
@@ -218,8 +280,9 @@ def block_backtracking(z,g,raw_d,evaluate,f,options):
         candidate=retract(z,scaled,coupling)
         actual=sum(inner(g[b],candidate[b]-z[b]) for b in g)
         predicted=actual if guard else coupling*sum(alphas[b]*inner(g[b],d[b]) for b in g)
-        trial=evaluate(candidate)[0]
-        if np.isfinite(trial) and predicted<0 and trial<=f+options["armijo_constant"]*predicted:
+        difference = (evaluate.stable_difference(z, candidate)
+                      if hasattr(evaluate, "stable_difference") else evaluate(candidate)[0]-f)
+        if np.isfinite(difference) and predicted<0 and difference<=options["armijo_constant"]*predicted:
             accepted=True;break
         coupling*=options["backtrack_factor"]
     info.update(coupling_scale=float(coupling),coupling_backtracks=ls,
@@ -246,7 +309,7 @@ def rcg(z, evaluate, options):
         kkt=projected_kkt_norm(z,g)
         history.append({"iteration":it,"objective":float(f),"gradient_norm":float(norm(g)),"projected_kkt_norm":float(kkt)})
         stopping_norm=kkt if guard else norm(g)
-        if it>0 and stopping_norm<options["gradient_tolerance"]:
+        if stopping_norm<=options["gradient_tolerance"]:
             reason="gradient_tolerance"
             break
         d = {}; betas={}
@@ -286,10 +349,11 @@ def rcg(z, evaluate, options):
         accepted=False
         for ls in range(options["max_backtracks"]):
             candidate=retract(z,d,alpha)
-            trial=evaluate(candidate)[0]
             feasible_slope=sum(inner(g[b],candidate[b]-z[b]) for b in g)
             predicted=feasible_slope if guard else alpha*slope
-            if np.isfinite(trial) and predicted<0 and trial<=f+options["armijo_constant"]*predicted:
+            difference = (evaluate.stable_difference(z, candidate)
+                          if hasattr(evaluate, "stable_difference") else evaluate(candidate)[0]-f)
+            if np.isfinite(difference) and predicted<0 and difference<=options["armijo_constant"]*predicted:
                 accepted=True
                 break
             alpha*=options["backtrack_factor"]
@@ -309,7 +373,10 @@ def communication_solve(model,z,options):
     mu=options["initial_mu"]
     history=[]
     while mu>=options["terminal_mu"]:
-        z,h,stop=rcg(z,lambda x:model.communication_objective(x,mu,options["objective_convention"]),options["rcg"])
+        def evaluate(x):
+            return model.communication_objective(x,mu,options["objective_convention"])
+        evaluate.stable_difference=lambda base,candidate:model.communication_difference(base,candidate,mu,options["objective_convention"])
+        z,h,stop=rcg(z,evaluate,options["rcg"])
         history.append({"mu":mu,"inner":h,"stop":stop})
         mu*=0.5
     gamma=model.metric(z,"communications")

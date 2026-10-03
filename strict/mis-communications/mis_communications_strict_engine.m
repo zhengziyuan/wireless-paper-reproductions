@@ -5,7 +5,9 @@ base=fileparts(mfilename('fullpath'));
 if nargin<2, figureName="component-test"; end
 if nargin<3, settingsPath=fullfile(base,'settings.json'); end
 settings=jsondecode(fileread(settingsPath));
-if any(string(figureName)==["component-test","component-test-guard"])
+if string(figureName)=="stable-increment-test"
+    result=communication_increment_test(base);
+elseif any(string(figureName)==["component-test","component-test-guard"])
     result=component_test(base,settings.kind,string(figureName)=="component-test-guard");
 elseif startsWith(string(figureName),"plan:")
     requested=extractAfter(string(figureName),5);
@@ -150,6 +152,26 @@ gamma=metric(model,z,objective);q=z.eta-sum(z.X.*gamma,2);chi=max(0,lambda+rho*q
 [~,gp,gt]=metric(model,z,objective,-chi.*z.X);
 eg=struct('phi',gp,'theta',gt,'X',-chi.*gamma,'eta',-1+sum(chi));detail=struct('q',q,'gamma',gamma);
 end
+function difference=comm_difference(model,z,candidate,mu,convention)
+% Same LSE objective; exact field/LSE increments avoid large-offset cancellation.
+[oldbar,~,q,a]=fields(model,z);newbar=ones(size(oldbar));
+for u=1:model.U,newbar(u,model.indices(u,:))=candidate.theta;end
+dv=oldbar.*(candidate.phi-z.phi).'+(newbar-oldbar).*candidate.phi.';
+dq=model.c*dv.';da=2*real(conj(q).*dq)+abs(dq).^2;
+gamma=model.config.reference_snr*a;dgamma=model.config.reference_snr*da;
+g=sum(z.X.*gamma,2);dg=sum((candidate.X-z.X).*gamma+candidate.X.*dgamma,2);
+mn=min(g);oldex=exp(-(g-mn)/mu);
+if max(abs(dg/mu))<=.25
+weights=oldex/sum(oldex);difference=mu*log1p(sum(weights.*expm1(-dg/mu)));
+else
+newg=g+dg;newmn=min(newg);difference=-(newmn-mn)+mu*(log(sum(exp(-(newg-newmn)/mu)))-log(sum(oldex)));
+end
+if string(convention)=="literal_paper_descent_of_f",difference=-difference;
+elseif string(convention)~="maximize_negative_softmin",error('Select source-sign interpretation');end
+end
+function difference=objective_difference(z,candidate,evaluate,f,opts)
+if isfield(opts,'stable_difference'),difference=opts.stable_difference(z,candidate);else,difference=evaluate(candidate)-f;end
+end
 function value=ip(a,b),value=real(sum(conj(a(:)).*b(:)));end
 function g=project(z,eg)
 g=eg;names=fieldnames(eg);for n=1:numel(names),b=names{n};
@@ -182,10 +204,28 @@ if ip(delta,delta)==0,alphas.(b)=0;backtracks.(b)=0;inactive.(b)=true;continue;e
 inactive.(b)=false;rawslope=ip(g.(b),d.(b));accepted=false;
 for ls=1:opts.max_backtracks
 trialcandidate=retract(z,one,alpha);actual=ip(g.(b),trialcandidate.(b)-z.(b));if guard,predicted=actual;else,predicted=alpha*rawslope;end
-trial=evaluate(trialcandidate);if isfinite(trial)&&predicted<0&&trial<=f+opts.armijo_constant*predicted,accepted=true;break;end
+difference=objective_difference(z,trialcandidate,evaluate,f,opts);if isfinite(difference)&&predicted<0&&difference<=opts.armijo_constant*predicted,accepted=true;break;end
 alpha=alpha*opts.backtrack_factor;
 end
 alphas.(b)=alpha;backtracks.(b)=ls-1;
+if ~accepted&&guard
+d.(b)=-g.(b);one.(b)=d.(b);restarts.(b)=true;restartreasons.(b){end+1}='backtracking_exhausted_raw_PR';
+alpha=opts.initial_step;if isfield(opts,'initial_steps')&&isfield(opts.initial_steps,b),alpha=opts.initial_steps.(b);end
+for retry=1:opts.max_backtracks
+trialcandidate=retract(z,one,alpha);predicted=ip(g.(b),trialcandidate.(b)-z.(b));
+difference=objective_difference(z,trialcandidate,evaluate,f,opts);
+if isfinite(difference)&&predicted<0&&difference<=opts.armijo_constant*predicted,accepted=true;break;end
+alpha=alpha*opts.backtrack_factor;
+end
+alphas.(b)=alpha;backtracks.(b)=opts.max_backtracks+retry-1;
+end
+if ~accepted&&guard
+if strcmp(b,'X'),contribution=norm(z.X-simplex(z.X-g.X),'fro');else,contribution=sqrt(ip(g.(b),g.(b)));end
+if contribution<=opts.gradient_tolerance/sqrt(numel(names))
+d.(b)=zeros(size(g.(b)));alphas.(b)=0;inactive.(b)=true;accepted=true;
+restartreasons.(b){end+1}='exhausted_block_within_KKT_accuracy_share';
+end
+end
 if ~accepted
 info=struct('block_step_sizes',alphas,'block_backtracks',backtracks,'block_non_descent_restarts',restarts,'block_raw_direction_slopes',rawslopes,'block_restart_reasons',restartreasons,'raw_projected_displacement_slopes',rawactual,'inactive_projected_blocks',inactive,'non_descent_restart',any(structfun(@(v)v,restarts)));
 reason=['block_line_search_exhausted_',b];return;
@@ -201,7 +241,7 @@ for ls=1:opts.max_backtracks
 trialcandidate=retract(z,scaled,coupling);actual=0;rawpred=0;
 for n=1:numel(names),b=names{n};actual=actual+ip(g.(b),trialcandidate.(b)-z.(b));rawpred=rawpred+alphas.(b)*ip(g.(b),d.(b));end
 if guard,predicted=actual;else,predicted=coupling*rawpred;end
-trial=evaluate(trialcandidate);if isfinite(trial)&&predicted<0&&trial<=f+opts.armijo_constant*predicted,accepted=true;break;end
+difference=objective_difference(z,trialcandidate,evaluate,f,opts);if isfinite(difference)&&predicted<0&&difference<=opts.armijo_constant*predicted,accepted=true;break;end
 coupling=coupling*opts.backtrack_factor;
 end
 info.coupling_scale=coupling;info.coupling_backtracks=ls-1;info.accepted_displacement_slope=actual;
@@ -212,7 +252,7 @@ assert(any(string(opts.line_search_policy)==["common_product_armijo","original_p
 for iteration=0:opts.max_iterations-1
 [f,eg]=evaluate(z);g=project(z,eg);ng=gnorm(g);guard=isfield(opts,'non_descent_policy')&&string(opts.non_descent_policy)=="documented_non_descent_restart";kkt=projected_kkt_norm(z,g);history{end+1}=struct('iteration',iteration,'objective',f,'gradient_norm',ng,'projected_kkt_norm',kkt);
 if guard,stoppingnorm=kkt;else,stoppingnorm=ng;end
-if iteration>0&&stoppingnorm<opts.gradient_tolerance,reason='gradient_tolerance';break;end
+if stoppingnorm<=opts.gradient_tolerance,reason='gradient_tolerance';break;end
 names=fieldnames(g);d=struct();betas=struct();if ~isempty(oldd),transport=project(z,oldd);end
 for n=1:numel(names),b=names{n};beta=0;if ~isempty(oldg),den=ip(oldg.(b),oldg.(b));if den>0,beta=ip(g.(b),g.(b)-oldg.(b))/den;end,end
 d.(b)=-g.(b);betas.(b)=beta;if ~isempty(oldg),d.(b)=d.(b)+beta*transport.(b);end,end
@@ -231,20 +271,38 @@ for n=1:numel(names),b=names{n};d.(b)=-g.(b);end,slope=-ng^2;history{end}.non_de
 else,reason='non_descent_raw_PR_direction';break;end
 end
 alpha=opts.initial_step;accepted=false;
-for ls=1:opts.max_backtracks,candidate=retract(z,d,alpha);trial=evaluate(candidate);
+for ls=1:opts.max_backtracks,candidate=retract(z,d,alpha);
 feasibleslope=0;for n=1:numel(names),b=names{n};feasibleslope=feasibleslope+ip(g.(b),candidate.(b)-z.(b));end
 if guard,predicted=feasibleslope;else,predicted=alpha*slope;end
-if isfinite(trial)&&predicted<0&&trial<=f+opts.armijo_constant*predicted,accepted=true;break;end,alpha=alpha*opts.backtrack_factor;end
+difference=objective_difference(z,candidate,evaluate,f,opts);
+if isfinite(difference)&&predicted<0&&difference<=opts.armijo_constant*predicted,accepted=true;break;end,alpha=alpha*opts.backtrack_factor;end
 if ~accepted,reason='line_search_exhausted';break;end
 oldg=g;oldd=d;z=candidate;
 end
 [f,eg]=evaluate(z);rg=project(z,eg);if isfield(opts,'non_descent_policy')&&string(opts.non_descent_policy)=="documented_non_descent_restart",measure='projected_simplex_KKT';else,measure='printed_rowmean_gradient';end
 stop=struct('reason',reason,'objective',f,'gradient_norm',gnorm(rg),'projected_kkt_norm',projected_kkt_norm(z,rg),'stationarity_measure',measure);
 end
+function result=communication_increment_test(base)
+fixture=jsondecode(fileread(fullfile(base,'tests','communication_increment_cases.json')));items=as_cells(fixture.cases);receipts=cell(1,numel(items));
+for j=1:numel(items)
+item=items{j};model=build_model(item.model);model.c=item.coefficients.real+1i*item.coefficients.imag;
+z=deserialize(item.base);trial=deserialize(item.candidate);actual=comm_difference(model,z,trial,item.mu,"maximize_negative_softmin");
+truth=str2double(item.decimal_reference);tolerance=max(5e-18,abs(truth)*3e-10);
+naive=comm_objective(model,trial,item.mu,"maximize_negative_softmin")-comm_objective(model,z,item.mu,"maximize_negative_softmin");
+assert(abs(actual-truth)<=tolerance,'Independent Decimal LSE increment mismatch');
+assert(comm_difference(model,z,trial,item.mu,"literal_paper_descent_of_f")==-actual,'Source sign mismatch');
+receipts{j}=struct('name',item.name,'stable_increment',actual,'naive_increment',naive,'decimal_reference',truth,'absolute_error',abs(actual-truth),'tolerance',tolerance,'pass',true);
+end
+result=struct('scope','independent_Decimal_algebra_tests_not_original_figures','cases',{receipts},'pass',true);
+end
+function z=deserialize(state)
+z=struct('phi',state.phi.real(:)+1i*state.phi.imag(:),'theta',state.theta.real(:)+1i*state.theta.imag(:),'X',state.X);
+end
 function [z,history,metrics]=comm_solve(model,z,opts)
 mu=opts.initial_mu;history={};
 while mu>=opts.terminal_mu
-[z,h,stop]=rcg(z,@(x)comm_objective(model,x,mu,string(opts.objective_convention)),opts.rcg);
+inneropts=opts.rcg;inneropts.stable_difference=@(base,candidate)comm_difference(model,base,candidate,mu,string(opts.objective_convention));
+[z,h,stop]=rcg(z,@(x)comm_objective(model,x,mu,string(opts.objective_convention)),inneropts);
 history{end+1}=struct('mu',mu,'inner',{h},'stop',stop);mu=mu*.5;
 end
 gamma=metric(model,z,"communications");binary=threshold(z.X);

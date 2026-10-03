@@ -8,7 +8,7 @@ import platform
 @lru_cache(maxsize=1)
 def implementation_fingerprint():
     digest=hashlib.sha256(b"strict-engine-v1\0")
-    for name in ["core.py","run.py","figures.py","ma_metadata.py","brute_force.py"]:
+    for name in ["core.py","run.py","figures.py","ma_metadata.py","brute_force.py","coordinate_exact.py"]:
         digest.update(name.encode()+b"\0"+Path(__file__).with_name(name).read_bytes()+b"\0")
     runtime={"python":platform.python_version()}
     for name in ["numpy","scipy","cvxpy","clarabel"]:runtime[name]=version(name)
@@ -27,6 +27,18 @@ def implemented_complete(result,expected_fingerprint,job,config):
     checks=result.get("checks",{})
     required=["mrt_converged","zf_converged","mrt_nominal_design_spacing_feasible","zf_nominal_design_spacing_feasible","mrt_nominal_design_box_feasible","zf_nominal_design_box_feasible"]
     if not all(checks.get(k) is True for k in required):return False
+    if config["convex_solver"]["name"]=="certified_exact_2d":
+        for mode in ["mrt","zf"]:
+            updates=result.get("history",{}).get(mode,{}).get("coordinate_updates",[])
+            if not updates:return False
+            for update in updates:
+                cert=update.get("certificate",{})
+                if (update.get("original_subproblem_unchanged") is not True
+                    or cert.get("certified_without_conic_solver_status") is not True):return False
+                for value_key,tolerance_key in [("global_objective_gap_upper_bound","global_objective_gap_tolerance"),
+                    ("maximum_normalized_constraint_violation","normalized_constraint_tolerance")]:
+                    value=cert.get(value_key);tolerance=cert.get(tolerance_key)
+                    if not isinstance(value,(int,float)) or not isinstance(tolerance,(int,float)) or not math.isfinite(value+tolerance) or value<0 or value>tolerance:return False
     schemes=result.get("metrics",{}).get("schemes",{})
     for name in ["MA-MRT","MA-ZF","FPA-MRT","FPA-ZF","FPA-OPT"]:
         s=schemes.get(name,{})

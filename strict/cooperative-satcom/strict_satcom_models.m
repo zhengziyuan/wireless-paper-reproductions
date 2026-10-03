@@ -5,6 +5,8 @@ switch action
     case 'mr_components', [varargout{1:nargout}]=mr_components(varargin{:});
     case 'mr_phase', [varargout{1:nargout}]=mr_phase(varargin{:});
     case 'ap_phase', [varargout{1:nargout}]=ap_phase(varargin{:});
+    case 'mr_phase_reference', [varargout{1:nargout}]=mr_phase_reference(varargin{:});
+    case 'ap_phase_reference', [varargout{1:nargout}]=ap_phase_reference(varargin{:});
     otherwise, error('Unknown model action');
 end
 end
@@ -52,7 +54,7 @@ else, [s,b,p,l]=strict_satcom_core('statistical_mr_coefficients',mu,Q,data.gt_se
 coef=struct('signal',s,'cross',b,'power',p,'leak',l,'offset',offset,'mean',mu,'second',Q,'fourth',fourth);
 end
 
-function [value,g]=mr_phase(data,phi,p,smoothing,limit,tts)
+function [value,g]=mr_phase_reference(data,phi,p,smoothing,limit,tts)
 coef=mr_components(data,phi,tts); mu=coef.mean; Q=coef.second; power=coef.power; l=coef.leak;
 [J,U,N]=size(mu); M=size(phi,2); K=size(l,3);
 numerator=sum(p.*coef.signal,1).'; den=coef.offset;
@@ -94,7 +96,7 @@ end
 g=1i*phi.*gt;
 end
 
-function [snr,g]=ap_phase(data,phi,W)
+function [snr,g]=ap_phase_reference(data,phi,W)
 [mu,C,Q,~,offset]=channel_moments(data,phi); [J,U,N]=size(mu); M=size(phi,2);
 numerator=zeros(U,1); den=offset;
 for u=1:U
@@ -121,4 +123,68 @@ for u=1:U
     end
 end
 g=1i*phi.*gt;
+end
+
+function [value,g]=mr_phase(data,phi,p,smoothing,limit,tts)
+% Exact all-coordinate contraction. The scalar-coordinate oracle remains above.
+coef=mr_components(data,phi,tts);means=coef.mean;Q=coef.second;power=coef.power;l=coef.leak;
+[J,U,N]=size(means);M=size(phi,2);K=size(l,3);numerator=sum(p.*coef.signal,1).';den=coef.offset;
+for u=1:U,den(u)=den(u)+sum(sum(p.*reshape(coef.cross(:,u,:),J,U)))-numerator(u);end
+snr=numerator./den;minimum=min(snr);ex=exp(-(snr-minimum)/smoothing);weights=ex/sum(ex);
+leak=zeros(K,1);for k=1:K,leak(k)=sum(sum(p.*l(:,:,k)));end
+residual=leak-limit(:);value=minimum-smoothing*log(sum(ex))-sum(residual.^2);theta=zeros(U,M);
+for v=1:U
+    dn=zeros(U,M);dd=zeros(U,M);dleak=zeros(K,M);
+    geo=data.geo_d_mean(v)+sum(data.geo_G_mean(v,:).*phi(v,:).*data.r_mean(v,:));
+    dd(v,:)=2*real(conj(geo)*1i*phi(v,:).*data.geo_G_mean(v,:).*data.r_mean(v,:));
+    for j=1:J
+        G=reshape(data.G_mean(j,v,:,:),N,M);r=data.r_mean(v,:).';rv=data.r_var(v);mv=reshape(means(j,v,:),N,1);
+        D=G.*(1i*phi(v,:).*r.');dp=2*real(mv'*D);dn(v,:)=dn(v,:)+p(j,v)*2*power(j,v)*dp;
+        if tts
+            Cb=rv*(G*G');er2=real(r'*r)+M*rv;eb2=real(mv'*mv)+real(trace(Cb));deb4=2*eb2*dp+4*real(mv'*Cb*D);
+            ar=mv-reshape(data.d_mean(j,v,:),N,1);der2b2=er2*dp+2*rv*real((D'*mv).'+ar'*D);
+            df=deb4+2*(N+1)*(data.d_var(j,v)*dp+data.G_var(j,v)*der2b2);
+        end
+        for u=1:U
+            for i=1:U
+                db=zeros(1,M);
+                if tts
+                    if u==i,if u==v,db=df;end
+                    else
+                        if u==v,db=db+2*real(mv'*reshape(Q(j,i,:,:),N,N)*D);end
+                        if i==v,db=db+2*real(mv'*reshape(Q(j,u,:,:),N,N)*D);end
+                    end
+                else
+                    if i==v,db=db+2*real((D'*reshape(Q(j,u,:,:),N,N)*mv).');end
+                    if u==v,mi=reshape(means(j,i,:),N,1);a=mv'*mi;db=db+2*real(conj(a)*(D'*mi).');end
+                end
+                dd(u,:)=dd(u,:)+p(j,i)*db;
+            end
+        end
+        for k=1:K,dleak(k,:)=dleak(k,:)+p(j,v)*2*real(mv'*reshape(data.gt_second(j,k,:,:),N,N)*D);end
+    end
+    dd=dd-dn;dsnr=(dn.*den-numerator.*dd)./den.^2;theta(v,:)=weights.'*dsnr-2*residual.'*dleak;
+end
+g=1i*phi.*theta;
+end
+
+function [snr,g]=ap_phase(data,phi,W)
+[means,C,Q,~,offset]=channel_moments(data,phi);[J,U,N]=size(means);M=size(phi,2);
+numerator=zeros(U,1);den=offset;theta=zeros(U,M);
+for u=1:U
+    dn=zeros(1,M);geo=data.geo_d_mean(u)+sum(data.geo_G_mean(u,:).*phi(u,:).*data.r_mean(u,:));
+    dd=2*real(conj(geo)*1i*phi(u,:).*data.geo_G_mean(u,:).*data.r_mean(u,:));
+    for j=1:J
+        mean=reshape(means(j,u,:),N,1);wj=reshape(W(j,:,:),N,U);received=mean'*wj;
+        D=reshape(data.G_mean(j,u,:,:),N,M).*(1i*phi(u,:).*data.r_mean(u,:));derivative=D'*wj;
+        increments=2*real(conj(received).*derivative);numerator(u)=numerator(u)+abs(received(u))^2;dn=dn+increments(:,u).';
+        for i=1:U
+            if i==u,qi=reshape(C(j,u,:,:),N,N);else,qi=reshape(Q(j,u,:,:),N,N);end
+            den(u)=den(u)+real(wj(:,i)'*qi*wj(:,i));
+        end
+        dd=dd+sum(increments,2).'-increments(:,u).';
+    end
+    theta(u,:)=(dn*den(u)-numerator(u)*dd)/den(u)^2;
+end
+snr=numerator./den;g=1i*phi.*theta;
 end

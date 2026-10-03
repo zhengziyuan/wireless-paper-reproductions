@@ -11,6 +11,11 @@ against these equations. No private manuscript or original author code is bundle
 This is not the old `papers/two-timescale-ma` MRT-only reduced implementation.
 MRT and ZF independently optimize their own antenna positions through the actual
 paper coordinate subproblems; ZF is not merely evaluated at MRT positions.
+The current primary numerical backend is `certified_exact_2d`, solving the
+**same original two-real-variable convex coordinate program** with complete
+polygon active-set candidates and an independent concavity objective-gap
+certificate. This is not a different AO/SCA/MM update; see
+[the proof and actual tests](EXACT_2D_SUBPROBLEM.md).
 
 ## Implemented scope
 
@@ -42,6 +47,8 @@ paper coordinate subproblems; ZF is not merely evaluated at MRT positions.
   errors and full finite-grid exhaustive searches. The latter have no hidden cap;
   default actual-MC searches retain all ordered geometries and only prune
   infeasible partial spacing branches.
+  Figs.19/20 require their separately frozen complete source-axis configurations
+  below; the historical shared `full_config.json` grid must not be used for Fig19.
 
 ## Explicit mathematical corrections and actual remaining blocker
 
@@ -76,6 +83,25 @@ instead reoptimized (69), so no recovered-original-protocol claim is made.
 The optional derivative notes/tests are mathematical diagnostics, not a new
 production optimizer or a silent reuse of the iid curvature for (69).
 
+The new [exact original-model correlated-ZF evaluator](CORRELATED_ZF_EXACT_EVALUATION.md)
+returns to the inverse-Gram/Jensen argument (35)/(37), before the invalid
+Wishart step, and uses the exact conditional Gaussian Laplace integral under
+(68). **No covariance or Wishart approximation is substituted.** Python and
+MATLAB actually evaluated the same complete1000-draw original-N6/M5 geometry:
+corrected population-Jensen plug-in26.2661648457, actual correlated-ZF
+mean27.2396524305, and all5000 Schur identities passed. This dimension-correct
+evaluation does not recover the undefined printed (74) or historical curves.
+Finite-ensemble estimates are not guaranteed finite-MC lower bounds.
+`evaluate_correlated_zf.py` writes separately labeled corrected histories on
+a completed original Algorithm2 trajectory. Old blocked receipts are preserved.
+The new [full corrected-source Figs.14/16 entrypoints](CORRECTED_SOURCE_FIGURES.md)
+retain both original dimensions and all three Rician cases, with the complete
+configured100 geometries/1000 draws and every accepted unchanged Algorithm2
+position. Separate MC, exact-Jensen and error panels prevent confusing a
+mathematically corrected evaluation with recovery of the historical figures.
+Both Python and independent MATLAB full-bank adapters are provided; writing
+or preparing them does not claim that all300 figure jobs have executed.
+
 ## Full configuration and provenance
 
 `source_contract.json` maps models/equations and issues. `full_config.json` labels
@@ -87,10 +113,24 @@ a units choice, while path-loss/user-error distances remain meters.
 
 The paper does not disclose MC counts or seeds. The full configuration chooses
 **100 geometry realizations and 1,000 independent circular-complex-Gaussian NLoS
-draws per geometry**, and a 1,500 AO/benchmark safety cap. These are tuned, not
-quoted original counts. Full sweep grids are inferred from author figure ticks;
+draws per geometry**. The historical `full_config.json` uses1,500 AO/benchmark
+safety caps; the new independent
+[`configs/full-ao10000-fig03-18-v2.json`](configs/full-ao10000-fig03-18-v2.json)
+uses10,000 for AO while retaining the1,500 benchmark cap. These are unreported
+controls, not source-specified iteration budgets. The physical problem, all five
+schemes, solver certificates and the original5e-5 fractional stop are unchanged.
+The [actual full-size slot68 replay](../validation/two-timescale-ma-corrected-zf/full-slot068-same-algorithm-unreported-cap-audit-v1.json)
+converged at1599 sweeps; all1501 original objective/position entries and9000
+coordinate records match the old1500 prefix bitwise. All1000 exported draws were
+evaluated at every accepted position. The old failure is preserved, not relabeled.
+A fresh complete200-job Fig3 bank uses the new config and byte-identical inputs,
+with zero old-output reuse; its full completion is still pending. A single
+successful long-cap replay does not guarantee that10,000 suffices for all jobs.
+
+The MC counts, seed, initialization/factorization, solver accuracy and benchmark
+stopping settings remain disclosed choices. Most sweep grids are inferred from
+author figure ticks;
 ticks alone do not prove every original marker. Initialization/factorization,
-solver accuracy and benchmark stopping settings are also disclosed choices.
 The original brute-force expectation/evaluation protocol is not fully disclosed.
 The default `brute_force_objective="instantaneous_MC"` maximizes the **actual
 sum-rate mean over the complete exported NLoS ensemble**, rebuilding the original
@@ -100,6 +140,16 @@ selectable `"paper_statistical_design_objective"` instead exhaustively optimizes
 the MRT approximation / ZF bound and may remove permutation duplicates; such a
 result is a finite-grid optimum of the **design surrogate**, not a true ergodic
 finite-MC optimum. These protocols are not conflated or silently substituted.
+
+The [direct original EPS marker audit](../validation/two-timescale-ma-corrected-zf/BRUTE_FORCE_SOURCE_PROTOCOL_AUDIT.md)
+requires all D3:18 points for Fig19 and D3:12 for Fig20, separately:
+[`figure19-full-axis-ao10000-fixed-mc-protocol-v2.json`](configs/figure19-full-axis-ao10000-fixed-mc-protocol-v2.json)
+and [`figure20-full-axis-ao10000-fixed-mc-protocol-v2.json`](configs/figure20-full-axis-ao10000-fixed-mc-protocol-v2.json).
+Both retain the full ordered fixed-draw MC search choice, not a recovered unique
+author objective. Neither huge full search has completed. Separate WORK-only
+exact statistical-objective B&B research passed
+[eight complete small-grid and four active-spacing subtree checks](../validation/two-timescale-ma-corrected-zf/statistical-grid-certified-small-tests-v1.json);
+it is not enabled as a production search, and large-D tractability is not proven.
 
 Error scenarios are reconstructed as follows: user Cartesian coordinates are
 perturbed independently within ±error meters before deriving design AoDs/path
@@ -116,15 +166,24 @@ beamforming: its short-timescale beamformer uses the true realized channel.
 
 ## Dependencies and commands
 
-Python: NumPy, SciPy (Bessel function), CVXPY and Clarabel. CVXPY is a numerical
-backend for the **same original convex subproblem**, not a replacement update.
-Python numerical settings are explicit in `full_config.json`.
+Python: NumPy/SciPy for the primary exact2D solver. CVXPY/Clarabel remain
+optional backends for the same original convex subproblem; repository runtime
+metadata currently records their versions. Primary backend names/settings are
+explicit in the immutable selected configuration. The model,100x1000 population and original
+outer stop are unchanged.
 
 ```text
-python run.py --component-test --output component-python.json
-python figures.py --figure 5 --output-dir output/figure5
-python figures.py --figure 5 --output-dir output/figure5 --prepare
-python figures.py --figure 5 --output-dir output/figure5 --execute
+python run.py --component-test --config configs/full-ao10000-fig03-18-v2.json --output component-python.json
+python figures.py --figure 5 --config configs/full-ao10000-fig03-18-v2.json --output-dir output/figure5
+python figures.py --figure 5 --config configs/full-ao10000-fig03-18-v2.json --output-dir output/figure5 --prepare
+python execute_bank.py --bank output/figure5 --workers 1
+python render_figures.py --bank output/figure5 --output-dir output/figure5/rendered
+python figures.py --figure 19 --config configs/figure19-full-axis-ao10000-fixed-mc-protocol-v2.json --output-dir output/figure19
+python figures.py --figure 20 --config configs/figure20-full-axis-ao10000-fixed-mc-protocol-v2.json --output-dir output/figure20
+python test_exact_2d.py
+python test_coordinate_scaling.py
+python test_correlated_zf.py
+python derive_figure04.py --source-bank output/figure3 --output-dir output/figure3/derived-figure04
 ```
 
 Default figure invocation only writes the full workload plan. `--prepare` exports
@@ -148,6 +207,18 @@ complete source-supported model-comparison evaluations can close the implemented
 figure scope, but `original_curve_closeness_verified` remains false until an
 actual reference comparison is performed. These
 implemented receipts can be reused without endlessly rerunning unchanged MC.
+The already-running corrected-source Fig16 bank retains its original1500-config
+identity until a separate controlled transition; the new Fig3 configuration
+must not be pasted onto those300 receipts. Its integral/evaluator fingerprint
+and scope remain separate from the new AO-cap bank.
+`derive_figure04.py` permits a source-matched full-bank reuse, not a reduced
+experiment: Fig3 already executes both independent MRT/ZF optimizers. Only
+after **all200** κ6/100 geometry jobs pass, the adapter checks exact original
+case/config/input regeneration and freshly evaluates every accepted ZF position
+with the identical **all1000** NLoS draws. Fig4 then explicitly records its
+shared Fig3 source and fresh ZF MC-history derivation, without pretending to
+have rerun identical position optimization. Until that full source gate passes,
+the adapter emits readiness only, no partial curve.
 MATLAB full wrappers
 default to the immutable `run_config.json` beside the exported job folder.
 An additional implementation fingerprint includes the actual engine sources and
@@ -155,26 +226,31 @@ runtime/dependency identity, so changing an algorithm cannot reuse stale results
 even when its configuration and random inputs stay unchanged. Input identities
 are shared across languages; implementation identities are intentionally separate.
 
-MATLAB requires an **external official CVX installation**, not vendored here.
-Run CVX setup and add its paths before these functions. In the tested official
-CVX 2.2.2 layout, the `double vec` compatibility function may require:
+MATLAB's primary `certified_exact_2d` backend uses base MATLAB and needs
+**no CVX installation**. It has the same complete polygon candidates and
+finite primal/global-gap certificate. Only the optional explicitly selected
+SDPT3 conic branch requires an external official CVX installation, not vendored
+here. The primary base-MATLAB commands are:
 
 ```matlab
-addpath(fullfile(cvx_root,'functions','vec_'))
 addpath(pwd)
-run_strict_two_timescale_ma('component-matlab.json');
-run_strict_two_timescale_ma('scenario-matlab.json','output/figure5/jobs/case-000-mc-000.json');
+run_strict_two_timescale_ma('component-matlab.json',[],...
+    'configs/full-ao10000-fig03-18-v2.json');
+run_strict_two_timescale_ma('scenario-matlab.json',...
+    'output/figure5/jobs/case-000-mc-000.json','output/figure5/run_config.json');
 run_full_ma_figure('output/figure5/jobs','output/figure5/matlab');
 ```
 
-This path points to CVX's own support function; it does not replace any mathematical
-subproblem. With SDPT3, CVX prints an **experimental successive-approximation**
+For the optional SDPT3 branch only, run CVX setup/add its paths. In the tested
+official CVX2.2.2 layout the `double vec` compatibility path points to CVX's
+own support function (`addpath(fullfile(cvx_root,'functions','vec_'))`); it does
+not replace any mathematical subproblem. With SDPT3, CVX prints an **experimental successive-approximation**
 warning for the logarithmic ZF objective. Record this backend warning and solver
 status truthfully. An unavailable/failed solver is not replaced by a projected
 gradient method; results are marked failed. A native exponential-cone backend,
 when available, solves the same convex problem but must be named in run metadata.
-The full configuration explicitly selects MATLAB `SDPT3`/`best` precision rather
-than inheriting an unnoticed interactive CVX solver setting.
+The primary configuration explicitly selects `certified_exact_2d`; the optional
+SDPT3/best branch requires a separate configuration with its backend recorded.
 
 ## Evidence and computational warning
 
@@ -183,8 +259,13 @@ ZF Woodbury identity, MM tangency, two original convex coordinate subproblems,
 spacing/box and curvature correction proof. Deterministic fixed-array benchmark
 spot checks have also executed. These are **not full numerical figures**.
 MATLAB/full-run status must be taken from actual output artifacts, not inferred
-from the existence of this code. Full Monte Carlo figures have not been executed
-by writing the drivers. Grid-search cost is `D^(2N)` before pruning; D=10,N=6
+from code existence. Full-bank execution has started, but a passed single
+geometry does not certify a complete100-geometry figure. `execute_bank.py`
+writes durable per-job progress; failures remain in their original input slots.
+`render_figures.py` emits curves only after every required100-geometry/1000-NLoS
+receipt passes, never by averaging survivors. Unequal trajectory lengths use
+an explicitly disclosed final-state hold, not invented AO updates.
+Grid-search cost is `D^(2N)` before pruning; D=10,N=6
 means 10^12 ordered candidate geometries. Even symmetry reduction does not make
 the full original brute-force scenarios inexpensive. Do not launch them during
 component testing or report unfinished partial searches as complete results.

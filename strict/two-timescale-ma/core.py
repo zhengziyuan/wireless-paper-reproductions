@@ -104,34 +104,68 @@ def coordinate_constraints(cp, x, t, c, antenna):
 
 
 def solve_coordinate(t, c, antenna, mode):
+    if c["convex_solver"]["name"]=="certified_exact_2d":
+        from coordinate_exact import solve
+        if mode=="MRT":
+            value,gradient,curvature,_=mrt_statistics(t,c,antenna)
+            delta,certificate=solve(t,c,antenna,mode,gradient=gradient[antenna],curvature=curvature,objective_before=value)
+        elif mode=="ZF":
+            if c["interpretations"].get("zf_spacing")!="P5n_with_equation_30_spacing":raise ValueError("Explicit original ZF spacing interpretation required")
+            value,_,_,eta=zf_statistics(t,c);s=zf_surrogate(t,c,antenna)
+            delta,certificate=solve(t,c,antenna,mode,base=s["ratio"]+1/eta,
+                minor_gradient=s["gradient"],minor_curvature=s["curvature"],objective_before=value)
+        else:raise ValueError(mode)
+        trial=t.copy();trial[antenna]+=delta
+        actual=mrt_statistics(trial,c)[0] if mode=="MRT" else zf_statistics(trial,c)[0]
+        lower=value+certificate["minorant_increment"];tol=c["verification_tolerance"]
+        if actual<lower-tol or actual<value-tol:raise RuntimeError("Exact2D original surrogate/monotonic validation failed")
+        return trial,{"before":value,"after":actual,"surrogate":lower,"lower_bound_gap":actual-lower,
+            "solver_status":"certified_global_2d","solver_iterations":None,"original_subproblem_unchanged":True,
+            "certificate":certificate}
     import cvxpy as cp
-    x = cp.Variable(2); delta = x-t[antenna]
-    cons = coordinate_constraints(cp,x,t,c,antenna)
+    # Bijective change of variables only: same original convex subproblem.
+    # Unscaled absolute positions can stall a tight-tolerance conic backend.
+    u = cp.Variable(2)
     if mode == "MRT":
         value, gradient, curvature, _ = mrt_statistics(t,c,antenna)
-        objective = value+gradient[antenna]@delta-curvature/2*cp.sum_squares(delta)
+        variable_scale = np.sqrt(max(curvature,1.))
+        delta = u/variable_scale
+        objective = gradient[antenna]@delta-curvature/2*cp.sum_squares(delta)
+        objective_constant = value
     elif mode == "ZF":
         if c["interpretations"].get("zf_spacing") != "P5n_with_equation_30_spacing":
             raise ValueError("Explicit ZF_CROSS_REFERENCES interpretation required.")
         value,_,_,eta = zf_statistics(t,c)
         s = zf_surrogate(t,c,antenna)
-        minor = s["chi"]+s["f0"]+s["gradient"]@delta-s["curvature"]/2*cp.sum_squares(delta)
-        objective = cp.sum(cp.log(1+cp.multiply(eta,minor)))/np.log(2)
+        base = s["ratio"]+1/eta
+        local_curvature = (np.sum(s["curvature"]/base)*np.eye(2)
+            + s["gradient"].T@((1/base**2)[:,None]*s["gradient"]))/np.log(2)
+        variable_scale = np.sqrt(max(float(np.linalg.eigvalsh(local_curvature)[-1]),1.))
+        delta = u/variable_scale
+        # chi+f0 equals a/b exactly at the expansion point; use that identity
+        # to avoid cancellation, not a different minorant or covariance.
+        change = s["gradient"]@delta-s["curvature"]/2*cp.sum_squares(delta)
+        objective = cp.sum(cp.log(1+cp.multiply(1/base,change)))/np.log(2)
+        objective_constant = float(np.log2(eta*base).sum())
     else:
         raise ValueError(mode)
+    cons = coordinate_constraints(cp,t[antenna]+delta,t,c,antenna)
     problem = cp.Problem(cp.Maximize(objective),cons)
     spec = c["convex_solver"]
     problem.solve(solver=spec["name"], **spec["options"])
     if problem.status != "optimal":
         raise RuntimeError(f"{mode} coordinate {antenna}: solver status {problem.status}; no substitute update is applied.")
-    candidate = np.asarray(x.value)
+    candidate = t[antenna]+np.asarray(u.value)/variable_scale
     trial = t.copy(); trial[antenna] = candidate
     actual = mrt_statistics(trial,c)[0] if mode == "MRT" else zf_statistics(trial,c)[0]
-    lower = float(objective.value)
+    lower = float(objective.value)+objective_constant
     tol = c["verification_tolerance"]
     if actual < lower-tol or actual < value-tol:
         raise RuntimeError(f"{mode}: source surrogate/update validation failed.")
-    return trial, {"before":value,"after":actual,"surrogate":lower,"lower_bound_gap":actual-lower}
+    return trial, {"before":value,"after":actual,"surrogate":lower,"lower_bound_gap":actual-lower,
+        "canonicalization":"bijective_curvature_scaled_centered_displacement_and_constant_objective_removal",
+        "variable_scale":float(variable_scale),"solver_status":problem.status,
+        "solver_iterations":problem.solver_stats.num_iters,"original_subproblem_unchanged":True}
 
 
 def optimize(initial, c, mode):

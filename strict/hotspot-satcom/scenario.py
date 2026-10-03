@@ -43,7 +43,10 @@ def sample_scenario(config,rng):
     kg=10**(p['kappa_ground_db']/10)
     for u in range(U):
         direction=hu_pos[u]-ris_pos; distance=np.linalg.norm(direction)
-        amplitude=lam/(4*np.pi*distance)*np.sqrt(ris_gain*receive)
+        # Original numerical paragraph fixes equal large-scale RIS-to-HU
+        # attenuation at d_RU=400m for every subpanel/user. Actual position
+        # offsets remain in the propagation phase, not the path-loss gain.
+        amplitude=lam/(4*np.pi*p['ris_hu_distance_m'])*np.sqrt(ris_gain*receive)
         phase=np.exp(-2j*np.pi*(distance+coords@direction/distance)/lam)
         rm[u]=amplitude*np.sqrt(kg/(1+kg))*phase; rv[u]=amplitude**2/(1+kg)
         r=rm[u]+np.sqrt(rv[u])*cn((M,)); cascade[u]=r[:,None]*G
@@ -52,4 +55,5 @@ def sample_scenario(config,rng):
             'power':p['power_w'],'nhu_target':np.full(K,10**(p['nhu_sinr_db']/10)),
             'mean_inputs':{'direct_mean':dm,'direct_variance':dv,'matrix_mean':Gmean,'matrix_variance':Gvar,'ground_mean':rm,'ground_variance':rv,
                            'nhu_mean':nm,'nhu_variance':nv},
-            'geometry':{'hu_xy_m':hu_pos,'nhu_xy_m':nhu_pos,'ris_xy_m':ris_pos}}
+            'geometry':{'hu_xy_m':hu_pos,'nhu_xy_m':nhu_pos,'ris_xy_m':ris_pos,
+                        'common_ground_pathloss_distance_m':p['ris_hu_distance_m']}}

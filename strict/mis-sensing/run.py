@@ -88,8 +88,13 @@ def implementation_digest():
              "thread_environment":{v:os.environ.get(v) for v in ("OPENBLAS_NUM_THREADS","OMP_NUM_THREADS","MKL_NUM_THREADS")}}
     return hashlib.sha256(json.dumps({"source":manifest,"runtime":runtime},sort_keys=True).encode()).hexdigest(),{"source":manifest,"runtime":runtime}
 
-def solver_diagnostics(history,settings,objective):
-    """Differentiate finite execution, feasibility, inner and outer stopping."""
+def solver_diagnostics(history,settings,objective,model=None,state=None,metrics=None):
+    """Separate prescribed budget termination, optional EARLY stopping and KKT.
+
+    The numerical paragraph says the AND rule terminates EARLY. Completing
+    its fixed 30-outer budget need not also satisfy that early-stop predicate.
+    Neither event alone proves stationarity: original-problem residuals do.
+    """
     comm=settings["kind"]=="communications"
     groups=[history] if comm or objective!="pslr" else [stage["outer"] for stage in history]
     entries=[x for group in groups for x in group]
@@ -100,21 +105,31 @@ def solver_diagnostics(history,settings,objective):
     stationary=[bool(np.isfinite(n) and n<=t) for n,t in zip(norms,tolerances)]
     reasons=[x["stop"]["reason"] for x in entries]
     if comm:
-        outer_met=True
+        early_met=True;budget_complete=True;outer_met=True
         continuation_complete=bool(history and history[-1]["mu"]*.5<settings["terminal_mu"])
     else:
-        decisions=[]
+        decisions=[];budget_decisions=[]
         for group in groups:
             stepstop=group[-1]["step"]<=settings["minimum_step"]
             epsstop=group[-1]["epsilon_next"]<=settings["epsilon_min"]
             decisions.append((stepstop or epsstop) if settings["outer_stopping_logic"]=="algorithm_OR" else (stepstop and epsstop))
-        outer_met=bool(all(decisions));continuation_complete=True
-    failed=sum("line_search" in r or "non_descent" in r or "zero_projected" in r for r in reasons)
+            budget_decisions.append(len(group)>=settings["outer_iterations"])
+        early_met=bool(all(decisions));budget_complete=bool(all(budget_decisions))
+        outer_met=bool(all(early or budget for early,budget in zip(decisions,budget_decisions)))
+        continuation_complete=bool(objective!="pslr" or (history and history[-1]["mu"]*settings["pslr_mu_factor"]<settings["pslr_mu_terminal"]))
+    certificate=None
+    if not comm and model is not None and state is not None and metrics is not None:
+        certificate=model.constrained_kkt_certificate(state,metrics["multipliers"],objective,tolerances[-1],settings["feasibility_tolerance"])
+    original_kkt=bool(comm or (certificate is not None and certificate["original_problem_kkt_verified"]))
+    failed=sum(r not in ("gradient_tolerance","iteration_cap") for r in reasons)
     return {"final_inner_stationary":stationary[-1],"all_inner_tolerances_satisfied":all(stationary),
             "final_inner_residual":float(norms[-1]),"final_inner_tolerance":float(tolerances[-1]),
             "outer_stopping_applicable":not comm,"outer_stopping_met":outer_met,
+            "outer_early_stopping_met":early_met,"prescribed_outer_budget_execution_complete":budget_complete,
+            "outer_termination_valid":outer_met,"original_problem_kkt_certificate":certificate,
+            "original_problem_kkt_verified":original_kkt,
             "continuation_complete":continuation_complete,"inner_iteration_cap_exits":reasons.count("iteration_cap"),
-            "inner_failure_exits":failed,"convergence_verified":bool(all(stationary) and outer_met and continuation_complete and not failed),
+            "inner_failure_exits":failed,"convergence_verified":bool(all(stationary) and outer_met and continuation_complete and not failed and original_kkt),
             "final_inner_exit_reason":reasons[-1]}
 
 def optimize(model,settings,objective,seed_offset=0,checkpoint_path=None):
@@ -158,7 +173,10 @@ def optimize(model,settings,objective,seed_offset=0,checkpoint_path=None):
                     counts[j]+=1
             feasible=metrics["maximum_constraint"]<=settings["feasibility_tolerance"]
             score=metrics["eta"]
-        diagnostic=solver_diagnostics(h,settings,objective)
+        diagnostic=solver_diagnostics(h,settings,objective,model=model,state=z,metrics=metrics)
+        live_digest,_=implementation_digest()
+        if live_digest!=source_digest:
+            raise RuntimeError("Implementation changed during this start; preserve old output and rerun from a frozen source in a new directory")
         binary_feasible=bool(settings["kind"]=="communications" or metrics["eta"]-metrics["min_binary_metric"]<=settings["feasibility_tolerance"])
         status="converged_feasible" if feasible and diagnostic["convergence_verified"] else ("feasible_not_convergence_verified" if feasible else "infeasible")
         summaries.append({"start":start+1,"feasible":bool(feasible),"binary_eta_feasible":binary_feasible,
@@ -232,7 +250,7 @@ def beampattern_samples(model,state,selected,objective="sinr"):
     maps=[]
     for k,u in enumerate(selected):
         raw=powers[:,u].reshape(len(az),len(el)).T
-        denominator=np.sum(echo[:,u])-echo[k,u]+model.config["noise_over_power"]
+        denominator=np.sum(echo[np.arange(model.targets)!=k,u])+model.config["noise_over_power"]
         panel={"target":k,"pattern":int(u),"normalized_gain":(raw/np.max(raw)).tolist(),
                "sinr":(model.beta[k]*raw*raw/denominator).tolist(),
                "target_azimuth_deg":model.config["azimuth_deg"][k],
@@ -338,6 +356,7 @@ def component_test(guarded=False):
 
 def diagnostic_start(figure,settings,start,point_index=0):
     """One original full-size/per-start-budget diagnostic, never a full figure."""
+    source_before,manifest_before=implementation_digest()
     if settings["number_of_starts"]!=6000 or settings["rcg_max_iterations"]!=4000 or (settings["kind"]=="sensing" and settings["outer_iterations"]!=30):
         raise ValueError("Full-size start diagnostics retain original full per-start budgets; use separate component tests for reductions")
     if start<1 or start>settings["number_of_starts"]:raise ValueError("Diagnostic start index outside full original start bank")
@@ -356,11 +375,14 @@ def diagnostic_start(figure,settings,start,point_index=0):
             model.config["pslr_mu"]=mu;z,outer,metrics=sensing_solve(model,z,options,objective)
             h.append({"mu":mu,"outer":outer});mu*=settings["pslr_mu_factor"]
     else:z,h,metrics=sensing_solve(model,z,options,objective)
-    source,manifest=implementation_digest()
+    diagnostic=solver_diagnostics(h,settings,objective,model=model,state=z,metrics=metrics)
+    source,manifest=implementation_digest();unchanged=source==source_before
+    diagnostic["convergence_verified"]=bool(diagnostic["convergence_verified"] and unchanged)
     return {"paper_id":PAPER_ID,"scope":"single_original_full_start_diagnostic_not_full_figure",
             "figure":figure["id"],"start":start,"original_number_of_starts":settings["number_of_starts"],
-            "configuration":point,"settings":settings,"metrics":metrics,"solver_status":solver_diagnostics(h,settings,objective),
-            "history":h,"state":serialize(z),"implementation_digest":source,"source_manifest":manifest}
+            "configuration":point,"settings":settings,"metrics":metrics,"solver_status":diagnostic,
+            "history":h,"state":serialize(z),"implementation_digest":source,"source_manifest":manifest,
+            "source_start_implementation_digest":source_before,"runtime_source_unchanged":unchanged}
 
 def figure_execution_status(points,full_count):
     complete=len(points)==full_count; verified=complete

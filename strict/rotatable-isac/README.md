@@ -80,6 +80,8 @@ python run.py --component-test --output component-python.json
 python figures.py --family power-b0 --output-dir output/power-b0
 python figures.py --family power-b0 --output-dir output/power-b0 --prepare
 python figures.py --family power-b0 --output-dir output/power-b0 --execute
+python execute_bank.py --bank output/power-b0 --workers 2
+python render_figures.py --bank output/power-b0 --output-dir output/power-b0/rendered
 ```
 
 Without `--prepare`/`--execute`, the driver only writes a truthful workload plan.
@@ -126,6 +128,36 @@ run_full_isac_figure('output/power-b0/jobs','output/power-b0/matlab');
 One exported scenario runs all six schemes. `fixture.json` is a deterministic,
 full-dimension component input, **not a Monte Carlo experiment**. No private
 manuscript or original proprietary code is redistributed here.
+
+`execute_bank.py` consumes a **previously prepared immutable complete bank**,
+retains every failed/nonconverged input slot, and writes durable per-job
+progress. Its bounded workers each use one BLAS thread; this controls CPU,
+not the100-channel population, six schemes or original stopping thresholds.
+The separately frozen fixed-rotation-v3 power-b2 bank (five powers ×100 channels
+×six schemes) is now actually running with two workers. All500 input jobs,
+configuration and the input manifest are byte-identical to the retained v2 bank;
+no old numerical result is reused. The incomplete v1/v2 outputs, scientific
+sources and in-flight observations were hash-retained before the authorized
+version transition. They are historical incomplete banks, not numerical-theory
+failures or completed figures.
+
+The first fresh v3 bank scenario passed all six original inner/outer stops and
+physical checks. A separate actual production equivalence test compared all
+six schemes' complete metrics, states, inner histories and stop gates with the
+retained v2 result, bitwise. It also compared both full2828-update W blocks and
+an active-RIS full500-update RCG block, including raw PR/Armijo/restart records.
+The latter correctly retained its unconverged-cap status. No budget, stopping
+threshold or direction update changed. See the
+[W-block proof](FIXED_CHANNEL_CACHE_PROOF.md) and
+[fixed-rotation channel-base proof](FIXED_ROTATION_BASE_CACHE_PROOF.md).
+One successful scenario is **not** a completed100-channel point or500-job figure.
+
+`render_figures.py` validates all100 channel receipts for every point before
+producing any curve. It never averages only successful survivors. Rotation
+figures select exactly the six source-verified legend series from five bound
+pair families. Fig17 uses only the four original RIS-present series,
+mean NMSE on the horizontal axis, mean rate vertically, with NMSE decreasing
+left-to-right. These are render adapters, not verified numerical agreement.
 
 ## Current evidence and computational cost
 

@@ -1,0 +1,60 @@
+{
+  "paper_id": "two-timescale-ma",
+  "scope": "actual_same_full1000_draw_original_correlated_model_cross_language_identity",
+  "all_passed": true,
+  "N": 6,
+  "M": 5,
+  "draw_count": 1000,
+  "Schur_identities_per_language": 5000,
+  "parity_relative_tolerance": 1e-09,
+  "parity_absolute_tolerance": 1e-10,
+  "array_errors": {
+    "positions": {
+      "shape": [
+        6,
+        2
+      ],
+      "maximum_absolute_difference": 0.0
+    },
+    "conditional_inverse_moments_all5000": {
+      "shape": [
+        1000,
+        5
+      ],
+      "maximum_absolute_difference": 1.2463555743025267e-09
+    },
+    "actual_correlated_rates_all1000": {
+      "shape": [
+        1000
+      ],
+      "maximum_absolute_difference": 7.460698725481052e-14
+    },
+    "direct_MC_inverse_diagonal_mean": {
+      "shape": [
+        5
+      ],
+      "maximum_absolute_difference": 6.661338147750939e-16
+    },
+    "Jensen_per_user_rates": {
+      "shape": [
+        5
+      ],
+      "maximum_absolute_difference": 3.0269120543380268e-12
+    }
+  },
+  "all5000_conditional_moments_fixed_tolerance_passed": false,
+  "all5000_conditional_moments_within_combined_reported_quadrature_error_estimates": true,
+  "combined_reported_adaptive_quadrature_error_estimate": 3.3002909126675687e-09,
+  "quadrature_estimates_are_not_interval_arithmetic_proof": true,
+  "Python_corrected_Jensen_estimate": 26.26616484571919,
+  "MATLAB_corrected_Jensen_estimate": 26.266164845714,
+  "Python_actual_correlated_ZF_mean": 27.23965243046209,
+  "MATLAB_actual_correlated_ZF_mean": 27.239652430462094,
+  "source_row_covariance_unchanged": true,
+  "covariance_or_Wishart_approximation_substituted": false,
+  "printed_Eq74_closed_form_recovered": false,
+  "full100_geometry_figure_complete": false,
+  "original_curve_closeness_verified": false,
+  "Python_result_sha256": "313267058850c4bc95de8405c3607f334ecc78015535fd63b2fbf71ba6d7cc0b",
+  "MATLAB_result_sha256": "12f50cbb7379cc807e54d5db5ae9685ec3d3707677ce454e0c07982f1d505f95"
+}

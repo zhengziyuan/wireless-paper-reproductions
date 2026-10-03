@@ -1,15 +1,33 @@
 function result=run_strict_hotspot_satcom(configPath,outputPath,sweepId,csi)
 % Full author-thesis instantaneous algorithms at unmodified configured MC count.
-% No statistical-CSI replacement while its author equations remain inconsistent.
+% Statistical entry is an explicit original-model QT erratum, never a silent substitute.
 config=jsondecode(fileread(configPath));
-if nargin>=4 && ~strcmp(csi,'instantaneous'), error('%s',config.statistical_csi_issue); end
+if nargin>=4 && strcmp(csi,'statistical')
+    assert(nargin<3||isempty(sweepId)||strcmp(sweepId,'statistical'),'Statistical CSI uses its original figure3-10 grid');
+    result=run_strict_hotspot_statistical_controlled(configPath,outputPath,'full');return;
+elseif nargin>=4 && ~strcmp(csi,'instantaneous'),error('Unknown CSI regime');end
+if nargin>=3&&strcmp(sweepId,'full-case')
+    % Explicit diagnostic scope: ONE complete original-sized optimization,
+    % all configured iterations and all 1000 original Gaussian SDR draws.
+    % Never confuse this with the 1000-realization figure Monte Carlo bank.
+    sourceHashes=strict_hotspot_runtime_hashes(configPath,'instantaneous');started=tic;rng(config.tuned_not_reported.seed,'twister');
+    try,sample=full_sample(config);catch err,sample=struct('status','failed','error',err.message,'physical_constraint_pass',false,'convergence_pass',false,'solver_primal_pass',false,'qt_sdr_bound_pass',false,'valid_sample',false);end
+    names={'physical_constraint_pass','convergence_pass','solver_primal_pass','qt_sdr_bound_pass'};checks=struct();for k=1:numel(names),checks.(names{k})=sample.(names{k});end
+    result=struct('paper_id','hotspot-satcom','scope','full_dimension_complete_algorithm_representative_NOT_1000_realization_figure_bank', ...
+        'sample',sample,'checks',checks,'configuration',config,'elapsed_seconds',toc(started),'representative_sample_count',1, ...
+        'original_MC_figure_count',config.tuned_not_reported.monte_carlo_realizations,'full_MC_figure_bank_pass',false,'full_reproduction_pass',false, ...
+        'executed_source_hashes',sourceHashes,'source_unchanged_during_run',isequal(sourceHashes,strict_hotspot_runtime_hashes(configPath,'instantaneous')));
+    assert(result.source_unchanged_during_run,'Actual instantaneous runtime sources changed');
+    folder=fileparts(outputPath);if ~isempty(folder)&&~exist(folder,'dir'),mkdir(folder);end
+    fid=fopen(outputPath,'w');assert(fid>=0);clean=onCleanup(@()fclose(fid));fprintf(fid,'%s\n',jsonencode(result));return;
+end
 sweeps=config.sweeps; if ~iscell(sweeps), sweeps=num2cell(sweeps); end
 if nargin>=3 && strcmp(sweepId,'base')
     sweeps={struct('id','base','parameter','power_w','values',config.reported.power_w)};
 elseif nargin>=3
     ids=cellfun(@(x)x.id,sweeps,'UniformOutput',false); sweeps=sweeps(strcmp(ids,sweepId)); assert(~isempty(sweeps),'Unknown sweep');
 end
-started=tic; records={};
+sourceHashes=strict_hotspot_runtime_hashes(configPath,'instantaneous');started=tic; records={};
 for sidx=1:numel(sweeps)
     sweep=sweeps{sidx}; vals=sweep.values;
     if strcmp(sweep.parameter,'subsurface_elements'), count=size(vals,1); else, count=numel(vals); end
@@ -40,7 +58,9 @@ result=struct('paper_id','hotspot-satcom','source_version','author_thesis','fina
     'scope','instantaneous_author_model_original_AO_QT_SDR_and_RGD_QT_full_dimensions_full_configured_MC','phase_method','author_Algorithm_3-2_RGD_minimize_negative_F', ...
     'elapsed_seconds',toc(started),'results',{records},'checks',checks, ...
     'overall_implemented_scope_success',~isempty(records)&&all(cellfun(@(x)x.valid_figure_point,records)),'all_configured_sweeps_requested',nargin<3, ...
-    'full_reproduction_pass',false,'remaining',{{'Statistical-CSI mathematical consistency','Final publication equivalence','Published-figure agreement'}});
+    'full_reproduction_pass',false,'remaining',{{'Final publication equivalence','Published-figure agreement'}}, ...
+    'executed_source_hashes',sourceHashes,'source_unchanged_during_run',isequal(sourceHashes,strict_hotspot_runtime_hashes(configPath,'instantaneous')));
+assert(result.source_unchanged_during_run,'Actual instantaneous runtime sources changed; no mixed-source certification');
 folder=fileparts(outputPath); if ~isempty(folder) && ~exist(folder,'dir'), mkdir(folder); end
 fid=fopen(outputPath,'w'); assert(fid>=0); clean=onCleanup(@()fclose(fid)); fprintf(fid,'%s\n',jsonencode(result));
 end
@@ -49,7 +69,7 @@ function sample=full_sample(scene)
 t=scene.tuned_not_reported;f=strict_hotspot_scenario(scene);U=size(f.direct,1);hu=strict_hotspot_core('effective',f.direct,f.cascade,f.phi0);
 W0=initialize([hu;f.nhu],[t.initial_hu_sinr*ones(U,1);f.nhu_target],f.noise,f.power);normals=cell(1,t.ao_max_iterations);
 for a=1:numel(normals),normals{a}=(randn(numel(f.phi0)+1,t.randomization_count)+1i*randn(numel(f.phi0)+1,t.randomization_count))/sqrt(2);end
-clock=tic;[apPhi,W,h,astop,diagnostics,endpoints]=strict_hotspot_core('ao',f.direct,f.cascade,f.nhu,f.phi0,W0,f.noise,f.power,f.nhu_target,normals,t.ao_max_iterations,t.relative_tolerance);
+clock=tic;[apPhi,W,h,astop,diagnostics,endpoints]=strict_instantaneous_ao_guarded(f.direct,f.cascade,f.nhu,f.phi0,W0,f.noise,f.power,f.nhu_target,normals,t.ao_max_iterations,t.relative_tolerance);
 aoTime=toc(clock);aEval=strict_hotspot_core('evaluate',strict_hotspot_core('effective',f.direct,f.cascade,apPhi),f.nhu,W,f.noise);
 clock=tic;[tsPhi,tsW,hts]=strict_hotspot_core('two_stage',f.direct,f.cascade,f.nhu,f.phi0,W0,f.noise,f.power,f.nhu_target,t.rgd_max_iterations,t.gradient_tolerance,t.qt_max_iterations,t.relative_tolerance);
 tsTime=toc(clock);tEval=strict_hotspot_core('evaluate',strict_hotspot_core('effective',f.direct,f.cascade,tsPhi),f.nhu,tsW,f.noise);

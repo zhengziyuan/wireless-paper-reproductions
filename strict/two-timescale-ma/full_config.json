@@ -7,8 +7,9 @@
   "antenna_factorization": {"4": [2,2], "6": [2,3], "8": [2,4]},
   "maximum_AO_iterations": 1500,
   "fractional_increase_threshold": 0.00005,
-  "convex_solver": {"name": "CLARABEL", "options": {"tol_gap_abs": 1e-10, "tol_gap_rel": 1e-10, "tol_feas": 1e-10, "max_iter": 300}},
-  "matlab_convex_solver": "SDPT3",
+  "convex_solver": {"name": "certified_exact_2d", "options": {"objective_gap_absolute_tolerance": 1e-10, "objective_gap_relative_tolerance": 1e-10, "interior_newton_iteration_budget": 100, "interior_gradient_tolerance": 1e-12}},
+  "optional_conic_backend": {"name":"CLARABEL","options":{"tol_gap_abs":1e-10,"tol_gap_rel":1e-10,"tol_feas":1e-10,"max_iter":300},"matlab_name":"SDPT3","selection":"explicitly replace convex_solver/matlab_convex_solver in a NEW immutable configuration; same original convex subproblem"},
+  "matlab_convex_solver": "certified_exact_2d",
   "matlab_cvx_precision": "best",
   "brute_force_objective": "instantaneous_MC",
   "verification_tolerance": 1e-6,
@@ -28,7 +29,7 @@
     "inferred_from_author_figure_ticks": ["power, Rician, A, user count, error and brute-force grids; ticks are not evidence of every original marker"],
     "tuned_not_reported_in_paper": ["100 geometries,1000 NLoS draws per geometry", "seed", "Nr/Nc factorization", "1500 iteration safety caps", "solver accuracy", "benchmark stopping/precision", "initial centered half-wavelength lattice"],
     "units_choice": "lambda=1 uses position units of wavelength; physical user distances remain meters for path loss.",
-    "transparent_corrections": ["Eq29a maximum eigenvalue is used; Eq29b minus must be plus by the characteristic polynomial", "P5.n uses the explicit spacing inequality (30), not erroneous equation cross-references"],
+    "transparent_corrections": ["Eq29a maximum eigenvalue is used; Eq29b minus must be plus by the characteristic polynomial", "P5.n uses the explicit spacing inequality (30), not erroneous equation cross-references", "certified_exact_2d solves the SAME original two-variable convex subproblem by complete polygon active-set candidates with concavity objective-gap certificate, not an alternative outer update"],
     "position_error_protocol_not_fully_specified_in_paper": "User geometry error affects long-timescale design; short-timescale beamforming uses perfect true instantaneous CSI. Antenna jitter is applied to realized physical positions and the true channel/beamformer is recomputed; no imperfect-instantaneous-CSI experiment is claimed. Nominal and realized feasibility are reported separately, without clamping the specified error distribution."
   }
 }

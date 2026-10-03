@@ -18,7 +18,7 @@ HERE=Path(__file__).resolve().parent
 FIXTURE=HERE/'tests/stable_increment_fixture.json'
 
 
-def decimal_alm(model,point,multipliers,penalty):
+def decimal_alm(model,point,multipliers,penalty,*,normalize_circle=False):
     """Independent forward evaluation: explicit complex sums, no Model.metric.
 
     Decimal.from_float preserves the exact stored input coefficients. Every
@@ -32,6 +32,12 @@ def decimal_alm(model,point,multipliers,penalty):
         ctx.prec=60
         phi=[comp(value) for value in point['phi']]
         theta=[comp(value) for value in point['theta']]
+        if normalize_circle:
+            def normalized(value):
+                length=(value[0]*value[0]+value[1]*value[1]).sqrt()
+                return value[0]/length,value[1]/length
+            phi=[normalized(value) for value in phi]
+            theta=[normalized(value) for value in theta]
         coefficients=[[comp(value) for value in row] for row in model.c]
         patterns=[]
         for indices in model.indices:

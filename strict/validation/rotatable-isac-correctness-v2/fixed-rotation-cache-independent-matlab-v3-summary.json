@@ -1,0 +1,33 @@
+{
+  "paper_id": "rotatable-isac",
+  "scope": "actual_independent_MATLAB_full_dimension_fixed_rotation_cache_equivalence_NOT_full500_bank",
+  "raw_receipt_sha256": "97d7f1746df8a8c170f6c05014ea8d98d6781f687582e9a9f48cbe704f9f6c53",
+  "matlab_implementation_fingerprint": "68cc00eba74e1ddc693f56f831dc4dcb28700caef76dc71646b54794c648a604",
+  "all_six_channel_metric_and_three_gradient_checks_passed": true,
+  "all_six_same_input_whole_scenario_metrics_states_histories_stops_bitwise_equal": true,
+  "all_original_stop_thresholds_500_RCG_budget_and_raw_PR_unchanged": true,
+  "active_RCG": {
+    "iterations": 500,
+    "converged": false,
+    "capped_unconverged": true,
+    "full_states_raw_PR_objectives_and_stop_fields_bitwise_equal": true,
+    "original_seconds": 38.7988865,
+    "cached_seconds": 4.4398291,
+    "speedup": 8.738824316458487
+  },
+  "no_RIS_RCG": {
+    "iterations": 1,
+    "converged": true,
+    "capped_unconverged": false,
+    "full_states_raw_PR_objectives_and_stop_fields_bitwise_equal": true
+  },
+  "two_W_runs": {
+    "iterations_each": 2828,
+    "converged_each": true,
+    "all_objectives_states_QCQP_and_stop_gates_bitwise_equal_each": true
+  },
+  "MC100_channel_points_or_full500_bank_complete": false,
+  "cache_equivalence_does_not_erase_original_RCG_cap": true,
+  "original_reference_agreement_verified": false,
+  "full_reproduction_pass": false
+}

@@ -55,6 +55,15 @@ def projected_kkt_norm(z,g):
     residual["X"]=z["X"]-simplex(z["X"]-g["X"])
     return norm(residual)
 
+def self_excluded_sum(values,targets):
+    """Sum every other echo explicitly, without total-minus-wanted cancellation.
+
+    The same helper also sums signed exact echo increments. No interferer is
+    removed, and no metric, physical normalization or search direction changes.
+    """
+    rows=np.arange(values.shape[0])
+    return np.stack([np.sum(values[rows!=k],axis=0) for k in range(targets)])
+
 class Model:
     def __init__(self, config):
         self.config = config
@@ -89,8 +98,10 @@ class Model:
         a = np.abs(q)**2
         return bar, v, q, a
 
-    def metric(self, z, objective, derivative_weight=None):
-        bar, v, q, a = self.fields(z)
+    def metric(self, z, objective, derivative_weight=None, *, prepared_fields=None):
+        # An explicit bundle only reuses the identical forward calculation;
+        # no field, opponent, echo or derivative is approximated or removed.
+        bar, v, q, a = self.fields(z) if prepared_fields is None else prepared_fields
         if objective == "communications":
             gamma = self.config["reference_snr"]*a
             echo_coeff = None
@@ -98,14 +109,18 @@ class Model:
             S = self.beta[:,None]*a*a
             if objective == "sinr":
                 noise = np.asarray(self.config["noise_over_power"])
-                D = np.sum(S, axis=0)[None,:]-S[:self.targets]+noise
+                D = self_excluded_sum(S,self.targets)+noise
                 gamma = S[:self.targets]/D
                 if derivative_weight is not None:
                     W = derivative_weight
-                    total = np.sum(W*S[:self.targets]/(D*D), axis=0)
-                    echo_coeff = np.zeros_like(S)
-                    echo_coeff[:] = -total[None,:]
-                    echo_coeff[:self.targets] += W/D+W*S[:self.targets]/(D*D)
+                    weighted_interference=W*S[:self.targets]/(D*D)
+                    echo_coeff=np.empty_like(S)
+                    for k in range(self.K):
+                        if k<self.targets:
+                            others=np.arange(self.targets)!=k
+                            echo_coeff[k]=W[k]/D[k]-np.sum(weighted_interference[others],axis=0)
+                        else:
+                            echo_coeff[k]=-np.sum(weighted_interference,axis=0)
             elif objective == "pslr":
                 mu = self.config["pslr_mu"]
                 eps = self.config["pslr_epsilon"]
@@ -152,33 +167,84 @@ class Model:
         return sign*f, eu, {"softmin":f,"min_relaxed_snr":float(np.min(g))}
 
     def augmented(self,z,lam,rho,objective):
-        gamma = self.metric(z,objective)
+        prepared=self.fields(z)
+        gamma = self.metric(z,objective,prepared_fields=prepared)
         q = float(z["eta"])-np.sum(z["X"]*gamma,axis=1)
         chi = np.maximum(0,lam+rho*q)
         value = -float(z["eta"])+np.sum(chi*chi)/(2*rho)
-        _, gp, gt = self.metric(z,objective,-chi[:,None]*z["X"])
+        _, gp, gt = self.metric(z,objective,-chi[:,None]*z["X"],prepared_fields=prepared)
         eu = {"phi":gp,"theta":gt,"X":-chi[:,None]*gamma,
               "eta":np.asarray(-1+np.sum(chi))}
         return float(value),eu,{"q":q,"gamma":gamma}
 
-    def sinr_alm_difference(self,base,candidate,lam,rho):
-        """Exact L(candidate)-L(base), without subtracting near-equal objectives.
+    def constrained_kkt_certificate(self,z,lam,objective,stationarity_tolerance,feasibility_tolerance):
+        """Independent residuals of the ORIGINAL constrained relaxed problem.
 
-        The echo/ratio/positive-part increments include all cross terms and
-        active-set crossings. No Armijo slack, objective or threshold changes.
-        This derivation is for SINR only, not the PSLR soft minimum.
+        This uses final multipliers directly, not ALM chi, objective change or
+        an early-stop flag. Numerical tolerances are reported, never silently
+        replaced by a test bound. Binary recovery is certified separately.
         """
-        oldbar,_,q,a=self.fields(base)
-        newbar,_,_,_=self.fields(candidate)
-        dv=oldbar*(candidate["phi"]-base["phi"])[None,:]+(newbar-oldbar)*candidate["phi"][None,:]
+        lam=np.asarray(lam)
+        prepared=self.fields(z)
+        gamma=self.metric(z,objective,prepared_fields=prepared)
+        residual=float(z["eta"])-np.sum(z["X"]*gamma,axis=1)
+        _,gp,gt=self.metric(z,objective,-lam[:,None]*z["X"],prepared_fields=prepared)
+        eg={"phi":gp,"theta":gt,"X":-lam[:,None]*gamma,"eta":np.asarray(-1+np.sum(lam))}
+        stationarity=float(projected_kkt_norm(z,project(z,eg)))
+        primal=float(max(0,np.max(residual)))
+        dual=float(max(0,-np.min(lam)))
+        complementarity=float(np.max(np.abs(lam*residual)))
+        phase=max((float(np.max(np.abs(np.abs(z[b])-1))) if z[b].size else 0.) for b in ("phi","theta"))
+        simplex_error=float(max(np.max(np.abs(np.sum(z["X"],axis=1)-1)),max(0,-np.min(z["X"]))))
+        feasible_storage=max(phase,simplex_error)<=32*np.finfo(float).eps
+        verified=stationarity<stationarity_tolerance and primal<=feasibility_tolerance and dual<=feasibility_tolerance and complementarity<=feasibility_tolerance and feasible_storage
+        return {"scope":("original_P2.1_SINR_relaxed_constrained_projected_KKT_not_global_optimality" if objective=="sinr" else "original_P3.1_finite_mu_epsilon_regularized_PSLR_relaxed_projected_KKT_not_unsmoothed_or_global_optimality"),
+            "stationarity_norm":stationarity,"stationarity_tolerance":float(stationarity_tolerance),
+            "maximum_positive_primal_residual":primal,"maximum_negative_dual_residual":dual,
+            "maximum_absolute_complementarity":complementarity,"feasibility_tolerance":float(feasibility_tolerance),
+            "maximum_phase_modulus_error":phase,"maximum_simplex_storage_error":simplex_error,
+            "original_problem_kkt_verified":bool(verified)}
+
+    def echo_increment(self,base,candidate,*,unit_circle=False,prepared_base=None):
+        """Same complete quartic echoes, using exact field cross terms.
+
+        The direct positive endpoint is returned separately: subtracting echo
+        plus increment may cancel at a near-zero PSLR opponent denominator.
+        """
+        oldbar,_,q,a=self.fields(base) if prepared_base is None else prepared_base
+        if unit_circle:
+            # Exact circular points, not the sub-ULP radial storage error of
+            # complex normalization. See the independent normalized Decimal
+            # tests; the plain endpoint identity remains the default above.
+            def circle_delta(first,last):
+                if first.size and (np.max(np.abs(np.abs(first)-1))>32*np.finfo(float).eps or np.max(np.abs(np.abs(last)-1))>32*np.finfo(float).eps):
+                    raise ValueError("Unit-circle increments require feasible phase endpoints")
+                angle=np.angle(last*np.conj(first))
+                return first*(-2*np.sin(angle/2)**2+1j*np.sin(angle))
+            dphi=circle_delta(base["phi"],candidate["phi"])
+            dtheta=circle_delta(base["theta"],candidate["theta"])
+            dbar=np.zeros_like(oldbar)
+            for u,ix in enumerate(self.indices):dbar[u,ix]=dtheta
+            dv=oldbar*dphi[None,:]+dbar*(base["phi"]+dphi)[None,:]
+        else:
+            newbar=np.ones_like(oldbar)
+            for u,ix in enumerate(self.indices):newbar[u,ix]=candidate["theta"]
+            dv=oldbar*(candidate["phi"]-base["phi"])[None,:]+(newbar-oldbar)*candidate["phi"][None,:]
         dq=self.c@dv.T
         da=2*np.real(np.conj(q)*dq)+np.abs(dq)**2
         echo=self.beta[:,None]*a*a
         decho=self.beta[:,None]*(2*a*da+da*da)
-        denominator=np.sum(echo,axis=0)[None,:]-echo[:self.targets]+self.config["noise_over_power"]
-        dd=np.sum(decho,axis=0)[None,:]-decho[:self.targets]
+        newecho=self.beta[:,None]*np.abs(q+dq)**4
+        return echo,decho,newecho
+
+    def sinr_alm_difference(self,base,candidate,lam,rho,*,unit_circle=False,prepared_base=None):
+        """Exact SINR ALM increment; no Armijo slack or stopping changes."""
+        echo,decho,newecho=self.echo_increment(base,candidate,unit_circle=unit_circle,prepared_base=prepared_base)
+        denominator=self_excluded_sum(echo,self.targets)+self.config["noise_over_power"]
+        dd=self_excluded_sum(decho,self.targets)
+        newdenominator=self_excluded_sum(newecho,self.targets)+self.config["noise_over_power"]
         gamma=echo[:self.targets]/denominator
-        dgamma=(decho[:self.targets]-gamma*dd)/(denominator+dd)
+        dgamma=(decho[:self.targets]-gamma*dd)/newdenominator
         deta=float(candidate["eta"]-base["eta"])
         residual=float(base["eta"])-np.sum(base["X"]*gamma,axis=1)
         dresidual=deta-np.sum((candidate["X"]-base["X"])*gamma+candidate["X"]*dgamma,axis=1)
@@ -186,6 +252,52 @@ class Model:
         chi=np.maximum(0,raw)
         dchi=np.where(raw>0,np.where(raw+draw>0,draw,-raw),np.maximum(0,raw+draw))
         return float(-deta+np.sum(dchi*(2*chi+dchi))/(2*rho))
+
+    def pslr_alm_difference(self,base,candidate,lam,rho,*,unit_circle=False,prepared_base=None):
+        """Exact original finite-mu/epsilon LSE + ALM increment, all opponents.
+
+        log1p/expm1 are algebraic evaluation identities, not Taylor or surrogate
+        objectives. Large newly dominant opponents use direct positive echoes
+        to survive old probability underflow and avoid cancelled denominators.
+        """
+        echo,decho,newecho=self.echo_increment(base,candidate,unit_circle=unit_circle,prepared_base=prepared_base)
+        mu,epsilon=self.config["pslr_mu"],self.config["pslr_epsilon"]
+        gamma=np.empty((self.targets,self.U));dgamma=np.empty_like(gamma)
+        for k,opponents in enumerate(self.config["pslr_opponents"]):
+            ix=np.asarray(opponents,dtype=int)
+            ratios=echo[k][None,:]/(echo[ix]+epsilon)
+            minimum=np.min(ratios,axis=0)
+            gamma[k]=minimum-mu*np.log(np.sum(np.exp(-(ratios-minimum)/mu),axis=0))
+            dratios=(decho[k][None,:]-ratios*decho[ix])/(newecho[ix]+epsilon)
+            newratios=newecho[k][None,:]/(newecho[ix]+epsilon)
+            dgamma[k]=softmin_increment(ratios,dratios,newratios,mu)
+        deta=float(candidate["eta"]-base["eta"])
+        residual=float(base["eta"])-np.sum(base["X"]*gamma,axis=1)
+        dresidual=deta-np.sum((candidate["X"]-base["X"])*gamma+candidate["X"]*dgamma,axis=1)
+        raw=np.asarray(lam)+rho*residual;draw=rho*dresidual;chi=np.maximum(0,raw)
+        dchi=np.where(raw>0,np.where(raw+draw>0,draw,-raw),np.maximum(0,raw+draw))
+        return float(-deta+np.sum(dchi*(2*chi+dchi))/(2*rho))
+
+
+def softmin_increment(old,change,new,mu):
+    """Exact opponent soft-min increment; opponent x position arrays."""
+    minimum=np.min(old,axis=0)
+    ex=np.exp(-(old-minimum)/mu);normalizer=np.sum(ex,axis=0)
+    probability=ex/normalizer;t=-change/mu;small=np.abs(t)<=.5
+    b=-(new-minimum)/mu-np.log(normalizer)
+    ordinary=np.max(np.where(small,-np.inf,b),axis=0)<500
+    increments=np.zeros_like(old)
+    increments[small]=(probability*np.expm1(np.where(small,t,0)))[small]
+    with np.errstate(over="ignore",invalid="ignore"):
+        large_change=np.exp(np.where(small,-np.inf,b))-probability
+    increments[~small]=large_change[~small]
+    total=np.sum(increments,axis=0)
+    ordinary&=np.isfinite(total)&(total>-.5)
+    answer=np.empty(old.shape[1]);answer[ordinary]=-mu*np.log1p(total[ordinary])
+    if np.any(~ordinary):
+        trial=new[:,~ordinary];trial_min=np.min(trial,axis=0)
+        answer[~ordinary]=trial_min-minimum[~ordinary]-mu*(np.log(np.sum(np.exp(-(trial-trial_min)/mu),axis=0))-np.log(normalizer[~ordinary]))
+    return answer
 
 def objective_increment(evaluate,base,candidate,f):
     difference=getattr(evaluate,"stable_difference",None)
@@ -272,6 +384,9 @@ def rcg(z, evaluate, options):
     No PR+ clipping is applied. Optional documented non-descent restart records
     the original coefficients and raw direction slope before restarting.
     """
+    if options["line_search_policy"]=="corrected_product_pr_wolfe":
+        from solver_erratum import corrected_product_rcg
+        return corrected_product_rcg(z,evaluate,options)
     if options["line_search_policy"] not in ("common_product_armijo","original_per_block_backtracking"):
         raise ValueError("Select original per-block backtracking or diagnostic common-product Armijo")
     oldg = oldd = None
@@ -369,8 +484,19 @@ def sensing_solve(model,z,options,objective="sinr"):
         oldz={b:np.array(v,copy=True) for b,v in z.items()}
         inner_options=dict(options["rcg"],gradient_tolerance=eps)
         def evaluate(x): return model.augmented(x,lam,rho,objective)
-        if objective=="sinr" and inner_options.get("objective_difference")=="exact_sinr_increment":
-            evaluate.stable_difference=lambda base,trial:model.sinr_alm_difference(base,trial,lam,rho)
+        difference=inner_options.get("objective_difference")
+        stable_modes=("exact_sinr_increment","exact_unit_circle_sinr_increment","exact_sensing_increment","exact_unit_circle_sensing_increment")
+        if difference in stable_modes and (objective=="sinr" or difference in ("exact_sensing_increment","exact_unit_circle_sensing_increment")):
+            unit_circle=difference.startswith("exact_unit_circle")
+            cache={}
+            def stable_difference(base,trial):
+                # The solver does not mutate current iterates in place. Copies
+                # still guard reuse if a caller changes a phase array in place.
+                if cache.get("state") is not base or not np.array_equal(cache["phi"],base["phi"]) or not np.array_equal(cache["theta"],base["theta"]):
+                    cache.update(state=base,phi=base["phi"].copy(),theta=base["theta"].copy(),fields=model.fields(base))
+                method=model.sinr_alm_difference if objective=="sinr" else model.pslr_alm_difference
+                return method(base,trial,lam,rho,unit_circle=unit_circle,prepared_base=cache["fields"])
+            evaluate.stable_difference=stable_difference
         z,h,stop=rcg(z,evaluate,inner_options)
         q=model.augmented(z,lam,rho,objective)[2]["q"]
         iota=np.maximum(q,-lam/rho)

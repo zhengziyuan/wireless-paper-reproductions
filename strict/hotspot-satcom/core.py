@@ -10,6 +10,11 @@ import time
 from termination import relative_stop,gradient_stop
 
 
+def complex_squares(expression):
+    """Exact realification; no per-entry |z| epigraphs precede the quadratic."""
+    return cp.sum_squares(cp.hstack([cp.vec(cp.real(expression),order='F'),cp.vec(cp.imag(expression),order='F')]))
+
+
 def solver_diagnostics(problem):
     stats=problem.solver_stats; info={'solver':stats.solver_name,'status':problem.status,
                                      'iterations':stats.num_iters,'solve_seconds':stats.solve_time}
@@ -56,34 +61,72 @@ def active_qt_update(hu,nhu,W0,noise,total_power,nhu_target,solver='CLARABEL',so
     # epigraph. This eliminates a large lambda multiplied by a tiny |a|^2;
     # it is the identical QT feasible set/objective (also when a=0).
     # SINRs/objective/QoS are unchanged; this is numerical conditioning only.
-    W=cp.Variable((N,J),complex=True); lam=cp.Variable(U); gamma=cp.Variable(U)
+    W=cp.Variable((N,J),complex=True)
     scale=np.sqrt(total_power/noise); hs=hu*scale; ns=nhu*scale; az=a*np.sqrt(noise)
-    constraints=[cp.sum_squares(cp.abs(W))<=1]
+    constraints=[complex_squares(W)<=1]
+    bounds=[]
     for u in range(U):
         interferers=[j for j in range(J) if j!=u]
-        constraints.append(cp.sum_squares(cp.abs(np.conj(az[u])*(hs[u]@W[:,interferers])))+abs(az[u])**2<=lam[u])
-        constraints.append(gamma[u]<=2*cp.real(np.conj(az[u])*(hs[u]@W[:,u]))-lam[u])
+        weighted_interference=complex_squares(np.conj(az[u])*(hs[u]@W[:,interferers]))+abs(az[u])**2
+        bounds.append(2*cp.real(np.conj(az[u])*(hs[u]@W[:,u]))-weighted_interference)
     for k in range(K):
         index=U+k; interferers=[j for j in range(J) if j!=index]
         desired=ns[k]@W[:,index]
         constraints.append(cp.imag(desired)==0)
-        constraints.append(cp.norm(cp.hstack([ns[k]@W[:,interferers],1.0]))<=cp.real(desired)/np.sqrt(nhu_target[k]))
-    problem=cp.Problem(cp.Maximize(cp.sum(cp.log1p(gamma))/np.log(2)),constraints)
-    try:
-        problem.solve(solver=solver,**(solver_options or {}))
-    except cp.error.SolverError as error:
+        interference=ns[k]@W[:,interferers]
+        constraints.append(cp.norm(cp.hstack([cp.real(interference),cp.imag(interference),1.0]))<=cp.real(desired)/np.sqrt(nhu_target[k]))
+    # Eliminate the two monotone epigraphs exactly: at an optimum lambda is
+    # its lower bound and gamma is its upper bound. Keeping both introduces
+    # nearly redundant columns when a HU receives almost no allocated power.
+    # This is the same log-QT conic problem, not a new optimizer or dropped HU.
+    gamma=cp.hstack(bounds)
+    initial_received=hu@W0
+    initial_den=np.sum(abs(initial_received)**2,axis=1)-abs(initial_received[np.arange(U),np.arange(U)])**2+noise
+    q0=2*np.real(np.conj(a)*initial_received[np.arange(U),np.arange(U)])-abs(a)**2*initial_den
+    log_scale=1+q0
+    if np.min(log_scale)<=0:raise ValueError('Original QT log domain invalid at current feasible point')
+    # log((1+q)/c)+log(c) == log(1+q), c=1+q(W0)>0.
+    # This exact positive affine scaling balances high-SINR exponential cones.
+    objective=cp.sum(cp.log(cp.multiply(1/log_scale,1+gamma)))/np.log(2)+float(np.sum(np.log2(log_scale)))
+    problem=cp.Problem(cp.Maximize(objective),constraints)
+    attempts=[];last_error=None
+    controls=[dict(solver_options or {})]
+    if solver=='CLARABEL':
+        controls.extend([dict(solver_options or {},static_regularization_constant=1e-12),
+                         dict(solver_options or {},static_regularization_enable=False),
+                         dict(solver_options or {},equilibrate_max_iter=50,static_regularization_constant=1e-12)])
+    backend_controls=[(solver,c) for c in controls]
+    if solver=='CLARABEL':backend_controls.append(('SCS',{'eps':1e-8,'max_iters':200000,'acceleration_lookback':10}))
+    for backend,control in backend_controls:
+        try:
+            problem.solve(solver=backend,**control)
+            if problem.status not in ('optimal','optimal_inaccurate') or W.value is None:
+                raise cp.error.SolverError('QT returned '+str(problem.status))
+            trial=evaluate(hu,nhu,W.value*np.sqrt(total_power),noise)
+            primal=max(0,trial['total_power']/total_power-1,float(np.max(nhu_target-trial['sinr'][U:])))
+            before_trial=evaluate(hu,nhu,W0,noise)['hu_sum_rate']
+            accepted=bool(primal<1e-5 and trial['hu_sum_rate']>=before_trial-1e-6)
+            attempts.append({'backend':backend,'options':control,'status':problem.status,'physical_violation':primal,
+                             'exact_objective_decrease':before_trial-trial['hu_sum_rate'],'accepted':accepted})
+            if accepted:break
+            last_error=cp.error.SolverError('QT physical/monotonic residual failed')
+        except cp.error.SolverError as error:
+            last_error=error;attempts.append({'backend':backend,'options':control,'error':str(error),'accepted':False})
+    else:
+        error=last_error
         error.receipt={'block':'active_QT','backend':solver,'solver_options':solver_options,
                        'before':evaluate(hu,nhu,W0,noise),'auxiliary_magnitudes':abs(a),
-                       'scaled_hu_row_norms':np.linalg.norm(hs,axis=1)}
+                       'scaled_hu_row_norms':np.linalg.norm(hs,axis=1),'same_problem_numerical_attempts':attempts}
         error.fixture={'hu':hu,'nhu':nhu,'W0':W0,'noise':noise,'power':total_power,'target':nhu_target,'a':a}
-        raise
+        raise error
     if problem.status not in ('optimal','optimal_inaccurate') or W.value is None:
         raise RuntimeError(f'Hotspot QT/SOCP: {problem.status}')
     value=W.value*np.sqrt(total_power); after=evaluate(hu,nhu,value,noise); before=evaluate(hu,nhu,W0,noise)
     received=hu@W0; den=np.sum(abs(received)**2,axis=1)-abs(received[np.arange(U),np.arange(U)])**2+noise
     qt=2*np.real(np.conj(a)*received[np.arange(U),np.arange(U)])-abs(a)**2*den
     return value,{'solver_status':problem.status,'surrogate_rate':float(problem.value),
-                  'solver_diagnostics':dict(solver_diagnostics(problem),epigraph_scaling='lambda_prime_equals_abs_a_squared_times_physical_interference'),
+                  'solver_diagnostics':dict(solver_diagnostics(problem),epigraph_scaling='exact_monotone_lambda_gamma_elimination_weighted_QT',
+                                           same_problem_numerical_attempts=attempts),
                   'qt_bound_max_violation':float(max(0,np.max(gamma.value-after['sinr'][:U]))),
                   'qt_tightness_error':float(np.max(abs(qt-before['sinr'][:U]))),'before':before,'after':after},a
 
@@ -130,6 +173,10 @@ def phase_sdr_update(direct,cascade,phi0,W,a,noise,normal_draws,solver='CLARABEL
         raise ValueError('Supply shared Gaussian draws with shape (M+1,Lrand)')
     V=cp.Variable((M+1,M+1),hermitian=True); constraints=[V>>0,cp.diag(V)==1]
     terms=[]
+    current_hu=effective_rows(direct,cascade,phi0);current_received=current_hu@W
+    current_den=np.sum(abs(current_received)**2,axis=1)-abs(current_received[np.arange(U),np.arange(U)])**2+noise
+    log_scale=1+2*np.real(np.conj(a)*current_received[np.arange(U),np.arange(U)])-abs(a)**2*current_den
+    if np.min(log_scale)<=0:raise ValueError('Original SDP/QT log domain invalid at incumbent')
     for u in range(U):
         b=np.conj(a[u])*(cascade[u]@W[:,u])
         L=np.zeros((M+1,M+1),complex); L[:M,M]=b/2; L[M,:M]=np.conj(b)/2
@@ -139,16 +186,33 @@ def phase_sdr_update(direct,cascade,phi0,W,a,noise,normal_draws,solver='CLARABEL
                 column=np.r_[cascade[u]@W[:,j],direct[u]@W[:,j]]
                 Q=np.outer(column,np.conj(column))
                 q-=abs(a[u])**2*cp.real(cp.trace(Q@V))
-        terms.append(cp.log1p(q)/np.log(2))
+        terms.append(cp.log((1+q)/log_scale[u])/np.log(2)+np.log2(log_scale[u]))
     problem=cp.Problem(cp.Maximize(cp.sum(cp.hstack(terms))),constraints)
-    try:
-        problem.solve(solver=solver,**(solver_options or {}))
-    except cp.error.SolverError as error:
+    attempts=[];last_error=None;controls=[dict(solver_options or {})]
+    if solver=='CLARABEL':
+        controls.extend([dict(solver_options or {},equilibrate_max_iter=50),
+                         dict(solver_options or {},static_regularization_constant=1e-10),
+                         dict(solver_options or {},equilibrate_max_iter=50,static_regularization_constant=1e-12)])
+    incumbent=phase_surrogate(direct,cascade,phi0,W,a,noise)
+    for control in controls:
+        try:
+            problem.solve(solver=solver,**control)
+            if problem.status not in ('optimal','optimal_inaccurate') or V.value is None:raise cp.error.SolverError('SDP status '+str(problem.status))
+            trial=(V.value+V.value.conj().T)/2;eigmin=float(np.linalg.eigvalsh(trial).min());diagonal=float(np.max(abs(np.diag(trial)-1)))
+            accepted=bool(eigmin>=-1e-5 and diagonal<1e-5 and float(problem.value)>=incumbent-1e-5)
+            attempts.append({'options':control,'status':problem.status,'smallest_eigenvalue':eigmin,
+                             'diagonal_error':diagonal,'incumbent_bound_excess':incumbent-float(problem.value),'accepted':accepted})
+            if accepted:break
+            last_error=cp.error.SolverError('SDP independent PSD/diagonal/incumbent-bound gate failed')
+        except cp.error.SolverError as error:
+            last_error=error;attempts.append({'options':control,'error':str(error),'accepted':False})
+    else:
+        error=last_error
         error.receipt={'block':'phase_SDP','backend':solver,'solver_options':solver_options,
                        'before_exact_rate':evaluate(effective_rows(direct,cascade,phi0),np.empty((0,N)),W,noise)['hu_sum_rate'],
-                       'incumbent_surrogate':phase_surrogate(direct,cascade,phi0,W,a,noise)}
+                       'incumbent_surrogate':incumbent,'same_problem_numerical_attempts':attempts}
         error.fixture={'direct':direct,'cascade':cascade,'phi0':phi0,'W':W,'a':a,'noise':noise,'normal_draws':normal_draws}
-        raise
+        raise error
     if problem.status not in ('optimal','optimal_inaccurate') or V.value is None:
         raise RuntimeError(f'Phase SDP: {problem.status}')
     relaxation=(V.value+V.value.conj().T)/2
@@ -172,6 +236,7 @@ def phase_sdr_update(direct,cascade,phi0,W,a,noise,normal_draws,solver='CLARABEL
         if value>best_value:
             best,best_value=phase,value
     diag=solver_diagnostics(problem)
+    diag['same_problem_numerical_attempts']=attempts
     diag['sdr_bound_max_violation']=float(max(0,best_value-problem.value))
     return best,{'solver_status':problem.status,'sdr_upper_bound':float(problem.value),
                  'solver_diagnostics':diag,
@@ -284,7 +349,7 @@ def _phase_optimizer(direct,cascade,nhu,phi,max_iterations,gradient_tolerance,st
         slope=np.vdot(sign*g,direction).real
         if slope<=0:
             direction=g.copy(); slope=norm2
-        alpha=1.0
+        alpha=1.0/np.sqrt(norm2)
         for _ in range(50):
             candidate=phi+alpha*direction; candidate/=abs(candidate)
             trial,newg=criterion_gradient(direct,cascade,nhu,candidate)

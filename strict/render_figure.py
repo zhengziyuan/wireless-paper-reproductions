@@ -6,6 +6,7 @@ a missing point. Original-figure agreement remains a separate comparison gate.
 """
 from __future__ import annotations
 import argparse
+from collections import Counter
 import hashlib
 import json
 from pathlib import Path
@@ -144,9 +145,118 @@ def render_curves(curves, folder, basename, xlabel, ylabel, reference=None):
     save(fig, folder, basename)
 
 
-def render(source, output, reference_path=None):
+def render_communications(data, folder):
+    """All original curve/pattern configurations; no reference-driven values."""
+    number=int(data['figure'][3:]);entries=data['points']
+    if number in (7,8):
+        entry=entries[0];samples=entry['beampattern_samples'];sms=entry['SMS']['beampattern_samples']
+        az=finite(samples['azimuth_deg']);values=finite(samples['pattern_snr'])
+        expected=(np.prod(entry['configuration']['ms1'])-np.prod(entry['configuration']['ms2'])+1)
+        # These two specific cases use N1 and U=M. General geometric counts
+        # remain the simulation's explicit number_of_patterns.
+        if values.shape!=(len(az),int(expected)) or samples['number_of_patterns']!=expected:
+            raise ValueError('Missing original case-study patterns')
+        if sms['azimuth_deg']!=samples['azimuth_deg'] or np.shape(sms['pattern_snr'])!=(len(az),1):
+            raise ValueError('SMS original angular cut mismatch')
+        fig,ax=plt.subplots(figsize=(7.4,5),constrained_layout=True)
+        lines=[]
+        for u in range(values.shape[1]):lines.append(ax.plot(az,values[:,u],label=f'MIS pattern {u+1}')[0])
+        ax.plot(az,finite(sms['pattern_snr'])[:,0],'k--',label='SMS')
+        user_angles=samples['user_azimuth_deg'];schedule=samples['user_pattern'];user_values=finite(samples['user_snr_by_pattern'])
+        if len(user_angles)!=entry['configuration']['K'] or user_values.shape!=(len(user_angles),values.shape[1]):
+            raise ValueError('Incomplete scheduled user values')
+        for k,(a,u) in enumerate(zip(user_angles,schedule)):
+            ax.scatter([a],[user_values[k,u]],color=lines[u].get_color(),s=42,zorder=4)
+        ax.set(xlabel='Azimuth (degrees)',ylabel='SNR (linear)',xlim=(-90,90),
+               title='Complete optimizer bank · original agreement not yet certified')
+        ax.grid(alpha=.25);ax.legend(fontsize=8);save(fig,folder,data['figure'])
+        return {'kind':'all_original_case_study_patterns','patterns':values.shape[1],
+                'angle_samples':len(az),'source_correction_id':entry['configuration'].get('source_correction_id')}
+    if number==9:
+        fig,axes=plt.subplots(3,3,figsize=(12.2,10),constrained_layout=True)
+        for ax,(side,K) in zip(axes.flat,((s,k) for s in (6,8,10) for k in (8,16,32))):
+            selected=[e for e in entries if e['configuration']['ms1']==[side,side] and e['configuration']['K']==K]
+            matrix=np.full((side,side),np.nan)
+            for entry in selected:
+                nr,nc=entry['configuration']['ms2']
+                value=best(entry)['metrics']['min_binary_snr']/best(entry,'SMS')['metrics']['min_binary_snr']
+                if not np.isnan(matrix[nr-1,nc-1]):raise ValueError('Duplicate original geometry')
+                matrix[nr-1,nc-1]=value
+            finite(matrix)
+            handle=ax.imshow(matrix,origin='lower',extent=(.5,side+.5,.5,side+.5),aspect='equal')
+            ax.set(xlabel='MS2 columns',ylabel='MS2 rows',title=f'MS1 {side}×{side}; K={K}')
+            fig.colorbar(handle,ax=ax,label='Worst SNR / SMS (linear ratio)',shrink=.75)
+        fig.suptitle('Complete original geometries · reference agreement not certified',fontsize=12)
+        save(fig,folder,data['figure']);return {'kind':'nine_full_geometry_heatmaps','panels':9}
+    if number==10:
+        fig,axes=plt.subplots(1,3,figsize=(15,4.8),constrained_layout=True);allcurves=[]
+        for ax,total in zip(axes,(64,100,144)):
+            for K in (8,16,32):
+                for scheme in (1,2):
+                    selected=sorted((e for e in entries if e['configuration']['total']==total and e['configuration']['K']==K
+                        and e['configuration']['scheme']==scheme),key=lambda e:np.prod(e['configuration']['ms2']))
+                    label=f'K={K}, scheme{scheme}'
+                    curve={'label':f'Total{total} '+label,'x':[float(np.prod(e['configuration']['ms2'])) for e in selected],
+                           'y':[best(e)['metrics']['min_binary_snr'] for e in selected]}
+                    allcurves.append(curve);ax.plot(finite(curve['x']),finite(curve['y']),'o-',label=label)
+            ax.set(xlabel='MS2 element count',ylabel='Worst SNR (linear)',title=f'Total M+N={total}')
+            ax.grid(alpha=.25);ax.legend(fontsize=7)
+        save(fig,folder,data['figure']);return {'kind':'three_allocation_panels','curves':allcurves}
+    if number==11:
+        curves=[]
+        for shape,movable in (([1,64],[1,n]) for n in (36,16,4)):
+            selected=sorted((e for e in entries if e['configuration']['ms1']==shape and e['configuration']['ms2']==movable),key=lambda e:e['configuration']['K'])
+            curves.append({'label':f'MIS {shape}, MS2 {movable}','x':[e['configuration']['K'] for e in selected],
+                           'y':[best(e)['metrics']['min_binary_snr'] for e in selected]})
+        for n in (6,4,2):
+            selected=sorted((e for e in entries if e['configuration']['ms1']==[8,8] and e['configuration']['ms2']==[n,n]),key=lambda e:e['configuration']['K'])
+            curves.append({'label':f'MIS 8×8, MS2 {n}×{n}','x':[e['configuration']['K'] for e in selected],
+                           'y':[best(e)['metrics']['min_binary_snr'] for e in selected]})
+        # All independently executed SMS banks are displayed, not silently
+        # averaged/picked from three different local minima as one reference.
+        for curve,shape,movable in zip(curves,([1,64],[1,64],[1,64],[8,8],[8,8],[8,8]),([1,36],[1,16],[1,4],[6,6],[4,4],[2,2])):
+            selected=sorted((e for e in entries if e['configuration']['ms1']==shape and e['configuration']['ms2']==movable),key=lambda e:e['configuration']['K'])
+            curves.append({'label':f'SMS independent bank for {curve["label"]}','x':[e['configuration']['K'] for e in selected],
+                           'y':[best(e,'SMS')['metrics']['min_binary_snr'] for e in selected]})
+        x=sorted({e['configuration']['K'] for e in entries})
+        curves.append({'label':'Dynamic RIS analytic bound','x':x,'y':[data['settings']['reference_snr']*64**2]*len(x)})
+        render_curves(curves,folder,data['figure'],'Number of users K','Worst SNR (linear)')
+        return {'kind':'all_user_sweep_curves','curves':curves,
+                'SMS_replication_note':'All six actual baseline banks shown; source has two SMS families, agreement/aggregation still requires validation.'}
+    raise ValueError('Unknown communication figure')
+
+
+def render_sensing_convergence(data,folder,number):
+    run=data['points'][0]['result']
+    if run['number_of_starts']!=6000 or run.get('mean_outer_counts')!=[6000]*30:
+        raise ValueError('Convergence means require all6000 starts of the exact same Fig3 bank')
+    history=best(data['points'][0])['history'];values=[]
+    for index in range(30):
+        step=history[min(index,len(history)-1)]
+        values.append(float(step['eta']) if number==5 else max(0,float(np.max(step['q']))))
+    average=run['mean_outer_eta' if number==5 else 'mean_outer_violation']
+    curves=[{'label':'Best final feasible initialization','x':list(range(1,31)),'y':values},
+            {'label':'Mean of the same6000 initializations','x':list(range(1,31)),'y':finite(average).tolist()}]
+    if number==5:render_curves(curves,folder,f'fig{number}','Outer iteration','Epigraph eta (linear)')
+    else:
+        fig,ax=plt.subplots(figsize=(7,4.8),constrained_layout=True)
+        for curve in curves:
+            y=finite(curve['y']);line=ax.semilogy(curve['x'],np.ma.masked_less_equal(y,0),'o-',label=curve['label'])[0]
+            zeros=y==0
+            if np.any(zeros):ax.scatter(np.array(curve['x'])[zeros],np.full(np.sum(zeros),1e-12),marker='v',color=line.get_color(),label='Exact zero (display at1e-12)')
+        ax.set(xlabel='Outer iteration',ylabel='Maximum positive constraint residual',title='Same complete Fig3 bank · no different best per iteration')
+        ax.grid(alpha=.25);ax.legend(fontsize=8);save(fig,folder,f'fig{number}')
+    return {'kind':'same_bank_convergence','curves':curves,'terminated_starts_held_at_actual_final_state':True,
+            'zero_display_floor':1e-12 if number==6 else None,'stored_residuals_modified':False}
+
+
+def render(source, output, reference_path=None, figure=None):
     source, output = Path(source), Path(output)
     data = json.loads(source.read_text(encoding="utf-8-sig"))
+    if figure is not None:
+        if data.get('paper_id')!='mis-sensing' or data.get('figure')!='fig3' or figure not in (5,6):
+            raise ValueError('Only sensing Figs5/6 can reuse the exact original Fig3 bank')
+        data=dict(data,figure=f'fig{figure}',source_figure='fig3')
     if data.get("scope") not in ("full_size_full_budget_independent_reimplementation", "independent_simulation_curves"):
         raise ValueError("Partial starts, components and references cannot be rendered as full original figures")
     if data.get("scope") != "independent_simulation_curves":
@@ -154,9 +264,17 @@ def render(source, output, reference_path=None):
         specification = next(x for x in mapping["figures"] if x["id"] == data["figure"])
         if len(data["points"]) != specification["point_count"] or not data.get("full_figure_execution_complete"):
             raise ValueError("Missing original figure configurations/full execution receipt; refusing partial plot")
+        inventory=json.loads((HERE/data['paper_id']/'figures.json').read_text(encoding='utf-8-sig'))
+        expected=next(item['points'] for item in inventory if item['id']==data.get('source_figure',data['figure']))
+        actual=[item['configuration'] for item in data['points']]
+        key=lambda item:json.dumps(item,sort_keys=True,separators=(',',':'))
+        if Counter(map(key,actual))!=Counter(map(key,expected)):
+            raise ValueError('Duplicate, changed or missing original figure configurations; count alone is insufficient')
     output.mkdir(parents=True, exist_ok=True)
     if data["paper_id"] == "mis-sensing" and data["figure"] in ("fig2", "fig3", "fig4"):
         result = render_sensing_beams(data, output)
+    elif data['paper_id']=='mis-sensing' and data['figure'] in ('fig5','fig6'):
+        result=render_sensing_convergence(data,output,int(data['figure'][3:]))
     elif data["paper_id"] == "mis-sensing":
         curves = sensing_curves(data)
         document = {"paper_id": data["paper_id"], "figure": int(data["figure"][3:]),
@@ -167,6 +285,8 @@ def render(source, output, reference_path=None):
         reference = json.loads(Path(reference_path).read_text(encoding="utf-8-sig")) if reference_path else None
         render_curves(curves, output, data["figure"], specification["x"], "SINR/PSLR (dB)", reference)
         result = {"kind": "multi_curve", "curve_count": len(curves)}
+    elif data['paper_id']=='mis-communications':
+        result=render_communications(data,output)
     elif data.get("data_kind") == "independent_simulation_curves":
         render_curves(data["curves"], output, "figure", data["x_label"], data["y_label"])
         result = {"kind": "multi_curve", "curve_count": len(data["curves"])}
@@ -185,5 +305,6 @@ if __name__ == "__main__":
     parser.add_argument("result", type=Path)
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--reference", type=Path)
+    parser.add_argument('--figure',type=int,choices=[5,6],help='Reuse an actual complete sensing Fig3 bank for convergence')
     args = parser.parse_args()
-    print(json.dumps(render(args.result, args.output_dir, args.reference)))
+    print(json.dumps(render(args.result, args.output_dir, args.reference,args.figure)))

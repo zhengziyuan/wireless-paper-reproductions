@@ -55,7 +55,7 @@ def mr_components(data,phi,tts=False,no_ris=False):
     return (*coef,offset,mean,Q,fourth)
 
 
-def mr_phase_value_gradient(data,phi,p,mu,limit,tts=False):
+def mr_phase_value_gradient_reference(data,phi,p,mu,limit,tts=False):
     s,b,power,l,offset,mean,Q,fourth=mr_components(data,phi,tts)
     J,U=p.shape; M=phi.shape[1]
     numerator=np.sum(p*s,axis=0); denominator=offset.copy()
@@ -89,7 +89,7 @@ def mr_phase_value_gradient(data,phi,p,mu,limit,tts=False):
     return value,1j*phi*gradtheta
 
 
-def ap_phase_value_gradient(data,phi,W):
+def ap_phase_value_gradient_reference(data,phi,W):
     mean,C,Q,_,offset=channel_moments(data,phi); J,U,N=mean.shape; M=phi.shape[1]
     numerator=np.zeros(U); den=offset.copy()
     for u in range(U):
@@ -109,6 +109,69 @@ def ap_phase_value_gradient(data,phi,W):
                     if i!=u: dd+=np.vdot(W[j,:,i],dQ[j,u]@W[j,:,i]).real
             gtheta[u,m]=(dn*den[u]-numerator[u]*dd)/den[u]**2
     return sinr,1j*phi*gtheta
+
+
+def mr_phase_value_gradient(data,phi,p,mu,limit,tts=False):
+    """Exact all-coordinate derivative contraction of the original moments.
+
+    The independent scalar-coordinate implementation above is retained as a
+    test oracle. No source objective, square penalty or finite-Rician term is
+    changed; only repeated zero matrix multiplications are eliminated.
+    """
+    s,b,power,l,offset,mean,Q,fourth=mr_components(data,phi,tts)
+    J,U=p.shape;M=phi.shape[1];N=mean.shape[2]
+    numerator=np.sum(p*s,axis=0);denominator=offset+np.einsum('ji,jui->u',p,b)-numerator
+    sinr=numerator/denominator;minimum=np.min(sinr);ex=np.exp(-(sinr-minimum)/mu);weights=ex/np.sum(ex)
+    residual=np.einsum('ju,juk->k',p,l)-limit
+    value=float(minimum-mu*np.log(np.sum(ex))-np.sum(residual**2));gradtheta=np.zeros((U,M))
+    for v in range(U):
+        dn=np.zeros((U,M));dd=np.zeros((U,M));dleak=np.zeros((len(limit),M))
+        geo=data['geo_d_mean'][v]+np.sum(data['geo_G_mean'][v]*phi[v]*data['r_mean'][v])
+        dd[v]=2*np.real(np.conj(geo)*1j*phi[v]*data['geo_G_mean'][v]*data['r_mean'][v])
+        for j in range(J):
+            G=data['G_mean'][j,v];r=data['r_mean'][v];rv=data['r_var'][v];mv=mean[j,v]
+            D=G*(1j*phi[v]*r)[None,:];dp=2*np.real(np.conj(mv)@D)
+            dn[v]+=p[j,v]*2*power[j,v]*dp
+            if tts:
+                Cb=rv*(G@G.conj().T);er2=np.vdot(r,r).real+M*rv;eb2=np.vdot(mv,mv).real+np.trace(Cb).real
+                deb4=2*eb2*dp+4*np.real(np.conj(mv)@Cb@D);ar=mv-data['d_mean'][j,v]
+                der2b2=er2*dp+2*rv*np.real(D.conj().T@mv+np.conj(ar)@D)
+                df=deb4+2*(N+1)*(data['d_var'][j,v]*dp+data['G_var'][j,v]*der2b2)
+            for u in range(U):
+                for i in range(U):
+                    if tts:
+                        if u==i:
+                            db=df if u==v else np.zeros(M)
+                        else:
+                            db=np.zeros(M)
+                            if u==v:db+=2*np.real(np.conj(mv)@Q[j,i]@D)
+                            if i==v:db+=2*np.real(np.conj(mv)@Q[j,u]@D)
+                    else:
+                        db=np.zeros(M)
+                        if i==v:db+=2*np.real(D.conj().T@Q[j,u]@mv)
+                        if u==v:
+                            mi=mean[j,i];a=np.vdot(mv,mi);db+=2*np.real(np.conj(a)*(D.conj().T@mi))
+                    dd[u]+=p[j,i]*db
+            for k in range(len(limit)):dleak[k]+=p[j,v]*2*np.real(np.conj(mv)@data['gt_second'][j,k]@D)
+        dd-=dn;dsinr=(dn*denominator[:,None]-numerator[:,None]*dd)/denominator[:,None]**2
+        gradtheta[v]=weights@dsinr-2*residual@dleak
+    return value,1j*phi*gradtheta
+
+
+def ap_phase_value_gradient(data,phi,W):
+    mean,C,Q,_,offset=channel_moments(data,phi);J,U,N=mean.shape;M=phi.shape[1]
+    numerator=np.zeros(U);den=offset.copy();gradtheta=np.zeros((U,M))
+    for u in range(U):
+        dn=np.zeros(M);geo=data['geo_d_mean'][u]+np.sum(data['geo_G_mean'][u]*phi[u]*data['r_mean'][u])
+        dd=2*np.real(np.conj(geo)*1j*phi[u]*data['geo_G_mean'][u]*data['r_mean'][u])
+        for j in range(J):
+            received=np.conj(mean[j,u])@W[j];D=data['G_mean'][j,u]*(1j*phi[u]*data['r_mean'][u])[None,:]
+            derivative=D.conj().T@W[j];increments=2*np.real(np.conj(received)[None,:]*derivative)
+            numerator[u]+=abs(received[u])**2;dn+=increments[:,u]
+            for i in range(U):den[u]+=np.vdot(W[j,:,i],(C[j,u] if i==u else Q[j,u])@W[j,:,i]).real
+            dd+=np.sum(increments,axis=1)-increments[:,u]
+        gradtheta[u]=(dn*den[u]-numerator[u]*dd)/den[u]**2
+    return numerator/den,1j*phi*gradtheta
 
 
 def sample_effective(data,phi,rng):

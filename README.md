@@ -1,6 +1,6 @@
 # Wireless paper reproductions
 
-> **Strict-reproduction status (2026-10-03): NOT COMPLETE.** The owner now requires the original theoretical algorithms and full published simulation scenarios, without substitute solvers or reduced dimensions/budgets. The previous `papers/` release does **not** meet that requirement and is retained only as a superseded preview. Its 6/6 parity result is not evidence of strict or complete paper reproduction.
+> **Strict-reproduction status (2026-10-04): NOT COMPLETE.** The owner now requires the original theoretical algorithms and full published simulation scenarios, without substitute solvers or reduced dimensions/budgets. The previous `papers/` release does **not** meet that requirement and is retained only as a superseded preview. Its 6/6 parity result is not evidence of strict or complete paper reproduction.
 >
 > **严格复现状态：尚未完成。** 当前工作位于 [`strict/`](strict/README.md)，以作者提供的 LaTeX 和可获取的作者稿为依据。原文明确规定的模型、算法、场景尺寸与实验预算保留；原文未给出的数值设置按作者授权调试，并在配置中注明来源。最终发表版的一致性尚未核验。之前的 `papers/` 是含替代算法及缩小场景的历史预览，不满足现在的要求。
 
@@ -10,6 +10,11 @@ This is not the original private simulation source. Each paper has an explicit i
 
 中文说明：这里公开的是按论文理论重新编写的 MATLAB/Python 双实现，不是原作者私有仿真代码。核心检查、完整尺寸的调试实验与全部图表复现分开记录；通过核心检查不代表完整复现。所有尚未实现的公式、未收敛的运行和调试数值设置均明确列出，不用替代方法补位。
 
+The current correction/execution ledger is [all-paper issues](strict/ALL_PAPERS_ISSUES.md).
+It distinguishes proven source errors, reconstruction bugs, numerical repairs,
+full-sized cases and unfinished full banks. Neither aggregate dual agreement
+nor a completed single case certifies all published figures.
+
 ## Current original-algorithm implementations — work in progress
 
 | Package | Implemented original method | Outstanding full-reproduction work |
@@ -17,9 +22,9 @@ This is not the original private simulation source. Each paper has an explicit i
 | [MIS communications](strict/mis-communications) | Product-manifold RCG and smoothing; relaxed scheduling and final hardening | Full sweeps and original-figure agreement |
 | [MIS sensing](strict/mis-sensing) | Original RALM/RCG, echo SINR, PSLR and separate closed-form design | Full 6000-start campaigns, convergence and figure agreement |
 | [Rotatable-array ISAC](strict/rotatable-isac) | QT/Lipschitz-MM QCQP, raw-PR RCG and PGA/BB rotation | All six schemes and full 100-channel figure banks |
-| [Two-timescale MA](strict/two-timescale-ma) | MRT AO/SCA, ZF AO/MM, full finite-grid search protocol | Full MC/figures; undefined correlated-ZF expression |
+| [Two-timescale MA](strict/two-timescale-ma) | MRT AO/SCA, ZF AO/MM with certified exact coordinate subproblems; explicit original-model Schur/Laplace correction for correlated ZF | Full banks, exhaustive-protocol verification and original-figure agreement; two selected full1000-draw dual precision checks pass |
 | [Cooperative SatCom](strict/cooperative-satcom) | Finite-Rician moments, AP/MR QT, RMO and two-stage design | Full converged sweeps and final-version reconciliation |
-| [Hotspot SatCom](strict/hotspot-satcom) | Instantaneous QT/SOCP, AO/SDR and original two-stage RGD/QT | Full converged MC; inconsistent statistical-CSI QoS formulation |
+| [Hotspot SatCom](strict/hotspot-satcom) | Instantaneous QT/SOCP, AO/SDR, original RGD/QT; explicitly corrected vector-QT statistical QoS | Full converged MC, all source panels/counts and independent reference agreement |
 
 Each current package has its own MATLAB entry point, Python entry point, full configuration and source/equation contract. Necessary sign/typographical corrections and numerical safeguards are disclosed, with literal-source diagnostic modes where applicable. No undefined analytical expression is filled in using an unrelated model.
 

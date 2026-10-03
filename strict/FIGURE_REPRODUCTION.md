@@ -23,6 +23,39 @@ redistributing private manuscripts, original EPS or hardware photographs.
 
 ## One full-budget entry point
 
+The unified entry now routes complete MIS banks, MA/ISAC banks and all satellite
+subpanels/subsweeps to their full-bank renderers. Missing points, failed
+samples, missing original schemes and changed-source receipts are rejected;
+renderer availability is not evidence that a full bank has completed.
+MA14/16 use the explicitly corrected original-model Schur/Laplace expectation,
+not the undefined printed closed form. Cooperative and statistical-hotspot
+defaults use disclosed spectral step seeds/safety caps but retain the original
+gradient direction, retraction, Armijo and1e-6 precision. Literal/historical
+controls remain independently selectable with `--settings`.
+
+The current hotspot defaults separately bind the declared radius10m
+`instantaneous_geometry_config.json` / `statistical_validated_config.json`
+and their source-bound runners. Every HU pair meets the source10-20m spacing.
+The old radius15m reconstruction violates that interval and remains historical
+diagnostic evidence, not a source-conforming result. Feed/LoS phase geometry
+and historical author coordinates remain separately unverified; correcting
+pairwise spacing does not certify every input or reference curve.
+The statistical default declares the same0..U feasible initialization policy
+for all NoRIS/two-stage/AO schemes and a100000 unreported phase safety cap.
+Every declared start must reach its original stop; selecting a good different
+trajectory cannot erase another start's cap or failure. The old single-start
+`statistical_geometry_config.json` is separately retained with its genuine
+U6/beta0 cap. Full18 validated execution is ongoing, not certified by the
+success of the representative12-chain U3/beta20 case.
+
+Fig3-9 now follows the [count-only aperture contract](HOTSPOT_ELEMENT_COUNT_CONTRACT.md)
+and all seven source counts without inventing integer shapes. Centers are
+declared unreported numerical choices, not recovered author input.
+Sensing defaults use the explicitly named raw-product-PR/closed-simplex
+correction; use `--settings strict/mis-sensing/settings.json` for the preserved
+printed branch, or a separately named candidate setting for an inferred
+normalization. No default silently introduces the factor100 hypothesis.
+
 From the repository root, install `strict/requirements.txt` and inspect a plan:
 
 ```sh
@@ -43,6 +76,30 @@ packages require independently installed/configured CVX, not bundled binaries.
 The local R2025b/CVX2.2.2 check also needed CVX's official `functions/vec_`
 support directory on the path, a runtime compatibility step rather than an
 algorithm change.
+
+The statistical hotspot MATLAB default similarly uses
+`run_hotspot_validated_bank_checked.m`: all18 original cases and243 required
+optimization chains, with1000 fresh draws for each of54 selected designs.
+Each case has a durable result, input/source/dependency identities are
+recorded before execution, and failed required starts invalidate that point.
+This is a real independent MATLAB bank, not a Python-for-MATLAB substitute.
+
+For MA Figures3-18, the current central default is the distinct
+`configs/full-ao10000-fig03-18-v2.json` unreported-cap configuration.
+Old1500-cap banks remain selectable explicitly; their incomplete/capped
+outputs cannot be mixed into a new configuration bank. Figures19/20 use
+independent original per-axis grids and disclose their exhaustive-objective
+protocol ambiguity; merely declaring that protocol is not execution.
+
+Independent MA/ISAC MATLAB banks use the full-bank plotting adapter:
+`run_matlab_bank_checked.m` records identities **before and after actual
+execution**, preserving previous attempts and refusing unbound old outputs.
+`render_matlab_bank.py` reads only MATLAB numerical JSON, independently
+rechecks all original stops, every1000-draw MA array, all scheme populations
+and immutable input/source identities, and then draws the original selected
+series. It neither runs a Python solver nor substitutes Python metrics.
+Its serialization/gate unit tests are not a completed MATLAB bank. Corrected
+MA14/16 retain their separate five-panel independent MATLAB derivation entry.
 
 These commands write numerical JSON, PNG/SVG and a render receipt. Full-grid
 MATLAB/Python parity and original-figure agreement are separate checks. A
@@ -71,9 +128,10 @@ be extremely expensive; no count is silently reduced. Plans, input banks or
 one successful realization are not complete Monte Carlo figures.
 
 Sensing Figs5/6 must reuse the exact Fig3 bank, not new starts or a different
-best start per iteration. Its aggregate renderer is not ready. Undefined
-matrix products and inconsistent statistical-CSI formulations also fail
-explicitly rather than being replaced by other channel models/optimizers.
+best start per iteration. Their aggregate adapter refuses incomplete6000-start
+banks. Undefined matrix products and inconsistent statistical-CSI formulations
+are corrected only in explicitly named original-model branches, not replaced
+by unrelated channel models/optimizers.
 
 ## Original references stay independent
 
@@ -174,7 +232,13 @@ positive-part active-set crossings retained. A recorded backtracking-exhaustion
 restart retries the current block's negative gradient without clipping the
 original PR coefficient, changing ALM updates or relaxing Armijo/feasibility/
 stopping thresholds. These are disclosed numerical safeguards, not different
-theoretical algorithms or convergence certificates. PSLR retains its own metric.
+theoretical algorithms or convergence certificates. PSLR has its own exact
+full-opponent LSE increment; its45 shared full-dimensional Decimal identities
+are checked independently in both languages. v4 SINR also sums self-excluded
+positive interference directly, avoiding a proved high-gain subtraction
+sign error without changing the model. The predeclared interpolation upper
+guard.5 and minimum descent cosine0 do not alter RAW PR, original tolerances
+or full6000/30/4000 budgets. All capped inner solves remain failures.
 
 `compare_beams.py` compares actual dual full-grid outputs, not original
 agreement. `test_figures.py` exercises negative cases for missing curves/samples,

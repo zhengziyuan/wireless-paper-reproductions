@@ -1,96 +1,197 @@
-# RIS-aided hotspot capacity: author-thesis implementation
+# RIS-aided hotspot capacity: original-model MATLAB and Python
 
 DOI: [10.1109/TWC.2023.3309957](https://doi.org/10.1109/TWC.2023.3309957).
 
-New independent MATLAB + Python implementation of the supplied author-thesis model. **Not original author code**, nor yet verified against the17-page final IEEE full text. No private source documents redistributed.
+Independent implementations of the supplied author model, not original author
+code. The final 17-page IEEE full text and historical original-curve agreement
+remain unverified. Private manuscripts, author artwork and reference ordinates
+are not redistributed or presented as simulation output.
 
-## Scope
+## Model and explicit errata
 
-The instantaneous branch uses true QT/SOCP active precoding, actual lifted complex SDP with Gaussian randomization, AO with the quadratic coefficient refreshed after the precoder update, and original author Algorithm3-2 manifold RGD then QT/SOCP. The formal RGD direction contains no PR/conjugate term. NoRIS uses the same QT optimization: no ZF or water-filling substitute. Defaults retain N16 feeds/J16 users/U6/K10/M25, finite satellite/ground Rician fading and the same satellite-to-RIS channel shared by all HUs. Physical construction uses the ESA/Bessel squared power pattern and explicit aperture gains.
+The instantaneous branch uses original complex QT active precoding, lifted
+complex SDP/Gaussian randomization, AO and original Algorithm 3-2 RGD then QT.
+NoRIS and RandRIS precoders are optimized by the same QT, not ZF or
+water-filling. Defaults retain N16/J16/U6/K10/M25, finite satellite/ground
+Rician fading and one satellite-to-RIS channel shared by all HUs.
 
-**Statistical CSI is not implemented.** The thesis has a mathematical inconsistency: Eq3-41b sums only NHU interference while Eq3-46 constructs full-user blocks; Eq3-46 calls norm-squared-to-linear an SOC and uses an imaginary coefficient where a negative self-NLoS quadratic is needed. Imaginary coefficients do not negate norms. General full-rank covariance SINR QoS is not directly convex/SOCP. `--csi statistical` explicitly reports this issue; no instantaneous, pure-LoS or unrelated SCA replacement is used.
+Statistical CSI is implemented as the explicitly labelled
+`corrected_QT_erratum`, **not** the original printed invalid scalar SOC.
+The full-rank moment SINR of the early ESA-weighted physical signal model and
+original QT framework are retained. Later printed scalar-mu/isotropic moments
+require an unstated equal-feed-gain simplification and are not silently
+equated to this physical branch. The original LoS mean/array coordinates are
+also unrecovered; fixing HU distances is not a claim that every source-model
+setting is verified.
+The exact vector-QT identity is also applied to NHU QoS, preserving original
+average-SINR feasibility at each step. Literal printed-SOC calls fail with an
+explanation; no instantaneous, LoS or unrelated optimizer is substituted.
+[STATISTICAL_ERRATUM.md](STATISTICAL_ERRATUM.md) supplies the identity,
+feasibility proof, exact normalized NHU projectors, shared-G fourth moments,
+noise normalization and source-index/sign corrections. It also marks the
+displayed unsquared ESA power-pattern convention: the unchanged generators
+use a nonnegative squared-amplitude gain with explicit peak gain, not literal
+unsquared equation3-3. Publisher wording and historical convention remain
+unverified; original LoS phases are not inferred from a matching plot.
 
-`full_config.json` separates source-reported parameters from **tuned/not-reported** coordinates, gains, initialization, seeds,1000 MC realizations/1000 randomizations, caps and thresholds. HU and Rician grids are now recovered from original author-thesis EPS curve vertices and visually checked axes, not guessed tick grids. Reference ordinates never enter the optimizer. Every requested MC sample is optimized; infeasible samples are not silently removed or targets reduced.
+All RIS-to-HU large-scale attenuation uses the source's common 400m distance.
+Actual user offsets remain in propagation phases, not an unintended
+distance-dependent power change. Satellite fields already include thermal
+noise normalization; the effective noise variance is one, not renormalized
+twice. Statistical ground Rician factor is 20dB and its NHU target is -3dB,
+distinct from the instantaneous scenario's 0dB ground factor and 3dB target.
 
-`figure_coverage.json` maps every author-thesis figure3-1 through3-10 to its relative original EPS filename, axes, curves, conflicts and remaining gaps. These are not verified final-publisher figure numbers. Figure3-9's scalar grid is4000:4000:28000 elements per subsurface, but its changing physical row/column shape/spacing is unspecified: the legacy configured element candidate is provisional, not a reproduction of that grid. The per-HU ECDF subcaptions conflict with EPS filenames. Figure3-10 remains blocked; `statistical_formulation_audit.md` gives the exact covariance identity and phase-fixed nonconvexity counterexample.
+## Preferred execution
 
-RandRIS is now explicitly implemented using the physical scenario's shared uniformly random unit-modulus phase and the same original QT precoder design. The complete AO chain records genuine20/100 outer-iteration evaluations and per-HU SINRs for the original five-curve comparisons. An original tolerance stop before a budget is labelled with its actual iteration count; no trace is padded or invented. Phase CPU times are recorded separately for AO and TwoStage.
-
-## Run
+Run from this directory with NumPy, SciPy, CVXPY and Clarabel/SCS installed.
+Set one BLAS thread when sharing compute. Complete figure runs can be long.
 
 ```text
-python run.py --component-test --output outputs/component-python.json --fixture-output outputs/component-fixture.mat
-python run.py --scenario-test --output outputs/scenario-python.json
-python run.py --chain-test --output outputs/chain-python.json
-python run.py --full-case --output outputs/full-budget-case-python.json
-python run.py --full --sweep base --output outputs/full-base-python.json
-python run.py --full --output outputs/full-sweeps-python.json
+python run_instantaneous_geometry.py --full-case --output outputs/instantaneous-case.json
+python run_instantaneous_geometry.py --full --sweep cdf_kS20 --checkpoint-dir outputs/instantaneous-source-geometry-bank --output outputs/instantaneous-cdf20.json
+python run_statistical_validated.py --full-case --case-u 3 --case-beta 20 --checkpoint-dir outputs/statistical-validated-case --output outputs/statistical-case.json
+python run_statistical_validated.py --full --checkpoint-dir outputs/statistical-validated-bank --output outputs/statistical-all18.json
 ```
 
-Tests are bounded/full-dimensional, not complete paper reproductions. `--full-case` executes one physical sample at the complete configured N16/U6/K10/M25 dimensions and AO/RGD/QT/randomization budgets. It does not change the1000-MC figure configuration and is not an MC estimate. SCS/Clarabel solve the same original convex problems, not alternate algorithms. Full MC sweeps have not run.
+`instantaneous_geometry_config.json` is the instantaneous configuration;
+`statistical_validated_config.json` is the uniform-feasible-ensemble statistical
+configuration. `run_statistical_geometry.py` and its20000-cap single-start
+configuration remain separate selectable diagnostics, including their retained
+cap failure. Configurations separate reported source values from unreported/tuned
+geometry, seed, MC count, solver controls and safety caps. Statistical full
+runs retain every U1..6 × satellite-Rician0/10/20 point and 1000 independent
+finite-Rician MC channels for each optimized design.
 
-A complete-budget SCS attempt failed after149.7s at AO iteration12: the active-QT objective decreased, and earlier primal/QT residuals substantially exceeded validation limits. The genuine history and residuals are retained in `full_budget_failure_receipt.json`; no sample or objective drop was erased. Subsequent exact epigraph conditioning was introduced and tested; full-chain validation remains necessary. A second full-sized attempt failed the SDP PSD check after190.1s. Passing a synthetic component or short chain did not establish full-run success.
+The source requires every HU pair distance to remain in10..20m. The preferred
+isolated geometry modules declare radius10m, independently check all pairs,
+and leave all other original channel/algorithm terms unchanged. Old radius15
+geometry violated this requirement. Its actual receipts are preserved as
+historical diagnostics, not strict original-scenario certificates. See
+[GEOMETRY_CONTRACT.md](GEOMETRY_CONTRACT.md). Historical coordinates have not
+been recovered; the new geometry is not fitted to reference ordinates.
 
-The current conditioned Clarabel preset has also been tested on the intact
-physical case. Although early subproblems passed independent feasibility checks,
-its active-QT solver failed at AO iteration15 after55.6s. The history, actual
-auxiliary magnitudes, backend/options and earlier conic residuals are retained in
-`full_budget_clarabel_failure_receipt.json`. The failing mathematical input is
-saved locally as an independently generated fixture in ignored `outputs/`, not
-an author manuscript or original code archive. **No successful complete scene or
-near-original-figure reproduction is claimed.** Full dimensions/budgets and
-1000-MC figure configurations were not reduced.
+`--full-case` is one complete original-sized optimization, with full iteration
+budgets and all 1000 original SDR rounding draws when applicable. It is not a
+1000-realization instantaneous figure bank. Statistical MC validates the fixed
+statistical design on fresh channels; it separately reports the source's
+ratio-of-expected-powers rate approximation and the actual MC E[log] estimate.
 
-MATLAB needs external official CVX2.2.2/free SDPT3, not vendored. CVX's documented successive approximation handles log/exp for SDPT3; its experimental warning and true physical feasibility must be recorded. R2025b may require CVX's official `functions/vec_` path.
+MATLAB requires external official CVX and SDPT3, not vendored here. Use
+`maxNumCompThreads(1)`, `cvx_solver sdpt3` and `cvx_precision high`.
+CVX's true status/physical residuals are retained; its log/exp successive
+approximation warning is not hidden. R2025b may require official CVX's
+`functions/vec_` folder on the path.
 
 ```matlab
-cvx_solver sdpt3
-cvx_precision high
-strict_hotspot_component_test('outputs/component-fixture.mat','outputs/component-matlab.json');
-run_strict_hotspot_satcom('full_config.json','outputs/full-base-matlab.json','base','instantaneous');
-run_strict_hotspot_satcom('full_config.json','outputs/full-sweeps-matlab.json');
+run_strict_hotspot_instantaneous_geometry('instantaneous_geometry_config.json','outputs/instantaneous-case-matlab.json','full-case','instantaneous');
+run_strict_hotspot_instantaneous_geometry('instantaneous_geometry_config.json','outputs/instantaneous-cdf20-matlab.json','cdf_kS20','instantaneous');
+run_strict_hotspot_statistical_validated('statistical_validated_config.json','outputs/statistical-case-matlab.json','full-case');
+run_strict_hotspot_statistical_validated('statistical_validated_config.json','outputs/statistical-all18-matlab.json','full');
 ```
 
-## Numerical details and evidence
+## Numerical controls, not substitute algorithms
 
-The active QT uses weighted epigraph `lambda_prime=|a|^2*physical_interference`,
-with `gamma<=2Re(a*desired)-lambda_prime` and the correspondingly weighted
-interference constraint. This removes large-epigraph/tiny-coefficient numerical
-conditioning while preserving the feasible set/objective, including a=0. Both
-languages use the same identity; it is not a new optimization algorithm.
+Exact epigraph elimination, positive log-argument scaling and real/imaginary
+norm realification condition the original convex problem, including zero QT
+auxiliaries. Backend retries solve only that same mathematical problem.
+The instantaneous SDP guard checks the best of **all original Gaussian
+candidates** against the relaxation bound. If numerical inaccuracy invalidates
+that bound, it resolves the identical SDP with identical auxiliaries,
+incumbent and draws under stricter numerical controls. Neither candidate count
+nor the 1e-5 primal/bound gates are reduced or relaxed.
 
-Variable/noise normalization is algebraically exact. SDR uses a principal Hermitian square root to pair shared-language Gaussian draws; current phase is retained as rounding incumbent, with no rank-one/global-optimum claim. Formal two-stage phase design follows the thesis's explicit RGD in Algorithm3-2/Section3.4.3, using tangent gradient, normalization retraction and Armijo. Eq3-36 maximizes F=f2-f3 but the prose prints -gradF: the formal method minimizes cost=-F, whose descent direction is +gradF. This unique sign-consistency interpretation is recorded, not disguised as literal agreement. `phase_rgd(...,literal_sign=True)` (MATLAB seventh argument true) diagnoses the printed opposite sign only. `phase_rcg` is a separate explicit PR+ diagnostic and is never selected by the formal chain. Initialization is minimum-power SOCP, not ZF.
+The statistical spectral branch preserves original RGD direction, circle
+retraction, Armijo1e-4 and gradient1e-6. Positive BB1/BB2 values choose only the
+step seed. Exact polynomial/ratio/log1p increments prevent false declines
+caused by subtracting nearly equal large objectives. The unreported safety
+cap is20000 in the historical spectral/single-start branches. The corrected-
+distance full18 bank retained U6/beta0 two-stage failure at that cap. An
+independent identical-stage run genuinely reached1e-6 at39910, so the new
+validated branch declares100000 as an unreported safety cap only. A cap is
+never convergence; no original stop threshold is loosened. Previous controls
+remain diagnostics with their actual identities and failed stops preserved.
 
-Other algebraic typo interpretations are explicit: phase-lift L includes the conjugated QT auxiliary and the interference sum covers all J other than the desired stream, both fixed by the original Eq3-18 expression despite omissions/index changes in displayed Eq3-19/21. The phase gradient is differentiated directly from Eq3-36; the expanded imaginary-term sign/sums after Eq3-37 are inconsistent. Eq3-6's noise brace conflicts with the single AWGN in Eq3-4/5 and outside-sum noise in Eq3-11/13; one additive noise variance is used. The component fixture independently checks the lifted versus unlifted phase objective, finite-difference gradient and tangent identity. Source-map labels are author-thesis labels, not verified publisher-final equation labels.
+All NoRIS/two-stage/AO schemes now use a disclosed common0..U feasible-start
+ensemble. Every original QT/RGD chain is run to its real stops. The best
+completed physically feasible original objective selects the fixed design,
+but any prescribed start that fails, caps or is missing makes the ensemble
+fail. Complete states, histories and numerical gates for every start are
+saved; successful-start selection is never an ensemble certificate. Exactly
+1000 fresh paired channels evaluate each selected design, with no initializer
+average or failure-survivor mean. No reference ordinate controls this policy.
 
-Full-count Python components passed QT identities, physical power/QoS constraints, PSD/diagonal/rounding and analytic-gradient checks. Physical feasible initialization and a bounded original-algorithm chain passed. All tests in `outputs/` keep `full_reproduction_pass:false`. Statistical-CSI completion, full sweeps in both languages, final-model reconciliation and agreement with published curves remain outstanding.
+RandRIS uses the scenario's sampled unit-modulus phases and QT precoder.
+AO20/AO100 are actual fixed-budget evaluations, not stationarity claims.
+An earlier original stop is labelled with its actual count; no trace is padded.
+Phase and whole-scheme CPU times are measured separately.
 
-## Termination and valid-figure policy
+## Actual evidence and boundaries
 
-Each AO, RGD and QT block records its actual final stopping residual, original
-stop rule, tuned threshold, iteration count and cap termination. No optimization
-update or original stopping test was replaced to add these receipts. Capped RGD
-or QT blocks cannot be hidden by another block's convergence. Empty, missing or
-nonfinite stopping/numerical records fail closed. Solver-primal normalized
-constraint residuals and QT/SDR-bound violations are separate gates; both use
-`1e-5` validation tolerances explicitly classified as tuned numerics. Python
-retains solver backend/residuals; MATLAB retains CVX status and reported solver
-tolerance plus independently evaluated primal and bound residuals.
+Post-400m complete instantaneous original QT/SDP/RGD/NoRIS/RandRIS optimization
+passed physical, convergence, primal and relaxation-bound gates after the
+same-SDP numerical guard. The statistical spectral U4/beta20 complete case
+also passed all four gates with 1000 independent MC channels. The older
+source-bound statistical 18-point 5000-cap run completed but retained two
+genuine capped scenarios. It is not a successful figure certificate.
 
-All required MC outcomes, including failures and capped algorithms, remain in
-the output. `raw_unvalidated_means` is diagnostic only; `means` is absent/null
-unless every configured sample passes convergence, physical, primal and bound
-checks. A failed sample is not silently dropped to improve the mean.
-`valid_figure_point` and `overall_implemented_scope_success` concern only the
-selected instantaneous author-model scope, not statistical-CSI or final-paper
-conformance. `all_configured_sweeps_requested` identifies whether every configured
-sweep was requested. The bounded physical chain test intentionally is not a full
-convergence experiment. Run `python test_termination.py` for pure receipt tests;
-no artificial paper-rate arrays are generated. No full MC sweep was run to add
-these gates.
+The old spectral18 run actually passed its internal four gates, but its
+radius15 geometry violates the source10..20m requirement and its original
+54-ordinate curve disagreement is large. It is not strict figure reproduction.
+After the isolated source-distance correction, a statistical U4/beta20 case
+passed all four gates and1000 MC in39.27s, and a full instantaneous U6 case
+passed all four gates in144.20s. Fresh source-compliant18-point and1000-MC
+banks were started without reusing old points. The new single-start statistical
+18-point bank actually finished1177.66s: physical/primal/QT checks passed,
+but U6/beta0 two-stage hit20000 iterations and the full convergence gate is
+false. Its failed stop is not overwritten by the separate39910 phase diagnosis.
+The new uniform-ensemble/cap100000 branch is a distinct fresh execution and
+never resumes a single-start case as an ensemble certificate. Partial progress
+and complete-case tests are not all-figure completion. Read actual receipts.
+Historical SCS/Clarabel/SDP and 5000-cap failures are preserved, not upgraded
+to success for newer source code.
 
-The original AO20/AO100 curves are explicitly reported finite-budget evaluations,
-not stationarity claims. Their separate `valid_budget_endpoint` gate requires
-physical/primal/QT/SDR validity and records the actual budget/termination, without
-setting `algorithm_success=true` for an unconverged fixed-budget method. Full
-converged AO/TwoStage/NoRIS/RandRIS success remains gated independently.
+`figure_coverage.json` maps supplied author figures3-1..3-10, not verified
+final-publisher numbering. HU/Rician grids follow original EPS abscissae.
+For figure3-9 the source says fixed M and element count changes only maximum
+aperture gain: a count-only adapter must freeze declared subpanel centers and
+scale both field amplitudes, not move their propagation phases. Historical
+center geometry is not thereby recovered. Reference ordinates never enter
+the optimizer.
+
+## Independent tests and fail-closed receipts
+
+```text
+python test_statistical_contract.py
+python test_rgd_increments.py
+python verify_statistical.py
+python verify_rgd_controls.py
+python verify_spectral_controls.py
+python verify_geometry.py
+python test_statistical_ensemble.py
+python verify_ensemble.py
+python audit_single_hu_guarantee.py
+python audit_covariance_contract.py
+python test_termination.py
+```
+
+MATLAB counterparts are `strict_hotspot_statistical_test`,
+`strict_hotspot_rgd_controls_test` and `strict_hotspot_spectral_test`.
+The last test compares a deliberately bounded 12-step synthetic trajectory;
+its original capped stop flags remain false even when component parity passes.
+Components are never copied into a paper-performance bank.
+The independent new geometry counterpart is `strict_hotspot_geometry_test`.
+`strict_hotspot_ensemble_test` recomputes all full-dimension initializers and
+the common SHA256 phase schedule from a shared numeric fixture, and independently
+rejects missing/capped/bound-violating start sets. It is not a full optimizer
+run or curve certificate. The standalone mathematical counterexample audit
+refutes the source's generic PSD/global-optimality claim, not the entire RGD
+method; production retains original RGD with actual stationarity evidence.
+
+Actual runtime sources and immutable configuration are hashed before/after
+runs. Checkpoints bind source, configuration and RNG state. Every required
+outcome, including failures/caps, remains present. Diagnostic
+`raw_unvalidated_means` is separate from certified `means`; no survivor-only
+average is exported. All selected samples/points must pass physical,
+convergence, solver-primal and QT/SDR-bound gates before rendering.
+`full_reproduction_pass` remains false until final-source and original-curve
+agreement are separately established.

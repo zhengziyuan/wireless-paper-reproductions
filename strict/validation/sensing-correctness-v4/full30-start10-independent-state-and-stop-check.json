@@ -1,0 +1,69 @@
+{
+  "scope": "two_actual_full400_256_25_9_30outer_state_and_stop_checks_NOT_6000_start_or_reference_certificate",
+  "start": 10,
+  "checks": [
+    {
+      "language": "matlab",
+      "saved_eta": 44.78815464927222,
+      "same_saved_state_metric_errors": {
+        "eta": 0.0,
+        "min_relaxed_metric": 4.263256414560601e-14,
+        "min_binary_metric": 4.263256414560601e-14,
+        "maximum_constraint": 4.263256414560601e-14
+      },
+      "same_saved_state_metric_recalculation_pass": true,
+      "actual_all30_inner_stops_and_original_constraints_pass": true,
+      "original_problem_kkt_recomputed": {
+        "scope": "original_P2.1_SINR_relaxed_constrained_projected_KKT_not_global_optimality",
+        "stationarity_norm": 1.0990845476700864e-06,
+        "stationarity_tolerance": 1.2589254117941667e-06,
+        "maximum_positive_primal_residual": 0.0,
+        "maximum_negative_dual_residual": 0.0,
+        "maximum_absolute_complementarity": 1.6888656118834208e-09,
+        "feasibility_tolerance": 1e-06,
+        "maximum_phase_modulus_error": 2.220446049250313e-16,
+        "maximum_simplex_storage_error": 0.0,
+        "original_problem_kkt_verified": true
+      }
+    },
+    {
+      "language": "python",
+      "saved_eta": 44.58138515313415,
+      "same_saved_state_metric_errors": {
+        "eta": 0.0,
+        "min_relaxed_metric": 0.0,
+        "min_binary_metric": 0.0,
+        "maximum_constraint": 0.0
+      },
+      "same_saved_state_metric_recalculation_pass": true,
+      "actual_all30_inner_stops_and_original_constraints_pass": true,
+      "original_problem_kkt_recomputed": {
+        "scope": "original_P2.1_SINR_relaxed_constrained_projected_KKT_not_global_optimality",
+        "stationarity_norm": 1.1960806979520954e-06,
+        "stationarity_tolerance": 1.2589254117941667e-06,
+        "maximum_positive_primal_residual": 1.5293366573132516e-09,
+        "maximum_negative_dual_residual": 0.0,
+        "maximum_absolute_complementarity": 9.218778938820327e-10,
+        "feasibility_tolerance": 1e-06,
+        "maximum_phase_modulus_error": 2.220446049250313e-16,
+        "maximum_simplex_storage_error": 0.0,
+        "original_problem_kkt_verified": true
+      }
+    }
+  ],
+  "all_same_state_metric_and_original_stop_checks_pass": true,
+  "separately_found_local_state_eta_difference": 0.20676949613807238,
+  "identical_optimizer_states_or_global_optima_claimed": false,
+  "local_state_difference_is_not_an_error_tolerance_for_same_state_metrics": true,
+  "Python_bank_execution_source_identity_verified": true,
+  "MATLAB_execution_interval_identity_not_added_post_hoc": true,
+  "independent_state_evaluation_source_unchanged": true,
+  "implementation_digest": "bf41284cc32086f63e1b340b6f180bd1b1f00507950f55e3ab6df0e9aa4553cb",
+  "full6000_start_bank_completed": false,
+  "original_figure_reproduction_certified": false,
+  "input_file_sha256": {
+    "manifest": "24a89e46956cba3e4c13cb6e6cfa5a06608cee8a65e034488f9d014bc2e91a0b",
+    "matlab": "787d6ecd36900b4ea1f0d9aaffd4461b358f315201cd4f89e75c6c010e71f5d6",
+    "python": "10f920d5ebc8b39163d419c89463aa35019d35eca298808e4809a9793530b09e"
+  }
+}

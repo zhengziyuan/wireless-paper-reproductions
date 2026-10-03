@@ -30,7 +30,7 @@ def response(coords,center,direction,r,c):
     return a,da
 
 
-def channels(theta,r,c):
+def channel_base(r,c):
     cb,cr=np.asarray(c["bs_coordinates"]),np.asarray(c["ris_coordinates"])
     ob,orr=np.asarray(c["bs_center"]),np.asarray(c["ris_center"])
     m,n=len(cb),len(cr);k=len(c["noise"]);a=len(c["bt_directions"]);links=k+a
@@ -54,6 +54,12 @@ def channels(theta,r,c):
         for d in range(3):
             db[:,:,d]+=gain*np.outer(dab[:,d],ar.conj())
             db[:,:,d+3]+=gain*np.outer(ab,dar[:,d].conj())
+    return h,g,dh,dg,bridge,db
+
+
+def channels(theta,r,c,_fixed_rotation_base=None):
+    h,g,dh,dg,bridge,db=channel_base(r,c) if _fixed_rotation_base is None else _fixed_rotation_base
+    m,links=h.shape
     f=h+bridge@(theta[:,None]*g)
     jac=np.empty((m,links,6),complex)
     for d in range(6):
@@ -61,8 +67,11 @@ def channels(theta,r,c):
     return f,jac,bridge,g
 
 
-def evaluate(w,theta,r,c,iota=None,gradients=False):
-    field,jac,bridge,g=channels(theta,r,c);k=len(c["noise"])
+def evaluate(w,theta,r,c,iota=None,gradients=False,_fixed_channel_bundle=None,_fixed_rotation_base=None):
+    # Only a W block passes this bundle: theta/r/c are fixed for that block.
+    # The original metric/gradient arithmetic below is unchanged.
+    field,jac,bridge,g=channels(theta,r,c,_fixed_rotation_base) if _fixed_channel_bundle is None else _fixed_channel_bundle
+    k=len(c["noise"])
     fc,fs=field[:,:k],field[:,k:];y=fc.conj().T@w;z=fs.conj().T@w
     total=np.sum(abs(y)**2,axis=1)+c["noise"];signal=abs(y[np.arange(k),np.arange(k)])**2
     interference=total-signal;rate=float(np.log2(total/interference).sum());p=np.sum(abs(z)**2,axis=1)
@@ -93,11 +102,12 @@ def evaluate(w,theta,r,c,iota=None,gradients=False):
 
 def update_w(w,theta,r,c,iota):
     """Algorithm 1: original LDT/QT + sensing MM QCQP + scalar dual bisection."""
-    f,_,_,_=channels(theta,r,c);k=len(c["noise"]);fc,fs=f[:,:k],f[:,k:]
+    fixed_channel_bundle=channels(theta,r,c);f=fixed_channel_bundle[0]
+    k=len(c["noise"]);fc,fs=f[:,:k],f[:,k:]
     m=len(w);pd=np.asarray(c["desired_pattern"]);den=iota*iota*float(pd@pd)
     norms=np.sum(abs(fs)**2,axis=0)
     lip=12*c["power"]*norms**2+4*iota*pd*norms
-    spec=c["W_solver"];history=[evaluate(w,theta,r,c,iota)["utility"]];records=[]
+    spec=c["W_solver"];history=[evaluate(w,theta,r,c,iota,_fixed_channel_bundle=fixed_channel_bundle)["utility"]];records=[]
     converged=False;reason="maximum_iterations_without_criterion_stop";relative_objective=relative_step=None
     for _ in range(spec["maximum_iterations"]):
         y=fc.conj().T@w;total=np.sum(abs(y)**2,axis=1)+c["noise"]
@@ -121,7 +131,7 @@ def update_w(w,theta,r,c,iota):
                 else:hi=mid
                 bisects+=1
             nu=hi
-        new=vec@(projected/(val+nu)[:,None]);value=evaluate(new,theta,r,c,iota)["utility"]
+        new=vec@(projected/(val+nu)[:,None]);value=evaluate(new,theta,r,c,iota,_fixed_channel_bundle=fixed_channel_bundle)["utility"]
         if value<history[-1]-c["verification_tolerance"]:raise RuntimeError("QT/MM actual objective decreased.")
         rel=np.linalg.norm(new-w)/max(np.linalg.norm(w),np.finfo(float).tiny)
         relative_step=float(rel)
@@ -138,11 +148,14 @@ def update_w(w,theta,r,c,iota):
 def tangent(theta,v):return v-np.real(v*theta.conj())*theta
 
 
-def update_theta(w,theta,r,c,iota):
+def update_theta(w,theta,r,c,iota,_use_fixed_rotation_base=True):
     spec=c["RCG_solver"];history=[];coefficients=[];restarts=[];oldg=oldd=None
+    # Original RCG fixes r/c/W/iota. Only the theta-independent path sums are
+    # hoisted; every field/rotation derivative keeps its original arithmetic.
+    fixed_rotation_base=channel_base(r,c) if _use_fixed_rotation_base else None
     converged=False;reason="maximum_iterations_without_criterion_stop";checked_gradient=None
     for iteration in range(spec["maximum_iterations"]):
-        metric,(_,ambient,_)=evaluate(w,theta,r,c,iota,True);g=tangent(theta,ambient);history.append(metric["utility"])
+        metric,(_,ambient,_)=evaluate(w,theta,r,c,iota,True,_fixed_rotation_base=fixed_rotation_base);g=tangent(theta,ambient);history.append(metric["utility"])
         checked_gradient=float(np.linalg.norm(g)/np.sqrt(len(theta)))
         if checked_gradient<=spec["gradient_tolerance"]:
             converged=True;reason="gradient_tolerance";break
@@ -158,12 +171,12 @@ def update_theta(w,theta,r,c,iota):
         alpha=spec["initial_step"];accepted=False
         for _ in range(spec["maximum_backtracks"]):
             trial=theta+alpha*direction;trial/=abs(trial)
-            value=evaluate(w,trial,r,c,iota)["utility"]
+            value=evaluate(w,trial,r,c,iota,_fixed_rotation_base=fixed_rotation_base)["utility"]
             if value>=metric["utility"]+spec["armijo"]*alpha*slope:
                 oldg,oldd=g,direction;theta=trial;accepted=True;break
             alpha*=spec["backtrack_factor"]
         if not accepted:raise RuntimeError("Printed RCG Armijo line search failed; no substitute solver.")
-    final_metric,(_,final_ambient,_)=evaluate(w,theta,r,c,iota,True)
+    final_metric,(_,final_ambient,_)=evaluate(w,theta,r,c,iota,True,_fixed_rotation_base=fixed_rotation_base)
     return theta,{"objective":history,"PR_coefficients":coefficients,"restarts":restarts,"mode":spec["mode"],"final_objective":final_metric["utility"],
                   "applicable":True,"converged":converged,"termination_reason":reason,"iterations":len(history),"updates":len(coefficients),
                   "iteration_budget":spec["maximum_iterations"],"budget_exhausted":len(history)>=spec["maximum_iterations"],"capped_unconverged":not converged,

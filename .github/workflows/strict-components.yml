@@ -6,7 +6,11 @@ on:
 jobs:
   python-components:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -18,18 +22,34 @@ jobs:
       - run: python strict/two-timescale-ma/test_metadata.py
       - run: python strict/test_validation.py
       - run: python -m unittest discover -s strict -p test_figures.py
+      - run: python strict/test_satellite_figures.py
+      - run: python strict/test_reproduction_plans.py
+      - run: python strict/test_hotspot_element_count.py
+      - run: python strict/test_hotspot_statistical_reference.py
+      - run: python strict/test_matlab_bank_render.py
+      - run: python strict/test_sensing_full_state_compare.py
       - run: python strict/mis-communications/test_figure_inputs.py
       - run: python strict/mis-sensing/test_figure_inputs.py
       - run: python strict/two-timescale-ma/test_correlated_derivatives.py
       - run: python strict/mis-communications/test_line_search.py
+      - run: python strict/mis-communications/test_communication_increment.py
+      - run: python strict/test_mis_parallel_bank.py
+      - run: python strict/test_sensing_parallel_bank.py
       - run: python strict/mis-sensing/test_line_search.py
       - run: python strict/mis-sensing/test_normalization.py
       - run: python strict/mis-sensing/test_closed_form.py
       - run: python strict/mis-sensing/test_stable_increment.py
+      - run: python strict/mis-sensing/test_solver_erratum.py
+      - run: python strict/mis-sensing/test_pslr_increment.py
+      - run: python strict/mis-sensing/test_self_excluded_sum.py
+      - run: python strict/two-timescale-ma/test_coordinate_scaling.py
+      - run: python strict/two-timescale-ma/test_exact_2d.py
+      - run: python strict/two-timescale-ma/test_correlated_zf.py
       - run: python strict/cooperative-satcom/test_termination.py
       - run: python strict/hotspot-satcom/test_termination.py
       - run: python strict/hotspot-satcom/test_phase_method.py
       - run: python strict/hotspot-satcom/test_source_contract.py
+      - run: python strict/hotspot-satcom/verify_statistical.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:

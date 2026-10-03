@@ -59,6 +59,17 @@ try
     if ~isfield(result,'implementation_fingerprint')||~strcmp(result.implementation_fingerprint,strict_ma_implementation_fingerprint()),return;end
     flags={'mrt_converged','zf_converged','mrt_nominal_design_spacing_feasible','zf_nominal_design_spacing_feasible','mrt_nominal_design_box_feasible','zf_nominal_design_box_feasible'};
     for i=1:numel(flags),if ~isfield(result.checks,flags{i})||~result.checks.(flags{i}),return;end,end
+    if strcmp(config.matlab_convex_solver,'certified_exact_2d')
+        for algorithm={'mrt','zf'}
+            updates=result.history.(algorithm{1}).coordinate_updates;if isempty(updates),return;end
+            for updateIndex=1:numel(updates)
+                update=updates(updateIndex);
+                if ~update.original_subproblem_unchanged||~isfield(update,'certificate'),return;end;cert=update.certificate;
+                if ~cert.certified_without_conic_solver_status||~isfinite(cert.global_objective_gap_upper_bound)||cert.global_objective_gap_upper_bound<0||cert.global_objective_gap_upper_bound>cert.global_objective_gap_tolerance,return;end
+                if ~isfinite(cert.maximum_normalized_constraint_violation)||cert.maximum_normalized_constraint_violation<0||cert.maximum_normalized_constraint_violation>cert.normalized_constraint_tolerance,return;end
+            end
+        end
+    end
     names={'MA_MRT','MA_ZF','FPA_MRT','FPA_ZF','FPA_OPT'};
     for i=1:numel(names)
         item=result.metrics.schemes.(names{i});if numel(item.sample_sum_rates)~=config.nlos_realizations_per_geometry||~all(isfinite(item.sample_sum_rates)),return;end

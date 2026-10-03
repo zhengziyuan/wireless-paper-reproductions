@@ -22,6 +22,9 @@ def source_hashes(settings_path):
     # Bind the files actually executed by Python. Unexecuted MATLAB/test-file
     # edits must not invalidate a frozen Python computation.
     files=[HERE/name for name in ["engine.py","run.py","normalization.py","reference_candidate_fingerprint.py"]]
+    selected=json.loads(Path(settings_path).read_text())
+    if selected['line_search']['line_search_policy']=='corrected_product_pr_wolfe':
+        files.append(HERE/'solver_erratum.py')
     files += [Path(settings_path),REFERENCE]
     return {file.name:hashlib.sha256(file.read_bytes()).hexdigest()
             for file in sorted(files,key=lambda file:file.name)}
@@ -59,7 +62,7 @@ def run_fingerprint(settings_path):
                                 target_azimuth_deg=model.config["azimuth_deg"][target],
                                 target_elevation_deg=model.config["elevation_deg"][target],
                                 metrics=metrics,
-                                solver_status=run.solver_diagnostics(history,settings,"sinr"),
+                                solver_status=run.solver_diagnostics(history,settings,"sinr",model=ris,state=state,metrics=metrics),
                                 history=history,state=serialize(state),quantized_sinr=quantized,
                                 elapsed_seconds=time.perf_counter()-started))
         minimum={"RIS continuous":min(t["metrics"]["min_binary_metric"] for t in targets),

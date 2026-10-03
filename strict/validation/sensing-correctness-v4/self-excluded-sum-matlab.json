@@ -1,0 +1,67 @@
+{
+  "scope": "full_400_256_25_9_same_formula_self_exclusion_roundoff_sign_test_not_a_solver_or_figure_certificate",
+  "fixture_kind": "independent_reproduction_computed_near_stationary_counterexample_not_author_code_or_original_experiment",
+  "number_of_checks": 6,
+  "all_checks_pass": true,
+  "checks": [
+    {
+      "check": "positive_interference",
+      "explicit_excluded_sum": 3,
+      "exact_sum": 3,
+      "legacy_total_minus_wanted": 0,
+      "pass_check": true
+    },
+    {
+      "check": "signed_exact_increment",
+      "explicit_excluded_sum": 1,
+      "exact_sum": 1,
+      "legacy_total_minus_wanted": 0,
+      "pass_check": true
+    },
+    {
+      "check": "full_near_stationary_alpha_1e-05",
+      "reference_difference_decimal60": "7.68387442986166565686139556004865747813260014E-12",
+      "stable_difference": 7.6838841137818978E-12,
+      "absolute_error": 9.6839202316457269E-18,
+      "test_only_roundoff_bound": 7.6838844298616667E-15,
+      "legacy_python_subtraction_difference": 7.6069556519532017E-12,
+      "canonical_armijo_false_acceptance_prevented": true,
+      "pass_check": true
+    },
+    {
+      "check": "full_near_stationary_alpha_1e-07",
+      "reference_difference_decimal60": "1.12235689915106044802514289167270738364250E-15",
+      "stable_difference": 1.1224538118305869E-15,
+      "absolute_error": 9.691267952650492E-20,
+      "test_only_roundoff_bound": 1.1323568991510603E-18,
+      "legacy_python_subtraction_difference": 3.5316936341329508E-16,
+      "canonical_armijo_false_acceptance_prevented": true,
+      "pass_check": true
+    },
+    {
+      "check": "full_near_stationary_alpha_1e-09",
+      "reference_difference_decimal60": "3.64912886954014651759420226550317148474E-18",
+      "stable_difference": 3.6530980804859093E-18,
+      "absolute_error": 3.9692109457631392E-21,
+      "test_only_roundoff_bound": 1.3649128869540144E-20,
+      "legacy_python_subtraction_difference": -4.0399407785439467E-18,
+      "canonical_armijo_false_acceptance_prevented": true,
+      "pass_check": true
+    },
+    {
+      "check": "full_near_stationary_alpha_1e-11",
+      "reference_difference_decimal60": "1.578399520197024338793640830702515157E-20",
+      "stable_difference": 1.7926955348760996E-20,
+      "absolute_error": 2.1429601467907517E-21,
+      "test_only_roundoff_bound": 1.001578399520197E-20,
+      "legacy_python_subtraction_difference": -2.7243153219234472E-20,
+      "canonical_armijo_false_acceptance_prevented": true,
+      "pass_check": true
+    }
+  ],
+  "independent_reference": "Shared Decimal60 full explicit complex forward sums and normalized circle endpoints",
+  "line_search_acceptance_slack_added": false,
+  "optimizer_tolerance_changed": false,
+  "full_6000_start_figure_completed": false,
+  "original_figure_reproduction_certified": false
+}

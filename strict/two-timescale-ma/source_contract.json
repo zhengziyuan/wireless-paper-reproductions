@@ -4,7 +4,9 @@
   "doi": "10.1109/TCOMM.2025.3585515",
   "primary_source": "https://arxiv.org/html/2410.05912v2",
   "identity_source": "https://arxiv.org/abs/2410.05912v2",
-  "status": "FULL_DIMENSION_THEORETICAL_RUNNERS_IMPLEMENTED_FULL_FIGURES_NOT_EXECUTED_CORRELATED_ZF_FORMULA_BLOCKED",
+  "status": "FULL_DIMENSION_EXECUTION_STARTED_CERTIFIED_EXACT2D_ORIGINAL_SUBPROBLEMS_PRINTED_CORRELATED_ZF_CLOSED_FORM_UNRECOVERED",
+  "convex_subproblem_backend": {"primary":"certified_exact_2d","proof":"EXACT_2D_SUBPROBLEM.md","original_objective_constraints_and_AO_SCA_MM_unchanged":true,"optional_conic_backends":["CLARABEL","CVX_SDPT3"],"every_coordinate_requires_finite_primal_and_concavity_global_gap_certificate":true},
+  "corrected_correlated_ZF_evaluator": {"source":"original Eq35/37 inverse-Gram/Jensen expectation under exact Eq68 channel, before invalid Eq71 Wishart step","method":"Schur complement plus exact conditional Gaussian Laplace integral; full supplied outer ensemble","proof":"CORRELATED_ZF_EXACT_EVALUATION.md","printed_Eq74_closed_form_recovered":false,"covariance_or_Wishart_approximation_substituted":false,"Python_MATLAB_full1000_original_N6_M5_identity_check_actually_passed":true,"complete100_geometry_reference_figure_verified":false},
   "known_settings": {
     "antenna_count": 6,
     "user_count": 5,

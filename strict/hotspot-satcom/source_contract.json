@@ -1,44 +1,149 @@
 {
   "paper_id": "hotspot-satcom",
   "doi": "10.1109/TWC.2023.3309957",
-  "production_status": "instantaneous_author_thesis_full_runner_implemented_not_full_run_statistical_incomplete",
-  "source_version":"user_supplied_author_thesis",
-  "sources": [{"url": "https://ieeexplore.ieee.org/document/10258030/", "kind": "publisher_metadata_and_abstract", "final_fulltext_verified": false}],
+  "production_status": "confirmed_old_geometry_error_preserved; source_distance_single_start_stat18_finished_with_U6beta0_phase_cap_failure; fresh_uniform_all_scheme_ensemble_stat18_and_instantaneous1000banks_running",
+  "source_version": "user_supplied_author_thesis",
+  "sources": [
+    {
+      "url": "https://ieeexplore.ieee.org/document/10258030/",
+      "kind": "publisher_metadata_and_abstract",
+      "final_fulltext_verified": false
+    }
+  ],
   "final_source_required": "Final IEEE TWC published PDF pp3648-3664 (17pages) or final accepted LaTeX/source bundle",
-  "source_verified_components": ["publisher abstract confirms AO and two-stage manifold method"],
-  "provisional_components": ["instantaneous complex QT/SOCP satellite subproblem", "RIS phase SDP relaxation and Gaussian randomization", "author-thesis model crosschecks; NOT final publication equivalence"],
+  "source_verified_components": [
+    "publisher abstract confirms AO and two-stage manifold method"
+  ],
+  "provisional_components": [
+    "instantaneous complex QT/SOCP satellite subproblem",
+    "RIS phase SDP relaxation and Gaussian randomization",
+    "author-thesis model crosschecks; NOT final publication equivalence"
+  ],
   "full_scenario_candidate_defaults": {
     "evidence": "author doctoral thesis Chapter3 candidate only; not final-publication verified",
-    "N": 16, "total_users": 16, "U": 6, "K": 10, "M": 25,
-    "leo_altitude_km": 550, "carrier_GHz": 12, "total_power_W": 100,
-    "NHU_sinr_dB": 3, "NHU_statistical_los_sinr_dB": -3,
-    "bandwidth_MHz": 200, "receiver_temperature_K": 235.3,
-    "tx_gain_dBi": 50, "satellite_antenna_diameter_m": 0.5,
-    "subsurface_elements": [200,140], "element_size_m": [0.01,0.01],
-    "ris_hu_distance_m": 400, "hu_spacing_m_range": [10,20],
-    "ground_rician_dB": 0, "leo_rician_dB": 20
+    "N": 16,
+    "total_users": 16,
+    "U": 6,
+    "K": 10,
+    "M": 25,
+    "leo_altitude_km": 550,
+    "carrier_GHz": 12,
+    "total_power_W": 100,
+    "NHU_sinr_dB": 3,
+    "NHU_statistical_los_sinr_dB": -3,
+    "bandwidth_MHz": 200,
+    "receiver_temperature_K": 235.3,
+    "tx_gain_dBi": 50,
+    "satellite_antenna_diameter_m": 0.5,
+    "subsurface_elements": [
+      200,
+      140
+    ],
+    "element_size_m": [
+      0.01,
+      0.01
+    ],
+    "ris_hu_distance_m": 400,
+    "hu_spacing_m_range": [
+      10,
+      20
+    ],
+    "ground_rician_dB": 0,
+    "leo_rician_dB": 20
   },
   "sweeps": [
-    {"candidate_description": "convergence U6,M25,kappaS20dB; AO20/100 iterations", "exact_final_figure_id": null, "grid": null},
-    {"candidate_description": "CPU time vsHU count", "exact_final_figure_id": null, "grid": null},
-    {"candidate_description": "HU sum rate vsHU count, kappaS10/20dB", "exact_final_figure_id": null, "grid": null},
-    {"candidate_description": "sum-rate CDF and per-user rates, U6,kappaS20dB", "exact_final_figure_id": null, "grid": null},
-    {"candidate_description": "per-user rate ECDF, kappaS10/20dB", "exact_final_figure_id": null, "grid": null},
-    {"candidate_description": "sum rate vsRician factor, U6/U1", "exact_final_figure_id": null, "grid": null},
-    {"candidate_description": "sum rate vsreflecting-element count, U6,M25,kappaS12dB", "exact_final_figure_id": null, "grid": null},
-    {"candidate_description": "statistical-CSI low-overhead comparisons", "exact_final_figure_id": null, "grid": null}
+    {
+      "candidate_description": "convergence U6,M25,kappaS20dB; AO20/100 iterations",
+      "exact_final_figure_id": null,
+      "grid": null
+    },
+    {
+      "candidate_description": "CPU time vsHU count",
+      "exact_final_figure_id": null,
+      "grid": null
+    },
+    {
+      "candidate_description": "HU sum rate vsHU count, kappaS10/20dB",
+      "exact_final_figure_id": null,
+      "grid": null
+    },
+    {
+      "candidate_description": "sum-rate CDF and per-user rates, U6,kappaS20dB",
+      "exact_final_figure_id": null,
+      "grid": null
+    },
+    {
+      "candidate_description": "per-user rate ECDF, kappaS10/20dB",
+      "exact_final_figure_id": null,
+      "grid": null
+    },
+    {
+      "candidate_description": "sum rate vsRician factor, U6/U1",
+      "exact_final_figure_id": null,
+      "grid": null
+    },
+    {
+      "candidate_description": "sum rate vsreflecting-element count, U6,M25,kappaS12dB",
+      "exact_final_figure_id": null,
+      "grid": null
+    },
+    {
+      "candidate_description": "statistical-CSI low-overhead comparisons",
+      "exact_final_figure_id": null,
+      "grid": null
+    }
   ],
-  "required_unknowns": ["final fulltext conformance", "coherent statisticalCSI QoS/SOCP original equations", "original published figure agreement"],
-  "implemented":["Instantaneous trueQT/SOCP","Actual lifted complexSDP/randomization","AO refreshesQT a afteractiveW","Two-stage author Algorithm3-2 phaseRGD thenQT; noPR direction","NoRIS optimizedbyQT notZF","Full16-feed/16-user finiteRician physicalESA generator/shared satelliteRIS","Configured instantaneous MC sweeps/CDF/per-user samples/solver CPU times"],
-  "phase_method_contract":"Algorithm3-2 and Section3.4.3 explicitly selectRGD. Formal chain minimizes -F=f3-f2 so -grad(-F)=+grad(F), retaining Eq3-36 argmaxF. Printed prose -gradF sign conflicts withargmaxF; literal sign remains explicit diagnosticonly. PR+RCG function remains diagnosticonly, neverformal default.",
-  "uniquely_derived_author_typo_interpretations":["Derivatives are taken directly from Eq3-36 F=f2-|g|^2; the printed imaginary-term expansion afterEq3-37 has sign/sum inconsistencies.","Lift L includes quadratic auxiliary a conjugate as required by the original expressionEq3-18; Eq3-19/21 displayedL omitsit.","Phase interference sums all J excludingdesired HU, as inEq3-18, rather than inconsistent j inU onEq3-21."],
-  "unimplemented":["StatisticalCSI AO/two-stage","Full sweeps notrun","Final publication equivalence"],
-  "statistical_issue":"ThesisEq3-41b denominatorj inK excludesHU whileEq3-46 sumsJ. Eq3-46 usesnorm squared<=linear as purportedSOC and imaginary selfNLoS block cannot subtract a quadratic norm. General fullrank covarianceQoS notdirectlyconvexSOCP; noinstantaneous/LoS/SCA replacement.",
-  "tuned_not_reported":"full_config.json discloses authorized numerical coordinates/gains/MC1000/randomization1000/seed/caps/thresholds. Notoriginal figuredata.",
-  "solver_evidence":"Old unweightedphysicalQT Clarabel failed; SCS passedbounded physicalchain but actualfull-budget case failedphysical primal/QT residuals and monotonicity. Weightedlambda exactconditioning was addedbothlanguages; SCS nextfullcase failedSDP PSD. Clarabel weightedphysicalQT/SDP firststep passesindependent residuals. Currentfullcase usesClarabel1e-9/max300/maxthreads1; fullMC notrun and fullsuccessnotimplied.",
-  "compute_contract": {"full_run_started": false, "full_sized_single_sample_diagnostics_started":true, "current_full_diagnostic_status":"failed_AO_active_iteration15", "full_cpu_hours": null, "reason": "FullMC notstarted. Genuinefull-budget SCS attemptsfailed149.7s(active numericalfailure) and190.1s(SDP PSD). CurrentweightedClarabel fullphysicalcase failedactiveQTiteration15 after55.6s; bothpublicnumericfailure receipts retained. No fullscene success/nearoriginalfigure claim."},
-  "dependencies": {"python": "NumPy,SciPy,CVXPY,Clarabel forcurrent QT/SDP andinitialization; historicalSCS failuresretained", "matlab": "externalCVX2.2.2+SDPT3 documented successiveapproximationlog/exp; R2025b may needfunctions/vec_ onpath"},
-  "figure_coverage_contract":"figure_coverage.json: author3-1..3-10 originalEPS names/vertices/axes/curves. RandRIS andtrueAO20/AO100 endpointsare nowimplemented; independent originalfigureagreement notyetverified.",
-  "numerical_conditioning_identity":"lambda_prime=abs(a)^2*physical_interference, sameQTfeasible set/objective including a=0, implementedinbothlanguages; noalternate algorithm.",
-  "production_gate_pass": false
+  "required_unknowns": [
+    "final fulltext conformance",
+    "historical per-feed deterministic LoS mean and feed/array footprint coordinates",
+    "early ESA-weighted diagonal covariance versus later scalar-mu isotropic statistical-model scope",
+    "historical printed statistical algorithm versus explicitly corrected QT erratum",
+    "original published figure agreement"
+  ],
+  "implemented": [
+    "Instantaneous trueQT/SOCP",
+    "Actual lifted complexSDP/randomization",
+    "AO refreshesQT a afteractiveW",
+    "Two-stage author Algorithm3-2 phaseRGD thenQT; noPR direction",
+    "NoRIS optimizedbyQT notZF",
+    "Full16-feed/16-user finiteRician physicalESA generator/shared satelliteRIS",
+    "Configured instantaneous MC sweeps/CDF/per-user samples/solver CPU times"
+  ],
+  "phase_method_contract": "Algorithm3-2 and Section3.4.3 explicitly selectRGD. Formal chain minimizes -F=f3-f2 so -grad(-F)=+grad(F), retaining Eq3-36 argmaxF. Printed prose -gradF sign conflicts withargmaxF; literal sign remains explicit diagnosticonly. PR+RCG function remains diagnosticonly, neverformal default.",
+  "uniquely_derived_author_typo_interpretations": [
+    "Derivatives are taken directly from Eq3-36 F=f2-|g|^2; the printed imaginary-term expansion afterEq3-37 has sign/sum inconsistencies.",
+    "Lift L includes quadratic auxiliary a conjugate as required by the original expressionEq3-18; Eq3-19/21 displayedL omitsit.",
+    "Phase interference sums all J excludingdesired HU, as inEq3-18, rather than inconsistent j inU onEq3-21."
+  ],
+  "unimplemented": [
+    "All original full sweeps not completed",
+    "Final publication equivalence"
+  ],
+  "statistical_issue": "ThesisEq3-41b denominatorj inK excludesHU whileEq3-46 sumsJ. Eq3-46 usesnorm squared<=linear as purportedSOC and imaginary selfNLoS block cannot subtract a quadratic norm. General fullrank covarianceQoS notdirectlyconvexSOCP; noinstantaneous/LoS/SCA replacement.",
+  "tuned_not_reported": "full_config.json discloses authorized numerical coordinates/gains/MC1000/randomization1000/seed/caps/thresholds. Notoriginal figuredata.",
+  "solver_evidence": "Exact conditioning, same-SDP post-all-original-draw upper-bound recheck and numerical backend/precision controls preserve original mathematical problems. Post400m complete instantaneous and statistical cases passed all4 original gates. Current statuses/source hashes distinguish actual complete cases from incomplete all-figure banks; no failed/capped outcome is dropped.",
+  "compute_contract": {
+    "full_run_started": true,
+    "full_sized_single_sample_diagnostics_started": true,
+    "current_full_diagnostic_status": "Oldradius15stat18 internalfourgatepassbutpairdistancefalse andlargeoriginalcurveerror. Newradius10single-startstat18 completed1177.66s physical/primal/QTtrue, convergencefalse U6beta0TS cap20000. Independent identicalstage39910iteration gradient1e-6actualpass allows declaredcap100000 only. NEWall-scheme0..U ensembleU3beta20 completed99.0523s all12originalchains/all4gates/1000MC/sourceunchangedtrue; newfreshfull18ensemblebankstarted. InstantU6 fullcase4gatestrue144.20s; newinstantCDF1000bankrunning.",
+    "full_cpu_hours": null,
+    "reason": "Old5000-cap bank16pass/2caps retained; oldspectral18 internalalgorithmgatespassbutconfirmed15m-radius geometryimplementationerror violates originalallpair10..20m. Sevenoldinstantactualsamples/RNG/config/sourcecheckpoints preserved with explicit geometryfalse manifest. NEWisolatedradius10generator verifies allpairs, everyothermodel/algorithmterm unchanged. Distinctstat18/instant1000batchesfromfreshcheckpoints use actualcompletecaseverified sources; no mixed-version reuse or reference-ordinate fitting. Originalcurve/finalsource certification remainsfalse."
+  },
+  "dependencies": {
+    "python": "NumPy,SciPy,CVXPY,Clarabel forcurrent QT/SDP andinitialization; historicalSCS failuresretained",
+    "matlab": "externalCVX2.2.2+SDPT3 documented successiveapproximationlog/exp; R2025b may needfunctions/vec_ onpath"
+  },
+  "figure_coverage_contract": "figure_coverage.json: author3-1..3-10 originalEPS names/vertices/axes/curves. RandRIS andtrueAO20/AO100 endpointsare nowimplemented; independent originalfigureagreement notyetverified.",
+  "numerical_conditioning_identity": "Exact monotone lambda/gamma epigraph elimination, log((1+q)/c)+log(c)=log(1+q) for positive fixed incumbent c, and real/imag norm realification preserve the original problem including a=0; backend retries are numerical controls, not alternate algorithms.",
+  "statistical_correction_contract": "STATISTICAL_ERRATUM.md: exact vector-QT identity applied also to full-rank covariance QoS, preserving original average SINR and finite-Rician scenario. Printed invalid scalar SOC remains explicit failure. Exact normalized NHU projector expectations and shared-G fourth moments are independently validated. Source table statistical ground20dB/QoS-3dB used.",
+  "statistical_execution_entry": "Preferred Python run_statistical_validated.py --full [--checkpoint-dir PATH] --output PATH, statistical_validated_config.json; explicit--full-case may select--case-u/--case-beta. MATLAB run_strict_hotspot_statistical_validated(configPath,out,'full' or 'full-case'). Uniform0..U start policy forALLschemes, everyrequiredstartmust truly complete/pass; bestgoodstartdoesnotcertifyfailedensemble. Oldsingle-start20000cap/radius15/5000cap andprintedinvalidSOC remain explicitdiagnostics.",
+  "original_printed_statistical_algorithm_reproduction_pass": false,
+  "production_gate_pass": false,
+  "statistical_numerical_control_contract": "rgd_spectral_controls.py/strict_hotspot_rgd_spectral.m: original gradient/retraction/Armijo1e-4/grad1e-6, exact polynomial/log1p increments, alternatingpositiveBB1/BB2 scalarsteps. Historicalsingle-start20000cap failurepreserved; newuniformensembledeclares100000unreportedsafetycap afteridenticalstageactualstop39910. All0..Ufeasiblestarts executeoriginalfullQT/RGD/AO; ANYmissing/capped/badboundstart makesensemblefalse. NoQoS/model/thresholdrelaxation orreferencefitting. This doesnotcertifylaterprintedscalarcovariance/historicalmeans/globaloptimality.",
+  "source_model_scope_warning": "EarlyEq3-1 ESA H=Hbar o D implies diag(D_n^2)/(1+beta) covariance. LaterSection3.5/Eq3-42 muI equals it only underunreported equalfeedgain/statisticalnormalization. Generalphysicaldiagonal correctedbranch isNOTliteralprintedEq3-42recovery. LoSmeans/authorcoordinatesremainunrecovered; declaredHUdistancepassdoesnotverifyallsourceconstraints.",
+  "declared_HU_pair_distance_contract_pass": true,
+  "all_original_source_constraints_verified": false,
+  "original_single_HU_global_optimality_claim_verified": false,
+  "geometry_contract": "GEOMETRY_CONTRACT.md: declaredradius10 regularpolygon U2..6/U1center gives allpairs10..20m. Oldradius15 violates paper; no historicalauthorcoordinate recovery or curve fitting.",
+  "instantaneous_execution_entry": "Preferred Python run_instantaneous_geometry.py --full --sweep ID --checkpoint-dir PATH --output PATH or--full-case, immutableinstantaneous_geometry_config.json. MATLAB run_strict_hotspot_instantaneous_geometry(configPath,out,ID or 'full-case','instantaneous')."
 }

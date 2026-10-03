@@ -20,6 +20,10 @@ def run():
     flags=["mrt_converged","zf_converged","mrt_nominal_design_spacing_feasible","zf_nominal_design_spacing_feasible","mrt_nominal_design_box_feasible","zf_nominal_design_box_feasible"]
     # Zeros are synthetic status-test scaffolding, never written as curves.
     receipt={"input_fingerprint":fp,"implementation_fingerprint":implementation_fingerprint(),"checks":{k:True for k in flags},"metrics":{"schemes":{k:{"sample_sum_rates":[0.]*c["nlos_realizations_per_geometry"],"nonconverged_samples":0} for k in ["MA-MRT","MA-ZF","FPA-MRT","FPA-ZF","FPA-OPT"]}}}
+    # Pure synthetic metadata scaffolding, never numerical paper evidence.
+    cert={"global_objective_gap_upper_bound":0.,"global_objective_gap_tolerance":1e-10,"maximum_normalized_constraint_violation":0.,"normalized_constraint_tolerance":2e-12,"certified_without_conic_solver_status":True}
+    updates=[{"original_subproblem_unchanged":True,"certificate":cert}]
+    receipt["history"]={mode:{"coordinate_updates":copy.deepcopy(updates)} for mode in ["mrt","zf"]}
     assert complete(receipt,fp,{},c)
     assert not complete(receipt,fingerprint(b"changed config",b"job"),{},c)
     assert not complete(receipt,fingerprint(b"config",b"changed job"),{},c)
@@ -36,8 +40,8 @@ def run():
     assert not original_scope_available({"correlated":True})
     assert not complete(correlated,fp,{"correlated":True},c)
     assert complete(correlated,fp,{"correlated":False},c)
-    correlated["history"]={"mrt":{"objective":[0.,0.],"instantaneous_MC_mean":[0.,0.]},
-                           "zf":{"objective":[0.,0.],"instantaneous_MC_mean":[0.,0.]}}
+    correlated["history"]={"mrt":{"objective":[0.,0.],"instantaneous_MC_mean":[0.,0.],"coordinate_updates":copy.deepcopy(updates)},
+                           "zf":{"objective":[0.,0.],"instantaneous_MC_mean":[0.,0.],"coordinate_updates":copy.deepcopy(updates)}}
     for key in ["MRT_correlated_MC_history","MRT_Eq69_history","ZF_correlated_MC_history"]:
         correlated["metrics"]["correlated_extension"][key]=[0.,0.]
     for figure in [13,15]:
@@ -52,6 +56,8 @@ def run():
     bad_curve=copy.deepcopy(correlated);bad_curve["history"]["mrt"]["instantaneous_MC_mean"][0]=float("nan")
     assert not complete(bad_curve,fp,{"correlated":True,"figure":15},c)
     assert not complete(receipt,fp,{"figure":3},c)
+    missing_certificate=copy.deepcopy(receipt);missing_certificate["history"]["zf"]["coordinate_updates"][0].pop("certificate");assert not complete(missing_certificate,fp,{},c)
+    failed_certificate=copy.deepcopy(receipt);failed_certificate["history"]["mrt"]["coordinate_updates"][0]["certificate"]["global_objective_gap_upper_bound"]=1e-5;assert not complete(failed_certificate,fp,{},c)
     correlated["metrics"]["correlated_extension"]["MA-ZF_MC"]["sample_sum_rates"][0]=float("inf")
     assert not implemented_complete(correlated,fp,{"correlated":True},c)
     data={f"case-000-mc-{r:03d}.json":f"synthetic input identity {r}".encode() for r in range(100)}

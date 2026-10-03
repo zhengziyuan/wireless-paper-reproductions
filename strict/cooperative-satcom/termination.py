@@ -35,8 +35,7 @@ def stop_valid(stop):
     value=stop.get('final_residual');threshold=stop.get('threshold')
     return bool(stop.get('converged') is True and isinstance(value,(float,int,np.number)) and np.isfinite(value)
                 and isinstance(threshold,(float,int,np.number)) and np.isfinite(threshold) and threshold>0
-                and value<threshold and stop.get('stop_rule') in ('signed_relative_objective_increase','Riemannian_gradient_norm',
-                'progress_below_1e-12_and_gradient_below_10_times_tolerance'))
+                and value<threshold and stop.get('stop_rule') in ('signed_relative_objective_increase','Riemannian_gradient_norm'))
 
 
 def scheme_status(stops, records, settings):

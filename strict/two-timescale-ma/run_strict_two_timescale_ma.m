@@ -3,7 +3,7 @@ function result=run_strict_two_timescale_ma(outputPath,jobPath,configPath)
 % Component call uses full N=6,M=5; it is not a full Monte Carlo figure.
 base=fileparts(mfilename('fullpath'));if nargin<3 || isempty(configPath),configPath=fullfile(base,'full_config.json');end
 config=jsondecode(fileread(configPath));
-if exist('cvx_begin','file')~=2,error('External CVX is required for the original convex coordinate subproblems. No alternate solver is substituted.');end
+if ~strcmp(config.matlab_convex_solver,'certified_exact_2d')&&exist('cvx_begin','file')~=2,error('Selected optional original conic backend requires external CVX.');end
 if nargin<2 || isempty(jobPath),result=ma_component(config,base);else,result=ma_job(jsondecode(fileread(jobPath)),config);result.input_fingerprint=ma_fingerprint(configPath,jobPath);end
 result.implementation_fingerprint=strict_ma_implementation_fingerprint();
 if nargin>0 && ~isempty(outputPath)
@@ -78,21 +78,38 @@ s=struct('chi',chi,'f0',f0,'gradient',gradient,'curvature',curvature,'ratio',rat
 end
 
 function [trial,record]=ma_coordinate(t,c,antenna,mode)
-if strcmp(mode,'MRT'),[value,gradient,curvature]=ma_mrt(t,c,antenna);
+if strcmp(c.matlab_convex_solver,'certified_exact_2d')
+    if strcmp(mode,'MRT')
+        [value,gradient,curvature]=ma_mrt(t,c,antenna);[delta,certificate]=ma_exact_coordinate(t,c,antenna,mode,gradient(antenna,:)',curvature,[],[],[],value);
+    else
+        if ~strcmp(c.interpretations.zf_spacing,'P5n_with_equation_30_spacing'),error('Explicit original ZF spacing required');end
+        [value,~,~,eta]=ma_zf(t,c);s=ma_zf_surrogate(t,c,antenna);[delta,certificate]=ma_exact_coordinate(t,c,antenna,mode,[],[],s.ratio+1./eta,s.gradient,s.curvature,value);
+    end
+    trial=t;trial(antenna,:)=trial(antenna,:)+delta';if strcmp(mode,'MRT'),actual=ma_mrt(trial,c);else,actual=ma_zf(trial,c);end
+    lower=value+certificate.minorant_increment;
+    if actual<lower-c.verification_tolerance||actual<value-c.verification_tolerance,error('Exact2D source surrogate/update validation failed');end
+    record=struct('before',value,'after',actual,'surrogate',lower,'lower_bound_gap',actual-lower,'solver_status','certified_global_2d',...
+        'solver_iterations',[],'original_subproblem_unchanged',true,'certificate',certificate);return;
+end
+if strcmp(mode,'MRT'),[value,gradient,curvature]=ma_mrt(t,c,antenna);variableScale=sqrt(max(curvature,1));objectiveConstant=value;
 else
     if ~strcmp(c.interpretations.zf_spacing,'P5n_with_equation_30_spacing'),error('ZF spacing interpretation required.');end
-    [value,~,~,eta]=ma_zf(t,c);s=ma_zf_surrogate(t,c,antenna);
+    [value,~,~,eta]=ma_zf(t,c);s=ma_zf_surrogate(t,c,antenna);base=s.ratio+1./eta;
+    localCurvature=(sum(s.curvature./base)*eye(2)+s.gradient'*((1./base.^2).*s.gradient))/log(2);
+    variableScale=sqrt(max(max(eig(localCurvature)),1));objectiveConstant=sum(log2(eta.*base));
 end
 cvx_solver(c.matlab_convex_solver);
 cvx_begin quiet
     cvx_precision(c.matlab_cvx_precision)
-    variable x(2)
+    variable u(2)
+    expression x(2)
     expression delta(2)
-    delta=x-t(antenna,:)';
+    delta=u/variableScale;x=t(antenna,:)'+delta;
     if strcmp(mode,'MRT')
-        maximize(value+gradient(antenna,:)*delta-curvature/2*sum_square(delta))
+        maximize(gradient(antenna,:)*delta-curvature/2*sum_square(delta))
     else
-        maximize(sum(log(1+eta.*(s.chi+s.f0+s.gradient*delta-s.curvature/2*sum_square(delta))))/log(2))
+        % Exact tangency chi+f0=a/b and log identity; no new minorant.
+        maximize(sum(log(1+(s.gradient*delta-s.curvature/2*sum_square(delta))./base))/log(2))
     end
     subject to
         x>=c.region_lower(:);x<=c.region_upper(:);
@@ -102,13 +119,16 @@ cvx_begin quiet
 cvx_end
 if ~strcmp(cvx_status,'Solved'),error('Original convex subproblem status %s; no substitute update.',cvx_status);end
 trial=t;trial(antenna,:)=x';if strcmp(mode,'MRT'),actual=ma_mrt(trial,c);else,actual=ma_zf(trial,c);end
-if actual<cvx_optval-c.verification_tolerance || actual<value-c.verification_tolerance,error('Original surrogate/update validation failed.');end
-record=struct('before',value,'after',actual,'surrogate',cvx_optval,'lower_bound_gap',actual-cvx_optval);
+sourceSurrogate=cvx_optval+objectiveConstant;
+if actual<sourceSurrogate-c.verification_tolerance || actual<value-c.verification_tolerance,error('Original surrogate/update validation failed.');end
+record=struct('before',value,'after',actual,'surrogate',sourceSurrogate,'lower_bound_gap',actual-sourceSurrogate,...
+    'canonicalization','bijective_curvature_scaled_centered_displacement_and_constant_objective_removal','variable_scale',variableScale,...
+    'solver_status',cvx_status,'solver_iterations',[],'original_subproblem_unchanged',true);
 end
 
 function [t,hist]=ma_optimize(t,c,mode)
 if strcmp(mode,'MRT'),value=ma_mrt(t,c);else,value=ma_zf(t,c);end
-objective=value;positions=reshape(t,1,size(t,1),2);records=struct('before',{},'after',{},'surrogate',{},'lower_bound_gap',{},'sweep',{},'antenna',{});converged=false;
+objective=value;positions=reshape(t,1,size(t,1),2);records=struct([]);converged=false;
 for sweep=0:c.maximum_AO_iterations-1
     for antenna=1:size(t,1),[t,record]=ma_coordinate(t,c,antenna,mode);record.sweep=sweep;record.antenna=antenna-1;records(end+1)=record;end %#ok<AGROW>
     if strcmp(mode,'MRT'),value=ma_mrt(t,c);else,value=ma_zf(t,c);end

@@ -21,7 +21,10 @@ for a=0:mr-1, for b=0:mc-1, index=index+1; coords(index,:)=[a,b]*sqrt(area); end
 coords=coords-mean(coords,1); Gmean=repmat(gm,M,1); Gvar=repmat(gv,M,1); G=Gmean+sqrt(Gvar).*cn([M,N]);
 R=complex(zeros(U,M,N)); rm=complex(zeros(U,M)); rv=zeros(U,M); kg=10^(p.kappa_ground_db/10);
 for u=1:U
-    direction=huPos(u,:)-risPos; distance=norm(direction); amplitude=lam/(4*pi*distance)*sqrt(risGain*receive);
+    direction=huPos(u,:)-risPos; distance=norm(direction);
+    % Original numerical paragraph fixes equal 400m path loss for all HUs;
+    % retain their actual geometry only in the propagation phase.
+    amplitude=lam/(4*pi*p.ris_hu_distance_m)*sqrt(risGain*receive);
     phase=exp(-2i*pi*(distance+coords*direction.'/distance)/lam);
     rm(u,:)=amplitude*sqrt(kg/(1+kg))*phase.'; rv(u,:)=amplitude^2/(1+kg);
     r=rm(u,:).'+sqrt(rv(u,:)).'.*cn([M,1]); R(u,:,:)=r.*G;
@@ -31,7 +34,7 @@ means=struct('direct_mean',dm,'direct_variance',dv,'matrix_mean',Gmean,'matrix_v
     'ground_mean',rm,'ground_variance',rv,'nhu_mean',nm,'nhu_variance',nv);
 f=struct('direct',direct,'cascade',R,'nhu',nhu,'phi0',phi,'noise',1,'power',p.power_w, ...
     'nhu_target',10^(p.nhu_sinr_db/10)*ones(K,1),'mean_inputs',means, ...
-    'geometry',struct('hu_xy_m',huPos,'nhu_xy_m',nhuPos,'ris_xy_m',risPos));
+    'geometry',struct('hu_xy_m',huPos,'nhu_xy_m',nhuPos,'ris_xy_m',risPos,'common_ground_pathloss_distance_m',p.ris_hu_distance_m));
 end
 
 function [mu,variance]=sat_moments(pos,receiver,centers,H,lam,noise,diameter,gain,kappaDb)

@@ -19,7 +19,7 @@ if nargin>=3 && strcmp(sweepId,'base')
 elseif nargin>=3
     ids=cellfun(@(x)x.id,sweeps,'UniformOutput',false); sweeps=sweeps(strcmp(ids,sweepId)); assert(~isempty(sweeps),'Unknown sweep');
 end
-started=tic; records={};
+sourceHashes=strict_satcom_runtime_hashes(configPath);started=tic; records={};
 for sidx=1:numel(sweeps)
     sweep=sweeps{sidx};
     for value=sweep.values(:).'
@@ -59,7 +59,9 @@ result=struct('paper_id','cooperative-satcom','source_version',config.source_ver
     'elapsed_seconds',toc(started),'results',{records},'checks',checks, ...
     'overall_implemented_scope_success',~isempty(records)&&all(cellfun(@(x)x.valid_figure_point,records)), ...
     'all_configured_sweeps_requested',nargin<3,'figure_validation_policy','Failed/capped/numerically-unvalidated points are retained and invalidate their selected sweep.', ...
-    'full_reproduction_pass',false,'remaining',{{'Publisher-version conformance','Original unreported values and figure grids','Published-figure agreement'}});
+    'full_reproduction_pass',false,'remaining',{{'Publisher-version conformance','Original unreported values and figure grids','Published-figure agreement'}}, ...
+    'configuration',config,'executed_source_hashes',sourceHashes,'source_unchanged_during_run',isequal(sourceHashes,strict_satcom_runtime_hashes(configPath)));
+assert(result.source_unchanged_during_run,'Actual cooperative runtime sources changed; no mixed-source certification');
 folder=fileparts(outputPath); if ~isempty(folder) && ~exist(folder,'dir'), mkdir(folder); end
 fid=fopen(outputPath,'w'); assert(fid>=0); clean=onCleanup(@()fclose(fid)); fprintf(fid,'%s\n',jsonencode(result));
 end

@@ -13,6 +13,14 @@ elseif string(figureName)=="closed-form-test"
     result=closed_form_test();
 elseif string(figureName)=="stable-increment-test"
     result=stable_increment_test(base);
+elseif string(figureName)=="unit-circle-increment-test"
+    result=unit_circle_increment_test(base);
+elseif string(figureName)=="solver-erratum-test"
+    result=solver_erratum_test(base);
+elseif string(figureName)=="pslr-increment-test"
+    result=pslr_increment_test(base,settings);
+elseif string(figureName)=="self-excluded-sum-test"
+    result=self_excluded_sum_test(base);
 elseif startsWith(string(figureName),"plan:")
     requested=extractAfter(string(figureName),5);
     figures=jsondecode(fileread(fullfile(base,'figures.json')));
@@ -125,13 +133,28 @@ bar=ones(model.U,model.M);
 for u=1:model.U,bar(u,model.indices(u,:))=z.theta.';end
 v=bar.*z.phi.';q=model.c*v.';a=abs(q).^2;
 end
-function [gamma,gp,gt]=metric(model,z,objective,W)
-[bar,~,q,a]=fields(model,z);targets=model.targets;doGradient=nargin>=4;
+function bundle=forward_bundle(model,z)
+[bar,~,q,a]=fields(model,z);bundle=struct('bar',bar,'q',q,'a',a);
+end
+function result=self_excluded_sum(values,targets)
+% Same complete sum: never subtract a much larger wanted echo from the total.
+result=zeros(targets,size(values,2));
+for k=1:targets,others=[1:k-1,k+1:size(values,1)];result(k,:)=sum(values(others,:),1);end
+end
+function [gamma,gp,gt]=metric(model,z,objective,W,prepared)
+if nargin<5,prepared=forward_bundle(model,z);end
+bar=prepared.bar;q=prepared.q;a=prepared.a;targets=model.targets;doGradient=nargin>=4&&~isempty(W);
 if objective=="communications"
 gamma=model.config.reference_snr*a;
 elseif objective=="sinr"
-S=model.beta.*a.^2;D=sum(S,1)-S(1:targets,:)+model.config.noise_over_power;gamma=S(1:targets,:)./D;
-if doGradient,total=sum(W.*S(1:targets,:)./D.^2,1);coeff=-repmat(total,model.K,1);coeff(1:targets,:)=coeff(1:targets,:)+W./D+W.*S(1:targets,:)./D.^2;end
+S=model.beta.*a.^2;D=self_excluded_sum(S,targets)+model.config.noise_over_power;gamma=S(1:targets,:)./D;
+if doGradient
+weighted=W.*S(1:targets,:)./D.^2;coeff=zeros(size(S));
+for k=1:model.K
+if k<=targets,others=[1:k-1,k+1:targets];coeff(k,:)=W(k,:)./D(k,:)-sum(weighted(others,:),1);
+else,coeff(k,:)=-sum(weighted,1);end
+end
+end
 elseif objective=="pslr"
 S=model.beta.*a.^2;mu=model.config.pslr_mu;e=model.config.pslr_epsilon;gamma=zeros(targets,model.U);coeff=zeros(size(S));
 opponents=as_cells(model.config.pslr_opponents);
@@ -152,24 +175,101 @@ if convention=="maximize_negative_softmin",signvalue=-1;elseif convention=="lite
 f=signvalue*softmin;eg=struct('phi',signvalue*gp,'theta',signvalue*gt,'X',signvalue*weights.*gamma);detail=struct('softmin',softmin,'min_relaxed_snr',min(g));
 end
 function [f,eg,detail]=augmented(model,z,lambda,rho,objective)
-gamma=metric(model,z,objective);q=z.eta-sum(z.X.*gamma,2);chi=max(0,lambda+rho*q);f=-z.eta+sum(chi.^2)/(2*rho);
-[~,gp,gt]=metric(model,z,objective,-chi.*z.X);
+prepared=forward_bundle(model,z);gamma=metric(model,z,objective,[],prepared);q=z.eta-sum(z.X.*gamma,2);chi=max(0,lambda+rho*q);f=-z.eta+sum(chi.^2)/(2*rho);
+[~,gp,gt]=metric(model,z,objective,-chi.*z.X,prepared);
 eg=struct('phi',gp,'theta',gt,'X',-chi.*gamma,'eta',-1+sum(chi));detail=struct('q',q,'gamma',gamma);
 end
-function value=sinr_alm_difference(model,base,candidate,lambda,rho)
-% Algebraically exact increments; retains cross terms and active-set crossings.
-[oldbar,~,q,a]=fields(model,base);[newbar,~,~,~]=fields(model,candidate);
+function [echo,decho,newecho]=echo_increment(model,base,candidate,unitcircle,prepared)
+if nargin<5,prepared=forward_bundle(model,base);end
+oldbar=prepared.bar;q=prepared.q;a=prepared.a;
+if unitcircle
+dphi=unit_circle_delta(base.phi,candidate.phi);dtheta=unit_circle_delta(base.theta,candidate.theta);dbar=zeros(size(oldbar));
+for u=1:model.U,dbar(u,model.indices(u,:))=dtheta.';end
+dv=oldbar.*dphi.'+dbar.*(base.phi+dphi).';
+else
+newbar=ones(size(oldbar));for u=1:model.U,newbar(u,model.indices(u,:))=candidate.theta.';end
 dv=oldbar.*(candidate.phi-base.phi).'+(newbar-oldbar).*candidate.phi.';
+end
 dq=model.c*dv.';da=2*real(conj(q).*dq)+abs(dq).^2;
 echo=model.beta.*a.^2;decho=model.beta.*(2*a.*da+da.^2);
-D=sum(echo,1)-echo(1:model.targets,:)+model.config.noise_over_power;
-dD=sum(decho,1)-decho(1:model.targets,:);gamma=echo(1:model.targets,:)./D;
-dgamma=(decho(1:model.targets,:)-gamma.*dD)./(D+dD);
+newecho=model.beta.*abs(q+dq).^4;
+end
+function value=sinr_alm_difference(model,base,candidate,lambda,rho,unitcircle,prepared)
+% Algebraically exact increments; retains cross terms and active-set crossings.
+if nargin<6,unitcircle=false;end
+if nargin<7,prepared=forward_bundle(model,base);end
+[echo,decho,newecho]=echo_increment(model,base,candidate,unitcircle,prepared);
+D=self_excluded_sum(echo,model.targets)+model.config.noise_over_power;
+dD=self_excluded_sum(decho,model.targets);gamma=echo(1:model.targets,:)./D;
+newD=self_excluded_sum(newecho,model.targets)+model.config.noise_over_power;
+dgamma=(decho(1:model.targets,:)-gamma.*dD)./newD;
 deta=candidate.eta-base.eta;qres=base.eta-sum(base.X.*gamma,2);
 dqres=deta-sum((candidate.X-base.X).*gamma+candidate.X.*dgamma,2);
 raw=lambda+rho*qres;draw=rho*dqres;chi=max(0,raw);dchi=zeros(size(raw));
 on=raw>0;stay=on&(raw+draw>0);dchi(stay)=draw(stay);dchi(on&~stay)=-raw(on&~stay);dchi(~on)=max(0,raw(~on)+draw(~on));
 value=-deta+sum(dchi.*(2*chi+dchi))/(2*rho);
+end
+function result=self_excluded_sum_test(base)
+% Frozen coefficients/our computed states define identical Decimal oracle inputs.
+data=jsondecode(fileread(fullfile(base,'tests','self_excluded_sum_fixture.json')));
+model=build_model(data.model);model.c=data.steering_coefficients.real+1i*data.steering_coefficients.imag;
+assert(model.M==400&&model.N==256&&model.U==25&&model.K==9);
+z=decode_test_state(data.base_state);lambda=data.multipliers(:);rho=data.penalty;checks={};
+for test=1:2
+if test==1,values=[1e30;1;2];wanted=3;label='positive_interference';else,values=[1e30;-1;2];wanted=1;label='signed_exact_increment';end
+direct=self_excluded_sum(values,1);legacy=sum(values)-values(1);
+checks{end+1}=struct('check',label,'explicit_excluded_sum',direct,'exact_sum',wanted,'legacy_total_minus_wanted',legacy,'pass_check',direct==wanted&&legacy~=wanted);
+end
+cases=as_cells(data.cases);
+for j=1:numel(cases)
+entry=cases{j};trial=decode_test_state(entry.candidate_state);value=sinr_alm_difference(model,z,trial,lambda,rho,true);
+expected=entry.reference_difference;error=abs(value-expected);signpass=expected>0&&value>0;
+checks{end+1}=struct('check',sprintf('full_near_stationary_alpha_%g',entry.alpha),'reference_difference_decimal60',entry.reference_decimal60,...
+'stable_difference',value,'absolute_error',error,'test_only_roundoff_bound',entry.test_only_roundoff_bound,...
+'legacy_python_subtraction_difference',entry.legacy_subtraction_difference,'canonical_armijo_false_acceptance_prevented',signpass,...
+'pass_check',error<=entry.test_only_roundoff_bound&&signpass);
+end
+passed=all(cellfun(@(entry)entry.pass_check,checks));
+result=struct('scope',data.scope,'fixture_kind',data.fixture_kind,'number_of_checks',numel(checks),'all_checks_pass',passed,'checks',{checks},...
+'independent_reference','Shared Decimal60 full explicit complex forward sums and normalized circle endpoints',...
+'line_search_acceptance_slack_added',false,'optimizer_tolerance_changed',false,'full_6000_start_figure_completed',false,'original_figure_reproduction_certified',false);
+assert(passed,'Self-excluded complete SINR sum/increment regression failed');
+end
+function value=pslr_alm_difference(model,base,candidate,lambda,rho,unitcircle,prepared)
+if nargin<6,unitcircle=false;end
+if nargin<7,prepared=forward_bundle(model,base);end
+[echo,decho,newecho]=echo_increment(model,base,candidate,unitcircle,prepared);
+mu=model.config.pslr_mu;e=model.config.pslr_epsilon;opponents=as_cells(model.config.pslr_opponents);gamma=zeros(model.targets,model.U);dgamma=gamma;
+for k=1:model.targets
+idx=opponents{k}(:)+1;ratios=echo(k,:)./(echo(idx,:)+e);mn=min(ratios,[],1);gamma(k,:)=mn-mu*log(sum(exp(-(ratios-mn)/mu),1));
+dratios=(decho(k,:)-ratios.*decho(idx,:))./(newecho(idx,:)+e);newratios=newecho(k,:)./(newecho(idx,:)+e);
+dgamma(k,:)=softmin_increment(ratios,dratios,newratios,mu);
+end
+deta=candidate.eta-base.eta;qres=base.eta-sum(base.X.*gamma,2);dqres=deta-sum((candidate.X-base.X).*gamma+candidate.X.*dgamma,2);
+raw=lambda+rho*qres;draw=rho*dqres;chi=max(0,raw);dchi=zeros(size(raw));on=raw>0;stay=on&(raw+draw>0);dchi(stay)=draw(stay);dchi(on&~stay)=-raw(on&~stay);dchi(~on)=max(0,raw(~on)+draw(~on));
+value=-deta+sum(dchi.*(2*chi+dchi))/(2*rho);
+end
+function answer=softmin_increment(old,change,new,mu)
+mn=min(old,[],1);ex=exp(-(old-mn)/mu);normalizer=sum(ex,1);probability=ex./normalizer;t=-change/mu;small=abs(t)<=.5;
+b=-(new-mn)/mu-log(normalizer);largeb=b;largeb(small)=-inf;ordinary=max(largeb,[],1)<500;
+masked=t;masked(~small)=0;increments=probability.*expm1(masked);largeexponent=b;largeexponent(small)=-inf;largechange=exp(largeexponent)-probability;increments(~small)=largechange(~small);
+total=sum(increments,1);ordinary=ordinary&isfinite(total)&total>-.5;answer=zeros(1,size(old,2));answer(ordinary)=-mu*log1p(total(ordinary));
+if any(~ordinary),trial=new(:,~ordinary);trialmin=min(trial,[],1);answer(~ordinary)=trialmin-mn(~ordinary)-mu*(log(sum(exp(-(trial-trialmin)/mu),1))-log(normalizer(~ordinary)));end
+end
+function stable=make_sensing_difference(model,lambda,rho,objective,unitcircle)
+% Explicit immutable-current-iterate bundle cache, no approximated fields.
+cachedphi=[];cachedtheta=[];prepared=[];stable=@difference;
+    function value=difference(base,candidate)
+        if isempty(prepared)||~isequal(cachedphi,base.phi)||~isequal(cachedtheta,base.theta)
+            cachedphi=base.phi;cachedtheta=base.theta;prepared=forward_bundle(model,base);
+        end
+        if objective=="sinr",value=sinr_alm_difference(model,base,candidate,lambda,rho,unitcircle,prepared);
+        else,value=pslr_alm_difference(model,base,candidate,lambda,rho,unitcircle,prepared);end
+    end
+end
+function delta=unit_circle_delta(base,candidate)
+assert(all(abs(abs(base)-1)<=32*eps(1))&&all(abs(abs(candidate)-1)<=32*eps(1)),'Unit-circle increment requires feasible phase endpoints');
+phase=angle(candidate.*conj(base));delta=base.*(-2*sin(phase/2).^2+1i*sin(phase));
 end
 function value=objective_increment(evaluate,base,candidate,f,opts)
 if isfield(opts,'stable_difference'),value=opts.stable_difference(base,candidate);else,value=evaluate(candidate)-f;end
@@ -192,6 +292,61 @@ checks{j}=struct('case',entry.case,'reference_difference',entry.reference_differ
 end
 result=struct('scope','full_dimension_400_256_25_9_increment_identity_test_not_paper_figure','precision_reference','independent_Decimal_60_frozen_same_complex_coefficients','number_of_checks',numel(checks),'all_checks_pass',passed,'line_search_acceptance_slack_added',false,'optimizer_stop_threshold_changed',false,'original_figure_reproduction_certified',false,'checks',{checks});
 assert(passed,'Exact SINR increment does not match independent high-precision truth');
+end
+function result=unit_circle_increment_test(base)
+fixture=jsondecode(fileread(fullfile(base,'tests','stable_increment_fixture.json')));inputs=jsondecode(fileread(fullfile(base,'tests','unit_circle_increment_cases.json')));
+model=build_model(fixture.model);coeff=fixture.steering_coefficients;model.c=coeff.real+1i*coeff.imag;cases=as_cells(inputs.cases);checks=cell(numel(cases),1);passed=true;
+for j=1:numel(cases)
+entry=cases{j};z=decode_test_state(entry.base_state);trial=decode_test_state(entry.candidate_state);value=sinr_alm_difference(model,z,trial,entry.multipliers(:),entry.penalty,true);
+errorvalue=abs(value-entry.reference_difference);ok=isfinite(value)&&errorvalue<=entry.test_only_rounding_error_bound;passed=passed&&ok;
+checks{j}=struct('case',entry.case,'reference_difference',entry.reference_difference,'unit_circle_stable_difference',value,'absolute_error',errorvalue,'test_only_rounding_error_bound',entry.test_only_rounding_error_bound,'increment_identity_pass',ok);
+end
+result=struct('scope','normalized_exact_circle_M400_N256_U25_K9_increment_identity_NOT_original_figure','precision_reference','independent_Decimal60_normalized_circle_endpoints_frozen_exact_same_c','checks',{checks},'all_checks_pass',passed,'optimizer_stop_threshold_changed',false,'line_search_slack_added',false,'original_figure_reproduction_certified',false);
+assert(passed,'Unit-circle SINR difference does not match independent normalized Decimal60 truth');
+end
+function result=solver_erratum_test(base)
+fixture=jsondecode(fileread(fullfile(base,'tests','stable_increment_fixture.json')));model=build_model(fixture.model);coeff=fixture.steering_coefficients;model.c=coeff.real+1i*coeff.imag;z=decode_test_state(fixture.state);lambda=fixture.multipliers(:);rho=fixture.penalty;
+transporterrors=zeros(1,2);names={'phi','theta'};
+for n=1:2,b=names{n};v=cos((1:numel(z.(b)))')+1i*sin((1:numel(z.(b)))');one=struct();one.(b)=v;g=project(z,one);old=sin((1:numel(z.(b)))')+1i*cos((1:numel(z.(b)))');one.(b)=old;transport=project(z,one);transporterrors(n)=abs(ip(g.(b),old)-ip(g.(b),transport.(b)));end
+assert(all(transporterrors<2e-12),'Orthogonal transport numerator identity failed');
+X=[1 0 0 0;.2 .3 0 .5;.1 .2 .3 .4];v=reshape(cos(1:12),4,3).';cone=tangent_cone_project(struct('X',X),struct('X',v));assert(max(abs(sum(cone.X,2)))<1e-12&&all(cone.X(X==0)>=0));
+H=[4 1;1 3];x=[1;2];g0=H*x;d0=-g0;alpha=ip(g0,g0)/ip(d0,H*d0);g1=H*(x+alpha*d0);productbeta=ip(g1,g1-g0)/ip(g0,g0);blockbeta=g1.*(g1-g0)./(g0.^2);productd=-g1+productbeta*d0;blockd=-g1+blockbeta.*d0;
+assert(abs(ip(d0,H*productd))<1e-12&&abs(ip(d0,H*blockd))>1&&ip(g1,blockd)>0,'Coupled-product conjugacy counterexample failed');
+opts=struct('line_search_policy','corrected_product_pr_wolfe','non_descent_policy','documented_non_descent_restart','initial_step',1,'armijo_constant',1e-4,'max_backtracks',60,'max_iterations',4000,'gradient_tolerance',1.2589254117941667e-6,'wolfe_curvature',.1,'minimum_descent_cosine',.01);
+opts.stable_difference=@(first,last)sinr_alm_difference(model,first,last,lambda,rho,true);evaluate=@(point)augmented(model,point,lambda,rho,"sinr");
+[out,h,stop]=rcg(z,evaluate,opts);assert(strcmp(stop.reason,'gradient_tolerance')&&stop.projected_kkt_norm<opts.gradient_tolerance,'Full saved-checkpoint corrected RCG did not meet original tolerance');
+for j=1:numel(h),if isfield(h{j},'corrected_line_search'),receipt=h{j}.corrected_line_search;assert(receipt.armijo_verified&&receipt.curvature_verified);end,end
+[again,stationaryh,stationarystop]=rcg(out,evaluate,opts);assert(numel(stationaryh)==1&&strcmp(stationarystop.reason,'gradient_tolerance')&&isequal(again,out),'Stationary initial point must not be forced to move');
+result=struct('scope','corrected_paper_M400_N256_U25_K9_solver_checks_NOT_6000_start_figure','orthogonal_transport_identity_errors',transporterrors,'cone_feasibility_verified',true,'coupled_quadratic_product_conjugacy_verified',true,'checkpoint_stop',stop,'checkpoint_iterations',numel(h),'all_accepted_lines_armijo_and_curvature_verified',true,'stationary_initial_no_move_verified',true,'raw_product_PR_not_clipped',true,'printed_raw_block_branch_preserved',true,'all_checks_pass',true,'original_figure_reproduction_certified',false);
+end
+function result=pslr_increment_test(base,settings)
+inputs=jsondecode(fileread(fullfile(base,'tests','pslr_lse_increment_cases.json')));cases=as_cells(inputs.cases);checks={};passed=true;
+for j=1:numel(cases)
+entry=cases{j};value=softmin_increment(entry.old(:),entry.change(:),entry.new(:),entry.mu);errorvalue=abs(value-entry.reference_difference);ok=isfinite(value)&&errorvalue<=entry.test_only_bound;passed=passed&&ok;
+checks{end+1}=struct('name',entry.name,'opponents',3600,'value',value,'reference_decimal60',entry.decimal60,'absolute_error',errorvalue,'test_only_bound',entry.test_only_bound,'passed',ok);
+end
+point=struct('ms1',[20 20],'ms2',[16 16],'Kphi',3,'Ktheta',3);model=make_model(point,settings,true);[z,~]=initialize(model,settings,1);z.eta=2;lambda=linspace(.1,.9,model.targets)';rho=1.2;
+assert(model.M==400&&model.N==256&&model.K==3609&&model.U==25,'PSLR tests must keep the full grid');names={'phi','theta','X','eta'};
+for mu=[10 .001220703125]
+model.config.pslr_mu=mu;[f,eg]=augmented(model,z,lambda,rho,"pslr");g=project(z,eg);
+for n=1:numel(names)
+block=names{n};d=struct();d.(block)=-g.(block)/max(1,sqrt(ip(g.(block),g.(block))));
+for alpha=[1e-2 1e-6 1e-8]
+trial=retract(z,d,alpha);stable=pslr_alm_difference(model,z,trial,lambda,rho,true);naive=augmented(model,trial,lambda,rho,"pslr")-f;predicted=alpha*ip(g.(block),d.(block));bound=1e-9*max([1 abs(f) abs(naive)]);
+if predicted==0,linearerror=0;else,linearerror=abs(stable/predicted-1);end
+ok=abs(stable-naive)<=bound&&(alpha>1e-6||linearerror<2e-6);passed=passed&&ok;
+checks{end+1}=struct('name',sprintf('full_ALM_%s_mu_%g_alpha_%g',block,mu,alpha),'stable_difference',stable,'direct_difference',naive,'absolute_identity_error',abs(stable-naive),'test_only_bound',bound,'linear_gradient_relative_error',linearerror,'passed',ok);
+end
+step=1e-6;plus=retract(z,d,step);minus=retract(z,d,-step);fd=(pslr_alm_difference(model,z,plus,lambda,rho,true)-pslr_alm_difference(model,z,minus,lambda,rho,true))/(2*step);analytic=ip(g.(block),d.(block));errorvalue=abs(fd-analytic)/max([1 abs(fd) abs(analytic)]);ok=errorvalue<2e-6;passed=passed&&ok;
+checks{end+1}=struct('name',sprintf('full_central_derivative_%s_mu_%g',block,mu),'finite_difference',fd,'analytic',analytic,'relative_error',errorvalue,'test_only_bound',2e-6,'passed',ok);
+end
+prepared=forward_bundle(model,z);trial=retract(z,struct('eta',.1),1);cached=pslr_alm_difference(model,z,trial,lambda,rho,true,prepared);uncached=pslr_alm_difference(model,z,trial,lambda,rho,true);ok=isequal(cached,uncached);passed=passed&&ok;
+checks{end+1}=struct('name',sprintf('full_explicit_forward_reuse_mu_%g',mu),'cached_uncached_identical',ok,'passed',ok);
+end
+regularized=softmin_increment(.5,0,.5,1e-9)+.5;ok=regularized==.5&&regularized~=1;passed=passed&&ok;
+checks{end+1}=struct('name','fixed_epsilon_softmin_limit_not_original_PSLR','Sk',1,'Sj',1,'epsilon',1,'finite_epsilon_mu_limit',regularized,'original_unregularized_ratio',1,'passed',ok);
+result=struct('scope','Full_M400_N256_K3609_U25_PSLR_increment_gradient_identities_NOT_solver_convergence_6000_starts_paper_figure','checks',{checks},'all_checks_pass',passed,'line_search_acceptance_slack_added',false,'optimizer_stop_threshold_changed',false,'original_figure_reproduction_certified',false);
+assert(passed,'Full PSLR increment or gradient identity failed');
 end
 function value=ip(a,b),value=real(sum(conj(a(:)).*b(:)));end
 function g=project(z,eg)
@@ -257,6 +412,7 @@ info.coupling_scale=coupling;info.coupling_backtracks=ls-1;info.accepted_displac
 if accepted,candidate=trialcandidate;else,reason='coupling_line_search_exhausted';end
 end
 function [z,history,stop]=rcg(z,evaluate,opts)
+if string(opts.line_search_policy)=="corrected_product_pr_wolfe",[z,history,stop]=corrected_product_rcg(z,evaluate,opts);return;end
 assert(any(string(opts.line_search_policy)==["common_product_armijo","original_per_block_backtracking"]));oldg=[];oldd=[];history={};reason='iteration_cap';
 for iteration=0:opts.max_iterations-1
 [f,eg]=evaluate(z);g=project(z,eg);ng=gnorm(g);guard=isfield(opts,'non_descent_policy')&&string(opts.non_descent_policy)=="documented_non_descent_restart";kkt=projected_kkt_norm(z,g);history{end+1}=struct('iteration',iteration,'objective',f,'gradient_norm',ng,'projected_kkt_norm',kkt);
@@ -290,6 +446,86 @@ end
 [f,eg]=evaluate(z);rg=project(z,eg);if isfield(opts,'non_descent_policy')&&string(opts.non_descent_policy)=="documented_non_descent_restart",measure='projected_simplex_KKT';else,measure='printed_rowmean_gradient';end
 stop=struct('reason',reason,'objective',f,'gradient_norm',gnorm(rg),'projected_kkt_norm',projected_kkt_norm(z,rg),'stationarity_measure',measure);
 end
+function out=tangent_cone_project(z,value)
+% Closed-simplex tangent cone; interior reduces to the printed row mean.
+out=project(z,value);if ~isfield(value,'X'),return;end
+direction=value.X;support=z.X>0;chosen=support;stabilized=false;
+for attempt=1:size(z.X,2)+1
+average=sum(direction.*chosen,2)./sum(chosen,2);updated=support|(direction>average);
+if isequal(updated,chosen),stabilized=true;break;end,chosen=updated;
+end
+assert(stabilized,'Simplex tangent-cone threshold did not stabilize');
+centered=direction-average;out.X=max(centered,0);out.X(support)=centered(support);
+end
+function value=curve_derivative(z,d,alpha,candidate,eg)
+value=0;names=fieldnames(d);
+for n=1:numel(names),b=names{n};
+if strcmp(b,'phi')||strcmp(b,'theta')
+velocity=(d.(b)-candidate.(b).*real(conj(candidate.(b)).*d.(b)))./abs(z.(b)+alpha*d.(b));
+elseif strcmp(b,'X')
+active=candidate.X>0;average=sum(d.X.*active,2)./sum(active,2);velocity=(d.X-average).*active;
+else,velocity=d.(b);end
+value=value+ip(eg.(b),velocity);
+end
+end
+function [candidate,alpha,receipt]=product_line_search(z,g,d,evaluate,f,opts,initial)
+names=fieldnames(d);slope0=0;for n=1:numel(names),b=names{n};slope0=slope0+ip(g.(b),d.(b));end
+candidate=z;alpha=0;if ~isfinite(slope0)||slope0>=0,receipt=struct('reason','non_descent_curve','evaluations',0);return;end
+c1=opts.armijo_constant;c2=.1;if isfield(opts,'wolfe_curvature'),c2=opts.wolfe_curvature;end
+assert(0<c1&&c1<c2&&c2<1);alpha=initial;lo=0;hi=[];loslope=slope0;hislope=[];
+upper=.5;if isfield(opts,'interpolation_safeguard_upper'),upper=opts.interpolation_safeguard_upper;end
+assert(.1<upper&&upper<1,'Interpolation upper safeguard must lie between .1 and 1');
+for ls=1:opts.max_backtracks
+trial=retract(z,d,alpha);predicted=alpha*slope0;change=objective_increment(evaluate,z,trial,f,opts);[~,eg]=evaluate(trial);slope=curve_derivative(z,d,alpha,trial,eg);
+armijo=isfinite(change)&&change<=c1*predicted;curvature=isfinite(slope)&&abs(slope)<=c2*abs(slope0);
+if armijo&&curvature
+candidate=trial;receipt=struct('reason','','evaluations',ls,'objective_increment',change,'armijo_bound',c1*predicted,'initial_curve_slope',slope0,'accepted_curve_slope',slope,'curvature_ratio',abs(slope/slope0),'armijo_verified',true,'curvature_verified',true,'interpolation_safeguard_upper',upper);return;
+end
+if ~armijo||~isfinite(slope)||slope>=0,hi=alpha;hislope=slope;else,lo=alpha;loslope=slope;end
+if isempty(hi),alpha=alpha*2;
+else
+if isfinite(hislope)&&hislope~=loslope,secant=lo-loslope*(hi-lo)/(hislope-loslope);else,secant=(hi+lo)/2;end
+alpha=min(lo+upper*(hi-lo),max(lo+.1*(hi-lo),secant));
+end
+end
+receipt=struct('reason','corrected_curve_search_exhausted','evaluations',opts.max_backtracks,'interpolation_safeguard_upper',upper);
+end
+function [z,history,stop]=corrected_product_rcg(z,evaluate,opts)
+% Distinct corrected-paper branch. One RAW product PR, never PR+ clipping.
+oldg=[];oldd=[];oldface=[];history={};reason='iteration_cap';
+for iteration=0:opts.max_iterations-1
+[f,eg]=evaluate(z);g=project(z,eg);kkt=projected_kkt_norm(z,g);history{end+1}=struct('iteration',iteration,'objective',f,'gradient_norm',gnorm(g),'projected_kkt_norm',kkt);
+if kkt<opts.gradient_tolerance,reason='gradient_tolerance';break;end
+names=fieldnames(g);negative=struct();for n=1:numel(names),b=names{n};negative.(b)=-eg.(b);end
+pg=tangent_cone_project(z,negative);for n=1:numel(names),b=names{n};pg.(b)=-pg.(b);end
+face=z.X>0;beta=0;restart={};rawd=struct();
+if ~isempty(oldg)&&isequal(face,oldface)
+transportedgradient=project(z,oldg);transporteddirection=project(z,oldd);numerator=0;denominator=0;
+for n=1:numel(names),b=names{n};numerator=numerator+ip(pg.(b),pg.(b)-transportedgradient.(b));denominator=denominator+ip(oldg.(b),oldg.(b));end
+if denominator>0,beta=numerator/denominator;end
+for n=1:numel(names),b=names{n};rawd.(b)=-pg.(b)+beta*transporteddirection.(b);end
+else
+for n=1:numel(names),b=names{n};rawd.(b)=-pg.(b);end
+if ~isempty(oldg),restart{end+1}='simplex_active_face_changed';end
+end
+rawslope=0;for n=1:numel(names),b=names{n};rawslope=rawslope+ip(g.(b),rawd.(b));end
+d=tangent_cone_project(z,rawd);slope=0;for n=1:numel(names),b=names{n};slope=slope+ip(g.(b),d.(b));end
+cosinemin=.01;if isfield(opts,'minimum_descent_cosine'),cosinemin=opts.minimum_descent_cosine;end
+if ~isfinite(slope)||slope>=-cosinemin*gnorm(pg)*gnorm(d)
+for n=1:numel(names),b=names{n};d.(b)=-pg.(b);end,restart{end+1}='not_gradient_related';
+end
+[candidate,alpha,receipt]=product_line_search(z,g,d,evaluate,f,opts,opts.initial_step);
+if ~isempty(receipt.reason)
+for n=1:numel(names),b=names{n};d.(b)=-pg.(b);end,restart{end+1}='curve_search_exhausted';
+[candidate,alpha,receipt]=product_line_search(z,g,d,evaluate,f,opts,opts.initial_step);
+end
+betas=struct();for n=1:numel(names),betas.(names{n})=beta;end
+history{end}.raw_pr_beta=betas;history{end}.raw_product_pr_beta=beta;history{end}.raw_pr_slope=rawslope;history{end}.non_descent_restart=~isempty(restart);history{end}.corrected_restart_reasons=restart;history{end}.tangent_cone_gradient_norm=gnorm(pg);history{end}.corrected_step_size=alpha;history{end}.corrected_line_search=receipt;
+if ~isempty(receipt.reason),reason=receipt.reason;break;end
+oldg=pg;oldd=d;oldface=face;z=candidate;
+end
+[f,eg]=evaluate(z);g=project(z,eg);stop=struct('reason',reason,'objective',f,'gradient_norm',gnorm(g),'projected_kkt_norm',projected_kkt_norm(z,g),'stationarity_measure','projected_simplex_KKT','solver_branch','corrected_paper_product_raw_PR_with_curvature_line_search');
+end
 function [z,history,metrics]=comm_solve(model,z,opts)
 mu=opts.initial_mu;history={};
 while mu>=opts.terminal_mu
@@ -303,7 +539,12 @@ function [z,history,metrics]=sense_solve(model,z,opts,objective)
 rho=opts.rho_initial;lambda=repmat(opts.lambda_initial,model.targets,1);epsilon=opts.epsilon_initial;factor=(opts.epsilon_min/epsilon)^(1/opts.outer_iterations);oldiota=[];history={};
 for outer=1:opts.outer_iterations
 oldz=z;inneropts=opts.rcg;inneropts.gradient_tolerance=epsilon;
-if objective=="sinr"&&isfield(inneropts,'objective_difference')&&string(inneropts.objective_difference)=="exact_sinr_increment",inneropts.stable_difference=@(base,candidate)sinr_alm_difference(model,base,candidate,lambda,rho);end
+if isfield(inneropts,'objective_difference')
+difference=string(inneropts.objective_difference);modes=["exact_sinr_increment","exact_unit_circle_sinr_increment","exact_sensing_increment","exact_unit_circle_sensing_increment"];
+if any(difference==modes)&&(objective=="sinr"||any(difference==["exact_sensing_increment","exact_unit_circle_sensing_increment"]))
+unitcircle=startsWith(difference,"exact_unit_circle");inneropts.stable_difference=make_sensing_difference(model,lambda,rho,objective,unitcircle);
+end
+end
 [z,h,stop]=rcg(z,@(x)augmented(model,x,lambda,rho,objective),inneropts);[~,~,detail]=augmented(model,z,lambda,rho,objective);q=detail.q;
 iota=max(q,-lambda/rho);newlambda=min(opts.lambda_max,max(opts.lambda_min,lambda+rho*q));
 if outer==1||max(iota)<=opts.iota_progress_ratio*max(oldiota),newrho=rho;else,newrho=rho*opts.rho_factor;end
@@ -432,7 +673,7 @@ cfg.pslr_mu=settings.pslr_mu_initial;cfg.pslr_epsilon=settings.pslr_epsilon;
 end
 model=build_model(cfg);
 end
-function status=solver_diagnostics(h,settings,objective)
+function status=solver_diagnostics(h,settings,objective,model,z,metrics)
 comm=string(settings.kind)=="communications";groups={h};
 if ~comm&&objective=="pslr",groups={};for j=1:numel(h),groups{end+1}=as_cells(h{j}.outer);end,end
 entries={};for j=1:numel(groups),entries=[entries,as_cells(groups{j})];end
@@ -443,15 +684,29 @@ x=entries{j};if guard,norms(j)=x.stop.projected_kkt_norm;else,norms(j)=x.stop.gr
 if comm,tolerances(j)=settings.rcg_gradient_tolerance;else,tolerances(j)=x.epsilon_used;end
 stationary(j)=isfinite(norms(j))&&norms(j)<=tolerances(j);reasons{j}=x.stop.reason;
 end
-if comm,outermet=true;continuation=numel(h)>0&&h{end}.mu*.5<settings.terminal_mu;
+if comm,earlymet=true;budgetcomplete=true;outermet=true;continuation=numel(h)>0&&h{end}.mu*.5<settings.terminal_mu;
 else
-decisions=false(1,numel(groups));
+decisions=false(1,numel(groups));budgetdecisions=decisions;
 for j=1:numel(groups),group=groups{j};last=group{end};stepstop=last.step<=settings.minimum_step;epsstop=last.epsilon_next<=settings.epsilon_min;
-if string(settings.outer_stopping_logic)=="algorithm_OR",decisions(j)=stepstop||epsstop;else,decisions(j)=stepstop&&epsstop;end,end
-outermet=all(decisions);continuation=true;
+if string(settings.outer_stopping_logic)=="algorithm_OR",decisions(j)=stepstop||epsstop;else,decisions(j)=stepstop&&epsstop;end
+budgetdecisions(j)=numel(group)>=settings.outer_iterations;end
+earlymet=all(decisions);budgetcomplete=all(budgetdecisions);outermet=all(decisions|budgetdecisions);continuation=true;
+if objective=="pslr",continuation=~isempty(h)&&h{end}.mu*settings.pslr_mu_factor<settings.pslr_mu_terminal;end
 end
-failure=sum(contains(string(reasons),"line_search")|contains(string(reasons),"non_descent")|contains(string(reasons),"zero_projected"));
-status=struct('final_inner_stationary',stationary(end),'all_inner_tolerances_satisfied',all(stationary),'final_inner_residual',norms(end),'final_inner_tolerance',tolerances(end),'outer_stopping_applicable',~comm,'outer_stopping_met',outermet,'continuation_complete',continuation,'inner_iteration_cap_exits',sum(string(reasons)=="iteration_cap"),'inner_failure_exits',failure,'convergence_verified',all(stationary)&&outermet&&continuation&&failure==0,'final_inner_exit_reason',reasons{end});
+certificate=[];originalkkt=comm;
+if ~comm&&nargin>=6,certificate=constrained_kkt_certificate(model,z,metrics.multipliers(:),objective,tolerances(end),settings.feasibility_tolerance);originalkkt=certificate.original_problem_kkt_verified;end
+failure=sum(~ismember(string(reasons),["gradient_tolerance","iteration_cap"]));
+status=struct('final_inner_stationary',stationary(end),'all_inner_tolerances_satisfied',all(stationary),'final_inner_residual',norms(end),'final_inner_tolerance',tolerances(end),'outer_stopping_applicable',~comm,'outer_stopping_met',outermet,'outer_early_stopping_met',earlymet,'prescribed_outer_budget_execution_complete',budgetcomplete,'outer_termination_valid',outermet,'original_problem_kkt_certificate',certificate,'original_problem_kkt_verified',originalkkt,'continuation_complete',continuation,'inner_iteration_cap_exits',sum(string(reasons)=="iteration_cap"),'inner_failure_exits',failure,'convergence_verified',all(stationary)&&outermet&&continuation&&failure==0&&originalkkt,'final_inner_exit_reason',reasons{end});
+end
+function certificate=constrained_kkt_certificate(model,z,lambda,objective,stationaritytol,feasibilitytol)
+% ORIGINAL constrained relaxed Lagrangian, final lambda rather than ALM chi.
+prepared=forward_bundle(model,z);gamma=metric(model,z,objective,[],prepared);q=z.eta-sum(z.X.*gamma,2);[~,gp,gt]=metric(model,z,objective,-lambda.*z.X,prepared);
+eg=struct('phi',gp,'theta',gt,'X',-lambda.*gamma,'eta',-1+sum(lambda));stationarity=projected_kkt_norm(z,project(z,eg));
+primal=max([0;q]);dual=max([0;-lambda]);complementarity=max(abs(lambda.*q));
+phaseerror=max([0;abs(abs(z.phi)-1);abs(abs(z.theta)-1)]);simplexerror=max([abs(sum(z.X,2)-1);0;-z.X(:)]);
+feasiblestorage=max(phaseerror,simplexerror)<=32*eps(1);verified=stationarity<stationaritytol&&primal<=feasibilitytol&&dual<=feasibilitytol&&complementarity<=feasibilitytol&&feasiblestorage;
+if objective=="sinr",scope='original_P2.1_SINR_relaxed_constrained_projected_KKT_not_global_optimality';else,scope='original_P3.1_finite_mu_epsilon_regularized_PSLR_relaxed_projected_KKT_not_unsmoothed_or_global_optimality';end
+certificate=struct('scope',scope,'stationarity_norm',stationarity,'stationarity_tolerance',stationaritytol,'maximum_positive_primal_residual',primal,'maximum_negative_dual_residual',dual,'maximum_absolute_complementarity',complementarity,'feasibility_tolerance',feasibilitytol,'maximum_phase_modulus_error',phaseerror,'maximum_simplex_storage_error',simplexerror,'original_problem_kkt_verified',verified);
 end
 function result=diagnostic_start(fig,settings,start)
 assert(settings.number_of_starts==6000&&settings.rcg_max_iterations==4000&&(string(settings.kind)=="communications"||settings.outer_iterations==30),'Full-size diagnostics retain strict per-start budgets');
@@ -467,7 +722,7 @@ mu=settings.pslr_mu_initial;h={};
 while mu>=settings.pslr_mu_terminal,model.config.pslr_mu=mu;[z,outer,metrics]=sense_solve(model,z,opts,objective);h{end+1}=struct('mu',mu,'outer',{outer});mu=mu*settings.pslr_mu_factor;end
 else,[z,h,metrics]=sense_solve(model,z,opts,objective);
 end
-result=struct('paper_id','mis-sensing','scope','single_original_full_start_diagnostic_not_full_figure','figure',fig.id,'start',start,'original_number_of_starts',settings.number_of_starts,'configuration',point,'settings',settings,'metrics',metrics,'solver_status',solver_diagnostics(h,settings,objective),'history',{h},'state',serialize(z),'implementation_digest',implementation_digest());
+result=struct('paper_id','mis-sensing','scope','single_original_full_start_diagnostic_not_full_figure','figure',fig.id,'start',start,'original_number_of_starts',settings.number_of_starts,'configuration',point,'settings',settings,'metrics',metrics,'solver_status',solver_diagnostics(h,settings,objective,model,z,metrics),'history',{h},'state',serialize(z),'implementation_digest',implementation_digest());
 end
 function result=reference_fingerprint(base,settings,settingsPath)
 % Full original dimensions and per-start RALM budgets, not the 6000-start bank.
@@ -484,7 +739,7 @@ z=struct('phi',conj(ris.c(1,:)).','theta',zeros(0,1),'X',ones(1,1),'eta',setting
 for bits=1:2
 step=2*pi/2^bits;state=z;state.phi=exp(1i*step*floor(angle(z.phi)/step+.5));q=metric(ris,state,"sinr");quantized.(names{bits})=q(1,1);
 end
-status=solver_diagnostics(h,settings,"sinr");feasible=feasible&&metrics.maximum_constraint<=settings.feasibility_tolerance;converged=converged&&status.convergence_verified;
+status=solver_diagnostics(h,settings,"sinr",ris,z,metrics);feasible=feasible&&metrics.maximum_constraint<=settings.feasibility_tolerance;converged=converged&&status.convergence_verified;
 targets{target}=struct('target_index',target-1,'target_azimuth_deg',model.config.azimuth_deg(target),'target_elevation_deg',model.config.elevation_deg(target),'metrics',metrics,'solver_status',status,'history',{h},'state',serialize(z),'quantized_sinr',quantized,'elapsed_seconds',toc(started));
 end
 minimum=[Inf Inf Inf];for k=1:4,t=targets{k};minimum=min(minimum,[t.metrics.min_binary_metric,t.quantized_sinr.one_bit,t.quantized_sinr.two_bit]);end
@@ -539,7 +794,7 @@ else
 end
 feasible=metrics.maximum_constraint<=settings.feasibility_tolerance;score=metrics.eta;binarymetric=metrics.min_binary_metric;
 end
-diagnostic=solver_diagnostics(h,settings,objective);
+diagnostic=solver_diagnostics(h,settings,objective,model,z,metrics);
 if string(settings.kind)=="communications",binaryfeasible=true;else,binaryfeasible=metrics.eta-metrics.min_binary_metric<=settings.feasibility_tolerance;end
 if feasible&&diagnostic.convergence_verified,status='converged_feasible';elseif feasible,status='feasible_not_convergence_verified';else,status='infeasible';end
 summaries{end+1}=struct('start',start,'feasible',feasible,'binary_eta_feasible',binaryfeasible,'score',score,'solver_status',diagnostic,'exit_status',status,'min_binary_metric',binarymetric);
@@ -608,7 +863,7 @@ if nargin<4,objective="sinr";end
 az=-180:180;el=0:90;cfg=model.config;cfg.azimuth_deg=repelem(az,numel(el));cfg.elevation_deg=repmat(el,1,numel(az));cfg.echo_beta_squared=1;cfg.number_of_targets=numel(az)*numel(el);grid=build_model(cfg);
 z=struct('phi',state.phi.real(:)+1i*state.phi.imag(:),'theta',state.theta.real(:)+1i*state.theta.imag(:));[~,~,~,powers]=fields(grid,z);[~,~,~,original]=fields(model,z);all_echo=model.beta.*original.^2;echo=all_echo(1:model.targets,:);maps=cell(model.targets,1);
 if objective=="pslr",smooth=metric(model,z,"pslr");opponents=as_cells(model.config.pslr_opponents);end
-for k=1:model.targets,u=selected(k)+1;raw=reshape(powers(:,u),numel(el),numel(az));denominator=sum(echo(:,u))-echo(k,u)+model.config.noise_over_power;
+for k=1:model.targets,u=selected(k)+1;raw=reshape(powers(:,u),numel(el),numel(az));others=[1:k-1,k+1:model.targets];denominator=sum(echo(others,u))+model.config.noise_over_power;
 maps{k}=struct('target',k-1,'pattern',u-1,'normalized_gain',raw/max(raw(:)),'sinr',model.beta(k)*raw.^2/denominator,'target_azimuth_deg',model.config.azimuth_deg(k),'target_elevation_deg',model.config.elevation_deg(k),'target_metric_name','SINR','target_metric',echo(k,u)/denominator);
 if objective=="pslr",peak=max(all_echo(opponents{k}+1,u));exact=[];if peak>0,exact=all_echo(k,u)/peak;end,maps{k}.target_metric_name='PSLR';maps{k}.target_metric=exact;maps{k}.smoothed_target_metric=smooth(k,u);maps{k}.sidelobe_echo_peak=peak;end
 end

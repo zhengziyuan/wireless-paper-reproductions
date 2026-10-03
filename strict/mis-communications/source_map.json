@@ -9,6 +9,11 @@
   "authoritative_revision": "author-supplied final R2 TeX; private manuscript excluded",
   "source_sha256": "6E27FB9FD2BA0DECC9D7BCFC54BCB73612553F91F6DF923AB502E7D561058CB0",
   "publisher_pdf_comparison": "pending; DOI browser/search did not expose final text",
+  "source_corrections": [
+    {"id":"COMM-GEOMETRY-FIG7", "locator":"Eq3 and Numerical Results Fig7 / 21simul.eps", "correction":"Original2x1 literal Eq3 has even azimuth fields, contradicting asymmetric original paths. Select1x2 in Eq3 coordinates with same M2,N1,U2,K4; retain original shape metadata. Alternative editorial attribution is a row/column axis swap; not uniquely established.", "proof":"COMM_ERRATA.md; ../audit_communication_geometry.py; exact unfitted analytic path agreement below8e-8"},
+    {"id":"COMM-INITIAL-STOP", "classification":"implementation_bug", "correction":"Accept initially stationary continuation subproblem as permitted by source while condition; global threshold unchanged."},
+    {"id":"COMM-LSE-CANCELLATION", "classification":"floating_point_implementation", "correction":"Exact LSE/field increments for the same Armijo objective, validated with independent75-digit Decimal tests."}
+  ],
   "equations": [
     {
       "locator": "MIS Architecture Design; Equivalent Phase Shift Vectors",

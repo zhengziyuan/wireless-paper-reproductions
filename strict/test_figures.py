@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from figure_reference import catalog, eps_paths, extract
 from figure_validation import compare
-from render_figure import render
+from render_figure import render,render_sensing_convergence
 from reproduce import PAPERS, plan
 
 
@@ -85,6 +85,19 @@ class FigureTests(unittest.TestCase):
                 self.assertIsInstance(value["runnable"], bool)
                 total += 1
         self.assertEqual(total, 85)
+
+    def test_convergence_cannot_reuse_a_partial_start_bank(self):
+        result={'points':[{'result':{'number_of_starts':6000,'mean_outer_counts':[5999]*30}}]}
+        with tempfile.TemporaryDirectory() as tmp:
+            with self.assertRaisesRegex(ValueError,'all6000'):
+                render_sensing_convergence(result,Path(tmp),5)
+
+    def test_only_complete_original_fig3_can_supply_convergence(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            folder=Path(tmp);path=folder/'component.json'
+            path.write_text(json.dumps({'paper_id':'mis-sensing','figure':'fig2','scope':'full_size_full_budget_independent_reimplementation'}))
+            with self.assertRaisesRegex(ValueError,'exact original Fig3'):
+                render(path,folder/'out',figure=5)
 
 
 if __name__ == "__main__":

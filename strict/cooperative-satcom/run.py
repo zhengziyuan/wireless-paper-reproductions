@@ -11,6 +11,7 @@ from core import (rician_effective_moments, statistical_mr_coefficients,
 from models import channel_moments,mr_components,mr_phase_value_gradient,ap_phase_value_gradient,sample_effective
 from scenario import make_scenario
 from algorithms import run_all_schemes,mr_initial
+from receipts import source_hashes,unchanged,save,contract as execution_contract,load as load_checkpoint
 
 
 def numerical_json(value):
@@ -62,8 +63,9 @@ def chain_test(config):
             'full_reproduction_pass':False}
 
 
-def full_run(config,sweep_id=None):
+def full_run(config,sweep_id=None,checkpoint_dir=None):
     results=[]; started=time.perf_counter()
+    hashes=source_hashes()
     available=copy.deepcopy(config['sweeps']); comparison=config['multi_vs_single']
     if comparison['enabled']:
         for kappa in comparison['kappa_leo_db']:
@@ -85,12 +87,18 @@ def full_run(config,sweep_id=None):
                 scene['reported'].update(J=1,N=comparison['single_N'],power_w=comparison['single_power_w'])
                 scene['tuned_not_reported']['satellite_latitudes_deg']=[sweep['offset_deg']]
                 scene['tuned_not_reported']['upa_shape']=comparison['single_upa_shape']
+            contract=execution_contract(scene,hashes)
+            checkpoint=None if checkpoint_dir is None else Path(checkpoint_dir)/(sweep['id']+'-'+contract['sha256'][:16]+'.json')
+            cached=None if checkpoint is None else load_checkpoint(checkpoint,contract)
+            if cached is not None:
+                results.append(cached);print(json.dumps({'cooperative_case_resumed':sweep['id'],'value':value,'same_source_and_configuration':True}),flush=True);continue
             data,pl,il=make_scenario(scene)
             try:
                 schemes=run_all_schemes(data,scene['tuned_not_reported'],pl,il)
             except (RuntimeError,ValueError,SolverError) as error:
-                results.append({'sweep':sweep['id'],'parameter':sweep['parameter'],'value':value,'status':'failed','error':str(error),
+                results.append({'sweep':sweep['id'],'parameter':sweep['parameter'],'value':value,'status':'failed','error':str(error),'failure_receipt':getattr(error,'receipt',None),
                                 'constraint_pass':False,'convergence_pass':False,'solver_primal_pass':False,'qt_bound_pass':False,'valid_figure_point':False})
+                if checkpoint is not None:save(checkpoint,{'contract':contract,'result':results[-1]})
                 continue
             constraint_errors=[]
             for entry in schemes.values():
@@ -112,6 +120,8 @@ def full_run(config,sweep_id=None):
             result['valid_figure_point']=bool(result['constraint_pass'] and result['convergence_pass'] and result['solver_primal_pass'] and result['qt_bound_pass'])
             result['status']='converged_and_validated' if result['valid_figure_point'] else 'executed_but_capped_or_numerically_unvalidated'
             results.append(result); print(json.dumps({'progress':sweep['id'],'value':value,'elapsed_seconds':time.perf_counter()-started}),flush=True)
+            if not unchanged(hashes):raise RuntimeError('Executed sources changed during sweep; no mixed-source bank certificate')
+            if checkpoint is not None:save(checkpoint,{'contract':contract,'result':result})
     return {'paper_id':'cooperative-satcom','source_version':config['source_version'],'final_publisher_conformance':config['final_publisher_conformance'],
             'scope':'author_model_all_eight_algorithm_chains_full_dimensions_tuned_sweeps', 'elapsed_seconds':time.perf_counter()-started,
             'metrics':{'completed_scenario_points':len(results)},'history':{'sweep_ids':[x['sweep'] for x in results]},
@@ -119,7 +129,8 @@ def full_run(config,sweep_id=None):
             'overall_implemented_scope_success':bool(results and all(x['valid_figure_point'] for x in results)),
             'all_configured_sweeps_requested':sweep_id is None,
             'figure_validation_policy':'Any failed/capped/numerically-unvalidated point invalidates the selected sweep; no point is discarded.',
-            'full_reproduction_pass':False,'remaining':['Exact publisher-version conformance','Original unreported numerical values and figure grids','Agreement with published figure data']}
+            'full_reproduction_pass':False,'remaining':['Exact publisher-version conformance','Original unreported numerical values and figure grids','Agreement with published figure data'],
+            'executed_source_hashes':hashes,'source_unchanged_during_run':unchanged(hashes),'configuration':config}
 
 
 def component_test():
@@ -172,15 +183,16 @@ if __name__=='__main__':
     p.add_argument('--chain-test',action='store_true')
     p.add_argument('--full',action='store_true'); p.add_argument('--config',type=Path,default=Path(__file__).with_name('full_config.json'))
     p.add_argument('--sweep'); p.add_argument('--output',type=Path)
+    p.add_argument('--checkpoint-dir',type=Path,help='Persist every original-sized case; resume only identical actual source/configuration, retaining failed and capped points')
     args=p.parse_args(); contract=json.loads(Path(__file__).with_name('source_contract.json').read_text())
     config=json.loads(args.config.read_text())
     if args.component_test: result=component_test()
     elif args.model_test: result=model_test(config)
     elif args.chain_test: result=chain_test(config)
-    elif args.full: result=full_run(config,args.sweep)
+    elif args.full: result=full_run(config,args.sweep,args.checkpoint_dir)
     else: raise SystemExit('Choose --component-test, --model-test, --chain-test, or explicitly --full. Full runs retain source dimensions and configured 1000 MC draws; there is no automatic downsize.')
     if args.output:
         args.output.parent.mkdir(parents=True,exist_ok=True); args.output.write_text(json.dumps(result,indent=2,allow_nan=False,default=numerical_json)+'\n')
-    print(json.dumps(result,indent=2,allow_nan=False,default=numerical_json))
+    print(json.dumps({'output':str(args.output),'checks':result['checks'],'source_unchanged_during_run':result.get('source_unchanged_during_run'),'full_reproduction_pass':False},default=numerical_json),flush=True)
     if not all(v for k,v in result['checks'].items() if k.endswith('_pass')):
         raise SystemExit(1)

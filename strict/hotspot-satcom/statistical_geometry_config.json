@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "paper_id": "hotspot-satcom",
+  "source_version": "author_thesis",
+  "final_publisher_conformance": "unverified",
+  "reported": {
+    "N": 16,
+    "J": 16,
+    "U": 6,
+    "K": 10,
+    "M": 25,
+    "leo_height_m": 550000,
+    "frequency_hz": 12000000000,
+    "power_w": 100,
+    "bandwidth_hz": 200000000,
+    "temperature_k": 235.3,
+    "satellite_gain_dbi": 50,
+    "antenna_diameter_m": 0.5,
+    "nhu_sinr_db": 3,
+    "kappa_satellite_db": 20,
+    "kappa_ground_db": 0,
+    "ris_hu_distance_m": 400,
+    "hu_spacing_m_range": [
+      10,
+      20
+    ],
+    "subsurface_elements": [
+      200,
+      140
+    ],
+    "element_size_m": [
+      0.01,
+      0.01
+    ]
+  },
+  "tuned_not_reported": {
+    "seed": 3309957,
+    "monte_carlo_realizations": 1000,
+    "feed_center_spacing_m": 50000,
+    "ground_receive_gain_dbi": 0,
+    "initial_hu_sinr": 0.001,
+    "qt_max_iterations": 200,
+    "ao_max_iterations": 200,
+    "rgd_max_iterations": 20000,
+    "relative_tolerance": 0.0001,
+    "gradient_tolerance": 0.000001,
+    "phase_method": "author_Algorithm_3-2_RGD_minimize_negative_F",
+    "rgd_initial_step": "alternating positive BB1/BB2 spectral step seeds before unchanged original RGD Armijo",
+    "phase_sign_interpretation": "Eq3-36_argmax_F_equivalent_minimize_negative_F; literal_-grad_F_is_explicit_diagnostic_only",
+    "randomization_count": 1000,
+    "solver": "CLARABEL",
+    "solver_options": {
+      "tol_gap_abs": 1e-9,
+      "tol_gap_rel": 1e-9,
+      "tol_feas": 1e-9,
+      "max_iter": 500,
+      "max_threads": 1
+    },
+    "initialization_solver": "CLARABEL",
+    "qt_epigraph_conditioning": "exact monotone lambda/gamma epigraph elimination in weighted original QT; all users retained including a=0",
+    "rgd_budget_tuning_evidence": "Same full physical stage reached gradient0.000940041817 at500 iterations, above unchanged1e-6 threshold; safety cap raised to5000, not a method/threshold change.",
+    "backend_tuning_evidence": "SCS original epigraph complete-budget case failed active feasibility/monotonicity149.7s; weighted epigraph case failed SDP PSD190.1s. Clarabel weighted physical QT/SDP first step passed independent primal/bound/PSD checks; full-chain pass not implied.",
+    "physical_constraint_tolerance": 0.00001,
+    "solver_primal_relative_tolerance": 0.00001,
+    "qt_bound_tolerance": 0.00001,
+    "esa_pattern": "Gmax*(J1(nu)/(2nu)+36J3(nu)/nu^3)^2, limit at zero=Gmax",
+    "surface_radiation_gain": "4*pi*subsurface_area/lambda^2; unit broadside factors",
+    "geometry": "Declared source-compliant fixed10m-radius regular polygon U2..6 and U1atcenter, all HU pairs10..20m; local zenith footprint/4x4 feeds/RIS east400m/NHU feed centers unchanged. Historical author coordinates not recovered.",
+    "ground_pathloss_contract": "author numerical paragraph equal large-scale pathloss at common d_RU=400m for every HU/subpanel; actual offsets only affect phase",
+    "normalized_noise_contract": "author Eq3-2 D already divides satellite links by sqrt(kappa*T_R*BW); effective received noise variance is 1, not physical variance a second time",
+    "active_conditioning_controls": "exact lambda/gamma elimination, log((1+q)/c)+log(c) identity with positive incumbent c, exact complex quadratic realification; same convex QT constraints; Clarabel numerical retries then SCS backend fallback, accepted only on independent original primal/QT checks",
+    "rgd_safety_cap_provenance": "Original cap not reported. Actual full18 source-bound5000-cap run retained U4beta10/beta20 failures; raise only this numerical safety cap to20000, preserve gradient1e-6, original criterion, all dimensions, QoS and RGD direction/retraction/Armijo. A cap remains failure, never convergence.",
+    "hu_cluster_radius_m": 10
+  },
+  "sweeps": [
+    {
+      "id": "hu_count_kS10",
+      "parameter": "U",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "kappa_satellite_db": 10
+    },
+    {
+      "id": "hu_count_kS20",
+      "parameter": "U",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "kappa_satellite_db": 20
+    },
+    {
+      "id": "cdf_kS10",
+      "parameter": "kappa_satellite_db",
+      "values": [
+        10
+      ],
+      "kappa_satellite_db": 10
+    },
+    {
+      "id": "cdf_kS20",
+      "parameter": "kappa_satellite_db",
+      "values": [
+        20
+      ],
+      "kappa_satellite_db": 20
+    },
+    {
+      "id": "rician_u6",
+      "parameter": "kappa_satellite_db",
+      "values": [
+        0,
+        3,
+        6,
+        9,
+        12,
+        15,
+        18,
+        21,
+        24
+      ],
+      "U": 6
+    },
+    {
+      "id": "rician_u1",
+      "parameter": "kappa_satellite_db",
+      "values": [
+        0,
+        3,
+        6,
+        9,
+        12,
+        15,
+        18,
+        21
+      ],
+      "U": 1
+    },
+    {
+      "id": "element_count",
+      "parameter": "subsurface_elements",
+      "values": [
+        [
+          100,
+          70
+        ],
+        [
+          150,
+          105
+        ],
+        [
+          200,
+          140
+        ],
+        [
+          250,
+          175
+        ],
+        [
+          300,
+          210
+        ]
+      ],
+      "kappa_satellite_db": 12
+    }
+  ],
+  "sweep_provenance": "HU and Rician grids recovered from author-thesis EPS curve vertices, visually checked axes; MC/initialization/caps remain tuned. The old element-count candidate remains provisional and MUST NOT be reported as the original3-9 grid; see figure_coverage.json for recovered4000:4000:28000 and unresolved shape/spacing contract.",
+  "element_sweep_status": "blocked_exact_geometry_contract; configured legacy candidate NOT source3-9 reproduction",
+  "statistical_csi_status": "implemented_explicit_corrected_QT_erratum_full_finite_Rician; printed_SOC_branch_retains_explicit_failure",
+  "statistical_csi_issue": "Eq3-41b denominator j in K excludes HU while Eq3-46 construction sums full J; Eq3-46 writes norm squared <= linear and an imaginary coefficient on self NLoS norm that cannot subtract a PSD norm. No LoS or arbitrary SCA substitute is used.",
+  "statistical_algorithm_contract": "STATISTICAL_ERRATUM.md: original ratio-of-expected-powers SINR and full covariance QoS retained; exact vector QT minorizer repairs invalid printed scalar SOC; no instantaneous or LoS replacement",
+  "full_run_started": false,
+  "geometry_contract": "Fixed declared10m-radius cluster U2..6 and U1atcenter. Every pair obeys source10..20m. Same original finiteRician model, common400m pathloss, actual geometry in phases; historical coordinates not recovered and no reference ordinate used."
+}

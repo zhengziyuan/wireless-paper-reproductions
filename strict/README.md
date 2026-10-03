@@ -2,6 +2,11 @@
 
 **Status: implementation and source verification in progress. No package has passed full published-figure reproduction.**
 
+The [all-paper issue ledger](ALL_PAPERS_ISSUES.md) distinguishes proven source
+errors, reconstruction bugs, exact numerical repairs and missing execution
+evidence. New complete banks are running with immutable scientific manifests;
+they are not a completed release or original-figure certificates.
+
 See [FIGURE_REPRODUCTION.md](FIGURE_REPRODUCTION.md) for original figure/table
 inventories, the explicit full-budget entry point, actual dual-language beam
 plotting and independent reference-error checks. Complete-figure adapters and
@@ -25,9 +30,9 @@ The older `../papers/` implementations are superseded previews, not this strict 
 - MIS communications: original smoothing/iteration/initialization settings are incompletely stated, and the displayed maximization objective conflicts with descent-direction wording. Tuned settings and the necessary objective-sign correction must be explicit.
 - MIS sensing: the source supplies 6000 starts, 30 outer and up to 4000 inner iterations, but the pseudocode and numerical section disagree on the stopping-condition connective. The selected interpretation must be documented and compared; the full budget must not be silently reduced.
 - Rotatable-array ISAC: original QT/MM, RCG and PGA/BB rotation updates are implemented independently of the preview's alternative updates. Omitted numerical settings are recorded as tuned; final-version equivalence and complete figure convergence remain unverified.
-- Two-timescale MA: original MRT AO/SCA and ZF AO/MM are now implemented independently. The unique eigenvalue typo is documented; the correlated-ZF matrix products remain undefined at the paper's N≠M dimensions. No different covariance approximation is substituted.
+- Two-timescale MA: original MRT AO/SCA and ZF AO/MM retain their exact coordinate subproblems, now with a globally certified two-dimensional numerical backend. The printed correlated-ZF products/Wishart closed form is invalid at the paper's N≠M dimensions; a separately labelled exact Schur/Laplace evaluation corrects the original-model Jensen expectation without replacing covariance. Actual dual1000-draw checks passed with reported quadrature precision limits, not automatic original-figure agreement.
 - Cooperative SatCom: finite-Rician moments, statistical/two-timescale expressions, AP/MR QT and the author's RMO phase updates are implemented. Source-version and referenced antenna-pattern conformance are recorded separately; author-model results must not be called final-published-figure agreement.
-- Hotspot SatCom: instantaneous QT/SOCP, AO/SDR randomization and the author's original RGD/two-stage algorithms are implemented. The supplied maximization objective uniquely resolves its printed descent-sign conflict; this and the lifted/unlifted formula typos are documented. The author's statistical-CSI QoS-to-SOCP expression has a genuine mathematical inconsistency. It is not replaced by instantaneous CSI, LoS-only design or another optimizer.
+- Hotspot SatCom: instantaneous QT/SOCP, AO/SDR randomization and original RGD/two-stage algorithms are implemented. The invalid statistical scalar QoS SOC is explicitly corrected with exact vector-QT auxiliaries within the original QT framework. Full finite-Rician moments, covariance QoS and the ratio-of-expected-powers source objective remain; no instantaneous/LoS-only substitute is used. The common400m amplitude reconstruction bug is corrected, with source-matched reruns. Actual complete-size statistical designs and1000 independent evaluations passed their gates; the18-case bank remains incomplete until every case passes.
 
 See each package's source contract and `status.json`. Ordinary unpublished numerical controls may be tuned and validated, with the provenance recorded. An undefined mathematical model or incompatible source versions remain scientific blockers until resolved. They must never be silently replaced with a different model or a reduced configuration.
 
@@ -47,6 +52,6 @@ The author chose to proceed with the supplied LaTeX and accessible author manusc
 
 ## Dependencies
 
-Python convex blocks use CVXPY with a supported conic solver (`requirements.txt`). MATLAB convex blocks use an independently installed CVX toolbox; MIS and ISAC use base MATLAB. These dependencies and their licenses are not bundled with the public source; do not upload proprietary solver binaries, manuscripts, reviewer material or private datasets.
+Python convex blocks use CVXPY with a supported conic solver (`requirements.txt`). MATLAB satellite convex blocks and optional generic MA backends use an independently installed CVX toolbox; MIS, ISAC and certified exact2D MA use base MATLAB. These dependencies and their licenses are not bundled with the public source; do not upload proprietary solver binaries, manuscripts, reviewer material or private datasets.
 
 Actual local checks used Python 3.12, MATLAB R2025b and CVX 2.2.2 with free SDPT3. On this MATLAB release, CVX's official `functions/vec_` support directory needed to be added to the path. SDPT3 log/exp programs use CVX's documented successive-approximation backend and emit a warning; objective and physical residuals are checked rather than suppressing that warning or claiming bitwise solver equality.

@@ -42,11 +42,13 @@ def line_search_checks():
     z={"phi":np.ones(1,dtype=complex),"theta":np.empty(0,dtype=complex),"X":np.array([[1.,0.]])}
     def vertex(x):
         return -float(x["X"][0,0]),{"phi":np.zeros(1,dtype=complex),"theta":np.empty(0,dtype=complex),"X":np.array([[-1.,0.]])},{}
-    _,_,stop=rcg(z,vertex,OPTIONS)
+    _,history,stop=rcg(z,vertex,OPTIONS)
     vertex_pass=(stop["reason"]=="gradient_tolerance" and stop["gradient_norm"]>.5 and stop["projected_kkt_norm"]==0.)
+    initial_pass=len(history)==1 and history[0]['iteration']==0 and 'block_step_sizes' not in history[0]
     checks={"circle_raw_slope_counterexample":raw,"circle_initial_actual_slope_counterexample":actual,
             "raw_non_descent_restart_pass":bool(raw_pass),"projected_non_descent_restart_pass":bool(projected_pass),
-            "empty_stationary_blocks_pass":bool(empty_pass),"closed_simplex_KKT_pass":bool(vertex_pass)}
+            "empty_stationary_blocks_pass":bool(empty_pass),"closed_simplex_KKT_pass":bool(vertex_pass),
+            "already_stationary_initial_point_pass":bool(initial_pass)}
     assert all(checks[k] for k in checks if k.endswith("_pass")),checks
     return checks
 
@@ -73,4 +75,3 @@ def checkpoint_checks():
 
 if __name__=="__main__":
     print(json.dumps({"scope":"unit_regressions_not_paper_figure","checks":dict(line_search_checks(),**checkpoint_checks())},indent=2))
-

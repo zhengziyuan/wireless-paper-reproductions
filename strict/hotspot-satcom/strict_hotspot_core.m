@@ -38,18 +38,19 @@ assert(exist('cvx_begin','file')==2,'External CVX must be configured');
 if nargin<7, a=qt_parameters(hu,W0,noise); end
 [U,N]=size(hu); K=size(nhu,1); J=U+K;
 scale=sqrt(power/noise); hs=hu*scale; ns=nhu*scale; az=a*sqrt(noise);
+received0=hu*W0;desired0=diag(received0(:,1:U));den0=sum(abs(received0).^2,2)-abs(desired0).^2+noise;
+logScale=1+2*real(conj(a).*desired0)-abs(a).^2.*den0;assert(min(logScale)>0);
 cvx_begin quiet
     variable W(N,J) complex
-    variables lambda(U) auxSinr(U)
-    maximize(sum(log(1+auxSinr))/log(2))
-    subject to
-    sum_square_abs(W(:))<=1;
+    expression auxSinr(U)
     for u=1:U
         indexes=setdiff(1:J,u);
-        % Same QT problem with weighted epigraph lambda'=|a|^2*denominator.
-        sum_square_abs((conj(az(u))*(hs(u,:)*W(:,indexes))).')+abs(az(u))^2<=lambda(u);
-        auxSinr(u)<=2*real(conj(az(u))*(hs(u,:)*W(:,u)))-lambda(u);
+        auxSinr(u)=2*real(conj(az(u))*(hs(u,:)*W(:,u))) ...
+            -sum_square_abs((conj(az(u))*(hs(u,:)*W(:,indexes))).')-abs(az(u))^2;
     end
+    maximize(sum(log((1+auxSinr)./logScale))/log(2)+sum(log2(logScale)))
+    subject to
+    sum_square_abs(W(:))<=1;
     for k=1:K
         index=U+k; indexes=setdiff(1:J,index); desired=ns(k,:)*W(:,index);
         imag(desired)==0;
@@ -64,14 +65,14 @@ qt=2*real(conj(a).*desired)-abs(a).^2.*den;
 scaledReceived=hs*W;newdesired=diag(scaledReceived(:,1:U));
 newden=sum(abs(scaledReceived).^2,2)-abs(newdesired).^2+1;
 weightedDen=abs(az).^2.*newden;
-newqt=2*real(conj(az).*newdesired)-lambda;
-primal=max([0;sum(abs(W(:)).^2)-1;(weightedDen-lambda)./max(1,abs(weightedDen));(auxSinr-newqt)./max(1,abs(newqt))]);
+newqt=2*real(conj(az).*newdesired)-weightedDen;
+primal=max([0;sum(abs(W(:)).^2)-1]);
 for k=1:K
     index=U+k;indexes=setdiff(1:J,index);des=ns(k,:)*W(:,index);left=norm([ns(k,:)*W(:,indexes),1]);right=real(des)/sqrt(target(k));
     primal=max([primal,abs(imag(des))/max(1,abs(des)),(left-right)/max([1,left,abs(right)])]);
 end
 diagnostics=struct('solver','external_CVX','status',cvx_status,'reported_solver_tolerance',cvx_slvtol,'constraint_max_relative_violation',primal,'qt_bound_max_violation',max([0;auxSinr-after.sinr(1:U)]), ...
-    'epigraph_scaling','lambda_prime_equals_abs_a_squared_times_physical_interference');
+    'epigraph_scaling','exact_monotone_lambda_gamma_elimination_weighted_QT');
 info=struct('solver_status',cvx_status,'surrogate_rate',cvx_optval, ...
     'solver_diagnostics',diagnostics,'qt_bound_max_violation',diagnostics.qt_bound_max_violation, ...
     'qt_tightness_error',max(abs(qt-before.sinr(1:U))),'before',before,'after',after);
@@ -88,6 +89,8 @@ end
 function [phi,info]=phase_sdr_update(direct,R,phi0,W,a,noise,normals)
 assert(exist('cvx_begin','file')==2,'External CVX SDP/exponential support required');
 [U,M,N]=size(R); J=size(W,2);
+currentHu=effective(direct,R,phi0);currentReceived=currentHu*W;currentDesired=diag(currentReceived(:,1:U));
+currentDen=sum(abs(currentReceived).^2,2)-abs(currentDesired).^2+noise;logScale=1+2*real(conj(a).*currentDesired)-abs(a).^2.*currentDen;assert(min(logScale)>0);
 assert(size(normals,1)==M+1 && size(normals,2)>=1,'Shared CN draws shape mismatch');
 L=complex(zeros(M+1,M+1,U)); Q=complex(zeros(M+1,M+1,U,J)); desired=zeros(U,1);
 for u=1:U
@@ -106,7 +109,7 @@ cvx_begin sdp quiet
         for j=1:J
             if j~=u, q=q-abs(a(u))^2*real(trace(Q(:,:,u,j)*V)); end
         end
-        terms(u)=log(1+q)/log(2);
+        terms(u)=log((1+q)/logScale(u))/log(2)+log2(logScale(u));
     end
     maximize(sum(terms))
     subject to
@@ -179,7 +182,7 @@ for it=1:maxIterations
     if ~conjugate,direction=sign*g;end
     slope=real((sign*g)*direction');
     if slope<=0, direction=g; slope=norm2; end
-    alpha=1; accepted=false;
+    alpha=1/sqrt(norm2); accepted=false;
     for search=1:50
         candidate=phi+alpha*direction; candidate=candidate./abs(candidate);
         [trial,newg]=criterion_gradient(direct,R,nhu,candidate);
