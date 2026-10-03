@@ -1,12 +1,16 @@
 # Wireless paper reproductions
 
+> **Strict-reproduction status (2026-10-03): NOT COMPLETE.** The owner now requires the original theoretical algorithms and full published simulation scenarios, without substitute solvers or reduced dimensions/budgets. The previous `papers/` release does **not** meet that requirement and is retained only as a superseded preview. Its 6/6 parity result is not evidence of strict or complete paper reproduction.
+>
+> **严格复现状态：尚未完成。** 之前的 `papers/` 为已撤下推荐的简化预览，含替代子求解器及缩小场景，不满足现在的要求。严格版工作位于 [`strict/`](strict/README.md)。未公开的逐图参数、最终稿和原文歧义必须先补齐；不得自行编造设置或用替代算法补位。
+
 Independent MATLAB and Python implementations associated with selected technical papers by Ziyuan Zheng and collaborators.
 
 This is not the original private simulation source. Each paper has an explicit implementation scope, equation/source map, shared inputs, executable examples, and validation results. A successful reduced-size run is not evidence that every published figure, Monte Carlo campaign, or hardware experiment has been reproduced.
 
 中文说明：本仓库提供六篇技术论文的独立 MATLAB/Python 双实现，采用相同数值输入进行模型、梯度、约束和双语言结果检查。这是限定范围的核心实现，不是原作者私有代码，也不是原论文全部图表或硬件实验的完整复现。每篇目录均列明算法改动和未完成部分；Hotspot SatCom 的最终期刊全文核验仍待完成。
 
-## Packages and implementation boundaries
+## Superseded preview packages (not the strict implementations)
 
 | Package | Paper DOI | Implemented core |
 | --- | --- | --- |
