@@ -1,0 +1,47 @@
+{
+  "scope": "two_actual_Python_full_original_eight_chain_recorded_cases_AND_independent_savedstate_replay",
+  "actual_case_summaries": [
+    {
+      "case": "M30",
+      "actual_full_dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 30,
+        "K": 1
+      },
+      "all_independent_implemented_numerical_checks_pass": true,
+      "actual_phase_stages": 48,
+      "actual_QT_candidates": 32,
+      "actual_moment_draws": 1000,
+      "all_original_draws_and_final_rng_bitwise_replayed": true,
+      "largest_independent_scalar_coordinate_final_gradient_norm": 9.982738881722945e-07,
+      "largest_scalar_vector_gradient_component_difference": 5.366059263600582e-10,
+      "actual_recorded_source_banks_not_relabeled": true
+    },
+    {
+      "case": "N48",
+      "actual_full_dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25,
+        "K": 1
+      },
+      "all_independent_implemented_numerical_checks_pass": true,
+      "actual_phase_stages": 45,
+      "actual_QT_candidates": 24,
+      "actual_moment_draws": 1000,
+      "all_original_draws_and_final_rng_bitwise_replayed": true,
+      "largest_independent_scalar_coordinate_final_gradient_norm": 9.883436533239554e-07,
+      "largest_scalar_vector_gradient_component_difference": 1.0202783062850933e-11,
+      "actual_recorded_source_banks_not_relabeled": true
+    }
+  ],
+  "source_model_and_physical_inputs_declared_not_original_historical_recovery": true,
+  "native_recording_layer_fullcase_certified": false,
+  "new_full183_bank_certified": false,
+  "optimized_performance1000_realizations_claimed": false,
+  "MP80_final_gradients_or_all_QT_duals_claimed": false,
+  "full_reproduction_pass": false
+}

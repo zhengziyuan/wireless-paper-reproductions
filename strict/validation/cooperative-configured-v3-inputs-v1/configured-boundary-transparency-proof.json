@@ -1,0 +1,74 @@
+{
+  "scope": "new_configured_entry_numerical_route_identity_and_argument_forwarding_proof_using_two_actual_recorded_fullcase_audits_NOT_new_heavy_execution",
+  "configured_entry_source_sha256": "8cd1d3dbe63903080bb972390bd22e289cc22ebebdf194a0db656d305d2e5197",
+  "actual_v4_entry_source_sha256": "0ea983ee106ec844693b8d1b756fbb0a181af2cc90e0e9d8749ae936a1ad1a55",
+  "actual_v4_recording_source_sha256": "668b43cefbb45c5cfc274978b273f6b68b8a883348937c2b3b3d2aa904bf6b1f",
+  "frozen_control_install_statements_AST_identical_pass": true,
+  "exact_existing_full_run_call_AST_identical_pass": true,
+  "control_AST": [
+    "Assign(targets=[Attribute(value=Name(id='algorithms', ctx=Load()), attr='rmo_ascent', ctx=Store())], value=Name(id='rmo_ascent', ctx=Load()))",
+    "Assign(targets=[Attribute(value=Name(id='algorithms', ctx=Load()), attr='ap_increment', ctx=Store())], value=Name(id='ap_increment_v2', ctx=Load()))",
+    "Assign(targets=[Attribute(value=Name(id='algorithms', ctx=Load()), attr='mr_increment', ctx=Store())], value=Name(id='mr_increment_v2', ctx=Load()))",
+    "Expr(value=Call(func=Name(id='install', ctx=Load()), args=[], keywords=[]))"
+  ],
+  "full_run_call_AST": [
+    "Call(func=Attribute(value=Name(id='original', ctx=Load()), attr='full_run', ctx=Load()), args=[Name(id='configuration', ctx=Load()), Constant(value='base'), Constant(value=None)], keywords=[])"
+  ],
+  "actual_case_bindings": [
+    {
+      "case": "M30",
+      "actual_configuration_sha256": "a8409a7a74515b22d5f046cf9247ced180384f4b69dcb76b03ec09f6f2755f4a",
+      "actual_v4_fullresult_sha256": "cb7b13e02e97e6ad8bb7448a5c88aadc51b61f3d78e3ea4ad00774fa919de04e",
+      "actual_v4_independent_finalstate_audit_sha256": "e478d443f336e2538adcabe0f1d3a0082be5664c35e4647d8559efc8bd05150d",
+      "actual_full_dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 30,
+        "K": 1
+      },
+      "actual_v4_original_four_gates_pass": true,
+      "actual_v4_independent_fullstate_and1000_draw_checks_pass": true,
+      "configured_boundary_only_mock_argument_and_return_transparency_pass": true,
+      "new_configured_entry_direct_heavy_execution_performed": false
+    },
+    {
+      "case": "N48",
+      "actual_configuration_sha256": "72552c2b4500cb2371bcf19a259e591e225492ce1536e62285d94e080e354a6c",
+      "actual_v4_fullresult_sha256": "66ad377fbc76087b0760a8d28b9dcfa4afab7aabf10b7b63979ff3e36047e58f",
+      "actual_v4_independent_finalstate_audit_sha256": "abc329d11ff6bec4115de603009fc4e9fc5d0d69e04bcddf4642c929a2257582",
+      "actual_full_dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25,
+        "K": 1
+      },
+      "actual_v4_original_four_gates_pass": true,
+      "actual_v4_independent_fullstate_and1000_draw_checks_pass": true,
+      "configured_boundary_only_mock_argument_and_return_transparency_pass": true,
+      "new_configured_entry_direct_heavy_execution_performed": false
+    }
+  ],
+  "all_twelve_numerical_source_bytes_match_actual_runs": {
+    "core.py": "fdbe81b3d19e1c1aa62a015969017f24accdcdb6e7a709a65540576b49f0abf2",
+    "models.py": "ce974bbe26e97481425a603b4dc2cbfc7317b284bb192f482d49d71a28e5819e",
+    "increments.py": "384114958637e7d86dbce3894ef653cd6fd6edd2e40883b6b3774a65767fa7ea",
+    "increments_v2.py": "d17b31e55dcca33f6737a1811def539c205eed63ba100b6175491d518ba362a7",
+    "algorithms.py": "3106b9c673757b73ccb350846c78aeae64739837e960b9c80b3fc62a3feaa5b2",
+    "spectral_rmo.py": "2d8ebbcb44801a99d5dfdfd0c954530e1d4a8653b4dfa467885be3068e3edeb1",
+    "core_qt_factored_v3.py": "4ec1d1825581f826a82d9b46a401b388d835c8533241b65e67633b07939b3120",
+    "qt_numerical_guard_v3.py": "654f69da5d949211900366e4c5520237e0106d97c7c42b9a7030dd4e9ef17312",
+    "termination.py": "5b25d0365aa9a21dca886250858221379b02f766ecaaa35277a560eef2ad685d",
+    "scenario.py": "7dbc490944c2fd7aaa2fc862068508530faab10b8c2dcb63eccf5511c74a62ba",
+    "run.py": "d9d064f05c7ec8f08b2b9c5a389f5d6cd5117701c15c1609dac6913f3d236131",
+    "receipts.py": "8b74e8581df67419913d3a48d3326f9fd35aacd4b1480668f5692d880fd1490d"
+  },
+  "recording_layer_existing_return_and_actual1000_draw_transparency_independently_passed": true,
+  "configured_entry_help_and_full183_refusal_boundary_tests_pass": true,
+  "new_configured_entry_direct_heavy_execution_performed": false,
+  "native_recording_layer_actual_fullcase_certified": false,
+  "new_full183_certified": false,
+  "full_reproduction_pass": false,
+  "proof_generator_source_sha256": "33df62246aeee151100a6782a62b698ca98198ae9943f56d273655c070540560"
+}

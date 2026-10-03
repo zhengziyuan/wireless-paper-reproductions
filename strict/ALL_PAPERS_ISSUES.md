@@ -37,6 +37,28 @@ the observed failure.
 
 ### New verified checkpoint, with unfinished scopes kept separate
 
+- The [actual recorded cooperative Python pair](validation/cooperative-recording-v4-python-two-fullcases-v1/README.md)
+  supplies what v3 did not save: all eight final phi/W/p states, every fixed
+  phase context/returned gradient, every actual QT input/candidate and every
+  original1000 channel draw. Independent scalar-coordinate phase gradients,
+  matrix physical constraints, QT auxiliaries/surrogate/monotonicity and bitwise
+  RNG/sample replay pass for M30(48phases/32QT) and N48(45/24). The public NPZ
+  [portable replay actually passes](validation/cooperative-recording-v4-python-two-fullcases-v1/portable-replay-actual-v1/README.md)
+  without a solver run. These are double-precision gradient checks, not MP80
+  gradient certification, native-v4,183-point performance/figure execution,
+  or historical geometry recovery. The [versioned configured input boundary](validation/cooperative-configured-v3-inputs-v1/README.md)
+  forwards the exact same frozen-v3 numerical call; its AST/mock checks are
+  distinguished from the actual recorded fullcase executions, not fabricated
+  as another heavy run.
+- The [fixed labelled-MC D3 component](validation/two-timescale-ma-labelled-mc-components-v1/README.md)
+  retains all3024 feasible original N4/M3 labelled layouts and all1000 samples
+  for geometry0. Exact integer Schur/rational outward-log bounds and all301
+  actual prune certificates cover the complete D3 candidate set. The stronger
+  all3610 feasible-prefix audit compares each bound to every descendant exact
+  leaf upper interval. It is not the complete D3:18/100-geometry Figure19,
+  MRT, native parity, practical acceleration or recovery of the source's
+  ambiguous historical exhaustive-search objective. Displayed floating rates
+  are approximations; the actual rational interval endpoints are stored.
 - MIS sensing's arithmetic projection failure and all379 saved old starts are
   preserved in [failed-v4 evidence](validation/sensing-correctness-v4/failed-bank-v4-v1/README.md).
   The [distinct same-cone v5](validation/sensing-same-cone-v5-components-v1/README.md)
