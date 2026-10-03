@@ -1,0 +1,114 @@
+{
+  "scope": "read_only_compile_schema_negative_controls_and_initial_derivative_sign_components_not_fullbank_or_source_provenance",
+  "source_and_actual_native_payload_hashes_before_after": {
+    "auditor": "0386d7a02858ac2398040db2c68085e9c49d1ba26b8f8be25c74072601e81342",
+    "kernel": "4be831e354171e62239bbf79b19c52433430d601456be126f71417e3bc91798b",
+    "MIS_mat": "f25fe0cc3dcafc551916f8d300155f217dc10a8f188f185f84b9f189f9097894",
+    "SMS_mat": "79e0a9f5551f15780e526f7dcd4b5117ac248fd337060a27f22232036cecf52f"
+  },
+  "hashes_unchanged": true,
+  "schema_guards": {
+    "scalar_row_two_entries_rejected": true,
+    "scalar_nan_rejected": true,
+    "scalar_complex_rejected": true,
+    "struct_plain_dict_rejected": true,
+    "vector_arbitrary_2x2_rejected": true,
+    "vector_nonfinite_rejected": true,
+    "cell_column_two_entries_rejected": true,
+    "json_matrix_wrong_rows_rejected": true,
+    "json_matrix_wrong_columns_rejected": true,
+    "known_SMS_numeric_column_adapter_passes": true,
+    "named_phase_row_and_column_both_declared": true,
+    "MIS_Figure8_dimensions_rejected": true,
+    "MIS_negative_simplex_outside_domain": true,
+    "MIS_X_transpose_rejected": true,
+    "SMS_Figure8_dimensions_rejected": true,
+    "SMS_negative_simplex_outside_domain": true,
+    "SMS_X_transpose_rejected": true
+  },
+  "cases": [
+    {
+      "scheme": "MIS",
+      "initial_actual_native_C_used": true,
+      "derivative_sign_FD_components": [
+        {
+          "block": "phi",
+          "index": 0,
+          "analytic": -0.0005058751077279709,
+          "fd": -0.0005058751070818879,
+          "abs_error": 6.46083013478016e-13
+        },
+        {
+          "block": "phi",
+          "index": 1,
+          "analytic": 0.0005058751077279707,
+          "fd": 0.0005058751070818879,
+          "abs_error": 6.460827966375815e-13
+        },
+        {
+          "block": "theta",
+          "index": 0,
+          "analytic": 0.002342833000977188,
+          "fd": 0.0023428330012120746,
+          "abs_error": 2.348867628176876e-13
+        },
+        {
+          "block": "X_row_tangent",
+          "index": 0,
+          "analytic": -0.00705663594161863,
+          "fd": -0.0070566359415547,
+          "abs_error": 6.392976426017327e-14
+        },
+        {
+          "block": "X_row_tangent",
+          "index": 1,
+          "analytic": -0.0018832665346161094,
+          "fd": -0.0018832665350798636,
+          "abs_error": 4.637542520141702e-13
+        },
+        {
+          "block": "X_row_tangent",
+          "index": 2,
+          "analytic": 0.006799697576682857,
+          "fd": 0.006799697576526097,
+          "abs_error": 1.5676002163012015e-13
+        },
+        {
+          "block": "X_row_tangent",
+          "index": 3,
+          "analytic": 0.0061950005667536084,
+          "fd": 0.00619500056669997,
+          "abs_error": 5.3638517238940864e-14
+        }
+      ],
+      "all_component_FD_checks_pass": true
+    },
+    {
+      "scheme": "SMS",
+      "initial_actual_native_C_used": true,
+      "derivative_sign_FD_components": [
+        {
+          "block": "phi",
+          "index": 0,
+          "analytic": -0.001200805500635279,
+          "fd": -0.001200805500867208,
+          "abs_error": 2.3192905929114715e-13
+        },
+        {
+          "block": "phi",
+          "index": 1,
+          "analytic": 0.0012008055006352799,
+          "fd": 0.001200805500867208,
+          "abs_error": 2.3192819192940917e-13
+        }
+      ],
+      "all_component_FD_checks_pass": true
+    }
+  ],
+  "FD_h_predeclared": 1e-05,
+  "FD_component_abs_error_tolerance_predeclared": 1e-08,
+  "native_stopping_threshold_unchanged": 1e-06,
+  "physical_projected_stop_recomputed_here": false,
+  "full12000_or_historical_curve_certificate": false,
+  "reviewer_sha256": "de2b0383ebef52d39b65f56c86e01cbd71261a1b0182cb793164447977045bf5"
+}

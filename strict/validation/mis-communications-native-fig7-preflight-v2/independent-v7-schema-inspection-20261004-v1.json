@@ -1,0 +1,81 @@
+{
+  "scope": "read_only_native_v7_recorded_schema_not_physical_or_full12000_certificate",
+  "record_count": 2,
+  "cases": [
+    {
+      "scheme": "MIS",
+      "start": 1,
+      "actual_mu_count": 17,
+      "v7_schema_hash_and_history_consistency_pass": true,
+      "native_dimensions": {
+        "M": 2,
+        "N": 1,
+        "U": 2,
+        "K": 4,
+        "targets": 4
+      },
+      "steering_real_binary_sha256": "f972fb512dec0fd61bec248444a49953e3a757d13b55e976990fd38794be3222",
+      "steering_imag_binary_sha256": "9ed000ee837ca567ed8e4214ffc03add1afa9d8ce110698f321cfdb6cf79e0d2",
+      "stage_state_hashes": [
+        "e1b730ce94147460e8c8363a30bf4a40c509df2758150b45b695f57084a7e12e",
+        "e1b730ce94147460e8c8363a30bf4a40c509df2758150b45b695f57084a7e12e",
+        "e1b730ce94147460e8c8363a30bf4a40c509df2758150b45b695f57084a7e12e",
+        "e1b730ce94147460e8c8363a30bf4a40c509df2758150b45b695f57084a7e12e",
+        "e1b730ce94147460e8c8363a30bf4a40c509df2758150b45b695f57084a7e12e",
+        "e1b730ce94147460e8c8363a30bf4a40c509df2758150b45b695f57084a7e12e",
+        "e1b730ce94147460e8c8363a30bf4a40c509df2758150b45b695f57084a7e12e",
+        "e1b730ce94147460e8c8363a30bf4a40c509df2758150b45b695f57084a7e12e",
+        "ab3706bc7669310ff637569f0ce229b4eabc848fd91a63fa526fe7e87eb7c477",
+        "cfbac3142f3134e4fbb9b4e9cd69887b7c137e38e919d35383ef3c57ef70dbd0",
+        "b2e80cfd9097bcc22c5c86f80000318d8a8a9c9e06ad243c7a3c4754db91c891",
+        "4799cef2a0625f190964478cbed2325ae77afa04797fc24946b25a7b383d08f2",
+        "6c7a8955424a8737d05d75a5aea964d304e7702e6a12eee3242c0613bfb4195b",
+        "4bcfdd861ebe3bc0a6e3ef09efda753fab85ee975bfda289715ac13663baa273",
+        "7a082b057384c6fe82f28c3c6928015ad565e3ad5d6d5b5fe8ad905fa5dc7eb8",
+        "3776520fb6a69ef2d8a824c8fad55e73e99793c2653c24a85cb85b46e8678b2a",
+        "d12c6ba448a7fb7c560ecf918cd60c4b89d525bd239d282f37244c6365b7e929"
+      ],
+      "original_record_source_solver_pass": true,
+      "independent_physical_KKT_certification": false,
+      "full_payload_sha256": "f25fe0cc3dcafc551916f8d300155f217dc10a8f188f185f84b9f189f9097894"
+    },
+    {
+      "scheme": "SMS",
+      "start": 1,
+      "actual_mu_count": 17,
+      "v7_schema_hash_and_history_consistency_pass": true,
+      "native_dimensions": {
+        "M": 2,
+        "N": 0,
+        "U": 1,
+        "K": 4,
+        "targets": 4
+      },
+      "steering_real_binary_sha256": "f972fb512dec0fd61bec248444a49953e3a757d13b55e976990fd38794be3222",
+      "steering_imag_binary_sha256": "9ed000ee837ca567ed8e4214ffc03add1afa9d8ce110698f321cfdb6cf79e0d2",
+      "stage_state_hashes": [
+        "e8c5ca5a9bff0e169b0497f5132b23092c9cac624c58f03d32a1f1a1a72220d1",
+        "e8c5ca5a9bff0e169b0497f5132b23092c9cac624c58f03d32a1f1a1a72220d1",
+        "e8c5ca5a9bff0e169b0497f5132b23092c9cac624c58f03d32a1f1a1a72220d1",
+        "291b2ca793a224bfb5cd6d7edfd006f9bf6f3a202b4085846c9f4f6068fac0a7",
+        "291b2ca793a224bfb5cd6d7edfd006f9bf6f3a202b4085846c9f4f6068fac0a7",
+        "9635dc2f40a546519ce0abaefd5bcd4e07d719ce3c4a5491c8b493dbe3cb0351",
+        "83f54819520488041a16e93a8bf28521e723bc8fa70c557d90a877ed60935dd2",
+        "f61144a7bcc1185a95f39055b57d0b48d0bb9dceae77330af1efadb725469bd8",
+        "4401c0563ab4933083873f11e8d461a810543d9b3d379ff98862ca5b7da8d4fe",
+        "d5582006e9fefba70f2c74c6262a99c4699148c8d2d6b86ec8344f533ad4db39",
+        "d26da8e2cd194b6aecb697749b1f4fb306d7ad0ee8a51fe763b07d6e65594b98",
+        "ef3309dcff3d9b89685aeff3a3230458239abf8b9ffddf16c0ad24548c43d0a8",
+        "ef68abb837bddf56cc8cb075abd2a99c0c636284c8a2ffd3d98cf0c6c93faaf5",
+        "64ea82af06275eddf9f82852fc183edebd3c22281c1c5c03003bb3445647eb03",
+        "755cfef259f6d59f70bab44af67bae3f0e89eaea6d955baef6f180b9006215cf",
+        "b9a30766d493c62de93ff497bc6ed7ed7267b5830c237374c0dc93c310b20a89",
+        "dccbeada2a6c84a0a78587f74d84eb73926b13f2f0f3ad8adc37a328848d5765"
+      ],
+      "original_record_source_solver_pass": true,
+      "independent_physical_KKT_certification": false,
+      "full_payload_sha256": "79e0a9f5551f15780e526f7dcd4b5117ac248fd337060a27f22232036cecf52f"
+    }
+  ],
+  "script_sha256": "36299cb03b255b23d64290d90c1a7b4a8273420b36881dbb23c926cd53685f24"
+}

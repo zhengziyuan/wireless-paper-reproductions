@@ -1,0 +1,51 @@
+{
+  "initialization": {
+    "method": "portable_park_miller_uniform_circle_and_simplex",
+    "seed": 241219071,
+    "eta_initial": 0,
+    "lambda_initial": 0
+  },
+  "line_search": {
+    "line_search_policy": "original_per_block_backtracking",
+    "non_descent_policy": "documented_non_descent_restart",
+    "initial_step": 1,
+    "armijo_constant": 0.0001,
+    "backtrack_factor": 0.5,
+    "max_backtracks": 60
+  },
+  "inferred_or_tuned": {
+    "fig7_geometry_erratum": "COMM-GEOMETRY-FIG7: literal2x1 Eq3 implies even azimuth fields, contradicting original EPS. Figure uses same two elements in1x2 orientation with source shape retained. No phase/spacing fitted to original curves.",
+    "stable_objective_difference": "Same LSE minimized objective, evaluated by exact field increments and stable log1p/expm1 for small changes; independent75-digit Decimal full-dimension tests. No accepted-value slack.",
+    "accuracy_share_guard": "After exhausting raw PR and recorded steepest-block retries, a block below tolerance/sqrt(number_of_blocks) may remain unchanged; the full actual global KKT measure must still meet the unchanged threshold. This prevents machine-precision inactive blocks obstructing active blocks, and is not an early convergence certificate.",
+    "line_search": "Original distinct per-block alpha backtracking: each block uses actual projected/retracted displacement Armijo. The jointly combined block step is checked with total actual-displacement Armijo and is commonly scaled only if necessary; this coupling safeguard and constants are not specified in the paper. Common-alpha mode remains diagnostic only.",
+    "initialization": "Portable Park-Miller phases, independent positive simplex entries then row normalization; seed not published.",
+    "scheduling_recovery": "Largest relaxed entry, smallest index on exact tie; paper specifies thresholding but not its threshold.",
+    "non_descent": "Raw per-block PR coefficients and slopes are preserved and recorded. A block restarts minus its current gradient if either its raw tangent slope or its initial-step feasible projected displacement slope is nonnegative; raw_non_descent and projected_non_descent reasons are recorded separately. Exact zero-gradient/empty blocks and zero projected boundary motions are inactive. The source specifies an open simplex but its Euclidean projection reaches the closed boundary; this documented numerical safeguard reports raw row-mean and projected/KKT norms separately, using the latter for guarded stopping. literal_printed retains raw-direction diagnostics. No feasibility tolerance is relaxed.",
+    "distance": "Ambient product norm for outer step; intrinsic product distance not numerically specified.",
+    "spacing": "Half-wavelength element spacing and normal incidence chosen because numerical paragraph does not specify these.",
+    "budgets": "6000 independent starts, 4000 RCG cap and 1e-6 gradient threshold are implementation settings, not quoted communication-paper values.",
+    "continuation": "Five equally spaced initial mu in [100,1000], cycling across starts; final mu 1e-3. Paper prescribes equally spaced initial mu and halving but omits range/count/terminal value.",
+    "erratum": "Minimize -f so original maximization of negative softmin is respected; published negative-gradient directions for +f contradict the maximization statement."
+  },
+  "kind": "communications",
+  "reference_snr": 0.01,
+  "spacing_over_wavelength": 0.5,
+  "incidence_direction_cosines": [
+    0,
+    0
+  ],
+  "number_of_starts": 6000,
+  "initial_mu_values": [
+    100,
+    325,
+    550,
+    775,
+    1000
+  ],
+  "terminal_mu": 0.001,
+  "objective_convention": "maximize_negative_softmin",
+  "rcg_max_iterations": 4000,
+  "rcg_gradient_tolerance": 0.000001,
+  "azimuth_sampling": "inclusive_uniform_-60_to_60",
+  "elevation_deg": 45
+}

@@ -8,6 +8,53 @@ production banks are permitted.
 
 ## Actual newly completed numerical scopes
 
+The new [native communication Fig7 preflight](validation/mis-communications-native-fig7-preflight-v2/README.md)
+retains actual MIS1/SMS1 full original-control starts and their34 own-mu
+endpoint states. Source-transparent initial/final/history/raw-PR/stop data,
+actual stored steering coefficients, indices and dimensions match the
+unobserved native computation bitwise. Independent Decimal60 physical
+derivatives, objectives, domains, original1e-6 stops and exact initial RNG
+integers pass. A separate source-origin adapter checks every frozen native
+file and the entire saved settings, not merely a self-consistent output SHA.
+The public physical replay also actually passes both cases. This is not a
+complete native figure: a fresh6000-MIS/6000-SMS recording-v2 campaign and
+read-only complete-population independent auditor are now running separately.
+The earlier four-start row/column metadata-checker failure is retained;
+no numerical source or old false receipt is rewritten.
+
+The [portable native runtime-only supplement](validation/mis-communications-native-runtime-subset-v3/README.md)
+actually reconstructs17 exact numerical source/parameter dependencies from
+the public repository. Its numerical implementation digest matches the
+actual native run, and independent source/physical replays of both fixed
+cases pass all34 stages. Its fresh directory can invoke the unchanged
+native entry, including the full12000 mode. This is a runnable-source
+boundary and an actual saved-state audit, not another MATLAB optimizer
+run, the complete42-file historical snapshot or a finished full bank.
+Historical outputs and the author's original figure vectors are not newly
+published as runtime dependencies.
+
+MA's [native Fig4 full200 history packet](validation/two-timescale-ma-native-figure04-full200-v1/README.md)
+now checks all59813 recorded positions, including200 initial states, and all
+59813000 physical sample rates with an independent QR computation. Original
+stops, domains, design objectives, power and ZF residuals pass; no positions
+are optimized again. All100 geometries per kappa are retained with explicit
+terminal-state holds after their true stop. The maximum unfitted discrepancy
+from the original curves is4.795528605597891 bit/s/Hz, so historical recovery
+remains false. The source's half-wavelength energy-footnote unit error has
+its own [exact arithmetic and public replay](validation/two-timescale-ma-energy-units-v1/README.md),
+not a fabricated explanation for the plotted discrepancy.
+
+The [native cooperative recording-v4 pair](validation/cooperative-recording-v4-native-two-fullcases-v3/README.md)
+now supplies all previously missing final matrices, fixed phase contexts,
+QT candidates and1000 actual moment draws for both full M30/N48 scenes,
+each with all8 schemes. Independent native saved-state gradients and physical
+gates pass, actual native RNG replays are bitwise, and public state replay
+passes. A distinct fresh complete183-point Python recording-v4 campaign is
+now running all15 original sweeps. It preserves the model/constraints/grid/
+seed/initialization/populations and discloses the unreported RMO safety-cap
+extension. Full183 completion, all raw QT duals atMP80, full performance-trial
+populations and original-reference agreement remain separate requirements.
+
 The Python communication Fig7 bank has completed all6000 MIS and6000 SMS
 starts. All12000 recorded stops and domains pass; its selected full physical
 beams are independently reconstructed without importing a production solver.
@@ -37,6 +84,15 @@ reference points have now been compared against this new actual run; maximum
 error is8.008012646848087 bit/s/Hz. **Original figure agreement has not passed.**
 No reference gain is fitted, and pair-distance conformance alone does not
 recover all historical link-budget, coordinate and phase inputs.
+
+The new [native saved-domain prefix supplement](validation/hotspot-native-saved-domains-prefix-v1/README.md)
+independently checks9 actually completed MATLAB scenes,108 prescribed starts
+and216 initial/final saved states. Full16-by16 beam powers and25-element
+phase domains pass, including an actual portable no-solver replay. These
+saved matrices are real native output; missing mean inputs, phase contexts,
+QT candidates and native RNG states cannot be reconstructed retrospectively.
+This prefix does not certify QoS, phase-gradient stops, backend callbacks,
+all18 scenes or original-figure agreement, and upgrades no old false receipt.
 
 MA Fig3's fresh MATLAB-full-v2 now actually completes200/200 numerical
 cases with actual BEFORE/AFTER source/runtime/input/result bindings passing.

@@ -1,0 +1,4021 @@
+{
+  "scope": "ACTUAL_EXISTING_NATIVE_saved_initial_final_domains_total_power_only_NOT_QoS_moments_gradients_RNG_full18",
+  "observed_UTC": "2026-10-03T23:26:37.915575+00:00",
+  "actual_progress_snapshot_sha256": "970579b155706625f8ca92530fbbff292f82ec1de1b652e07b0a815194330f30",
+  "actual_prefix_cases": 9,
+  "required_full_cases": 18,
+  "actual_prefix_starts": 108,
+  "required_full_starts": 243,
+  "actual_state_arrays_sha256": "ac11010ebd93be9834b4be2cd235e5e5e80c9637b10b5ccfcfd3562848bb2246",
+  "array_bank_dtype_shape_derived_from_actual_JSON": true,
+  "actual_case_records": [
+    {
+      "U": 1,
+      "kappa_satellite_db": 0,
+      "actual_configuration_sha256": "31deb392d442e84e616d74b91eff59cfdf9c1cdd514424b5f2beeb655178c099",
+      "actual_original_result_sha256": "bd2d857c57dcb89e5f7d21c4b85db4f246dd31db6314b4795480b310f51cc015",
+      "input_and_result_A_to_B_unchanged": true,
+      "actual_current_source_binding_matches": true,
+      "actual_required_saved_starts": 6,
+      "actual_domain_records": [
+        {
+          "scheme": "NoRIS",
+          "start_id": 0,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999923354,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_00_NoRIS_start_0_initial_state_W",
+              "saved_array_phi": "case_00_NoRIS_start_0_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999994,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_00_NoRIS_start_0_final_state_W",
+              "saved_array_phi": "case_00_NoRIS_start_0_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 2.842170943040401e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "NoRIS",
+          "start_id": 1,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999999,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_00_NoRIS_start_1_initial_state_W",
+              "saved_array_phi": "case_00_NoRIS_start_1_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999987962,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_00_NoRIS_start_1_final_state_W",
+              "saved_array_phi": "case_00_NoRIS_start_1_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 0,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999936624,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_00_TwoStage_start_0_initial_state_W",
+              "saved_array_phi": "case_00_TwoStage_start_0_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999943248,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_00_TwoStage_start_0_final_state_W",
+              "saved_array_phi": "case_00_TwoStage_start_0_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 2.842170943040401e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 1,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999999,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_00_TwoStage_start_1_initial_state_W",
+              "saved_array_phi": "case_00_TwoStage_start_1_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999899184,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_00_TwoStage_start_1_final_state_W",
+              "saved_array_phi": "case_00_TwoStage_start_1_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 0,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999936624,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_00_AO_start_0_initial_state_W",
+              "saved_array_phi": "case_00_AO_start_0_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999994188,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_00_AO_start_0_final_state_W",
+              "saved_array_phi": "case_00_AO_start_0_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 1,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999999,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_00_AO_start_1_initial_state_W",
+              "saved_array_phi": "case_00_AO_start_1_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999983172,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_00_AO_start_1_final_state_W",
+              "saved_array_phi": "case_00_AO_start_1_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        }
+      ]
+    },
+    {
+      "U": 2,
+      "kappa_satellite_db": 0,
+      "actual_configuration_sha256": "9c859cdbad455b4f05cb5b3ab48d0509ecf4dd21b97489997ba810edad7862f0",
+      "actual_original_result_sha256": "85a193622fff43ebc25656b2d04280beb5f7583533f892d36fa9cbd56ec510e8",
+      "input_and_result_A_to_B_unchanged": true,
+      "actual_current_source_binding_matches": true,
+      "actual_required_saved_starts": 9,
+      "actual_domain_records": [
+        {
+          "scheme": "NoRIS",
+          "start_id": 0,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999882819,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_01_NoRIS_start_0_initial_state_W",
+              "saved_array_phi": "case_01_NoRIS_start_0_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999774,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_01_NoRIS_start_0_final_state_W",
+              "saved_array_phi": "case_01_NoRIS_start_0_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 4.263256414560601e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "NoRIS",
+          "start_id": 1,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_01_NoRIS_start_1_initial_state_W",
+              "saved_array_phi": "case_01_NoRIS_start_1_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000007336,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_01_NoRIS_start_1_final_state_W",
+              "saved_array_phi": "case_01_NoRIS_start_1_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 0.0,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "NoRIS",
+          "start_id": 2,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000000003,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_01_NoRIS_start_2_initial_state_W",
+              "saved_array_phi": "case_01_NoRIS_start_2_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000014329,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_01_NoRIS_start_2_final_state_W",
+              "saved_array_phi": "case_01_NoRIS_start_2_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 2.842170943040401e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 0,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999954883,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_01_TwoStage_start_0_initial_state_W",
+              "saved_array_phi": "case_01_TwoStage_start_0_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.000000000078,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_01_TwoStage_start_0_final_state_W",
+              "saved_array_phi": "case_01_TwoStage_start_0_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 0.0,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 1,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000000003,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_01_TwoStage_start_1_initial_state_W",
+              "saved_array_phi": "case_01_TwoStage_start_1_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999998805,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_01_TwoStage_start_1_final_state_W",
+              "saved_array_phi": "case_01_TwoStage_start_1_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 5.684341886080802e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 2,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_01_TwoStage_start_2_initial_state_W",
+              "saved_array_phi": "case_01_TwoStage_start_2_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999275,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_01_TwoStage_start_2_final_state_W",
+              "saved_array_phi": "case_01_TwoStage_start_2_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 7.105427357601002e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 0,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999954883,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_01_AO_start_0_initial_state_W",
+              "saved_array_phi": "case_01_AO_start_0_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999975779,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_01_AO_start_0_final_state_W",
+              "saved_array_phi": "case_01_AO_start_0_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 2.842170943040401e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 1,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000000003,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_01_AO_start_1_initial_state_W",
+              "saved_array_phi": "case_01_AO_start_1_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999630394,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_01_AO_start_1_final_state_W",
+              "saved_array_phi": "case_01_AO_start_1_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 2,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_01_AO_start_2_initial_state_W",
+              "saved_array_phi": "case_01_AO_start_2_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999963939,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_01_AO_start_2_final_state_W",
+              "saved_array_phi": "case_01_AO_start_2_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        }
+      ]
+    },
+    {
+      "U": 3,
+      "kappa_satellite_db": 0,
+      "actual_configuration_sha256": "3c2587a83b293735c94fcfbc504dc9545c7222b9b85d7a3e05a80adbb2a55fd9",
+      "actual_original_result_sha256": "a7f535c24bfb8f0406092602f367d55d4d46b988ad617dd6de243df72d42eae2",
+      "input_and_result_A_to_B_unchanged": true,
+      "actual_current_source_binding_matches": true,
+      "actual_required_saved_starts": 12,
+      "actual_domain_records": [
+        {
+          "scheme": "NoRIS",
+          "start_id": 0,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.9999999995953,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_02_NoRIS_start_0_initial_state_W",
+              "saved_array_phi": "case_02_NoRIS_start_0_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999577,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_02_NoRIS_start_0_final_state_W",
+              "saved_array_phi": "case_02_NoRIS_start_0_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 0.0,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "NoRIS",
+          "start_id": 1,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_02_NoRIS_start_1_initial_state_W",
+              "saved_array_phi": "case_02_NoRIS_start_1_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000008663,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_02_NoRIS_start_1_final_state_W",
+              "saved_array_phi": "case_02_NoRIS_start_1_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 0.0,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "NoRIS",
+          "start_id": 2,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000000001,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_02_NoRIS_start_2_initial_state_W",
+              "saved_array_phi": "case_02_NoRIS_start_2_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000001819,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_02_NoRIS_start_2_final_state_W",
+              "saved_array_phi": "case_02_NoRIS_start_2_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "NoRIS",
+          "start_id": 3,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000000001,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_02_NoRIS_start_3_initial_state_W",
+              "saved_array_phi": "case_02_NoRIS_start_3_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000000377,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_02_NoRIS_start_3_final_state_W",
+              "saved_array_phi": "case_02_NoRIS_start_3_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 2.842170943040401e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 0,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.9999999999383,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_02_TwoStage_start_0_initial_state_W",
+              "saved_array_phi": "case_02_TwoStage_start_0_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999855,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_02_TwoStage_start_0_final_state_W",
+              "saved_array_phi": "case_02_TwoStage_start_0_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 1,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000000003,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_02_TwoStage_start_1_initial_state_W",
+              "saved_array_phi": "case_02_TwoStage_start_1_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999996,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_02_TwoStage_start_1_final_state_W",
+              "saved_array_phi": "case_02_TwoStage_start_1_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 4.263256414560601e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 2,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_02_TwoStage_start_2_initial_state_W",
+              "saved_array_phi": "case_02_TwoStage_start_2_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999994391,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_02_TwoStage_start_2_final_state_W",
+              "saved_array_phi": "case_02_TwoStage_start_2_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 3,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_02_TwoStage_start_3_initial_state_W",
+              "saved_array_phi": "case_02_TwoStage_start_3_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999998786,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_02_TwoStage_start_3_final_state_W",
+              "saved_array_phi": "case_02_TwoStage_start_3_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 0,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.9999999999383,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_02_AO_start_0_initial_state_W",
+              "saved_array_phi": "case_02_AO_start_0_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999932,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_02_AO_start_0_final_state_W",
+              "saved_array_phi": "case_02_AO_start_0_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 1,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000000003,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_02_AO_start_1_initial_state_W",
+              "saved_array_phi": "case_02_AO_start_1_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999984,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_02_AO_start_1_final_state_W",
+              "saved_array_phi": "case_02_AO_start_1_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 2.842170943040401e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 2,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_02_AO_start_2_initial_state_W",
+              "saved_array_phi": "case_02_AO_start_2_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999974,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_02_AO_start_2_final_state_W",
+              "saved_array_phi": "case_02_AO_start_2_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 5.684341886080802e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 3,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_02_AO_start_3_initial_state_W",
+              "saved_array_phi": "case_02_AO_start_3_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999955,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_02_AO_start_3_final_state_W",
+              "saved_array_phi": "case_02_AO_start_3_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 4.263256414560601e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        }
+      ]
+    },
+    {
+      "U": 4,
+      "kappa_satellite_db": 0,
+      "actual_configuration_sha256": "2b45305ba45d18a38c00db3ff20dbcb32928d0235f0a3980daf33da4dcc7cac4",
+      "actual_original_result_sha256": "d15910dce1256dbf10ecef5ea96a13da524d506ed298bc84917d436e8351fdcf",
+      "input_and_result_A_to_B_unchanged": true,
+      "actual_current_source_binding_matches": true,
+      "actual_required_saved_starts": 15,
+      "actual_domain_records": [
+        {
+          "scheme": "NoRIS",
+          "start_id": 0,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999924451,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 1.1102230246251565e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_03_NoRIS_start_0_initial_state_W",
+              "saved_array_phi": "case_03_NoRIS_start_0_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999872422,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 1.1102230246251565e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_03_NoRIS_start_0_final_state_W",
+              "saved_array_phi": "case_03_NoRIS_start_0_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 2.842170943040401e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "NoRIS",
+          "start_id": 1,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_03_NoRIS_start_1_initial_state_W",
+              "saved_array_phi": "case_03_NoRIS_start_1_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999868,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_03_NoRIS_start_1_final_state_W",
+              "saved_array_phi": "case_03_NoRIS_start_1_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 2.842170943040401e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "NoRIS",
+          "start_id": 2,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999997,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_03_NoRIS_start_2_initial_state_W",
+              "saved_array_phi": "case_03_NoRIS_start_2_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999972,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_03_NoRIS_start_2_final_state_W",
+              "saved_array_phi": "case_03_NoRIS_start_2_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 2.842170943040401e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "NoRIS",
+          "start_id": 3,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000000001,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_03_NoRIS_start_3_initial_state_W",
+              "saved_array_phi": "case_03_NoRIS_start_3_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000017644,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_03_NoRIS_start_3_final_state_W",
+              "saved_array_phi": "case_03_NoRIS_start_3_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 4.263256414560601e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "NoRIS",
+          "start_id": 4,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999999,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_03_NoRIS_start_4_initial_state_W",
+              "saved_array_phi": "case_03_NoRIS_start_4_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0000000000012,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_03_NoRIS_start_4_final_state_W",
+              "saved_array_phi": "case_03_NoRIS_start_4_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 0.0,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 0,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999998316,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 1.1102230246251565e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_03_TwoStage_start_0_initial_state_W",
+              "saved_array_phi": "case_03_TwoStage_start_0_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999767,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_03_TwoStage_start_0_final_state_W",
+              "saved_array_phi": "case_03_TwoStage_start_0_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 1,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999994,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_03_TwoStage_start_1_initial_state_W",
+              "saved_array_phi": "case_03_TwoStage_start_1_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0000000004134,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_03_TwoStage_start_1_final_state_W",
+              "saved_array_phi": "case_03_TwoStage_start_1_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 4.263256414560601e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 2,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999999,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_03_TwoStage_start_2_initial_state_W",
+              "saved_array_phi": "case_03_TwoStage_start_2_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999963,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_03_TwoStage_start_2_final_state_W",
+              "saved_array_phi": "case_03_TwoStage_start_2_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 3,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999997,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_03_TwoStage_start_3_initial_state_W",
+              "saved_array_phi": "case_03_TwoStage_start_3_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0000000010144,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_03_TwoStage_start_3_final_state_W",
+              "saved_array_phi": "case_03_TwoStage_start_3_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 0.0,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 4,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999999,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_03_TwoStage_start_4_initial_state_W",
+              "saved_array_phi": "case_03_TwoStage_start_4_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999486,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_03_TwoStage_start_4_final_state_W",
+              "saved_array_phi": "case_03_TwoStage_start_4_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 0.0,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 0,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999998316,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 1.1102230246251565e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_03_AO_start_0_initial_state_W",
+              "saved_array_phi": "case_03_AO_start_0_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999761,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_03_AO_start_0_final_state_W",
+              "saved_array_phi": "case_03_AO_start_0_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 2.842170943040401e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 1,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999994,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_03_AO_start_1_initial_state_W",
+              "saved_array_phi": "case_03_AO_start_1_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999804,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_03_AO_start_1_final_state_W",
+              "saved_array_phi": "case_03_AO_start_1_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 0.0,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 2,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999999,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_03_AO_start_2_initial_state_W",
+              "saved_array_phi": "case_03_AO_start_2_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999946,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_03_AO_start_2_final_state_W",
+              "saved_array_phi": "case_03_AO_start_2_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 3,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999997,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_03_AO_start_3_initial_state_W",
+              "saved_array_phi": "case_03_AO_start_3_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999507,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_03_AO_start_3_final_state_W",
+              "saved_array_phi": "case_03_AO_start_3_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 4,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999999,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_03_AO_start_4_initial_state_W",
+              "saved_array_phi": "case_03_AO_start_4_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999841,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_03_AO_start_4_final_state_W",
+              "saved_array_phi": "case_03_AO_start_4_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        }
+      ]
+    },
+    {
+      "U": 5,
+      "kappa_satellite_db": 0,
+      "actual_configuration_sha256": "75b30431929e41572c96222098a2e9e13ef4434767f6baad815fd5333d248118",
+      "actual_original_result_sha256": "0dd7e3512f4261104a2bfd3bcb20b3f7210aa3d1ec21b329ba433739f7491047",
+      "input_and_result_A_to_B_unchanged": true,
+      "actual_current_source_binding_matches": true,
+      "actual_required_saved_starts": 18,
+      "actual_domain_records": [
+        {
+          "scheme": "NoRIS",
+          "start_id": 0,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.9999999991231,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_NoRIS_start_0_initial_state_W",
+              "saved_array_phi": "case_04_NoRIS_start_0_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.9999999999692,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_NoRIS_start_0_final_state_W",
+              "saved_array_phi": "case_04_NoRIS_start_0_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 0.0,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "NoRIS",
+          "start_id": 1,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_NoRIS_start_1_initial_state_W",
+              "saved_array_phi": "case_04_NoRIS_start_1_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000005534,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_NoRIS_start_1_final_state_W",
+              "saved_array_phi": "case_04_NoRIS_start_1_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "NoRIS",
+          "start_id": 2,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_NoRIS_start_2_initial_state_W",
+              "saved_array_phi": "case_04_NoRIS_start_2_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000001842,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_NoRIS_start_2_final_state_W",
+              "saved_array_phi": "case_04_NoRIS_start_2_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 5.684341886080802e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "NoRIS",
+          "start_id": 3,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 1.1102230246251565e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_NoRIS_start_3_initial_state_W",
+              "saved_array_phi": "case_04_NoRIS_start_3_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000008879,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 1.1102230246251565e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_NoRIS_start_3_final_state_W",
+              "saved_array_phi": "case_04_NoRIS_start_3_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "NoRIS",
+          "start_id": 4,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999997,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 1.1102230246251565e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_NoRIS_start_4_initial_state_W",
+              "saved_array_phi": "case_04_NoRIS_start_4_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.000000000001,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 1.1102230246251565e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_NoRIS_start_4_final_state_W",
+              "saved_array_phi": "case_04_NoRIS_start_4_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "NoRIS",
+          "start_id": 5,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_NoRIS_start_5_initial_state_W",
+              "saved_array_phi": "case_04_NoRIS_start_5_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000001666,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_NoRIS_start_5_final_state_W",
+              "saved_array_phi": "case_04_NoRIS_start_5_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 2.842170943040401e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 0,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999993582,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_TwoStage_start_0_initial_state_W",
+              "saved_array_phi": "case_04_TwoStage_start_0_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999693,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_TwoStage_start_0_final_state_W",
+              "saved_array_phi": "case_04_TwoStage_start_0_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 0.0,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 1,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_TwoStage_start_1_initial_state_W",
+              "saved_array_phi": "case_04_TwoStage_start_1_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999521,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_TwoStage_start_1_final_state_W",
+              "saved_array_phi": "case_04_TwoStage_start_1_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 2.842170943040401e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 2,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999999,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_TwoStage_start_2_initial_state_W",
+              "saved_array_phi": "case_04_TwoStage_start_2_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999966,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_TwoStage_start_2_final_state_W",
+              "saved_array_phi": "case_04_TwoStage_start_2_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 0.0,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 3,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999999,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 1.1102230246251565e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_TwoStage_start_3_initial_state_W",
+              "saved_array_phi": "case_04_TwoStage_start_3_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999949,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_TwoStage_start_3_final_state_W",
+              "saved_array_phi": "case_04_TwoStage_start_3_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 0.0,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 4,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999997,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 1.1102230246251565e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_TwoStage_start_4_initial_state_W",
+              "saved_array_phi": "case_04_TwoStage_start_4_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000011494,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_TwoStage_start_4_final_state_W",
+              "saved_array_phi": "case_04_TwoStage_start_4_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 0.0,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 5,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999999,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_TwoStage_start_5_initial_state_W",
+              "saved_array_phi": "case_04_TwoStage_start_5_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0000000000044,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_TwoStage_start_5_final_state_W",
+              "saved_array_phi": "case_04_TwoStage_start_5_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 2.842170943040401e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 0,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999993582,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_AO_start_0_initial_state_W",
+              "saved_array_phi": "case_04_AO_start_0_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999943,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_AO_start_0_final_state_W",
+              "saved_array_phi": "case_04_AO_start_0_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 1,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_AO_start_1_initial_state_W",
+              "saved_array_phi": "case_04_AO_start_1_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999866,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_AO_start_1_final_state_W",
+              "saved_array_phi": "case_04_AO_start_1_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 2.842170943040401e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 2,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999999,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_AO_start_2_initial_state_W",
+              "saved_array_phi": "case_04_AO_start_2_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999906,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_AO_start_2_final_state_W",
+              "saved_array_phi": "case_04_AO_start_2_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 2.842170943040401e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 3,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999999,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 1.1102230246251565e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_AO_start_3_initial_state_W",
+              "saved_array_phi": "case_04_AO_start_3_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999918,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_AO_start_3_final_state_W",
+              "saved_array_phi": "case_04_AO_start_3_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 0.0,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 4,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999997,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 1.1102230246251565e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_AO_start_4_initial_state_W",
+              "saved_array_phi": "case_04_AO_start_4_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999936,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_AO_start_4_final_state_W",
+              "saved_array_phi": "case_04_AO_start_4_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 0.0,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 5,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999999,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_AO_start_5_initial_state_W",
+              "saved_array_phi": "case_04_AO_start_5_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.999999999999,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_04_AO_start_5_final_state_W",
+              "saved_array_phi": "case_04_AO_start_5_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 0.0,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        }
+      ]
+    },
+    {
+      "U": 6,
+      "kappa_satellite_db": 0,
+      "actual_configuration_sha256": "fd81c367baad29f5ab20dfd596c77a561c9771721f9fe6514cfe7b10192fc717",
+      "actual_original_result_sha256": "a569890cb624e383ebb3eb2d9b703b882ba400e7971b05903c11ecb61eeff3bb",
+      "input_and_result_A_to_B_unchanged": true,
+      "actual_current_source_binding_matches": true,
+      "actual_required_saved_starts": 21,
+      "actual_domain_records": [
+        {
+          "scheme": "NoRIS",
+          "start_id": 0,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999994006,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_NoRIS_start_0_initial_state_W",
+              "saved_array_phi": "case_05_NoRIS_start_0_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999994418,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_NoRIS_start_0_final_state_W",
+              "saved_array_phi": "case_05_NoRIS_start_0_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 4.263256414560601e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "NoRIS",
+          "start_id": 1,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_NoRIS_start_1_initial_state_W",
+              "saved_array_phi": "case_05_NoRIS_start_1_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999791,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_NoRIS_start_1_final_state_W",
+              "saved_array_phi": "case_05_NoRIS_start_1_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 0.0,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "NoRIS",
+          "start_id": 2,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000000001,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_NoRIS_start_2_initial_state_W",
+              "saved_array_phi": "case_05_NoRIS_start_2_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0000000000633,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_NoRIS_start_2_final_state_W",
+              "saved_array_phi": "case_05_NoRIS_start_2_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 2.842170943040401e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "NoRIS",
+          "start_id": 3,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000000003,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_NoRIS_start_3_initial_state_W",
+              "saved_array_phi": "case_05_NoRIS_start_3_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999895,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_NoRIS_start_3_final_state_W",
+              "saved_array_phi": "case_05_NoRIS_start_3_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 0.0,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "NoRIS",
+          "start_id": 4,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_NoRIS_start_4_initial_state_W",
+              "saved_array_phi": "case_05_NoRIS_start_4_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.9999999999907,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_NoRIS_start_4_final_state_W",
+              "saved_array_phi": "case_05_NoRIS_start_4_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 2.842170943040401e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "NoRIS",
+          "start_id": 5,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_NoRIS_start_5_initial_state_W",
+              "saved_array_phi": "case_05_NoRIS_start_5_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999767,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_NoRIS_start_5_final_state_W",
+              "saved_array_phi": "case_05_NoRIS_start_5_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 0.0,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "NoRIS",
+          "start_id": 6,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_NoRIS_start_6_initial_state_W",
+              "saved_array_phi": "case_05_NoRIS_start_6_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999966,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_NoRIS_start_6_final_state_W",
+              "saved_array_phi": "case_05_NoRIS_start_6_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 2.842170943040401e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 0,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.999999999972,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_TwoStage_start_0_initial_state_W",
+              "saved_array_phi": "case_05_TwoStage_start_0_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999915,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_TwoStage_start_0_final_state_W",
+              "saved_array_phi": "case_05_TwoStage_start_0_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 4.263256414560601e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 1,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999997,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_TwoStage_start_1_initial_state_W",
+              "saved_array_phi": "case_05_TwoStage_start_1_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0000000000073,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_TwoStage_start_1_final_state_W",
+              "saved_array_phi": "case_05_TwoStage_start_1_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 0.0,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 2,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_TwoStage_start_2_initial_state_W",
+              "saved_array_phi": "case_05_TwoStage_start_2_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000040777,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_TwoStage_start_2_final_state_W",
+              "saved_array_phi": "case_05_TwoStage_start_2_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 2.842170943040401e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 3,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_TwoStage_start_3_initial_state_W",
+              "saved_array_phi": "case_05_TwoStage_start_3_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999952,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_TwoStage_start_3_final_state_W",
+              "saved_array_phi": "case_05_TwoStage_start_3_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 2.842170943040401e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 4,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000000003,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_TwoStage_start_4_initial_state_W",
+              "saved_array_phi": "case_05_TwoStage_start_4_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000243338,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_TwoStage_start_4_final_state_W",
+              "saved_array_phi": "case_05_TwoStage_start_4_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 2.842170943040401e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 5,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999997,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_TwoStage_start_5_initial_state_W",
+              "saved_array_phi": "case_05_TwoStage_start_5_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000000094,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_TwoStage_start_5_final_state_W",
+              "saved_array_phi": "case_05_TwoStage_start_5_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 2.842170943040401e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 6,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_TwoStage_start_6_initial_state_W",
+              "saved_array_phi": "case_05_TwoStage_start_6_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000027003,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_TwoStage_start_6_final_state_W",
+              "saved_array_phi": "case_05_TwoStage_start_6_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 2.842170943040401e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 0,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.999999999972,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_AO_start_0_initial_state_W",
+              "saved_array_phi": "case_05_AO_start_0_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000009754,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_AO_start_0_final_state_W",
+              "saved_array_phi": "case_05_AO_start_0_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 4.263256414560601e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 1,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999997,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_AO_start_1_initial_state_W",
+              "saved_array_phi": "case_05_AO_start_1_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999872,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_AO_start_1_final_state_W",
+              "saved_array_phi": "case_05_AO_start_1_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 2,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_AO_start_2_initial_state_W",
+              "saved_array_phi": "case_05_AO_start_2_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999815,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_AO_start_2_final_state_W",
+              "saved_array_phi": "case_05_AO_start_2_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 3,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_AO_start_3_initial_state_W",
+              "saved_array_phi": "case_05_AO_start_3_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.9999999999993,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_AO_start_3_final_state_W",
+              "saved_array_phi": "case_05_AO_start_3_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 4,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000000003,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_AO_start_4_initial_state_W",
+              "saved_array_phi": "case_05_AO_start_4_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999879,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_AO_start_4_final_state_W",
+              "saved_array_phi": "case_05_AO_start_4_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 0.0,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 5,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999997,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_AO_start_5_initial_state_W",
+              "saved_array_phi": "case_05_AO_start_5_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999957,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_AO_start_5_final_state_W",
+              "saved_array_phi": "case_05_AO_start_5_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 6,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_AO_start_6_initial_state_W",
+              "saved_array_phi": "case_05_AO_start_6_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999955,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_05_AO_start_6_final_state_W",
+              "saved_array_phi": "case_05_AO_start_6_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        }
+      ]
+    },
+    {
+      "U": 1,
+      "kappa_satellite_db": 10,
+      "actual_configuration_sha256": "03dffe451eb4add6a8ecd513d8b9b3c7ebb7e43cfff6eeda38fed330dc8bbf56",
+      "actual_original_result_sha256": "844ba7a50115ff406b7a7a94d172089b6a1b465158eb87f9e4d05bcc29c30bf5",
+      "input_and_result_A_to_B_unchanged": true,
+      "actual_current_source_binding_matches": true,
+      "actual_required_saved_starts": 6,
+      "actual_domain_records": [
+        {
+          "scheme": "NoRIS",
+          "start_id": 0,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999995244,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_06_NoRIS_start_0_initial_state_W",
+              "saved_array_phi": "case_06_NoRIS_start_0_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999992932,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_06_NoRIS_start_0_final_state_W",
+              "saved_array_phi": "case_06_NoRIS_start_0_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 0.0,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "NoRIS",
+          "start_id": 1,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999999,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_06_NoRIS_start_1_initial_state_W",
+              "saved_array_phi": "case_06_NoRIS_start_1_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999996358,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_06_NoRIS_start_1_final_state_W",
+              "saved_array_phi": "case_06_NoRIS_start_1_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 8.526512829121202e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 0,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999976046,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_06_TwoStage_start_0_initial_state_W",
+              "saved_array_phi": "case_06_TwoStage_start_0_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999995758,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_06_TwoStage_start_0_final_state_W",
+              "saved_array_phi": "case_06_TwoStage_start_0_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 1,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999999,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_06_TwoStage_start_1_initial_state_W",
+              "saved_array_phi": "case_06_TwoStage_start_1_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0000000005084,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_06_TwoStage_start_1_final_state_W",
+              "saved_array_phi": "case_06_TwoStage_start_1_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 2.842170943040401e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 0,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999976046,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_06_AO_start_0_initial_state_W",
+              "saved_array_phi": "case_06_AO_start_0_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999159,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_06_AO_start_0_final_state_W",
+              "saved_array_phi": "case_06_AO_start_0_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 4.263256414560601e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 1,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999999,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_06_AO_start_1_initial_state_W",
+              "saved_array_phi": "case_06_AO_start_1_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000001093,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_06_AO_start_1_final_state_W",
+              "saved_array_phi": "case_06_AO_start_1_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        }
+      ]
+    },
+    {
+      "U": 2,
+      "kappa_satellite_db": 10,
+      "actual_configuration_sha256": "1bfa573dd03903ab68eb83c17405e27aca5f9666da7e9e430f2991852e4eca2f",
+      "actual_original_result_sha256": "161bce236fafefd29cb09e4890e61bea32b88936d37dd43057cdc677e7469771",
+      "input_and_result_A_to_B_unchanged": true,
+      "actual_current_source_binding_matches": true,
+      "actual_required_saved_starts": 9,
+      "actual_domain_records": [
+        {
+          "scheme": "NoRIS",
+          "start_id": 0,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999986713,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_07_NoRIS_start_0_initial_state_W",
+              "saved_array_phi": "case_07_NoRIS_start_0_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999521,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_07_NoRIS_start_0_final_state_W",
+              "saved_array_phi": "case_07_NoRIS_start_0_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 5.684341886080802e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "NoRIS",
+          "start_id": 1,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000000001,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_07_NoRIS_start_1_initial_state_W",
+              "saved_array_phi": "case_07_NoRIS_start_1_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.9999999999989,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_07_NoRIS_start_1_final_state_W",
+              "saved_array_phi": "case_07_NoRIS_start_1_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "NoRIS",
+          "start_id": 2,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_07_NoRIS_start_2_initial_state_W",
+              "saved_array_phi": "case_07_NoRIS_start_2_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999988512,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_07_NoRIS_start_2_final_state_W",
+              "saved_array_phi": "case_07_NoRIS_start_2_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 0.0,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 0,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999997456,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_07_TwoStage_start_0_initial_state_W",
+              "saved_array_phi": "case_07_TwoStage_start_0_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999139,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_07_TwoStage_start_0_final_state_W",
+              "saved_array_phi": "case_07_TwoStage_start_0_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 0.0,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 1,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_07_TwoStage_start_1_initial_state_W",
+              "saved_array_phi": "case_07_TwoStage_start_1_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999972628,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_07_TwoStage_start_1_final_state_W",
+              "saved_array_phi": "case_07_TwoStage_start_1_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 4.263256414560601e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 2,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_07_TwoStage_start_2_initial_state_W",
+              "saved_array_phi": "case_07_TwoStage_start_2_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999002,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_07_TwoStage_start_2_final_state_W",
+              "saved_array_phi": "case_07_TwoStage_start_2_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 4.263256414560601e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 0,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999997456,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_07_AO_start_0_initial_state_W",
+              "saved_array_phi": "case_07_AO_start_0_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000076443,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_07_AO_start_0_final_state_W",
+              "saved_array_phi": "case_07_AO_start_0_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 1,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_07_AO_start_1_initial_state_W",
+              "saved_array_phi": "case_07_AO_start_1_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999998451,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_07_AO_start_1_final_state_W",
+              "saved_array_phi": "case_07_AO_start_1_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 4.263256414560601e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 2,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_07_AO_start_2_initial_state_W",
+              "saved_array_phi": "case_07_AO_start_2_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999994444,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_07_AO_start_2_final_state_W",
+              "saved_array_phi": "case_07_AO_start_2_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 4.263256414560601e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        }
+      ]
+    },
+    {
+      "U": 3,
+      "kappa_satellite_db": 10,
+      "actual_configuration_sha256": "5151499530423e07e2b43661c4d9c6fcaa555bac6cbe7c09b6f1ee41eb9ec401",
+      "actual_original_result_sha256": "c0b62728c420ef9aee4014fc79f3363349ce490c3fa97169eb87d3fd51808f8f",
+      "input_and_result_A_to_B_unchanged": true,
+      "actual_current_source_binding_matches": true,
+      "actual_required_saved_starts": 12,
+      "actual_domain_records": [
+        {
+          "scheme": "NoRIS",
+          "start_id": 0,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999939007,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_08_NoRIS_start_0_initial_state_W",
+              "saved_array_phi": "case_08_NoRIS_start_0_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999969008,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_08_NoRIS_start_0_final_state_W",
+              "saved_array_phi": "case_08_NoRIS_start_0_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "NoRIS",
+          "start_id": 1,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_08_NoRIS_start_1_initial_state_W",
+              "saved_array_phi": "case_08_NoRIS_start_1_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000012479,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_08_NoRIS_start_1_final_state_W",
+              "saved_array_phi": "case_08_NoRIS_start_1_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 2.842170943040401e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "NoRIS",
+          "start_id": 2,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999997,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_08_NoRIS_start_2_initial_state_W",
+              "saved_array_phi": "case_08_NoRIS_start_2_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000009868,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_08_NoRIS_start_2_final_state_W",
+              "saved_array_phi": "case_08_NoRIS_start_2_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "NoRIS",
+          "start_id": 3,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_08_NoRIS_start_3_initial_state_W",
+              "saved_array_phi": "case_08_NoRIS_start_3_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0000000000747,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_08_NoRIS_start_3_final_state_W",
+              "saved_array_phi": "case_08_NoRIS_start_3_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": true,
+          "reported_and_rebuilt_total_power_error": 5.684341886080802e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 0,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999910102,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_08_TwoStage_start_0_initial_state_W",
+              "saved_array_phi": "case_08_TwoStage_start_0_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0000000033858,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_08_TwoStage_start_0_final_state_W",
+              "saved_array_phi": "case_08_TwoStage_start_0_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 1,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_08_TwoStage_start_1_initial_state_W",
+              "saved_array_phi": "case_08_TwoStage_start_1_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999995332,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_08_TwoStage_start_1_final_state_W",
+              "saved_array_phi": "case_08_TwoStage_start_1_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 2,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000000003,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_08_TwoStage_start_2_initial_state_W",
+              "saved_array_phi": "case_08_TwoStage_start_2_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999983,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_08_TwoStage_start_2_final_state_W",
+              "saved_array_phi": "case_08_TwoStage_start_2_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 5.684341886080802e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 3,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_08_TwoStage_start_3_initial_state_W",
+              "saved_array_phi": "case_08_TwoStage_start_3_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999831476,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_08_TwoStage_start_3_final_state_W",
+              "saved_array_phi": "case_08_TwoStage_start_3_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 0,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999910102,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_08_AO_start_0_initial_state_W",
+              "saved_array_phi": "case_08_AO_start_0_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999622,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_08_AO_start_0_final_state_W",
+              "saved_array_phi": "case_08_AO_start_0_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 4.263256414560601e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 1,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_08_AO_start_1_initial_state_W",
+              "saved_array_phi": "case_08_AO_start_1_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999998376,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_08_AO_start_1_final_state_W",
+              "saved_array_phi": "case_08_AO_start_1_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 2,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.00000000000003,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_08_AO_start_2_initial_state_W",
+              "saved_array_phi": "case_08_AO_start_2_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.9999999999963,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_08_AO_start_2_final_state_W",
+              "saved_array_phi": "case_08_AO_start_2_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        },
+        {
+          "scheme": "AO",
+          "start_id": 3,
+          "actual_states": {
+            "initial_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 100.0,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_08_AO_start_3_initial_state_W",
+              "saved_array_phi": "case_08_AO_start_3_initial_state_phi_encoded_vector"
+            },
+            "final_state": {
+              "encoded_W_shape": [
+                16,
+                16
+              ],
+              "encoded_phi_vector_length": 25,
+              "independent_total_power": 99.99999999999784,
+              "original_power_limit": 100,
+              "unit_modulus_maximum_error": 2.220446049250313e-16,
+              "finite_domain_shape_power_gate_pass": true,
+              "saved_array_W": "case_08_AO_start_3_final_state_W",
+              "saved_array_phi": "case_08_AO_start_3_final_state_phi_encoded_vector"
+            }
+          },
+          "actual_no_ris_flag": false,
+          "reported_and_rebuilt_total_power_error": 1.4210854715202004e-14,
+          "independent_original_total_power_gate_pass": true,
+          "native_phi_orientation_recovered": false
+        }
+      ]
+    }
+  ],
+  "checks": {
+    "actual_configuration_result_and_current_source_bindings_pass": true,
+    "all_required_prefix_saved_start_ids_present": true,
+    "all_actual_initial_and_final_W_domains_shapes_finite_and_power_pass": true,
+    "all_actual_initial_and_final_encoded_phase_vectors_unit_modulus_pass": true,
+    "actual_final_noRIS_flags_and_reported_total_power_rebuilt_pass": true,
+    "actual_original_input_result_bytes_unchanged": true
+  },
+  "all_independent_saved_domain_only_checks_pass": true,
+  "actual_mean_inputs_found_in_raw": false,
+  "solver_or_optimizer_called": false,
+  "missing_mean_inputs_gradient_channels_or_RNG_synthesized": false,
+  "original_full_moment_QoS_independently_certified": false,
+  "original_stage_gradient_stop_independently_certified": false,
+  "original_native1000_channels_RNG_independently_replayed": false,
+  "all_selected_solver_callbacks_and_MEX_bound_before_actual_run": false,
+  "native_exact_phi_row_column_orientation_certified": false,
+  "full18_numerical_certificate": false,
+  "full_reproduction_pass": false,
+  "auditor_source_sha256": "689589cfb11d6857edd369b9deab89e84927106b7576cf8d981954c7ed450b7b",
+  "numpy_version": "2.5.3"
+}

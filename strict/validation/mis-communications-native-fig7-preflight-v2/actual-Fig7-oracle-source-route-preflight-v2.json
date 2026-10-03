@@ -1,0 +1,71 @@
+{
+  "scope": "pre_result_source_route_and_finite_physical_witnesses_not_native_or_full_bank_audit",
+  "original_source_sha256": "54e91b92540aa6bc3716636c139ffb56e21d4a2bc0dccb078351377f9742800b",
+  "derived_Fig7_oracle_sha256": "4be831e354171e62239bbf79b19c52433430d601456be126f71417e3bc91798b",
+  "literal_inverse_restores_original_normalized_source_text": true,
+  "all_unchanged_helpers_AST_identity": [
+    "D",
+    "add",
+    "mul",
+    "conjugate",
+    "abs2",
+    "pairs",
+    "prescribed_mu",
+    "project_simplex"
+  ],
+  "physical_mathematics_unchanged_except_declared_dimension_guard": true,
+  "actual_checks": [
+    {
+      "baseline": "MIS",
+      "start": 1,
+      "draws": 11,
+      "actual_original_Park_Miller_start_and_end_integer_identity": true
+    },
+    {
+      "baseline": "MIS",
+      "start": 2,
+      "draws": 11,
+      "actual_original_Park_Miller_start_and_end_integer_identity": true
+    },
+    {
+      "baseline": "MIS",
+      "start": 6000,
+      "draws": 11,
+      "actual_original_Park_Miller_start_and_end_integer_identity": true
+    },
+    {
+      "baseline": "MIS",
+      "scalar_equal_phase_field_objective_witness": true,
+      "exact_stationary_two_element_witness": true,
+      "wrong_M4_rejected": true
+    },
+    {
+      "baseline": "SMS",
+      "start": 1,
+      "draws": 6,
+      "actual_original_Park_Miller_start_and_end_integer_identity": true
+    },
+    {
+      "baseline": "SMS",
+      "start": 2,
+      "draws": 6,
+      "actual_original_Park_Miller_start_and_end_integer_identity": true
+    },
+    {
+      "baseline": "SMS",
+      "start": 6000,
+      "draws": 6,
+      "actual_original_Park_Miller_start_and_end_integer_identity": true
+    },
+    {
+      "baseline": "SMS",
+      "scalar_equal_phase_field_objective_witness": true,
+      "exact_stationary_two_element_witness": true,
+      "wrong_M4_rejected": true
+    }
+  ],
+  "all_route_and_finite_witness_checks_pass": true,
+  "native_MATLAB_actual_states_checked": false,
+  "full12000_certificate": false,
+  "this_actual_preflight_entry_sha256": "866260c49ef68281661e6671d7f17bda01322e22f01406cf00382c8c2108e6f1"
+}

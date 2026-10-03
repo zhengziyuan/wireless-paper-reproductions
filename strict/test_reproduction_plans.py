@@ -5,6 +5,20 @@ from reproduce import plan,HERE,statistical_matlab_call,corrected_ma_matlab_call
 
 
 class Routing(unittest.TestCase):
+    def test_architecture_is_not_mislabelled_missing_hardware_measurements(self):
+        for figure in (1,2,3):
+            p=plan('mis-communications',figure)
+            self.assertFalse(p['runnable'])
+            self.assertEqual(p['kind'],'architecture_illustration_not_numerical_simulation')
+            self.assertNotIn('measurements',p['blocker'])
+        for figure in (4,5,6):
+            p=plan('mis-communications',figure)
+            self.assertFalse(p['runnable'])
+            self.assertEqual(p['kind'],'hardware_or_measurement_not_numerical_simulation')
+            self.assertIn('cannot be regenerated',p['blocker'])
+        p=plan('mis-sensing',1)
+        self.assertEqual(p['kind'],'architecture_illustration_not_numerical_simulation')
+
     def test_sensing_explicit_corrected_default_and_printed_override(self):
         corrected=plan('mis-sensing',3)
         self.assertTrue(corrected['runnable'])
