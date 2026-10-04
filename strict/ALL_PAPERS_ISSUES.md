@@ -2,7 +2,7 @@
 
 This is an independent MATLAB/Python reconstruction from the supplied author
 sources. It is **not a completed release**, recovered private author code, or a
-claim that every historical figure is correct. The source inventory contains
+claim that every historical figure is correct. The [5 October full-population checkpoint](validation/communications-full-population-checkpoint-20261005-v1/README.md) records the closed native Fig7 union and closed Python Fig8 workflow, including their resume provenance and still-pending checks. The source inventory contains
 85 captioned figures (73 numerical, 12 illustrative/hardware) and two parameter
 tables. Every panel, baseline and full declared sample bank is required. Counts
 explicitly reported by a source are preserved; unreported Monte Carlo counts
@@ -13,7 +13,7 @@ single cases and component tests are recorded separately from complete figures.
 
 | Paper | Source issue versus implementation/numerical issue | Disposition and evidence |
 | --- | --- | --- |
-| MIS communications | Figure7's printed 2x1 orientation and Eq3 imply azimuth-even patterns, while the original two MIS curves are not even. The user markers also contradict the text's adjacent spacing. | [COMM_ERRATA.md](mis-communications/COMM_ERRATA.md) proves the conflict. The separately labelled 1x2 orientation preserves two elements, two patterns and four users. The complete actual Python12000-start bank has independent final physical/KKT and230400 recorded-stop checks. All1080 unfitted original vector samples agree within2.572838263652233e-7 linear SNR. Full native MATLAB12000-start certification remains pending. |
+| MIS communications | Figure7's printed 2x1 orientation and Eq3 imply azimuth-even patterns, while the original two MIS curves are not even. The user markers also contradict the text's adjacent spacing. | [COMM_ERRATA.md](mis-communications/COMM_ERRATA.md) proves the conflict. The separately labelled 1x2 orientation preserves two elements, two patterns and four users. The complete actual Python12000-start bank has independent final physical/KKT and230400 recorded-stop checks. All1080 unfitted original vector samples agree within2.572838263652233e-7 linear SNR. The native12000 saved-endpoint union and230400 independent own-mu checks are now closed; single-new-cold execution, unsaved historical inner replay and complete portable native plots are not claimed. See the [5 October checkpoint](validation/communications-full-population-checkpoint-20261005-v1/README.md). |
 | MIS communications | Subtracting nearly equal LSE costs can reverse a small decrease; a forced move at an already stationary point was a reconstruction bug. A numerically inactive phase block could block other legitimate descent. | Exact LSE increments, initial KKT checks, and a disclosed per-block KKT accuracy-share safeguard preserve objective, gradients, raw PR, full start counts and global tolerances. Independent Decimal tests and actual MATLAB checks are separate from full sweeps. |
 | MIS communications/sensing | Legacy MATLAB and Python aggregate `overall_full_success` can be derived from the selected best start rather than every start's convergence. This is a reconstruction metadata limitation, not a paper-algorithm error. | The public full-figure renderer now checks every original start identifier, stored domain/stop field and required baseline bank before producing output; selected-best-only success, capped/missing slots and RIS aggregate-only flags are rejected. It also binds maximum-score/earliest-exact-tie selection, plotted scalars and declared final tolerances; generic curve scope cannot bypass full MIS coverage. Analytical panels still require full numerical comparator banks; RIS scalar arrays cover every target. The [actual complete Python Fig7 replay](validation/mis-summary-population-gate-v2/README.md) passes all12000 summaries and a fresh render; fifteen corrupted controls are rejected. Summary checks are not independent endpoint/source/RNG or quantized-RIS physical certificates. The [actual recording-v2 preflight](validation/mis-communications-native-fig7-preflight-v2/README.md) retains both fixed starts and all34 own-mu endpoints, with unchanged numerical trajectories and independent source-bound Decimal physical checks passing. A fresh full12000 recording bank and separate complete-population auditor are now executing; neither is finished. The [portable17-file runtime subset](validation/mis-communications-native-runtime-subset-v3/README.md) is actually reconstructed and rechecked, but is not the complete42-file historical source snapshot or a new native full-bank execution. The earlier row/column checker failure and its false receipts remain unchanged. |
 | MIS sensing | Independent block PR does not generally possess product-CG conjugacy; the positive-simplex manifold conflicts with a projection that reaches its boundary. The source's compactness/exact-penalty claims require qualifications. | [SOLVER_ERRATUM.md](mis-sensing/SOLVER_ERRATUM.md) provides counterexamples, a separately named raw-product-PR correction, feasible tangent-cone/active-face handling and an independent original constrained KKT check. The printed branch remains selectable. No global-optimum claim is made. |
@@ -370,8 +370,12 @@ binary physical score and smoothed KKT passes; maximum final KKT is
 9.99994305807773e-7 against the original declared1e-6 gate. Its maximum
 independent KKT disagreement is4.2180518252356576e-16. Intermediate
 inner-state gradients were not saved and are not claimed replayed.
-explicit2x1-to1x2 axis erratum remains necessary and visible; native full
-MATLAB, other original figures and publisher approval are not established.
+explicit2x1-to1x2 axis erratum remains necessary and visible. The native full
+12000-start saved-endpoint union and all230400 independent own-mu checks have
+now closed successfully; its11330+670 execution and11329+671 audit provenance
+is explicit, not a claimed new uninterrupted cold campaign. Portable native
+plots, unsaved historical inner replay, other figures and publisher approval
+are not established.
 
 Communication Fig8's frozen partial snapshot contains14 actual capped
 starts. Every one has a fresh same-original-RCG cold replay, changing only
@@ -382,6 +386,15 @@ in one partial snapshot, not all12000 inputs or a new complete figure bank;
 the old running bank, its failed flags and original parameter provenance
 remain unchanged. MIS sensing's4000 cap is explicitly reported and cannot
 be extended under this argument.
+
+The separate original-size Fig8 Python workflow has now returned with all
+12000 unique starts, source-reported12000 converged/feasible and zero errors.
+Its same-source I/O-only resume preserved5543 existing starts; no failed
+4000-cap attempt was erased. All declared source bytes and closed metadata
+identities match. This workflow closure is not a fresh independent physical
+audit, a full native12000 execution or agreement with the original1800 EPS
+samples. See the [scoped checkpoint](validation/communications-full-population-checkpoint-20261005-v1/README.md);
+those figure-certification gates remain false.
 
 Hotspot's four actual same-SDP inputs now have all16 native MATLAB scale
 attempts and all original1000-candidate/primal checks independently verified

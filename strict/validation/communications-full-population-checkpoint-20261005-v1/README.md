@@ -1,0 +1,72 @@
+# Actual full-population checkpoint — 5 October 2026
+
+This is a scoped progress record, not a completed six-paper release. The
+repository-wide `full_reproduction_passed` remains **false**. Neither a count,
+a selected winner, nor a source-reported success upgrades a missing independent
+physical or historical-figure check.
+
+## Communication Figure 7: closed native saved-endpoint bank
+
+The actual native union covers all 12,000 original start identifiers and all
+230,400 saved own-mu continuation endpoints. Its independent full-population
+saved-endpoint audit has closed with exit 0, no exception, and unchanged bound
+source/input/runtime bytes. The existing geometric, KKT, phase-norm, objective
+and physical-metric thresholds were not enlarged.
+
+The provenance is a **union**, not a new uninterrupted cold 12,000-start run:
+11,330 previous native starts plus 670 newly executed native starts, with
+11,329 previous independent audits plus 671 newly executed independent audits.
+Every identifier is covered. Failed older receipts are retained separately.
+Unsaved historical inner iterates are not claimed replayed.
+
+Actual closed artifact identifiers:
+
+- Native full-union audit completion SHA256:
+  `8eaf1c5d4e2a3ff16441603a01a88533d867e4620e0b3f5c805b155eda09aa06`.
+- Complete union rows SHA256:
+  `76813bb8f45c7a7c0fb79f9b16c5dfb98f6a4d65c06abe8110d58871f4db371`.
+- Actual independent durable-parent completion SHA256:
+  `af20890f304edae873fe945fe2a328591e10fc6eb51a05d5552fcbf3bcedd1c7`.
+
+The separately disclosed same-two-element 2x1-to-1x2 axis correction remains
+necessary. The existing Python comparison of all 1,080 original EPS samples
+has maximum unfitted linear-SNR error `2.572838263652233e-7`. That Python result
+does not establish a fresh native portable render or publisher approval. The
+complete portable dual-language endpoint/plot package is still being prepared.
+
+## Communication Figure 8: Python execution workflow closed
+
+The same-source Python workflow returned after completing all 12,000 unique
+starts: 6,000 MIS and 6,000 SMS. The producer reports 12,000 converged, feasible
+starts and zero failed or unverified starts. The closed metadata inspection
+checks all start identifiers, the bank signature, all declared source bytes,
+and the final summary against the actual after-return receipt.
+
+This includes an explicitly recorded I/O-only same-bank resume preserving
+5,543 already saved starts after process loss. It is not a single uninterrupted
+cold run; it is not a reuse of a different reduced bank. The old 4,000-cap
+failures are not erased. The 100,000 control cap is an **unreported numerical
+implementation setting**, not a number quoted from the communication paper.
+The sensing paper's explicitly reported 4,000 cap is not extended by this.
+
+Actual closed artifact identifiers:
+
+- Full execution summary SHA256:
+  `b7cdf7cf438da30e82b1fab91997b4ce3a86800e86a8f0e569820be57c34720e`.
+- Full Python result SHA256:
+  `1bb0c3da11e6a42504c70cb2939a459fc9d7cd20499e24925e92ced245ef6956`.
+- Same-bank manifest SHA256:
+  `12ae7b60d41a51c53d294baea916ccf5b53be89a7894f524c62158a29d1b7164`.
+- Actual after-execute-return receipt SHA256:
+  `e3e76a632fde3dd9bbfe2f9e9babac7628f59c154fa764752048caf7e2febefc`.
+- Independent **metadata-only** inspection SHA256:
+  `6b2f74d1d70f081dcd86658ba8c6e6a09a4e5f3fa8a6fab29a735007bbc97d60`.
+
+The metadata inspector does not independently recompute physical fields or
+decode the result arrays. It does not supply a missing outer operating-system
+exit/PID-image receipt. Fresh all-230,400 physical checks, all-12,000 native
+execution, both-language plots and the original 1,800 EPS-sample comparison
+remain pending. Figure 8's ordinates are **linear absolute SNR**, not dB or a
+renormalized curve. Reference fitting and winner reassignment are prohibited.
+
+This checkpoint intentionally keeps these pending gates false.
