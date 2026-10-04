@@ -8,6 +8,24 @@ production banks are permitted.
 
 ## Actual newly completed numerical scopes
 
+The full MIS renderer now independently checks metadata coverage of every
+original6000-start MIS/SMS/reference bank before creating its output folder.
+The legacy aggregate success flag describes only a selected best start and
+cannot bypass capped, omitted, duplicate or unverified start summaries.
+The [actual saved complete Python Fig7 replay](validation/mis-summary-population-gate-v2/README.md)
+passes all12000 summary slots and a fresh render; fifteen deliberately corrupted
+versions are rejected. The guard additionally binds maximum-score selection,
+earliest exact ties, selected plotting scalars and declared final tolerances;
+generic-curve scope cannot bypass it. Analytical panels with numerical
+comparators still require every comparator's full original start population.
+RIS target scalar arrays must cover every target, and continuous values must
+match their selected target banks. This is
+a coverage/stop-field guard, not a new independent endpoint, runtime/RNG,
+physical-model or original-reference certificate. RIS aggregate-only flags
+are also rejected until transparent complete per-target start banks are
+provided. Quantized RIS physical-state checks remain separate and unverified.
+Existing scientific computations and older frozen evidence are unchanged.
+
 The new [native communication Fig7 preflight](validation/mis-communications-native-fig7-preflight-v2/README.md)
 retains actual MIS1/SMS1 full original-control starts and their34 own-mu
 endpoint states. Source-transparent initial/final/history/raw-PR/stop data,

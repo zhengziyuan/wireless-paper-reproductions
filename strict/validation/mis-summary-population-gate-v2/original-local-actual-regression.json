@@ -1,0 +1,137 @@
+{
+  "scope": "actual_full12000_saved_Python_Fig7_summary_and_renderer_regression_only",
+  "version": 3,
+  "source_result_sha256": "60de36525296282ad6c6c7071619e6e6561c2c4afaf2eba4f5434e933eced1e0",
+  "inspected_source_sha256": {
+    "work\\mis-summary-population-gate-v1\\audit_actual_gate_v3.py": "49f5366547faf599fc22dbcfdf60a682355138c14ca43186dd0f0631027829ef",
+    "wireless-paper-reproductions\\strict\\mis_population_evidence.py": "26237e7617fccc4721e444a3e1a394cdd0665459d8effeabc64bf73e4bd0c3c1",
+    "wireless-paper-reproductions\\strict\\render_figure.py": "70bd48ac3dfc974c08df21eaf9845ed9dc6bc37401c20d2fc922855c9e5b3322",
+    "wireless-paper-reproductions\\strict\\test_mis_population_evidence.py": "cb27e780bc22852b224ccb78632db1c9dec690d2704b695a41384352d0b5b652",
+    "wireless-paper-reproductions\\strict\\test_figures.py": "0c77c45f2eb23343caf07c756419a7371777a073b3f8746fbec75214294d2a08",
+    "wireless-paper-reproductions\\strict\\mis-communications\\figures.json": "2463594c5e4d85980e15eb6b2baf2465cd6962ad49df616f96f3899db59ef487",
+    "work\\full-paper-banks\\mis-communications-fig7-axis-corrected-20261003\\full-result-python.json": "60de36525296282ad6c6c7071619e6e6561c2c4afaf2eba4f5434e933eced1e0"
+  },
+  "all_six_numerical_package_files_byte_unchanged": true,
+  "protected_numerical_file_count": 253,
+  "checked_start_summaries": 12000,
+  "all_actual_summary_gates_passed": true,
+  "actual_negative_control_count": 15,
+  "negative_controls": [
+    {
+      "mutation": "hidden_cap",
+      "rejected": true,
+      "message": "Capped, failed or unverified start6000: point0/MIS"
+    },
+    {
+      "mutation": "missing_start",
+      "rejected": true,
+      "message": "All6000 start summaries required: point0/MIS"
+    },
+    {
+      "mutation": "duplicate_start",
+      "rejected": true,
+      "message": "Duplicate, missing or invalid start identifiers: point0/MIS"
+    },
+    {
+      "mutation": "missing_SMS",
+      "rejected": true,
+      "message": "Missing full start-bank evidence: point0/SMS"
+    },
+    {
+      "mutation": "false_final_residual",
+      "rejected": true,
+      "message": "Capped, failed or unverified start6000: point0/MIS"
+    },
+    {
+      "mutation": "false_best_score",
+      "rejected": true,
+      "message": "Selected-start summary and provenance disagree: point0/MIS"
+    },
+    {
+      "mutation": "false_bool_status",
+      "rejected": true,
+      "message": "Capped, failed or unverified start6000: point0/MIS"
+    },
+    {
+      "mutation": "nonmaximum_selected",
+      "rejected": true,
+      "message": "Selected-start summary and provenance disagree: point0/MIS"
+    },
+    {
+      "mutation": "wrong_plot_scalar",
+      "rejected": true,
+      "message": "Selected-start summary and provenance disagree: point0/MIS"
+    },
+    {
+      "mutation": "floating_start_count",
+      "rejected": true,
+      "message": "All6000 start summaries required: point0/MIS"
+    },
+    {
+      "mutation": "floating_settings_count",
+      "rejected": true,
+      "message": "Original6000-start population required"
+    },
+    {
+      "mutation": "relaxed_stored_tolerance",
+      "rejected": true,
+      "message": "Capped, failed or unverified start6000: point0/MIS"
+    },
+    {
+      "mutation": "boolean_best_score",
+      "rejected": true,
+      "message": "Missing selected-start provenance: point0/MIS"
+    },
+    {
+      "mutation": "nonselected_communication_metric_mismatch",
+      "rejected": true,
+      "message": "Capped, failed or unverified start1: point0/MIS"
+    },
+    {
+      "mutation": "MIS_generic_curve_scope_bypass",
+      "rejected": true,
+      "message": "MIS figures require the original complete population; generic curve scope cannot bypass this gate"
+    }
+  ],
+  "actual_complete_saved_bank_rendered_with_new_gate": true,
+  "plot_receipt_sha256": "f60cf0a4e008a5a0fdaccb9ed8ae242e618adf2566877755a759377840605d40",
+  "summary_evidence": {
+    "scope": "complete_MIS_start_summary_coverage_and_stored_stop_fields_only",
+    "required_start_banks": 2,
+    "checked_start_summaries": 12000,
+    "all_summary_coverage_and_stop_fields_verified": true,
+    "banks": [
+      {
+        "bank": "point0/MIS",
+        "required_starts": 6000,
+        "checked_start_summaries": 6000,
+        "all_summary_domain_and_stop_gates_passed": true,
+        "selected_original_maximum_and_exact_tie_rule_verified": true,
+        "selected_plot_scalars_match_start_summary": true,
+        "final_tolerance_belongs_to_declared_schedule": true,
+        "every_start_full_epsilon_history_independently_verified": false
+      },
+      {
+        "bank": "point0/SMS",
+        "required_starts": 6000,
+        "checked_start_summaries": 6000,
+        "all_summary_domain_and_stop_gates_passed": true,
+        "selected_original_maximum_and_exact_tie_rule_verified": true,
+        "selected_plot_scalars_match_start_summary": true,
+        "final_tolerance_belongs_to_declared_schedule": true,
+        "every_start_full_epsilon_history_independently_verified": false
+      }
+    ],
+    "independent_endpoint_gradients_or_physical_model_verified": false,
+    "quantized_RIS_states_or_physical_metrics_independently_verified": false,
+    "source_runtime_RNG_identity_verified": false,
+    "original_figure_agreement_verified": false,
+    "full_reproduction_certified": false
+  },
+  "elapsed_seconds": 5.687532200012356,
+  "fresh_optimizer_or_MC_bank_executed": false,
+  "independent_physical_or_source_runtime_certificate_created": false,
+  "native_MATLAB_new_gate_dispatch_tested": false,
+  "original_curve_agreement_newly_claimed": false,
+  "all_paper_reproduction_certified": false
+}

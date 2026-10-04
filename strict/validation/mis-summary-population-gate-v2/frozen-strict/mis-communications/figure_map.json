@@ -1,0 +1,162 @@
+{
+  "paper_id": "mis-communications",
+  "source_url": "https://doi.org/10.1109/TWC.2025.3621083",
+  "source_contract": "Author-supplied final R2 TeX; illustrative/hardware figures 1-6 are not numerical simulations and measurement data were not supplied.",
+  "ordinate_field": "points[].result.best_feasible.metrics.min_binary_snr",
+  "ordinate_transform": "identity (linear absolute SNR)",
+  "figures": [
+    {
+      "id": "fig7",
+      "sources": [
+        "21simul.eps"
+      ],
+      "source_locator": "Section Numerical Results, two-element case study",
+      "source_correction_id": "COMM-GEOMETRY-FIG7",
+      "source_ms1_shape": [2,1],
+      "figure_consistent_ms1_shape": [1,2],
+      "kind": "beampattern_lines",
+      "point_count": 1,
+      "x": "beampattern_samples.azimuth_deg",
+      "x_range": [
+        -90,
+        90
+      ],
+      "y": "beampattern_samples.pattern_snr[:,u]",
+      "y_transform": "identity",
+      "curves": "U=2 MIS patterns, SMS.beampattern_samples U=1, user angular markers",
+      "user_azimuth_deg": [
+        -60,
+        -20,
+        20,
+        60
+      ],
+      "angle_evidence": "EPS tick positions (-60,-20,20,60) match the four colored circular markers. Adjacent separation is 40 degrees; the text saying 20 degrees is inconsistent.",
+      "required_output": "Implemented model-evaluated full-angle arrays; no original curve samples used as simulation inputs."
+    },
+    {
+      "id": "fig8",
+      "sources": [
+        "22simul.eps"
+      ],
+      "kind": "beampattern_lines",
+      "point_count": 1,
+      "x": "beampattern_samples.azimuth_deg",
+      "x_range": [
+        -90,
+        90
+      ],
+      "y": "beampattern_samples.pattern_snr[:,u]",
+      "y_transform": "identity",
+      "curves": "All U=4 MIS patterns, SMS U=1, four user markers",
+      "user_azimuth_deg": [
+        -60,
+        -20,
+        20,
+        60
+      ]
+    },
+    {
+      "id": "fig9",
+      "sources": [
+        "normalized_heatmap_{6,8,10}x{6,8,10}_K{8,16,32}.eps"
+      ],
+      "kind": "heatmap_3_by_3",
+      "point_count": 600,
+      "panel_groups": [
+        "configuration.ms1[0]",
+        "configuration.K"
+      ],
+      "panel_order": "rows Mside=6,8,10; columns K=8,16,32",
+      "x": "configuration.ms2[1] (Nc)",
+      "y": "configuration.ms2[0] (Nr)",
+      "color": "result.best_feasible.metrics.min_binary_snr / SMS.best_feasible.metrics.min_binary_snr",
+      "color_transform": "identity ratio, not dB",
+      "panel_point_counts": [
+        36,
+        36,
+        36,
+        64,
+        64,
+        64,
+        100,
+        100,
+        100
+      ]
+    },
+    {
+      "id": "fig10",
+      "sources": [
+        "total64.eps",
+        "total100.eps",
+        "total144.eps"
+      ],
+      "kind": "three_curve_panels",
+      "point_count": 108,
+      "panel_groups": [
+        "configuration.total"
+      ],
+      "x": "product(configuration.ms2)",
+      "y": "result.best_feasible.metrics.min_binary_snr",
+      "curve_groups": [
+        "configuration.K",
+        "configuration.scheme"
+      ],
+      "curves_per_panel": 6,
+      "x_values_by_total": {
+        "64": [
+          0,
+          8,
+          16,
+          24,
+          32
+        ],
+        "100": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "144": [
+          0,
+          12,
+          24,
+          36,
+          48,
+          60,
+          72
+        ]
+      },
+      "note": "SMS baseline is the equivalent square aperture of exactly total elements; zero-MS2 points are retained."
+    },
+    {
+      "id": "fig11",
+      "sources": [
+        "K5.eps"
+      ],
+      "kind": "multi_curve",
+      "point_count": 48,
+      "x": "configuration.K",
+      "x_values": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16
+      ],
+      "curve_groups": [
+        "configuration.ms1",
+        "product(configuration.ms2)"
+      ],
+      "curves": "Six MIS curves; separate same-aperture 1D/2D SMS curves. Dynamic RIS is the analytic refSNR*M^2 upper-bound baseline.",
+      "y": "result.best_feasible.metrics.min_binary_snr",
+      "SMS_y": "SMS.best_feasible.metrics.min_binary_snr",
+      "RIS_y": "dynamic_RIS.minimum_snr"
+    }
+  ],
+  "validity": "Render actual evaluated curves only. A missing/failed/nonconverged point must be omitted or visibly marked diagnostic, never copied, interpolated, fit to an original curve, or certified as reproduced."
+}

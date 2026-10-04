@@ -21,9 +21,17 @@ jobs:
       - run: python strict/rotatable-isac/test_metadata.py
       - run: python strict/two-timescale-ma/test_metadata.py
       - run: python strict/test_validation.py
+      - name: All MIS start-summary slots (not independent physical certification)
+        run: python strict/test_mis_population_evidence.py
+      - name: Actual saved full12000 MIS summaries and renderer (not fresh optimization)
+        run: python strict/validation/mis-summary-population-gate-v2/audit_saved_bank.py --output-dir strict/outputs/ci-mis-summary-replay
       - run: python -m unittest discover -s strict -p test_figures.py
       - run: python strict/test_satellite_figures.py
       - run: python strict/test_reproduction_plans.py
+      - name: Parameter-table route and source guards (metadata only)
+        run: python strict/test_table_reproduction.py
+      - name: Source-qualified parameter mappings (not full figure certification)
+        run: python strict/validation/parameter-tables-source-qualified-v1/audit_tables.py --output strict/outputs/ci-parameter-tables/actual-canonical-parameter-replay.json
       - run: python strict/test_hotspot_element_count.py
       - run: python strict/test_hotspot_statistical_reference.py
       - run: python strict/test_matlab_bank_render.py
@@ -56,3 +64,13 @@ jobs:
         with:
           name: original-algorithm-component-evidence-not-full-reproduction
           path: strict/outputs/ci-components/
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: parameter-table-mappings-not-full-figure-certification
+          path: strict/outputs/ci-parameter-tables/
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: saved-full12000-MIS-summary-replay-not-physical-or-full-reproduction
+          path: strict/outputs/ci-mis-summary-replay/

@@ -57,6 +57,8 @@ def plan(paper, figure, settings_path=None):
         else:
             result.update(kind=item["kind"], runnable=True, specification=item,
                           executor="run.py / corresponding MATLAB engine")
+            result['full_plot_start_evidence_policy']='All original start summaries and required baseline banks; legacy selected-best success alone is rejected before rendering. Summary checks are not independent endpoint/source/RNG certificates.'
+            result['native_central_entry_is_recorded_all_start_endpoint_wrapper']=False
             if paper == "mis-sensing":
                 result["scientific_branch"] = result["settings"].get("solver_correction_id", selected_settings.stem)
                 result["normalization_contract"] = result["settings"].get("normalization_contract")

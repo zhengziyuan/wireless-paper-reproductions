@@ -99,6 +99,33 @@ class FigureTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'exact original Fig3'):
                 render(path,folder/'out',figure=5)
 
+    def test_selected_best_flags_cannot_render_hidden_capped_population(self):
+        from test_mis_population_evidence import documents
+        data,_=documents()
+        inventory=json.loads((Path(__file__).parent/'mis-communications'/'figures.json').read_text())
+        original=next(item for item in inventory if item['id']=='fig7')
+        data.update(figure='fig7',scope='full_size_full_budget_independent_reimplementation',
+                    full_figure_execution_complete=True,overall_full_success=True)
+        data['points'][0]['configuration']=original['points'][0]
+        data['points'][0]['result']['all_start_summaries'][-1]['solver_status']['inner_iteration_cap_exits']=1
+        with tempfile.TemporaryDirectory() as tmp:
+            path=Path(tmp)/'hidden-failure.json';out=Path(tmp)/'out'
+            path.write_text(json.dumps(data),encoding='utf-8')
+            with self.assertRaisesRegex(ValueError,'start6000'):
+                render(path,out)
+            self.assertFalse(out.exists())
+
+    def test_generic_curve_scope_cannot_bypass_MIS_population_gate(self):
+        for paper in ('mis-communications','mis-sensing'):
+            with self.subTest(paper=paper), tempfile.TemporaryDirectory() as tmp:
+                source=Path(tmp)/'bypass.json';out=Path(tmp)/'out'
+                source.write_text(json.dumps(dict(paper_id=paper,figure='fig7',
+                    scope='independent_simulation_curves',data_kind='independent_simulation_curves',
+                    full_figure_execution_complete=True,overall_full_success=True,points=[])),encoding='utf-8')
+                with self.assertRaisesRegex(ValueError,'generic curve scope'):
+                    render(source,out)
+                self.assertFalse(out.exists())
+
 
 if __name__ == "__main__":
     unittest.main()

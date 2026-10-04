@@ -307,7 +307,7 @@
       ],
       "curves": "MIS RALM and RIS continuous/1-bit/2-bit",
       "source_model": "Mside10,Nside8,Kphi2,Ktheta2",
-      "source_normalization_discrepancy": "At P30dBm and reference-73.88dB, Eq9/11 gives every MIS/RIS SINR <=6.12dB. Original RIS1.eps uses a 0..30dB axis y337..10; MIS atP30 has y100.797, i.e.21.6700dB, 1bit17.6600dB, 2bit23.8500dB and continuous25.6900dB. All exceed the source-model upper bound. No fitted gain correction is applied."
+      "source_normalization_discrepancy": "The earlier6.12dB bound atP30dBm/reference-73.88dB is conditional on the declared inverse-W reference and processing gain1. The manuscript does not identify the reference power unit or raw-versus-processed noise convention; the unconditional claim that every original curve violates the paper model is withdrawn. Original RIS1.eps ordinates are separately extracted references, not recovered simulation inputs. An inferred factor100 contract is disclosed separately and is not certified as the author's actual processing normalization. No fitted gain or curve correction is applied."
     },
     {
       "id": "fig16",
