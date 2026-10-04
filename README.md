@@ -15,6 +15,12 @@ It distinguishes proven source errors, reconstruction bugs, numerical repairs,
 full-sized cases and unfinished full banks. Neither aggregate dual agreement
 nor a completed single case certifies all published figures.
 
+The [full-scene investigation checkpoint](strict/validation/full-scene-audit-checkpoint12-v1/README.md)
+adds an actual full-size ISAC raw-PR non-ascent failure, a same-model numerical
+cancellation repair checked at all91 cooperative endpoints, and qualifications
+to MA stopping/historical-input and saved-benchmark evidence. These actual
+findings do not change the incomplete full-reproduction status.
+
 ## Current original-algorithm implementations — work in progress
 
 | Package | Implemented original method | Outstanding full-reproduction work |

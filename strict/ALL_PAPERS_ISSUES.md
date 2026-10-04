@@ -524,6 +524,33 @@ retain all full M4/N36/K2/A66 first-RCG-block attempts: three meet the original
 precision witnesses pass. This is **not** a complete-scene/500-bank repair;
 the failure is not discarded and these controls are not promoted to production.
 
+## Actual full-scene investigation checkpoint 12
+
+The [source-qualified checkpoint12 findings](validation/full-scene-audit-checkpoint12-v1/README.md)
+separate an actual original first-RIS cold non-ascent at iteration19 from the
+earlier exact toy counterexample and the different later-block4614 failure.
+All249 stored events/83 checks pass, but original stop is false; all80 original
+diagnostic alphas fail. Positive raw beta3.19980315315 does not prevent the
+negative slope-11.3174949281. Initial/terminal MP physical witnesses are finite
+precision, not an all-intermediate-state or interval certificate. The original
+W10000 cap remains; explicit direction-erratum/full W cold work is separate.
+
+Cooperative SatCom's same-model positive conditional/Wick evaluation now passes
+all91 retained full-context endpoints/all8190 gradient reporting components at
+unchanged tolerances. This diagnoses cancellation in our double implementation,
+not an author-model error. All3712 saved arrays roundtrip exactly. Native91
+fixture readback/MP-stop checks are actual, but native physics, fresh complete183
+trajectories and historical curve recovery are not inferred or certified.
+
+MA's prior “original/source stop” fields validate the declared full-sweep global
+Eq13/Eq37 interpretation. Supplied R2 refers to local minorants; historical stop
+quantity/trajectory remains unidentifiable, even though the5e-5 threshold is
+retained. There is no verified gain/noise fix that follows from the figure gap.
+An actual all300 saved-evidence inventory finds all five1000-rate families but
+no per-draw FPA W/QT/stop/KKT records. Aggregate zero cap counts are insufficient
+for those missing checks; new complete original cold recording is separate.
+No missing historical state is backfilled or old false flag promoted.
+
 Machine-readable release status is [status.json](status.json). Complete-figure
 plans and independent comparisons are documented in
 [FIGURE_REPRODUCTION.md](FIGURE_REPRODUCTION.md). None of the partial evidence
