@@ -1,0 +1,29 @@
+{
+  "scope": "ACTUAL exact integer/rational mathematical component, NOT a reduced or complete paper reproduction",
+  "source_sha256": "01dc7f2c908c9e9571f22a4b2b5b145347b542bae531d0c67eb7a807dd9a8b7e",
+  "actual_test_count": 6,
+  "all_tests_pass": true,
+  "exact_counterexample": {
+    "objective_on_unit_circle": "-Re(theta)^2",
+    "source_amplitude": "1+conj(theta)",
+    "pd": 1,
+    "iota": 2,
+    "rho": 1,
+    "communication_power": 0,
+    "initial_alpha": 1,
+    "Armijo_c": "1/10000",
+    "first_original_Armijo_gain_exact": "800/1070701",
+    "first_original_Armijo_requirement_exact": "1/255025",
+    "old_gradient_norm_squared_exact": "400/10201",
+    "second_phase_gradient_coordinate_exact": "-203940/1070701",
+    "second_raw_PR_slope_strict_rational_upper": "-399237035036400/12152993093482001",
+    "strict_integer_square_comparison": "10601 < 103^2",
+    "first_original_Armijo_pass": true,
+    "second_raw_PR_direction_provably_non_ascent": true,
+    "raw_PR_clipped_or_direction_restarted": false,
+    "physical_scene_or_optimizer_executed": false,
+    "actual_iteration4614_classified_non_ascent": false
+  },
+  "optimizer_RNG_MATLAB_or_new_MC_called": false,
+  "actual_fullscene_gradient_stop_or_original_figure_certified": false
+}

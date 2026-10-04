@@ -19,6 +19,8 @@ jobs:
       - run: python -m pip install -r strict/requirements.txt
       - run: python strict/validate_components.py --output-dir strict/outputs/ci-components
       - run: python strict/rotatable-isac/test_metadata.py
+      - name: Exact raw-PR ascent counterexample (not a paper-scene run)
+        run: python strict/validation/rotatable-isac-raw-pr-scope-v1/test_exact_raw_pr.py --output strict/outputs/ci-raw-pr-scope/actual-exact-component.json
       - run: python strict/two-timescale-ma/test_metadata.py
       - run: python strict/test_validation.py
       - name: All MIS start-summary slots (not independent physical certification)
@@ -59,6 +61,11 @@ jobs:
       - run: python strict/hotspot-satcom/test_phase_method.py
       - run: python strict/hotspot-satcom/test_source_contract.py
       - run: python strict/hotspot-satcom/verify_statistical.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: exact-raw-pr-theory-scope-components-not-scene-reproduction
+          path: strict/outputs/ci-raw-pr-scope/
       - uses: actions/upload-artifact@v4
         if: always()
         with:
