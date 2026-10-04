@@ -1,0 +1,83 @@
+{
+  "schema": "ACTUAL_EXACT_RATIONAL_PROJECTED_CURVE_KINK_NEGATIVE_CONTROL_V1",
+  "all_exact_checks_pass": true,
+  "exact_check_count": 13,
+  "checks": [
+    {
+      "name": "complete_projection_both_branches",
+      "passed": true,
+      "exact_reason": "Interior branch Y is feasible; saturated branch threshold alpha-1 has positive parts (0,1) for every alpha>=1."
+    },
+    {
+      "name": "genuine_feasible_initial_descent",
+      "passed": true,
+      "exact_reason": "grad f=(0,-1,1/2); d=(-1,1,1); exact inner product is -1/2."
+    },
+    {
+      "name": "continuous_bounded_below_curve",
+      "passed": true,
+      "exact_reason": "phi=-alpha/2 on [0,1]; phi=alpha/2-1 on [1,infinity); minimum is exactly -1/2 at alpha=1."
+    },
+    {
+      "name": "every_smooth_positive_alpha_fails_strong_curvature",
+      "passed": true,
+      "exact_reason": "The only two smooth slopes are -1/2 and +1/2, each strictly greater in magnitude than 1/20; this covers intervals, not a sampled alpha grid."
+    },
+    {
+      "name": "kink_is_not_an_ordinary_derivative",
+      "passed": true,
+      "exact_reason": "At alpha=1 the left and right derivatives disagree; an ordinary derivative does not exist."
+    },
+    {
+      "name": "current_positive_support_branch_fails_at_kink",
+      "passed": true,
+      "exact_reason": "At X=(0,1), active=X>0 gives mean=dX2=1 and X velocity=(0,0); eta velocity=1 leaves branch slope +1/2."
+    },
+    {
+      "name": "armijo_can_hold_despite_missing_strong_curvature",
+      "passed": true,
+      "exact_reason": "alpha=1 satisfies exact Armijo: -1/2 <= -1/20000."
+    },
+    {
+      "name": "generalized_derivative_is_a_different_rule",
+      "passed": true,
+      "exact_reason": "The kink generalized interval contains zero, but using it would change the existing single-branch derivative rule; it is not silently enabled."
+    },
+    {
+      "name": "exact_rational_example_1/4",
+      "passed": true,
+      "exact_reason": "phi(1/4)=-1/8; this example supplements, not replaces, the all-alpha branch proof."
+    },
+    {
+      "name": "exact_rational_example_1/2",
+      "passed": true,
+      "exact_reason": "phi(1/2)=-1/4; this example supplements, not replaces, the all-alpha branch proof."
+    },
+    {
+      "name": "exact_rational_example_1",
+      "passed": true,
+      "exact_reason": "phi(1)=-1/2; this example supplements, not replaces, the all-alpha branch proof."
+    },
+    {
+      "name": "exact_rational_example_3/2",
+      "passed": true,
+      "exact_reason": "phi(3/2)=-1/4; this example supplements, not replaces, the all-alpha branch proof."
+    },
+    {
+      "name": "exact_rational_example_2",
+      "passed": true,
+      "exact_reason": "phi(2)=0; this example supplements, not replaces, the all-alpha branch proof."
+    }
+  ],
+  "counterexample_scope": "smooth_affine_ambient_objective_on_closed_simplex_times_R; bounded_below_projected_line_curve",
+  "implication": "smooth-curve strong-Wolfe existence cannot be invoked for this piecewise-smooth projection using one positive-support derivative",
+  "attribution": "limitation of our disclosed corrected strong-curvature branch; not a claim that the printed author algorithm used strong Wolfe",
+  "source_paper_algorithm_executed": false,
+  "wireless_model_or_optimizer_executed": false,
+  "observed_cause_of_actual_capped_MIS_paths_established": false,
+  "new_stop_slack_or_algorithm_rule_enabled": false,
+  "all6000_original_starts_certified": false,
+  "original_figure_reproduction_certified": false,
+  "actual_verifier_sha256_before": "df6746cab8e47625877383f2daa9d8684dbee4faa43eda8a60dccff881c39ae3",
+  "actual_verifier_sha256_after": "df6746cab8e47625877383f2daa9d8684dbee4faa43eda8a60dccff881c39ae3"
+}
