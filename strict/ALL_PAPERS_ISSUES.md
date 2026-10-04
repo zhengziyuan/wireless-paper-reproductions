@@ -597,6 +597,28 @@ whole six-paper reproduction. The byte-bound support README's old preparation
 paragraph is retained as history; the linked release receipt records the later
 actual successful execution. Existing failures and interrupted outputs remain.
 
+## MA Figure 5/6 process-loss and recovery boundary
+
+A fresh5 October source/metadata inspection identified the original Python
+Figure5 and6 banks as separate9-power-point by100-geometry campaigns, each
+requiring900 slots and1000 full NLoS draws per slot (kappa100 and6 respectively).
+Their last published progress records are259 and139, not scientific PASS
+counts. Both producer execution summaries are missing and no current process
+matches the original Python executor or Figure6 storage driver. Completion
+and the cause of process loss are therefore unknown; OOM, optimizer failure
+or failure of every slot are not inferred. The older native Figure5 progress74
+does not establish a current Python task.
+
+Blindly re-running the historical executor would overwrite old progress and
+some non-reusable failed result files. A distinct evidence-preserving I/O-only
+recovery adapter is being reviewed: each old slot must pass the original full
+payload/source/runtime reuse gate before it can be reused; every missing,
+failed or mismatched slot goes to a NEW attempt target, preserving old bytes.
+All900 identities, original1000 draws, algorithms, controls and thresholds
+remain required. Recovery is not yet launched or certified by this note.
+Read-only original-route/source/formal-metadata receipt SHA256:
+`1846da58155bcdd9d8599baa5887036fdaaa0149e336aec16e3a60c99fd12a7b`.
+
 Machine-readable release status is [status.json](status.json). Complete-figure
 plans and independent comparisons are documented in
 [FIGURE_REPRODUCTION.md](FIGURE_REPRODUCTION.md). None of the partial evidence
