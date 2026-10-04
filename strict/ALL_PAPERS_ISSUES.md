@@ -551,6 +551,23 @@ no per-draw FPA W/QT/stop/KKT records. Aggregate zero cap counts are insufficien
 for those missing checks; new complete original cold recording is separate.
 No missing historical state is backfilled or old false flag promoted.
 
+## Actual complete200 saved-dual runnable release
+
+The [complete MA Figure 3 saved-dual package](validation/ma3-complete200-release-v1/README.md)
+has now passed the actual fresh single-command route: verify all235 immutable
+support/archive pins, unpack all1044 files from all eight parts, independently
+audit all200 cases without filtering failures, and render both language-specific
+figures. The actual fresh audit, whole-byte interval and command-completion
+receipts are published with both plotted curves. Each language's own saved
+physical states, original stopping criteria and coordinate certificates pass.
+
+This closes the saved-result package's runnable-release gate, not a new native
+optimization, new Monte Carlo ensemble, recovery of unspecified historical
+settings, close original-figure agreement, global nonconvex optimality or the
+whole six-paper reproduction. The byte-bound support README's old preparation
+paragraph is retained as history; the linked release receipt records the later
+actual successful execution. Existing failures and interrupted outputs remain.
+
 Machine-readable release status is [status.json](status.json). Complete-figure
 plans and independent comparisons are documented in
 [FIGURE_REPRODUCTION.md](FIGURE_REPRODUCTION.md). None of the partial evidence
