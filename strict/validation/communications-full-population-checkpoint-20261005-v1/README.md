@@ -64,9 +64,71 @@ Actual closed artifact identifiers:
 
 The metadata inspector does not independently recompute physical fields or
 decode the result arrays. It does not supply a missing outer operating-system
-exit/PID-image receipt. Fresh all-230,400 physical checks, all-12,000 native
-execution, both-language plots and the original 1,800 EPS-sample comparison
-remain pending. Figure 8's ordinates are **linear absolute SNR**, not dB or a
+exit/PID-image receipt. Fresh all-230,400 physical checks and all-12,000 native
+execution remain pending. The selected-state both-language plots and original
+1,800 EPS-sample comparison are now closed as diagnostics, as described below;
+original-curve agreement has failed. Figure 8's ordinates are **linear absolute SNR**, not dB or a
 renormalized curve. Reference fitting and winner reassignment are prohibited.
 
-This checkpoint intentionally keeps these pending gates false.
+The supplied R2 source does not report 6,000 starts per scheme, the random
+seed, the exact initial-mu grid, or the final-mu cutoff. Those controls are
+OURS, explicitly unreported settings. They remain fixed across the complete
+current campaign, but are not labelled the author's exact historical budget
+or a guarantee of a global optimum. The original manuscript instead calls
+for random initialization and multiple equally spaced initial-mu candidates,
+then selecting the best returned value; Figure 8 is a case study.
+
+## Figure 8: closed full-grid dual-language diagnostic, not figure PASS
+
+The maximum-score/earliest-exact-tie selected states are MIS3018 and SMS53;
+they were not chosen by agreement with the reference. Python and MATLAB
+separately evaluated both complete 361-point azimuth cuts, all full-user
+metrics, and all 1,800 original EPS samples. An independent comparison of
+all 7,945 corresponding serialized SNR values passes the unchanged `5e-14`
+metric gate. Its maximum absolute language difference is
+`9.71445146547012e-17`. No fitting, interpolation, label reassignment or
+ordinate normalization was used.
+
+Despite that language agreement, the maximum absolute errors against the
+original four MIS curves are `0.0574852836135173`,
+`0.14892601775862305`, `0.13395426044749947` and
+`0.11726465446821703` linear SNR. The SMS error is
+`1.0332192650203131e-6`. The MIS mismatch therefore remains a real unresolved
+historical-figure requirement; agreement between our two evaluators does not
+make the original plot correct or establish the source of its difference.
+The original author phase, initialization and solver trajectory are not
+available in the saved graphics object.
+
+Closed diagnostic identities:
+
+- Python full-grid diagnostic result SHA256:
+  `12107effd20707ced14ebb60bfd63b53009399ea1311de12d5bb000255a4037d`.
+- Native full-grid diagnostic result SHA256:
+  `01ae07b64f7a306c3f4f01d8c24de0939777f6f8f6d6e19b05e890c022225a75`.
+- Independent all-7,945 comparison SHA256:
+  `fc46d4853d496e04cf1b7f696ec21826c75381ac87f0afb793c3f19d46209f7b`.
+
+The native full-grid diagnostic's owned launcher closed with exit 0 and no
+exception. The comparison receipt has no exception and unchanged bound bytes;
+its calling terminal's OS exit was not captured, so no missing exit is invented.
+These are selected-state field/plot diagnostics, not a native full-12,000
+optimizer execution, an all-230,400 physics certificate or original-figure PASS.
+
+## Native typed-record checker correction
+
+The older closed 768-packet native component ran successfully but its host
+checker rejected a scalar MATLAB structure because it incorrectly required
+`isreal(struct)` to be true. That is OUR metadata-checker error. The corrected
+strict read-only recensus checks all 768 packets and all 1,536 unchanged raw
+MAT/JSON files, without a new native execution, shape relaxation or scientific
+tolerance change. Its actual independent owned route closed with exit 0,
+no exception and unchanged source/raw/journal bytes. The original failed owner
+receipt remains preserved.
+
+- Corrected full-768 recensus completion SHA256:
+  `a50570dcb5d4e1ca8336f3a5d6446e54486d9d0975d499d67e8c028983d08187`.
+- Actual independent durable-parent completion SHA256:
+  `128b2de33a09147de9a349c3fe68f0e0bc07422f36c3d8c412bcc66bcbd9866b`.
+
+This component correction does not certify a full native 12,000-start bank.
+This checkpoint intentionally keeps the remaining figure gates false.
