@@ -29,6 +29,14 @@ stationarity gates), and an unfitted plot from the complete stored900 MA bank.
 Each result has an explicit scope; none certifies all papers or all original
 figures. Unexpectedly interrupted campaigns retain their data and failure flags.
 
+The [complete MA Figure 3 verification bundle](strict/validation/ma3-complete200-release-v1/README.md)
+now has an actually completed fresh one-command test: all200 saved dual-language
+cases passed independent physical, original-stop and coordinate-certificate
+checks, followed by both Python/MATLAB plots. All1044 archived files are kept in
+eight complete parts. This is a runnable saved-result verification package, not
+a new optimizer/Monte Carlo run or a claim of close historical figure agreement.
+The whole six-paper reproduction remains incomplete.
+
 ## Current original-algorithm implementations — work in progress
 
 | Package | Implemented original method | Outstanding full-reproduction work |

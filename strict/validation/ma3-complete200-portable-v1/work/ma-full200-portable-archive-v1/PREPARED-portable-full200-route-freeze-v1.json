@@ -1,0 +1,32 @@
+{
+  "scope": "Prepared routes and actual light stdlib safety/static tests; NOT full8 archive/full200 re-audit/figure execution",
+  "prepared_sources_sha256": {
+    "freeze_preparation_v1.py": "9fe45867c500f51b6c8a40ac3b0cd4e2ddbb96ec93fe7c9b5628a1ff784ae350",
+    "full_archive_v1.py": "45ad8248b1c96be96f84a72ba6475d5702387d39fd4f8744d578a31674558757",
+    "portable_numeric_route_v1.py": "aef5c11e22e3f37cbbec02d57be4dd73dc7437ff3fd470b42127e4154e7a44a3",
+    "PREDECLARED_PORTABLE_FULL200_ARCHIVE_PLAN_V1.md": "c86eaf66bcd99f5fbcc29d07fa68dd3dbd5c85d0caa4d934307c7a3c3b0bc970",
+    "render_portable_Fig3_v1.py": "b4ab46674462878a153c84173ba46ffd514eb366fcd098ec6eda97959b0ea362",
+    "safe_archive_v1.py": "f5317c9b234d9e5e1799203f3c6b8d8695949095173dc36ebcb958fba8858852",
+    "size_roundtrip_pilot25_v1.py": "b0638bcb38fd19d3d058486621791f268be1f8f63fac14008bf9d6b059bc0d1c",
+    "test_safe_portable_v1.py": "55097a0ca5f0e38e401e50932313e36ac7f152294d3a98350630c125ec429644"
+  },
+  "all_prepared_source_bytes_before_after_unchanged": true,
+  "actual_stdlib_tests_run": 16,
+  "actual_stdlib_tests_all_pass": true,
+  "actual_test_output": "test_complete_metadata_fixture_only (test_safe_portable_v1.Safety.test_complete_metadata_fixture_only) ... ok\ntest_duplicate_case (test_safe_portable_v1.Safety.test_duplicate_case) ... ok\ntest_duplicate_or_swapped_slot (test_safe_portable_v1.Safety.test_duplicate_or_swapped_slot) ... ok\ntest_exact_record_types (test_safe_portable_v1.Safety.test_exact_record_types) ... ok\ntest_missing_baseline_raw (test_safe_portable_v1.Safety.test_missing_baseline_raw) ... ok\ntest_missing_sources_or_old88 (test_safe_portable_v1.Safety.test_missing_sources_or_old88) ... ok\ntest_no_write_on_failed_validation (test_safe_portable_v1.Safety.test_no_write_on_failed_validation) ... ok\ntest_numeric_suffix_exact_without_execution (test_safe_portable_v1.Safety.test_numeric_suffix_exact_without_execution) ... ok\ntest_oversize_part_or_changed_source_contract (test_safe_portable_v1.Safety.test_oversize_part_or_changed_source_contract) ... ok\ntest_partial_pilot_rejected (test_safe_portable_v1.Safety.test_partial_pilot_rejected) ... ok\ntest_pinned_index_hash (test_safe_portable_v1.Safety.test_pinned_index_hash) ... ok\ntest_prefix_collision (test_safe_portable_v1.Safety.test_prefix_collision) ... ok\ntest_roundtrip_and_existing_target_rejected (test_safe_portable_v1.Safety.test_roundtrip_and_existing_target_rejected) ... ok\ntest_size_or_decompressed_sha_rejected (test_safe_portable_v1.Safety.test_size_or_decompressed_sha_rejected) ... ok\ntest_symlink_archive_rejected (test_safe_portable_v1.Safety.test_symlink_archive_rejected) ... ok\ntest_traversal_and_windows_names (test_safe_portable_v1.Safety.test_traversal_and_windows_names) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 0.962s\n\nOK\n",
+  "numeric_suffix_literal_text_and_AST_proof": {
+    "literal_numeric_suffix_text_sha256": "71eb5fd75e0c188a4b9fe16f881303ca984b2ae6e3424df28e00b401bb5eccbb",
+    "original_numeric_AST_exactly_equal": true,
+    "new_numeric_oracle_body": false,
+    "changed_scope": "path/byte-freeze prelude only; original numeric suffix including every gate and summary retained"
+  },
+  "actual_first25_pilot_receipt_sha256": "a9b6f4bca7743c83098189cb57b8f3df59f7329e28c2ffa50cffa83473b68df6",
+  "actual_first25_compressed_bytes": 25179774,
+  "entire_original1044_byte_population_preserved_in_actual_pilot": true,
+  "full8_archive_created": false,
+  "portable_full200_numeric_reaudit_executed": false,
+  "portable_full_Fig3_executed": false,
+  "public_written_commit_push": false,
+  "new_optimizer_MATLAB_newMC_or_physics_called": false,
+  "numerical_libraries_imported": false
+}
