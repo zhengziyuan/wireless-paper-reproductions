@@ -21,6 +21,14 @@ cancellation repair checked at all91 cooperative endpoints, and qualifications
 to MA stopping/historical-input and saved-benchmark evidence. These actual
 findings do not change the incomplete full-reproduction status.
 
+The newer [checkpoint 13](strict/validation/full-scene-audit-checkpoint13-v1/README.md)
+adds actual all68 native analytical comparisons, an independent scalar audit of
+all7000 saved states in one complete MA instance, retained all183 cooperative
+failures, all24 high-precision ISAC terminal checks (including failed additional
+stationarity gates), and an unfitted plot from the complete stored900 MA bank.
+Each result has an explicit scope; none certifies all papers or all original
+figures. Unexpectedly interrupted campaigns retain their data and failure flags.
+
 ## Current original-algorithm implementations — work in progress
 
 | Package | Implemented original method | Outstanding full-reproduction work |
