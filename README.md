@@ -11,6 +11,10 @@ This is not the original private simulation source. Each paper has an explicit i
 中文说明：这里公开的是按论文理论重新编写的 MATLAB/Python 双实现，不是原作者私有仿真代码。核心检查、完整尺寸的调试实验与全部图表复现分开记录；通过核心检查不代表完整复现。所有尚未实现的公式、未收敛的运行和调试数值设置均明确列出，不用替代方法补位。
 
 The current correction/execution ledger is [all-paper issues](strict/ALL_PAPERS_ISSUES.md).
+The [MIS communications source-theory audit](strict/validation/mis-communications-line-search-theory-v1/README.md)
+adds runnable exact raw-PR and stationarity counterexamples, including a true
+MIS specialization. It does not change the algorithms or assign these generic
+theory limits as the cause of current full-scene failures.
 The [MA source-theory audit](strict/validation/two-timescale-ma-source-semantic-v1/README.md)
 adds exact, runnable counterexamples to two supplied-source claims, without
 changing the algorithms or presenting them as the cause of a curve discrepancy.

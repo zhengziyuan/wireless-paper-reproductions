@@ -11,6 +11,15 @@ single cases and component tests are recorded separately from complete figures.
 
 ## Verified issues and their disposition
 
+The [MIS communications source-theory audit](validation/mis-communications-line-search-theory-v1/README.md)
+provides an exact original-model PR example with an accepted previous Armijo
+step followed by a strictly ascending direction, and disproves the inference
+from stationarity alone to local optimality. The example also lifts to MIS
+with strictly positive scheduling. ROOT's ten portable controls pass. Current
+guards already restart that direction, so this is not an established cause
+of the actual remaining full-scene failures. No science, budget or winner is
+changed, and final-publisher equivalence is not claimed.
+
 The [complete dual-language controller](validation/all-paper-full-controller-v1/README.md)
 retains all73 numerical figures and two parameter tables as150 command tasks.
 Its actual16 stdlib controls pass, including directory/receipt failure
