@@ -741,3 +741,16 @@ Machine-readable release status is [status.json](status.json). Complete-figure
 plans and independent comparisons are documented in
 [FIGURE_REPRODUCTION.md](FIGURE_REPRODUCTION.md). None of the partial evidence
 above changes the release's `full_reproduction_passed: false` status.
+
+## MA theory source audit: exact counterexamples, not a curve-fit repair
+
+The [new source-semantic audit](validation/two-timescale-ma-source-semantic-v1/README.md)
+provides a valid N=2/M=1/kappa=1 counterexample to Remark4's claimed FPA equality:
+the removed-row inverse is4/3 while the complete FPA inverse is1. It also checks
+the already disclosed Eq29b sign typo against an exact PSD2x2 characteristic
+polynomial. Seven portable exact-rational controls and all eight local source
+controls genuinely pass. No engine/algorithm/settings were changed. Current
+MRT/ZF normalization and dBm conversion do not show a new definite source
+mismatch. These theory issues are not established causes of the existing
+Fig3/4 reference differences; that root cause and complete paper PASS remain
+unresolved.
