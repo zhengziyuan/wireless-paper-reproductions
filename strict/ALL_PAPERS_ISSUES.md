@@ -461,9 +461,28 @@ original unit equations, solver and tolerance, moves the complete unit body
 to a nonnested local workspace, adds the exact original reshape-expression
 oracle while retaining the old colon false, and records native logical bytes
 alongside the explicitly non-native old double projection. All17 source-only
-test methods passed; the new cold native units are actually running, not yet
-passed. Both unit models and a fresh complete18 remain outstanding. Historical input recovery
-also remains unresolved.
+test methods passed. The distinct cold V4 native dependency run has now genuinely
+closed with owned exit0, no exception and complete source/runtime B_A. All18
+primitive records match the original reshape-expression oracle; the old empty
+complex colon false remains visible. Both original real and complex unit models
+return Solved through their actual original SDPT3 callbacks. A separate RAW-byte
+decoder checks each full solution and objective against its known analytic
+solution at the unchanged1e-6 tolerance. The native receipt SHA256 is
+`3eeae3ebc490b7905e506a9e790482c77b2493020ddbd5ffaddb51576d68e1f4`;
+the actual owned parent is
+`9a9e9f7e1c8de5361ea156261393825e678ea6314268434a6bedb47721a6dadb`.
+This is a dependency/two-unit certificate, not independent validation of the
+whole SDPT3 algorithm, the old failed60 starts or the full18 paper population.
+
+The next distinct V2 full18 cold launch genuinely exits1 before any scientific
+case or observation stream is created: MATLAB reports an invalid expression at
+bootstrap line61, where our metadata-only multiline struct constructor omitted
+the continuation token. The complete failed parent is retained as
+`b50cbe1b316edade0841794e2d051ae3371d8535c5685e8e9d32a9fd816ecd3e`.
+This is an OURS launcher syntax defect, not a paper/model/convergence error.
+A separately named V3 repairs that token and its mechanical generation mirror;
+an actual MATLAB parse check and a fresh full18 run are still required. Historical
+input recovery and full original-reference agreement also remain unresolved.
 
 An independent matrix-sandwich/80-digit PSD check now bounds the **current
 declared** U6/beta20 NoRIS ratio-of-expected-powers objective by
