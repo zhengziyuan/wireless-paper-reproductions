@@ -11,6 +11,12 @@ This is not the original private simulation source. Each paper has an explicit i
 中文说明：这里公开的是按论文理论重新编写的 MATLAB/Python 双实现，不是原作者私有仿真代码。核心检查、完整尺寸的调试实验与全部图表复现分开记录；通过核心检查不代表完整复现。所有尚未实现的公式、未收敛的运行和调试数值设置均明确列出，不用替代方法补位。
 
 The current correction/execution ledger is [all-paper issues](strict/ALL_PAPERS_ISSUES.md).
+The [complete MATLAB/Python command inventory](tools/full-controller/README.md)
+now retains all73 numerical figures and both parameter tables (150 language
+tasks), including four explicitly blocked interfaces. Its default is a
+read-only plan. [Sixteen actual host/metadata controls](strict/validation/all-paper-full-controller-v1/README.md)
+pass; this is not all150 scientific execution, convergence or original-curve
+agreement. Full reproduction is still incomplete.
 It distinguishes proven source errors, reconstruction bugs, numerical repairs,
 full-sized cases and unfinished full banks. Neither aggregate dual agreement
 nor a completed single case certifies all published figures.

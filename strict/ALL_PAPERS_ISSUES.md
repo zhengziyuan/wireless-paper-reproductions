@@ -11,6 +11,13 @@ single cases and component tests are recorded separately from complete figures.
 
 ## Verified issues and their disposition
 
+The [complete dual-language controller](validation/all-paper-full-controller-v1/README.md)
+retains all73 numerical figures and two parameter tables as150 command tasks.
+Its actual16 stdlib controls pass, including directory/receipt failure
+continuation and unknown after-metadata rejection. This repairs an orchestration
+defect, not a paper theory error. Four current native interfaces remain blocked;
+neither their presence in the plan nor any command exit certifies science.
+
 | Paper | Source issue versus implementation/numerical issue | Disposition and evidence |
 | --- | --- | --- |
 | MIS communications | The supplied R2 Figure11 discussion states U=28 for a 1x64 panel with a 1x36 subpanel, but its own inclusive-placement formulas give U=29. | [Exact position-count audit](validation/mis-communications-fig11-position-count-v1/README.md) preserves the final legal position and all six full panel/subpanel configurations. Both existing engines already use the inclusive model. This marks a supplied-source off-by-one contradiction, not a publisher-version erratum, a fitted curve correction, or a complete48-configuration/576000-start reproduction certificate. |
