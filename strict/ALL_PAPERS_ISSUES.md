@@ -481,8 +481,11 @@ the continuation token. The complete failed parent is retained as
 `b50cbe1b316edade0841794e2d051ae3371d8535c5685e8e9d32a9fd816ecd3e`.
 This is an OURS launcher syntax defect, not a paper/model/convergence error.
 A separately named V3 repairs that token and its mechanical generation mirror;
-an actual MATLAB parse check and a fresh full18 run are still required. Historical
-input recovery and full original-reference agreement also remain unresolved.
+an actual MATLAB parse-only receipt now confirms successful parsing, while its
+separate owner terminal remains pending. The distinct full18 original cold run
+has actually started, selected the unchanged original CVX/SDPT3 route and entered
+the source-bound recording route. This is not complete18 scientific validation.
+Historical input recovery and full original-reference agreement remain unresolved.
 
 An independent matrix-sandwich/80-digit PSD check now bounds the **current
 declared** U6/beta20 NoRIS ratio-of-expected-powers objective by
@@ -711,6 +714,20 @@ phase state remain unrecovered. This conditional discrepancy is not classified
 as an established paper error or rigorous infeasibility, and labels are not
 permuted to make the test pass. Complete native optimization and unfitted
 reference agreement are still not certified.
+
+The [complete six-path sensing diagnosis](validation/mis-sensing-six-cap-mechanism-20261005-v1/README.md)
+has genuinely closed with all180 outer solves,37029 preupdates,36855 steps and
+138125 line-search trials. All six4000-step caps fail their own inner epsilon;
+later outer solves and all old false states remain. There is no second-search
+retry in the complete captured paths, so search-budget exhaustion is not an
+established explanation. A diagnostic field misnamed as a projected-gradient
+cosine is explicitly an OURS observer-label error, not a paper error. Missing
+actual trial EG/candidate and guard operands still prevent a causal cap claim.
+
+The [full-population execution checkpoint](validation/full-population-execution-checkpoint-20261005-v1/README.md)
+records the actual original hotspot18, native communication12000 and MA900
+independent-math launches. Startup and partial output do not certify complete
+convergence, physical correctness or unfitted historical figure agreement.
 
 Machine-readable release status is [status.json](status.json). Complete-figure
 plans and independent comparisons are documented in
