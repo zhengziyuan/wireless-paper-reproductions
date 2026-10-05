@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-05",
+  "browser": "Codex in-app Chromium",
+  "modelComparison": {
+    "methods": 2,
+    "targetDirections": 9,
+    "positions": 25,
+    "powerValuesCompared": 450,
+    "maximumAbsolutePowerDifferenceFromOfflineData": 8.881784197001252e-16,
+    "passed": true
+  },
+  "interactionChecks": {
+    "methodSwitch": "passed",
+    "mechanicalPositionSelection": "passed",
+    "exactBestPositionButton": "passed",
+    "threeStageStory": {
+      "method": "optimized",
+      "displayedSnrDbAligned": 22.2,
+      "displayedSnrDbMisaligned": 6.0,
+      "displayedSnrDbRestored": 22.2,
+      "passed": true
+    },
+    "snellManualMismatchAndRecovery": {
+      "displayedSnrDbBefore": 20.3,
+      "displayedSnrDbMismatch": -9.5,
+      "displayedSnrDbRestored": 20.3,
+      "passed": true
+    },
+    "modulationQpsk16Qam64Qam": "passed",
+    "qpskBitsPerFrame": 1536,
+    "qam16BitsPerFrame": 3072,
+    "qam64BitsPerFrame": 4608,
+    "rawAndEqualizedConstellationSwitch": "passed",
+    "convergenceDialog": "passed, visually inspected real incumbent history",
+    "export": "Click and payload generation completed; browser download event receipt was not returned by the automation bridge. Download persistence not independently verified."
+  },
+  "renderChecks": {
+    "wideViewport": {"width": 1440, "height": 1100, "passed": true},
+    "narrowViewport": {"width": 390, "height": 844, "documentWidth": 375, "horizontalOverflow": false},
+    "webglAndCharts": "visually inspected",
+    "portableSingleFile": "loaded successfully from local HTTP with all rendering scripts and CSS embedded",
+    "directFileProtocol": "not separately exercised by browser automation",
+    "consoleErrors": [],
+    "consoleWarnings": "Three.js r158 classic build emits its upstream deprecation notice; no functional failure",
+    "preview": "演示预览.png"
+  },
+  "numericalValidation": "compute/validation.json; 19 independent checks passed",
+  "scope": "Ideal scalar tight-stack simulation. Not measured, hardware connected, full-wave calibrated, or an exact copy of the original paper RCG solver."
+}

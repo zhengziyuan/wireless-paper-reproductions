@@ -1,0 +1,41 @@
+# Local runtime and dependency caches
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.cache/
+
+# Local logs, editor settings, and OS metadata
+*.log
+*.tmp
+*.bak
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Environment files and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+secrets*.json
+
+# Private manuscript sources and local source corpora
+论文素材库/
+private/
+manuscripts/
+*.tex
+*.bib
+*.aux
+*.bbl
+*.blg
+*.synctex.gz

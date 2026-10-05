@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MIS · 双层超表面数字孪生</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="presentation">
+<div class="shell">
+ <header><div class="brand"><span class="brand-mark">M<span>↗</span></span><div><div class="eyebrow">WIRELESS SYSTEMS / INTERACTIVE LAB</div><h1>可移动智能超表面 <span>MIS</span></h1></div></div><div class="header-right"><span class="status"><i></i>模型驱动 · 离线仿真</span><button id="layoutBtn" class="quiet">展开讲解布局 ↗</button><button id="aboutBtn" class="quiet">模型与依据 ↗</button></div></header>
+ <div class="intro"><div><h2>相位固定，移动即波束重构。</h2><p>观察两层静态相位如何通过机械位移，改变空间波束与接收信号。</p></div><div class="specs"><span><b>12.2</b> GHz</span><span><b>16² + 12²</b> 单元</span><span><b>25</b> 可选位置</span></div></div>
+ <main>
+  <aside class="controls panel">
+   <button id="mobileControls" class="mobile-controls-toggle" aria-expanded="false">展开设计、位置与通信参数 <span>⌄</span></button>
+   <div class="section-label">01 / 设计与控制</div>
+   <h3>两种静态设计</h3>
+   <div class="method-switch" role="group" aria-label="相位设计方法"><button id="optimizedBtn" class="selected" aria-pressed="true">联合优化<small>相位 + 离散选位</small></button><button id="snellBtn" aria-pressed="false">Snell 闭式<small>互补二次相位</small></button></div>
+   <p class="control-note" id="methodNote">正在载入静态相位设计…</p>
+   <div class="rule"></div>
+   <div class="label-row"><h3>MS 2 机械位置</h3><span id="positionId" class="pill">P13</span></div>
+   <label class="slider-label" for="shiftX">X 位移 <output id="shiftXOut">0 mm</output></label><input id="shiftX" type="range" min="-2" max="2" step="1" value="0">
+   <label class="slider-label" for="shiftY">Y 位移 <output id="shiftYOut">0 mm</output></label><input id="shiftY" type="range" min="-2" max="2" step="1" value="0">
+   <div id="positionGrid" class="position-grid" role="group" aria-label="25 个离散机械位置"></div><div class="map-caption"><span>−X ←　位移格点　→ +X</span><span>+Y ↑</span></div>
+   <div class="rule"></div>
+   <h3>接收机方向</h3>
+   <label class="slider-label" for="azimuth">方位角 <output id="azOut">30°</output></label><input id="azimuth" type="range" min="-65" max="65" step="1" value="30">
+   <label class="slider-label" for="elevation">仰角 <output id="elOut">0°</output></label><input id="elevation" type="range" min="-40" max="40" step="1" value="0">
+   <button class="primary" id="matchBtn">为当前接收机选择最佳位置 <span>↗</span></button>
+   <button class="secondary" id="storyBtn">▶ 对准 → 失配 → 恢复</button>
+   <button class="secondary" id="tourBtn">▶ 自动演示 9 个目标方向</button>
+   <div class="rule"></div>
+   <div class="label-row"><h3>通信链路</h3><select id="modulation" aria-label="调制方式"><option value="4">QPSK</option><option value="16" selected>16-QAM</option><option value="64">64-QAM</option></select></div>
+   <label class="slider-label" for="snrRef">理想相干参考 SNR <output id="snrOut">26 dB</output></label><input id="snrRef" type="range" min="5" max="40" step="1" value="26">
+   <p class="control-note">固定发射与噪声标尺。实际 SNR 随接收方向和当前位置的阵列增益联动。</p>
+   <button id="exportBtn" class="export-btn">↓ 导出当前相位与指标</button>
+  </aside>
+  <section class="workspace">
+   <div class="metrics"><div><span>接收 SNR</span><strong id="snrValue">—</strong><small id="powerValue">当前接收方向</small></div><div><span>本帧 EVM</span><strong id="evmValue">—</strong><small>理想信道均衡后</small></div><div><span>本帧 BER</span><strong id="berValue">—</strong><small id="bitsValue">768 个仿真符号</small></div><div><span>9 方向最差 SNR</span><strong id="worstValue">—</strong><small>每方向独立选择最佳位置</small></div></div>
+   <div class="scene-panel panel"><div class="panel-top"><div><div class="section-label">02 / 空间结构</div><h3>双层相位阵列与 3D 远场</h3></div><div class="scene-tools"><button id="beamBtn" aria-pressed="true" class="active">波束</button><button id="resetCamera">复位视角</button></div></div><div id="scene"><div id="loading">正在加载双层阵列…</div></div><div class="scene-footer"><span>拖动旋转 · 滚轮缩放 · 位移过渡为示意动画</span><label>层间距放大显示 <input id="gap" type="range" min="0.2" max="4" step="0.1" value="2.1"></label></div><div class="beam-scale"><span>3D 径向：−35 → 0 dB</span><i></i><span>相干效率标尺</span></div></div>
+   <div class="phase-panel panel"><div class="panel-top"><div><div class="section-label">03 / 相位叠加</div><h3>局部相位固定，等效相位随重叠改变</h3></div><div class="phase-legend"><i></i><span>0　 π　 2π</span></div></div><div class="phase-cards"><div><div class="subhead"><b>MS 1</b><span>16 × 16 · 固定大表面</span></div><canvas id="phase1" aria-label="MS1 相位图"></canvas></div><span class="operator">+</span><div><div class="subhead"><b>MS 2</b><span>12 × 12 · 整体移动</span></div><canvas id="phase2" aria-label="MS2 相位图"></canvas></div><span class="operator">=</span><div><div class="subhead"><b>等效相位</b><span>未覆盖区域仅经过 MS 1</span></div><canvas id="phaseEffective" aria-label="等效相位图"></canvas></div></div><div id="phaseTip" class="phase-tip">移动鼠标查看单元相位。相位颜色按 0–2π 周期映射。</div></div>
+   <div class="plot-row"><div class="panel plot-panel"><div class="panel-top"><div><div class="section-label">04 / 远场响应</div><h3>接收仰角处的方位切面</h3></div><span id="cutEl" class="pill">EL 0°</span></div><canvas id="beamChart" aria-label="远场波束切面"></canvas><div class="chart-legend"><span class="cyan">— 联合优化</span><span class="amber">— Snell 闭式</span><span>相同机械位置 · 相同绝对标尺</span></div><p id="snellPrediction" class="chart-note"></p></div><div class="panel plot-panel"><div class="panel-top"><div><div class="section-label">05 / 接收符号</div><h3>通信星座图</h3></div><select id="equalizer" aria-label="星座图模式"><option value="equalized">理想均衡后</option><option value="raw">原始接收信号</option></select></div><canvas id="constellation" aria-label="接收星座图"></canvas><div class="chart-legend"><span class="cyan">• AWGN 接收符号</span><span class="amber">＋ 理想调制点</span></div><p id="constellationNote" class="chart-note">768 个仿真符号 · 可复现随机噪声</p></div></div>
+   <div class="panel compare-panel"><div class="panel-top"><div><div class="section-label">06 / 公平比较</div><h3>相同 9 个规划方向，分别选择最佳机械位置</h3></div><span class="pill">离线设计结果</span></div><div class="compare-grid"><div><canvas id="coverageChart" aria-label="两种设计在九个方向的 SNR 比较"></canvas></div><div class="comparison-text"><div><span>联合优化 · 最差方向</span><b id="optWorst">—</b></div><div><span>Snell 闭式 · 最差方向</span><b id="snellWorst">—</b></div><div class="improvement"><span>训练方向最差值提升</span><b id="improvement">—</b></div><p>优化针对这 9 个方向。离开设计方向后的表现需单独评估，不保证所有方向均优于闭式方案。</p><button id="convergenceBtn" class="quiet">查看优化过程 ↗</button></div></div></div>
+  </section>
+ </main>
+ <footer><span>MIS DIGITAL TWIN / MODEL-DRIVEN DEMONSTRATOR</span><span>依据论文的紧密堆叠、离散重叠及静态相位模型 · 未接入硬件</span></footer>
+</div>
+<dialog id="aboutDialog"><button class="dialog-close" aria-label="关闭">×</button><div class="section-label">MODEL / PROVENANCE</div><h2>模型、算法与证据边界</h2><p>依据 Z. Zheng 等人的 <a href="https://arxiv.org/abs/2412.19071" target="_blank" rel="noreferrer">Movable Intelligent Surface (MIS) for Wireless Communications: Architecture, Modeling, Algorithm, and Prototyping</a>，并核对本地 R2 论文源稿。</p><h3>同一个计算链条</h3><p class="formula">wᵤ = exp(jφ₁) ⊙ (Sᵤ exp(jφ₂) + eᵤ)<br>Fᵤ(uₓ,uᵧ) = Σₘ wᵤ,ₘ exp[−j2π(xₘuₓ+yₘuᵧ)/λ] / M<br>SNR = SNRref · |Fᵤ|²　　y = Fᵤs + n</p><p>未覆盖单元的第二层透射系数为 1；所有 256 个 MS 1 单元都参与辐射。采用法向均匀平面波、理想单位幅度透射与单用户 AWGN。相位图、波束、SNR 和星座图使用相同复信道计算。x、y 位于表面平面，+z 为出射法向；uₓ = sin(az)cos(el)，uᵧ = sin(el)。</p><h3>联合优化</h3><p>离线联合设计两层静态相位与每个目标方向的离散位置，优化 minₖ maxᵤ |Fᵤ(k)|²。当前提供有限尺寸的可复现数值解，使用相位梯度与精确枚举选位；是论文目标的演示求解器，不等同于论文原始流形 RCG 实现，也不声称全局最优。运行中的角度与位置滑块不会重新优化相位。</p><h3>Snell 闭式设计</h3><p class="formula">φ₁(x,y) = +πc[(x/λ)²+(y/λ)²]<br>φ₂(ξ,η) = −πc[(ξ/λ)²+(η/λ)²]<br>重叠区域：uₓ = cΔx/λ，uᵧ = cΔy/λ</p><p>本示例取 c = 1.1745484，使单轴位移 ±12 mm 时重叠区解析方向为 ±35°；这只是指定的演示设计参数，没有搜索所有 Snell 参数。这是一组由广义 Snell 定律推导的互补二次相位示例；未覆盖区域仍保留 MS 1 相位，因此整体阵列主峰未必等于重叠区域的解析方向。本地论文仅描述透镜补偿及梯度设计，未提供完整制造相位表；这里没有冒充原型相位数据。</p><h3>与论文原型的区别</h3><p>频率 12.2 GHz 和单元周期 6 mm 参考论文。论文原型为 40 × 40 单元、球面馈源与约 1 mm 层间距；本演示采用 16 × 16 / 12 × 12 的缩小模型以便交互。3D 层间距离为视觉展开，不参与传播计算。移动过程只作动画；指标对应目标离散位置的稳态结果。</p><p>3D 波束半径将 −35 至 0 dB 的相干效率线性映射到显示长度，低于 −35 dB 截断；并非电磁传播轨迹。尚未包含近场层间耦合、介质、损耗、极化、遮挡、执行器动态或实测校准。星座图为窄带调制仿真，不是原型 LTE/USRP 实测数据。</p><a class="doc-link" href="说明与模型.md" target="_blank">打开详细说明与复现记录 ↗</a></dialog>
+<dialog id="convergenceDialog"><button class="dialog-close" aria-label="关闭">×</button><div class="section-label">OFFLINE OPTIMIZATION</div><h2>最差覆盖效率的优化过程</h2><canvas id="convergenceChart" aria-label="优化收敛曲线"></canvas><p id="convergenceNote"></p></dialog>
+<div id="toast" role="status"></div>
+<script src="vendor/three.min.js"></script><script src="data.js"></script><script src="scene.js"></script><script src="app.js"></script>
+</body></html>

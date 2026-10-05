@@ -1,0 +1,180 @@
+{
+  "passed": true,
+  "checkCount": 19,
+  "checks": [
+    {
+      "name": "snell_independent_complex_field_replay",
+      "passed": true,
+      "maxPowerError": 4.440892098500626e-16
+    },
+    {
+      "name": "snell_schedule_is_exact_discrete_argmax",
+      "passed": true,
+      "schedule": [
+        5,
+        7,
+        9,
+        10,
+        12,
+        14,
+        15,
+        17,
+        19
+      ]
+    },
+    {
+      "name": "snell_worst_target_score",
+      "passed": true,
+      "replayedScore": 0.19615534656559575
+    },
+    {
+      "name": "snell_padding_and_coverage",
+      "passed": true,
+      "coveredCells": 144,
+      "uncoveredCells": 112,
+      "maxUncoveredMultiplierError": 0.0
+    },
+    {
+      "name": "snell_masks_static_for_every_position_and_target",
+      "passed": true,
+      "maskSha256": "c8620c30da2eaa3a846db1a1572c421f63fe9053b5b71b833624885fc6d56a4a"
+    },
+    {
+      "name": "snell_phase_unit_modulus",
+      "passed": true
+    },
+    {
+      "name": "snell_coherent_power_bound",
+      "passed": true
+    },
+    {
+      "name": "optimized_independent_complex_field_replay",
+      "passed": true,
+      "maxPowerError": 4.440892098500626e-16
+    },
+    {
+      "name": "optimized_schedule_is_exact_discrete_argmax",
+      "passed": true,
+      "schedule": [
+        5,
+        7,
+        9,
+        10,
+        12,
+        14,
+        15,
+        17,
+        19
+      ]
+    },
+    {
+      "name": "optimized_worst_target_score",
+      "passed": true,
+      "replayedScore": 0.41524616864035363
+    },
+    {
+      "name": "optimized_padding_and_coverage",
+      "passed": true,
+      "coveredCells": 144,
+      "uncoveredCells": 112,
+      "maxUncoveredMultiplierError": 4.931988574605767e-17
+    },
+    {
+      "name": "optimized_masks_static_for_every_position_and_target",
+      "passed": true,
+      "maskSha256": "5634a8d1c0a73a3483b4b1d496abe01747f314b9dcabb8d6bb8feb63c48c6800"
+    },
+    {
+      "name": "optimized_phase_unit_modulus",
+      "passed": true
+    },
+    {
+      "name": "optimized_coherent_power_bound",
+      "passed": true
+    },
+    {
+      "name": "coherent_ideal_peak_normalizes_to_one",
+      "passed": true,
+      "maximumError": 0.0
+    },
+    {
+      "name": "snell_overlap_phase_gradient",
+      "passed": true,
+      "maxComplexRatioError": 4.195962738671156e-15
+    },
+    {
+      "name": "analytic_phase_gradient_finite_difference",
+      "passed": true,
+      "count": 40,
+      "epsilon": 1e-05,
+      "maxAbsoluteError": 2.5242316917251095e-12,
+      "maxRelativeError": 3.435312898327594e-08
+    },
+    {
+      "name": "joint_design_retains_snell_incumbent",
+      "passed": true
+    },
+    {
+      "name": "history_is_monotone_best_actual_minimum",
+      "passed": true,
+      "acceptedPhaseIterations": 2015
+    }
+  ],
+  "methods": {
+    "snell": {
+      "score": 0.19615534656559575,
+      "scoreDb": -7.073998498985025,
+      "schedule": [
+        5,
+        7,
+        9,
+        10,
+        12,
+        14,
+        15,
+        17,
+        19
+      ],
+      "targetPower": [
+        0.19615534656559575,
+        0.27169841612971135,
+        0.19615534656559575,
+        0.2688471060806559,
+        0.31858642654982366,
+        0.2688471060806559,
+        0.19615534656559575,
+        0.27169841612971135,
+        0.19615534656559575
+      ]
+    },
+    "optimized": {
+      "score": 0.41524616864035363,
+      "scoreDb": -3.8169436597115896,
+      "schedule": [
+        5,
+        7,
+        9,
+        10,
+        12,
+        14,
+        15,
+        17,
+        19
+      ],
+      "targetPower": [
+        0.41545235864036534,
+        0.41565980665570057,
+        0.41524617168437167,
+        0.4154008535311559,
+        0.41544862354258844,
+        0.4152575431757607,
+        0.4154523608510358,
+        0.41565980904000344,
+        0.41524616864035363
+      ]
+    }
+  },
+  "gainDb": 3.2570548392734358,
+  "sourceDataSha256": "db9f76585b519a42d43192aaffd5fb1253578f850e2318c72c441e982bd30358",
+  "scope": "These checks validate the ideal scalar simulation, not hardware accuracy or global optimality."
+}
