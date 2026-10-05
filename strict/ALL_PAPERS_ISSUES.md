@@ -698,6 +698,20 @@ with a free constant, under the same declared2x2 geometry. This is not a
 rigorous interval infeasibility certificate or a recovery of author phases.
 No fitted reproduction or winner reassignment was introduced.
 
+The [stronger complete coupled diagnostic](validation/communications-fig8-coupled-necessary-20261005-v1/README.md)
+has also genuinely closed in both frequency lanes, retaining all three datasets,
+four curves,360 samples,45 polynomial observations and every100/160-digit
+crossprecision component. Per-curve and label-free necessary observations are
+numerically compatible in the single-factor model. Some shared-state observations
+are nonzero **conditional on** the displayed curves having the source's physical
+control-position order. The R2 text explicitly uses row-major numbering, as do
+the current implementations; an author column-major convention cannot be inferred
+from MATLAB alone. The author generator/legend-to-control mapping and shared
+phase state remain unrecovered. This conditional discrepancy is not classified
+as an established paper error or rigorous infeasibility, and labels are not
+permuted to make the test pass. Complete native optimization and unfitted
+reference agreement are still not certified.
+
 Machine-readable release status is [status.json](status.json). Complete-figure
 plans and independent comparisons are documented in
 [FIGURE_REPRODUCTION.md](FIGURE_REPRODUCTION.md). None of the partial evidence
