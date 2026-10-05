@@ -406,8 +406,11 @@ difference9.71445146547012e-17. Original-reference comparison is nevertheless
 false: the four MIS path errors reach0.0574853,0.1489260,0.1339543 and0.1172647
 absolute linear SNR; SMS reaches1.03322e-6. No normalization, curve fitting,
 label permutation or reference-selected winner was used. This diagnoses the
-selected-state evaluators, not the full native12000 optimizer population or
-the pending independent230400-endpoint audit. The old native768 component
+selected-state evaluators, not the full native12000 optimizer population.
+The separate Python independent230400-endpoint audit has now genuinely closed
+with all12000 original auditor returns/starts passing, no exception and
+source/raw/journal/runtime/callable B_A unchanged. It does not upgrade the
+failed original-reference comparison. The old native768 component
 owner also incorrectly required `isreal(struct)==true`; the corrected strict
 recensus passes every768 typed packet and1536 unchanged raw files. This was
 OUR metadata-checker error, not an author-paper or solver error.
@@ -433,8 +436,15 @@ the actual new run differs by up to8.008012646848087 bit/s/Hz over all54 points.
 NoRIS link-budget/source interpretation is being checked independently of
 RIS optimization. Real TS declines remain in the output; a channel-criterion
 gradient stop is not a final sum-rate optimality certificate. The independently
-running full MATLAB18 bank and original historical input recovery remain
-separate outstanding requirements.
+full MATLAB18 bank exposed an OURS dependency-path failure: all60 actual
+starts in its five closed U1..U5/beta0 cases raised MATLAB UndefinedFunction
+for double vec. No selected states or stopping records existed in those
+cases. The exact owned failed backend was deliberately interrupted; its
+genuine parent observes exit3758096408, retained failures and source B_A.
+This is not an OOM, paper-model error or solver-convergence result. A distinct
+same-version original vec-path restoration is prepared; real dependency
+smoke and a fresh complete18 remain outstanding. Historical input recovery
+also remains unresolved.
 
 An independent matrix-sandwich/80-digit PSD check now bounds the **current
 declared** U6/beta20 NoRIS ratio-of-expected-powers objective by
@@ -611,13 +621,30 @@ does not establish a current Python task.
 
 Blindly re-running the historical executor would overwrite old progress and
 some non-reusable failed result files. A distinct evidence-preserving I/O-only
-recovery adapter is being reviewed: each old slot must pass the original full
+recovery adapter is now source-reviewed: each old slot must pass the original full
 payload/source/runtime reuse gate before it can be reused; every missing,
 failed or mismatched slot goes to a NEW attempt target, preserving old bytes.
 All900 identities, original1000 draws, algorithms, controls and thresholds
-remain required. Recovery is not yet launched or certified by this note.
+remain required. Figure5's genuine new owned recovery was launched on5 October
+with two workers and the original full900 population. Figure6 is separately
+prepared, not launched. Neither recovered whole population is yet certified.
 Read-only original-route/source/formal-metadata receipt SHA256:
 `1846da58155bcdd9d8599baa5887036fdaaa0149e336aec16e3a60c99fd12a7b`.
+
+## Communication array-source conflicts and original-plot compatibility
+
+The [full source audit](mis-communications/COMM_ARRAY_EXPONENT_SOURCE_AUDIT.md)
+marks the extra printed2pi, mixed array wave numbers, user-channel L-versus-M
+indices, missing imaginary unit in phase exponentials and duplicated SNR
+noise factor. These are explicit conflicts in the supplied R2 source, not
+an official publisher erratum. A full3-dataset/four-curve/360-sample necessary
+space diagnostic at100/160 digits finds original FIG residuals below6.2e-17
+for the consistent single2pi model. Thus the original curve cannot be declared
+structurally impossible from the current selected state's differing pattern.
+The extra2pi frequency-only interpretation has large stable residuals even
+with a free constant, under the same declared2x2 geometry. This is not a
+rigorous interval infeasibility certificate or a recovery of author phases.
+No fitted reproduction or winner reassignment was introduced.
 
 Machine-readable release status is [status.json](status.json). Complete-figure
 plans and independent comparisons are documented in

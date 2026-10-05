@@ -64,8 +64,9 @@ Actual closed artifact identifiers:
 
 The metadata inspector does not independently recompute physical fields or
 decode the result arrays. It does not supply a missing outer operating-system
-exit/PID-image receipt. Fresh all-230,400 physical checks and all-12,000 native
-execution remain pending. The selected-state both-language plots and original
+exit/PID-image receipt. The separate all-230,400 Python physical audit has now
+closed, as recorded below; all-12,000 native execution remains pending. The
+selected-state both-language plots and original
 1,800 EPS-sample comparison are now closed as diagnostics, as described below;
 original-curve agreement has failed. Figure 8's ordinates are **linear absolute SNR**, not dB or a
 renormalized curve. Reference fitting and winner reassignment are prohibited.
@@ -112,7 +113,38 @@ The native full-grid diagnostic's owned launcher closed with exit 0 and no
 exception. The comparison receipt has no exception and unchanged bound bytes;
 its calling terminal's OS exit was not captured, so no missing exit is invented.
 These are selected-state field/plot diagnostics, not a native full-12,000
-optimizer execution, an all-230,400 physics certificate or original-figure PASS.
+optimizer execution or original-figure PASS. The separate complete Python
+saved-endpoint physics certificate below is not inferred from those plots.
+
+## Figure 8: closed independent Python full-population physical audit
+
+The original independent auditor returned once for each of all 12,000 start
+identifiers and checked all 230,400 saved own-mu endpoints. All 12,000 starts
+pass its unchanged domain, phase-norm, objective, metric, KKT and recorded-stop
+checks. The immutable return/error journal contains 12,000 original calls,
+12,000 returns, zero exceptions and zero observation errors. Complete source,
+saved raw/journal, loaded selected runtime and original callable content are
+unchanged before/after. The genuinely owned worker closed with OS exit 0 and
+no exception.
+
+- Independent complete owned-audit completion SHA256:
+  `0a6e72061fc1db9795f84c82f482e1629675e0be94a75632597ea4466a81d451`.
+- Original complete audit receipt SHA256:
+  `e24ef88e7ab13772255a27da2c89c6c39a0bba7e9cf2e714f817c2a757a56a10`.
+- Genuine durable-parent completion SHA256:
+  `7cf2684bf7d16d055f3f1d1aea9d70bd94a9bef52bfd227ea8e1f2c74c7544e4`.
+
+This verifies the complete saved Python endpoint population, not unsaved
+historical inner iterates, a cold complete native optimizer, recovered
+historical parameters, a global optimum or close original curves. Those
+gates remain separate and the complete-figure gate remains false.
+
+The [array-response source audit](../../mis-communications/COMM_ARRAY_EXPONENT_SOURCE_AUDIT.md)
+also records the extra printed `2*pi`, phase-exponential, channel-dimension
+and duplicate-noise-factor conflicts. Its full-grid necessary-space test
+supports single-factor model compatibility of the original FIG curves; it
+does not declare their physical phase realization proved or fit a replacement
+curve.
 
 ## Native typed-record checker correction
 
