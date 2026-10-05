@@ -442,8 +442,27 @@ for double vec. No selected states or stopping records existed in those
 cases. The exact owned failed backend was deliberately interrupted; its
 genuine parent observes exit3758096408, retained failures and source B_A.
 This is not an OOM, paper-model error or solver-convergence result. A distinct
-same-version original vec-path restoration is prepared; real dependency
-smoke and a fresh complete18 remain outstanding. Historical input recovery
+same-version original vec-path restoration is prepared. The actual cold V3
+dependency smoke now passes17 of18 exact numeric-record comparisons against
+x(:), and genuine CVX class-method/basis dispatch. The original helper uses
+reshape(x,numel(x),1): for an empty complex input it retains the complex
+storage flag whereas x(:) drops it, with both having shape0x1 and no values.
+That retained false is an OURS test-oracle contract mismatch, not an error in
+the unchanged original helper. Original SDPT3 callbacks return Solved. The test
+host then raises MATLAB:refClearedVar while reading cvx_optval after cvx_end,
+retaining its actual stack and source B_A. This is an OURS test-host workspace
+failure, not an author-model or SDPT3 convergence failure. Its logical-record
+encoder also promoted real(logical) to eight-byte double while claiming
+one-byte logical RAW; this is an OURS recording defect, not a solver-input
+change. The exact failed owned backend was deliberately interrupted, and its
+original parent genuinely observed nonzero exit3758096387; the old false
+records and all failure stacks remain. A distinct V4 host preserves both
+original unit equations, solver and tolerance, moves the complete unit body
+to a nonnested local workspace, adds the exact original reshape-expression
+oracle while retaining the old colon false, and records native logical bytes
+alongside the explicitly non-native old double projection. All17 source-only
+test methods passed; the new cold native units are actually running, not yet
+passed. Both unit models and a fresh complete18 remain outstanding. Historical input recovery
 also remains unresolved.
 
 An independent matrix-sandwich/80-digit PSD check now bounds the **current
@@ -626,8 +645,22 @@ payload/source/runtime reuse gate before it can be reused; every missing,
 failed or mismatched slot goes to a NEW attempt target, preserving old bytes.
 All900 identities, original1000 draws, algorithms, controls and thresholds
 remain required. Figure5's genuine new owned recovery was launched on5 October
-with two workers and the original full900 population. Figure6 is separately
-prepared, not launched. Neither recovered whole population is yet certified.
+with two workers and the original full900 population. It has now genuinely
+closed with exit0, no exception and unchanged selected source/input/runtime
+bytes. All900 distinct slots pass the original complete reuse gate and have
+status reused_converged; none was freshly reoptimized by this recovery. The
+earlier259 progress count was stale metadata, not evidence that only259 result
+files existed. This closes the original reuse/assembly workflow, not a new
+Monte Carlo ensemble, independent physical/dual certification, native900 run
+or original-reference agreement. Figure6's separate original900-slot recovery
+was actually launched on5 October with one worker; genuine owner/child records
+exist and its missing or rejected slots are sent only to new attempt files.
+Each retains the complete1000 NLoS draws, original algorithm and stop. It is
+running, not a complete900 independent/native/reference certificate.
+Figure5 closed supervisor SHA256:
+`8978553c1e9690c148c18b61fe3b8fa5226b8eec76911eea2e2126e9e0b61eaf`;
+closed900-slot summary SHA256:
+`0ed1b2d5e837265c596ce2129307caa1be765eaf9723267ed7e69fa8ac292122`.
 Read-only original-route/source/formal-metadata receipt SHA256:
 `1846da58155bcdd9d8599baa5887036fdaaa0149e336aec16e3a60c99fd12a7b`.
 
