@@ -20,8 +20,12 @@ def unpack(packet, output):
     if output.exists():
         raise FileExistsError('Preserve prior numerical output; select a fresh directory')
     manifest = json.loads((packet/'archive-manifest.json').read_bytes())
-    if (manifest['languages'], manifest['power_cases_per_language'], manifest['schemes_per_case'], manifest['total_final_states']) != (['python', 'matlab'], 24, 8, 384):
+    scope=manifest.get('case_scope','power')
+    expected_ordinals=list(range(24)) if scope=='power' else list(range(24,48))
+    if scope not in ('power','interference') or (manifest['languages'], manifest.get('cases_per_language',manifest.get('power_cases_per_language')), manifest['schemes_per_case'], manifest['total_final_states']) != (['python', 'matlab'], 24, 8, 384):
         raise ValueError('All24 source slots, two languages and eight schemes are required')
+    if manifest.get('exact_original_case_ordinals',expected_ordinals)!=expected_ordinals:
+        raise ValueError('Original source cohort differs')
     spec = manifest['archive']; chunks = []
     for index, part in enumerate(spec['parts']):
         if not safe(part['file']) or part['file'] != spec['filename']+f'.part{index:03d}':
@@ -46,11 +50,13 @@ def unpack(packet, output):
     if set(files) != set(manifest['files']):
         raise ValueError('Missing actual numerical payload')
     index = json.loads(files['final-state-index.json'])
+    if index.get('case_scope','power')!=scope:
+        raise ValueError('Restored scope differs from its published manifest')
     if index['array_bank_sha256'] != digest(files['final-states.npz']):
         raise ValueError('Actual final-state array binding differs')
     for language in ('python', 'matlab'):
         cases = [c for c in index['cases'] if c['language'] == language]
-        if sorted(c['ordinal'] for c in cases) != list(range(24)) or any(len(c['final_states']) != 8 for c in cases):
+        if sorted(c['ordinal'] for c in cases) != expected_ordinals or any(len(c['final_states']) != 8 for c in cases):
             raise ValueError('Missing/duplicated original slot or scheme')
     output.mkdir(parents=True)
     for name, payload in files.items():

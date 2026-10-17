@@ -85,6 +85,18 @@ jobs:
         run: python tools/cooperative-stable-replay/audit_no_ris_input_bound.py --directory strict/outputs/ci-cooperative-power24/unpacked --reference-directory strict/outputs/ci-cooperative-power24/unpacked/reference-comparison --output strict/outputs/ci-cooperative-power24/NoRIS-input-bound.json
       - name: Unfitted complete power curves versus all192 source reference ordinates per language
         run: python tools/cooperative-stable-replay/compare_power_references.py --reference-directory strict/outputs/ci-cooperative-power24/unpacked/reference-comparison --curve-directory strict/outputs/ci-cooperative-power24/unpacked --output-dir strict/outputs/ci-cooperative-power24/reference-comparison
+      - name: Restore all24 original interference cases and384 actual final states
+        run: python tools/cooperative-stable-replay/unpack_power_evidence.py --packet strict/validation/cooperative-interference24-dual-final-states-20261017 --output-dir strict/outputs/ci-cooperative-interference24/unpacked
+      - name: Interference all384 physical final states with independent MP80 MP100
+        run: python tools/cooperative-stable-replay/audit_power_curve_states_mp.py --directory strict/outputs/ci-cooperative-interference24/unpacked --output strict/outputs/ci-cooperative-interference24/all384-MP80-MP100.json
+      - name: Interference NoRIS bound with explicit unresolved source units
+        run: python tools/cooperative-stable-replay/audit_no_ris_input_bound.py --directory strict/outputs/ci-cooperative-interference24/unpacked --reference-directory strict/outputs/ci-cooperative-interference24/unpacked/reference-comparison --output strict/outputs/ci-cooperative-interference24/NoRIS-input-bound.json
+      - name: Interference unfitted all192 source ordinates per language
+        run: python tools/cooperative-stable-replay/compare_power_references.py --case-scope interference --reference-directory strict/outputs/ci-cooperative-interference24/unpacked/reference-comparison --curve-directory strict/outputs/ci-cooperative-interference24/unpacked --output-dir strict/outputs/ci-cooperative-interference24/reference-comparison
+      - name: Actual divergent first MR TTS endpoints under both original fixed contexts
+        run: python tools/cooperative-stable-replay/audit_phase_divergence.py audit --directory strict/outputs/ci-cooperative-interference24/unpacked/case047-phase-witness --output strict/outputs/ci-cooperative-interference24/case047-phase-cross-evaluation.json
+      - name: Saved prospective same data phase controls MP80 MP100 without reoptimization
+        run: python tools/cooperative-stable-replay/run_fixed_phase_control.py audit --directory strict/outputs/ci-cooperative-interference24/unpacked/case047-same-native-data-phase-controls --output strict/outputs/ci-cooperative-interference24/case047-phase-control-audit.json
       - name: Restore both actual new full8 Python controls on preserved056 065 inputs
         run: python tools/cooperative-stable-replay/unpack_evidence.py --archive strict/validation/cooperative-corrected-python056-065-20261017/corrected-python056-065-full8-endpoint-tapes.tar.gz --expected-sha256 479d283e2873130c2b92f6aa9adfe7332b0d9fa2ab397c5d80b48389311dcaf2 --output-dir strict/outputs/ci-cooperative-python-controls/unpacked
       - name: Actual new Python056 all8 states all46 phase stops and all31 QT candidates MP80 MP100

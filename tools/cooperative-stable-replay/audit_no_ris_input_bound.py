@@ -60,10 +60,14 @@ def bound_group(data, interference):
 
 def audit(directory, reference_directory, output):
     require(not output.exists(), 'Preserve previous bound diagnostic')
+    first_index = read(directory/'final-state-index.json')
+    scope = first_index.get('case_scope', 'power')
+    require(scope in ('power', 'interference'), 'Unsupported original sweep')
+    figures = (2, 3) if scope=='power' else (4, 5)
     paths = [directory/'final-state-index.json', directory/'final-states.npz',
              directory/'python-curve-view.json', directory/'matlab-curve-view.json',
-             reference_directory/'original-figure-2-vector-reference.json',
-             reference_directory/'original-figure-3-vector-reference.json', Path(__file__), Path(ref.__file__)]
+             reference_directory/f'original-figure-{figures[0]}-vector-reference.json',
+             reference_directory/f'original-figure-{figures[1]}-vector-reference.json', Path(__file__), Path(ref.__file__)]
     before = {str(i)+':'+p.name: sha(p) for i, p in enumerate(paths)}
     index = read(paths[0]); require(index['array_bank_sha256'] == sha(paths[1]), 'Actual array bank differs')
     references = {c['label']: c for c in read(paths[4])['curves']}
@@ -78,8 +82,13 @@ def audit(directory, reference_directory, output):
                     require(cases, 'Unused input group')
                     data = {k: arrays[v] for k, v in spec['data'].items()}
                     limits = [arrays[c['interference_limit']].reshape(-1) for c in cases]
-                    require(all(x.shape == (1,) and np.array_equal(x, limits[0]) for x in limits), 'One identical GT limit required per group')
-                    I = ref.real(limits[0][0]); result = bound_group(data, I)
+                    require(all(x.shape == (1,) and x[0]>0 for x in limits), 'Exactly one positive shared GT limit per original case required')
+                    if scope=='power':
+                        require(all(np.array_equal(x, limits[0]) for x in limits), 'One identical GT limit required per power group')
+                    # The relaxation is exactly linear in I. Reuse only channel
+                    # coefficients, and multiply by each actual bound below.
+                    I = ref.real(limits[0][0]) if scope=='power' else mp.mpf(1)
+                    result = bound_group(data, I)
                     rows = {}
                     for name, r in result.items():
                         rows[name] = dict(upper_bound=mp.nstr(r['upper'], 105),
@@ -89,29 +98,39 @@ def audit(directory, reference_directory, output):
                         numeric.extend([r['upper'], *r['best'], *r['offsets'], *(v for row in r['ratios'] for v in row)])
                     groups[key] = dict(language=spec['language'], shared_GT_limit=mp.nstr(I, 105),
                         positive_definite_GT_second_moments_checked=True, source_cases=[c['ordinal'] for c in cases],
-                        bounds=rows)
+                        bounds=rows, unit_interference_coefficient=scope=='interference')
             lanes[str(digits)] = groups; values[digits] = numeric
     with mp.workdps(110):
         gap = max(abs(a-b) for a, b in zip(values[80], values[100])); stable = gap <= mp.mpf('1e-40')
     comparisons = []
     for language in ('python', 'matlab'):
         for point in views[language]['results']:
-            ordinal = point['source_case_ordinal']; figure = 2 if ordinal < 11 else 3; offset = ordinal if figure == 2 else ordinal-11
+            ordinal = point['source_case_ordinal']
+            if scope=='power':figure=2 if ordinal<11 else 3;offset=ordinal if figure==2 else ordinal-11
+            else:
+                require(24<=ordinal<48, 'Exact original interference slots required')
+                figure=4 if ordinal<36 else 5;offset=ordinal-24 if figure==4 else ordinal-36
             case = next(c for c in index['cases'] if c['language'] == language and c['ordinal'] == ordinal)
             rdoc = read(reference_directory/f'original-figure-{figure}-vector-reference.json')
             refs = {r['label']: r for r in rdoc['curves']}
             for name in NAMES:
                 upper = float(lanes['100'][case['input_group']]['bounds'][name]['upper_bound'])
+                if scope=='interference':
+                    with np.load(paths[1],allow_pickle=False) as arrays:
+                        upper*=float(arrays[case['interference_limit']].reshape(-1)[0])
                 current = min(point['schemes'][name]['evaluation']['sinr']); original = refs[name]['y'][offset]
                 rounding = rdoc['maximum_ordinate_rounding_resolution']
                 require(current <= upper+1e-9+1e-10*abs(upper), 'Computed feasible value exceeds the independent relaxation bound')
-                comparisons.append(dict(language=language, ordinal=ordinal, figure=figure, power_w=point['value'],
+                comparisons.append(dict(language=language, ordinal=ordinal, figure=figure,
+                    source_axis_parameter=point['parameter'], source_axis_value=point['value'],
                     scheme=name, independent_upper_bound=upper, saved_actual_minimum_SINR=current,
                     saved_actual_within_bound=True, author_EPS_ordinate=original,
                     EPS_full_decimal_ordinate_step=rounding, original_minus_bound=original-upper,
                     source_reference_exceeds_this_fixed_input_bound_after_rounding=bool(original-upper > rounding+1e-12*max(1, abs(upper)))))
     after = {str(i)+':'+p.name: sha(p) for i, p in enumerate(paths)}
-    report = dict(scope='Optimizer-independent NoRIS upper bound for the four actual binary input groups and all72 source NoRIS ordinates per language',
+    report = dict(scope='Optimizer-independent NoRIS upper bound for the actual binary input groups and all72 source NoRIS ordinates per language',
+        case_scope=scope, source_horizontal_unit_conformance_verified=scope=='power',
+        source_unit_caveat='Source EPS prints W while implementation uses noise-normalized I/N. Source ordinate comparison is conditional on identifying these scalar grids, not proof that the original W input violates the bound.' if scope=='interference' else 'Power-sweep inputs use the actual saved noise-normalized GT limit.',
         source_input_sha256=before, source_and_inputs_unchanged=before == after, mathematical_bound_assumptions=
         ['one shared GT interference limit', 'positive-definite GT second moments', 'nonnegative MR powers and channel variances',
          'original noncoherent sum-of-powers useful numerator', 'denominator at least positive noise plus GEO interference'],

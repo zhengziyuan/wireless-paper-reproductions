@@ -1,4 +1,4 @@
-"""Bind two complete saved power sweeps to source labels; never run a solver.
+"""Bind two complete saved power or interference sweeps; never run a solver.
 
 All 24 input slots and all eight schemes are required. Raw returns, including
 their dispatcher label ``base`` and historical audit flags, remain untouched.
@@ -24,6 +24,10 @@ from audit_moment_draws import input_data
 NAMES = ('AP-NoRIS', 'AP-AO', 'MR-S-NoRIS', 'MR-S-PA', 'MR-S-TS',
          'MR-TTS-NoRIS', 'MR-TTS-PA', 'MR-TTS-TS')
 GATES = ('constraint_pass', 'convergence_pass', 'solver_primal_pass', 'qt_bound_pass')
+SCOPES = {
+    'power': (('power_kL20', 'power_kL0'), list(range(24)), [11, 13], [2, 3]),
+    'interference': (('interference_kL20', 'interference_kL0'), list(range(24, 48)), [12, 12], [4, 5]),
+}
 
 
 def read(path):
@@ -56,11 +60,17 @@ def compact_point(point, identity):
     require(point['valid_figure_point'] is True and all(point[k] is True for k in GATES),
             'Failed/capped source slots cannot enter a successful complete curve')
     require(point['monte_carlo']['count'] == 1000, 'Configured 1000 moment draws required')
-    require(point['parameter'] == identity['parameter'] and point['value'] == identity['value'],
-            'Dispatcher value differs from exact source-index abscissa')
+    scene = identity['full_reported_scene']
+    require(scene[identity['parameter']] == identity['value'], 'Source axis differs from its exact configured scene')
+    require(point['parameter'] in scene and point['value'] == scene[point['parameter']],
+            'Raw dispatcher value differs from its exact configured scene')
     result = {k: copy.deepcopy(v) for k, v in point.items() if k != 'schemes'}
     result['raw_dispatcher_sweep'] = point['sweep']
+    result['raw_dispatcher_parameter'] = point['parameter']
+    result['raw_dispatcher_value'] = point['value']
     result['sweep'] = identity['sweep']
+    result['parameter'] = identity['parameter']
+    result['value'] = identity['value']
     result['source_case_ordinal'] = identity['ordinal']
     result['schemes'] = {}
     for name in NAMES:
@@ -70,6 +80,26 @@ def compact_point(point, identity):
             status={k: copy.deepcopy(status[k]) for k in
                     ('converged', 'termination', 'blocks', 'numerical', 'algorithm_success') if k in status})
     return result
+
+
+def verify_limits(power, limit, identity):
+    """Bind the plotted axis to actual numeric bounds, allowing8 rounding ulps.
+
+    The allowance covers equivalent JSON/MAT exponent evaluation only. It is
+    unrelated to solver, feasibility, gradient or physical-field tolerances.
+    """
+    scene = identity['full_reported_scene']
+    power = np.asarray(power).reshape(-1); limit = np.asarray(limit).reshape(-1)
+    expected_power = float(scene['power_w'])
+    expected_limit = float(scene['interference_to_noise_ratio'] if 'interference_to_noise_ratio' in scene
+                           else 10**(scene['interference_to_noise_db']/10))
+    require(power.shape == (scene['J'],) and limit.shape == (scene['K'],), 'Stored original constraint dimensions differ')
+    require(np.all(np.isfinite(power)) and np.all(np.isfinite(limit)), 'Nonfinite actual constraint bound')
+    require(np.all(abs(power-expected_power) <= 8*abs(np.spacing(expected_power))) and
+            np.all(abs(limit-expected_limit) <= 8*abs(np.spacing(expected_limit))),
+            'Actual stored constraints differ from the source-index scene')
+    return dict(source_power_w=expected_power, source_noise_normalized_interference=expected_limit,
+                actual_power_and_interference_bounds_match=True, input_serialization_rounding_ulps=8)
 
 
 def group_identity(data):
@@ -91,16 +121,18 @@ def build(a):
         watched[path] = digest
         return digest
 
-    bound(a.case_index)
-    cases = [c for c in read(a.case_index)['cases'] if c['sweep'] in ('power_kL20', 'power_kL0')]
-    require([c['ordinal'] for c in cases] == list(range(24)), 'Complete original two-sweep slots required')
-    require([sum(c['sweep'] == s for c in cases) for s in ('power_kL20', 'power_kL0')] == [11, 13],
-            'All eleven/thirteen original abscissas required')
+    bound(a.case_index); bound(Path(__file__))
+    scope = getattr(a, 'case_scope', 'power'); sweeps, ordinals, lengths, figures = SCOPES[scope]
+    cases = [c for c in read(a.case_index)['cases'] if c['sweep'] in sweeps]
+    require([c['ordinal'] for c in cases] == ordinals, 'Complete original two-sweep slots required')
+    require([sum(c['sweep'] == s for c in cases) for s in sweeps] == lengths,
+            'All original abscissas in both complete source sweeps required')
     followers = [read(p / 'progress.json') for p in (a.phase_dir, a.physics_dir, a.moment_dir)]
     records = [{r['ordinal']: r for r in d['records']} for d in followers]
     arrays, groups, states, provenance, comparisons = {}, {}, [], [], []
     views = {language: dict(paper_id='cooperative-satcom', language=language,
-        scope='Two complete original-source power sweeps, all24 slots and eight schemes; saved numerical returns',
+        scope=f'Two complete original-source {scope} sweeps, all24 slots and eight schemes; saved numerical returns',
+        original_source_figures=figures,
         source_unchanged_during_run=True, results=[],
         source_case_index_sha256=sha(a.case_index),
         configured1000_draws_are_optimized_performance_MC=False,
@@ -119,6 +151,8 @@ def build(a):
         return key
 
     def save_state(language, ordinal, data, power, limit, final, evaluations, origin):
+        identity = next(c for c in cases if c['ordinal'] == ordinal)
+        numeric_binding = verify_limits(power, limit, identity)
         group = save_group(language, data)
         prefix = f'{language}_case_{ordinal:03d}'
         arrays[prefix + '_power_limit'] = np.asarray(power).reshape(-1).copy()
@@ -135,7 +169,7 @@ def build(a):
         require([s['scheme'] for s in outputs] == list(NAMES), 'Final state order differs')
         states.append(dict(language=language, ordinal=ordinal, input_group=group,
             power_limit=prefix + '_power_limit', interference_limit=prefix + '_interference_limit',
-            final_states=outputs, original_sha256=origin))
+            final_states=outputs, original_sha256=origin, input_axis_binding=numeric_binding))
 
     for identity in cases:
         n = identity['ordinal']; old = a.python_bank / f'case-{n:03d}'
@@ -237,6 +271,7 @@ def build(a):
     write(a.output_dir / 'final-state-index.json', dict(scope='All24 slots x8 actual final states x2 languages; no inner trajectories',
         array_bank_sha256=sha(a.output_dir / 'final-states.npz'), groups=groups, cases=states,
         expected_cases_per_language=24, expected_schemes_per_case=8,
+        expected_case_ordinals=ordinals, original_source_figures=figures, case_scope=scope,
         source_case_index_sha256=sha(a.case_index), full_phase_QT_tapes_publicly_included=False))
     write(a.output_dir / 'source-and-audit-bindings.json', dict(source_index_sha256=sha(a.case_index),
         historical_raw_outputs_modified=False, all24_slots_present=True, records=provenance))
@@ -256,7 +291,7 @@ def build(a):
     from render_satellite_figures import aggregate, render
     renderer = strict / 'render_satellite_figures.py'; bound(renderer)
     for language, view in views.items():
-        for figure in (2, 3):
+        for figure in figures:
             data = aggregate('cooperative-satcom', figure, [view])
             data.update(language=language, source_case_index_sha256=sha(a.case_index),
                 curve_view_sha256=sha(a.output_dir / f'{language}-curve-view.json'), renderer_sha256=sha(renderer),
@@ -265,13 +300,14 @@ def build(a):
     for path, digest in watched.items():
         require(sha(path) == digest, 'An original input/source/audit changed while building: ' + path.name)
     write(a.output_dir / 'build-receipt.json', dict(all24_original_slots_and_all_eight_schemes=True,
+        case_scope=scope, expected_case_ordinals=ordinals, original_source_figures=figures,
         source_case_index_sha256=sha(a.case_index), saved_input_and_audit_files_unchanged=True,
         builder_sha256=sha(Path(__file__)), solver_or_rng_calls=0,
         raw_saved_183_receipts_modified=False, native_phase_QT_and_configured_MC_receipts_checked=24,
         full183_or_original_curve_or_paper_pass=False,
         output_files_sha256={p.relative_to(a.output_dir).as_posix(): sha(p)
             for p in sorted(a.output_dir.rglob('*')) if p.is_file()}))
-    print(json.dumps(dict(cases_per_language=24, schemes=8, original_figures=[2, 3],
+    print(json.dumps(dict(cases_per_language=24, schemes=8, original_figures=figures,
         maximum_absolute_linear_SINR_gap=max(x['absolute_linear_gap'] for x in flat),
         output=str(a.output_dir))))
 
@@ -281,4 +317,5 @@ if __name__ == '__main__':
     for name in ('case-index', 'python-bank', 'native-bank', 'phase-dir', 'finite-dir',
                  'physics-dir', 'first-physics', 'moment-dir', 'output-dir'):
         p.add_argument('--' + name, type=Path, required=True)
+    p.add_argument('--case-scope', choices=tuple(SCOPES), default='power')
     build(p.parse_args())

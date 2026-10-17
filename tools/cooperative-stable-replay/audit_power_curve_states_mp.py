@@ -1,4 +1,4 @@
-"""Independent MP80/100 physics for all24 power slots x8 schemes x2 languages.
+"""Independent MP80/100 physics for all24 source slots x8 schemes x2 languages.
 
 Consumes the compact real final-state bank, never an optimizer or RNG. Phase
 stops and all inner QT candidates retain their separate original audit scope.
@@ -14,7 +14,7 @@ import numpy as np
 
 from audit_native_case import sha
 from audit_native_physics_mp import FIELDS, compare, constraints
-from build_power_curve_views import NAMES, read, require, write
+from build_power_curve_views import NAMES, SCOPES, read, require, verify_limits, write
 import mp_phase_reference as ref
 
 
@@ -41,13 +41,22 @@ def audit(directory, output):
     require(not output.exists(), 'Preserve previous independent report')
     paths = [directory/'final-state-index.json', directory/'final-states.npz',
              directory/'python-curve-view.json', directory/'matlab-curve-view.json',
-             Path(__file__), Path(ref.__file__)]
+             Path(__file__), Path(ref.__file__),
+             Path(__file__).resolve().parents[2]/'strict/validation/cooperative-original183-inputs-20261017/original-case-index.json']
     before = {str(i)+':'+p.name: sha(p) for i, p in enumerate(paths)}
     index = read(paths[0]); require(index['array_bank_sha256'] == sha(paths[1]), 'Real array bank differs')
+    scope = index.get('case_scope', 'power'); require(scope in SCOPES, 'Unknown original complete sweep scope')
+    _, ordinals, _, figures = SCOPES[scope]
+    require(index.get('expected_case_ordinals', ordinals) == ordinals and
+            index.get('original_source_figures', figures) == figures, 'Exact original sweep identity differs')
+    require(index['source_case_index_sha256'] == sha(paths[-1]), 'Original published case-index snapshot differs')
+    source_cases = {c['ordinal']:c for c in read(paths[-1])['cases']}
     cases = index['cases']; require(len(cases) == 48, 'All48 paired language cases required')
     views = {name: read(directory/(name+'-curve-view.json')) for name in ('python', 'matlab')}
     for name in views:
-        require(sorted(c['ordinal'] for c in cases if c['language'] == name) == list(range(24)),
+        require(sorted(c['ordinal'] for c in cases if c['language'] == name) == ordinals and
+                sorted(p['source_case_ordinal'] for p in views[name]['results']) == ordinals and
+                views[name]['source_case_index_sha256'] == sha(paths[-1]),
                 'Missing/duplicate original source slots')
     values, lanes = {}, {}; started = time.perf_counter()
     with np.load(paths[1], allow_pickle=False) as arrays:
@@ -61,12 +70,16 @@ def audit(directory, output):
                     require(len(data) == 11 and all(np.isfinite(x).all() for x in data.values()),
                             'All11 finite physical arrays required')
                     J, U, N = data['d_mean'].shape; M = data['r_mean'].shape[1]
-                    require((J, U, N, M) == (3, 2, 16, 25), 'Complete original power-scene dimensions required')
+                    require((J, U, N, M) == (3, 2, 16, 25), 'Complete original source-scene dimensions required')
                     power = arrays[case['power_limit']].reshape(-1); limit = arrays[case['interference_limit']].reshape(-1)
                     require(power.shape == (J,) and limit.shape == (1,), 'Missing original bounds')
                     selected = [p for p in views[case['language']]['results'] if p['source_case_ordinal'] == case['ordinal']]
                     require(len(selected) == 1, 'Curve view source slot differs')
                     point = selected[0]; final = []
+                    identity = source_cases[case['ordinal']]
+                    require(all(point[key] == identity[key] for key in ('sweep', 'parameter', 'value')),
+                            'Plotted abscissa does not match its exact original source slot')
+                    verify_limits(power, limit, identity)
                     require([s['scheme'] for s in case['final_states']] == list(NAMES), 'Eight actual final states required')
                     for state in case['final_states']:
                         name = state['scheme']; require(state['evaluation'] == point['schemes'][name]['evaluation'],
@@ -96,7 +109,9 @@ def audit(directory, output):
     with mp.workdps(110):
         gap = max(abs(x-y) for x, y in zip(values[80], values[100])); stable = gap <= mp.mpf('1e-40')
     after = {str(i)+':'+p.name: sha(p) for i, p in enumerate(paths)}
-    report = dict(scope='All24 original power cases x8 actual final states x2 languages; independent MP80/100 final physics',
+    report = dict(scope=f'All24 original {scope} cases x8 actual final states x2 languages; independent MP80/100 final physics',
+        case_scope=scope, exact_original_case_ordinals=ordinals, original_source_figures=figures,
+        actual_numeric_input_bounds_match_every_original_source_axis=True,
         source_input_sha256=before, source_and_inputs_unchanged=before == after,
         cases_per_language=24, schemes_per_case=8, actual_final_states_per_precision=384,
         scalar_field_coordinates_per_precision=3072, field_comparison_policy='1e-9+1e-10*abs(reference)',

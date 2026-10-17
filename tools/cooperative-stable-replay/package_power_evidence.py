@@ -12,16 +12,23 @@ from build_power_curve_views import read, require, write
 
 def package(directory, packet):
     require(not packet.exists(), 'Preserve prior public packet')
+    index=read(directory/'final-state-index.json');scope=index.get('case_scope','power')
+    require(scope in ('power','interference'),'Only the two exact24-slot source cohorts are supported')
     require(read(directory/'independent-all384-final-states-MP80-MP100.json')['all384_final_states_physics_and_precision_pass'],
             'All384 actual final states must pass independent physics')
     require(read(directory/'independent-NoRIS-input-bound-MP80-MP100.json')['all_bound_evaluations_and_source_bindings_pass'],
             'Independent fixed-input bound must pass')
     require(read(directory/'build-receipt.json')['all24_original_slots_and_all_eight_schemes'], 'All original slots required')
+    if scope=='interference':
+        require(read(directory/'case047-phase-witness/independent-cross-evaluation-MP80-MP100.json')['all_saved_phase_and_precision_checks_pass'],
+                'Preserve and independently check the divergent actual endpoints')
+        require(read(directory/'case047-same-native-data-phase-controls/independent-controls-MP80-MP100.json')['all_fields_strict_original_stops_and_precision_pass'],
+                'Both prospective isolated same-data controls must retain the original stops')
     files = {}
     for path in sorted(directory.rglob('*')):
         if not path.is_file():
             continue
-        require(path.suffix in ('.json', '.npz', '.png', '.svg'), 'No private EPS, manuscripts or logs in public packet')
+        require(path.suffix in ('.json', '.npz', '.mat', '.png', '.svg'), 'No private EPS, manuscripts or logs in public packet')
         name = path.relative_to(directory).as_posix()
         files[name] = path.read_bytes()
     require(all(name in files for name in ('final-states.npz', 'final-state-index.json',
@@ -34,18 +41,20 @@ def package(directory, packet):
             for name, data in files.items():
                 item = tarfile.TarInfo(name); item.size = len(data); item.mtime = 0; item.mode = 0o644
                 archive.addfile(item, io.BytesIO(data))
-    raw = buffer.getvalue(); stem = 'power24-dual-final-states-and-curves.tar.gz'
+    raw = buffer.getvalue(); stem = scope+'24-dual-final-states-and-curves.tar.gz'
     parts = []
     for n, start in enumerate(range(0, len(raw), 512*1024)):
         chunk = raw[start:start+512*1024]; name = stem+f'.part{n:03d}'
         (packet/name).write_bytes(chunk)
         parts.append(dict(file=name, bytes=len(chunk), sha256=hashlib.sha256(chunk).hexdigest()))
-    manifest = dict(scope='Actual24 paired full power-sweep cases, all384 final states and independent reference diagnostics',
-        languages=['python', 'matlab'], power_cases_per_language=24, schemes_per_case=8, total_final_states=384,
+    manifest = dict(scope=f'Actual24 paired full {scope}-sweep cases, all384 final states and independent reference diagnostics',
+        case_scope=scope, exact_original_case_ordinals=list(range(24)) if scope=='power' else list(range(24,48)),
+        languages=['python', 'matlab'], cases_per_language=24, schemes_per_case=8, total_final_states=384,
         archive=dict(filename=stem, bytes=len(raw), sha256=hashlib.sha256(raw).hexdigest(), parts=parts),
         files={name:dict(bytes=len(data), sha256=hashlib.sha256(data).hexdigest()) for name, data in files.items()},
         packager_sha256=sha(Path(__file__)), full_phase_QT_tapes_publicly_included=False,
         original_private_EPS_redistributed=False, original_curve_or_full_paper_pass=False)
+    if scope=='power':manifest['power_cases_per_language']=24
     write(packet/'archive-manifest.json', manifest)
     for source in ('dual-language-comparison.json', 'build-receipt.json'):
         doc = read(directory/source)
