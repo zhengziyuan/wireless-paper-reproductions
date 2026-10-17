@@ -55,8 +55,11 @@ G-scatter coefficient contradiction. The [exact coefficient receipt](rician-sour
 retains source SHA/line anchors and all7200 native constructor mean/variance
 checks. The implementation already follows normalized Eq3-1. This error does
 not explain the NoRIS curve discrepancy; its channel contains no G term.
-The source explicitly defines50W as a total beam-power budget, excluding an
-unreported per-feed rescaling as a remedy. See [the scoped erratum](../../hotspot-satcom/STATISTICAL_ERRATUM.md).
+The source table specifies **100 W total beam power**. All five hotspot
+configurations, all18 saved native configurations and their replayed contexts
+already use100 W. An earlier50 W description was a documentation error; these
+saved results are100 W results. An unreported per-feed rescaling cannot be
+used as a remedy. See [the scoped erratum](../../hotspot-satcom/STATISTICAL_ERRATUM.md).
 
 This reproducible discrepancy must be resolved against the supplied model,
 normalization, geometry and pattern assumptions. It is not, by itself, a

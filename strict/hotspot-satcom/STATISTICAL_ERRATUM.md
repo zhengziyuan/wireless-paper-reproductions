@@ -316,5 +316,8 @@ unverified. It cannot itself explain the NoRIS reference discrepancy, because
 G is absent from that baseline.
 
 The same source calls P_T the maximum **total** beam power at line101, with
-its50W table row at line681. A per-feed50W reinterpretation is therefore not
-an authorized correction of this supplied model.
+its **100 W** table row at line681. All five hotspot configurations and all18
+saved native case configurations already use100 W; the replayed constructor
+contexts also retain100 W. An earlier description of50 W in this note was a
+documentation error, not a configuration or saved-result error. A per-feed
+reinterpretation is not an authorized correction of this supplied model.
