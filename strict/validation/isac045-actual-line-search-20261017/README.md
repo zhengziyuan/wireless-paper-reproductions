@@ -40,8 +40,9 @@ Continuation preserves the previous PR vectors and uses only the129 iterations
 remaining in the original500 budget. It passes the failed step without another
 Armijo exception, but ends at normalized gradient8.945971764733584e-5:
 **still unconverged**. This mixed-prefix suffix is not a cold phase or complete
-six-scheme result. A separate full cold six-scheme case is pending. The active
-original batch and all original strict source files remain unchanged.
+six-scheme result. The separate [cold six-scheme control has now completed](../isac045-cold-six-scheme-negative-20261017/README.md):
+one Armijo failure, four outer-cap outcomes and one complete configured stop.
+The active original batch and all original strict source files remain unchanged.
 
 Install `strict/requirements.txt` and `mpmath==1.4.1`; use fresh destinations:
 

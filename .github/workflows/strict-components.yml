@@ -143,6 +143,8 @@ jobs:
         run: python tools/isac-line-search-replay/continue_phase.py --capture strict/validation/isac045-actual-line-search-20261017 --output-dir strict/outputs/ci-isac-actual80/original-budget-suffix
       - name: Actual saved warm phase stop with explicit unreported cap (no new optimizer)
         run: python tools/isac-line-search-replay/audit_phase_probe_mp.py --capture strict/validation/isac045-actual-line-search-20261017 --probe strict/validation/isac045-actual-line-search-20261017/warm-phase-unreported-cap-v1 --output strict/outputs/ci-isac-actual80/warm-phase-MP-stop.json
+      - name: Completed cold six-scheme control retains negative convergence outcomes
+        run: python tools/isac-line-search-replay/replay_cold_control.py --packet strict/validation/isac045-cold-six-scheme-negative-20261017 --output-dir strict/outputs/ci-isac-actual80/cold-six-control
       - name: Actual native full-size MIS Fig8 start all17 saved endpoints
         run: python tools/mis-native-replay/audit_numeric_view.py --input strict/validation/MIS-Fig8-native-original12000-20261017/native-MIS-start000001-all17-endpoints.json --output strict/outputs/ci-MIS-native-Fig8/first-start.json
       - name: Actual6000 sensing audit-report slots and nine physical state witnesses (not6000 raw replay)

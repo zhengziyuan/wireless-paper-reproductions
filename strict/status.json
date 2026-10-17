@@ -1,4 +1,23 @@
 {
+  "ISAC045_completed_cold_six_scheme_checkpoint": {
+    "date": "2026-10-17",
+    "observed_local": "2026-10-17T15:42:18.706137+08:00",
+    "evidence": "validation/isac045-cold-six-scheme-negative-20261017/README.md",
+    "actual_parent_exit_code_observed": 0,
+    "actual_elapsed_seconds": 15279.514844999998,
+    "original_configured_limits_unchanged": true,
+    "saved_terminal_states": 5,
+    "failed_schemes": 1,
+    "outer_cap_schemes": 4,
+    "complete_configured_stop_schemes": 1,
+    "all2005_AO_and6015_block_scalar_decisions_consistent": true,
+    "retained_RIS_block_caps": 1499,
+    "retained_rotation_block_caps": 27,
+    "all_five_physical_and_gradient_states_MP80_MP100_checks_pass": true,
+    "last_PGA_step_stops_with_independent_norm_above_original_gradient_tolerance": 3,
+    "failed_scheme_state_or_actual_trial_tape_available": false,
+    "all_historical_QCQP_KKT_or_six_scheme_or_original_curve_pass": false
+  },
   "satellite_GT_pattern_source_checkpoint": {
     "date": "2026-10-17",
     "observed_local": "2026-10-17T15:26:25.979966+08:00",
@@ -630,14 +649,14 @@
     "suffix_converged": false,
     "suffix_final_normalized_gradient": 8.945971764733584e-05,
     "original_live_core_or_original_campaign_changed": false,
-    "separate_cold_full6_equivalent_arithmetic_case": "running; no success certificate",
+    "separate_cold_full6_equivalent_arithmetic_case": "closed normally; one Armijo failure, four outer-cap outcomes, one complete configured stop",
     "full_convergence_dual_language_reference_or_paper_pass": false,
     "separate_new_warm_phase_call_explicit_unreported_cap": 100000,
     "separate_new_warm_call_iterations": 960,
     "separate_new_warm_call_full_physics_MP80_MP100_stop_pass": true,
     "separate_warm_call_MP100_normalized_gradient": 8.857765342521872e-07,
     "separate_warm_call_is_original_PR_history_continuation": false,
-    "original_500_cap_cold_six_scheme_status": "running; full convergence not certified"
+    "original_500_cap_cold_six_scheme_status": "complete negative result; five saved states independently MP80/MP100 verified; six-scheme convergence fails"
   },
   "MIS_Fig8_genuine_native_12000_checkpoint": {
     "date": "2026-10-17",
