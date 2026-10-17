@@ -1,4 +1,4 @@
-"""Independent MP80/100 physics for all24 source slots x8 schemes x2 languages.
+"""Independent MP80/100 physics for each complete paired source sweep.
 
 Consumes the compact real final-state bank, never an optimizer or RNG. Phase
 stops and all inner QT candidates retain their separate original audit scope.
@@ -47,11 +47,12 @@ def audit(directory, output):
     index = read(paths[0]); require(index['array_bank_sha256'] == sha(paths[1]), 'Real array bank differs')
     scope = index.get('case_scope', 'power'); require(scope in SCOPES, 'Unknown original complete sweep scope')
     _, ordinals, _, figures = SCOPES[scope]
+    count = len(ordinals)
     require(index.get('expected_case_ordinals', ordinals) == ordinals and
             index.get('original_source_figures', figures) == figures, 'Exact original sweep identity differs')
     require(index['source_case_index_sha256'] == sha(paths[-1]), 'Original published case-index snapshot differs')
     source_cases = {c['ordinal']:c for c in read(paths[-1])['cases']}
-    cases = index['cases']; require(len(cases) == 48, 'All48 paired language cases required')
+    cases = index['cases']; require(len(cases) == 2*count, 'Every paired language case is required')
     views = {name: read(directory/(name+'-curve-view.json')) for name in ('python', 'matlab')}
     for name in views:
         require(sorted(c['ordinal'] for c in cases if c['language'] == name) == ordinals and
@@ -70,7 +71,9 @@ def audit(directory, output):
                     require(len(data) == 11 and all(np.isfinite(x).all() for x in data.values()),
                             'All11 finite physical arrays required')
                     J, U, N = data['d_mean'].shape; M = data['r_mean'].shape[1]
-                    require((J, U, N, M) == (3, 2, 16, 25), 'Complete original source-scene dimensions required')
+                    scene = source_cases[case['ordinal']]['full_reported_scene']
+                    require((J, U, N, M) == tuple(scene[k] for k in ('J', 'U', 'N', 'M')) and
+                            (J, U, N) == (3, 2, 16), 'Exact complete original source-scene dimensions required')
                     power = arrays[case['power_limit']].reshape(-1); limit = arrays[case['interference_limit']].reshape(-1)
                     require(power.shape == (J,) and limit.shape == (1,), 'Missing original bounds')
                     selected = [p for p in views[case['language']]['results'] if p['source_case_ordinal'] == case['ordinal']]
@@ -105,23 +108,26 @@ def audit(directory, output):
                     if len(lane) % 8 == 0:
                         print(json.dumps(dict(digits=digits, cases_checked=len(lane), all_pass=all(c['all_eight_pass'] for c in lane))), flush=True)
             lanes[str(digits)] = lane; values[digits] = scalar_values
-    require(len(values[80]) == len(values[100]) == 3072, 'All original physical field coordinates required')
+    scalar_count = count*2*8*(2+2+3+1)
+    require(len(values[80]) == len(values[100]) == scalar_count, 'All original physical field coordinates required')
     with mp.workdps(110):
         gap = max(abs(x-y) for x, y in zip(values[80], values[100])); stable = gap <= mp.mpf('1e-40')
     after = {str(i)+':'+p.name: sha(p) for i, p in enumerate(paths)}
-    report = dict(scope=f'All24 original {scope} cases x8 actual final states x2 languages; independent MP80/100 final physics',
+    passed = bool(before == after and stable and all(c['all_eight_pass'] for lane in lanes.values() for c in lane))
+    report = dict(scope=f'All{count} original {scope} cases x8 actual final states x2 languages; independent MP80/100 final physics',
         case_scope=scope, exact_original_case_ordinals=ordinals, original_source_figures=figures,
         actual_numeric_input_bounds_match_every_original_source_axis=True,
         source_input_sha256=before, source_and_inputs_unchanged=before == after,
-        cases_per_language=24, schemes_per_case=8, actual_final_states_per_precision=384,
-        scalar_field_coordinates_per_precision=3072, field_comparison_policy='1e-9+1e-10*abs(reference)',
+        cases_per_language=count, schemes_per_case=8, actual_final_states_per_precision=count*16,
+        scalar_field_coordinates_per_precision=scalar_count, field_comparison_policy='1e-9+1e-10*abs(reference)',
         original_physical_constraint_absolute_tolerance=1e-5, phase_unit_tolerance=1e-10,
         maximum_MP80_MP100_difference=mp.nstr(gap, 105), precision_absolute_bound='1e-40', lanes=lanes,
-        all384_final_states_physics_and_precision_pass=bool(before == after and stable and
-            all(c['all_eight_pass'] for lane in lanes.values() for c in lane)),
+        all_final_states_physics_and_precision_pass=passed,
         independently_optimized_solution_equality_certified=False,
         phase_stops_QT_candidates_MC_reference_or_full_paper_pass=False,
         elapsed_seconds=time.perf_counter()-started, optimizer_or_random_draw_calls=0)
+    if count == 24:
+        report['all384_final_states_physics_and_precision_pass'] = passed
     write(output, report)
     print(json.dumps({k: v for k, v in report.items() if k not in ('lanes', 'source_input_sha256')}), flush=True)
     return report
@@ -130,5 +136,5 @@ def audit(directory, output):
 if __name__ == '__main__':
     p = argparse.ArgumentParser(description=__doc__); p.add_argument('--directory', type=Path, required=True)
     p.add_argument('--output', type=Path, required=True); a = p.parse_args()
-    if not audit(a.directory, a.output)['all384_final_states_physics_and_precision_pass']:
+    if not audit(a.directory, a.output)['all_final_states_physics_and_precision_pass']:
         raise SystemExit(1)

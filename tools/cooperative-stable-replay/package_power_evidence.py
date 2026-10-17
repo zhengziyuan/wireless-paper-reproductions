@@ -1,4 +1,4 @@
-"""Package the verified24-case paired final states, curves and unfitted diagnostics."""
+"""Package complete paired final states, curves and unfitted diagnostics."""
 import argparse
 import gzip
 import hashlib
@@ -7,18 +7,32 @@ from pathlib import Path
 import tarfile
 
 from audit_native_case import sha
-from build_power_curve_views import read, require, write
+from build_power_curve_views import SCOPES, read, require, write
 
 
 def package(directory, packet):
     require(not packet.exists(), 'Preserve prior public packet')
     index=read(directory/'final-state-index.json');scope=index.get('case_scope','power')
-    require(scope in ('power','interference'),'Only the two exact24-slot source cohorts are supported')
-    require(read(directory/'independent-all384-final-states-MP80-MP100.json')['all384_final_states_physics_and_precision_pass'],
-            'All384 actual final states must pass independent physics')
+    require(scope in SCOPES, 'Only exact complete source cohorts are supported')
+    _, ordinals, _, figures = SCOPES[scope]
+    count = len(ordinals); states = count*16
+    require(index['expected_cases_per_language'] == count and index['expected_schemes_per_case'] == 8 and
+            index['expected_case_ordinals'] == ordinals and index['original_source_figures'] == figures,
+            'The exact source cohort differs')
+    math_file = f'independent-all{states}-final-states-MP80-MP100.json'
+    math_report = read(directory/math_file)
+    require(math_report.get('all_final_states_physics_and_precision_pass',
+                           math_report.get('all384_final_states_physics_and_precision_pass')) and
+            math_report['cases_per_language'] == count and math_report['actual_final_states_per_precision'] == states,
+            'Every actual final state must pass independent physics')
     require(read(directory/'independent-NoRIS-input-bound-MP80-MP100.json')['all_bound_evaluations_and_source_bindings_pass'],
             'Independent fixed-input bound must pass')
-    require(read(directory/'build-receipt.json')['all24_original_slots_and_all_eight_schemes'], 'All original slots required')
+    build = read(directory/'build-receipt.json')
+    require(build.get('all_original_slots_and_all_eight_schemes', build.get('all24_original_slots_and_all_eight_schemes')),
+            'All original slots required')
+    if scope == 'subsurfaces':
+        require(build['explicitly_selected_repaired_Python_case_ordinals'] == [56,65],
+                'Both separately audited corrected epochs must be explicit')
     if scope=='interference':
         require(read(directory/'case047-phase-witness/independent-cross-evaluation-MP80-MP100.json')['all_saved_phase_and_precision_checks_pass'],
                 'Preserve and independently check the divergent actual endpoints')
@@ -41,15 +55,15 @@ def package(directory, packet):
             for name, data in files.items():
                 item = tarfile.TarInfo(name); item.size = len(data); item.mtime = 0; item.mode = 0o644
                 archive.addfile(item, io.BytesIO(data))
-    raw = buffer.getvalue(); stem = scope+'24-dual-final-states-and-curves.tar.gz'
+    raw = buffer.getvalue(); stem = scope+str(count)+'-dual-final-states-and-curves.tar.gz'
     parts = []
     for n, start in enumerate(range(0, len(raw), 512*1024)):
         chunk = raw[start:start+512*1024]; name = stem+f'.part{n:03d}'
         (packet/name).write_bytes(chunk)
         parts.append(dict(file=name, bytes=len(chunk), sha256=hashlib.sha256(chunk).hexdigest()))
-    manifest = dict(scope=f'Actual24 paired full {scope}-sweep cases, all384 final states and independent reference diagnostics',
-        case_scope=scope, exact_original_case_ordinals=list(range(24)) if scope=='power' else list(range(24,48)),
-        languages=['python', 'matlab'], cases_per_language=24, schemes_per_case=8, total_final_states=384,
+    manifest = dict(scope=f'Actual{count} paired full {scope}-sweep cases, all{states} final states and independent reference diagnostics',
+        case_scope=scope, exact_original_case_ordinals=ordinals, original_source_figures=figures,
+        languages=['python', 'matlab'], cases_per_language=count, schemes_per_case=8, total_final_states=states,
         archive=dict(filename=stem, bytes=len(raw), sha256=hashlib.sha256(raw).hexdigest(), parts=parts),
         files={name:dict(bytes=len(data), sha256=hashlib.sha256(data).hexdigest()) for name, data in files.items()},
         packager_sha256=sha(Path(__file__)), full_phase_QT_tapes_publicly_included=False,
@@ -63,7 +77,7 @@ def package(directory, packet):
         write(packet/source.replace('.json', '-summary.json'), doc)
     write(packet/'original-reference-summary.json', read(directory/'reference-comparison/original-reference-summary.json'))
     for source, wanted in (
-        ('independent-all384-final-states-MP80-MP100.json', ('lanes', 'source_input_sha256')),
+        (math_file, ('lanes', 'source_input_sha256')),
         ('independent-NoRIS-input-bound-MP80-MP100.json', ('lanes', 'comparisons', 'source_input_sha256'))):
         doc = read(directory/source)
         for key in wanted:

@@ -1,6 +1,6 @@
-"""Bind two complete saved power or interference sweeps; never run a solver.
+"""Bind two complete saved power, interference or RIS-size sweeps.
 
-All 24 input slots and all eight schemes are required. Raw returns, including
+Every source input slot and all eight schemes are required. Raw returns, including
 their dispatcher label ``base`` and historical audit flags, remain untouched.
 The small public state bank permits independent final-physics replay; full
 phase/QT tapes remain bound by their original hashes in the local archive.
@@ -27,6 +27,7 @@ GATES = ('constraint_pass', 'convergence_pass', 'solver_primal_pass', 'qt_bound_
 SCOPES = {
     'power': (('power_kL20', 'power_kL0'), list(range(24)), [11, 13], [2, 3]),
     'interference': (('interference_kL20', 'interference_kL0'), list(range(24, 48)), [12, 12], [4, 5]),
+    'subsurfaces': (('subsurfaces_kL20', 'subsurfaces_kL0'), list(range(48, 66)), [9, 9], [6, 7]),
 }
 
 
@@ -123,6 +124,7 @@ def build(a):
 
     bound(a.case_index); bound(Path(__file__))
     scope = getattr(a, 'case_scope', 'power'); sweeps, ordinals, lengths, figures = SCOPES[scope]
+    count = len(ordinals)
     cases = [c for c in read(a.case_index)['cases'] if c['sweep'] in sweeps]
     require([c['ordinal'] for c in cases] == ordinals, 'Complete original two-sweep slots required')
     require([sum(c['sweep'] == s for c in cases) for s in sweeps] == lengths,
@@ -131,7 +133,7 @@ def build(a):
     records = [{r['ordinal']: r for r in d['records']} for d in followers]
     arrays, groups, states, provenance, comparisons = {}, {}, [], [], []
     views = {language: dict(paper_id='cooperative-satcom', language=language,
-        scope=f'Two complete original-source {scope} sweeps, all24 slots and eight schemes; saved numerical returns',
+        scope=f'Two complete original-source {scope} sweeps, all{count} slots and eight schemes; saved numerical returns',
         original_source_figures=figures,
         source_unchanged_during_run=True, results=[],
         source_case_index_sha256=sha(a.case_index),
@@ -174,24 +176,10 @@ def build(a):
     for identity in cases:
         n = identity['ordinal']; old = a.python_bank / f'case-{n:03d}'
         configuration = old / 'configuration.json'
-        bound(configuration, identity['configuration_sha256']); config = read(configuration)
-        require(config['reported'] == identity['full_reported_scene'], 'Original reported scene differs')
-        receipt_path = old / 'actual-point-receipt.json'; bound(receipt_path); receipt = read(receipt_path)
-        require(receipt['case_identity'] == {k: identity[k] for k in ('ordinal', 'sweep', 'parameter', 'value')},
-                'Original source case association differs')
-        require(receipt['source_interval_pass'] and receipt['actual_complete_result_returned'] and
-                receipt['actual_all_original_gates_pass'] and receipt['actual_independent_state_audit_pass'],
-                'Historical Python gate was not verified; do not upgrade it')
-        for filename, digest in receipt['actual_outputs_sha256'].items():
-            bound(old / filename, digest)
-        py = read(old / 'actual-result.json'); py_meta = read(old / 'actual-state.json')
-        py_audit = read(old / 'actual-independent-audit.json')
-        require(py_audit['all_independent_implemented_numerical_checks_pass'] is True,
-                'Original independent Python audit failed')
-        require(py['source_unchanged_during_run'] is True and py['configuration'] == config,
-                'Saved Python sources/configuration changed')
-        require(py_meta['actual_saved_array_bank_sha256'] == sha(old / 'actual-state.npz'),
-                'Python array recording is not bound')
+        from select_python_curve_case import select
+        bound(Path(__file__).with_name('select_python_curve_case.py'))
+        config, py, py_data, py_final, py_power, py_limit, py_origin, py_selection = select(
+            identity, old, getattr(a, 'repaired_python_root', None), bound)
         native_path = a.native_bank / f'case-{n:03d}-matlab.json'; bound(native_path); native = read(native_path)
         require(native['source_unchanged_during_run'] is True and native['configuration'] == config,
                 'Actual native configuration/source differs')
@@ -220,20 +208,7 @@ def build(a):
         matpoint = compact_point(native['results'][0], identity)
         views['python']['results'].append(pypoint); views['matlab']['results'].append(matpoint)
         recording = loadmat(tape, simplify_cells=True)['recording']
-        with np.load(old / 'actual-state.npz', allow_pickle=False) as bank:
-            case = py_meta['cases'][0]
-            py_data = {k: state_array(v, bank) for k, v in case['data'].items()}
-            py_final = []
-            for state in case['scheme_final_states']:
-                item = dict(scheme=state['scheme'], no_ris=state['noRIS'], phi=state_array(state['phi'], bank))
-                for source, dest in (('AP_W', 'W'), ('MR_p', 'p')):
-                    if state.get(source) is not None:
-                        item[dest] = state_array(state[source], bank)
-                py_final.append(item)
-            py_origin = {f: sha(old / f) for f in ('configuration.json', 'actual-result.json', 'actual-state.json',
-                'actual-state.npz', 'actual-independent-audit.json', 'actual-point-receipt.json')}
-            save_state('python', n, py_data, state_array(case['power_limits'], bank),
-                       state_array(case['interference_limits'], bank), py_final, pypoint['schemes'], py_origin)
+        save_state('python', n, py_data, py_power, py_limit, py_final, pypoint['schemes'], py_origin)
         native_origin = dict(configuration=sha(configuration), result=sha(native_path), states=sha(tape),
             finite=sha(finite_path), phase_MP=sha(phase_path), final_QT_MP=sha(physics_path), moment_MC=sha(moment_path))
         save_state('matlab', n, native_data, recording['input']['power_limit'],
@@ -260,6 +235,7 @@ def build(a):
         comparisons.append(dict(ordinal=n, sweep=identity['sweep'], value=identity['value'],
             channel_inputs=input_errors, independently_optimized_minimum_SINR=metric_errors))
         provenance.append(dict(identity=identity, python=py_origin, matlab=native_origin,
+            Python_saved_epoch_selection=py_selection,
             native_phase_MP_summary=phase, native_final_QT_MP_summary=dict(
                 all_physical_QT_and_precision_checks_pass=True, QT_candidates=physics['QT_candidates'],
                 scalar_values_per_precision=physics['scalar_values_per_precision'],
@@ -268,18 +244,18 @@ def build(a):
             historical_Python_full_MP_and_full_paper_flags_unchanged=True))
     a.output_dir.mkdir(parents=True)
     np.savez_compressed(a.output_dir / 'final-states.npz', **arrays)
-    write(a.output_dir / 'final-state-index.json', dict(scope='All24 slots x8 actual final states x2 languages; no inner trajectories',
+    write(a.output_dir / 'final-state-index.json', dict(scope=f'All{count} slots x8 actual final states x2 languages; no inner trajectories',
         array_bank_sha256=sha(a.output_dir / 'final-states.npz'), groups=groups, cases=states,
-        expected_cases_per_language=24, expected_schemes_per_case=8,
+        expected_cases_per_language=count, expected_schemes_per_case=8,
         expected_case_ordinals=ordinals, original_source_figures=figures, case_scope=scope,
         source_case_index_sha256=sha(a.case_index), full_phase_QT_tapes_publicly_included=False))
     write(a.output_dir / 'source-and-audit-bindings.json', dict(source_index_sha256=sha(a.case_index),
-        historical_raw_outputs_modified=False, all24_slots_present=True, records=provenance))
+        historical_raw_outputs_modified=False, all_original_slots_present=True, original_slots=count, records=provenance))
     for language, view in views.items():
         write(a.output_dir / f'{language}-curve-view.json', view)
     flat = [x for r in comparisons for x in r['independently_optimized_minimum_SINR']]
-    write(a.output_dir / 'dual-language-comparison.json', dict(scope='All24 paired physical inputs and192 independently optimized minimum-SINR pairs',
-        same_configuration_all24=True, input_arrays_per_pair=11,
+    write(a.output_dir / 'dual-language-comparison.json', dict(scope=f'All{count} paired physical inputs and{count*8} independently optimized minimum-SINR pairs',
+        same_configuration_every_original_slot=True, original_slots=count, input_arrays_per_pair=11,
         maximum_absolute_linear_SINR_gap=max(x['absolute_linear_gap'] for x in flat),
         maximum_relative_SINR_gap=max(x['relative_gap_to_python'] for x in flat),
         maximum_absolute_dB_SINR_gap=max(abs(x['signed_dB_gap']) for x in flat),
@@ -299,15 +275,17 @@ def build(a):
             render(data, a.output_dir / language)
     for path, digest in watched.items():
         require(sha(path) == digest, 'An original input/source/audit changed while building: ' + path.name)
-    write(a.output_dir / 'build-receipt.json', dict(all24_original_slots_and_all_eight_schemes=True,
+    write(a.output_dir / 'build-receipt.json', dict(all24_original_slots_and_all_eight_schemes=count==24,
+        all_original_slots_and_all_eight_schemes=True, cases_per_language=count,
         case_scope=scope, expected_case_ordinals=ordinals, original_source_figures=figures,
         source_case_index_sha256=sha(a.case_index), saved_input_and_audit_files_unchanged=True,
         builder_sha256=sha(Path(__file__)), solver_or_rng_calls=0,
-        raw_saved_183_receipts_modified=False, native_phase_QT_and_configured_MC_receipts_checked=24,
+        raw_saved_183_receipts_modified=False, native_phase_QT_and_configured_MC_receipts_checked=count,
+        explicitly_selected_repaired_Python_case_ordinals=[n for n in ordinals if n in (56,65)],
         full183_or_original_curve_or_paper_pass=False,
         output_files_sha256={p.relative_to(a.output_dir).as_posix(): sha(p)
             for p in sorted(a.output_dir.rglob('*')) if p.is_file()}))
-    print(json.dumps(dict(cases_per_language=24, schemes=8, original_figures=figures,
+    print(json.dumps(dict(cases_per_language=count, schemes=8, original_figures=figures,
         maximum_absolute_linear_SINR_gap=max(x['absolute_linear_gap'] for x in flat),
         output=str(a.output_dir))))
 
@@ -318,4 +296,6 @@ if __name__ == '__main__':
                  'physics-dir', 'first-physics', 'moment-dir', 'output-dir'):
         p.add_argument('--' + name, type=Path, required=True)
     p.add_argument('--case-scope', choices=tuple(SCOPES), default='power')
+    p.add_argument('--repaired-python-root', type=Path,
+                   help='Explicit root for already completed original056/065 corrected epochs')
     build(p.parse_args())

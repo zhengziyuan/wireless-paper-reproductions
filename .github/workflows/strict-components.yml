@@ -99,6 +99,14 @@ jobs:
         run: python tools/cooperative-stable-replay/audit_phase_divergence.py audit --directory strict/outputs/ci-cooperative-interference24/unpacked/case047-phase-witness --output strict/outputs/ci-cooperative-interference24/case047-phase-cross-evaluation.json
       - name: Saved prospective same data phase controls MP80 MP100 without reoptimization
         run: python tools/cooperative-stable-replay/run_fixed_phase_control.py audit --directory strict/outputs/ci-cooperative-interference24/unpacked/case047-same-native-data-phase-controls --output strict/outputs/ci-cooperative-interference24/case047-phase-control-audit.json
+      - name: Restore all18 original RIS size cases and288 actual paired final states
+        run: python tools/cooperative-stable-replay/unpack_power_evidence.py --packet strict/validation/cooperative-subsurfaces18-dual-final-states-20261017 --output-dir strict/outputs/ci-cooperative-subsurfaces18/unpacked
+      - name: All288 actual RIS size final states with independent MP80 MP100 physics
+        run: python tools/cooperative-stable-replay/audit_power_curve_states_mp.py --directory strict/outputs/ci-cooperative-subsurfaces18/unpacked --output strict/outputs/ci-cooperative-subsurfaces18/all288-MP80-MP100.json
+      - name: RIS size NoRIS bound on the actual fixed physical inputs
+        run: python tools/cooperative-stable-replay/audit_no_ris_input_bound.py --directory strict/outputs/ci-cooperative-subsurfaces18/unpacked --reference-directory strict/outputs/ci-cooperative-subsurfaces18/unpacked/reference-comparison --output strict/outputs/ci-cooperative-subsurfaces18/NoRIS-input-bound.json
+      - name: RIS size unfitted all144 source ordinates with original nonzero vertical offsets
+        run: python tools/cooperative-stable-replay/compare_power_references.py --case-scope subsurfaces --reference-directory strict/outputs/ci-cooperative-subsurfaces18/unpacked/reference-comparison --curve-directory strict/outputs/ci-cooperative-subsurfaces18/unpacked --output-dir strict/outputs/ci-cooperative-subsurfaces18/reference-comparison
       - name: Actual full size MA6 Python witness all678 coordinates and all1000 draws
         run: python -B tools/ma-saved-replay/replay_case.py --packet strict/validation/MA6-saved900-first-complete-math-witness-20261017 --output-dir strict/outputs/ci-MA6-first-Python
       - name: Actual native MA6 witness own states and exact input independent baseline cache
@@ -207,3 +215,11 @@ jobs:
         with:
           name: actual6000-report-and-nine-sensing-states-not-whole-population-convergence
           path: strict/outputs/ci-MIS-sensing-saved-witnesses/actual-public-replay.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: all288-RIS-size-final-states-not-source-curve-reproduction
+          path: |
+            strict/outputs/ci-cooperative-subsurfaces18/all288-MP80-MP100.json
+            strict/outputs/ci-cooperative-subsurfaces18/NoRIS-input-bound.json
+            strict/outputs/ci-cooperative-subsurfaces18/reference-comparison/

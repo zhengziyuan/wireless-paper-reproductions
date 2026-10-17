@@ -1,4 +1,4 @@
-"""Restore every actual24-case final-state/curve payload after all hash checks."""
+"""Restore every complete paired final-state/curve payload after all hash checks."""
 import argparse
 import hashlib
 import io
@@ -21,9 +21,12 @@ def unpack(packet, output):
         raise FileExistsError('Preserve prior numerical output; select a fresh directory')
     manifest = json.loads((packet/'archive-manifest.json').read_bytes())
     scope=manifest.get('case_scope','power')
-    expected_ordinals=list(range(24)) if scope=='power' else list(range(24,48))
-    if scope not in ('power','interference') or (manifest['languages'], manifest.get('cases_per_language',manifest.get('power_cases_per_language')), manifest['schemes_per_case'], manifest['total_final_states']) != (['python', 'matlab'], 24, 8, 384):
-        raise ValueError('All24 source slots, two languages and eight schemes are required')
+    cohorts = {'power':list(range(24)), 'interference':list(range(24,48)), 'subsurfaces':list(range(48,66))}
+    if scope not in cohorts:
+        raise ValueError('Unknown exact complete source cohort')
+    expected_ordinals = cohorts[scope]; count = len(expected_ordinals); states = count*16
+    if (manifest['languages'], manifest.get('cases_per_language',manifest.get('power_cases_per_language')), manifest['schemes_per_case'], manifest['total_final_states']) != (['python', 'matlab'], count, 8, states):
+        raise ValueError('Every original slot, both languages and all eight schemes are required')
     if manifest.get('exact_original_case_ordinals',expected_ordinals)!=expected_ordinals:
         raise ValueError('Original source cohort differs')
     spec = manifest['archive']; chunks = []
@@ -61,7 +64,7 @@ def unpack(packet, output):
     output.mkdir(parents=True)
     for name, payload in files.items():
         target = output/name; target.parent.mkdir(parents=True, exist_ok=True); target.write_bytes(payload)
-    print(json.dumps(dict(verified_payloads=len(files), cases_per_language=24, actual_final_states=384,
+    print(json.dumps(dict(verified_payloads=len(files), cases_per_language=count, actual_final_states=states,
         archive_sha256=spec['sha256'], optimizer_or_random_draw_calls=0,
         full183_original_reference_or_paper_pass=False)))
 

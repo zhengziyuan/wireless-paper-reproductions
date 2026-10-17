@@ -1,0 +1,45 @@
+{
+  "scope": "Unfitted all18 source subsurfaces abscissas x8 schemes x2 languages against private-author EPS vectors",
+  "case_scope": "subsurfaces",
+  "horizontal_units_resolved": true,
+  "comparisons": [
+    {
+      "language": "python",
+      "figure": 6,
+      "all_curves_and_grids_complete": true,
+      "points": 72,
+      "maximum_absolute_linear_SINR_gap": 70.61979579673988
+    },
+    {
+      "language": "matlab",
+      "figure": 6,
+      "all_curves_and_grids_complete": true,
+      "points": 72,
+      "maximum_absolute_linear_SINR_gap": 70.61979517717114
+    },
+    {
+      "language": "python",
+      "figure": 7,
+      "all_curves_and_grids_complete": true,
+      "points": 72,
+      "maximum_absolute_linear_SINR_gap": 23.73475988159354
+    },
+    {
+      "language": "matlab",
+      "figure": 7,
+      "all_curves_and_grids_complete": true,
+      "points": 72,
+      "maximum_absolute_linear_SINR_gap": 23.73476022138273
+    }
+  ],
+  "original_points_per_language": 144,
+  "no_reference_numbers_enter_simulation": true,
+  "unreported_geometry_gains_and_patterns_not_fitted": true,
+  "original_curve_agreement_or_full_paper_pass": false,
+  "original_private_EPS_redistributed": false,
+  "source_sha256": {
+    "extractor": "776c7f7bf473f3aeda6a07af3327f436e5d60e8686915fc40d395d4203d65174",
+    "eps_parser": "487e2e521d285a57d5a1ac9b7925dcc959aa4f413d6a5e2bc50607c81deddb56",
+    "comparator": "3b17ed331391e6ee871643746ebce70093664f4de91d565b15432172940303c1"
+  }
+}

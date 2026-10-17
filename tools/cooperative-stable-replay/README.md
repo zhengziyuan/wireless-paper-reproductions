@@ -71,3 +71,14 @@ inputs. All16 final states,91 phase endpoints/8190 coordinates per precision,
 and66 QT candidates pass independent MP80/MP100. The complete new endpoint
 tapes and exact source-bound recorder are included. Old failed audits and old
 whole-case flags are preserved; these new controls do not certify all183 cases.
+
+The [complete18 paired RIS-size cases](../../strict/validation/cooperative-subsurfaces18-dual-final-states-20261017/README.md)
+now include every M=5:5:45 source point in both kappa_L regimes and all288 actual
+final states. `select_python_curve_case.py` binds16 historical Python returns
+and the two separately audited056/065 epochs without changing their old failed
+receipts. The common readers enforce the exact18-case cohort and source-bound
+dimensions. All2304 final physical coordinates per precision pass MP80/MP100.
+All144 source ordinates per language are compared with the original nonzero
+vertical-axis offsets preserved. All54 source NoRIS ordinates per language
+exceed the current fixed-input relaxation bound; source-conforming physical
+inputs and full-paper reproduction remain unresolved.

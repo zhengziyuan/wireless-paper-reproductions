@@ -62,8 +62,9 @@ def audit(directory, reference_directory, output):
     require(not output.exists(), 'Preserve previous bound diagnostic')
     first_index = read(directory/'final-state-index.json')
     scope = first_index.get('case_scope', 'power')
-    require(scope in ('power', 'interference'), 'Unsupported original sweep')
-    figures = (2, 3) if scope=='power' else (4, 5)
+    require(scope in ('power', 'interference', 'subsurfaces'), 'Unsupported original sweep')
+    figures = {'power':(2,3), 'interference':(4,5), 'subsurfaces':(6,7)}[scope]
+    count = 18 if scope == 'subsurfaces' else 24
     paths = [directory/'final-state-index.json', directory/'final-states.npz',
              directory/'python-curve-view.json', directory/'matlab-curve-view.json',
              reference_directory/f'original-figure-{figures[0]}-vector-reference.json',
@@ -83,11 +84,11 @@ def audit(directory, reference_directory, output):
                     data = {k: arrays[v] for k, v in spec['data'].items()}
                     limits = [arrays[c['interference_limit']].reshape(-1) for c in cases]
                     require(all(x.shape == (1,) and x[0]>0 for x in limits), 'Exactly one positive shared GT limit per original case required')
-                    if scope=='power':
+                    if scope!='interference':
                         require(all(np.array_equal(x, limits[0]) for x in limits), 'One identical GT limit required per power group')
                     # The relaxation is exactly linear in I. Reuse only channel
                     # coefficients, and multiply by each actual bound below.
-                    I = ref.real(limits[0][0]) if scope=='power' else mp.mpf(1)
+                    I = mp.mpf(1) if scope=='interference' else ref.real(limits[0][0])
                     result = bound_group(data, I)
                     rows = {}
                     for name, r in result.items():
@@ -107,9 +108,12 @@ def audit(directory, reference_directory, output):
         for point in views[language]['results']:
             ordinal = point['source_case_ordinal']
             if scope=='power':figure=2 if ordinal<11 else 3;offset=ordinal if figure==2 else ordinal-11
-            else:
+            elif scope=='interference':
                 require(24<=ordinal<48, 'Exact original interference slots required')
                 figure=4 if ordinal<36 else 5;offset=ordinal-24 if figure==4 else ordinal-36
+            else:
+                require(48<=ordinal<66, 'Exact original RIS-size slots required')
+                figure=6 if ordinal<57 else 7;offset=ordinal-48 if figure==6 else ordinal-57
             case = next(c for c in index['cases'] if c['language'] == language and c['ordinal'] == ordinal)
             rdoc = read(reference_directory/f'original-figure-{figure}-vector-reference.json')
             refs = {r['label']: r for r in rdoc['curves']}
@@ -128,8 +132,8 @@ def audit(directory, reference_directory, output):
                     EPS_full_decimal_ordinate_step=rounding, original_minus_bound=original-upper,
                     source_reference_exceeds_this_fixed_input_bound_after_rounding=bool(original-upper > rounding+1e-12*max(1, abs(upper)))))
     after = {str(i)+':'+p.name: sha(p) for i, p in enumerate(paths)}
-    report = dict(scope='Optimizer-independent NoRIS upper bound for the actual binary input groups and all72 source NoRIS ordinates per language',
-        case_scope=scope, source_horizontal_unit_conformance_verified=scope=='power',
+    report = dict(scope=f'Optimizer-independent NoRIS upper bound for the actual binary input groups and all{count*3} source NoRIS ordinates per language',
+        case_scope=scope, source_horizontal_unit_conformance_verified=scope!='interference',
         source_unit_caveat='Source EPS prints W while implementation uses noise-normalized I/N. Source ordinate comparison is conditional on identifying these scalar grids, not proof that the original W input violates the bound.' if scope=='interference' else 'Power-sweep inputs use the actual saved noise-normalized GT limit.',
         source_input_sha256=before, source_and_inputs_unchanged=before == after, mathematical_bound_assumptions=
         ['one shared GT interference limit', 'positive-definite GT second moments', 'nonnegative MR powers and channel variances',
@@ -139,7 +143,7 @@ def audit(directory, reference_directory, output):
         theorem_derivation='n_u <= max_j B_ju * L_u; den_u >= offset_u; t <= n_u/den_u implies L_u >= t*offset_u/max_j B_ju; sum_u L_u <= I.',
         precisions=[80, 100], maximum_MP80_MP100_coefficient_difference=mp.nstr(gap, 105),
         precision_absolute_bound='1e-40', all_bound_evaluations_and_source_bindings_pass=bool(stable and before == after),
-        all_actual_NoRIS_values_within_relaxation_bound=True, source_reference_ordinates_per_language=72,
+        all_actual_NoRIS_values_within_relaxation_bound=True, source_reference_ordinates_per_language=count*3,
         source_reference_exceeds_fixed_input_bound_per_language={l:sum(r['source_reference_exceeds_this_fixed_input_bound_after_rounding'] for r in comparisons if r['language'] == l) for l in ('python', 'matlab')},
         lanes=lanes, comparisons=comparisons,
         conclusion='For the reported above-bound ordinates, no optimizer on these fixed inputs can reproduce the supplied source curve. Source-conforming physical coefficients remain unresolved; this is not a contradiction of the author paper under its unrecovered inputs.',
