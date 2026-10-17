@@ -57,3 +57,11 @@ d14050078d636ca33bd78fb2206406735a22589eeb0aa14b0f28c3d443d893bc.
 The cold adapter reads original source into a private module and records a
 distinct source binding. No manuscript or private path is included. Full
 convergence, MATLAB agreement and original curves remain open.
+
+The original runtime fingerprint is retained. `captured-source-binding.json`
+reconstructs it exactly from the four unchanged source files plus captured
+Python3.12.14/NumPy2.5.3 versions. A different checking host verifies those
+source hashes and the saved binary64 fields, then records its own runtime
+separately. It need not claim bitwise equality of BLAS/path rounding across
+platforms. The original saved vectors and all independent MP/physical/stop
+bounds remain unchanged; old run completion flags are never upgraded.

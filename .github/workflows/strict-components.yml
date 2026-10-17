@@ -87,12 +87,16 @@ jobs:
         run: python tools/cooperative-stable-replay/audit_native_case.py --result strict/outputs/ci-cooperative91/full-native-case/case-000-matlab.json --before-recording strict/outputs/ci-cooperative91/full-native-case/before-recording-case000.json --output strict/outputs/ci-cooperative91/actual-full-native-case-audit.json
       - name: All47 newly recorded native phase contexts at MP80 and MP100
         run: python tools/cooperative-stable-replay/audit_native_phase_mp.py --result strict/outputs/ci-cooperative91/full-native-case/case-000-matlab.json --output-dir strict/outputs/ci-cooperative91/new47-MP80-MP100
+      - name: All8 final states and all31 QT updates with independent MP80 MP100 physics
+        run: python tools/cooperative-stable-replay/audit_native_physics_mp.py --result strict/outputs/ci-cooperative91/full-native-case/case-000-matlab.json --output strict/outputs/ci-cooperative91/all8-QT-MP80-MP100.json
       - name: All80 actual full-size ISAC failed trials with independent MP physics
         run: python tools/isac-line-search-replay/audit_failure.py --capture strict/validation/isac045-actual-line-search-20261017 --output-dir strict/outputs/ci-isac-actual80/MP80-MP100
       - name: All original W RIS rotation derivatives at the actual ISAC failure state
         run: python tools/isac-line-search-replay/audit_stable_derivatives.py --capture strict/validation/isac045-actual-line-search-20261017 --output strict/outputs/ci-isac-actual80/stable-all-gradient-audit.json
       - name: Original remaining phase budget retains unconverged outcome
         run: python tools/isac-line-search-replay/continue_phase.py --capture strict/validation/isac045-actual-line-search-20261017 --output-dir strict/outputs/ci-isac-actual80/original-budget-suffix
+      - name: Actual native full-size MIS Fig8 start all17 saved endpoints
+        run: python tools/mis-native-replay/audit_numeric_view.py --input strict/validation/MIS-Fig8-native-original12000-20261017/native-MIS-start000001-all17-endpoints.json --output strict/outputs/ci-MIS-native-Fig8/first-start.json
       - run: python strict/hotspot-satcom/test_termination.py
       - run: python strict/hotspot-satcom/test_phase_method.py
       - name: Author-source Rician coefficient contradiction (exact algebra, no simulation)
@@ -134,8 +138,14 @@ jobs:
             strict/outputs/ci-cooperative91/actual-AP-QT-audit.json
             strict/outputs/ci-cooperative91/actual-full-native-case-audit.json
             strict/outputs/ci-cooperative91/new47-MP80-MP100/
+            strict/outputs/ci-cooperative91/all8-QT-MP80-MP100.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: actual-ISAC80-failure-physics-not-full-convergence
           path: strict/outputs/ci-isac-actual80/
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: actual-native-Fig8-start-not-full12000-or-original-reference
+          path: strict/outputs/ci-MIS-native-Fig8/

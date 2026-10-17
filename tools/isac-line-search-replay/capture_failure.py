@@ -5,6 +5,8 @@ import json
 from pathlib import Path
 import sys
 import time
+import platform
+from importlib.metadata import version
 import numpy as np
 
 
@@ -22,7 +24,8 @@ def capture(config_path,scenario_path,output):
     source=package/'core.py';lines=source.read_text().splitlines()
     armijo=[n for n,line in enumerate(lines,1) if 'if value>=metric["utility"]+spec["armijo"]*alpha*slope:' in line]
     if len(armijo)!=1:raise ValueError('Review actual original Armijo source before tracing')
-    before=implementation_fingerprint();scene=json.loads(scenario_path.read_bytes());code=core.update_theta.__code__
+    before=implementation_fingerprint();before_files={name:sha(package/name) for name in ('core.py','run.py','figures.py','isac_metadata.py')}
+    scene=json.loads(scenario_path.read_bytes());code=core.update_theta.__code__
     phases=0;trials=[];current_iteration=None;saved={};arrays={};started=time.perf_counter()
 
     def trace(frame,event,arg):
@@ -57,7 +60,7 @@ def capture(config_path,scenario_path,output):
     finally:sys.settrace(None)
     if not saved:raise RuntimeError('Original first scheme did not reach the declared failure; no failure certificate generated')
     after=implementation_fingerprint()
-    if before!=after:raise RuntimeError('Active original numerical source changed')
+    if before!=after or before_files!={name:sha(package/name) for name in before_files}:raise RuntimeError('Active original numerical source changed')
     np.savez(output/'actual-failure-arrays.npz',**arrays)
     saved.update(input_fingerprint=fingerprint(config_path.read_bytes(),scenario_path.read_bytes()),
         implementation_fingerprint=before,source_unchanged=True,capture_source_sha256=sha(Path(__file__)),
@@ -65,6 +68,13 @@ def capture(config_path,scenario_path,output):
         elapsed_seconds=time.perf_counter()-started,full_reproduction_pass=False)
     (output/'original-scenario.json').write_bytes(scenario_path.read_bytes())
     (output/'actual-failure.json').write_text(json.dumps(saved,indent=2,allow_nan=False)+'\n',encoding='utf-8')
+    h,link,_,_,bridge,_=core.channel_base(arrays['r'],scene)
+    frozen=output/'frozen-original-channel-fields.npz';np.savez(frozen,h=h,g=link,b=bridge)
+    source_files={name:sha(package/name) for name in ('core.py','run.py','figures.py','isac_metadata.py')}
+    identity=dict(scope='Captured original runtime/source and fixed binary64 physical channel fields',
+        captured_runtime=dict(python=platform.python_version(),numpy=version('numpy')),source_files_sha256=source_files,
+        captured_implementation_fingerprint=before,frozen_original_channel_fields_sha256=sha(frozen))
+    (output/'captured-source-binding.json').write_text(json.dumps(identity,indent=2,allow_nan=False)+'\n',encoding='utf-8')
     print(json.dumps({k:saved[k] for k in ('phase_call','iteration','source_exception','beta','slope','checked_normalized_gradient','elapsed_seconds')}))
     return saved
 

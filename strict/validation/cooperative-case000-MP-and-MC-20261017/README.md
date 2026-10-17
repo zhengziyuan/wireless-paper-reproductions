@@ -49,3 +49,21 @@ python tools/cooperative-stable-replay/audit_native_phase_mp.py --result new-ful
 The saved-state phase recheck needs neither MATLAB nor CVX. Full183 execution,
 whole-case MP checks, all distinct moment inputs, original-reference agreement
 and the six-paper reproduction remain unfinished.
+
+## All8 final states and all31 QT updates at MP80/MP100
+
+The additional physical audit recomputes622 scalar physical values per
+precision across all8 final states and every31 QT update's before/after
+states, including independent physical powers, SINR denominators, satellite
+limits and ground-terminal interference. It also recomputes each original
+QT lower bound, tightness at its input, surrogate primal bound and minimum-
+SINR nondecrease. Every comparison and original constraint/1e-5 QT gate passes;
+all MR powers are nonnegative. MP80/100 disagree by at most1.49e-79.
+`all8-QT-MP80-MP100.json.gz` retains both complete lanes. No optimizer is called.
+
+```text
+python tools/cooperative-stable-replay/audit_native_physics_mp.py --result new-full-native-case/case-000-matlab.json --output new-all8-QT-MP-physics.json
+```
+
+The all183 physical/QT follower is separate from the phase follower and raw
+MC checks. This one-case closure does not certify all183 or original curves.

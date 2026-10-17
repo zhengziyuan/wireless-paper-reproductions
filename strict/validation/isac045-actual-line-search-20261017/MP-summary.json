@@ -1,12 +1,20 @@
 {
   "scope": "Actual one failed full-size RCG iteration and all80 original trial vectors only",
   "source_unchanged": true,
-  "implementation_fingerprint": "1e940a4c82564a8f8a8fb65a3bef2dd13702d7872e6eb9da761e4586c7a778fa",
+  "captured_implementation_fingerprint": "1e940a4c82564a8f8a8fb65a3bef2dd13702d7872e6eb9da761e4586c7a778fa",
+  "checking_host_implementation_fingerprint": "1e940a4c82564a8f8a8fb65a3bef2dd13702d7872e6eb9da761e4586c7a778fa",
+  "captured_source_binding_sha256": "df7bbe72f574484d93c29b377d638659c94eb8f0511101d9415122518eddd74d",
+  "checking_host_runtime": {
+    "python": "3.12.14",
+    "numpy": "2.5.3"
+  },
+  "checking_host_double_values_bitwise_equal_to_original_capture": true,
+  "captured_binary64_channel_fields_used": true,
   "capture_manifest_sha256": "70875b1f59c83a33dac66761946ea9103655837cfcc3bae564b43b995f4cfc8b",
   "capture_array_sha256": "de7aa50290c3351f4bcdd783471c7849e47f5c234c01070954221c75455e460b",
   "scenario_sha256": "c723de9f9dab819f53a894f8c4b5ba2a88ac5a3a1be77a5ca4cbf5b337edeb0a",
   "auditor_sources": {
-    "audit_failure.py": "d686e2b33a96b92ce4167d31bd46bb94bacf25a66904d554631b2e07a0d56f00",
+    "audit_failure.py": "b05a3c958a79719339c61575ae69d65dd4432f47e6b3323e7bdd5977fc588e8b",
     "stable_metrics.py": "e15ad67ffc92b0ea2b3cbbd5428ff8be30bc6630ab651188d15aa2f01bde8c29",
     "mp_physical_reference.py": "d14050078d636ca33bd78fb2206406735a22589eeb0aa14b0f28c3d443d893bc"
   },
@@ -21,8 +29,9 @@
   "all_stored_radii_preserved": true,
   "original_Armijo_slope_and_controls_used": true,
   "binary64": {
-    "printed_base": 26.666428443283966,
-    "stable_base": 26.66642844316783,
+    "captured_printed_base": 26.666428443283966,
+    "checking_host_subtractive_base": 26.666428443283966,
+    "checking_host_stable_base": 26.66642844316783,
     "signal": [
       932.2074580911001,
       0.12962157557852677
@@ -231,6 +240,6 @@
       "stable_ambient_maxerror": "0.000000000000167657564727666604049815218152425227277080876197496828814741828363495921807502264374626745084512038023467"
     }
   ],
-  "elapsed_seconds": 22.777332900004694,
+  "elapsed_seconds": 109.21219190000556,
   "full_solver_or_six_scheme_or_paper_pass": false
 }

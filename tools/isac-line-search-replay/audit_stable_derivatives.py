@@ -38,7 +38,8 @@ def reference(w,theta,r,c,iota):
 
 def run(capture,output):
     if output.exists():raise FileExistsError('Preserve previous audit')
-    before=binding();model=load_core();meta=json.loads((capture/'actual-failure.json').read_bytes())
+    before=binding();mp_objective=Path(__file__).with_name('audit_failure.py');objective_sha=sha(mp_objective)
+    model=load_core();meta=json.loads((capture/'actual-failure.json').read_bytes())
     c=json.loads((capture/'original-scenario.json').read_bytes())
     assert sha(capture/'actual-failure-arrays.npz')==meta['array_sha256']
     with np.load(capture/'actual-failure-arrays.npz',allow_pickle=False) as a:
@@ -58,9 +59,10 @@ def run(capture,output):
             lanes[str(digits)]=rows
             print(json.dumps(dict(digits=digits,maximum_errors={k:v['maximum_error'] for k,v in rows.items()})),flush=True)
     with mp.workdps(110):gap=max(abs(a-b) for a,b in zip(values[80],values[100]));stable=gap<=mp.mpf('1e-35')
-    assert before==binding()
+    assert before==binding() and sha(mp_objective)==objective_sha
     report=dict(scope='Actual M4/N36/K2/A66 fixed failure state; all original W/RIS/rotation gradient components',
         source_binding=before,auditor_sha256=sha(Path(__file__)),reference_sha256=sha(Path(__file__).with_name('mp_physical_reference.py')),
+        independent_fixed_objective_sha256=objective_sha,
         capture_array_sha256=meta['array_sha256'],source_unchanged=True,lanes=lanes,
         rotation_reference='MP central difference at1e-20; W and RIS use independent analytic derivatives',
         original_component_absolute_error_bound=1e-5,maximum_MP80_MP100_difference=mp.nstr(gap,105),crossprecision_absolute_bound='1e-35',

@@ -11,6 +11,8 @@ import json
 from pathlib import Path
 import sys
 import time
+import platform
+from importlib.metadata import version
 import mpmath as mp
 import numpy as np
 from mp_physical_reference import exact, field_parts
@@ -85,7 +87,19 @@ def run(capture, output):
     before=implementation_fingerprint()
     meta=json.loads((capture/'actual-failure.json').read_bytes())
     c=json.loads((capture/'original-scenario.json').read_bytes())
-    assert before==meta['implementation_fingerprint'] and meta['source_unchanged']
+    assert meta['source_unchanged']
+    source_binding=capture/'captured-source-binding.json'
+    if source_binding.exists():
+        captured=json.loads(source_binding.read_bytes())
+        actual={name:sha(package/name) for name in ('core.py','run.py','figures.py','isac_metadata.py')}
+        assert actual==captured['source_files_sha256']
+        original_digest=hashlib.sha256(b'strict-engine-v1\0')
+        for name in ('core.py','run.py','figures.py','isac_metadata.py'):
+            original_digest.update(name.encode()+b'\0'+(package/name).read_bytes()+b'\0')
+        original_digest.update(json.dumps(captured['captured_runtime'],sort_keys=True).encode())
+        assert original_digest.hexdigest()==meta['implementation_fingerprint']==captured['captured_implementation_fingerprint']
+    else:
+        assert before==meta['implementation_fingerprint']
     assert sha(capture/'actual-failure-arrays.npz')==meta['array_sha256']
     assert sha(capture/'original-scenario.json')==meta['scenario_sha256']
     with np.load(capture/'actual-failure-arrays.npz',allow_pickle=False) as archive:
@@ -95,10 +109,15 @@ def run(capture, output):
     assert len(trials)==80 and w.shape==(4,6) and theta.shape==(36,)
     bundle=core.channels(theta,r,c)
     h,g,dh,dg,b,db=core.channel_base(r,c)
+    captured_fields=capture/'frozen-original-channel-fields.npz'
+    if captured_fields.exists():
+        assert source_binding.exists() and sha(captured_fields)==captured['frozen_original_channel_fields_sha256']
+        with np.load(captured_fields,allow_pickle=False) as saved:
+            h,g,b=(saved[key].copy() for key in ('h','g','b'))
     np.savez(output/'frozen-original-channel-fields.npz',h=h,g=g,b=b)
     old,(ogw,ogt,ogr)=core.evaluate(w,theta,r,c,iota,True)
     stable,(sgw,sgt,sgr)=stable_evaluate(w,*bundle,c,iota,True)
-    assert old['utility']==meta['utility'] and np.array_equal(ogt,a['ambient'])
+    checking_host_equals_original_capture=old['utility']==meta['utility'] and np.array_equal(ogt,a['ambient'])
     stable_trials=[stable_evaluate(w,*core.channels(t,r,c),c,iota)['utility'] for t in trials]
     y=bundle[0][:,:len(c['noise'])].conj().T@w
     ps=abs(y)**2;tot=ps.sum(axis=1)+c['noise'];sig=ps[np.arange(len(c['noise'])),np.arange(len(c['noise']))]
@@ -144,11 +163,15 @@ def run(capture, output):
     after=implementation_fingerprint()
     assert after==before
     summary=dict(scope='Actual one failed full-size RCG iteration and all80 original trial vectors only',
-        source_unchanged=True,implementation_fingerprint=before,capture_manifest_sha256=sha(capture/'actual-failure.json'),
+        source_unchanged=True,captured_implementation_fingerprint=meta['implementation_fingerprint'],checking_host_implementation_fingerprint=before,
+        captured_source_binding_sha256=sha(source_binding) if source_binding.exists() else None,
+        checking_host_runtime=dict(python=platform.python_version(),numpy=version('numpy')),
+        checking_host_double_values_bitwise_equal_to_original_capture=bool(checking_host_equals_original_capture),
+        captured_binary64_channel_fields_used=captured_fields.exists(),capture_manifest_sha256=sha(capture/'actual-failure.json'),
         capture_array_sha256=meta['array_sha256'],scenario_sha256=meta['scenario_sha256'],auditor_sources=sources,
         frozen_channel_sha256=sha(output/'frozen-original-channel-fields.npz'),source_shape=dict(M=4,N=36,K=2,A=66,streams=6),
         all_stored_radii_preserved=True,original_Armijo_slope_and_controls_used=True,
-        binary64=dict(printed_base=old['utility'],stable_base=stable['utility'],signal=sig,noise=c['noise'],
+        binary64=dict(captured_printed_base=meta['utility'],checking_host_subtractive_base=old['utility'],checking_host_stable_base=stable['utility'],signal=sig,noise=c['noise'],
                       subtracted_interference=subtraction,explicit_self_excluded_interference=explicit,
                       relative_interference_subtraction_error=(subtraction-explicit)/explicit,
                       printed_diagonal_coeff=(1/tot-1/subtraction)+1/subtraction,stable_diagonal_coeff=1/(sig+explicit),
