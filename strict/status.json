@@ -1,4 +1,20 @@
 {
+  "MIS_sensing_all6000_saved_state_checkpoint": {
+    "date": "2026-10-17",
+    "evidence": "validation/MIS-sensing-all6000-saved-state-audit-20261017/README.md",
+    "actual_saved_Python_final_states_independently_checked": 6000,
+    "all6000_saved_physical_KKT_fields_flags_and_stored_stop_decisions_match": true,
+    "maximum_same_state_physical_metric_error": 2.6290081223123707e-13,
+    "maximum_original_final_KKT_norm_difference": 9.630670377866013e-15,
+    "all_original_conditions_pass_starts": 5251,
+    "retained_failed_or_unverified_starts": 749,
+    "final_KKT_pass_starts": 5959,
+    "earlier_capped_starts_with_passing_final_KKT_not_upgraded": 708,
+    "new_missing_native_population": "running; exact original6000 initializer,30 outer,4000 inner; actual old377 reused",
+    "public_numerical_state_witnesses": 9,
+    "complete6000_raw_states_publicly_included": false,
+    "full6000_original_convergence_or_reference_or_paper_pass": false
+  },
   "cooperative_corrected_python056_065_checkpoint": {
     "date": "2026-10-17",
     "evidence": "validation/cooperative-corrected-python056-065-20261017/README.md",

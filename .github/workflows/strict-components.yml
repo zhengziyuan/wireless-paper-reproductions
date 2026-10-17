@@ -115,6 +115,8 @@ jobs:
         run: python tools/isac-line-search-replay/audit_phase_probe_mp.py --capture strict/validation/isac045-actual-line-search-20261017 --probe strict/validation/isac045-actual-line-search-20261017/warm-phase-unreported-cap-v1 --output strict/outputs/ci-isac-actual80/warm-phase-MP-stop.json
       - name: Actual native full-size MIS Fig8 start all17 saved endpoints
         run: python tools/mis-native-replay/audit_numeric_view.py --input strict/validation/MIS-Fig8-native-original12000-20261017/native-MIS-start000001-all17-endpoints.json --output strict/outputs/ci-MIS-native-Fig8/first-start.json
+      - name: Actual6000 sensing audit-report slots and nine physical state witnesses (not6000 raw replay)
+        run: python tools/sensing-saved-replay/replay_evidence.py --packet strict/validation/MIS-sensing-all6000-saved-state-audit-20261017 --output-dir strict/outputs/ci-MIS-sensing-saved-witnesses
       - run: python strict/hotspot-satcom/test_termination.py
       - run: python strict/hotspot-satcom/test_phase_method.py
       - name: Author-source Rician coefficient contradiction (exact algebra, no simulation)
@@ -182,3 +184,8 @@ jobs:
         with:
           name: actual-native-Fig8-start-not-full12000-or-original-reference
           path: strict/outputs/ci-MIS-native-Fig8/
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: actual6000-report-and-nine-sensing-states-not-whole-population-convergence
+          path: strict/outputs/ci-MIS-sensing-saved-witnesses/actual-public-replay.json
