@@ -1,0 +1,4421 @@
+{
+  "scope": "complete-native183-configured1000-full-vector-regeneration-recipe-v1",
+  "actual_original_cases": 183,
+  "actual_exact_groups": 67,
+  "original_configured_count": 1000,
+  "actual_distinct_configured_draws": 67000,
+  "actual_case_configured_draws": 183000,
+  "complete_full_primitive_bytes": 2735488000,
+  "original_full_primitive_vectors_replaced_by_norms": false,
+  "all_full_primitive_vectors_included_in_this_small_recipe": false,
+  "full_vectors_require_declared_MATLAB_materialization_or_exact_existing_binary_banks": true,
+  "native_packet_manifest_sha256": "c33f4ec32a6624d9657b3058edb57893a292101342fe59feaf95c57c6c37dd94",
+  "native_packet_archive_sha256": "5c5f26e3231beaad564fafdca77814efdae5c337044b849abb77bc0661ba0aae",
+  "original_all183_group_progress_sha256": "f84a430ddd215559e69ecae18d715925147c72788fca69815ba198c92d9dbf45",
+  "current_math_and_export_sources_sha256": {
+    "tools/cooperative-stable-replay/phase183_evidence.py": "2004c6975012f3b763dbf241492573653a2677594d22099a09e574fe1d857938",
+    "tools/cooperative-stable-replay/audit_native_phase_mp.py": "28cee710e43a415feef0686e1aa851e1d59b0436dcfe3e27f8c5219602cd67e9",
+    "tools/cooperative-stable-replay/audit_native_physics_mp.py": "142145c1b07a9e56b448f9ae06e4b1b9d0e485d8a95a8841270ec4c2ff2af2f1",
+    "tools/cooperative-stable-replay/audit_native_case.py": "a807e26afc9643e58cf95fabfe28a053088e6791fa17a3d4b22e7f7996f79bfb",
+    "tools/cooperative-stable-replay/mp_phase_reference.py": "fa3ab6b598e14901757d80128715eb2eafad160c893d5671e9fe6eccd9b36a0a",
+    "tools/cooperative-stable-replay/audit_phase183_unit_domains.py": "2bb700ba395190f2e4f03cf41fbacd41feb08eae694af9c3e6469fb6b14361d1",
+    "tools/cooperative-stable-replay/audit_moment_draws.py": "a4c06f2fd33336aa6d9ef168cc313cddc181261b23b4b36e4854e1bfc8c8ac6e",
+    "tools/cooperative-stable-replay/export_saved_moment_draws.m": "afe976442b21e9d802e366b6afd6158e019a052f6cb90e69ec5fa510bed37e8a",
+    "tools/cooperative-stable-replay/native183_moment_recipe_v1.py": "ebc3aac386743b3043c2b7db02122a7e7a729be5c7278393a8f1c7ff320e778c",
+    "tools/cooperative-stable-replay/native183_evidence.py": "a910f99956e5cfa74ef9c938fc7c976f629ea41dc0f5793bb21c410a553456c3",
+    "tools/cooperative-stable-replay/inventory_complete_native183_phase_and_QT_v2.py": "752a010dbc001e0390d1ff12f0c93c9d8ed1e64512b64222f4914b453acbca5f",
+    "strict/cooperative-satcom/positive_wick.py": "4a35dd41f40931133e7a20d8270f6b7155cdd818f0b2c2674e6c429cda4a35f3",
+    "strict/cooperative-satcom/run_strict_cooperative_v3.m": "2b15a654ff4efaeddeac23096afde41b0c06d773e4c9811ae0ee4cfb77079805"
+  },
+  "cases": [
+    {
+      "ordinal": 0,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-000/case-000-matlab.json",
+      "container_sha256": "cd1727991714bf139bf5d4b378e12bc9c9a99fcb800641a79f008a652cda6354",
+      "states": "case-000/case-000-matlab.json.states.mat",
+      "states_sha256": "8af292783a96bf5466b54fbc13ed5251135318ad3b6d614a939f4bce83795152",
+      "count": 1000
+    },
+    {
+      "ordinal": 1,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-001/case-001-matlab.json",
+      "container_sha256": "ac6062dd1310faea757f85bba13ac19476522294a56cc34ac22a6adb1d846aa9",
+      "states": "case-001/case-001-matlab.json.states.mat",
+      "states_sha256": "33d01255f2f37a38b9fe3cda68df32c0dba430665a65975107420e3de424a5bd",
+      "count": 1000
+    },
+    {
+      "ordinal": 2,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-002/case-002-matlab.json",
+      "container_sha256": "721b9f7e63b40bfda6652d8b627f1775c047c6ed10d67656a42bc9cfb6d29096",
+      "states": "case-002/case-002-matlab.json.states.mat",
+      "states_sha256": "4cd51f8dad35959a3ace8dff66d4d7382158514a07dd156b9370c92e1059edfc",
+      "count": 1000
+    },
+    {
+      "ordinal": 3,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-003/case-003-matlab.json",
+      "container_sha256": "a343b0b8d15876ac5626014c2f688f80860c0be7a89185991021ed0fc41b16d1",
+      "states": "case-003/case-003-matlab.json.states.mat",
+      "states_sha256": "ae50ad1cb576b1aafa9c619ab3e0fe5cb2a0c7787e97a7fafc529aa5d6b1ea24",
+      "count": 1000
+    },
+    {
+      "ordinal": 4,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-004/case-004-matlab.json",
+      "container_sha256": "ee6af33536d887891a63c9a196c8a811e723a9dcccd44a295051c333c2ec5c72",
+      "states": "case-004/case-004-matlab.json.states.mat",
+      "states_sha256": "552e80802f5c7f8756ada41ee6c18c876f4cfec319e6afe9662f0184e0c04c71",
+      "count": 1000
+    },
+    {
+      "ordinal": 5,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-005/case-005-matlab.json",
+      "container_sha256": "69d2dc33025c9ef6fa3a3405d1f80d800b879d0be75f65e5d966ad44f0d7850d",
+      "states": "case-005/case-005-matlab.json.states.mat",
+      "states_sha256": "fd37b51f43ad76cccc83c56bc8455ae639c8c42470d01e8595a1f812f8580950",
+      "count": 1000
+    },
+    {
+      "ordinal": 6,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-006/case-006-matlab.json",
+      "container_sha256": "235a47f9317e6aed3e3b2931492e47c606e47293c516f5caf61a6e215ff1bc65",
+      "states": "case-006/case-006-matlab.json.states.mat",
+      "states_sha256": "ea83c7e6208091f7a2a76d34d521f20b7743d38fb612b376a8c22538943131fc",
+      "count": 1000
+    },
+    {
+      "ordinal": 7,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-007/case-007-matlab.json",
+      "container_sha256": "8fd61dae6f2f43e424a04328a3b081382ac40f3e0ad35b74e0b4b49b9f17d17e",
+      "states": "case-007/case-007-matlab.json.states.mat",
+      "states_sha256": "a3edfef9d625e84c9f18429b28e1ab55d6074f199b73541e4251c0525cdd1a90",
+      "count": 1000
+    },
+    {
+      "ordinal": 8,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-008/case-008-matlab.json",
+      "container_sha256": "9b7de55a1529fa2ce23cc0fd5533cc30aca0511560619469a0addf54d2ee7f76",
+      "states": "case-008/case-008-matlab.json.states.mat",
+      "states_sha256": "8cd1c7c6459b682cba6563e94b617a4f6ed48a55ca01a531b069d31f741d2246",
+      "count": 1000
+    },
+    {
+      "ordinal": 9,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-009/case-009-matlab.json",
+      "container_sha256": "f19388faf10960af0cbdcc41bf889cd78b9a4e6268ebe416ddb352a6c7ce39f2",
+      "states": "case-009/case-009-matlab.json.states.mat",
+      "states_sha256": "c54e888b7aa64057b3d99112fb7127a6ad0a5f7bd9a2982575af18d96f2ee54c",
+      "count": 1000
+    },
+    {
+      "ordinal": 10,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-010/case-010-matlab.json",
+      "container_sha256": "065c402c642eaf084992da925b670d4e650ba448e1a73afdd499c7c55276bbb5",
+      "states": "case-010/case-010-matlab.json.states.mat",
+      "states_sha256": "5f88dcf09bac3a98f32f6664f9995d4120193005921268ed8d90e4e9dad5cad2",
+      "count": 1000
+    },
+    {
+      "ordinal": 11,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-011/case-011-matlab.json",
+      "container_sha256": "66e04fd0b1eac7dbd6cff04c7fb692d68162f73923a304aa340a894a575e22c8",
+      "states": "case-011/case-011-matlab.json.states.mat",
+      "states_sha256": "605dbea4406282f001d00b8a21a43692ab2be07fd3ef3daa25fd873935d43ed5",
+      "count": 1000
+    },
+    {
+      "ordinal": 12,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-012/case-012-matlab.json",
+      "container_sha256": "1eae9ba145c79b4af1e2e803c367d0cc42efd7497a962e44a6231bd5323ea07a",
+      "states": "case-012/case-012-matlab.json.states.mat",
+      "states_sha256": "47f6573d44db59707436a622c9470c67c88bfa74c5da0467ee18601c50ac05a2",
+      "count": 1000
+    },
+    {
+      "ordinal": 13,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-013/case-013-matlab.json",
+      "container_sha256": "3953a602e8e79a2fba5caf519fc7ce80352ba94671ac8b06a81f347e65e385db",
+      "states": "case-013/case-013-matlab.json.states.mat",
+      "states_sha256": "0d4b5e4829d62e15b867412149574e9d93c1f94e7f36f3c74b6608fb6f6dd00e",
+      "count": 1000
+    },
+    {
+      "ordinal": 14,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-014/case-014-matlab.json",
+      "container_sha256": "a4ead00e1d998720138909083cef544d5d532326e9d45c8f8bad184d3f541444",
+      "states": "case-014/case-014-matlab.json.states.mat",
+      "states_sha256": "310e8569071a5097c558b03c4c53f9e5e226e8fa7babcd36b4c577c485527a26",
+      "count": 1000
+    },
+    {
+      "ordinal": 15,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-015/case-015-matlab.json",
+      "container_sha256": "bfc4093038e63ff2bb8f5b24427dd94c328cf15a4d9c62a36672bcb136e28372",
+      "states": "case-015/case-015-matlab.json.states.mat",
+      "states_sha256": "d3a85de25bb890570728ef3adf1cb372e4a7333cb2c6762cd23d727dd9e4220f",
+      "count": 1000
+    },
+    {
+      "ordinal": 16,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-016/case-016-matlab.json",
+      "container_sha256": "9280c90c9d324c0bc85e9ebcd0bf0075b6e204990afdac52fa3668df936097e5",
+      "states": "case-016/case-016-matlab.json.states.mat",
+      "states_sha256": "79cadcd20a0d2cca3bd073dea5ec26e1dd118fce986d7716e64c8afdc5510a2b",
+      "count": 1000
+    },
+    {
+      "ordinal": 17,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-017/case-017-matlab.json",
+      "container_sha256": "d69811f62bc5c0a69a88e201203daf1a1cdc4e406915b59b239daa119cb99c6c",
+      "states": "case-017/case-017-matlab.json.states.mat",
+      "states_sha256": "c4fdc35c07fbddb15e4f2d145545c77a91d2abe1d5b744078c4ae8d3d9c86bff",
+      "count": 1000
+    },
+    {
+      "ordinal": 18,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-018/case-018-matlab.json",
+      "container_sha256": "68dded02c2a66fd704f72ba36c38d0e1f425220e1c8d0111e26b8995ca23fcb8",
+      "states": "case-018/case-018-matlab.json.states.mat",
+      "states_sha256": "87fc495cea17030ae2bd83e5fdd04ad41937998161c058b42c91f7834e9552c1",
+      "count": 1000
+    },
+    {
+      "ordinal": 19,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-019/case-019-matlab.json",
+      "container_sha256": "6e8dc6d7f4bf28305050bd4a50075cb161b84f3a93fa3bc4eee2f167eb62c031",
+      "states": "case-019/case-019-matlab.json.states.mat",
+      "states_sha256": "967e522e611f54015ba3f4e93a0366958adfc5d7c0f42aa0f8dc4440e261b653",
+      "count": 1000
+    },
+    {
+      "ordinal": 20,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-020/case-020-matlab.json",
+      "container_sha256": "334f32da5dde755cb7c73a772be0f7e575591b81c8f5deb6ccdb32ce339e28c6",
+      "states": "case-020/case-020-matlab.json.states.mat",
+      "states_sha256": "3211803906d43d8cc890074e019967090789e9c39534d529d4146905f73b19d6",
+      "count": 1000
+    },
+    {
+      "ordinal": 21,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-021/case-021-matlab.json",
+      "container_sha256": "05d697850a346be592072bfb72b163539465b2ab03f6bc0c67c7156088c1038b",
+      "states": "case-021/case-021-matlab.json.states.mat",
+      "states_sha256": "5b2dda0efe698a3540d53d73ce482f45e4612fb88440b378d671ac962fe10e47",
+      "count": 1000
+    },
+    {
+      "ordinal": 22,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-022/case-022-matlab.json",
+      "container_sha256": "093bb909a5c6147d4329a98d291b06ae9934a82d6f0e9dbc83c1a0cbee0f04a7",
+      "states": "case-022/case-022-matlab.json.states.mat",
+      "states_sha256": "f23131cbca290f3b38e645bfb581b80e248cbccaa66f41aa33c4c1b04bc46557",
+      "count": 1000
+    },
+    {
+      "ordinal": 23,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-023/case-023-matlab.json",
+      "container_sha256": "340bcafdd743b233c9c487eb53ea4f113dbe5b399441ff8fe25e94550c15520a",
+      "states": "case-023/case-023-matlab.json.states.mat",
+      "states_sha256": "317f8b94f5cf1196ac0a737a3c4c640a49d926efbc64a0e5f7d48236e4cbda23",
+      "count": 1000
+    },
+    {
+      "ordinal": 24,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-024/case-024-matlab.json",
+      "container_sha256": "823aeb1befdf9302b6c3a3d14d673638fe85c97cd9acad46201e656395c7fb93",
+      "states": "case-024/case-024-matlab.json.states.mat",
+      "states_sha256": "dc1df983c38c453867a5267f38f0622a56b9c25cf47e1e696c20032855aee3f5",
+      "count": 1000
+    },
+    {
+      "ordinal": 25,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-025/case-025-matlab.json",
+      "container_sha256": "3455eb08d52d13985dca7d2d666529ff98aac802f5eb583df181d0883f91f8f3",
+      "states": "case-025/case-025-matlab.json.states.mat",
+      "states_sha256": "03b5d4677a91c5ecfdc34f481fbd574c8d7755b99fbe136e69b5766451f5312f",
+      "count": 1000
+    },
+    {
+      "ordinal": 26,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-026/case-026-matlab.json",
+      "container_sha256": "7e03469f71ed3389d65956dabe28cb1242b99bc611ca6a194539389256b20c36",
+      "states": "case-026/case-026-matlab.json.states.mat",
+      "states_sha256": "453bdba73b901e9777b0f47a02b32588fc1442c8752d8faa7944ec5b147f33d7",
+      "count": 1000
+    },
+    {
+      "ordinal": 27,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-027/case-027-matlab.json",
+      "container_sha256": "099673ee8c767980616b03eb36dd25fc9d4ad4262396c900fd4a8ca30d7f9746",
+      "states": "case-027/case-027-matlab.json.states.mat",
+      "states_sha256": "6ebaf142b44016dc86c90b1205cc7eb79409f21d72086826b025bc7653247e2a",
+      "count": 1000
+    },
+    {
+      "ordinal": 28,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-028/case-028-matlab.json",
+      "container_sha256": "1adc12d5f8b8e68e8b26c4f7416f2321606d1d7d3384f6d13b86cf382575c72e",
+      "states": "case-028/case-028-matlab.json.states.mat",
+      "states_sha256": "98deb250ee9381f494f4a39174ccceabef3305860c2c7e880eac5eb681c4af70",
+      "count": 1000
+    },
+    {
+      "ordinal": 29,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-029/case-029-matlab.json",
+      "container_sha256": "59ed1dbb338225414e3ac5d962e8e15a715d998f183e6a85343909ea277f4ad4",
+      "states": "case-029/case-029-matlab.json.states.mat",
+      "states_sha256": "91ec7a76c189c41369616c07748b015df2865abd3e93a58d22de383399625803",
+      "count": 1000
+    },
+    {
+      "ordinal": 30,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-030/case-030-matlab.json",
+      "container_sha256": "93e02bee5fa8fdb5333ca9a9ca70381bd469a8e9dc8098c137f98a8ed3063d52",
+      "states": "case-030/case-030-matlab.json.states.mat",
+      "states_sha256": "efdb82c13b324735b3037ff8729df484b199a08aa5c7e2c41391e83e0c184e82",
+      "count": 1000
+    },
+    {
+      "ordinal": 31,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-031/case-031-matlab.json",
+      "container_sha256": "19617a8a6f2208bcff5f6ecad915f5df52a8728559eeeac023588f157dc80207",
+      "states": "case-031/case-031-matlab.json.states.mat",
+      "states_sha256": "c5001e75040606df76650fba8efc5d8a9a2a249db4111ad36f63b6121faca9f6",
+      "count": 1000
+    },
+    {
+      "ordinal": 32,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-032/case-032-matlab.json",
+      "container_sha256": "5668d8b391f4a090bc2c178d4e26e5c33d969d0c0d35b45286e6ac352850b87f",
+      "states": "case-032/case-032-matlab.json.states.mat",
+      "states_sha256": "482e26734f81e56acf211235e43872263b01194403d8e46305cb38ee0eacf32a",
+      "count": 1000
+    },
+    {
+      "ordinal": 33,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-033/case-033-matlab.json",
+      "container_sha256": "8ce601e2b7648b2dc895c64e6af210486d1ec3da860a33647f0a4598cb8b8e92",
+      "states": "case-033/case-033-matlab.json.states.mat",
+      "states_sha256": "f642e63e15f0abeb2dc4213b1dba4d5f771552d1723e0af90f48f511d0ce84ed",
+      "count": 1000
+    },
+    {
+      "ordinal": 34,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-034/case-034-matlab.json",
+      "container_sha256": "4d55933afee17fd49e323909d5d56d3d66b7fc454085692a7ee58d071806d0f0",
+      "states": "case-034/case-034-matlab.json.states.mat",
+      "states_sha256": "c2e46b504d25a56147d923185dfbdd36b3cf4a9e26c97081fb35a3e5692ba6a7",
+      "count": 1000
+    },
+    {
+      "ordinal": 35,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-035/case-035-matlab.json",
+      "container_sha256": "2069f2c5eb6f9f987a2472340e6add7dfe952b7b3244f5a6f60bbf49be0cb10e",
+      "states": "case-035/case-035-matlab.json.states.mat",
+      "states_sha256": "b9f7d3781f22dca6fc6448866c7853a7170d9d808520209e8cdea51fc0b8d556",
+      "count": 1000
+    },
+    {
+      "ordinal": 36,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-036/case-036-matlab.json",
+      "container_sha256": "5cea0645ae7f63068a44b7c287003f7fcfefe4c0180a258c4dd7f29727b4d62e",
+      "states": "case-036/case-036-matlab.json.states.mat",
+      "states_sha256": "7817dee6ec9c34ddfad5b46a2d1474649349e35e9efc490af3f64bf262489882",
+      "count": 1000
+    },
+    {
+      "ordinal": 37,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-037/case-037-matlab.json",
+      "container_sha256": "58e6276d89bfd4a76f0653be2c4d0581612a718252a5b9d49536157d6af492dc",
+      "states": "case-037/case-037-matlab.json.states.mat",
+      "states_sha256": "dd057b6b38a112552a43a3c83422ef4c6254d72b2377c4c57e8bda07f7a90d9f",
+      "count": 1000
+    },
+    {
+      "ordinal": 38,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-038/case-038-matlab.json",
+      "container_sha256": "3bf1b2b44d494b9cd9f0457576d26518d61e858a6b01a7bdcae41d2a6847e860",
+      "states": "case-038/case-038-matlab.json.states.mat",
+      "states_sha256": "56ba72d6fc6846eb80ece4b432a16780d5641b2014a890c1ed6cd2422031c99d",
+      "count": 1000
+    },
+    {
+      "ordinal": 39,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-039/case-039-matlab.json",
+      "container_sha256": "47c60f9a982b7ce44f8f10d1581d38eb8906fcde11702b7124529795b2c79454",
+      "states": "case-039/case-039-matlab.json.states.mat",
+      "states_sha256": "6a65b34ee99a8bca0e86b25d4b539f6c9e13061f5eda5e8bbe07d8a4115f77de",
+      "count": 1000
+    },
+    {
+      "ordinal": 40,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-040/case-040-matlab.json",
+      "container_sha256": "73c0a62835df8635b63714d6b38a92e9ebf7b803cdc3af9413f7c40365a9daa9",
+      "states": "case-040/case-040-matlab.json.states.mat",
+      "states_sha256": "030c6e60b871fef675fc61fdc0dc1da1012cb030cdeb0d3a320068cac480dee8",
+      "count": 1000
+    },
+    {
+      "ordinal": 41,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-041/case-041-matlab.json",
+      "container_sha256": "665f3e11b3513a6cf0dbbd75b72cc6ddb7ca106143b6a055d2c803ac63809e54",
+      "states": "case-041/case-041-matlab.json.states.mat",
+      "states_sha256": "423f4b3924f08f0674df99d0d235ed98488035df6afa1c9c53a10e5368aa8d79",
+      "count": 1000
+    },
+    {
+      "ordinal": 42,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-042/case-042-matlab.json",
+      "container_sha256": "b0f286ffa4ca7d4e45d9ed03c4a4441bf6a214c8753e5cb062a254406f2ded9e",
+      "states": "case-042/case-042-matlab.json.states.mat",
+      "states_sha256": "ba61b4364f4a09f9a4d0b10cc680cf639525221dac492fa8e80e6314dfc9891c",
+      "count": 1000
+    },
+    {
+      "ordinal": 43,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-043/case-043-matlab.json",
+      "container_sha256": "b91e1ae28d1b34bd6e4f0b6bf8c9baf340b332f28bc53f668c82a42edbad68f1",
+      "states": "case-043/case-043-matlab.json.states.mat",
+      "states_sha256": "dc220c6746481d2a68a6e66ee50cb18fc1cef2e736852cf0dfd4fd1fa05d9949",
+      "count": 1000
+    },
+    {
+      "ordinal": 44,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-044/case-044-matlab.json",
+      "container_sha256": "31d66cf53c8b0efb76548efdf1bbfe5a09592ed8b5803274a60b4c3fb2ec3fd6",
+      "states": "case-044/case-044-matlab.json.states.mat",
+      "states_sha256": "927d120531e2c71adffa00fe49c49b9c078227147c5ec34d1177f0fe11d09275",
+      "count": 1000
+    },
+    {
+      "ordinal": 45,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-045/case-045-matlab.json",
+      "container_sha256": "c3d04304978db9cede71eafcdae7739957eb77a896bdb4919d26686f91f5d0cb",
+      "states": "case-045/case-045-matlab.json.states.mat",
+      "states_sha256": "5b8063b7a03e6590309533780a3213212310ef633cd6c9c796eb89722b08daed",
+      "count": 1000
+    },
+    {
+      "ordinal": 46,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-046/case-046-matlab.json",
+      "container_sha256": "4093ab33f5d4a643d32b875c3b94b2858802677160d51c97c7823fd91c998c6e",
+      "states": "case-046/case-046-matlab.json.states.mat",
+      "states_sha256": "62b7d28c99043427f6b7039a3e30e9802ac264e8dc66d3893a7ac70a6b17e971",
+      "count": 1000
+    },
+    {
+      "ordinal": 47,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-047/case-047-matlab.json",
+      "container_sha256": "866e1927bd63e1059017f9a772f1b9da45b5353e95633e4507a371e0ceca96f2",
+      "states": "case-047/case-047-matlab.json.states.mat",
+      "states_sha256": "528062cbf32655e770558c8a703030292f6be04d40c8674af87e731716e8c7e5",
+      "count": 1000
+    },
+    {
+      "ordinal": 48,
+      "group_ordinal": 2,
+      "input_signature": "4073c65343b9006c0bc12ccb9024f4514e3c785bfb918f0067ba64fd00c77db4",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 5
+      },
+      "container": "case-048/case-048-matlab.json",
+      "container_sha256": "e0d0b828da1aa5bf0c88826c1ba50538780222174ff35935c791c3d2687a02c7",
+      "states": "case-048/case-048-matlab.json.states.mat",
+      "states_sha256": "8582ed62e249e1be5e2c804b6567a7ca89a226bd00fcc6d1c4f5a7ac9ca575bc",
+      "count": 1000
+    },
+    {
+      "ordinal": 49,
+      "group_ordinal": 3,
+      "input_signature": "3d1c550264326403ba115ca76e58e46b938414511fb1322730b6b5cfb1dfa3e5",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 10
+      },
+      "container": "case-049/case-049-matlab.json",
+      "container_sha256": "c39d3492ff6102692cf3b542a56fa109ff9439c572618b503feb2de9499a1eb5",
+      "states": "case-049/case-049-matlab.json.states.mat",
+      "states_sha256": "b277fb142a91d3bde2423e5c5c8fa8ac8a3347451847b34e72eb44374c6411f6",
+      "count": 1000
+    },
+    {
+      "ordinal": 50,
+      "group_ordinal": 4,
+      "input_signature": "223fe7646f52de4a4ab78ba2068b0699f817940b3c6af763d0b6f523248e6c67",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 15
+      },
+      "container": "case-050/case-050-matlab.json",
+      "container_sha256": "770db8c98dc586adf9b2a4b26dee826ef8974b69ce002913ec0c429c26c11d49",
+      "states": "case-050/case-050-matlab.json.states.mat",
+      "states_sha256": "7b019301f77faa5d2929c6dc415b6c0cd484e4d153fd545ee89280571dcac09f",
+      "count": 1000
+    },
+    {
+      "ordinal": 51,
+      "group_ordinal": 5,
+      "input_signature": "359bf008c5e649cc5b9f9b1bcf5c82ecb25beb80ae6415bc967bf98172d5e684",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 20
+      },
+      "container": "case-051/case-051-matlab.json",
+      "container_sha256": "9ccad65557f4f38a9d67ad5417c5efefe672eee0ca8bde91e6ccac6064686884",
+      "states": "case-051/case-051-matlab.json.states.mat",
+      "states_sha256": "a561715a9fbed0c29eedfdfbced2efd9ac3611ed96cdd44ce78bd81019563743",
+      "count": 1000
+    },
+    {
+      "ordinal": 52,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-052/case-052-matlab.json",
+      "container_sha256": "1509a90d545ecb1ffbeefb97b695d6e0533c005c9cc43d0f7ff0e59f01d4e022",
+      "states": "case-052/case-052-matlab.json.states.mat",
+      "states_sha256": "0e372c7c51ac2bccff46b79db63334a806da4af6a3f1b1202d11e2a1de52522d",
+      "count": 1000
+    },
+    {
+      "ordinal": 53,
+      "group_ordinal": 6,
+      "input_signature": "0b5a5e0e4c85e04b0fdda15a1ce735cf42eee0f0a571d933541b579a07f42de9",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 30
+      },
+      "container": "case-053/case-053-matlab.json",
+      "container_sha256": "db66408c8326d11fc8bce9a4185ffeed3d230ad0debce3acf3477e0d2ed7f2ea",
+      "states": "case-053/case-053-matlab.json.states.mat",
+      "states_sha256": "f2166b859bb905ec8d2c71152afa8b1853947e8c4a3ea08fdcef67bd3e13da87",
+      "count": 1000
+    },
+    {
+      "ordinal": 54,
+      "group_ordinal": 7,
+      "input_signature": "b915ac5f9a408a6f2680e57cec9292f687c84ecc1e79cd794816c9097c4eb86e",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 35
+      },
+      "container": "case-054/case-054-matlab.json",
+      "container_sha256": "e5dce8a969774350363224fd9d670835aa616f7e62432320d0fa8cf59d5d02ea",
+      "states": "case-054/case-054-matlab.json.states.mat",
+      "states_sha256": "7871382629a1c7d8b346c0a38b22bafdeb35dbb0e4b4121cb6db0ae2e44ab013",
+      "count": 1000
+    },
+    {
+      "ordinal": 55,
+      "group_ordinal": 8,
+      "input_signature": "64092254c3bb9be193d050e69f9dd29008f304a00840b7958ef411fb844b0056",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 40
+      },
+      "container": "case-055/case-055-matlab.json",
+      "container_sha256": "9cd36af6ddc91f4d1a9bc058e06e8ea9fe1b8dd553b2d3a88046c786fdc3a944",
+      "states": "case-055/case-055-matlab.json.states.mat",
+      "states_sha256": "7c55f37e8cc2bff0fd04f48716a05acf78272b1838ac90519fe14be276570c4d",
+      "count": 1000
+    },
+    {
+      "ordinal": 56,
+      "group_ordinal": 9,
+      "input_signature": "3fd9c72a1c8b46eb45e91959bf5c48b138c83447729766682bc9aae1706012fb",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 45
+      },
+      "container": "case-056/case-056-matlab.json",
+      "container_sha256": "814e1e364918c913f87e0f0bccd4447b01fb4690c821252eeb1178cb2cd5b53c",
+      "states": "case-056/case-056-matlab.json.states.mat",
+      "states_sha256": "031521178de4ab22952f36aa8628790853f192565aceaf50027fff8c754604d9",
+      "count": 1000
+    },
+    {
+      "ordinal": 57,
+      "group_ordinal": 10,
+      "input_signature": "e1dbd62ca8e117cdb4007b7fd85dabb03bb25cfa93b6814ea4cb1ea7c9299f33",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 5
+      },
+      "container": "case-057/case-057-matlab.json",
+      "container_sha256": "2f45d2786cf855d927f87f5022613e5588ba2160baa76551eac7afd0d779673f",
+      "states": "case-057/case-057-matlab.json.states.mat",
+      "states_sha256": "523d2f51373a2901eec968b644f6fc1116601e330757dfde666de8dce6e8b45a",
+      "count": 1000
+    },
+    {
+      "ordinal": 58,
+      "group_ordinal": 11,
+      "input_signature": "eb65bd613b54e035789e29436c02edb8f622694656a8ce59855792b303bfb222",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 10
+      },
+      "container": "case-058/case-058-matlab.json",
+      "container_sha256": "4b6bd5b148b7513d3d77afafe191d708a63248c088a0d4ede8ccb7e9d2852369",
+      "states": "case-058/case-058-matlab.json.states.mat",
+      "states_sha256": "515a2885d7941c06c9293c3cb0a109a2b92b3e1afdfc75c1349629d6b5e51416",
+      "count": 1000
+    },
+    {
+      "ordinal": 59,
+      "group_ordinal": 12,
+      "input_signature": "d64d9a622992745d802695e6f66006e10312146d85938baf4225ae88427f360d",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 15
+      },
+      "container": "case-059/case-059-matlab.json",
+      "container_sha256": "6c99741b5a28afc597179edc63e5d401d0aeee6431649732cad564a98afd10e8",
+      "states": "case-059/case-059-matlab.json.states.mat",
+      "states_sha256": "69a73a5506924bf38f9c345550e918e776e9a17d4c568a25e2c69f0ec3a1b1eb",
+      "count": 1000
+    },
+    {
+      "ordinal": 60,
+      "group_ordinal": 13,
+      "input_signature": "d64eaa659d292437af5eb3f150afe18e9c0225f7dc437108f954db772803bdd1",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 20
+      },
+      "container": "case-060/case-060-matlab.json",
+      "container_sha256": "a46b23ad7498584f1d371c2c602137ab44a989da86cb5749fa2ce9f7b2da82ad",
+      "states": "case-060/case-060-matlab.json.states.mat",
+      "states_sha256": "a7ada6e06d58f1aea5b18332d91944ea9e4cc8c110916f025e87f1e4411ce397",
+      "count": 1000
+    },
+    {
+      "ordinal": 61,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-061/case-061-matlab.json",
+      "container_sha256": "a419df0a1729b512599ca27d692c7ff6f97b377440b3edcd5273c4c85dea9b10",
+      "states": "case-061/case-061-matlab.json.states.mat",
+      "states_sha256": "391fd2e2c7e34239edda8dfda1e4171a1f49508752a7d23d0717ed5b5e674c87",
+      "count": 1000
+    },
+    {
+      "ordinal": 62,
+      "group_ordinal": 14,
+      "input_signature": "8846554aa73eb636b3eaf54d2ccbffc6bff5ca82510ce1326c1026313d8cc638",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 30
+      },
+      "container": "case-062/case-062-matlab.json",
+      "container_sha256": "8b9df5b3fdec5b1a7bac6d89536a5347da4038222691435886462bcea2e73dcd",
+      "states": "case-062/case-062-matlab.json.states.mat",
+      "states_sha256": "8e1b15b038f6be671de9ddbf3e375e6d90fa2bef33d34d35da482d2c83b977e4",
+      "count": 1000
+    },
+    {
+      "ordinal": 63,
+      "group_ordinal": 15,
+      "input_signature": "56572cb26cf0c4f3a5ae4c96d6ed92cb70c2d88123a400f0c5ccff3579c94820",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 35
+      },
+      "container": "case-063/case-063-matlab.json",
+      "container_sha256": "f7a2fc3372717dc0cdf5d4753daac8f0135a2287949da566fa888cfc420f6b7c",
+      "states": "case-063/case-063-matlab.json.states.mat",
+      "states_sha256": "9670c4a20299a752377db86213b256b3b407e49e6091fcf7a872c0523df5131f",
+      "count": 1000
+    },
+    {
+      "ordinal": 64,
+      "group_ordinal": 16,
+      "input_signature": "f6559e72d400a89594f2abe289875ca9cc689639b0c52ea7b0f46d4d49e54c08",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 40
+      },
+      "container": "case-064/case-064-matlab.json",
+      "container_sha256": "634dd961365a588f6deda708f878c21f3e6063912ce76b4796d3f46239c61aa3",
+      "states": "case-064/case-064-matlab.json.states.mat",
+      "states_sha256": "a0fed6bd7024a4acd78b7771e15d8e4ddfb134afebafc0e882ad8453ee775376",
+      "count": 1000
+    },
+    {
+      "ordinal": 65,
+      "group_ordinal": 17,
+      "input_signature": "4450d54966a91d63209174b69b19ff90e9b8b7cb2ac865372dbd154fc5220c38",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 45
+      },
+      "container": "case-065/case-065-matlab.json",
+      "container_sha256": "0cff67fa4ffe0a86690d4c4278510d413910b133f394425433441cc9bd9af939",
+      "states": "case-065/case-065-matlab.json.states.mat",
+      "states_sha256": "bff24f9f807e749f23bac4706db935ec6f250c2e34b36abec340e2a4d1723865",
+      "count": 1000
+    },
+    {
+      "ordinal": 66,
+      "group_ordinal": 18,
+      "input_signature": "bd97958096ffffbd18ba67966996c2c2528a6b3c25e6f4731927996ba63df0d1",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-066/case-066-matlab.json",
+      "container_sha256": "09ef609a99ba4587256ca9af072e18a82bf51fe2742790cb49ea9f692412473a",
+      "states": "case-066/case-066-matlab.json.states.mat",
+      "states_sha256": "6a3ed45983224f11fe94b358e963c281d5a967de94ec3681b2d79eb8d79c3247",
+      "count": 1000
+    },
+    {
+      "ordinal": 67,
+      "group_ordinal": 19,
+      "input_signature": "d2116d2f7020ad216577ff4aed24ad9f0fa1c9e5d6b8055f5818b96a35a49b18",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-067/case-067-matlab.json",
+      "container_sha256": "0793ff7ad5f3a6451435b4a148f857948f48e42d6ed9c99d2014611e0c378c06",
+      "states": "case-067/case-067-matlab.json.states.mat",
+      "states_sha256": "8ed862da56059d521d36e67c774163e42430ce042e816567b1d1e8b404fe77fb",
+      "count": 1000
+    },
+    {
+      "ordinal": 68,
+      "group_ordinal": 20,
+      "input_signature": "9c61911d7a9d5f9c957e68b63abdbf798048425038494ba4e0101c4189e81897",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-068/case-068-matlab.json",
+      "container_sha256": "860337ad797df30d68f3e88af38d272dc2592f0696ff3fd30b5978f4e487cef0",
+      "states": "case-068/case-068-matlab.json.states.mat",
+      "states_sha256": "b3b523162dcf01a1e751c0f3ba09ee5aad53816bdaa1cb9d0dd67ce5bf1f4636",
+      "count": 1000
+    },
+    {
+      "ordinal": 69,
+      "group_ordinal": 21,
+      "input_signature": "d5f0ccf2142629ba9186d794c694dd8c7c1f3dea3f9cf35a04b9315a25b68860",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-069/case-069-matlab.json",
+      "container_sha256": "0b7e4940dcaaef9211ee61da575badcf62a3667c4f8e6fde40742f2b5cd59e18",
+      "states": "case-069/case-069-matlab.json.states.mat",
+      "states_sha256": "2270426d27ff4b49f899cc9be8bb0ea2fcac92887aed973d3c512096a773f419",
+      "count": 1000
+    },
+    {
+      "ordinal": 70,
+      "group_ordinal": 22,
+      "input_signature": "8c20f636eabc63d6c049ac50e8f583551ad645dc032b4c862779c8845c47434f",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-070/case-070-matlab.json",
+      "container_sha256": "e9096366bae840ce6130b70f0ebbf8ead3a0fa5850c2b097fffd7a04213ac959",
+      "states": "case-070/case-070-matlab.json.states.mat",
+      "states_sha256": "7f92535cc4d750f83afaa42edfb1ec87d22789f50b47b7e0ac3f714e425c550e",
+      "count": 1000
+    },
+    {
+      "ordinal": 71,
+      "group_ordinal": 23,
+      "input_signature": "44fe5e40a76927bc70e94df95f507cd970898d523b5436d84993451337080842",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-071/case-071-matlab.json",
+      "container_sha256": "5f88ac9ba8ea1582b4ca50db3fb77e53b9735bb4819d85f94366b97073d8e58f",
+      "states": "case-071/case-071-matlab.json.states.mat",
+      "states_sha256": "686ca464cade554495a0efb5f0f3318a259894711683b695a8a8faa497b1109e",
+      "count": 1000
+    },
+    {
+      "ordinal": 72,
+      "group_ordinal": 24,
+      "input_signature": "6e87440acf64a11fa4d45c41a6d665858ad9c00bbadf0df005ddcc5f0cffb49c",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-072/case-072-matlab.json",
+      "container_sha256": "9bd59ff874271ee6e7922b30d1e68b34ed7d67f94ba3e738062877ecf0aefe58",
+      "states": "case-072/case-072-matlab.json.states.mat",
+      "states_sha256": "7f1a54ab809b57c43e99612523bc4f07404d7873ad4924a4d910eb1c2cbe8183",
+      "count": 1000
+    },
+    {
+      "ordinal": 73,
+      "group_ordinal": 25,
+      "input_signature": "44ac3b6d53cd6c141f475f4200e9d76b4a2b47579eaec4e8f119893b7d172c45",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-073/case-073-matlab.json",
+      "container_sha256": "6abe784d9a626117b8fa731e0759b2f2c370e5367a92dc9ace1e3cb65b55339a",
+      "states": "case-073/case-073-matlab.json.states.mat",
+      "states_sha256": "86941d6b858b9a9ea6a10f2f2b025b4d303509e8971aa36d4f67426a8b1d56c2",
+      "count": 1000
+    },
+    {
+      "ordinal": 74,
+      "group_ordinal": 26,
+      "input_signature": "325951ff9117f79639c2b78cb79cb878649583b6ac5f96661f9b09a0e6366af4",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-074/case-074-matlab.json",
+      "container_sha256": "0d1a2d07856a2a7debeb86f4858c001f559c67176f6a25db0710c93394a4d131",
+      "states": "case-074/case-074-matlab.json.states.mat",
+      "states_sha256": "7e6e1affaacf1ea7ec6df8333bb128c273c91100ff636f6735090854257ba221",
+      "count": 1000
+    },
+    {
+      "ordinal": 75,
+      "group_ordinal": 27,
+      "input_signature": "090efb59d6c0b6748e4bdb32e9464704498c2e37c5b6eb0cf56fd9f37f1d8938",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-075/case-075-matlab.json",
+      "container_sha256": "7dc39dcd5b27642ab3beb6f61433cd3e72d83c7f3f4857bc011f7e3ac1acab20",
+      "states": "case-075/case-075-matlab.json.states.mat",
+      "states_sha256": "f699a7e0a7ebd804bba238fe1eba9c548dfae20d29759b19f84a74324c4f37ca",
+      "count": 1000
+    },
+    {
+      "ordinal": 76,
+      "group_ordinal": 28,
+      "input_signature": "8b35013a029b7b4aa7c527888273562d75b59c9b8893cac6b8286dbff129c58c",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-076/case-076-matlab.json",
+      "container_sha256": "040b2ab437d2e1e4702ec6a8113275e51c99371055929d283e06bc476031ac6c",
+      "states": "case-076/case-076-matlab.json.states.mat",
+      "states_sha256": "ee9cb15e5d22e69fbdd448715ae07eae8e8455ae7b2296838612a872edd84562",
+      "count": 1000
+    },
+    {
+      "ordinal": 77,
+      "group_ordinal": 29,
+      "input_signature": "ce71973a9d683760ed82b09d6853d2fce74778c2348cb7784e4a62472720fb4a",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-077/case-077-matlab.json",
+      "container_sha256": "76b7a7575081317dd1ff39f9102693aa94edbc121535fd52b00c5506da8b0947",
+      "states": "case-077/case-077-matlab.json.states.mat",
+      "states_sha256": "c51da2411f6661651e1a65022144bebe0ccf2392e9f0ef1594db67b9bd9039fb",
+      "count": 1000
+    },
+    {
+      "ordinal": 78,
+      "group_ordinal": 30,
+      "input_signature": "092270851f8533ebdcdef381d7893079094cb898459cd333ce1e429c3588b65d",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-078/case-078-matlab.json",
+      "container_sha256": "97f45a8a188d18ba22ebaae4668b39c9a8791c254d115b66733d1c14dd8d1653",
+      "states": "case-078/case-078-matlab.json.states.mat",
+      "states_sha256": "8cf901ae4ee4683ac994b329572b313e453b7113fd767dcef7378d558d66c199",
+      "count": 1000
+    },
+    {
+      "ordinal": 79,
+      "group_ordinal": 31,
+      "input_signature": "81111c330cf3ec0e89439807df339fcb17970e410ca879790300b9a739bc8cf5",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-079/case-079-matlab.json",
+      "container_sha256": "e60ecd08d0c1e2825d1ae63c5e7e9e1abe4d0c13bd4ffd079b1f4fe1bbda78c3",
+      "states": "case-079/case-079-matlab.json.states.mat",
+      "states_sha256": "53f4a6cea3d1d9200444e5cd8423438c54102d662a49d31232d1e0a3afa2e8ef",
+      "count": 1000
+    },
+    {
+      "ordinal": 80,
+      "group_ordinal": 32,
+      "input_signature": "1ad01d7ba2dd8b61160a83b31317123cd9db40c891234c793a8bea76811f394d",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-080/case-080-matlab.json",
+      "container_sha256": "3989f3ecdbfaf2f87205f584ec9abff4849e191ee99034b9300442db26d090b2",
+      "states": "case-080/case-080-matlab.json.states.mat",
+      "states_sha256": "18fc284d11c0579e0710bb2f7dbde24d9f2a83fb523640dd6820bd5fbf3a6479",
+      "count": 1000
+    },
+    {
+      "ordinal": 81,
+      "group_ordinal": 33,
+      "input_signature": "a94d86a107e612d6b8e2bf750715d8b1dbe17f119c2425aa1dc1f13f9bcdd472",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-081/case-081-matlab.json",
+      "container_sha256": "5a16dad8027ec2fca41ae7b10de51063f3be7f1a76b85dda49a7867f18687f34",
+      "states": "case-081/case-081-matlab.json.states.mat",
+      "states_sha256": "c006bc9a8d503a945d054c62e4e1fefe97bff8efe9ec52283952bd2193d97313",
+      "count": 1000
+    },
+    {
+      "ordinal": 82,
+      "group_ordinal": 34,
+      "input_signature": "d301f45ad72d4f39f912da41c4744e7813f427167639009c21c2f5042836137f",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-082/case-082-matlab.json",
+      "container_sha256": "6b714064bbbfc93d21e80a121622f9d9b35452737f40b05298821d1eca9e80ed",
+      "states": "case-082/case-082-matlab.json.states.mat",
+      "states_sha256": "6f1400b8f4963d7f1d6c8652c6283d1bcc6b72459ba035a0a643ecfa58d25c9e",
+      "count": 1000
+    },
+    {
+      "ordinal": 83,
+      "group_ordinal": 35,
+      "input_signature": "309377e220d3b7dd197c3a892b78e1721e8d28b5b53bed5de143f2fd3a84fc11",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-083/case-083-matlab.json",
+      "container_sha256": "59e0ac59ed82c12f7a4aab5788e0da6eafb4ed53ee3b31727650f5be15bb23e1",
+      "states": "case-083/case-083-matlab.json.states.mat",
+      "states_sha256": "de7b54755fb1605602ec6194c2078f7fa871e454f899a3f6907275330df533cf",
+      "count": 1000
+    },
+    {
+      "ordinal": 84,
+      "group_ordinal": 36,
+      "input_signature": "e23d20d1c796b7995d2c81599794a642c52f6bfe621f0164ab7aed60c4b2dd2c",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-084/case-084-matlab.json",
+      "container_sha256": "8bac8e27fff27e98e82bdce65726e3f9fab981c1700bab2fc01aa09e365b811e",
+      "states": "case-084/case-084-matlab.json.states.mat",
+      "states_sha256": "14f46464e3dfbf4f560cb630de3186d383532e03c45090e2bc4cd35d3c1977a9",
+      "count": 1000
+    },
+    {
+      "ordinal": 85,
+      "group_ordinal": 37,
+      "input_signature": "c7f4b8e9a4a2329cf69f65251d2fe9fd60aaf38dd3ce9c0a8b08b9c82acc8127",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-085/case-085-matlab.json",
+      "container_sha256": "c39fb74bf4c1cf093f9fbc85051309a2e85243f3a900dd120632acdecc69b75e",
+      "states": "case-085/case-085-matlab.json.states.mat",
+      "states_sha256": "680873f24896c3739ad151458d745d2e5f6c34d63e3c83ab3c6c649f02f5dc19",
+      "count": 1000
+    },
+    {
+      "ordinal": 86,
+      "group_ordinal": 38,
+      "input_signature": "312df6fc3f7d89f8c591cebd82ed9548e13ffed6e6c69d0fe87ba3af4bc4210b",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-086/case-086-matlab.json",
+      "container_sha256": "72f5f4e07f97d6345fb2d6a187d0f2b24cc0b0fcac0f2115250cf1526ab57500",
+      "states": "case-086/case-086-matlab.json.states.mat",
+      "states_sha256": "7bca21dc449f68dcdf55b1ce0bcdd1765113d76d4e8afac0252ef3958f57c439",
+      "count": 1000
+    },
+    {
+      "ordinal": 87,
+      "group_ordinal": 39,
+      "input_signature": "299965f8213df7fba985128ad991b62317ce7b89dc18f6f34d6c892c54a004fe",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-087/case-087-matlab.json",
+      "container_sha256": "cb2a517a2266291ab09bf2b187d3bad489ee2252418001ba9ad203f96f6030bf",
+      "states": "case-087/case-087-matlab.json.states.mat",
+      "states_sha256": "4b8974b4589dc74a4a93b7f63b719e155bf23ec857a88b250bdf0502f8346a9b",
+      "count": 1000
+    },
+    {
+      "ordinal": 88,
+      "group_ordinal": 40,
+      "input_signature": "af7d18a3813155f97704df85b225f94fb18b7e25ca33c7c3eb159389d2fa8f9c",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-088/case-088-matlab.json",
+      "container_sha256": "e347262b62692ee43c3238022a05d689266c3d8d32e04532f5aeacb8a30a20ae",
+      "states": "case-088/case-088-matlab.json.states.mat",
+      "states_sha256": "74fbffef2429a7cf7c04c3846448d3240f23afeb0dc67b6ef03ac5906c31fea0",
+      "count": 1000
+    },
+    {
+      "ordinal": 89,
+      "group_ordinal": 41,
+      "input_signature": "adc2905046c19f8b8b379325cbcc0f8c538a763ac4db3ce8414fa89010a434dd",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-089/case-089-matlab.json",
+      "container_sha256": "418dff371f3bdd827d1a6860b47d7084c9d6d566fe0ca19d3b721d05d3aca80e",
+      "states": "case-089/case-089-matlab.json.states.mat",
+      "states_sha256": "f0392326dbb024b5ac1aca5da7fee454ad124543c4db87bed3d3a1546b93f0f8",
+      "count": 1000
+    },
+    {
+      "ordinal": 90,
+      "group_ordinal": 42,
+      "input_signature": "e965f57ca62b093c66a64b1af17e7e553a5916d4e72d06e5946c318aeb85efbb",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-090/case-090-matlab.json",
+      "container_sha256": "01ecb516e2e7e65c5ba0bad20783216109be8adc2a37b5c9499a607a4f0c44de",
+      "states": "case-090/case-090-matlab.json.states.mat",
+      "states_sha256": "35cefafc5c55184af20a48c71f288dd821f38139f0c82eaba882aa6d0e8ff18e",
+      "count": 1000
+    },
+    {
+      "ordinal": 91,
+      "group_ordinal": 43,
+      "input_signature": "03af6cfb1db6849134232dd6180258c0c18025963e8c3681ebb172a0b498dcfc",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-091/case-091-matlab.json",
+      "container_sha256": "683a59fa52edaa84d47f31556ef7d37df46386563e6fb16fbee36dbe8dbbbe09",
+      "states": "case-091/case-091-matlab.json.states.mat",
+      "states_sha256": "23a34c256bf8a3d5c9f5d7864b49366642bf2a8157348ea791b3fdd93086a265",
+      "count": 1000
+    },
+    {
+      "ordinal": 92,
+      "group_ordinal": 44,
+      "input_signature": "7da057bbdef9140b4763f4dc7dcf8c9a37413ebbac75f9f8e610433d9670af9a",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-092/case-092-matlab.json",
+      "container_sha256": "d392dc62e874efe6aad74d117dc1a9387b070c464ce3c5f225f34913d9a7b703",
+      "states": "case-092/case-092-matlab.json.states.mat",
+      "states_sha256": "fa49cc6bedf37dcda322cb8ba48e3cb395c3376a8784906f13adf1407edac2c2",
+      "count": 1000
+    },
+    {
+      "ordinal": 93,
+      "group_ordinal": 45,
+      "input_signature": "9253cce30b000894aa8c79e8bd2e128ce7f94860e01397ca8d709d8ee7bad8b1",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-093/case-093-matlab.json",
+      "container_sha256": "b2918685a775da4a51f83c8742f9f4367a566294ddd31d79f6228e10fbc14c4e",
+      "states": "case-093/case-093-matlab.json.states.mat",
+      "states_sha256": "52b79006c177fb6a99c91bc4e847b82f98be8648d3f1fdf8d883df0749c190e4",
+      "count": 1000
+    },
+    {
+      "ordinal": 94,
+      "group_ordinal": 46,
+      "input_signature": "ce347612e29301f96cff02d3e1caf3f154703d650851ff24feaedea4459256dd",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-094/case-094-matlab.json",
+      "container_sha256": "a3ebfcbe6d4063f4b5dd2d80bfcfa4bb309ba7b55e61087d78f0d4d79ca345c8",
+      "states": "case-094/case-094-matlab.json.states.mat",
+      "states_sha256": "115bf3a53d1661f9cd6a749f894520bde257ce6c956914736906789321a9fa24",
+      "count": 1000
+    },
+    {
+      "ordinal": 95,
+      "group_ordinal": 47,
+      "input_signature": "f2cc5cb54b8f6df4017aec7269bc7ef332690b41f9547f8addabeccd47819c4b",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-095/case-095-matlab.json",
+      "container_sha256": "a85de2d06b2d44a5907cb8c82f8357a33d66090a5c3330a531b87581a1086f6b",
+      "states": "case-095/case-095-matlab.json.states.mat",
+      "states_sha256": "0a3d93c993d29a4c2a54fd145e637ba0d70be1547e832669761e87dcb59ff172",
+      "count": 1000
+    },
+    {
+      "ordinal": 96,
+      "group_ordinal": 48,
+      "input_signature": "de1fe76cb9471ddbc5977d16bc447fa509cffbb32b5c74278c01db24a76dfc69",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-096/case-096-matlab.json",
+      "container_sha256": "5a53020320f4ff8d73aad81eba2143a3bf227f8d5977b9bd24fb8bd70fe3e8f4",
+      "states": "case-096/case-096-matlab.json.states.mat",
+      "states_sha256": "9b8e93adc2280492d4811c9f59ae18ee0305d6da07daefd6e386a9e645270418",
+      "count": 1000
+    },
+    {
+      "ordinal": 97,
+      "group_ordinal": 49,
+      "input_signature": "41fc46f28b3747ddbeeb319861e51f3690c19707d0717a832271238a2768f5d1",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-097/case-097-matlab.json",
+      "container_sha256": "b70565fce58f0cb239303676d75ae2216c25793acb96195ac29358533c33472e",
+      "states": "case-097/case-097-matlab.json.states.mat",
+      "states_sha256": "e1d7a1d7993efff578c8996abdaf3faac2a55216fa005d022a9aa135ecb50950",
+      "count": 1000
+    },
+    {
+      "ordinal": 98,
+      "group_ordinal": 50,
+      "input_signature": "087c756bfcf5925718a51774315ac408c2be61f6457756c9682c28e73c4a788d",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-098/case-098-matlab.json",
+      "container_sha256": "0c4fe4bf17b4ae0a973c8ae5f03c002ffde8b23d9f5c6f5d6bd7caf63543a2ba",
+      "states": "case-098/case-098-matlab.json.states.mat",
+      "states_sha256": "b82d335ea7373fd1ba99441c57b1bb2bc44f51953294642999e5d8373890614f",
+      "count": 1000
+    },
+    {
+      "ordinal": 99,
+      "group_ordinal": 51,
+      "input_signature": "5534054abe938fa341917896215f0ef2beba9fd4405ac5fc58b2e12cebd308d6",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-099/case-099-matlab.json",
+      "container_sha256": "e5f8c9752ba2796abbf89e7051d389540b57e27bee3b1d56d98c4a7d6d0bca0d",
+      "states": "case-099/case-099-matlab.json.states.mat",
+      "states_sha256": "44047328fd194562b8d1b14d91d6bf263191d503a5c14f0db5e6f640d7494420",
+      "count": 1000
+    },
+    {
+      "ordinal": 100,
+      "group_ordinal": 52,
+      "input_signature": "efa131ec4891cdfde35bfb8e98e132966995212201a3f9c08b44495dd9da86ff",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-100/case-100-matlab.json",
+      "container_sha256": "47d4c795d87ec2a586f4bfdde2e4e8e1fef8412e11f87d94b645aa0ffdc169b6",
+      "states": "case-100/case-100-matlab.json.states.mat",
+      "states_sha256": "558d8862dd7836be0c43c55b7c1318bd8d4450d81fc69fc5783ac25174c32449",
+      "count": 1000
+    },
+    {
+      "ordinal": 101,
+      "group_ordinal": 53,
+      "input_signature": "6ca18ebcd8e09fed5520c69e7bf32d04dd1c2a097ccb340e51ff3f4fc53cc788",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-101/case-101-matlab.json",
+      "container_sha256": "43dbebde25fbd4b5c3708aca514a1d82aab95455ea1ffca357d77f6dfe98ac87",
+      "states": "case-101/case-101-matlab.json.states.mat",
+      "states_sha256": "eb4d63d0b00d95463c99907d72bc067b18170f198d09b7f9ad819fbf13ab3e31",
+      "count": 1000
+    },
+    {
+      "ordinal": 102,
+      "group_ordinal": 54,
+      "input_signature": "889eed436d350c03cf494b696d05ae6e40c5994aaa93fec28cc288d2cedce0b0",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-102/case-102-matlab.json",
+      "container_sha256": "81f8d9d58d0bb58456a8bd102a9ebc50dc83bedbe34fe51e9d7e8c70ca272b21",
+      "states": "case-102/case-102-matlab.json.states.mat",
+      "states_sha256": "ab4075f8d92b3c89e7cec2d891ccba9d5b4425c86a3fb8dff2c4035a927ab188",
+      "count": 1000
+    },
+    {
+      "ordinal": 103,
+      "group_ordinal": 55,
+      "input_signature": "b89f00aa87f4d8be9650a0d31e95efc13dda59975074d1d2c16936fd5be74d46",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-103/case-103-matlab.json",
+      "container_sha256": "d7eb508698e8cbcd6923397d64772bd19e4eb8eedd1ef2d9fc8b3e7fa9b5168c",
+      "states": "case-103/case-103-matlab.json.states.mat",
+      "states_sha256": "54cf5840cc0f872280ad98b63d2eb1403865b88ed7bb7dce9d3667feb988fd72",
+      "count": 1000
+    },
+    {
+      "ordinal": 104,
+      "group_ordinal": 56,
+      "input_signature": "8c3d6b8792e4099133ea354476ef8ff58004760a00cc7abcd6a5fed86436112d",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-104/case-104-matlab.json",
+      "container_sha256": "7ae6bcc483d89c8bdea033c02e123ac05286a0f7c71bbc0a3d13adcde35441d9",
+      "states": "case-104/case-104-matlab.json.states.mat",
+      "states_sha256": "9e7e77ecd2e10c98b92d48941aa1bf7a6bcc97a38ddef087060421437a554e37",
+      "count": 1000
+    },
+    {
+      "ordinal": 105,
+      "group_ordinal": 57,
+      "input_signature": "da0c7236e7ff01b3ba1086986985c1fb1bccd29c7e38a0d4a436ca34fcc73319",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-105/case-105-matlab.json",
+      "container_sha256": "1bfcce5782a891e10f5e910c9a6892ef22d5198126b52296ea7782042ccd5e4b",
+      "states": "case-105/case-105-matlab.json.states.mat",
+      "states_sha256": "f6fb01b3f3c07367cb7f72e89025b45e9deca8161727497cf33ab5107b3850be",
+      "count": 1000
+    },
+    {
+      "ordinal": 106,
+      "group_ordinal": 58,
+      "input_signature": "f0af431e8df40206059415284cc720a2a5c1791dbc743a0922add2592c9bfb60",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-106/case-106-matlab.json",
+      "container_sha256": "7dd8e033a6f8653fdf97d886e7091e037dd5b9b048db063081ae92e3805fcdc4",
+      "states": "case-106/case-106-matlab.json.states.mat",
+      "states_sha256": "0069c7cfb37bf5d28c9babb01b4f39f85a8bda39ce76b90627e709dff7ceeb95",
+      "count": 1000
+    },
+    {
+      "ordinal": 107,
+      "group_ordinal": 59,
+      "input_signature": "ec24b13d4d2a030b62da090a3f848834538b9d9a8fc0cb5e61f1df5ab9d51f07",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-107/case-107-matlab.json",
+      "container_sha256": "ddc5bf2e51136da5ac0731e3be75c5760aa406cd959d3cb7fed385ff9d4708e5",
+      "states": "case-107/case-107-matlab.json.states.mat",
+      "states_sha256": "cdfae00880243c43525c44a97bc99a399543c2ed6b70efc0b13f66878092b5a9",
+      "count": 1000
+    },
+    {
+      "ordinal": 108,
+      "group_ordinal": 60,
+      "input_signature": "4bb2418af69632b7313083c296a06b4f7e6418fa821152dcd04cd60487770f7a",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-108/case-108-matlab.json",
+      "container_sha256": "a5e84671daef1c461fa54677c82add1f0a27ad14bbabfb7c255eb42306892de9",
+      "states": "case-108/case-108-matlab.json.states.mat",
+      "states_sha256": "c24a500d6b34d1fb8985e8d63cf0ca7834751d8b8b076fb307a101241b3a5928",
+      "count": 1000
+    },
+    {
+      "ordinal": 109,
+      "group_ordinal": 61,
+      "input_signature": "7f4154f075c3cca42cf2101fa2205dd2aff54ff26772d834d65f69c1b18af6f1",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-109/case-109-matlab.json",
+      "container_sha256": "3422de07639b4819b14c58019d8b1e783b54503b7ec2738692eb4301e0e1e98c",
+      "states": "case-109/case-109-matlab.json.states.mat",
+      "states_sha256": "49c426957a39b2338105db177d26adb65eed7ee4f06f0756388179a1c6d56a07",
+      "count": 1000
+    },
+    {
+      "ordinal": 110,
+      "group_ordinal": 62,
+      "input_signature": "0f05d40718ff9127cf772118603939ebc3cca4d505957fcffbfbbef2eff89faf",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-110/case-110-matlab.json",
+      "container_sha256": "6fdca9aa55199f190ad27f53c726be3e56e5e4b971c7d28519d19f24aa3064f3",
+      "states": "case-110/case-110-matlab.json.states.mat",
+      "states_sha256": "48c767301ed910af6c47fe64622cc9029e8e1a1c3f01cea3290b8cba02e2a957",
+      "count": 1000
+    },
+    {
+      "ordinal": 111,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-111/case-111-matlab.json",
+      "container_sha256": "c79d102b1eb98efe8d7b214cf141263489dd306840f3acea50545f25d0875eb8",
+      "states": "case-111/case-111-matlab.json.states.mat",
+      "states_sha256": "ee098da08523a8ecdcdd92f4bd0e3e509cf76e7e68269163bbe3ae30f7feeda6",
+      "count": 1000
+    },
+    {
+      "ordinal": 112,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-112/case-112-matlab.json",
+      "container_sha256": "025bf1872e7fd0a4bb264446821975dd88d574767d85fd13187b9d4d0ed8c6b8",
+      "states": "case-112/case-112-matlab.json.states.mat",
+      "states_sha256": "f9b5a0244c266bb34d1e90e8e61bcc7572f605d392a221a2b918bcb0c7f0f398",
+      "count": 1000
+    },
+    {
+      "ordinal": 113,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-113/case-113-matlab.json",
+      "container_sha256": "9778504a60dbbbfb3ac50da101f205af152d2ea0b0b31fafa9db40d1990863e4",
+      "states": "case-113/case-113-matlab.json.states.mat",
+      "states_sha256": "d5b4b3d4c60c4433bd9c892ee579c7555f9cfba2f7774b8717143016f4b144b6",
+      "count": 1000
+    },
+    {
+      "ordinal": 114,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-114/case-114-matlab.json",
+      "container_sha256": "020f8ef05e8683bf09a2f382c54cb3ecccf51cacbf6ffd0abc047c541075380a",
+      "states": "case-114/case-114-matlab.json.states.mat",
+      "states_sha256": "af64d914aa82199fcca543415166a17ca22704ec66505a650352dfd61d34186e",
+      "count": 1000
+    },
+    {
+      "ordinal": 115,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-115/case-115-matlab.json",
+      "container_sha256": "6ee9c17fec09c317ac4a5e6ce178b18d3a05fefa672d6947d15f3a81775c119f",
+      "states": "case-115/case-115-matlab.json.states.mat",
+      "states_sha256": "be95215984a88fe470c742c101fd9ffc6abc8e16f429d2fda4a01eda5282c0ae",
+      "count": 1000
+    },
+    {
+      "ordinal": 116,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-116/case-116-matlab.json",
+      "container_sha256": "75915ef5b1f27dbd63155d3473f76d8b91c1f766034e6670fd97d8d86f6a2e4a",
+      "states": "case-116/case-116-matlab.json.states.mat",
+      "states_sha256": "025fa272741a309cfade7cd523f2ac85997fc7658c644d366e62208a746dce82",
+      "count": 1000
+    },
+    {
+      "ordinal": 117,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-117/case-117-matlab.json",
+      "container_sha256": "4e462135ac6e6e46abcc810ab21e75915370ea3d145f23dc186947d1037ede15",
+      "states": "case-117/case-117-matlab.json.states.mat",
+      "states_sha256": "7aaab9bbcda450c61f5391591744c4a54ad156dc3b9190f6ef3bc4d80b290a64",
+      "count": 1000
+    },
+    {
+      "ordinal": 118,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-118/case-118-matlab.json",
+      "container_sha256": "895ae2381c24f63c18c40e1be39f295f1eb9d9d29f9f0df6f8dfb34966dfdddd",
+      "states": "case-118/case-118-matlab.json.states.mat",
+      "states_sha256": "fab6990e2fd4b7458a914671fbc5e89d0ea2f056de0c514c8e63bd1f0d51215d",
+      "count": 1000
+    },
+    {
+      "ordinal": 119,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-119/case-119-matlab.json",
+      "container_sha256": "4e6f8caffc987fe015fe27756db0e2f4fc6e7b5ec98d595629f4357dd6c47cc2",
+      "states": "case-119/case-119-matlab.json.states.mat",
+      "states_sha256": "750642aea58d3db4c544dc25889614f937bdb3314297b8092e36967f29cc1c60",
+      "count": 1000
+    },
+    {
+      "ordinal": 120,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-120/case-120-matlab.json",
+      "container_sha256": "bba530b15a9f02fa62462061b1775a429a6d70a442caf23ca209d979a0042427",
+      "states": "case-120/case-120-matlab.json.states.mat",
+      "states_sha256": "4c286c1cdd5d19be8bd147f42050c68e45edd31fdaa2038cf4d6aa19b7cefa74",
+      "count": 1000
+    },
+    {
+      "ordinal": 121,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-121/case-121-matlab.json",
+      "container_sha256": "f42f594dca6f0872d25610981424f6366949537421e941681344070a66d523f8",
+      "states": "case-121/case-121-matlab.json.states.mat",
+      "states_sha256": "eeb161b29d7189e8449277a78e5e6fc3721d5625bca08bb8b499d8cf964401b5",
+      "count": 1000
+    },
+    {
+      "ordinal": 122,
+      "group_ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-122/case-122-matlab.json",
+      "container_sha256": "292fba09ee2121b438883a99dee24f91492d43272985d9d6064a280e039f5d2d",
+      "states": "case-122/case-122-matlab.json.states.mat",
+      "states_sha256": "1f66c66dafbbd7e4be643cd8fb1ebda27cd99a5d211be051016efad53fd02213",
+      "count": 1000
+    },
+    {
+      "ordinal": 123,
+      "group_ordinal": 63,
+      "input_signature": "823ccc37dc0d54a3dc22aaaa0b95870e2ffd6d62a73852208e6400b8527f4a8c",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-123/case-123-matlab.json",
+      "container_sha256": "50ec7f71122454c216f5a87ffe62863b62f81e055b7a121a0a8163697189df43",
+      "states": "case-123/case-123-matlab.json.states.mat",
+      "states_sha256": "8fdcebee3acb4e2a6ef14834ec9ad20dcfdb2ebd5144e6b9d553187bbaaf09dd",
+      "count": 1000
+    },
+    {
+      "ordinal": 124,
+      "group_ordinal": 63,
+      "input_signature": "823ccc37dc0d54a3dc22aaaa0b95870e2ffd6d62a73852208e6400b8527f4a8c",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-124/case-124-matlab.json",
+      "container_sha256": "a76ff55f226ed0dee07e05940ae40f1f1abe1a9f7855e9a17ef76d1b08315a05",
+      "states": "case-124/case-124-matlab.json.states.mat",
+      "states_sha256": "5201b4e12d3b373df79b391c61d20f0e83d33b54ec87ad80b44829f797d3abc5",
+      "count": 1000
+    },
+    {
+      "ordinal": 125,
+      "group_ordinal": 63,
+      "input_signature": "823ccc37dc0d54a3dc22aaaa0b95870e2ffd6d62a73852208e6400b8527f4a8c",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-125/case-125-matlab.json",
+      "container_sha256": "7bd98d039fa1174476ba5ff841059666c3c64315f66579084912fd80bdf6fb4a",
+      "states": "case-125/case-125-matlab.json.states.mat",
+      "states_sha256": "2e04efc11513d04e55362304ada7d7f90e68faf605adb54eaf0ffca4498f0e82",
+      "count": 1000
+    },
+    {
+      "ordinal": 126,
+      "group_ordinal": 63,
+      "input_signature": "823ccc37dc0d54a3dc22aaaa0b95870e2ffd6d62a73852208e6400b8527f4a8c",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-126/case-126-matlab.json",
+      "container_sha256": "a3c44d6f9054c89d3410e37cf4bd655411a27c80673ecf4fd403ba3c60c043d3",
+      "states": "case-126/case-126-matlab.json.states.mat",
+      "states_sha256": "274edd67141c93176872c70792e3c42bd258152f4ebaec950ee58db34bcdd4ff",
+      "count": 1000
+    },
+    {
+      "ordinal": 127,
+      "group_ordinal": 63,
+      "input_signature": "823ccc37dc0d54a3dc22aaaa0b95870e2ffd6d62a73852208e6400b8527f4a8c",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-127/case-127-matlab.json",
+      "container_sha256": "87ff419786ce67f1e4a4f6555fba1af3279ccd4e7261f46109f8d380b66c9551",
+      "states": "case-127/case-127-matlab.json.states.mat",
+      "states_sha256": "91ec2f72e0cd2326736599c3cbf1a8156f55de9c1d96280ba3efa1015ac4e5e3",
+      "count": 1000
+    },
+    {
+      "ordinal": 128,
+      "group_ordinal": 63,
+      "input_signature": "823ccc37dc0d54a3dc22aaaa0b95870e2ffd6d62a73852208e6400b8527f4a8c",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-128/case-128-matlab.json",
+      "container_sha256": "c12eeb910bae3e127d46b7ecdccefe5b1bbae68348b6099c684082a1881a3a9f",
+      "states": "case-128/case-128-matlab.json.states.mat",
+      "states_sha256": "e2355ed06baf3ee92ad9e5418ad42c375236dc3de17268c98ec14e7789d2c0a4",
+      "count": 1000
+    },
+    {
+      "ordinal": 129,
+      "group_ordinal": 63,
+      "input_signature": "823ccc37dc0d54a3dc22aaaa0b95870e2ffd6d62a73852208e6400b8527f4a8c",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-129/case-129-matlab.json",
+      "container_sha256": "37b99c947bf8c48e1c91daf3370317ea2ff972b9198ac77ce0c08aa8cd0d67d1",
+      "states": "case-129/case-129-matlab.json.states.mat",
+      "states_sha256": "5976ef018a8e3d5a78334438c202ed7f1ea5f2ce9647300d2061e4338b2f42dd",
+      "count": 1000
+    },
+    {
+      "ordinal": 130,
+      "group_ordinal": 63,
+      "input_signature": "823ccc37dc0d54a3dc22aaaa0b95870e2ffd6d62a73852208e6400b8527f4a8c",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-130/case-130-matlab.json",
+      "container_sha256": "937a69e66b2c24d4ed7d8f02d1da3a9fd970eeb85569a0163faba41b6b0c3b88",
+      "states": "case-130/case-130-matlab.json.states.mat",
+      "states_sha256": "ca5e9092f64994d32a7f4f872cc7df06d5d836fdad4d28440a580161a14be52f",
+      "count": 1000
+    },
+    {
+      "ordinal": 131,
+      "group_ordinal": 63,
+      "input_signature": "823ccc37dc0d54a3dc22aaaa0b95870e2ffd6d62a73852208e6400b8527f4a8c",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-131/case-131-matlab.json",
+      "container_sha256": "f5e59903155d2b13277490601c7f4c114136e4de23b45d528b8be12c492bc8b6",
+      "states": "case-131/case-131-matlab.json.states.mat",
+      "states_sha256": "32aaf769de1051516aa88e36fe2f9d01d33182c6131242d877225fd6815d7707",
+      "count": 1000
+    },
+    {
+      "ordinal": 132,
+      "group_ordinal": 63,
+      "input_signature": "823ccc37dc0d54a3dc22aaaa0b95870e2ffd6d62a73852208e6400b8527f4a8c",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-132/case-132-matlab.json",
+      "container_sha256": "66ffe3ec401354592625a99b122805845b6c50baefbf17287176046ce3a9b1c7",
+      "states": "case-132/case-132-matlab.json.states.mat",
+      "states_sha256": "c3689d5c5fb6279b0d88a244465e687c64cd9f5dec271f4e73b604b0f445af97",
+      "count": 1000
+    },
+    {
+      "ordinal": 133,
+      "group_ordinal": 63,
+      "input_signature": "823ccc37dc0d54a3dc22aaaa0b95870e2ffd6d62a73852208e6400b8527f4a8c",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-133/case-133-matlab.json",
+      "container_sha256": "06141080c59c2be5fce7c97ea36692a8864a75dd76d89a6dedcc45610a3f6eca",
+      "states": "case-133/case-133-matlab.json.states.mat",
+      "states_sha256": "0f7714e2c4fdc6b8af0664b56d179d6c4feb9d508a1451a5d19d0a99a1088969",
+      "count": 1000
+    },
+    {
+      "ordinal": 134,
+      "group_ordinal": 63,
+      "input_signature": "823ccc37dc0d54a3dc22aaaa0b95870e2ffd6d62a73852208e6400b8527f4a8c",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-134/case-134-matlab.json",
+      "container_sha256": "a3e3f2e9f6fc99c852b84bc4cabbd849d02e19e32ed8c28582aff39657956856",
+      "states": "case-134/case-134-matlab.json.states.mat",
+      "states_sha256": "bccd5143d831678079e0e9838ffb6e4ff3c8498e6edc4eb0187ff5dec434f73f",
+      "count": 1000
+    },
+    {
+      "ordinal": 135,
+      "group_ordinal": 64,
+      "input_signature": "1f0020ccda5e3cdee851dde3f12af7ab1f365f441103a94f500e39e46e8313e9",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-135/case-135-matlab.json",
+      "container_sha256": "93562d0d158b2266520587df44d2fde03e9da11938c010f6caa5de205410e0df",
+      "states": "case-135/case-135-matlab.json.states.mat",
+      "states_sha256": "00b5afe2a3bbcf069572a4b80e600953fef6c20374f2b390d5c8c116e1e571fe",
+      "count": 1000
+    },
+    {
+      "ordinal": 136,
+      "group_ordinal": 64,
+      "input_signature": "1f0020ccda5e3cdee851dde3f12af7ab1f365f441103a94f500e39e46e8313e9",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-136/case-136-matlab.json",
+      "container_sha256": "498772e6b76b86eb3d6502b7681dcc08eec3fee4b24034880c299d79af77eb08",
+      "states": "case-136/case-136-matlab.json.states.mat",
+      "states_sha256": "12763784dd2b04127b0759c96270476a4a1bd9c318a3e2e1dc85455ec9c4d197",
+      "count": 1000
+    },
+    {
+      "ordinal": 137,
+      "group_ordinal": 64,
+      "input_signature": "1f0020ccda5e3cdee851dde3f12af7ab1f365f441103a94f500e39e46e8313e9",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-137/case-137-matlab.json",
+      "container_sha256": "90fb9673e359360d68a82889c7800d3fcd01efebc54e8ea62e85ea6338af49ca",
+      "states": "case-137/case-137-matlab.json.states.mat",
+      "states_sha256": "c81fa18408bc61bee6ec0fa31dadfa28bf6964f498dd088385124499d9deb838",
+      "count": 1000
+    },
+    {
+      "ordinal": 138,
+      "group_ordinal": 64,
+      "input_signature": "1f0020ccda5e3cdee851dde3f12af7ab1f365f441103a94f500e39e46e8313e9",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-138/case-138-matlab.json",
+      "container_sha256": "d09ce6900d9b965f84f8732f2b4987ceeb2bb7c427eb71dfe589eba9af8833fc",
+      "states": "case-138/case-138-matlab.json.states.mat",
+      "states_sha256": "c0c6efccb9045ae9026d62f18ffd612a02b6c2f8eab528ad38d4d4af2fec3c31",
+      "count": 1000
+    },
+    {
+      "ordinal": 139,
+      "group_ordinal": 64,
+      "input_signature": "1f0020ccda5e3cdee851dde3f12af7ab1f365f441103a94f500e39e46e8313e9",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-139/case-139-matlab.json",
+      "container_sha256": "d31dac1085c736aa65b655cf0ab5dbc34ca0c6c8ee2105aba4cfb2473585e836",
+      "states": "case-139/case-139-matlab.json.states.mat",
+      "states_sha256": "977cf02615fe23d656df820f32f3974a6da190d8ef5717bea61a496615c46a81",
+      "count": 1000
+    },
+    {
+      "ordinal": 140,
+      "group_ordinal": 64,
+      "input_signature": "1f0020ccda5e3cdee851dde3f12af7ab1f365f441103a94f500e39e46e8313e9",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-140/case-140-matlab.json",
+      "container_sha256": "8b27bdd7c6df1c4c0e6e4126cc97f15ac50a21315a2e382113e0a01f0dc9d78e",
+      "states": "case-140/case-140-matlab.json.states.mat",
+      "states_sha256": "15a3c39de24362632c06fb39e6969dabc88b9a35043e2d0f5eb5a5598875b1d4",
+      "count": 1000
+    },
+    {
+      "ordinal": 141,
+      "group_ordinal": 64,
+      "input_signature": "1f0020ccda5e3cdee851dde3f12af7ab1f365f441103a94f500e39e46e8313e9",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-141/case-141-matlab.json",
+      "container_sha256": "8126a06d00a2a641d8520f43e391a0c3ff0323bf5ba6b5937c5de71fae62d81e",
+      "states": "case-141/case-141-matlab.json.states.mat",
+      "states_sha256": "885dac6b02d960217bf16360116645d8341f8393769e9f2fb06303ba64e798b3",
+      "count": 1000
+    },
+    {
+      "ordinal": 142,
+      "group_ordinal": 64,
+      "input_signature": "1f0020ccda5e3cdee851dde3f12af7ab1f365f441103a94f500e39e46e8313e9",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-142/case-142-matlab.json",
+      "container_sha256": "265440388541e9dceb8acdfb769a873982dd33a60fef0dd0171cee48dae2bcb9",
+      "states": "case-142/case-142-matlab.json.states.mat",
+      "states_sha256": "765216fd7f4578c97bbd8feeedaf93de4d2d8a592a5ce18cf38958374cf18901",
+      "count": 1000
+    },
+    {
+      "ordinal": 143,
+      "group_ordinal": 64,
+      "input_signature": "1f0020ccda5e3cdee851dde3f12af7ab1f365f441103a94f500e39e46e8313e9",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-143/case-143-matlab.json",
+      "container_sha256": "19b2439ce703446466aca1436ee84960ac64fdc670af1b51d99e039316607233",
+      "states": "case-143/case-143-matlab.json.states.mat",
+      "states_sha256": "00c5cba91cf90da2e26f6d18ecfa29c551806d234f590bd3d1bccf47725c91b6",
+      "count": 1000
+    },
+    {
+      "ordinal": 144,
+      "group_ordinal": 64,
+      "input_signature": "1f0020ccda5e3cdee851dde3f12af7ab1f365f441103a94f500e39e46e8313e9",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-144/case-144-matlab.json",
+      "container_sha256": "125605494c45047102a7d77423c0f34893c9c876ac7f3b03c15920f4d9f59a6c",
+      "states": "case-144/case-144-matlab.json.states.mat",
+      "states_sha256": "75ea5a5dff8e1836addbf3c25a9ad0f016cc5c667b32baa6d22ee69993ddd33c",
+      "count": 1000
+    },
+    {
+      "ordinal": 145,
+      "group_ordinal": 64,
+      "input_signature": "1f0020ccda5e3cdee851dde3f12af7ab1f365f441103a94f500e39e46e8313e9",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-145/case-145-matlab.json",
+      "container_sha256": "992afc449e26a878c8e2ee1f07d58fc2095e6558bb36c80baa258623db977a95",
+      "states": "case-145/case-145-matlab.json.states.mat",
+      "states_sha256": "b7698f2df90a8f425881c3049be82d17f400413e371a6dc380ce2da09727ecdf",
+      "count": 1000
+    },
+    {
+      "ordinal": 146,
+      "group_ordinal": 64,
+      "input_signature": "1f0020ccda5e3cdee851dde3f12af7ab1f365f441103a94f500e39e46e8313e9",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-146/case-146-matlab.json",
+      "container_sha256": "9f02d8292af75b5a81dc630014ba16020579944b78ec13df7a7d69d4a5c61258",
+      "states": "case-146/case-146-matlab.json.states.mat",
+      "states_sha256": "3eeae78ce894168e32940aa46a7f69c0d6669e794aaa8a9e255a412f47ee000f",
+      "count": 1000
+    },
+    {
+      "ordinal": 147,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-147/case-147-matlab.json",
+      "container_sha256": "2d7d57ab25092c77772c909dddd3c54384f6cc6db1cb89c7a789c61c7c72f206",
+      "states": "case-147/case-147-matlab.json.states.mat",
+      "states_sha256": "709331d23a18240e6ef1636aa2cb14f2c24ea178fc8542865a367cb2dddc99fa",
+      "count": 1000
+    },
+    {
+      "ordinal": 148,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-148/case-148-matlab.json",
+      "container_sha256": "747c58b0efc4e6e25cdb3f3fee2107cf719a3cbc18347c137719f75be5e0f47f",
+      "states": "case-148/case-148-matlab.json.states.mat",
+      "states_sha256": "520207f57c443c2d6b6acd233ca18b609831c8a3c260f84ccfde187487c447f3",
+      "count": 1000
+    },
+    {
+      "ordinal": 149,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-149/case-149-matlab.json",
+      "container_sha256": "c59c1717d44e8f2044506ae8bc820dc4a0b8358eb078fcba9dc98248540d6886",
+      "states": "case-149/case-149-matlab.json.states.mat",
+      "states_sha256": "a70596efbff9746f5b60715acc97a32275017fb6a458f25431df65242cdec971",
+      "count": 1000
+    },
+    {
+      "ordinal": 150,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-150/case-150-matlab.json",
+      "container_sha256": "1e9fec9d4b53ba148b13378d3537a20994ff7eba05d47ac71b5aedaf494bb8b0",
+      "states": "case-150/case-150-matlab.json.states.mat",
+      "states_sha256": "f9a9a69317303961a226a0f8136234eef9d0243adff36823557c7c45e9ca25f5",
+      "count": 1000
+    },
+    {
+      "ordinal": 151,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-151/case-151-matlab.json",
+      "container_sha256": "a5116b9464872002c0bacad3a9cfd7919242e66f403d690884f86c38f2b569e1",
+      "states": "case-151/case-151-matlab.json.states.mat",
+      "states_sha256": "a18d21c7286df735753107261ca653d6cab28e2c1601a913ff1db3edc66d5335",
+      "count": 1000
+    },
+    {
+      "ordinal": 152,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-152/case-152-matlab.json",
+      "container_sha256": "049f8faf4508658a53625a4973c55e12cd909922f1d632684e0f4893732858aa",
+      "states": "case-152/case-152-matlab.json.states.mat",
+      "states_sha256": "4d0c2f3763b275f9ab45764033837e05dd7396d5e86710c3e40e220658033e5c",
+      "count": 1000
+    },
+    {
+      "ordinal": 153,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-153/case-153-matlab.json",
+      "container_sha256": "8dff755568b9e9b8d311dfda359646a97bb29eb65a9415b97ffd8dd4265afdc4",
+      "states": "case-153/case-153-matlab.json.states.mat",
+      "states_sha256": "ae6e92dd2379ba88735c04e916fdd17e0a8d9079d430563e3310685ebaaa9b54",
+      "count": 1000
+    },
+    {
+      "ordinal": 154,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-154/case-154-matlab.json",
+      "container_sha256": "d18ad35cacdadb9ca5d02d69a201e6ce20f7e2e27b8c213753283e7785ce7967",
+      "states": "case-154/case-154-matlab.json.states.mat",
+      "states_sha256": "0550d58907f030af11a985ce530d832501af88871dc5d0150aa6e3c77b5ea9a0",
+      "count": 1000
+    },
+    {
+      "ordinal": 155,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-155/case-155-matlab.json",
+      "container_sha256": "99586c31138a3a5b2fc481511b5bd56859a1027afa19faffc8f134b1d03badea",
+      "states": "case-155/case-155-matlab.json.states.mat",
+      "states_sha256": "ca6701db42f7492a6d0f71854fcc03fba4502230c2f29dc9523923fac7a0f356",
+      "count": 1000
+    },
+    {
+      "ordinal": 156,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-156/case-156-matlab.json",
+      "container_sha256": "8e95821c937933575c93873241bee4b5b76b8cbfa008f311109ae2d3e65a1f90",
+      "states": "case-156/case-156-matlab.json.states.mat",
+      "states_sha256": "68f226e23bc3adc81b193b936dc405dacf69867c2e7bdde32f32766610c1abce",
+      "count": 1000
+    },
+    {
+      "ordinal": 157,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-157/case-157-matlab.json",
+      "container_sha256": "95ac482496d5aef603b61e1de58124735ae0d099448b9a941193b4d84c9fa0e1",
+      "states": "case-157/case-157-matlab.json.states.mat",
+      "states_sha256": "fc833bf89d984e45be81f657d00dfb93fbde827b87e251bd75cf256f8f244dde",
+      "count": 1000
+    },
+    {
+      "ordinal": 158,
+      "group_ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "container": "case-158/case-158-matlab.json",
+      "container_sha256": "9a40e3e6be2a845280d564ca7bc40f098e37eafb7cdbe4e8b1f7113533bcfc9a",
+      "states": "case-158/case-158-matlab.json.states.mat",
+      "states_sha256": "428667a1f180a2364c8e4150937e57b537fe48810adbecefe7768e6d791fc129",
+      "count": 1000
+    },
+    {
+      "ordinal": 159,
+      "group_ordinal": 65,
+      "input_signature": "ac4966cf83a822b27b3cb5b4b95dc25a236072c1b335b756fc67c607672cb857",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-159/case-159-matlab.json",
+      "container_sha256": "37af73d4f32338b954ec5b9362964b8c876c5c8504118a4974cc69a617555b87",
+      "states": "case-159/case-159-matlab.json.states.mat",
+      "states_sha256": "f62f7e9321523dd1108dad9c49262c294bcfbd1a7e3086d264b89ee9e8980b08",
+      "count": 1000
+    },
+    {
+      "ordinal": 160,
+      "group_ordinal": 65,
+      "input_signature": "ac4966cf83a822b27b3cb5b4b95dc25a236072c1b335b756fc67c607672cb857",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-160/case-160-matlab.json",
+      "container_sha256": "f753845d35b6ae50e0824c230f74bc5de41b227080a3ccf53eada1e7584c8d44",
+      "states": "case-160/case-160-matlab.json.states.mat",
+      "states_sha256": "3970286241ba5e87f1a63f4cc2cfd9000e5d77e9a3989afda9e058c514fe448d",
+      "count": 1000
+    },
+    {
+      "ordinal": 161,
+      "group_ordinal": 65,
+      "input_signature": "ac4966cf83a822b27b3cb5b4b95dc25a236072c1b335b756fc67c607672cb857",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-161/case-161-matlab.json",
+      "container_sha256": "1d2097612b15c8b3f15b3f74c3075ea38479492886cec79d2dc58f4e0d5ce261",
+      "states": "case-161/case-161-matlab.json.states.mat",
+      "states_sha256": "9e5dd9d074e861a4455b1f3e8161435a7f2f9eb930c5574cf72533f0c8c144ae",
+      "count": 1000
+    },
+    {
+      "ordinal": 162,
+      "group_ordinal": 65,
+      "input_signature": "ac4966cf83a822b27b3cb5b4b95dc25a236072c1b335b756fc67c607672cb857",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-162/case-162-matlab.json",
+      "container_sha256": "112743da372f7e98ca5fb08d5228ecfbfd069e5279de78505ec9c726f5fa3933",
+      "states": "case-162/case-162-matlab.json.states.mat",
+      "states_sha256": "aa8166169e698d669b22f29167ab4cb3c29e07b3ac1317fb0717d06f323844c7",
+      "count": 1000
+    },
+    {
+      "ordinal": 163,
+      "group_ordinal": 65,
+      "input_signature": "ac4966cf83a822b27b3cb5b4b95dc25a236072c1b335b756fc67c607672cb857",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-163/case-163-matlab.json",
+      "container_sha256": "d8dc6066e50ab32689dbf637a852b0f3a68f78c66cf2d0c9e8a1addda97cb10c",
+      "states": "case-163/case-163-matlab.json.states.mat",
+      "states_sha256": "08380ba20dbd26b285a119b2f27cee2bcbb7cc1f0ddbf68a4e10ce2c0943b9dd",
+      "count": 1000
+    },
+    {
+      "ordinal": 164,
+      "group_ordinal": 65,
+      "input_signature": "ac4966cf83a822b27b3cb5b4b95dc25a236072c1b335b756fc67c607672cb857",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-164/case-164-matlab.json",
+      "container_sha256": "282b530a45d3513bc8931950536d6298e1537496a3b5724429cf3a9e92df3ce8",
+      "states": "case-164/case-164-matlab.json.states.mat",
+      "states_sha256": "d4610bd8c786c1a0febc5fe5f351a2d837b5f8a11682a83b752b4243c3dfc192",
+      "count": 1000
+    },
+    {
+      "ordinal": 165,
+      "group_ordinal": 65,
+      "input_signature": "ac4966cf83a822b27b3cb5b4b95dc25a236072c1b335b756fc67c607672cb857",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-165/case-165-matlab.json",
+      "container_sha256": "09ad6b0e70cdd7201514a1200737a9cdee09bcff5dcffa00421772464c02b0b3",
+      "states": "case-165/case-165-matlab.json.states.mat",
+      "states_sha256": "a5d40b49d9544d818b908003a7b556209c6347b69cecd929396e1b10142fba5f",
+      "count": 1000
+    },
+    {
+      "ordinal": 166,
+      "group_ordinal": 65,
+      "input_signature": "ac4966cf83a822b27b3cb5b4b95dc25a236072c1b335b756fc67c607672cb857",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-166/case-166-matlab.json",
+      "container_sha256": "294bdc804a0fab6e61a7586d34fb5b592c601d5143add91a151728478d7a708e",
+      "states": "case-166/case-166-matlab.json.states.mat",
+      "states_sha256": "0ae5ca3a51e5a59e0a2419511dc69eb884cd0c23496f51262d6eb11d9d80c894",
+      "count": 1000
+    },
+    {
+      "ordinal": 167,
+      "group_ordinal": 65,
+      "input_signature": "ac4966cf83a822b27b3cb5b4b95dc25a236072c1b335b756fc67c607672cb857",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-167/case-167-matlab.json",
+      "container_sha256": "4f6c2becfd33a4d446693a8e6ddca412033095814e6b0f67498d96c6384064a9",
+      "states": "case-167/case-167-matlab.json.states.mat",
+      "states_sha256": "a603131be6c2d1c41757072358010bf2c26a974e7f32c4ff03860c5f9aae2ca2",
+      "count": 1000
+    },
+    {
+      "ordinal": 168,
+      "group_ordinal": 65,
+      "input_signature": "ac4966cf83a822b27b3cb5b4b95dc25a236072c1b335b756fc67c607672cb857",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-168/case-168-matlab.json",
+      "container_sha256": "595f915cbb214c16f88ae55ee8139f20f02e747671621bff69d774a48efd66dc",
+      "states": "case-168/case-168-matlab.json.states.mat",
+      "states_sha256": "60ba64f1407f84ccfd3099a094268c24982c9c91fdcbfc4b8948c98ad7f0cc63",
+      "count": 1000
+    },
+    {
+      "ordinal": 169,
+      "group_ordinal": 65,
+      "input_signature": "ac4966cf83a822b27b3cb5b4b95dc25a236072c1b335b756fc67c607672cb857",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-169/case-169-matlab.json",
+      "container_sha256": "cc91c33c7ac05fb230664a015fb0c05e9bf446e65e9f23799364ab1d9f7633a4",
+      "states": "case-169/case-169-matlab.json.states.mat",
+      "states_sha256": "620269e140c4ff3190d90d46f1dccfdac54ca19653f9e4db7c4587146950075c",
+      "count": 1000
+    },
+    {
+      "ordinal": 170,
+      "group_ordinal": 65,
+      "input_signature": "ac4966cf83a822b27b3cb5b4b95dc25a236072c1b335b756fc67c607672cb857",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-170/case-170-matlab.json",
+      "container_sha256": "e2d657bb2907710f806d0dc82c05f0a2b681cebd186d77a392c89ab140e321e7",
+      "states": "case-170/case-170-matlab.json.states.mat",
+      "states_sha256": "19ebf43cef1b8eab422d351855dbc3341ef7517d12c615fdbc3b5ad7baa08939",
+      "count": 1000
+    },
+    {
+      "ordinal": 171,
+      "group_ordinal": 66,
+      "input_signature": "e25277549662b6228d20f8764146607201daf5da2c2d71cdd6845eb4c3229924",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-171/case-171-matlab.json",
+      "container_sha256": "dcaece6f974c54686a7b9f1ee075f32b56800866dd3e24e42e8d7dec056c54fd",
+      "states": "case-171/case-171-matlab.json.states.mat",
+      "states_sha256": "136ea327cde6f31dd570839ad50961d3ac96788f0acf5a3c5489765d304f78bc",
+      "count": 1000
+    },
+    {
+      "ordinal": 172,
+      "group_ordinal": 66,
+      "input_signature": "e25277549662b6228d20f8764146607201daf5da2c2d71cdd6845eb4c3229924",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-172/case-172-matlab.json",
+      "container_sha256": "b84038463e4c6b0f6f951d881f55e2e044b1cd3d732c148e999242a8c77a90a9",
+      "states": "case-172/case-172-matlab.json.states.mat",
+      "states_sha256": "d918d92e99d7bac646f6906fadb6b6a6e984fc7922dab7cb04116fd23717e9d2",
+      "count": 1000
+    },
+    {
+      "ordinal": 173,
+      "group_ordinal": 66,
+      "input_signature": "e25277549662b6228d20f8764146607201daf5da2c2d71cdd6845eb4c3229924",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-173/case-173-matlab.json",
+      "container_sha256": "4e0ebcd7892b1a3927f1abace36a2aad4b848a549567a2aa10b73d3ff4dfc88d",
+      "states": "case-173/case-173-matlab.json.states.mat",
+      "states_sha256": "aa36c9a1f168932bb4e4540783e06531a0c359a45435ee3213679a736f71446a",
+      "count": 1000
+    },
+    {
+      "ordinal": 174,
+      "group_ordinal": 66,
+      "input_signature": "e25277549662b6228d20f8764146607201daf5da2c2d71cdd6845eb4c3229924",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-174/case-174-matlab.json",
+      "container_sha256": "0c767fce382d996a0237f3c10ffffc74c69072206f9d940bcf988dd2b82a9dab",
+      "states": "case-174/case-174-matlab.json.states.mat",
+      "states_sha256": "084fd0c109782c17b666b121c08335148cf76359584802e129f2757ff73c5759",
+      "count": 1000
+    },
+    {
+      "ordinal": 175,
+      "group_ordinal": 66,
+      "input_signature": "e25277549662b6228d20f8764146607201daf5da2c2d71cdd6845eb4c3229924",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-175/case-175-matlab.json",
+      "container_sha256": "3009d4c93a8b3b11288dc9df8ebd4461245716efa3f0e498acc230b87cb447c3",
+      "states": "case-175/case-175-matlab.json.states.mat",
+      "states_sha256": "c0048c591fafb5877aef9fd1fc00770f8aca888ce3f19740317ca01b7837116e",
+      "count": 1000
+    },
+    {
+      "ordinal": 176,
+      "group_ordinal": 66,
+      "input_signature": "e25277549662b6228d20f8764146607201daf5da2c2d71cdd6845eb4c3229924",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-176/case-176-matlab.json",
+      "container_sha256": "fcdb2bbbca679a102c8513a42cc02075334a9c467e5f076e2b0e97fbf8ab6473",
+      "states": "case-176/case-176-matlab.json.states.mat",
+      "states_sha256": "4ebd15efa370c84aa8ccc763b2eb93aecb5b22ba27623ca759d4606fadacc36a",
+      "count": 1000
+    },
+    {
+      "ordinal": 177,
+      "group_ordinal": 66,
+      "input_signature": "e25277549662b6228d20f8764146607201daf5da2c2d71cdd6845eb4c3229924",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-177/case-177-matlab.json",
+      "container_sha256": "da1a1b7f5b3c6c63fa5e4b6aa05081671da892286ca5d36ccc5189880cdfcbdb",
+      "states": "case-177/case-177-matlab.json.states.mat",
+      "states_sha256": "1dbd5d18b43fb3ca5429f9a24e567e0cd0fc9dd7225eb489d510b2e49c5d10da",
+      "count": 1000
+    },
+    {
+      "ordinal": 178,
+      "group_ordinal": 66,
+      "input_signature": "e25277549662b6228d20f8764146607201daf5da2c2d71cdd6845eb4c3229924",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-178/case-178-matlab.json",
+      "container_sha256": "3df269f62a15609c54fc0ec00fefbddbf8382eadafe818cc03ae0d88bf25f4b1",
+      "states": "case-178/case-178-matlab.json.states.mat",
+      "states_sha256": "8dc09310cd5dc5a0af073728ba8abd16a8ff9ca7473895c57788b4a5b93389a3",
+      "count": 1000
+    },
+    {
+      "ordinal": 179,
+      "group_ordinal": 66,
+      "input_signature": "e25277549662b6228d20f8764146607201daf5da2c2d71cdd6845eb4c3229924",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-179/case-179-matlab.json",
+      "container_sha256": "901479a32eae97392e9f042bf855f028a1cdbaa5a5c06f7befec75d088e1686b",
+      "states": "case-179/case-179-matlab.json.states.mat",
+      "states_sha256": "219d1f1c0ebe5ee66fc63f50e2942c35a16a78c1f3a7816df4b1809326bda5f9",
+      "count": 1000
+    },
+    {
+      "ordinal": 180,
+      "group_ordinal": 66,
+      "input_signature": "e25277549662b6228d20f8764146607201daf5da2c2d71cdd6845eb4c3229924",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-180/case-180-matlab.json",
+      "container_sha256": "d8c9498db6510a345a4ac33a85548d495f2b0e1a876ee88c447b12966ef44bb2",
+      "states": "case-180/case-180-matlab.json.states.mat",
+      "states_sha256": "8fd974679ab8181839814043b93b2a0c245a5726fa57eb49765497a447ddcb1e",
+      "count": 1000
+    },
+    {
+      "ordinal": 181,
+      "group_ordinal": 66,
+      "input_signature": "e25277549662b6228d20f8764146607201daf5da2c2d71cdd6845eb4c3229924",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-181/case-181-matlab.json",
+      "container_sha256": "587185aea9f9f0847d035ca64d40749c93f646850480c8d8442a2c64d75d12ad",
+      "states": "case-181/case-181-matlab.json.states.mat",
+      "states_sha256": "d609efca3b6ec5d46b125b9ea6abc6a4cb99da085470aff016bd87bbe44f2b45",
+      "count": 1000
+    },
+    {
+      "ordinal": 182,
+      "group_ordinal": 66,
+      "input_signature": "e25277549662b6228d20f8764146607201daf5da2c2d71cdd6845eb4c3229924",
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "container": "case-182/case-182-matlab.json",
+      "container_sha256": "25470c18934da4fdd2b5e3e0a1d7bf35d90e05ceb58980056d318063b54acce9",
+      "states": "case-182/case-182-matlab.json.states.mat",
+      "states_sha256": "2ea40bd4572fac5d3b37ea2475f3f09fa89f1f085091a1d51c4fe81162640aad",
+      "count": 1000
+    }
+  ],
+  "groups": [
+    {
+      "ordinal": 0,
+      "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        52,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158
+      ],
+      "representative_case": 0,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "1b12ac9d28223d652bdd753607cdb2488c7fcf9e12f4d0d33b6d0961fd39d8f1",
+      "original_independent_report": "references/group-000/original-independent-summary.json",
+      "original_native_export_index": "references/group-000/original-native-export-index.json",
+      "original_sample_moments": "references/group-000/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 1,
+      "input_signature": "f734566139c75d0e0881ba7f9f7e50ae85cf6d5de91fbd62847c21aaee027d20",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        61,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122
+      ],
+      "representative_case": 11,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "a195575bf19c6ab1ef7c33ed7f4b1db2b90c5d227ac2f66dc43ce7872dcfc592",
+      "original_independent_report": "references/group-001/original-independent-summary.json",
+      "original_native_export_index": "references/group-001/original-native-export-index.json",
+      "original_sample_moments": "references/group-001/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 2,
+      "input_signature": "4073c65343b9006c0bc12ccb9024f4514e3c785bfb918f0067ba64fd00c77db4",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 5
+      },
+      "case_ordinals": [
+        48
+      ],
+      "representative_case": 48,
+      "raw_primitive_bytes": 9472000,
+      "raw_primitive_sha256": "0059b5b1aaaf9cef3f76d4c61da7c8c2ddffd83d4a618e4ac9b114b52802f36c",
+      "original_independent_report": "references/group-002/original-independent-summary.json",
+      "original_native_export_index": "references/group-002/original-native-export-index.json",
+      "original_sample_moments": "references/group-002/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 3,
+      "input_signature": "3d1c550264326403ba115ca76e58e46b938414511fb1322730b6b5cfb1dfa3e5",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 10
+      },
+      "case_ordinals": [
+        49
+      ],
+      "representative_case": 49,
+      "raw_primitive_bytes": 17312000,
+      "raw_primitive_sha256": "2ac5cc60b9ae02dc52bacd61779fb142e3fb80f0ce6d72fd1d61fea71f31f1f1",
+      "original_independent_report": "references/group-003/original-independent-summary.json",
+      "original_native_export_index": "references/group-003/original-native-export-index.json",
+      "original_sample_moments": "references/group-003/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 4,
+      "input_signature": "223fe7646f52de4a4ab78ba2068b0699f817940b3c6af763d0b6f523248e6c67",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 15
+      },
+      "case_ordinals": [
+        50
+      ],
+      "representative_case": 50,
+      "raw_primitive_bytes": 25152000,
+      "raw_primitive_sha256": "f7506b8fc190e17ba68f81478925778f8fcf7bfa4580787ae9be19a056832843",
+      "original_independent_report": "references/group-004/original-independent-summary.json",
+      "original_native_export_index": "references/group-004/original-native-export-index.json",
+      "original_sample_moments": "references/group-004/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 5,
+      "input_signature": "359bf008c5e649cc5b9f9b1bcf5c82ecb25beb80ae6415bc967bf98172d5e684",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 20
+      },
+      "case_ordinals": [
+        51
+      ],
+      "representative_case": 51,
+      "raw_primitive_bytes": 32992000,
+      "raw_primitive_sha256": "7c883ba57eb5d993b1528a43f973028c1f612659fa64386258f4841e4a141c46",
+      "original_independent_report": "references/group-005/original-independent-summary.json",
+      "original_native_export_index": "references/group-005/original-native-export-index.json",
+      "original_sample_moments": "references/group-005/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 6,
+      "input_signature": "0b5a5e0e4c85e04b0fdda15a1ce735cf42eee0f0a571d933541b579a07f42de9",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 30
+      },
+      "case_ordinals": [
+        53
+      ],
+      "representative_case": 53,
+      "raw_primitive_bytes": 48672000,
+      "raw_primitive_sha256": "bf47f5f28bbe41774a18e93f86636c9445af107d00a816de28bfce71a9121808",
+      "original_independent_report": "references/group-006/original-independent-summary.json",
+      "original_native_export_index": "references/group-006/original-native-export-index.json",
+      "original_sample_moments": "references/group-006/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 7,
+      "input_signature": "b915ac5f9a408a6f2680e57cec9292f687c84ecc1e79cd794816c9097c4eb86e",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 35
+      },
+      "case_ordinals": [
+        54
+      ],
+      "representative_case": 54,
+      "raw_primitive_bytes": 56512000,
+      "raw_primitive_sha256": "55eb95a1571b478ab6cf243ff8b75c0d24e24da30fb9b85a016db359713de899",
+      "original_independent_report": "references/group-007/original-independent-summary.json",
+      "original_native_export_index": "references/group-007/original-native-export-index.json",
+      "original_sample_moments": "references/group-007/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 8,
+      "input_signature": "64092254c3bb9be193d050e69f9dd29008f304a00840b7958ef411fb844b0056",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 40
+      },
+      "case_ordinals": [
+        55
+      ],
+      "representative_case": 55,
+      "raw_primitive_bytes": 64352000,
+      "raw_primitive_sha256": "5f8ea390bff21582780c06dece6515e2eeafddadbe56b627fcd0d83ce861c450",
+      "original_independent_report": "references/group-008/original-independent-summary.json",
+      "original_native_export_index": "references/group-008/original-native-export-index.json",
+      "original_sample_moments": "references/group-008/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 9,
+      "input_signature": "3fd9c72a1c8b46eb45e91959bf5c48b138c83447729766682bc9aae1706012fb",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 45
+      },
+      "case_ordinals": [
+        56
+      ],
+      "representative_case": 56,
+      "raw_primitive_bytes": 72192000,
+      "raw_primitive_sha256": "4ca8f51ac3f0386a74f7567fa546fe1a4ca054fabd1f563a6498da5e98e5827a",
+      "original_independent_report": "references/group-009/original-independent-summary.json",
+      "original_native_export_index": "references/group-009/original-native-export-index.json",
+      "original_sample_moments": "references/group-009/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 10,
+      "input_signature": "e1dbd62ca8e117cdb4007b7fd85dabb03bb25cfa93b6814ea4cb1ea7c9299f33",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 5
+      },
+      "case_ordinals": [
+        57
+      ],
+      "representative_case": 57,
+      "raw_primitive_bytes": 9472000,
+      "raw_primitive_sha256": "9a8c80f7c621cd981e932282641152cd79243a6ffe4471854a8c9ef700d75cf4",
+      "original_independent_report": "references/group-010/original-independent-summary.json",
+      "original_native_export_index": "references/group-010/original-native-export-index.json",
+      "original_sample_moments": "references/group-010/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 11,
+      "input_signature": "eb65bd613b54e035789e29436c02edb8f622694656a8ce59855792b303bfb222",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 10
+      },
+      "case_ordinals": [
+        58
+      ],
+      "representative_case": 58,
+      "raw_primitive_bytes": 17312000,
+      "raw_primitive_sha256": "96bf893e3e82679048567b3216de22bc83a310462bbac0f0a59c5718f5f759d4",
+      "original_independent_report": "references/group-011/original-independent-summary.json",
+      "original_native_export_index": "references/group-011/original-native-export-index.json",
+      "original_sample_moments": "references/group-011/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 12,
+      "input_signature": "d64d9a622992745d802695e6f66006e10312146d85938baf4225ae88427f360d",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 15
+      },
+      "case_ordinals": [
+        59
+      ],
+      "representative_case": 59,
+      "raw_primitive_bytes": 25152000,
+      "raw_primitive_sha256": "97f07e75243a9ebb1e0d5a511d19603e865f2339f9dbc1ed06e95b10317e0847",
+      "original_independent_report": "references/group-012/original-independent-summary.json",
+      "original_native_export_index": "references/group-012/original-native-export-index.json",
+      "original_sample_moments": "references/group-012/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 13,
+      "input_signature": "d64eaa659d292437af5eb3f150afe18e9c0225f7dc437108f954db772803bdd1",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 20
+      },
+      "case_ordinals": [
+        60
+      ],
+      "representative_case": 60,
+      "raw_primitive_bytes": 32992000,
+      "raw_primitive_sha256": "8ebb48d501dbc4f94cfcfe3fbb8984b7ae0c3ccf5e2431ff809627e08d5f0fa9",
+      "original_independent_report": "references/group-013/original-independent-summary.json",
+      "original_native_export_index": "references/group-013/original-native-export-index.json",
+      "original_sample_moments": "references/group-013/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 14,
+      "input_signature": "8846554aa73eb636b3eaf54d2ccbffc6bff5ca82510ce1326c1026313d8cc638",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 30
+      },
+      "case_ordinals": [
+        62
+      ],
+      "representative_case": 62,
+      "raw_primitive_bytes": 48672000,
+      "raw_primitive_sha256": "e324afbb3bae910702509a94f34ac9aad87cd6b2fd8f153ed7b9f558cdb40d03",
+      "original_independent_report": "references/group-014/original-independent-summary.json",
+      "original_native_export_index": "references/group-014/original-native-export-index.json",
+      "original_sample_moments": "references/group-014/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 15,
+      "input_signature": "56572cb26cf0c4f3a5ae4c96d6ed92cb70c2d88123a400f0c5ccff3579c94820",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 35
+      },
+      "case_ordinals": [
+        63
+      ],
+      "representative_case": 63,
+      "raw_primitive_bytes": 56512000,
+      "raw_primitive_sha256": "d665768f114122ac7a78261f5727676eec5e2e6ecce815deca02f375023bb394",
+      "original_independent_report": "references/group-015/original-independent-summary.json",
+      "original_native_export_index": "references/group-015/original-native-export-index.json",
+      "original_sample_moments": "references/group-015/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 16,
+      "input_signature": "f6559e72d400a89594f2abe289875ca9cc689639b0c52ea7b0f46d4d49e54c08",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 40
+      },
+      "case_ordinals": [
+        64
+      ],
+      "representative_case": 64,
+      "raw_primitive_bytes": 64352000,
+      "raw_primitive_sha256": "bf803fb3502517866e1e701589a306b013cc0b83a9fd0eea55b7ccae53eaca04",
+      "original_independent_report": "references/group-016/original-independent-summary.json",
+      "original_native_export_index": "references/group-016/original-native-export-index.json",
+      "original_sample_moments": "references/group-016/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 17,
+      "input_signature": "4450d54966a91d63209174b69b19ff90e9b8b7cb2ac865372dbd154fc5220c38",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 45
+      },
+      "case_ordinals": [
+        65
+      ],
+      "representative_case": 65,
+      "raw_primitive_bytes": 72192000,
+      "raw_primitive_sha256": "1837ff11d0619eb9e64eef93dadb7e9d61c34f37d7c0e09e0611f624b84522db",
+      "original_independent_report": "references/group-017/original-independent-summary.json",
+      "original_native_export_index": "references/group-017/original-native-export-index.json",
+      "original_sample_moments": "references/group-017/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 18,
+      "input_signature": "bd97958096ffffbd18ba67966996c2c2528a6b3c25e6f4731927996ba63df0d1",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        66
+      ],
+      "representative_case": 66,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "fc599079b828ea4666904d7f7324533faa6132d5d7e12daefac5206cbd5835ec",
+      "original_independent_report": "references/group-018/original-independent-summary.json",
+      "original_native_export_index": "references/group-018/original-native-export-index.json",
+      "original_sample_moments": "references/group-018/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 19,
+      "input_signature": "d2116d2f7020ad216577ff4aed24ad9f0fa1c9e5d6b8055f5818b96a35a49b18",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        67
+      ],
+      "representative_case": 67,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "8be6709b606ae82398d64fdee16ffba20ab3ab576df48f9b6fe89609dc700761",
+      "original_independent_report": "references/group-019/original-independent-summary.json",
+      "original_native_export_index": "references/group-019/original-native-export-index.json",
+      "original_sample_moments": "references/group-019/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 20,
+      "input_signature": "9c61911d7a9d5f9c957e68b63abdbf798048425038494ba4e0101c4189e81897",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        68
+      ],
+      "representative_case": 68,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "857dce98a499291f03bb60f10a77b464b168f144d010ec3b3f26ca7d81c6067d",
+      "original_independent_report": "references/group-020/original-independent-summary.json",
+      "original_native_export_index": "references/group-020/original-native-export-index.json",
+      "original_sample_moments": "references/group-020/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 21,
+      "input_signature": "d5f0ccf2142629ba9186d794c694dd8c7c1f3dea3f9cf35a04b9315a25b68860",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        69
+      ],
+      "representative_case": 69,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "7be47e3914dcb64ffa61afd848859a8abebdeca32b5f4b64bfc64a2e2fa6a111",
+      "original_independent_report": "references/group-021/original-independent-summary.json",
+      "original_native_export_index": "references/group-021/original-native-export-index.json",
+      "original_sample_moments": "references/group-021/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 22,
+      "input_signature": "8c20f636eabc63d6c049ac50e8f583551ad645dc032b4c862779c8845c47434f",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        70
+      ],
+      "representative_case": 70,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "246343089edbf1528c8ec2018f842357d6078fc9541be64cda2a139801498d73",
+      "original_independent_report": "references/group-022/original-independent-summary.json",
+      "original_native_export_index": "references/group-022/original-native-export-index.json",
+      "original_sample_moments": "references/group-022/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 23,
+      "input_signature": "44fe5e40a76927bc70e94df95f507cd970898d523b5436d84993451337080842",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        71
+      ],
+      "representative_case": 71,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "a3dba62798593d3028cccee8f1a2f43197a461108a9e2d7eb24403bedc98aeb7",
+      "original_independent_report": "references/group-023/original-independent-summary.json",
+      "original_native_export_index": "references/group-023/original-native-export-index.json",
+      "original_sample_moments": "references/group-023/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 24,
+      "input_signature": "6e87440acf64a11fa4d45c41a6d665858ad9c00bbadf0df005ddcc5f0cffb49c",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        72
+      ],
+      "representative_case": 72,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "78636468dbbc0ed42b4015ce0e2b44a58aa1963b99e51a211da087049075feac",
+      "original_independent_report": "references/group-024/original-independent-summary.json",
+      "original_native_export_index": "references/group-024/original-native-export-index.json",
+      "original_sample_moments": "references/group-024/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 25,
+      "input_signature": "44ac3b6d53cd6c141f475f4200e9d76b4a2b47579eaec4e8f119893b7d172c45",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        73
+      ],
+      "representative_case": 73,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "6fb20ce4e0f44f61ff6badc3e85fb39a86c34666bee5c85177f4c15fa221d756",
+      "original_independent_report": "references/group-025/original-independent-summary.json",
+      "original_native_export_index": "references/group-025/original-native-export-index.json",
+      "original_sample_moments": "references/group-025/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 26,
+      "input_signature": "325951ff9117f79639c2b78cb79cb878649583b6ac5f96661f9b09a0e6366af4",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        74
+      ],
+      "representative_case": 74,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "b1dbba38e12ea6ef362e5963e260755d0f25e83ec13349777b3247228976057e",
+      "original_independent_report": "references/group-026/original-independent-summary.json",
+      "original_native_export_index": "references/group-026/original-native-export-index.json",
+      "original_sample_moments": "references/group-026/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 27,
+      "input_signature": "090efb59d6c0b6748e4bdb32e9464704498c2e37c5b6eb0cf56fd9f37f1d8938",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        75
+      ],
+      "representative_case": 75,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "ed7eee08656f30fe24d39f2463ddeb4521b5f46919f1b7abd9980809cebd1b0d",
+      "original_independent_report": "references/group-027/original-independent-summary.json",
+      "original_native_export_index": "references/group-027/original-native-export-index.json",
+      "original_sample_moments": "references/group-027/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 28,
+      "input_signature": "8b35013a029b7b4aa7c527888273562d75b59c9b8893cac6b8286dbff129c58c",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        76
+      ],
+      "representative_case": 76,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "514f4ba4502ca05a6c987bb5ba02dfde7346a5c1e2e7eceef89218a2456f09ef",
+      "original_independent_report": "references/group-028/original-independent-summary.json",
+      "original_native_export_index": "references/group-028/original-native-export-index.json",
+      "original_sample_moments": "references/group-028/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 29,
+      "input_signature": "ce71973a9d683760ed82b09d6853d2fce74778c2348cb7784e4a62472720fb4a",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        77
+      ],
+      "representative_case": 77,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "7ab6f6e660b61f6b53a129b322fbf95d97587128b77a3416ee60726b16ddcbca",
+      "original_independent_report": "references/group-029/original-independent-summary.json",
+      "original_native_export_index": "references/group-029/original-native-export-index.json",
+      "original_sample_moments": "references/group-029/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 30,
+      "input_signature": "092270851f8533ebdcdef381d7893079094cb898459cd333ce1e429c3588b65d",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        78
+      ],
+      "representative_case": 78,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "61128cf52b3512597309929d41de03473c22483f27f1e330922e161b43742827",
+      "original_independent_report": "references/group-030/original-independent-summary.json",
+      "original_native_export_index": "references/group-030/original-native-export-index.json",
+      "original_sample_moments": "references/group-030/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 31,
+      "input_signature": "81111c330cf3ec0e89439807df339fcb17970e410ca879790300b9a739bc8cf5",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        79
+      ],
+      "representative_case": 79,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "16ecc03e4ff12f245555ec36d84ef0cfeb9efec7c08fc1726b2e3e05b24ddee0",
+      "original_independent_report": "references/group-031/original-independent-summary.json",
+      "original_native_export_index": "references/group-031/original-native-export-index.json",
+      "original_sample_moments": "references/group-031/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 32,
+      "input_signature": "1ad01d7ba2dd8b61160a83b31317123cd9db40c891234c793a8bea76811f394d",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        80
+      ],
+      "representative_case": 80,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "5bff0e59efb479ec38e1802a10fef990a055d9a996ca38789a4ccd0b0044245d",
+      "original_independent_report": "references/group-032/original-independent-summary.json",
+      "original_native_export_index": "references/group-032/original-native-export-index.json",
+      "original_sample_moments": "references/group-032/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 33,
+      "input_signature": "a94d86a107e612d6b8e2bf750715d8b1dbe17f119c2425aa1dc1f13f9bcdd472",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        81
+      ],
+      "representative_case": 81,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "706c6f0f0793aa8caa916f791b85b94849684bc39241c2743692936fbde0ced2",
+      "original_independent_report": "references/group-033/original-independent-summary.json",
+      "original_native_export_index": "references/group-033/original-native-export-index.json",
+      "original_sample_moments": "references/group-033/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 34,
+      "input_signature": "d301f45ad72d4f39f912da41c4744e7813f427167639009c21c2f5042836137f",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        82
+      ],
+      "representative_case": 82,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "58e5f73f4046b16d63ccc05241977ec5580a6fd1836fa58ee81e940786a8a548",
+      "original_independent_report": "references/group-034/original-independent-summary.json",
+      "original_native_export_index": "references/group-034/original-native-export-index.json",
+      "original_sample_moments": "references/group-034/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 35,
+      "input_signature": "309377e220d3b7dd197c3a892b78e1721e8d28b5b53bed5de143f2fd3a84fc11",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        83
+      ],
+      "representative_case": 83,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "ad569e7e9d96f754f4283567eb93d7fd63a9e4d118d2c3e9cb37bc8271534c68",
+      "original_independent_report": "references/group-035/original-independent-summary.json",
+      "original_native_export_index": "references/group-035/original-native-export-index.json",
+      "original_sample_moments": "references/group-035/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 36,
+      "input_signature": "e23d20d1c796b7995d2c81599794a642c52f6bfe621f0164ab7aed60c4b2dd2c",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        84
+      ],
+      "representative_case": 84,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "7e59d56835e06e2d0f600a77c079b463cc8e5de77ac64fcbd6ac4c000438bec8",
+      "original_independent_report": "references/group-036/original-independent-summary.json",
+      "original_native_export_index": "references/group-036/original-native-export-index.json",
+      "original_sample_moments": "references/group-036/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 37,
+      "input_signature": "c7f4b8e9a4a2329cf69f65251d2fe9fd60aaf38dd3ce9c0a8b08b9c82acc8127",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        85
+      ],
+      "representative_case": 85,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "7fa130c80f9a8f919a0ee87ae0053d0f44e3ee4e67cd750c62ddbfdc7fdeee69",
+      "original_independent_report": "references/group-037/original-independent-summary.json",
+      "original_native_export_index": "references/group-037/original-native-export-index.json",
+      "original_sample_moments": "references/group-037/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 38,
+      "input_signature": "312df6fc3f7d89f8c591cebd82ed9548e13ffed6e6c69d0fe87ba3af4bc4210b",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        86
+      ],
+      "representative_case": 86,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "b264b0d428c3c707b59bf5bcb81706260fdbf28b8d4ace955229e3ffae82d0cc",
+      "original_independent_report": "references/group-038/original-independent-summary.json",
+      "original_native_export_index": "references/group-038/original-native-export-index.json",
+      "original_sample_moments": "references/group-038/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 39,
+      "input_signature": "299965f8213df7fba985128ad991b62317ce7b89dc18f6f34d6c892c54a004fe",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        87
+      ],
+      "representative_case": 87,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "4f26dd5e07a59938067924bedb14062b2627bc63c48f0b417666186f0a1c0f3c",
+      "original_independent_report": "references/group-039/original-independent-summary.json",
+      "original_native_export_index": "references/group-039/original-native-export-index.json",
+      "original_sample_moments": "references/group-039/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 40,
+      "input_signature": "af7d18a3813155f97704df85b225f94fb18b7e25ca33c7c3eb159389d2fa8f9c",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        88
+      ],
+      "representative_case": 88,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "53dcc7b4659eacb7c5a084ed8bd5fd60abc98cab080cc1e35a1f4072a33c1bf9",
+      "original_independent_report": "references/group-040/original-independent-summary.json",
+      "original_native_export_index": "references/group-040/original-native-export-index.json",
+      "original_sample_moments": "references/group-040/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 41,
+      "input_signature": "adc2905046c19f8b8b379325cbcc0f8c538a763ac4db3ce8414fa89010a434dd",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        89
+      ],
+      "representative_case": 89,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "68ade43a0084a83006d98936faafb08c1582c608d8ea6291ba8397d97c79ea43",
+      "original_independent_report": "references/group-041/original-independent-summary.json",
+      "original_native_export_index": "references/group-041/original-native-export-index.json",
+      "original_sample_moments": "references/group-041/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 42,
+      "input_signature": "e965f57ca62b093c66a64b1af17e7e553a5916d4e72d06e5946c318aeb85efbb",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        90
+      ],
+      "representative_case": 90,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "ffa60aac717c06ece01c9bc6231ef3793d9f01ac36a6f62b6599d4e48081b1b6",
+      "original_independent_report": "references/group-042/original-independent-summary.json",
+      "original_native_export_index": "references/group-042/original-native-export-index.json",
+      "original_sample_moments": "references/group-042/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 43,
+      "input_signature": "03af6cfb1db6849134232dd6180258c0c18025963e8c3681ebb172a0b498dcfc",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        91
+      ],
+      "representative_case": 91,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "8d6e90a7517f3e7ba4e151394c29250a082d7d0a6e1f5ca474fa5ffb0c5396e7",
+      "original_independent_report": "references/group-043/original-independent-summary.json",
+      "original_native_export_index": "references/group-043/original-native-export-index.json",
+      "original_sample_moments": "references/group-043/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 44,
+      "input_signature": "7da057bbdef9140b4763f4dc7dcf8c9a37413ebbac75f9f8e610433d9670af9a",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        92
+      ],
+      "representative_case": 92,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "edd1b244e049be55b14b69c17aa7c90e1ca67e2cce3f3f5a72363a3003a3690a",
+      "original_independent_report": "references/group-044/original-independent-summary.json",
+      "original_native_export_index": "references/group-044/original-native-export-index.json",
+      "original_sample_moments": "references/group-044/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 45,
+      "input_signature": "9253cce30b000894aa8c79e8bd2e128ce7f94860e01397ca8d709d8ee7bad8b1",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        93
+      ],
+      "representative_case": 93,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "f9b1713c9efeafb12f06671717a0e07bf6fe2110bdba39f4cf36c121fe2108f6",
+      "original_independent_report": "references/group-045/original-independent-summary.json",
+      "original_native_export_index": "references/group-045/original-native-export-index.json",
+      "original_sample_moments": "references/group-045/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 46,
+      "input_signature": "ce347612e29301f96cff02d3e1caf3f154703d650851ff24feaedea4459256dd",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        94
+      ],
+      "representative_case": 94,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "33f07c9ecceda9e3da4a2ffb4e62947e01242bf0513b9ba6f594b18b50cc0510",
+      "original_independent_report": "references/group-046/original-independent-summary.json",
+      "original_native_export_index": "references/group-046/original-native-export-index.json",
+      "original_sample_moments": "references/group-046/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 47,
+      "input_signature": "f2cc5cb54b8f6df4017aec7269bc7ef332690b41f9547f8addabeccd47819c4b",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        95
+      ],
+      "representative_case": 95,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "710bab15030d274261d7c28e99eac5dab6d3662d55ae62a0ac72c4b73714b70c",
+      "original_independent_report": "references/group-047/original-independent-summary.json",
+      "original_native_export_index": "references/group-047/original-native-export-index.json",
+      "original_sample_moments": "references/group-047/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 48,
+      "input_signature": "de1fe76cb9471ddbc5977d16bc447fa509cffbb32b5c74278c01db24a76dfc69",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        96
+      ],
+      "representative_case": 96,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "2c23531100310e821f2626484421fceabf106ee3ff1df29ef98a2bffbe1cd04a",
+      "original_independent_report": "references/group-048/original-independent-summary.json",
+      "original_native_export_index": "references/group-048/original-native-export-index.json",
+      "original_sample_moments": "references/group-048/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 49,
+      "input_signature": "41fc46f28b3747ddbeeb319861e51f3690c19707d0717a832271238a2768f5d1",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        97
+      ],
+      "representative_case": 97,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "7a0d9db5b3a962625e19cc08b3ba73f2ba9a472ea3904e1f9a646c536e8f4ebf",
+      "original_independent_report": "references/group-049/original-independent-summary.json",
+      "original_native_export_index": "references/group-049/original-native-export-index.json",
+      "original_sample_moments": "references/group-049/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 50,
+      "input_signature": "087c756bfcf5925718a51774315ac408c2be61f6457756c9682c28e73c4a788d",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        98
+      ],
+      "representative_case": 98,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "71f322dd51e68ea3727c25bf9872244c984629353c24b04cb7423a10e21ac796",
+      "original_independent_report": "references/group-050/original-independent-summary.json",
+      "original_native_export_index": "references/group-050/original-native-export-index.json",
+      "original_sample_moments": "references/group-050/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 51,
+      "input_signature": "5534054abe938fa341917896215f0ef2beba9fd4405ac5fc58b2e12cebd308d6",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        99
+      ],
+      "representative_case": 99,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "790692d27f64814210d019b89a801e631c15d4ff524b615233f434ccffa1ee72",
+      "original_independent_report": "references/group-051/original-independent-summary.json",
+      "original_native_export_index": "references/group-051/original-native-export-index.json",
+      "original_sample_moments": "references/group-051/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 52,
+      "input_signature": "efa131ec4891cdfde35bfb8e98e132966995212201a3f9c08b44495dd9da86ff",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        100
+      ],
+      "representative_case": 100,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "f2c114328bf83b2db5ec42e1b3719fc475f0df64d02d5a0f91c84a8a8d8451dc",
+      "original_independent_report": "references/group-052/original-independent-summary.json",
+      "original_native_export_index": "references/group-052/original-native-export-index.json",
+      "original_sample_moments": "references/group-052/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 53,
+      "input_signature": "6ca18ebcd8e09fed5520c69e7bf32d04dd1c2a097ccb340e51ff3f4fc53cc788",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        101
+      ],
+      "representative_case": 101,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "b67fe74c94ffd530b0685acaad73e258def8030ef69a661142d9dff6d12d360a",
+      "original_independent_report": "references/group-053/original-independent-summary.json",
+      "original_native_export_index": "references/group-053/original-native-export-index.json",
+      "original_sample_moments": "references/group-053/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 54,
+      "input_signature": "889eed436d350c03cf494b696d05ae6e40c5994aaa93fec28cc288d2cedce0b0",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        102
+      ],
+      "representative_case": 102,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "80097f524d8884be20a6b9a52237af8460f2f0a11d65ba75f76943fa68072a90",
+      "original_independent_report": "references/group-054/original-independent-summary.json",
+      "original_native_export_index": "references/group-054/original-native-export-index.json",
+      "original_sample_moments": "references/group-054/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 55,
+      "input_signature": "b89f00aa87f4d8be9650a0d31e95efc13dda59975074d1d2c16936fd5be74d46",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        103
+      ],
+      "representative_case": 103,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "848f61bfd0490b34194dcf0a8eb5b3339246a22a951413b6b253040aaeaa56fa",
+      "original_independent_report": "references/group-055/original-independent-summary.json",
+      "original_native_export_index": "references/group-055/original-native-export-index.json",
+      "original_sample_moments": "references/group-055/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 56,
+      "input_signature": "8c3d6b8792e4099133ea354476ef8ff58004760a00cc7abcd6a5fed86436112d",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        104
+      ],
+      "representative_case": 104,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "7fae03c6bb6d05a8d4ff98274dabf29e9a28911afe5d18e1d82aed9173e56eae",
+      "original_independent_report": "references/group-056/original-independent-summary.json",
+      "original_native_export_index": "references/group-056/original-native-export-index.json",
+      "original_sample_moments": "references/group-056/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 57,
+      "input_signature": "da0c7236e7ff01b3ba1086986985c1fb1bccd29c7e38a0d4a436ca34fcc73319",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        105
+      ],
+      "representative_case": 105,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "49eaa8c38a45bc2627fe3907dcf1ef79e9dc87792ae7fa7c1ba8e8da6ce22fea",
+      "original_independent_report": "references/group-057/original-independent-summary.json",
+      "original_native_export_index": "references/group-057/original-native-export-index.json",
+      "original_sample_moments": "references/group-057/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 58,
+      "input_signature": "f0af431e8df40206059415284cc720a2a5c1791dbc743a0922add2592c9bfb60",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        106
+      ],
+      "representative_case": 106,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "146f84d2631f2ee903df69a64c073e8d1e12353a6c2da1215df31f106e1d326d",
+      "original_independent_report": "references/group-058/original-independent-summary.json",
+      "original_native_export_index": "references/group-058/original-native-export-index.json",
+      "original_sample_moments": "references/group-058/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 59,
+      "input_signature": "ec24b13d4d2a030b62da090a3f848834538b9d9a8fc0cb5e61f1df5ab9d51f07",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        107
+      ],
+      "representative_case": 107,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "76ae473036021f9138b1ef45930580b1e7ec4a163aa182b890985d71985ecdc7",
+      "original_independent_report": "references/group-059/original-independent-summary.json",
+      "original_native_export_index": "references/group-059/original-native-export-index.json",
+      "original_sample_moments": "references/group-059/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 60,
+      "input_signature": "4bb2418af69632b7313083c296a06b4f7e6418fa821152dcd04cd60487770f7a",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        108
+      ],
+      "representative_case": 108,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "2f1669f2f116cc1eb9260c8a21d9f6386ab989e73b54108f3bfd59a81c6da13d",
+      "original_independent_report": "references/group-060/original-independent-summary.json",
+      "original_native_export_index": "references/group-060/original-native-export-index.json",
+      "original_sample_moments": "references/group-060/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 61,
+      "input_signature": "7f4154f075c3cca42cf2101fa2205dd2aff54ff26772d834d65f69c1b18af6f1",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        109
+      ],
+      "representative_case": 109,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "14a6d232a494d9532981482eae0cc3174d2e827fc7711a4cf90c61570b69fe4e",
+      "original_independent_report": "references/group-061/original-independent-summary.json",
+      "original_native_export_index": "references/group-061/original-native-export-index.json",
+      "original_sample_moments": "references/group-061/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 62,
+      "input_signature": "0f05d40718ff9127cf772118603939ebc3cca4d505957fcffbfbbef2eff89faf",
+      "count": 1000,
+      "dimensions": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25
+      },
+      "case_ordinals": [
+        110
+      ],
+      "representative_case": 110,
+      "raw_primitive_bytes": 40832000,
+      "raw_primitive_sha256": "81cac19910b323d958d68f287161cd2e0596e400caaeb1343bedf826298bd298",
+      "original_independent_report": "references/group-062/original-independent-summary.json",
+      "original_native_export_index": "references/group-062/original-native-export-index.json",
+      "original_sample_moments": "references/group-062/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 63,
+      "input_signature": "823ccc37dc0d54a3dc22aaaa0b95870e2ffd6d62a73852208e6400b8527f4a8c",
+      "count": 1000,
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "case_ordinals": [
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134
+      ],
+      "representative_case": 123,
+      "raw_primitive_bytes": 40768000,
+      "raw_primitive_sha256": "77cf06b2ee87e6532c986e4dddc80f31dfdd649709b5ae9845df276067a3db8d",
+      "original_independent_report": "references/group-063/original-independent-summary.json",
+      "original_native_export_index": "references/group-063/original-native-export-index.json",
+      "original_sample_moments": "references/group-063/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 64,
+      "input_signature": "1f0020ccda5e3cdee851dde3f12af7ab1f365f441103a94f500e39e46e8313e9",
+      "count": 1000,
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "case_ordinals": [
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146
+      ],
+      "representative_case": 135,
+      "raw_primitive_bytes": 40768000,
+      "raw_primitive_sha256": "7d155d7e05381320e98a7110327bd8de668ca79cec42ce6a8379c61dfb657b95",
+      "original_independent_report": "references/group-064/original-independent-summary.json",
+      "original_native_export_index": "references/group-064/original-native-export-index.json",
+      "original_sample_moments": "references/group-064/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 65,
+      "input_signature": "ac4966cf83a822b27b3cb5b4b95dc25a236072c1b335b756fc67c607672cb857",
+      "count": 1000,
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "case_ordinals": [
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170
+      ],
+      "representative_case": 159,
+      "raw_primitive_bytes": 40768000,
+      "raw_primitive_sha256": "565ace3eb21463e12522858403354082259cc9467b94a68080403a256064e07e",
+      "original_independent_report": "references/group-065/original-independent-summary.json",
+      "original_native_export_index": "references/group-065/original-native-export-index.json",
+      "original_sample_moments": "references/group-065/all1000-native-sample-moments.npz"
+    },
+    {
+      "ordinal": 66,
+      "input_signature": "e25277549662b6228d20f8764146607201daf5da2c2d71cdd6845eb4c3229924",
+      "count": 1000,
+      "dimensions": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25
+      },
+      "case_ordinals": [
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182
+      ],
+      "representative_case": 171,
+      "raw_primitive_bytes": 40768000,
+      "raw_primitive_sha256": "b962d14e0d9df8dd71a7bdedc80751862c69f22f936b20522c96fcd0607b150a",
+      "original_independent_report": "references/group-066/original-independent-summary.json",
+      "original_native_export_index": "references/group-066/original-native-export-index.json",
+      "original_sample_moments": "references/group-066/all1000-native-sample-moments.npz"
+    }
+  ],
+  "original_historical_callback_buffers_recovered": false,
+  "configured1000_is_author_optimized_performance_MC": false,
+  "dual_language_curve_original_reference_or_full_paper_pass": false
+}

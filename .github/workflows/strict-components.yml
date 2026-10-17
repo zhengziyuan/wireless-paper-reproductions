@@ -372,3 +372,36 @@ jobs:
             strict/outputs/ci-cooperative-native183-phase-final-QT/actual-evidence-and-configuration-controls.json
             strict/outputs/ci-cooperative-native183-phase-final-QT/fresh-case-*-phase-MP80-MP100/
             strict/outputs/ci-cooperative-native183-phase-final-QT/fresh-case-*-final-QT-MP80-MP100.json
+  cooperative-QT-before-domains183:
+    runs-on: ubuntu-latest
+    # Saved complete contractions are reused; every primal domain is checked.
+    timeout-minutes: 30
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy==2.5.3 scipy==1.18.1 mpmath==1.4.1
+      - name: Check all12344 original before and candidate primal domains and saved MP100 feasibility
+        run: python -B tools/cooperative-stable-replay/audit_both183_QT_domains_v1.py --native-packet strict/validation/cooperative-native183-complete-phase-final-QT-20261017 --python-packet strict/validation/cooperative-Python183-final-QT-20261017 --output-dir strict/outputs/ci-cooperative-both183-QT-domains
+      - name: Reject invalid primal domains and original physical constraint violations
+        run: python -B tools/cooperative-stable-replay/test_both183_QT_domain_controls_v1.py --output strict/outputs/ci-cooperative-both183-QT-domains/new-all12-controls.json
+      - name: Compare every full domain report against complete original evidence
+        run: python -B tools/cooperative-stable-replay/verify_both183_QT_domain_evidence_v1.py --packet strict/validation/cooperative-both183-QT-extra-domains-20261018 --fresh-domain-output strict/outputs/ci-cooperative-both183-QT-domains --output strict/outputs/ci-cooperative-both183-QT-domains/actual-evidence-verification.json
+      - name: Verify all67 native recipe manifests and saved draw arrays with zero regenerated streams
+        run: python -B tools/cooperative-stable-replay/verify_native183_moment_recipe_manifest_v1.py --recipe strict/validation/cooperative-native183-configured1000-moment-recipe-20261018 --native-packet strict/validation/cooperative-native183-complete-phase-final-QT-20261017 --native-restored strict/outputs/ci-cooperative-both183-QT-domains/native-transport/restored --output strict/outputs/ci-cooperative-both183-QT-domains/native-recipe-metadata-zero-fresh-streams.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: both183-all12344-QT-domains-and-native-recipe-metadata-not-fresh-MC-or-source-agreement
+          path: |
+            strict/outputs/ci-cooperative-both183-QT-domains/summary.json
+            strict/outputs/ci-cooperative-both183-QT-domains/native-all183-QT-domains.json
+            strict/outputs/ci-cooperative-both183-QT-domains/python-all183-QT-domains.json
+            strict/outputs/ci-cooperative-both183-QT-domains/new-all12-controls.json
+            strict/outputs/ci-cooperative-both183-QT-domains/actual-evidence-verification.json
+            strict/outputs/ci-cooperative-both183-QT-domains/native-recipe-metadata-zero-fresh-streams.json
