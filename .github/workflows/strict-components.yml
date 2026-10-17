@@ -6,7 +6,9 @@ on:
 jobs:
   python-components:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # Infrastructure allowance for the growing saved-state replay suite.
+    # Individual scientific budgets and convergence thresholds are unchanged.
+    timeout-minutes: 60
     env:
       OPENBLAS_NUM_THREADS: '1'
       OMP_NUM_THREADS: '1'
@@ -97,6 +99,10 @@ jobs:
         run: python tools/cooperative-stable-replay/audit_phase_divergence.py audit --directory strict/outputs/ci-cooperative-interference24/unpacked/case047-phase-witness --output strict/outputs/ci-cooperative-interference24/case047-phase-cross-evaluation.json
       - name: Saved prospective same data phase controls MP80 MP100 without reoptimization
         run: python tools/cooperative-stable-replay/run_fixed_phase_control.py audit --directory strict/outputs/ci-cooperative-interference24/unpacked/case047-same-native-data-phase-controls --output strict/outputs/ci-cooperative-interference24/case047-phase-control-audit.json
+      - name: Actual full size MA6 Python witness all678 coordinates and all1000 draws
+        run: python -B tools/ma-saved-replay/replay_case.py --packet strict/validation/MA6-saved900-first-complete-math-witness-20261017 --output-dir strict/outputs/ci-MA6-first-Python
+      - name: Actual native MA6 witness own states and exact input independent baseline cache
+        run: python -B tools/ma-saved-replay/replay_native_case.py --packet strict/validation/MA6-saved900-first-complete-math-witness-20261017 --output-dir strict/outputs/ci-MA6-first-native
       - name: Restore both actual new full8 Python controls on preserved056 065 inputs
         run: python tools/cooperative-stable-replay/unpack_evidence.py --archive strict/validation/cooperative-corrected-python056-065-20261017/corrected-python056-065-full8-endpoint-tapes.tar.gz --expected-sha256 479d283e2873130c2b92f6aa9adfe7332b0d9fa2ab397c5d80b48389311dcaf2 --output-dir strict/outputs/ci-cooperative-python-controls/unpacked
       - name: Actual new Python056 all8 states all46 phase stops and all31 QT candidates MP80 MP100
