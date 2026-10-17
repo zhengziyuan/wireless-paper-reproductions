@@ -22,6 +22,13 @@ $env:PYTHONUTF8 = '1'
 $env:OPENBLAS_NUM_THREADS = '1'
 $env:OMP_NUM_THREADS = '1'
 $env:MKL_NUM_THREADS = '1'
+$numericAuditRoot = Join-Path (Split-Path $repo -Parent) 'work\numeric-audit-deps'
+if (Test-Path -LiteralPath (Join-Path $numericAuditRoot 'mpmath\__init__.py')) {
+    $pythonRoots = @($env:PYTHONPATH -split [IO.Path]::PathSeparator | Where-Object { $_ })
+    if ($pythonRoots -notcontains $numericAuditRoot) {
+        $env:PYTHONPATH = (@($numericAuditRoot) + $pythonRoots) -join [IO.Path]::PathSeparator
+    }
+}
 $cvxRoot = Join-Path (Split-Path $repo -Parent) 'work\external-cvx-2.2.2\cvx'
 if (Test-Path -LiteralPath (Join-Path $cvxRoot 'cvx_startup.m')) { $env:WIRELESS_REPRO_CVX_ROOT = $cvxRoot }
 Write-Output "Runtime ready; data and caches: $DataHome"

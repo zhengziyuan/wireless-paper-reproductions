@@ -34,3 +34,13 @@ case passes `audit_native_case.py`, including a byte-equal returned numerical
 output control before/after recording. Its actual native values can be checked
 without MATLAB through the public archive. Recorded case output remains distinct
 from complete183 execution, new-phase MP80 references and raw MC replay.
+
+The first complete case now also has [all47 new phase contexts checked at
+MP80/MP100 and a configured1000-draw physical moment replay](../../strict/validation/cooperative-case000-MP-and-MC-20261017/README.md).
+`audit_native_phase_mp.py` checks every actual phase value/gradient/strict stop;
+`follow_native_validation.py` applies finite-precision and MP checks to each
+closed point of the live original183 campaign, retaining failures.
+`export_saved_moment_draws.m` regenerates the exact declared stream without
+optimization; `audit_moment_draws.py` reconstructs every received-signal sample.
+This does not certify all distinct channel inputs or complete183/reference
+agreement. Raw replay operands remain in the external numerical-data library.

@@ -95,3 +95,7 @@ This replay does not claim MP80 references for these new phase contexts or
 independent raw replay of every MC draw. The separate actual91 MP80 endpoint
 packet and one-QT MP80 check retain their own scopes. Complete native183
 execution, remaining independent checks and original curves stay open.
+
+The separate [new case000 MP80/MP100 and configured1000-draw packet](../cooperative-case000-MP-and-MC-20261017/README.md)
+now closes the first case's all47 phase-context precision checks and exact
+configured moment-stream replay. It does not close all183 or original curves.

@@ -1,0 +1,435 @@
+{
+  "scope": "Actual first failing original full-size RCG block; no reduced scene or changed solver",
+  "source_exception": "Printed RCG Armijo line search failed; no substitute solver.",
+  "phase_call": 53,
+  "iteration": 371,
+  "iota": 140.10505645786824,
+  "beta": -1.036841802195588e-05,
+  "slope": 3.527189275247942e-07,
+  "utility": 26.666428443283966,
+  "checked_normalized_gradient": 9.898408748911548e-05,
+  "RCG_solver": {
+    "maximum_iterations": 500,
+    "gradient_tolerance": 1e-06,
+    "initial_step": 1.0,
+    "armijo": 0.0001,
+    "backtrack_factor": 0.5,
+    "maximum_backtracks": 80,
+    "mode": "documented_non_ascent_restart"
+  },
+  "actual_trials": [
+    {
+      "alpha": 1.0,
+      "value": 26.665938051702657,
+      "recorded_threshold": 26.666428443319237
+    },
+    {
+      "alpha": 0.5,
+      "value": 26.66630591391101,
+      "recorded_threshold": 26.6664284433016
+    },
+    {
+      "alpha": 0.25,
+      "value": 26.666397853538257,
+      "recorded_threshold": 26.666428443292784
+    },
+    {
+      "alpha": 0.125,
+      "value": 26.666420817713174,
+      "recorded_threshold": 26.666428443288375
+    },
+    {
+      "alpha": 0.0625,
+      "value": 26.666426547790913,
+      "recorded_threshold": 26.666428443286172
+    },
+    {
+      "alpha": 0.03125,
+      "value": 26.666427974885416,
+      "recorded_threshold": 26.666428443285067
+    },
+    {
+      "alpha": 0.015625,
+      "value": 26.66642832884011,
+      "recorded_threshold": 26.666428443284516
+    },
+    {
+      "alpha": 0.0078125,
+      "value": 26.66642841602143,
+      "recorded_threshold": 26.666428443284243
+    },
+    {
+      "alpha": 0.00390625,
+      "value": 26.666428437060535,
+      "recorded_threshold": 26.666428443284104
+    },
+    {
+      "alpha": 0.001953125,
+      "value": 26.66642844196273,
+      "recorded_threshold": 26.666428443284033
+    },
+    {
+      "alpha": 0.0009765625,
+      "value": 26.66642844300945,
+      "recorded_threshold": 26.666428443284
+    },
+    {
+      "alpha": 0.00048828125,
+      "value": 26.666428443263726,
+      "recorded_threshold": 26.666428443283984
+    },
+    {
+      "alpha": 0.000244140625,
+      "value": 26.666428443221076,
+      "recorded_threshold": 26.666428443283973
+    },
+    {
+      "alpha": 0.0001220703125,
+      "value": 26.666428443259818,
+      "recorded_threshold": 26.66642844328397
+    },
+    {
+      "alpha": 6.103515625e-05,
+      "value": 26.666428443191737,
+      "recorded_threshold": 26.66642844328397
+    },
+    {
+      "alpha": 3.0517578125e-05,
+      "value": 26.666428443156306,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 1.52587890625e-05,
+      "value": 26.666428443138233,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 7.62939453125e-06,
+      "value": 26.666428443129114,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 3.814697265625e-06,
+      "value": 26.666428443124516,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 1.9073486328125e-06,
+      "value": 26.666428443122243,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 9.5367431640625e-07,
+      "value": 26.666428443121077,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 4.76837158203125e-07,
+      "value": 26.6664284431205,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 2.384185791015625e-07,
+      "value": 26.666428443120225,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 1.1920928955078125e-07,
+      "value": 26.666428443120097,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 5.960464477539063e-08,
+      "value": 26.666428443120008,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 2.9802322387695312e-08,
+      "value": 26.666428443119983,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 1.4901161193847656e-08,
+      "value": 26.666428443119955,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 7.450580596923828e-09,
+      "value": 26.66642844311994,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 3.725290298461914e-09,
+      "value": 26.666428443119926,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 1.862645149230957e-09,
+      "value": 26.666428443119965,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 9.313225746154785e-10,
+      "value": 26.666428443119962,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 4.656612873077393e-10,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 2.3283064365386963e-10,
+      "value": 26.666428443119937,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 1.1641532182693481e-10,
+      "value": 26.666428443283934,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 5.820766091346741e-11,
+      "value": 26.666428443119923,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 2.9103830456733704e-11,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 1.4551915228366852e-11,
+      "value": 26.666428443119962,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 7.275957614183426e-12,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 3.637978807091713e-12,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 1.8189894035458565e-12,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 9.094947017729282e-13,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 4.547473508864641e-13,
+      "value": 26.666428443119955,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 2.2737367544323206e-13,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 1.1368683772161603e-13,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 5.684341886080802e-14,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 2.842170943040401e-14,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 1.4210854715202004e-14,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 7.105427357601002e-15,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 3.552713678800501e-15,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 1.7763568394002505e-15,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 8.881784197001252e-16,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 4.440892098500626e-16,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 2.220446049250313e-16,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 1.1102230246251565e-16,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 5.551115123125783e-17,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 2.7755575615628914e-17,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 1.3877787807814457e-17,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 6.938893903907228e-18,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 3.469446951953614e-18,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 1.734723475976807e-18,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 8.673617379884035e-19,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 4.336808689942018e-19,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 2.168404344971009e-19,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 1.0842021724855044e-19,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 5.421010862427522e-20,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 2.710505431213761e-20,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 1.3552527156068805e-20,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 6.776263578034403e-21,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 3.3881317890172014e-21,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 1.6940658945086007e-21,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 8.470329472543003e-22,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 4.235164736271502e-22,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 2.117582368135751e-22,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 1.0587911840678754e-22,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 5.293955920339377e-23,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 2.6469779601696886e-23,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 1.3234889800848443e-23,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 6.617444900424222e-24,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 3.308722450212111e-24,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    },
+    {
+      "alpha": 1.6543612251060553e-24,
+      "value": 26.66642844311996,
+      "recorded_threshold": 26.666428443283966
+    }
+  ],
+  "original_normalization_divisor": 36,
+  "initialization_or_model_or_budget_changed": false,
+  "full_six_scheme_execution_claimed": false,
+  "intercepted_before_any_substitute_update": true,
+  "input_fingerprint": "251c44565de83e51f9d727376617f01f25e4f76f60c1fd15fceb36009f1963d4",
+  "implementation_fingerprint": "1e940a4c82564a8f8a8fb65a3bef2dd13702d7872e6eb9da761e4586c7a778fa",
+  "source_unchanged": true,
+  "capture_source_sha256": "5c1d970b2ef6ce215551d145c8709c24a7118d6aab02c609ec5bffedda1f3e92",
+  "scenario_sha256": "c723de9f9dab819f53a894f8c4b5ba2a88ac5a3a1be77a5ca4cbf5b337edeb0a",
+  "config_sha256": "dd52f8b124cc1ec77ba71cf180048f6da665bb3809161dde6c922982c4eeec89",
+  "array_sha256": "de7aa50290c3351f4bcdd783471c7849e47f5c234c01070954221c75455e460b",
+  "elapsed_seconds": 1278.2894524000003,
+  "full_reproduction_pass": false
+}
