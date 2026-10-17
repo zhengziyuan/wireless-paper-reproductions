@@ -93,3 +93,19 @@ fixed-input bound. No coefficient is fitted to that discrepancy.
 physics, source comparisons, plot-data associations and NoRIS invariance.
 Its explicit exact-local-report reuse option requires every complete input
 and current math-source byte hash to match; default and CI re-evaluate all720.
+
+The [complete183 historical Python channel-moment streams](../../strict/validation/cooperative-Python183-MC1000-full-vectors-20261017/README.md)
+retain all183000 recorded draws and17568000 complex channel coordinates.
+Every unique1000-channel vector bank is included, with all183 source aliases
+bound to67 exact physical/input/phase/RNG/sample groups. Independent elementwise
+channel reconstruction, recorded PCG64 after-state checks and MP80/MP100
+finite-Rician second/fourth moments pass for every group. The maximum complex
+sample error is5.329070518200751e-15. The405 payloads and205 archive parts
+restore completely; the archive is107230125 bytes with no sample truncation.
+`replay_python_moment_evidence.py` defaults to a fresh full67-group reference
+calculation. The local public roundtrip explicitly reused the complete reports
+after exact input/sample/source bindings; it records zero fresh groups. A
+separate CI job freshly evaluates every group. These are configured channel
+moment checks at saved phases; author performance-MC counts, GEO/GT sample
+histories, phase/QT/outer trajectories and original-curve agreement retain
+their separate gates.
