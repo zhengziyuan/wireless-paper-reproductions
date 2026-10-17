@@ -2,6 +2,14 @@
 
 **Status: implementation and source verification in progress. No package has passed full published-figure reproduction.**
 
+**17 October saved-native update:** the existing standard hotspot statistical
+18-case bank now has all243 final metric vectors independently checked at
+MP80/MP100 and all54000 recorded rate samples physically replayed. The native
+and Python54-point curves differ by at most0.00016575 bit/s/Hz; original-reference
+error remains about8.00801 bit/s/Hz. Raw numerical inputs and the precisely
+bounded evidence are in [the native replay packet](validation/hotspot-native18-replay-20261017/README.md).
+This does not certify historical inner trajectories or complete paper reproduction.
+
 The [all-paper issue ledger](ALL_PAPERS_ISSUES.md) distinguishes proven source
 errors, reconstruction bugs, exact numerical repairs and missing execution
 evidence. New complete banks are running with immutable scientific manifests;

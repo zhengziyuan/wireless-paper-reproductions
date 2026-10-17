@@ -31,6 +31,14 @@ jobs:
         run: python tools/full-controller/test_controller.py .
       - name: Missing-job recovery preserves old failures (host controls only)
         run: python tools/resume-campaign/test_recovery.py
+      - name: Independent native moment/transport controls (not optimization)
+        run: |
+          python -m pip install -r tools/hotspot-native-replay/requirements.txt
+          python tools/hotspot-native-replay/test_physical_oracle.py
+      - name: Restore actual saved18 numerical inputs (no producer rerun)
+        run: python tools/hotspot-native-replay/unpack_saved_inputs.py --archive strict/validation/hotspot-native18-replay-20261017/native18-saved-inputs.tar.gz --output-dir strict/outputs/ci-native-statistical-endpoints/unpacked
+      - name: Actual all243 native endpoint metrics MP80/MP100 (not full inner trajectories)
+        run: python tools/hotspot-native-replay/audit_endpoint_mp.py --bank strict/outputs/ci-native-statistical-endpoints/unpacked/native18-saved-inputs/bank --contexts strict/outputs/ci-native-statistical-endpoints/unpacked/native18-saved-inputs/contexts --output-dir strict/outputs/ci-native-statistical-endpoints/mp-audit
       - name: Actual saved full12000 MIS summaries and renderer (not fresh optimization)
         run: python strict/validation/mis-summary-population-gate-v2/audit_saved_bank.py --output-dir strict/outputs/ci-mis-summary-replay
       - run: python -m unittest discover -s strict -p test_figures.py
@@ -87,3 +95,8 @@ jobs:
         with:
           name: saved-full12000-MIS-summary-replay-not-physical-or-full-reproduction
           path: strict/outputs/ci-mis-summary-replay/
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: saved-native18-MP80-MP100-endpoints-not-full-trajectory-reproduction
+          path: strict/outputs/ci-native-statistical-endpoints/mp-audit/

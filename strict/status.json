@@ -1,4 +1,20 @@
 {
+  "latest_verified_checkpoint": {
+    "date": "2026-10-17",
+    "evidence": "validation/hotspot-native18-replay-20261017/README.md",
+    "bank": "saved_standard_native18_not_new_cold_or_V3_typed_stream_campaign",
+    "native_cases": 18,
+    "starts": 243,
+    "independent_final_metrics_MP80_MP100": "passed_all243",
+    "original_native_rate_samples_replayed": 54000,
+    "maximum_sample_error": 2.460254222569347e-12,
+    "maximum_separate_native_python_curve_difference": 0.00016574646957856487,
+    "maximum_native_original_reference_error": 8.008012959184224,
+    "strict_absolute_only_diagnostic_failed_starts_preserved": 22,
+    "historical_full_inner_trajectory_verification": false,
+    "original_reference_agreement": false,
+    "full_reproduction_pass": false
+  },
   "requested_mode": "original_algorithms_full_published_scenarios_no_substitution",
   "full_reproduction_passed": false,
   "all_paper_150_language_task_controller": "../tools/full-controller/README.md",

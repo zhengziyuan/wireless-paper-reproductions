@@ -1,0 +1,182 @@
+{
+  "U": 1,
+  "beta_db": 10,
+  "starts": 6,
+  "failed_starts": 0,
+  "records": [
+    {
+      "U": 1,
+      "beta_db": 10,
+      "scheme": "NoRIS",
+      "start_id": 0,
+      "passed": true,
+      "checks": {
+        "80": {
+          "all_fields_match_preexisting_policy": true,
+          "original_power_and_QoS_gate": true
+        },
+        "100": {
+          "all_fields_match_preexisting_policy": true,
+          "original_power_and_QoS_gate": true
+        }
+      },
+      "errors": {
+        "80": {
+          "maximum_absolute_error": "0.00000000000013576148380957601876531503787586683587388603229046",
+          "maximum_fraction_of_field_allowance": "0.00004472172513988614105570847534245835579802"
+        },
+        "100": {
+          "maximum_absolute_error": "0.00000000000013576148380957601876531503787586683587388603229046",
+          "maximum_fraction_of_field_allowance": "0.00004472172513988614105570847534245835579802"
+        }
+      },
+      "cross_precision_maximum_absolute_difference": "1.3670073851538597400776327064732173517501400781333e-79",
+      "cross_precision_1e_minus40_pass": true
+    },
+    {
+      "U": 1,
+      "beta_db": 10,
+      "scheme": "NoRIS",
+      "start_id": 1,
+      "passed": true,
+      "checks": {
+        "80": {
+          "all_fields_match_preexisting_policy": true,
+          "original_power_and_QoS_gate": true
+        },
+        "100": {
+          "all_fields_match_preexisting_policy": true,
+          "original_power_and_QoS_gate": true
+        }
+      },
+      "errors": {
+        "80": {
+          "maximum_absolute_error": "0.000000000000061043788175372000772489302046749681737514358197155",
+          "maximum_fraction_of_field_allowance": "0.00001980627360111719575158230757528980831522"
+        },
+        "100": {
+          "maximum_absolute_error": "0.000000000000061043788175372000772489302046749681737514358197155",
+          "maximum_fraction_of_field_allowance": "0.00001980627360111719575158230757528980831522"
+        }
+      },
+      "cross_precision_maximum_absolute_difference": "1.0779340938829924037560627806655377418632970832693e-80",
+      "cross_precision_1e_minus40_pass": true
+    },
+    {
+      "U": 1,
+      "beta_db": 10,
+      "scheme": "TwoStage",
+      "start_id": 0,
+      "passed": true,
+      "checks": {
+        "80": {
+          "all_fields_match_preexisting_policy": true,
+          "original_power_and_QoS_gate": true
+        },
+        "100": {
+          "all_fields_match_preexisting_policy": true,
+          "original_power_and_QoS_gate": true
+        }
+      },
+      "errors": {
+        "80": {
+          "maximum_absolute_error": "0.00000000012125529734819828553022935897939176073676737377483",
+          "maximum_fraction_of_field_allowance": "0.001257816019870331189961805318902878197872"
+        },
+        "100": {
+          "maximum_absolute_error": "0.00000000012125529734819828553022935897939176073676737377483",
+          "maximum_fraction_of_field_allowance": "0.001257816019870331189961805318902878197872"
+        }
+      },
+      "cross_precision_maximum_absolute_difference": "7.1439390524452175193359314751141771282999040624204e-79",
+      "cross_precision_1e_minus40_pass": true
+    },
+    {
+      "U": 1,
+      "beta_db": 10,
+      "scheme": "TwoStage",
+      "start_id": 1,
+      "passed": true,
+      "checks": {
+        "80": {
+          "all_fields_match_preexisting_policy": true,
+          "original_power_and_QoS_gate": true
+        },
+        "100": {
+          "all_fields_match_preexisting_policy": true,
+          "original_power_and_QoS_gate": true
+        }
+      },
+      "errors": {
+        "80": {
+          "maximum_absolute_error": "0.00000000036399948629076623051327648935240227538339404092274",
+          "maximum_fraction_of_field_allowance": "0.003775874550501407948790182112570253019248"
+        },
+        "100": {
+          "maximum_absolute_error": "0.00000000036399948629076623051327648935240227538339404092274",
+          "maximum_fraction_of_field_allowance": "0.003775874550501407948790182112570253019248"
+        }
+      },
+      "cross_precision_maximum_absolute_difference": "4.1116336447085864489018702071666694487867623766371e-77",
+      "cross_precision_1e_minus40_pass": true
+    },
+    {
+      "U": 1,
+      "beta_db": 10,
+      "scheme": "AO",
+      "start_id": 0,
+      "passed": true,
+      "checks": {
+        "80": {
+          "all_fields_match_preexisting_policy": true,
+          "original_power_and_QoS_gate": true
+        },
+        "100": {
+          "all_fields_match_preexisting_policy": true,
+          "original_power_and_QoS_gate": true
+        }
+      },
+      "errors": {
+        "80": {
+          "maximum_absolute_error": "0.000000000037583342122517692589808794743593813587459635000582",
+          "maximum_fraction_of_field_allowance": "0.0003898694212356118117449134092992918903615"
+        },
+        "100": {
+          "maximum_absolute_error": "0.000000000037583342122517692589808794743593813587459635000582",
+          "maximum_fraction_of_field_allowance": "0.0003898694212356118117449134092992918903615"
+        }
+      },
+      "cross_precision_maximum_absolute_difference": "8.7681892127969399125226453225888557937933597679159e-78",
+      "cross_precision_1e_minus40_pass": true
+    },
+    {
+      "U": 1,
+      "beta_db": 10,
+      "scheme": "AO",
+      "start_id": 1,
+      "passed": true,
+      "checks": {
+        "80": {
+          "all_fields_match_preexisting_policy": true,
+          "original_power_and_QoS_gate": true
+        },
+        "100": {
+          "all_fields_match_preexisting_policy": true,
+          "original_power_and_QoS_gate": true
+        }
+      },
+      "errors": {
+        "80": {
+          "maximum_absolute_error": "0.0000000001913053440370630296821298710535269416737847271335",
+          "maximum_fraction_of_field_allowance": "0.001984495690086010154424218886618731678862"
+        },
+        "100": {
+          "maximum_absolute_error": "0.0000000001913053440370630296821298710535269416737847271335",
+          "maximum_fraction_of_field_allowance": "0.001984495690086010154424218886618731678862"
+        }
+      },
+      "cross_precision_maximum_absolute_difference": "1.1916331132329698353256809530818513712633140906995e-77",
+      "cross_precision_1e_minus40_pass": true
+    }
+  ]
+}
