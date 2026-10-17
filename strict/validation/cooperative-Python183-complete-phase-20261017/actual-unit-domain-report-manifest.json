@@ -1,0 +1,22 @@
+{
+  "actual_original_cases": 183,
+  "actual_phase_endpoints": 8362,
+  "complex_coordinates_per_precision": 417910,
+  "format": "Concatenate numbered gzip parts, verify compressed SHA256, then gzip-decompress complete JSON",
+  "raw_json_bytes": 5174173,
+  "raw_json_SHA256": "6afb92453a154a2fdd74046f89bf0bc1bd769dcef1a14cc1b8981ebabf78c284",
+  "gzip_bytes": 727070,
+  "gzip_SHA256": "841e5bbabf0865b8c8847828cc9838cda213fb91491be44cfbcc65fd22729671",
+  "parts": [
+    {
+      "file": "actual-all8362-unit-domain-report.json.gz.part000",
+      "bytes": 524288,
+      "sha256": "b745d00e0fc6fe366d304ed85413d96e9068a2b9e798ec14fb3e2f6e6ba9110e"
+    },
+    {
+      "file": "actual-all8362-unit-domain-report.json.gz.part001",
+      "bytes": 202782,
+      "sha256": "8c043906c7eb44b94fe299fcbc44f8ead9d4a460f004591335fc61888849da5c"
+    }
+  ]
+}

@@ -1,4 +1,26 @@
 {
+  "cooperative_complete_selected_Python183_phase_checkpoint": {
+    "evidence": "strict/validation/cooperative-Python183-complete-phase-20261017",
+    "actual_original_cases": 183,
+    "actual_phase_endpoints": 8362,
+    "actual_complex_gradient_coordinates_per_precision": 417910,
+    "independent_MP80_MP100_fields_strict_original_norm_stops_and_unit_domains_pass": true,
+    "original_phase_norm_threshold": "1e-6",
+    "original_unit_domain_bound": "1e-10",
+    "all_complete_original_inputs_and_phase_reference_members_retained": true,
+    "numerical_archive_bytes": 391937442,
+    "numerical_archive_parts": 748,
+    "numerical_payloads": 915,
+    "archive_SHA256": "055c7ade93f8d2457d21b5cdb90b11c5a1911169519e4c214109b7f92c69f84b",
+    "actual_local_roundtrip_terminal_exit_code": 0,
+    "local_roundtrip_fresh_gradient_cases": 0,
+    "local_roundtrip_fresh_unit_domain_endpoints": 8362,
+    "actual_negative_evidence_and_domain_controls_passed": 14,
+    "default_and_separate_CI_freshly_recalculate_all183_phase_cases": true,
+    "actual_current_head_phase_CI_completion_claimed": false,
+    "old056_065_failed_epochs_retained_separately": true,
+    "every_inner_iterate_QT_MC_outer_original_reference_global_optimum_or_full_paper_pass": false
+  },
   "cooperative_complete_multi_single72_checkpoint": {
     "evidence": "strict/validation/cooperative-multi72-dual-final-states-20261017",
     "actual_complete_original_slots": [
@@ -795,7 +817,10 @@
   "cooperative_corrected_python056_065_checkpoint": {
     "date": "2026-10-17",
     "evidence": "validation/cooperative-corrected-python056-065-20261017/README.md",
-    "actual_new_full_eight_scheme_Python_cases": [56, 65],
+    "actual_new_full_eight_scheme_Python_cases": [
+      56,
+      65
+    ],
     "all_original11_input_arrays_shapes_dtypes_and_bytes_unchanged": true,
     "original_configuration_limits_and1000_moment_returns_exactly_equal": true,
     "new_final_states": 16,

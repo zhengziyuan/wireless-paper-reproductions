@@ -140,3 +140,15 @@ lossless repair checks are preserved separately. All26 numerical/QA payloads
 restore from eight complete archive parts. Default and separate CI replay
 freshly evaluate all1152 states; the local transport check explicitly reuses
 the completed report only after every input/current-math hash matches.
+
+The [complete183 selected Python phase recordings](../../strict/validation/cooperative-Python183-complete-phase-20261017/README.md)
+retain all8362 actual phase endpoints and417910 complex gradient coordinates
+per precision. Every saved criterion, full complex gradient and original strict
+norm stop passes independent MP80/MP100; every actual unit-modulus phase domain
+also passes a fresh complete-cohort MP80/MP100 check. The full391937442-byte
+input/reference archive has748 parts and915 payloads, including every original
+phase report. Fourteen invalid-evidence/domain controls are retained. Local
+transport explicitly reuses exact complete gradient reports and records zero
+fresh gradient cases; default and separate CI replay freshly evaluate all183.
+Old056/065 failures, all inner paths, QT/MC/outer histories, original-reference
+agreement, dual certificates and full-paper gates keep their separate scopes.

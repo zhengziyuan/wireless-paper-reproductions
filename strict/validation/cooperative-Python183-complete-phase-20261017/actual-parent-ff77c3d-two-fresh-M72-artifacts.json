@@ -1,0 +1,111 @@
+{
+  "observed_local": "2026-10-17T20:54:05.468762+08:00",
+  "exact_source_head": "ff77c3d265f30ac61bc8d45496d2d4ba4cdffaa3",
+  "actual_completed_fresh_CI_jobs": 2,
+  "actual_final_states_per_job_per_precision": 1152,
+  "actual_scalar_fields_per_job_per_precision": 7680,
+  "all_actual_original_inputs_MP80_MP100_values_and_current_math_sources_match_local": true,
+  "all_original_source_comparisons_and_visible_axis_unit_caveat_match": true,
+  "original_reference_or_all_inner_trajectories_or_global_optimum_or_full_paper_pass": false,
+  "no_signed_artifact_URL_or_credentials_persisted": true,
+  "runs": [
+    {
+      "run_id": 39032850452,
+      "job_id": 117396650624,
+      "source_head": "ff77c3d265f30ac61bc8d45496d2d4ba4cdffaa3",
+      "job_url": "https://github.com/zhengziyuan/wireless-paper-reproductions/actions/runs/39032850452/job/117396650624",
+      "artifact_id": 12101786447,
+      "artifact_name": "multi72-all1152-final-physics-and-unfitted-source-differences",
+      "actual_artifact_bytes": 1293290,
+      "actual_artifact_SHA256": "58ce37b4674af804da3669e9abc867040389154cea029b2d02ca52bf2fb5a394",
+      "GitHub_artifact_digest": "sha256:58ce37b4674af804da3669e9abc867040389154cea029b2d02ca52bf2fb5a394",
+      "actual_fresh_final_states_per_precision": 1152,
+      "actual_scalar_fields_per_precision": 7680,
+      "all384_original_native_design_transports_match_local": true,
+      "all_current_actual_input_and_math_source_hashes_match": true,
+      "all_MP80_MP100_numerical_lanes_match_local_within1e_minus40": true,
+      "original_source_ordinates_per_language": 144,
+      "actual_computed_plotted_ordinates": 288,
+      "original_unfitted_source_comparisons_and_unit_caveat_match": true,
+      "rows": [
+        {
+          "language": "python",
+          "precision": "80",
+          "original_cases": 72,
+          "actual_final_states": 576,
+          "all_actual_fields_match_local": true
+        },
+        {
+          "language": "python",
+          "precision": "100",
+          "original_cases": 72,
+          "actual_final_states": 576,
+          "all_actual_fields_match_local": true
+        },
+        {
+          "language": "matlab",
+          "precision": "80",
+          "original_cases": 72,
+          "actual_final_states": 576,
+          "all_actual_fields_match_local": true
+        },
+        {
+          "language": "matlab",
+          "precision": "100",
+          "original_cases": 72,
+          "actual_final_states": 576,
+          "all_actual_fields_match_local": true
+        }
+      ]
+    },
+    {
+      "run_id": 39032847324,
+      "job_id": 117396641356,
+      "source_head": "ff77c3d265f30ac61bc8d45496d2d4ba4cdffaa3",
+      "job_url": "https://github.com/zhengziyuan/wireless-paper-reproductions/actions/runs/39032847324/job/117396641356",
+      "artifact_id": 12100822989,
+      "artifact_name": "multi72-all1152-final-physics-and-unfitted-source-differences",
+      "actual_artifact_bytes": 1293286,
+      "actual_artifact_SHA256": "3d8badf3ae2c1360f98c03d5552cb7186150f38f26a174c7fb0a2bdc09b143d8",
+      "GitHub_artifact_digest": "sha256:3d8badf3ae2c1360f98c03d5552cb7186150f38f26a174c7fb0a2bdc09b143d8",
+      "actual_fresh_final_states_per_precision": 1152,
+      "actual_scalar_fields_per_precision": 7680,
+      "all384_original_native_design_transports_match_local": true,
+      "all_current_actual_input_and_math_source_hashes_match": true,
+      "all_MP80_MP100_numerical_lanes_match_local_within1e_minus40": true,
+      "original_source_ordinates_per_language": 144,
+      "actual_computed_plotted_ordinates": 288,
+      "original_unfitted_source_comparisons_and_unit_caveat_match": true,
+      "rows": [
+        {
+          "language": "python",
+          "precision": "80",
+          "original_cases": 72,
+          "actual_final_states": 576,
+          "all_actual_fields_match_local": true
+        },
+        {
+          "language": "python",
+          "precision": "100",
+          "original_cases": 72,
+          "actual_final_states": 576,
+          "all_actual_fields_match_local": true
+        },
+        {
+          "language": "matlab",
+          "precision": "80",
+          "original_cases": 72,
+          "actual_final_states": 576,
+          "all_actual_fields_match_local": true
+        },
+        {
+          "language": "matlab",
+          "precision": "100",
+          "original_cases": 72,
+          "actual_final_states": 576,
+          "all_actual_fields_match_local": true
+        }
+      ]
+    }
+  ]
+}
