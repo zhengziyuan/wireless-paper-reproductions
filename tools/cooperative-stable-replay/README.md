@@ -123,3 +123,20 @@ hash checks; default replay and the separate CI job freshly evaluate all183.
 The old056/065 failures remain separate from their verified new epochs. Phase,
 MC, outer histories, solver KKT/dual proof and original-reference agreement
 retain their separate scopes.
+
+The [complete72 paired multi/single-satellite cases](../../strict/validation/cooperative-multi72-dual-final-states-20261017/README.md)
+close original slots111..182 with all1152 actual final states and7680 scalar
+physical fields per precision at MP80/MP100. Both J=3,N=16 and J=1,N=48 retain
+48 total antennas,150W total power and every original configuration/threshold.
+Every one of the12 original figure11 curves has all12 ordinates:144 source
+ordinates per language,288 computed plotted ordinates across both languages.
+The complete four-panel source diagnostic preserves the original0..14 vertical
+range and visibly retains the unresolved printed W versus supplied normalized
+I/N convention. Maximum conditional source discrepancy is39.663478 linear SINR;
+optimized MATLAB/Python results differ by up to3.264714dB. No input is fitted.
+The native single-satellite reader restores384 squeezed leading axes without
+changing any numeric dtype or C-order byte. Its earlier failed audit and the
+lossless repair checks are preserved separately. All26 numerical/QA payloads
+restore from eight complete archive parts. Default and separate CI replay
+freshly evaluate all1152 states; the local transport check explicitly reuses
+the completed report only after every input/current-math hash matches.

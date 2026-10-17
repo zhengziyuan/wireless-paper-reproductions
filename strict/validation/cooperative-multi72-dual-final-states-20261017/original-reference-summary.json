@@ -1,0 +1,44 @@
+{
+  "scope": "Complete original figure11:12 curves x12 ordinates x2 languages",
+  "case_scope": "multi-single",
+  "cases_per_language": 72,
+  "source_points_per_language": 144,
+  "complete_all8_final_states_per_language": 576,
+  "source_points_are_not72_times8": true,
+  "source_input_SHA256": {
+    "E:\\ZiyuanZhengProject\\paper-reproduction-data\\resume-20261017\\cooperative-multi72-source-preflight-v1\\original-figure-11-vector-reference.json": "01c1c8bcd41027aa88cc90863110732545c38602dd9dadd3d8eabcff26147c0d",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\cooperative-stable-replay\\compare_multi_single_reference.py": "98f793762b60c5e012bea0985fdaf235f610c83249a2b2449f62c9480050da45",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\figure_validation.py": "3b17ed331391e6ee871643746ebce70093664f4de91d565b15432172940303c1",
+    "E:\\ZiyuanZhengProject\\paper-reproduction-data\\resume-20261017\\cooperative-multi72-dual-views-v1\\python\\cooperative-satcom-figure-11.json": "feee60ca09768671914c7e64c7270c86f387fc939ab642a88258bc622643229d",
+    "E:\\ZiyuanZhengProject\\paper-reproduction-data\\resume-20261017\\cooperative-multi72-dual-views-v1\\matlab\\cooperative-satcom-figure-11.json": "f036dbd7b672481fdc4bcdfb00d17b193f44ec1726ffc20355da9b20ebb783ee"
+  },
+  "source_and_curves_unchanged": true,
+  "source_interference_W_versus_normalized_I_over_N_conflict_unresolved": true,
+  "comparisons": [
+    {
+      "language": "python",
+      "points": 144,
+      "all_curves_and_grids_complete": true,
+      "maximum_absolute_linear_SINR_gap": 39.663478031816254
+    },
+    {
+      "language": "matlab",
+      "points": 144,
+      "all_curves_and_grids_complete": true,
+      "maximum_absolute_linear_SINR_gap": 39.66347803572195
+    }
+  ],
+  "source_axis_rectangle": [
+    53,
+    10,
+    608,
+    429
+  ],
+  "source_y_range": [
+    0,
+    14
+  ],
+  "all_reference_points_retained_without_fitting": true,
+  "original_private_EPS_redistributed": false,
+  "original_reference_or_full183_or_full_paper_pass": false
+}
