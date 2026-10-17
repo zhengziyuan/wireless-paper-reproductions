@@ -29,6 +29,15 @@ The actual outputs are [Python](actual-table-replay-python.json),
 python -B compare_table_replays.py --python actual-table-replay-python.json --matlab actual-table-replay-matlab.json --output fresh-comparison.json
 ```
 
+Remote CI also exposed a stale two-step hotspot RGD oracle: it seeded Armijo
+with a fixed `alpha=1`, while both shipped production engines use
+`alpha=1/||grad F||`. The test now independently reconstructs the declared seed
+and still checks both fresh-gradient steps, ascent, the opposite-sign diagnostic
+and the original `1e-13` phase comparison. Neither optimizer, stop threshold nor
+paper-scene budget was changed. This is a test-control mismatch, not a newly
+established paper error or a full hotspot run. The new transport/controller/
+recovery tests are also included in remote CI.
+
 ## Code corrections
 
 Both sensing RIS baseline implementations now return `target_start_banks`,

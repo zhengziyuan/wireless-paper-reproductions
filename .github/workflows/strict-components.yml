@@ -25,6 +25,12 @@ jobs:
       - run: python strict/test_validation.py
       - name: All MIS start-summary slots (not independent physical certification)
         run: python strict/test_mis_population_evidence.py
+      - name: RIS per-target evidence transport (no optimization)
+        run: python strict/test_mis_ris_evidence.py
+      - name: Complete command inventory and host controls (no scientific execution)
+        run: python tools/full-controller/test_controller.py .
+      - name: Missing-job recovery preserves old failures (host controls only)
+        run: python tools/resume-campaign/test_recovery.py
       - name: Actual saved full12000 MIS summaries and renderer (not fresh optimization)
         run: python strict/validation/mis-summary-population-gate-v2/audit_saved_bank.py --output-dir strict/outputs/ci-mis-summary-replay
       - run: python -m unittest discover -s strict -p test_figures.py
