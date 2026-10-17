@@ -31,7 +31,12 @@ separate from the independent physical reader and original-reference checks.
 Every original failure is retained. Parent exit, complete file count or a
 positive stored flag alone is not independent scientific certification.
 
-The currently running native900 uses the same numerical kernels and inputs
-as the existing saved Python900 composition. The first native RAW has passed
+The native900 has now completed with unchanged numerical kernels and inputs
+and a verified actual parent closure. All4.5million terminal-rate returns were
+compared with the existing saved Python900 composition. Its complete data and
+limits are in the [closed900 packet](../../strict/validation/MA6-native900-execution-closure-20261017/README.md).
+The first native RAW has passed
 the independent paired reader in the [public first-case witness](../../strict/validation/MA6-saved900-first-complete-math-witness-20261017/README.md).
-Complete900, original-author inputs/curves and full-paper validation remain open.
+The full900 independent mathematical readers, original-author inputs/curves
+and full-paper validation remain open. The public compact closure reader
+checks4500 aggregate rows; it does not recheck the externally preserved RAW.
