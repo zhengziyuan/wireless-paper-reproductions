@@ -39,6 +39,13 @@ sidelobe-envelope substitute is used.
 
 ## Preferred execution
 
+The 17 October [positive-Wick repair](POSITIVE_WICK.md) now evaluates the
+original MR phase objective and derivatives without subtracting large own
+fourth-moment terms. Actual complete91 MATLAB and Python endpoint checks
+pass against retained MP80 at unchanged tolerances. This is distinct from
+complete native183 execution and historical-curve agreement. The saved inputs,
+actual native outputs and commands are [publicly reproducible](../validation/cooperative-positive-wick-20261017/README.md).
+
 Run from this directory with NumPy, SciPy, CVXPY and Clarabel/SCS available.
 Set one BLAS thread when sharing compute.
 

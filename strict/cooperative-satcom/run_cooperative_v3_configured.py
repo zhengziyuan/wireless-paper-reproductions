@@ -19,7 +19,7 @@ from spectral_rmo import rmo_ascent
 
 def actual_hashes(configuration_path):
     base=Path(__file__).resolve().parent
-    names=('core.py','models.py','increments.py','increments_v2.py','algorithms.py',
+    names=('core.py','models.py','positive_wick.py','increments.py','increments_v2.py','algorithms.py',
         'spectral_rmo.py','core_qt_factored_v3.py','qt_numerical_guard_v3.py',
         'termination.py','scenario.py','run.py','receipts.py','run_cooperative_v3_configured.py')
     bindings={name:hashlib.sha256((base/name).read_bytes()).hexdigest() for name in names}

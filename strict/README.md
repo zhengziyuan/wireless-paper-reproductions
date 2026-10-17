@@ -10,6 +10,14 @@ error remains about8.00801 bit/s/Hz. Raw numerical inputs and the precisely
 bounded evidence are in [the native replay packet](validation/hotspot-native18-replay-20261017/README.md).
 This does not certify historical inner trajectories or complete paper reproduction.
 
+**17 October cooperative update:** the production MR phase evaluator now uses
+an equivalent positive variance/derivative expansion. Every one of91 saved
+full-size endpoints and8190 complex gradient coordinates passes retained MP80
+checks in each language, at the unchanged field and original stopping tolerances.
+The complete183 Python inventory and its two old float failures are preserved;
+complete native183 execution and original curves remain open. See [the actual
+dual-language packet](validation/cooperative-positive-wick-20261017/README.md).
+
 The [all-paper issue ledger](ALL_PAPERS_ISSUES.md) distinguishes proven source
 errors, reconstruction bugs, exact numerical repairs and missing execution
 evidence. New complete banks are running with immutable scientific manifests;

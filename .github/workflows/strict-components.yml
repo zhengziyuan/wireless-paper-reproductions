@@ -71,6 +71,14 @@ jobs:
       - run: python strict/two-timescale-ma/test_exact_2d.py
       - run: python strict/two-timescale-ma/test_correlated_zf.py
       - run: python strict/cooperative-satcom/test_termination.py
+      - name: Original non-Gaussian positive-moment limits
+        run: python strict/cooperative-satcom/test_positive_wick.py
+      - name: Restore actual complete91 cooperative endpoint data
+        run: python tools/cooperative-stable-replay/unpack_evidence.py --archive strict/validation/cooperative-positive-wick-20261017/native91-positive-wick.tar.gz --expected-sha256 1cb56dd63f86613e6436c456cbf76bfe6c151c6410b0956f9a07e55281e199cc --output-dir strict/outputs/ci-cooperative91/unpacked
+      - name: All8190 actual native gradient values versus retained MP80
+        run: python tools/cooperative-stable-replay/audit_saved_components.py --fixture strict/outputs/ci-cooperative91/unpacked/inputs/original-all91-inputs.mat --references strict/outputs/ci-cooperative91/unpacked/inputs/references.json --native-dir strict/outputs/ci-cooperative91/unpacked/native --output strict/outputs/ci-cooperative91/native-audit.json
+      - name: All8190 independent Python gradient values versus retained MP80
+        run: python tools/cooperative-stable-replay/audit_saved_components.py --fixture strict/outputs/ci-cooperative91/unpacked/inputs/original-all91-inputs.mat --references strict/outputs/ci-cooperative91/unpacked/inputs/references.json --output strict/outputs/ci-cooperative91/python-audit.json
       - run: python strict/hotspot-satcom/test_termination.py
       - run: python strict/hotspot-satcom/test_phase_method.py
       - name: Author-source Rician coefficient contradiction (exact algebra, no simulation)
@@ -102,3 +110,10 @@ jobs:
         with:
           name: saved-native18-MP80-MP100-endpoints-not-full-trajectory-reproduction
           path: strict/outputs/ci-native-statistical-endpoints/mp-audit/
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: actual-cooperative91-endpoints-not-complete-native183-figures
+          path: |
+            strict/outputs/ci-cooperative91/native-audit.json
+            strict/outputs/ci-cooperative91/python-audit.json
