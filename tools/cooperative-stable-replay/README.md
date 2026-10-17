@@ -152,3 +152,17 @@ transport explicitly reuses exact complete gradient reports and records zero
 fresh gradient cases; default and separate CI replay freshly evaluate all183.
 Old056/065 failures, all inner paths, QT/MC/outer histories, original-reference
 agreement, dual certificates and full-paper gates keep their separate scopes.
+
+The [complete original native183 phase/final/QT packet](../../strict/validation/cooperative-native183-complete-phase-final-QT-20261017/README.md)
+retains8356 phase endpoints/417610 complex coordinates per precision,1464 final
+states and6181 QT candidates/117214 physical scalar fields per precision.
+Every actual MP80/MP100 report and fresh phase unit-domain check passes.
+All926 numerical/reference payloads and858 parts restore completely. The local
+roundtrip explicitly reuses the complete exact phase/final-QT reports, while
+default and separate CI replay freshly evaluate every183-case tape. All48
+declared J=1 JSON latitude singletons retain exact binary64 values and every
+other configuration field; all183 native MAT vectors match original source
+bytes. The old dictionary-reader exit1 and17 invalid-evidence/configuration
+controls are retained. Native/Python trajectories and their QT increment signs
+keep separate scopes, as do full moment vectors, inner paths, author source
+agreement and full-paper certification.
