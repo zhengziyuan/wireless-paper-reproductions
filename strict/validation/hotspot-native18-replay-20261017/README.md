@@ -50,6 +50,14 @@ The original EPS source SHA remains
 `fbcd024a896c49dcba58973df0bd42c06700f96911212ff3324ab9c846cfaa93`;
 no fresh EPS read or final-publisher equivalence is claimed here.
 
+A fresh read of the supplied author source also verifies a separate repeated
+G-scatter coefficient contradiction. The [exact coefficient receipt](rician-source-coefficient-audit.json)
+retains source SHA/line anchors and all7200 native constructor mean/variance
+checks. The implementation already follows normalized Eq3-1. This error does
+not explain the NoRIS curve discrepancy; its channel contains no G term.
+The source explicitly defines50W as a total beam-power budget, excluding an
+unreported per-feed rescaling as a remedy. See [the scoped erratum](../../hotspot-satcom/STATISTICAL_ERRATUM.md).
+
 This reproducible discrepancy must be resolved against the supplied model,
 normalization, geometry and pattern assumptions. It is not, by itself, a
 universal publisher-error certificate. Original artwork and private manuscripts

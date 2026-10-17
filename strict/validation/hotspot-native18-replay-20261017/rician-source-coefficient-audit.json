@@ -1,0 +1,161 @@
+{
+  "scope": "supplied_author_source_G_NLoS_coefficient_conflict_and_constructor_convention",
+  "source_basename": "ch_third.tex",
+  "source_sha256": "684b2de6bb9dd18828fcec33a378d886a085aab7367fb535bac401f51b496794",
+  "source_anchors": {
+    "early_Rician_line": 40,
+    "late_G_expansion_line": 489,
+    "unit_variance_NLoS_line": 492,
+    "total_power_line": 101,
+    "power_table_line": 681
+  },
+  "actual_private_source_read": true,
+  "final_publisher_equation_equivalence_verified": false,
+  "exact_rational_counterexamples": [
+    {
+      "beta_db": 0,
+      "beta_linear": 1,
+      "printed_G_NLoS_variance_per_mu": "1/2",
+      "Eq3_1_NLoS_variance_per_mu": "1/2",
+      "printed_to_Eq3_1_scatter_variance_multiplier": "1",
+      "unit_modulus_LoS_entry_witness_total_power_per_mu": "1",
+      "contradiction_for_beta_not_one": false
+    },
+    {
+      "beta_db": 10,
+      "beta_linear": 10,
+      "printed_G_NLoS_variance_per_mu": "10/11",
+      "Eq3_1_NLoS_variance_per_mu": "1/11",
+      "printed_to_Eq3_1_scatter_variance_multiplier": "10",
+      "unit_modulus_LoS_entry_witness_total_power_per_mu": "20/11",
+      "contradiction_for_beta_not_one": true
+    },
+    {
+      "beta_db": 20,
+      "beta_linear": 100,
+      "printed_G_NLoS_variance_per_mu": "100/101",
+      "Eq3_1_NLoS_variance_per_mu": "1/101",
+      "printed_to_Eq3_1_scatter_variance_multiplier": "100",
+      "unit_modulus_LoS_entry_witness_total_power_per_mu": "200/101",
+      "contradiction_for_beta_not_one": true
+    }
+  ],
+  "native_constructor_components_checked": 7200,
+  "native_contexts": [
+    {
+      "U": 1,
+      "beta_db": 0,
+      "components": 400,
+      "maximum_relative_K_factor_error": 4.440892098500626e-16
+    },
+    {
+      "U": 2,
+      "beta_db": 0,
+      "components": 400,
+      "maximum_relative_K_factor_error": 4.440892098500626e-16
+    },
+    {
+      "U": 3,
+      "beta_db": 0,
+      "components": 400,
+      "maximum_relative_K_factor_error": 4.440892098500626e-16
+    },
+    {
+      "U": 4,
+      "beta_db": 0,
+      "components": 400,
+      "maximum_relative_K_factor_error": 4.440892098500626e-16
+    },
+    {
+      "U": 5,
+      "beta_db": 0,
+      "components": 400,
+      "maximum_relative_K_factor_error": 4.440892098500626e-16
+    },
+    {
+      "U": 6,
+      "beta_db": 0,
+      "components": 400,
+      "maximum_relative_K_factor_error": 4.440892098500626e-16
+    },
+    {
+      "U": 1,
+      "beta_db": 10,
+      "components": 400,
+      "maximum_relative_K_factor_error": 3.552713678800501e-16
+    },
+    {
+      "U": 2,
+      "beta_db": 10,
+      "components": 400,
+      "maximum_relative_K_factor_error": 3.552713678800501e-16
+    },
+    {
+      "U": 3,
+      "beta_db": 10,
+      "components": 400,
+      "maximum_relative_K_factor_error": 3.552713678800501e-16
+    },
+    {
+      "U": 4,
+      "beta_db": 10,
+      "components": 400,
+      "maximum_relative_K_factor_error": 3.552713678800501e-16
+    },
+    {
+      "U": 5,
+      "beta_db": 10,
+      "components": 400,
+      "maximum_relative_K_factor_error": 3.552713678800501e-16
+    },
+    {
+      "U": 6,
+      "beta_db": 10,
+      "components": 400,
+      "maximum_relative_K_factor_error": 3.552713678800501e-16
+    },
+    {
+      "U": 1,
+      "beta_db": 20,
+      "components": 400,
+      "maximum_relative_K_factor_error": 2.842170943040401e-16
+    },
+    {
+      "U": 2,
+      "beta_db": 20,
+      "components": 400,
+      "maximum_relative_K_factor_error": 2.842170943040401e-16
+    },
+    {
+      "U": 3,
+      "beta_db": 20,
+      "components": 400,
+      "maximum_relative_K_factor_error": 2.842170943040401e-16
+    },
+    {
+      "U": 4,
+      "beta_db": 20,
+      "components": 400,
+      "maximum_relative_K_factor_error": 2.842170943040401e-16
+    },
+    {
+      "U": 5,
+      "beta_db": 20,
+      "components": 400,
+      "maximum_relative_K_factor_error": 2.842170943040401e-16
+    },
+    {
+      "U": 6,
+      "beta_db": 20,
+      "components": 400,
+      "maximum_relative_K_factor_error": 2.842170943040401e-16
+    }
+  ],
+  "mathematical_conclusion": "Late G expression repeats sqrt(beta/(1+beta)) for scatter; Eq3-1 and unit-variance CN require sqrt(1/(1+beta)).",
+  "current_implemented_branch": "Normalized Eq3-1 Rician convention; no optimizer changed by this audit",
+  "total_power_interpretation": "P_T is a total beam-power budget, not per-feed power",
+  "explains_NoRIS_original_reference_gap": false,
+  "limitation": "G is absent from NoRIS; this source contradiction cannot by itself explain that baseline discrepancy.",
+  "new_simulations_or_optimizations": 0,
+  "full_reproduction_pass": false
+}
