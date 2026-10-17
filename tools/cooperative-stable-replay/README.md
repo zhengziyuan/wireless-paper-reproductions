@@ -109,3 +109,17 @@ separate CI job freshly evaluates every group. These are configured channel
 moment checks at saved phases; author performance-MC counts, GEO/GT sample
 histories, phase/QT/outer trajectories and original-curve agreement retain
 their separate gates.
+
+The [complete183 selected Python final/QT recordings](../../strict/validation/cooperative-Python183-final-QT-20261017/README.md)
+retain1464 final states and all6163 actual QT inputs/candidates. Independent
+MP80/MP100 checks cover116890 physical/QT scalar values per precision. Every
+final metric, power/interference constraint, original QT lower bound and
+tightness check passes. The original1e-5 nondecrease tolerance is retained:
+10 actual MP100 minimum-SINR increments are negative, the worst being
+-8.068112398834605e-8 at case054/QT18. Literal exact monotonicity is not claimed.
+All732 numerical/reference payloads restore byte-for-byte. The public local
+roundtrip explicitly reuses completed exact reports after input/current-math
+hash checks; default replay and the separate CI job freshly evaluate all183.
+The old056/065 failures remain separate from their verified new epochs. Phase,
+MC, outer histories, solver KKT/dual proof and original-reference agreement
+retain their separate scopes.
