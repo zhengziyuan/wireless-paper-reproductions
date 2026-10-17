@@ -22,3 +22,15 @@ retains every original expanded input, all8 schemes and1000 moment draws per
 completed point. It writes each result and keeps failures. Its first campaign
 exposed an independent AP-QT native solver failure and was stopped for diagnosis;
 existence of its progress file is not completion or success.
+
+The native core's AP update now uses an [independently checked equivalent
+scaled SOC](../../strict/validation/cooperative-ap-soc-20261017/README.md).
+`audit_ap_qt.py` reevaluates its actual full failed input/output at MP80 and
+independently solves the original complete Python convex problem.
+
+The native v3 producer now saves source-bound MAT tapes containing all8 final
+states, fixed-context phase endpoints and every QT candidate. The first actual
+case passes `audit_native_case.py`, including a byte-equal returned numerical
+output control before/after recording. Its actual native values can be checked
+without MATLAB through the public archive. Recorded case output remains distinct
+from complete183 execution, new-phase MP80 references and raw MC replay.

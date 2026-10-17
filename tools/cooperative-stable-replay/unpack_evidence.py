@@ -27,7 +27,9 @@ def unpack(archive,output,expected_sha):
         if len(names)!=len(set(names)) or any(not m.isfile() or PurePosixPath(m.name).is_absolute() or '..' in PurePosixPath(m.name).parts for m in members):raise ValueError('Unsafe archive member')
         manifest=json.load(tar.extractfile('manifest.json'))
         if set(names)!=set(manifest['files'])|{'manifest.json'}:raise ValueError('Missing or extra payload')
-        if manifest['stage_count']!=91 or manifest['complex_gradient_coordinates']!=8190:raise ValueError('Incomplete population')
+        if 'stage_count' in manifest:
+            if manifest['stage_count']!=91 or manifest['complex_gradient_coordinates']!=8190:raise ValueError('Incomplete endpoint population')
+        elif manifest.get('original_cases')!=1 or manifest.get('final_schemes')!=8:raise ValueError('Incomplete original case population')
         data={m.name:tar.extractfile(m).read() for m in members}
     for name,spec in manifest['files'].items():
         if len(data[name])!=spec['bytes'] or hashlib.sha256(data[name]).hexdigest()!=spec['sha256']:raise ValueError('Payload differs')
@@ -36,7 +38,8 @@ def unpack(archive,output,expected_sha):
         path=output/name
         if not path.resolve().is_relative_to(output.resolve()):raise ValueError('Output escapes target')
         path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(payload)
-    print(json.dumps(dict(verified_payload_files=len(manifest['files']),stages=91,complex_gradient_coordinates=8190)))
+    population={k:manifest[k] for k in ('stage_count','complex_gradient_coordinates','original_cases','final_schemes','phase_endpoints','QT_candidates') if k in manifest}
+    print(json.dumps(dict(verified_payload_files=len(manifest['files']),**population)))
 
 
 if __name__=='__main__':

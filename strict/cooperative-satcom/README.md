@@ -46,6 +46,11 @@ pass against retained MP80 at unchanged tolerances. This is distinct from
 complete native183 execution and historical-curve agreement. The saved inputs,
 actual native outputs and commands are [publicly reproducible](../validation/cooperative-positive-wick-20261017/README.md).
 
+The native AP QT update also uses an [equivalent scaled SOC representation](../validation/cooperative-ap-soc-20261017/README.md).
+An actual previously failed full-size input passes independent MP80 physical
+checks, and its optimum agrees with the original Python convex solve within
+3.25e-9. The unchanged complete native183 campaign is separately in progress.
+
 Run from this directory with NumPy, SciPy, CVXPY and Clarabel/SCS available.
 Set one BLAS thread when sharing compute.
 

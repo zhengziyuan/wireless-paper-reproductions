@@ -6,5 +6,8 @@ if strcmp(action,'mr_qt_update')
 else
     [varargout{1:nargout}]=strict_satcom_core(action,varargin{:});
 end
+if endsWith(action,'_qt_update') && nargout>=2
+    strict_satcom_capture('qt',struct('kind',action,'input',{varargin},'candidate',varargout{1},'info',varargout{2}));
+end
 end
 

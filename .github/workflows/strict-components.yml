@@ -79,6 +79,12 @@ jobs:
         run: python tools/cooperative-stable-replay/audit_saved_components.py --fixture strict/outputs/ci-cooperative91/unpacked/inputs/original-all91-inputs.mat --references strict/outputs/ci-cooperative91/unpacked/inputs/references.json --native-dir strict/outputs/ci-cooperative91/unpacked/native --output strict/outputs/ci-cooperative91/native-audit.json
       - name: All8190 independent Python gradient values versus retained MP80
         run: python tools/cooperative-stable-replay/audit_saved_components.py --fixture strict/outputs/ci-cooperative91/unpacked/inputs/original-all91-inputs.mat --references strict/outputs/ci-cooperative91/unpacked/inputs/references.json --output strict/outputs/ci-cooperative91/python-audit.json
+      - name: Actual failed full-size AP QT input versus independent MP80 and original Python solve
+        run: python tools/cooperative-stable-replay/audit_ap_qt.py --input strict/validation/cooperative-ap-soc-20261017/actual-failed-AP-QT-input.mat --native-output strict/validation/cooperative-ap-soc-20261017/actual-scaled-AP-QT-output.mat --output strict/outputs/ci-cooperative91/actual-AP-QT-audit.json
+      - name: Restore actual complete original native case and unchanged-output control
+        run: python tools/cooperative-stable-replay/unpack_evidence.py --archive strict/validation/cooperative-ap-soc-20261017/native-case000-recording.tar.gz --expected-sha256 3d32975f05c86d4ef2d2de1922aa87a55d723857f24b9e112389581360b1e7d3 --output-dir strict/outputs/ci-cooperative91/full-native-case
+      - name: All8 states, all47 phase stops and all31 actual QT candidates
+        run: python tools/cooperative-stable-replay/audit_native_case.py --result strict/outputs/ci-cooperative91/full-native-case/case-000-matlab.json --before-recording strict/outputs/ci-cooperative91/full-native-case/before-recording-case000.json --output strict/outputs/ci-cooperative91/actual-full-native-case-audit.json
       - run: python strict/hotspot-satcom/test_termination.py
       - run: python strict/hotspot-satcom/test_phase_method.py
       - name: Author-source Rician coefficient contradiction (exact algebra, no simulation)
@@ -117,3 +123,5 @@ jobs:
           path: |
             strict/outputs/ci-cooperative91/native-audit.json
             strict/outputs/ci-cooperative91/python-audit.json
+            strict/outputs/ci-cooperative91/actual-AP-QT-audit.json
+            strict/outputs/ci-cooperative91/actual-full-native-case-audit.json

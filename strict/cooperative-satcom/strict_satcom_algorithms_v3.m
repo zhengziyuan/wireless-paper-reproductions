@@ -9,18 +9,23 @@ ap=strict_satcom_core_v3('ap_evaluate',W,mu,C,data.gt_second,off);
 base=strict_satcom_core_v3('ap_evaluate',W0,mu,C,data.gt_second,off);
 outputs=struct('scheme',{},'evaluation',{},'history',{},'status',{});
 outputs(1)=struct('scheme','AP-NoRIS','evaluation',base,'history',h0,'status',s0);
+strict_satcom_capture('final',struct('scheme','AP-NoRIS','W',W0,'p',[],'phi',phi,'no_ris',true));
 outputs(2)=struct('scheme','AP-AO','evaluation',ap,'history',hap,'status',sap);
+strict_satcom_capture('final',struct('scheme','AP-AO','W',W,'p',[],'phi',apPhi,'no_ris',false));
 for tts=[false,true]
     if tts, prefix='MR-TTS'; else, prefix='MR-S'; end
     coef0=strict_satcom_models('mr_components',data,phi,tts,true);
     pinit=mr_initial(coef0,powerLimit,interferenceLimit); [p0,h,stop]=mr_power(coef0,pinit,powerLimit,interferenceLimit,settings);
     outputs(end+1)=struct('scheme',[prefix,'-NoRIS'],'evaluation',mr_evaluate(p0,coef0),'history',h,'status',stop); %#ok<AGROW>
+strict_satcom_capture('final',struct('scheme',[prefix,'-NoRIS'],'W',[],'p',p0,'phi',phi,'no_ris',true));
     coef=strict_satcom_models('mr_components',data,apPhi,tts);
     [p,h,stop]=mr_power(coef,p0,powerLimit,interferenceLimit,settings); stop.phase_source_converged=sap.converged;stop.algorithm_success=stop.algorithm_success&&sap.algorithm_success;
     outputs(end+1)=struct('scheme',[prefix,'-PA'],'evaluation',mr_evaluate(p,coef),'history',h,'status',stop); %#ok<AGROW>
+strict_satcom_capture('final',struct('scheme',[prefix,'-PA'],'W',[],'p',p,'phi',apPhi,'no_ris',false));
     [tsPhi,p,h,stop]=mr_two_stage(data,phi,p0,powerLimit,interferenceLimit,settings,tts);
     coef=strict_satcom_models('mr_components',data,tsPhi,tts);
     outputs(end+1)=struct('scheme',[prefix,'-TS'],'evaluation',mr_evaluate(p,coef),'history',h,'status',stop); %#ok<AGROW>
+strict_satcom_capture('final',struct('scheme',[prefix,'-TS'],'W',[],'p',p,'phi',tsPhi,'no_ris',false));
 end
 end
 
@@ -54,6 +59,7 @@ status=scheme_status({relative_stop(history,s.qt_max_iterations,s.relative_toler
 end
 
 function [phi,history,status]=rmo(phi,fg,s,vectorObjective,increment)
+initialPhi=phi;
 [value,g]=fg(phi); history=min(value);
 if vectorObjective,initialSlope=sum(abs(g).^2,2);else,initialSlope=sum(abs(g(:)).^2);end
 seed=1./sqrt(max(initialSlope,realmin));
@@ -87,6 +93,11 @@ end
 status=gradient_stop(norm(g(:)),numel(history)-1,s.rmo_max_iterations,s.gradient_tolerance);
 status.initial_step_contract='alternating_positive_BB1_BB2_seeds_in_original_RGD_direction_before_original_Armijo; no gradient-threshold relaxation';
 if nargin>=5,status.objective_increment_contract='exact_original_moment_polynomial_ratio_logsumexp_increment';else,status.objective_increment_contract='direct_objective_difference';end
+details=functions(fg); context=struct(); sourceContext=details.workspace{1};
+for name={'data','W','p0','mu','interferenceLimit','tts'}
+    if isfield(sourceContext,name{1}),context.(name{1})=sourceContext.(name{1});end
+end
+strict_satcom_capture('phase',struct('initial_phi',initialPhi,'final_phi',phi,'gradient',g,'value',value,'history',history,'status',status,'context',context,'vector_objective',vectorObjective));
 end
 
 function [W,history,status]=ap_no_ris(data,phi,powerLimit,interferenceLimit,s)
