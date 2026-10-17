@@ -85,6 +85,12 @@ jobs:
         run: python tools/cooperative-stable-replay/audit_no_ris_input_bound.py --directory strict/outputs/ci-cooperative-power24/unpacked --reference-directory strict/outputs/ci-cooperative-power24/unpacked/reference-comparison --output strict/outputs/ci-cooperative-power24/NoRIS-input-bound.json
       - name: Unfitted complete power curves versus all192 source reference ordinates per language
         run: python tools/cooperative-stable-replay/compare_power_references.py --reference-directory strict/outputs/ci-cooperative-power24/unpacked/reference-comparison --curve-directory strict/outputs/ci-cooperative-power24/unpacked --output-dir strict/outputs/ci-cooperative-power24/reference-comparison
+      - name: Restore both actual new full8 Python controls on preserved056 065 inputs
+        run: python tools/cooperative-stable-replay/unpack_evidence.py --archive strict/validation/cooperative-corrected-python056-065-20261017/corrected-python056-065-full8-endpoint-tapes.tar.gz --expected-sha256 479d283e2873130c2b92f6aa9adfe7332b0d9fa2ab397c5d80b48389311dcaf2 --output-dir strict/outputs/ci-cooperative-python-controls/unpacked
+      - name: Actual new Python056 all8 states all46 phase stops and all31 QT candidates MP80 MP100
+        run: python tools/cooperative-stable-replay/audit_saved_python_case.py --result strict/outputs/ci-cooperative-python-controls/unpacked/case-056/case-python-recorded.json --output-dir strict/outputs/ci-cooperative-python-controls/case-056-MP80-MP100
+      - name: Actual new Python065 all8 states all45 phase stops and all35 QT candidates MP80 MP100
+        run: python tools/cooperative-stable-replay/audit_saved_python_case.py --result strict/outputs/ci-cooperative-python-controls/unpacked/case-065/case-python-recorded.json --output-dir strict/outputs/ci-cooperative-python-controls/case-065-MP80-MP100
       - name: All8190 actual native gradient values versus retained MP80
         run: python tools/cooperative-stable-replay/audit_saved_components.py --fixture strict/outputs/ci-cooperative91/unpacked/inputs/original-all91-inputs.mat --references strict/outputs/ci-cooperative91/unpacked/inputs/references.json --native-dir strict/outputs/ci-cooperative91/unpacked/native --output strict/outputs/ci-cooperative91/native-audit.json
       - name: All8190 independent Python gradient values versus retained MP80
@@ -164,6 +170,13 @@ jobs:
             strict/outputs/ci-cooperative-power24/all384-MP80-MP100.json
             strict/outputs/ci-cooperative-power24/NoRIS-input-bound.json
             strict/outputs/ci-cooperative-power24/reference-comparison/
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: actual-corrected-python056-065-endpoints-not-whole183-or-source-curve-agreement
+          path: |
+            strict/outputs/ci-cooperative-python-controls/case-056-MP80-MP100/
+            strict/outputs/ci-cooperative-python-controls/case-065-MP80-MP100/
       - uses: actions/upload-artifact@v4
         if: always()
         with:

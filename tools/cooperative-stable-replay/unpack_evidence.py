@@ -1,4 +1,4 @@
-"""Verify a declared immutable archive and its four complete numerical payloads."""
+"""Verify a declared immutable cooperative archive and every complete payload."""
 import argparse
 import hashlib
 import io
@@ -29,6 +29,8 @@ def unpack(archive,output,expected_sha):
         if set(names)!=set(manifest['files'])|{'manifest.json'}:raise ValueError('Missing or extra payload')
         if 'stage_count' in manifest:
             if manifest['stage_count']!=91 or manifest['complex_gradient_coordinates']!=8190:raise ValueError('Incomplete endpoint population')
+        elif manifest.get('corrected_python_case_ordinals')==[56,65]:
+            if (manifest.get('original_cases'),manifest.get('final_schemes'),manifest.get('phase_endpoints'),manifest.get('QT_candidates'))!=(2,8,91,66):raise ValueError('Incomplete corrected Python controls')
         elif manifest.get('original_cases')!=1 or manifest.get('final_schemes')!=8:raise ValueError('Incomplete original case population')
         data={m.name:tar.extractfile(m).read() for m in members}
     for name,spec in manifest['files'].items():

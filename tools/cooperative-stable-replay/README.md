@@ -64,3 +64,10 @@ ordinates per language are compared explicitly. Close language results do not
 establish source-curve agreement: an independent NoRIS relaxation bound shows
 that52/72 source NoRIS ordinates cannot be achieved on the current fixed inputs.
 Unreported physical coefficients remain unresolved; no parameters are fitted.
+
+[New full Python controls for056/065](../../strict/validation/cooperative-corrected-python056-065-20261017/README.md)
+now close both actual original eight-scheme executions on byte-identical old
+inputs. All16 final states,91 phase endpoints/8190 coordinates per precision,
+and66 QT candidates pass independent MP80/MP100. The complete new endpoint
+tapes and exact source-bound recorder are included. Old failed audits and old
+whole-case flags are preserved; these new controls do not certify all183 cases.
