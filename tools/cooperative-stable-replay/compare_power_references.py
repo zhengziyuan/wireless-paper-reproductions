@@ -12,7 +12,7 @@ import sys
 
 import numpy as np
 from audit_native_case import sha
-from build_power_curve_views import read, require, write
+from build_power_curve_views import SCOPES, read, require, write
 
 STRICT = Path(__file__).resolve().parents[2] / 'strict'
 sys.path.insert(0, str(STRICT))
@@ -25,7 +25,8 @@ COLORS = ((.376, .447, .455), (.702, .702, .702), (.439, .384, .2), (.443, .114,
           (.761, .071, .573), (1., .655, .196), (.373, .741, 1.), (.937, .251, .251))
 SOURCES = {'power': ((2, 'plot_P_T_2.eps'), (3, 'plot_P_T_1.eps')),
            'interference': ((4, 'plot_varsigma_1.eps'), (5, 'plot_varsigma_2.eps')),
-           'subsurfaces': ((6, 'plot_MN_1.eps'), (7, 'plot_MN_2.eps'))}
+           'subsurfaces': ((6, 'plot_MN_1.eps'), (7, 'plot_MN_2.eps')),
+           'ground': ((8, 'plot_beta_1.eps'), (9, 'plot_beta_2.eps'), (10, 'plot_beta_3.eps'))}
 
 
 def extract(path, figure):
@@ -33,20 +34,22 @@ def extract(path, figure):
     # A gray stroke is exactly equal RGB, not a fitted color conversion. The
     # common parser otherwise rejects this eighth, genuinely gray curve.
     normalized = re.sub(rf'(?m)^({NUMBER}) GC\s*$', lambda m: ' '.join([m[1]]*3) + ' RC', text)
-    require(figure in (2, 3, 4, 5, 6, 7), 'Only explicitly calibrated original panels are supported')
+    require(figure in range(2, 11), 'Only explicitly calibrated original panels are supported')
     interference = figure in (4, 5)
     subsurfaces = figure in (6, 7)
+    ground = figure in (8, 9, 10)
     left, right, bottom, ymin, ymax = {2:(56,613,421,0,7.5), 3:(56,613,421,0,3.5),
         4:(48,606,431,0,14), 5:(56,606,429,0,4.5),
-        6:(50,615,429,2,11), 7:(55,615,429,1,5)}[figure]
-    has_tail = not interference and not subsurfaces
+        6:(50,615,429,2,11), 7:(55,615,429,1,5),
+        8:(58,615,421,1,4), 9:(58,615,421,2,6.5), 10:(58,615,421,2.5,7.5)}[figure]
+    has_tail = figure in (2, 3)
     paths = eps_paths(normalized, [left, 10, right+.1 if has_tail else right, bottom])
     require(len(paths) == 8 and [tuple(p['rgb']) for p in paths] == list(COLORS),
             'All eight original curve paths must match their visually verified legend colors')
-    xmax = .12 if interference else (45 if subsurfaces else (32 if figure == 2 else 64))
-    xmin = .01 if interference else (5 if subsurfaces else 1)
+    xmax = 30 if ground else (.12 if interference else (45 if subsurfaces else (32 if figure == 2 else 64)))
+    xmin = -12 if ground else (.01 if interference else (5 if subsurfaces else 1))
     expected_x = (np.arange(1,13)/100 if interference else (np.arange(5,46,5) if subsurfaces
-                  else 2**np.arange(0,(5 if figure==2 else 6)+.01,.5)))
+                  else (np.arange(-12,31,3) if ground else 2**np.arange(0,(5 if figure==2 else 6)+.01,.5))))
     curves = []
     for label, p in zip(LABELS, paths):
         xy = np.asarray(p['path_coordinates'])
@@ -72,10 +75,10 @@ def extract(path, figure):
         data_kind='original_plot_vector_reference_NOT_simulation', curves=curves,
         axis_calibration=dict(rectangle=[left, 10, right, bottom], x_range=[xmin, xmax], y_range=[ymin, ymax],
             scale='linear in displayed coordinates and linear SINR', axes_visually_verified=True,
-            source_horizontal_unit='RIS subsurface count' if subsurfaces else 'W as printed in original EPS',
-            simulation_horizontal_unit='noise-normalized I/N' if interference else ('RIS subsurface count' if subsurfaces else 'W'),
+            source_horizontal_unit='RIS-to-LU Rician factor dB' if ground else ('RIS subsurface count' if subsurfaces else 'W as printed in original EPS'),
+            simulation_horizontal_unit='RIS-to-LU Rician factor dB' if ground else ('noise-normalized I/N' if interference else ('RIS subsurface count' if subsurfaces else 'W')),
             source_to_simulation_horizontal_unit_conformance_verified=not interference,
-            unit_scope_note='Original interference EPS prints W and marks I/N=-12.2dB. The supplied implementation uses noise-normalized I/N; scalar-grid pairing does not resolve this source-unit conflict.' if interference else ('M is the RIS subsurface count.' if subsurfaces else 'Power is expressed in W.'),
+            unit_scope_note='RIS-to-LU Rician factor is expressed in dB; the three satellite-to-ground factors are0/10/20dB.' if ground else ('Original interference EPS prints W and marks I/N=-12.2dB. The supplied implementation uses noise-normalized I/N; scalar-grid pairing does not resolve this source-unit conflict.' if interference else ('M is the RIS subsurface count.' if subsurfaces else 'Power is expressed in W.')),
             original_legend_colors_visually_verified=True),
         export_tail_note=f'All{len(expected_x)} path points per curve are in-axis and retained; there is no clipping tail.' if not has_tail else 'Each source polyline has one same-ordinate extension0.066 path units beyond the clipped right axis. All raw coordinates are retained; only the11/13 actual in-axis abscissas are compared.',
         EPS_coordinate_decimal_step=.001, maximum_ordinate_rounding_resolution=(ymax-ymin)/(bottom-10)*.001,
@@ -112,7 +115,7 @@ def run(a):
             reports.append(dict(language=language, figure=figure, all_curves_and_grids_complete=True,
                 points=sum(c['matched_samples'] for c in result['curves']),
                 maximum_absolute_linear_SINR_gap=result['maximum_observed_absolute_linear_SINR_gap']))
-    count = 18 if a.case_scope == 'subsurfaces' else 24
+    count = len(SCOPES[a.case_scope][1])
     summary = dict(scope=f'Unfitted all{count} source {a.case_scope} abscissas x8 schemes x2 languages against private-author EPS vectors',
         case_scope=a.case_scope, horizontal_units_resolved=a.case_scope!='interference',
         comparisons=reports, original_points_per_language=count*8, no_reference_numbers_enter_simulation=True,

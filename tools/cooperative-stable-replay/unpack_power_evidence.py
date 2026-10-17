@@ -21,7 +21,8 @@ def unpack(packet, output):
         raise FileExistsError('Preserve prior numerical output; select a fresh directory')
     manifest = json.loads((packet/'archive-manifest.json').read_bytes())
     scope=manifest.get('case_scope','power')
-    cohorts = {'power':list(range(24)), 'interference':list(range(24,48)), 'subsurfaces':list(range(48,66))}
+    cohorts = {'power':list(range(24)), 'interference':list(range(24,48)),
+               'subsurfaces':list(range(48,66)), 'ground':list(range(66,111))}
     if scope not in cohorts:
         raise ValueError('Unknown exact complete source cohort')
     expected_ordinals = cohorts[scope]; count = len(expected_ordinals); states = count*16

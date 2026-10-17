@@ -107,6 +107,8 @@ jobs:
         run: python tools/cooperative-stable-replay/audit_no_ris_input_bound.py --directory strict/outputs/ci-cooperative-subsurfaces18/unpacked --reference-directory strict/outputs/ci-cooperative-subsurfaces18/unpacked/reference-comparison --output strict/outputs/ci-cooperative-subsurfaces18/NoRIS-input-bound.json
       - name: RIS size unfitted all144 source ordinates with original nonzero vertical offsets
         run: python tools/cooperative-stable-replay/compare_power_references.py --case-scope subsurfaces --reference-directory strict/outputs/ci-cooperative-subsurfaces18/unpacked/reference-comparison --curve-directory strict/outputs/ci-cooperative-subsurfaces18/unpacked --output-dir strict/outputs/ci-cooperative-subsurfaces18/reference-comparison
+      - name: All45 original ground-factor pairs and720 final states at MP80 MP100
+        run: python tools/cooperative-stable-replay/replay_ground45_evidence.py --packet strict/validation/cooperative-ground45-dual-final-states-20261017 --output-dir strict/outputs/ci-cooperative-ground45
       - name: Actual GT pattern scalars and all diameter NoRIS bound with official source limits
         run: python tools/satellite-source-audit/replay_evidence.py --packet strict/validation/satellite-GT-pattern-and-diameter-family-20261017 --M18-directory strict/outputs/ci-cooperative-subsurfaces18/unpacked --input-bank strict/outputs/ci-cooperative183-inputs --output-dir strict/outputs/ci-satellite-GT-source
       - name: Actual full size MA6 Python witness all678 coordinates and all1000 draws
@@ -115,6 +117,8 @@ jobs:
         run: python -B tools/ma-saved-replay/replay_native_case.py --packet strict/validation/MA6-saved900-first-complete-math-witness-20261017 --output-dir strict/outputs/ci-MA6-first-native
       - name: Actual native900 closure and complete4500 row curve aggregation only
         run: python tools/ma-native-replay/replay_closed_evidence.py --packet strict/validation/MA6-native900-execution-closure-20261017 --output strict/outputs/ci-MA6-closed900-aggregate-replay.json
+      - name: Complete MA6 original45 vectors and all4500 geometry aggregates with SD SE
+        run: python tools/ma-native-replay/replay_reference_evidence.py --closed-packet strict/validation/MA6-native900-execution-closure-20261017 --packet strict/validation/MA6-closed900-original-reference-20261017 --output-dir strict/outputs/ci-MA6-original-reference
       - name: Restore both actual new full8 Python controls on preserved056 065 inputs
         run: python tools/cooperative-stable-replay/unpack_evidence.py --archive strict/validation/cooperative-corrected-python056-065-20261017/corrected-python056-065-full8-endpoint-tapes.tar.gz --expected-sha256 479d283e2873130c2b92f6aa9adfe7332b0d9fa2ab397c5d80b48389311dcaf2 --output-dir strict/outputs/ci-cooperative-python-controls/unpacked
       - name: Actual new Python056 all8 states all46 phase stops and all31 QT candidates MP80 MP100
@@ -234,3 +238,10 @@ jobs:
         with:
           name: actual-GT-pattern-and-all-diameter-bound-not-author-input-recovery
           path: strict/outputs/ci-satellite-GT-source/
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ground45-final-physics-and-MA6-source-gaps-not-full-paper-reproduction
+          path: |
+            strict/outputs/ci-cooperative-ground45/
+            strict/outputs/ci-MA6-original-reference/

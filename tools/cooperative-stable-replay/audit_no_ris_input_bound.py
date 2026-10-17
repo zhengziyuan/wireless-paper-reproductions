@@ -18,7 +18,7 @@ import time
 import mpmath as mp
 import numpy as np
 from audit_native_case import sha
-from build_power_curve_views import read, require, write
+from build_power_curve_views import SCOPES, read, require, write
 import mp_phase_reference as ref
 
 
@@ -62,17 +62,24 @@ def audit(directory, reference_directory, output):
     require(not output.exists(), 'Preserve previous bound diagnostic')
     first_index = read(directory/'final-state-index.json')
     scope = first_index.get('case_scope', 'power')
-    require(scope in ('power', 'interference', 'subsurfaces'), 'Unsupported original sweep')
-    figures = {'power':(2,3), 'interference':(4,5), 'subsurfaces':(6,7)}[scope]
-    count = 18 if scope == 'subsurfaces' else 24
+    require(scope in SCOPES, 'Unsupported original sweep')
+    _, ordinals, _, figures = SCOPES[scope]
+    count = len(ordinals)
+    require(first_index.get('expected_case_ordinals', ordinals) == ordinals and
+            first_index.get('original_source_figures', figures) == figures,
+            'Exact complete original cohort and source figures required')
     paths = [directory/'final-state-index.json', directory/'final-states.npz',
              directory/'python-curve-view.json', directory/'matlab-curve-view.json',
-             reference_directory/f'original-figure-{figures[0]}-vector-reference.json',
-             reference_directory/f'original-figure-{figures[1]}-vector-reference.json', Path(__file__), Path(ref.__file__)]
+             *[reference_directory/f'original-figure-{figure}-vector-reference.json' for figure in figures],
+             Path(__file__), Path(ref.__file__)]
     before = {str(i)+':'+p.name: sha(p) for i, p in enumerate(paths)}
     index = read(paths[0]); require(index['array_bank_sha256'] == sha(paths[1]), 'Actual array bank differs')
     references = {c['label']: c for c in read(paths[4])['curves']}
     views = {language: read(directory/(language+'-curve-view.json')) for language in ('python', 'matlab')}
+    for language in views:
+        require(sorted(c['ordinal'] for c in index['cases'] if c['language']==language) == ordinals and
+                sorted(p['source_case_ordinal'] for p in views[language]['results']) == ordinals,
+                'Missing or duplicate original state/curve slot')
     lanes, values = {}, {}; started = time.perf_counter()
     with np.load(paths[1], allow_pickle=False) as arrays:
         for digits in (80, 100):
@@ -111,9 +118,12 @@ def audit(directory, reference_directory, output):
             elif scope=='interference':
                 require(24<=ordinal<48, 'Exact original interference slots required')
                 figure=4 if ordinal<36 else 5;offset=ordinal-24 if figure==4 else ordinal-36
-            else:
+            elif scope=='subsurfaces':
                 require(48<=ordinal<66, 'Exact original RIS-size slots required')
                 figure=6 if ordinal<57 else 7;offset=ordinal-48 if figure==6 else ordinal-57
+            else:
+                require(66<=ordinal<111, 'Exact original45 ground-factor slots required')
+                figure=8+(ordinal-66)//15;offset=(ordinal-66)%15
             case = next(c for c in index['cases'] if c['language'] == language and c['ordinal'] == ordinal)
             rdoc = read(reference_directory/f'original-figure-{figure}-vector-reference.json')
             refs = {r['label']: r for r in rdoc['curves']}
@@ -134,7 +144,7 @@ def audit(directory, reference_directory, output):
     after = {str(i)+':'+p.name: sha(p) for i, p in enumerate(paths)}
     report = dict(scope=f'Optimizer-independent NoRIS upper bound for the actual binary input groups and all{count*3} source NoRIS ordinates per language',
         case_scope=scope, source_horizontal_unit_conformance_verified=scope!='interference',
-        source_unit_caveat='Source EPS prints W while implementation uses noise-normalized I/N. Source ordinate comparison is conditional on identifying these scalar grids, not proof that the original W input violates the bound.' if scope=='interference' else 'Power-sweep inputs use the actual saved noise-normalized GT limit.',
+        source_unit_caveat='Source EPS prints W while implementation uses noise-normalized I/N. Source ordinate comparison is conditional on identifying these scalar grids, not proof that the original W input violates the bound.' if scope=='interference' else 'Actual saved noise-normalized GT limits are retained; the complete original source abscissas are paired without fitting.',
         source_input_sha256=before, source_and_inputs_unchanged=before == after, mathematical_bound_assumptions=
         ['one shared GT interference limit', 'positive-definite GT second moments', 'nonnegative MR powers and channel variances',
          'original noncoherent sum-of-powers useful numerator', 'denominator at least positive noise plus GEO interference'],

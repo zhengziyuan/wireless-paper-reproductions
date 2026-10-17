@@ -37,6 +37,15 @@ compared with the existing saved Python900 composition. Its complete data and
 limits are in the [closed900 packet](../../strict/validation/MA6-native900-execution-closure-20261017/README.md).
 The first native RAW has passed
 the independent paired reader in the [public first-case witness](../../strict/validation/MA6-saved900-first-complete-math-witness-20261017/README.md).
-The full900 independent mathematical readers, original-author inputs/curves
+The full900 independent mathematical readers, original-author input recovery
 and full-paper validation remain open. The public compact closure reader
 checks4500 aggregate rows; it does not recheck the externally preserved RAW.
+
+The [complete Fig6 original-reference comparison](../../strict/validation/MA6-closed900-original-reference-20261017/README.md)
+now pairs all45 stored curve points per language with the actual R2 source
+vectors and recomputes geometry SD/SE from all4500 public aggregate rows.
+`compare_closed_curve_reference.py` optionally revalidates the original private
+EPS; `replay_reference_evidence.py` verifies both public packets and repeats
+all source/mean/variability/ranking calculations. Maximum source gap2.4759
+bit/s/Hz and the R2 prose/12dBm ranking qualification remain visible; no
+gain fitting, original-ensemble recovery or full900 mathematical pass is claimed.

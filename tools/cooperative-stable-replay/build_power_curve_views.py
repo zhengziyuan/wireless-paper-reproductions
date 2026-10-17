@@ -1,4 +1,4 @@
-"""Bind two complete saved power, interference or RIS-size sweeps.
+"""Bind complete saved power, interference, RIS-size or ground-factor cohorts.
 
 Every source input slot and all eight schemes are required. Raw returns, including
 their dispatcher label ``base`` and historical audit flags, remain untouched.
@@ -28,6 +28,7 @@ SCOPES = {
     'power': (('power_kL20', 'power_kL0'), list(range(24)), [11, 13], [2, 3]),
     'interference': (('interference_kL20', 'interference_kL0'), list(range(24, 48)), [12, 12], [4, 5]),
     'subsurfaces': (('subsurfaces_kL20', 'subsurfaces_kL0'), list(range(48, 66)), [9, 9], [6, 7]),
+    'ground': (('ground_kL0', 'ground_kL10', 'ground_kL20'), list(range(66, 111)), [15, 15, 15], [8, 9, 10]),
 }
 
 
@@ -126,14 +127,14 @@ def build(a):
     scope = getattr(a, 'case_scope', 'power'); sweeps, ordinals, lengths, figures = SCOPES[scope]
     count = len(ordinals)
     cases = [c for c in read(a.case_index)['cases'] if c['sweep'] in sweeps]
-    require([c['ordinal'] for c in cases] == ordinals, 'Complete original two-sweep slots required')
+    require([c['ordinal'] for c in cases] == ordinals, 'Every exact original cohort slot required')
     require([sum(c['sweep'] == s for c in cases) for s in sweeps] == lengths,
-            'All original abscissas in both complete source sweeps required')
+            'All original abscissas in every complete source sweep required')
     followers = [read(p / 'progress.json') for p in (a.phase_dir, a.physics_dir, a.moment_dir)]
     records = [{r['ordinal']: r for r in d['records']} for d in followers]
     arrays, groups, states, provenance, comparisons = {}, {}, [], [], []
     views = {language: dict(paper_id='cooperative-satcom', language=language,
-        scope=f'Two complete original-source {scope} sweeps, all{count} slots and eight schemes; saved numerical returns',
+        scope=f'{len(sweeps)} complete original-source {scope} sweeps, all{count} slots and eight schemes; saved numerical returns',
         original_source_figures=figures,
         source_unchanged_during_run=True, results=[],
         source_case_index_sha256=sha(a.case_index),

@@ -82,3 +82,14 @@ All144 source ordinates per language are compared with the original nonzero
 vertical-axis offsets preserved. All54 source NoRIS ordinates per language
 exceed the current fixed-input relaxation bound; source-conforming physical
 inputs and full-paper reproduction remain unresolved.
+
+The [complete45 paired ground-factor cases](../../strict/validation/cooperative-ground45-dual-final-states-20261017/README.md)
+retain all15 points for each kappa_L=0/10/20dB cohort,720 actual final states
+and360 original source ordinates per language. All5760 final scalar fields
+per precision pass MP80/MP100. Source minima1/2/2.5 stay explicit in the
+reviewed plots; all135 NoRIS source values per language exceed the current
+fixed-input bound. No coefficient is fitted to that discrepancy.
+`replay_ground45_evidence.py` restores and rechecks all actual inputs, final
+physics, source comparisons, plot-data associations and NoRIS invariance.
+Its explicit exact-local-report reuse option requires every complete input
+and current math-source byte hash to match; default and CI re-evaluate all720.
