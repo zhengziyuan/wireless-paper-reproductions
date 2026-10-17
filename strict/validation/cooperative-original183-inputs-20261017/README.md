@@ -13,6 +13,16 @@ with the same183 points,8 scheme names and1000 configured moment draws. Old
 prepared/failed flags are preserved in their original library; they are not
 rewritten as success. The input archive is not an execution certificate.
 
+`original-case-index.json` additionally preserves all183 original ordinal,
+sweep/axis/value and configuration-hash associations across15 sweeps. The
+reader binds every label to its exact restored reported-scene inputs. This is
+needed because the individual native calls execute through the same `base`
+entry; their returned `base` label alone does not identify the original curve.
+This auxiliary index is checked and restored as a185th file, without changing
+any configuration or the184-file archive. Historical field names such as
+`full_reported_scene` are retained from the original index; the accompanying
+configuration still discloses which values are unreported reconstruction controls.
+
 ```text
 python tools/cooperative-stable-replay/unpack_input_bank.py --packet strict/validation/cooperative-original183-inputs-20261017 --output-dir new-original183-inputs
 ```
