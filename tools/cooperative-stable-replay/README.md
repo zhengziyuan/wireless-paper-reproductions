@@ -44,3 +44,14 @@ closed point of the live original183 campaign, retaining failures.
 optimization; `audit_moment_draws.py` reconstructs every received-signal sample.
 This does not certify all distinct channel inputs or complete183/reference
 agreement. Raw replay operands remain in the external numerical-data library.
+
+`follow_moment_groups.py` reuses a verified configured moment stream only when
+every coefficient array, shape, seed, count and original source hash matches.
+It exports/rechecks a full original stream for each new exact signature. The
+live campaign has exercised both reuse and new-group branches; no optimization
+or fresh performance-MC experiment is duplicated. It holds the exact native
+producer process object and retains failed cases separately.
+
+The [complete183 fixed inputs](../../strict/validation/cooperative-original183-inputs-20261017/README.md)
+are delivered without omitted configurations. `unpack_input_bank.py` restores
+them after checking every payload; old execution-plan metadata is not upgraded.

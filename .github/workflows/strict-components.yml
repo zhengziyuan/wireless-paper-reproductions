@@ -75,6 +75,8 @@ jobs:
         run: python strict/cooperative-satcom/test_positive_wick.py
       - name: Restore actual complete91 cooperative endpoint data
         run: python tools/cooperative-stable-replay/unpack_evidence.py --archive strict/validation/cooperative-positive-wick-20261017/native91-positive-wick.tar.gz --expected-sha256 1cb56dd63f86613e6436c456cbf76bfe6c151c6410b0956f9a07e55281e199cc --output-dir strict/outputs/ci-cooperative91/unpacked
+      - name: Restore all183 exact original cooperative configuration slots (no optimization)
+        run: python tools/cooperative-stable-replay/unpack_input_bank.py --packet strict/validation/cooperative-original183-inputs-20261017 --output-dir strict/outputs/ci-cooperative183-inputs
       - name: All8190 actual native gradient values versus retained MP80
         run: python tools/cooperative-stable-replay/audit_saved_components.py --fixture strict/outputs/ci-cooperative91/unpacked/inputs/original-all91-inputs.mat --references strict/outputs/ci-cooperative91/unpacked/inputs/references.json --native-dir strict/outputs/ci-cooperative91/unpacked/native --output strict/outputs/ci-cooperative91/native-audit.json
       - name: All8190 independent Python gradient values versus retained MP80
@@ -95,6 +97,8 @@ jobs:
         run: python tools/isac-line-search-replay/audit_stable_derivatives.py --capture strict/validation/isac045-actual-line-search-20261017 --output strict/outputs/ci-isac-actual80/stable-all-gradient-audit.json
       - name: Original remaining phase budget retains unconverged outcome
         run: python tools/isac-line-search-replay/continue_phase.py --capture strict/validation/isac045-actual-line-search-20261017 --output-dir strict/outputs/ci-isac-actual80/original-budget-suffix
+      - name: Actual saved warm phase stop with explicit unreported cap (no new optimizer)
+        run: python tools/isac-line-search-replay/audit_phase_probe_mp.py --capture strict/validation/isac045-actual-line-search-20261017 --probe strict/validation/isac045-actual-line-search-20261017/warm-phase-unreported-cap-v1 --output strict/outputs/ci-isac-actual80/warm-phase-MP-stop.json
       - name: Actual native full-size MIS Fig8 start all17 saved endpoints
         run: python tools/mis-native-replay/audit_numeric_view.py --input strict/validation/MIS-Fig8-native-original12000-20261017/native-MIS-start000001-all17-endpoints.json --output strict/outputs/ci-MIS-native-Fig8/first-start.json
       - run: python strict/hotspot-satcom/test_termination.py

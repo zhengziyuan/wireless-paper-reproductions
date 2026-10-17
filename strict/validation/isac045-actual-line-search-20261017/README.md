@@ -65,3 +65,32 @@ source hashes and the saved binary64 fields, then records its own runtime
 separately. It need not claim bitwise equality of BLAS/path rounding across
 platforms. The original saved vectors and all independent MP/physical/stop
 bounds remain unchanged; old run completion flags are never upgraded.
+
+## Separate unreported-cap phase probe
+
+The current source-qualified configuration explicitly lists all numerical
+caps as unreported implementation settings. A new fixed-W/rotation/iota phase
+call starts at the actual failed phase and uses the original solver's empty
+initial PR history. Its safety cap is explicitly100000 instead of500; every
+physical input, gradient stop, direction rule, retraction and Armijo control
+is retained. It reaches the existing normalized1e-6 stop at check960.
+
+Independent MP80 and MP100 full-path evaluation gives normalized gradient
+**8.857765342521872e-7**, with maximum precision disagreement below7.90e-76.
+The full physical phase domain and original transmit-power limit also pass.
+The objective increases by2.759116853883087e-7 from the frozen starting point.
+The saved actual phase/history/configuration and complete gradient references
+are under `warm-phase-unreported-cap-v1/`.
+
+This is a new warm phase call, **not continuation of the original PR history**,
+and not a cold six-scheme result. It demonstrates a phase-block stop after an
+explicit unreported-cap change; it does not establish whole-case convergence,
+original-paper figure agreement or a source-reported100000 budget.
+
+```text
+python tools/isac-line-search-replay/audit_phase_probe_mp.py --capture strict/validation/isac045-actual-line-search-20261017 --probe strict/validation/isac045-actual-line-search-20261017/warm-phase-unreported-cap-v1 --output new-warm-phase-MP-stop.json
+```
+
+`probe_phase_budget.py` can independently repeat this same full-dimensional
+fixed-W call with an explicit cap and a fresh destination. Its name and output
+do not promote it to a full paper scenario.
