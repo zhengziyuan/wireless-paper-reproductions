@@ -1,0 +1,20 @@
+{
+  "scope": "All24 original power cases x8 actual final states x2 languages; independent MP80/100 final physics",
+  "source_and_inputs_unchanged": true,
+  "cases_per_language": 24,
+  "schemes_per_case": 8,
+  "actual_final_states_per_precision": 384,
+  "scalar_field_coordinates_per_precision": 3072,
+  "field_comparison_policy": "1e-9+1e-10*abs(reference)",
+  "original_physical_constraint_absolute_tolerance": 1e-05,
+  "phase_unit_tolerance": 1e-10,
+  "maximum_MP80_MP100_difference": "1.44314373583350587226912014849580308630941392501522704172402594997097022417266718526513080488434525959947e-79",
+  "precision_absolute_bound": "1e-40",
+  "all384_final_states_physics_and_precision_pass": true,
+  "independently_optimized_solution_equality_certified": false,
+  "phase_stops_QT_candidates_MC_reference_or_full_paper_pass": false,
+  "elapsed_seconds": 312.25389320001705,
+  "optimizer_or_random_draw_calls": 0,
+  "full_detail_file_in_archive": "independent-all384-final-states-MP80-MP100.json",
+  "full_detail_sha256": "74ba60ae75b8efd880fdad80be80a4598f72475b4ad2febbf42a008a4408f4c7"
+}

@@ -55,3 +55,12 @@ producer process object and retains failed cases separately.
 The [complete183 fixed inputs](../../strict/validation/cooperative-original183-inputs-20261017/README.md)
 are delivered without omitted configurations. `unpack_input_bank.py` restores
 them after checking every payload; old execution-plan metadata is not upgraded.
+
+The [complete24 paired power cases](../../strict/validation/cooperative-power24-dual-final-states-20261017/README.md)
+now retain all384 actual final states and all four full curves. The independent
+MP80/MP100 reader checks every final physical field and bound without an
+optimizer. All192 MATLAB/Python minimum-SINR pairs and all192 original-reference
+ordinates per language are compared explicitly. Close language results do not
+establish source-curve agreement: an independent NoRIS relaxation bound shows
+that52/72 source NoRIS ordinates cannot be achieved on the current fixed inputs.
+Unreported physical coefficients remain unresolved; no parameters are fitted.

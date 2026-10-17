@@ -1,4 +1,25 @@
 {
+  "cooperative_power24_paired_checkpoint": {
+    "date": "2026-10-17",
+    "evidence": "validation/cooperative-power24-dual-final-states-20261017/README.md",
+    "complete_power_sweeps_per_language": 2,
+    "all_original_power_abscissas_per_language": 24,
+    "schemes_per_case": 8,
+    "actual_final_states_publicly_available": 384,
+    "all384_final_states_independent_MP80_MP100_physics_pass": true,
+    "physical_scalar_coordinates_per_precision": 3072,
+    "maximum_separately_optimized_language_linear_SINR_gap": 0.0003274556857264521,
+    "maximum_separately_optimized_language_dB_SINR_gap": 0.0005055700435708078,
+    "same_state_tolerance_relaxed_to_claim_solution_equality": false,
+    "all192_original_reference_ordinates_paired_per_language": true,
+    "maximum_original_reference_linear_SINR_gap": 31.126981320090078,
+    "original_NoRIS_ordinates_exceeding_current_fixed_input_upper_bound_per_language": 52,
+    "original_NoRIS_ordinates_checked_per_language": 72,
+    "bound_discards_all_transmit_power_and_intrasystem_interference_constraints": true,
+    "unique_missing_gain_pattern_or_geometry_cause_identified": false,
+    "all183_historical_Python_MP_whole_case_flags_unchanged": true,
+    "full183_or_source_curve_or_full_paper_reproduction_pass": false
+  },
   "cooperative_AP_QT_checkpoint": {
     "date": "2026-10-17",
     "evidence": "validation/cooperative-ap-soc-20261017/README.md",
