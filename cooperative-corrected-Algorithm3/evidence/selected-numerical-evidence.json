@@ -1,0 +1,177 @@
+{
+  "schema": "selected-existing-source-bound-numerical-evidence-summary-v1",
+  "scope": "Existing selected historical numerical runs only; no new adapter numerical execution",
+  "selected_cases": [
+    {
+      "id": "Python-A",
+      "configuration": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25,
+        "kappa_N_dB": 10,
+        "kappa_R_dB": 9
+      },
+      "final_states": 8,
+      "QT_candidates": 34,
+      "phase_endpoints": 48,
+      "ownstate_numerical_scope_pass": true,
+      "complete_component_clock_readback_pass": true,
+      "moment_scope": "Configured1000 exact-source/input/fresh-seed historical full-vector recipe reuse; new production epoch primitive vectors were not individually captured",
+      "source": {
+        "receipt_id": "ACTUAL_PRIMARY_PYTHON_A_COMPLETE_COMPONENT_TIMING_8STATE_34QT_48PHASE_MC1000_SOURCE_BOUND_CLOSURE_V2.json",
+        "receipt_sha256": "8d8cc90f27dd4bb19397e4630f6c9781b521427e5afbd3385c17cbab70549be8",
+        "scope": "small selected proof mapping only: actual Python A scope only; complete clocks/8states/34QT/48phase/MC1000 source-bound proof"
+      }
+    },
+    {
+      "id": "Python-B",
+      "configuration": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 15,
+        "kappa_N_dB": 10,
+        "kappa_R_dB": 9
+      },
+      "actual_natural_exit_code": 0,
+      "populations": {
+        "final_states": 8,
+        "QT_candidates": 34,
+        "phase_endpoints": 48,
+        "phase_complex_coordinates_per_precision": 1440
+      },
+      "ownstate_numerical_scope_pass": true,
+      "original_stop_and_strict_selection_pass": true,
+      "complete_component_clock_readback_pass": true,
+      "moment_scope": "Each full configured1000 independent exact-source/input/seed recipe matched recorded aggregate; original production epoch per-draw vectors/RNG states were not captured",
+      "source": {
+        "receipt_id": "ACTUAL_PRIMARY_PYTHON_B_C_COMPLETE_COMPONENT_TIMING_NUMERICAL_NATURAL0_CLOSURE_V1.json",
+        "receipt_sha256": "161f7c8c896a56b35240ea2a8e27822a53289c1d692e6303ef94a458016e4cac",
+        "scope": "small selected proof mapping only: actual Python B/C own-scenario finite numerical/clock closure; not original Fig13 timing agreement"
+      }
+    },
+    {
+      "id": "Python-C",
+      "configuration": {
+        "J": 1,
+        "U": 2,
+        "N": 48,
+        "M": 25,
+        "kappa_N_dB": 10,
+        "kappa_R_dB": 9
+      },
+      "actual_natural_exit_code": 0,
+      "populations": {
+        "final_states": 8,
+        "QT_candidates": 41,
+        "phase_endpoints": 46,
+        "phase_complex_coordinates_per_precision": 2300
+      },
+      "ownstate_numerical_scope_pass": true,
+      "original_stop_and_strict_selection_pass": true,
+      "complete_component_clock_readback_pass": true,
+      "moment_scope": "Each full configured1000 independent exact-source/input/seed recipe matched recorded aggregate; original production epoch per-draw vectors/RNG states were not captured",
+      "source": {
+        "receipt_id": "ACTUAL_PRIMARY_PYTHON_B_C_COMPLETE_COMPONENT_TIMING_NUMERICAL_NATURAL0_CLOSURE_V1.json",
+        "receipt_sha256": "161f7c8c896a56b35240ea2a8e27822a53289c1d692e6303ef94a458016e4cac",
+        "scope": "small selected proof mapping only: actual Python B/C own-scenario finite numerical/clock closure; not original Fig13 timing agreement"
+      },
+      "actual_reconstructed_geometry": {
+        "power_W": 50,
+        "central_latitude_deg": 0,
+        "satellite_UPA_shape": [
+          6,
+          8
+        ],
+        "configuration_SHA256": "c680d4d50de42647fb8eaf782e9c737b2991d705e947f2f0369e788a2b51ce3a",
+        "distinct_from_Fig12_fair_single_satellite_P150W_latitude1_25deg": true
+      }
+    },
+    {
+      "id": "MATLAB-A",
+      "configuration": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 25,
+        "kappa_N_dB": 10,
+        "kappa_R_dB": 9
+      },
+      "actual_original_host_exit_code": 1,
+      "original_host_natural0_or_pipeline_pass": false,
+      "final_states": 8,
+      "QT_candidates": 34,
+      "phase_endpoints": 48,
+      "ownstate_numerical_scope_pass": true,
+      "same_state_cross_language_physical_evaluator_pass": true,
+      "optimized_minSINR_maximum_absolute_gap": 0.0053100658837621495,
+      "optimized_minSINR_maximum_relative_gap": 0.0015451043452339077,
+      "optimized_solution_equality_or_original_reference_certified": false,
+      "moment_scope": "Prior configured1000 full-vector recipe and current fixed-input moment audit; original current epoch per-draw primitive vectors not recorded",
+      "source": {
+        "receipt_id": "ACTUAL_NATIVE_A_FINAL_SOURCE_BOUND_OWNSTATE_AND_DUAL_REVIEW_CLOSURE_V2.json",
+        "receipt_sha256": "7fe1dfd0d66637e90c8127ca56b8f346690d4760fb844d2e2af6783a852c61e2",
+        "scope": "small selected proof mapping only: actual native A mathematical/dual comparison scope, original host exit1 retained"
+      }
+    },
+    {
+      "id": "MATLAB-B",
+      "configuration": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "M": 15,
+        "kappa_N_dB": 10,
+        "kappa_R_dB": 9
+      },
+      "actual_producer_natural_exit_code": 0,
+      "final_states": 8,
+      "QT_candidates": 34,
+      "phase_endpoints": 48,
+      "phase_complex_coordinates_per_precision": 1440,
+      "ownstate_numerical_scope_pass": true,
+      "own_phase_stops_domains_and_strict_selection_pass": true,
+      "same_state_cross_language_physical_evaluator_pass": true,
+      "optimized_minSINR_maximum_absolute_gap": 0.08270197627533538,
+      "optimized_minSINR_maximum_relative_gap": 0.027636522793141837,
+      "optimized_solution_equality_or_original_reference_certified": false,
+      "independent1000_reference_native_exit_code": 0,
+      "reference_wrapper_exit_code": 1,
+      "reference_wrapper_failure_retained": true,
+      "moment_scope": "New independent full1000 native reference with full12000 p/p2 scalar reference replay; original producer epoch per-draw MC vectors were not captured",
+      "original_producer_per_draw_MC_capture": false,
+      "A088_additional_finalcoef_supplement_not_inherited": true,
+      "full_Fig13_all183_or_paper_PASS": false,
+      "source": {
+        "receipt_id": "ACTUAL_NATIVE_B_OWNSTATE_SOURCE_FULL1000_REFERENCE_AND_DUAL_LANGUAGE_CLOSURE_V1.json",
+        "receipt_sha256": "834e7f7141a095435b565aa2f9a1b9b51b2ef9220d712fec9a14a38f24edb843"
+      },
+      "optimized_comparison_source": {
+        "receipt_id": "actual-native-Python-ownstates-and-unfitted-optimized-state-comparison.json",
+        "receipt_sha256": "c10e85aad0a84550cbd63fa0c4f9f33e58f0f6b0438e24aae59228d5ce310deb"
+      }
+    }
+  ],
+  "native_A088_additional_gate": {
+    "scope": "Only missing final-power channel coefficient and TS guard-role checks; original8 states/34QT/48phase/MC reused",
+    "supplement_reader_natural_exit": 0,
+    "original_A_host_exit1_retained": true,
+    "source": {
+      "receipt_id": "ACTUAL_NATIVE_A088_ONLY_MISSING_FINALCOEF_AND_ALL_TS_GUARD_ROLES_MP_SUPPLEMENT_V1.json",
+      "receipt_sha256": "ad7d96a0f16a644c19a0597f586252b8006f7a4c701779bea47b3a7f79f0d507",
+      "scope": "small selected proof mapping only: actual A088 missing final-coefficient/guard-role MP80/100 supplement; no rerun of old states"
+    },
+    "lifecycle_source": {
+      "receipt_id": "ACTUAL_FINITE_A088_MISSING_GATE_NATURAL_TERMINAL_AND_SOURCE_CLOSURE_V1.json",
+      "receipt_sha256": "78966935abac5d4b36d031d846ba56aa28167ece8682dd398299144f6baddb85",
+      "scope": "small selected proof mapping only: actual supplement finite child natural0/source interval; never upgrades original native A host1"
+    }
+  },
+  "all_failed_capped_and_unverified_outcomes_retained": true,
+  "legacy_affected_TS_results_not_relabelled_corrected": true,
+  "full183_complete_or_all_figures_or_original_reference_or_all_six_papers_PASS": false,
+  "new_portable_adapter_first_true_numerical_use_verified": false,
+  "full_local_recordings_and_large_receipts_not_bundled": true,
+  "receipt_digest_policy": "Receipt IDs and their previously sealed digests are copied from existing mappings. This preparation did not rehash old results or replay cases."
+}

@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "source_sha256": {
+    "base/core.py": "fdbe81b3d19e1c1aa62a015969017f24accdcdb6e7a709a65540576b49f0abf2",
+    "base/models.py": "45298c4f9037663cc33f67533f0727fc36f14a70c208927816375efca32b29f3",
+    "base/positive_wick.py": "4a35dd41f40931133e7a20d8270f6b7155cdd818f0b2c2674e6c429cda4a35f3",
+    "base/increments.py": "384114958637e7d86dbce3894ef653cd6fd6edd2e40883b6b3774a65767fa7ea",
+    "base/increments_v2.py": "d17b31e55dcca33f6737a1811def539c205eed63ba100b6175491d518ba362a7",
+    "base/algorithms.py": "3106b9c673757b73ccb350846c78aeae64739837e960b9c80b3fc62a3feaa5b2",
+    "base/spectral_rmo.py": "2d8ebbcb44801a99d5dfdfd0c954530e1d4a8653b4dfa467885be3068e3edeb1",
+    "base/core_qt_factored_v3.py": "4ec1d1825581f826a82d9b46a401b388d835c8533241b65e67633b07939b3120",
+    "base/qt_numerical_guard_v3.py": "654f69da5d949211900366e4c5520237e0106d97c7c42b9a7030dd4e9ef17312",
+    "base/termination.py": "5b25d0365aa9a21dca886250858221379b02f766ecaaa35277a560eef2ad685d",
+    "base/scenario.py": "7dbc490944c2fd7aaa2fc862068508530faab10b8c2dcb63eccf5511c74a62ba",
+    "base/run.py": "d9d064f05c7ec8f08b2b9c5a389f5d6cd5117701c15c1609dac6913f3d236131",
+    "base/receipts.py": "4bfb2a29f34ddf9e07c83dcb2fc7cc411c71ab3a8bf350959568444176f6168b",
+    "base/run_cooperative_v3_configured.py": "af82274dac0b0b25d43cd5125de1f4f09a0c932d32960210f55ec063b23da973",
+    "correction/algorithms_final_algorithm3_v2.py": "bf4ccd4f1abe080b39c6e783296af56201ff6e64efbcabcd8e5c3f142c0ef133",
+    "correction/final_algorithm3_p7_guard_v1.py": "7c1acf3be633841d4df1e77b340baf7edcc2441dc8ae4a0ed572145302adf8c0"
+  },
+  "origin_plan_sha256": "3cb73175deca35df75482822c1b0bbab99dce51812a1228718a8ad6f792d1283",
+  "source_origins": [
+    {
+      "source_root": "REPO",
+      "source_relative": "strict/cooperative-satcom/core.py",
+      "target_relative": "base/core.py",
+      "sha256": "fdbe81b3d19e1c1aa62a015969017f24accdcdb6e7a709a65540576b49f0abf2",
+      "byte_exact": true
+    },
+    {
+      "source_root": "REPO",
+      "source_relative": "strict/cooperative-satcom/models.py",
+      "target_relative": "base/models.py",
+      "sha256": "45298c4f9037663cc33f67533f0727fc36f14a70c208927816375efca32b29f3",
+      "byte_exact": true
+    },
+    {
+      "source_root": "REPO",
+      "source_relative": "strict/cooperative-satcom/positive_wick.py",
+      "target_relative": "base/positive_wick.py",
+      "sha256": "4a35dd41f40931133e7a20d8270f6b7155cdd818f0b2c2674e6c429cda4a35f3",
+      "byte_exact": true
+    },
+    {
+      "source_root": "REPO",
+      "source_relative": "strict/cooperative-satcom/increments.py",
+      "target_relative": "base/increments.py",
+      "sha256": "384114958637e7d86dbce3894ef653cd6fd6edd2e40883b6b3774a65767fa7ea",
+      "byte_exact": true
+    },
+    {
+      "source_root": "REPO",
+      "source_relative": "strict/cooperative-satcom/increments_v2.py",
+      "target_relative": "base/increments_v2.py",
+      "sha256": "d17b31e55dcca33f6737a1811def539c205eed63ba100b6175491d518ba362a7",
+      "byte_exact": true
+    },
+    {
+      "source_root": "REPO",
+      "source_relative": "strict/cooperative-satcom/algorithms.py",
+      "target_relative": "base/algorithms.py",
+      "sha256": "3106b9c673757b73ccb350846c78aeae64739837e960b9c80b3fc62a3feaa5b2",
+      "byte_exact": true
+    },
+    {
+      "source_root": "REPO",
+      "source_relative": "strict/cooperative-satcom/spectral_rmo.py",
+      "target_relative": "base/spectral_rmo.py",
+      "sha256": "2d8ebbcb44801a99d5dfdfd0c954530e1d4a8653b4dfa467885be3068e3edeb1",
+      "byte_exact": true
+    },
+    {
+      "source_root": "REPO",
+      "source_relative": "strict/cooperative-satcom/core_qt_factored_v3.py",
+      "target_relative": "base/core_qt_factored_v3.py",
+      "sha256": "4ec1d1825581f826a82d9b46a401b388d835c8533241b65e67633b07939b3120",
+      "byte_exact": true
+    },
+    {
+      "source_root": "REPO",
+      "source_relative": "strict/cooperative-satcom/qt_numerical_guard_v3.py",
+      "target_relative": "base/qt_numerical_guard_v3.py",
+      "sha256": "654f69da5d949211900366e4c5520237e0106d97c7c42b9a7030dd4e9ef17312",
+      "byte_exact": true
+    },
+    {
+      "source_root": "REPO",
+      "source_relative": "strict/cooperative-satcom/termination.py",
+      "target_relative": "base/termination.py",
+      "sha256": "5b25d0365aa9a21dca886250858221379b02f766ecaaa35277a560eef2ad685d",
+      "byte_exact": true
+    },
+    {
+      "source_root": "REPO",
+      "source_relative": "strict/cooperative-satcom/scenario.py",
+      "target_relative": "base/scenario.py",
+      "sha256": "7dbc490944c2fd7aaa2fc862068508530faab10b8c2dcb63eccf5511c74a62ba",
+      "byte_exact": true
+    },
+    {
+      "source_root": "REPO",
+      "source_relative": "strict/cooperative-satcom/run.py",
+      "target_relative": "base/run.py",
+      "sha256": "d9d064f05c7ec8f08b2b9c5a389f5d6cd5117701c15c1609dac6913f3d236131",
+      "byte_exact": true
+    },
+    {
+      "source_root": "REPO",
+      "source_relative": "strict/cooperative-satcom/receipts.py",
+      "target_relative": "base/receipts.py",
+      "sha256": "4bfb2a29f34ddf9e07c83dcb2fc7cc411c71ab3a8bf350959568444176f6168b",
+      "byte_exact": true
+    },
+    {
+      "source_root": "REPO",
+      "source_relative": "strict/cooperative-satcom/run_cooperative_v3_configured.py",
+      "target_relative": "base/run_cooperative_v3_configured.py",
+      "sha256": "af82274dac0b0b25d43cd5125de1f4f09a0c932d32960210f55ec063b23da973",
+      "byte_exact": true
+    },
+    {
+      "source_root": "CORR",
+      "source_relative": "python-candidate/algorithms_final_algorithm3_v2.py",
+      "target_relative": "correction/algorithms_final_algorithm3_v2.py",
+      "sha256": "bf4ccd4f1abe080b39c6e783296af56201ff6e64efbcabcd8e5c3f142c0ef133",
+      "byte_exact": true
+    },
+    {
+      "source_root": "CORR",
+      "source_relative": "python-candidate/final_algorithm3_p7_guard_v1.py",
+      "target_relative": "correction/final_algorithm3_p7_guard_v1.py",
+      "sha256": "7c1acf3be633841d4df1e77b340baf7edcc2441dc8ae4a0ed572145302adf8c0",
+      "byte_exact": true
+    }
+  ],
+  "copied_sources_only": true,
+  "data_banks_or_PDFs_copied": false
+}
