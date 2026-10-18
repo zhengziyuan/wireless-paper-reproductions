@@ -8,13 +8,19 @@ bindings. **5280 starts retain true combined convergence/feasibility flags;
 source-bound status flags, not recovered author results. Passing the stored-field check does
 not establish complete scientific reproduction.
 
-The scope of source closure is explicit: actual case-level native source
-bindings and the naturally closed missing-345 **saved-reader** are verified.
-The original native-population controller was still running at the root's
-observation, with its receipt-reuse loop at 4488/6000. No natural terminal or
-whole-run source closure is claimed for that controller. Existing saved cases
-can already cover all 6000 slots while that controller traverses their receipts.
-This is an observation snapshot, not a later live-status claim.
+The missing-345 **saved-reader** has naturally returned 0. The resumed native
+population controller has now also naturally returned 0 and completed its
+6000-slot receipt traversal. Its 52 watched job/source entries matched before
+and after the **current owned recovery interval**; this does not assert one
+continuous source interval extending before the resume. The earlier 4488/6000
+receipt-reuse observation remains a historical snapshot. The final census
+retains 5280 combined true and 720 false outcomes. Its 5999 optimizer-origin
+receipts and one reused case span earlier/imported cases: they do not mean this
+recovery newly launched 5999 optimizations. The legacy ownerV2 supplies its
+normal one-Popen poll/returncode-0 path and initial/prior-live identity alignment,
+without later V3-style fresh terminal birth/WinAPI observations. See the
+[controller closure addendum](native-controller-closure.json); all earlier
+summary/provenance snapshots and failed outcomes remain preserved.
 
 | Saved-evidence partition | Field match | Original combined true | Original combined false |
 |---|---:|---:|---:|
