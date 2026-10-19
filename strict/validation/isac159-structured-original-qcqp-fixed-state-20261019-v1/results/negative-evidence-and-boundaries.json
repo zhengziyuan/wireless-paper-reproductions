@@ -1,0 +1,57 @@
+{
+  "schema": "RETAINED_NEGATIVE_EVIDENCE_AND_UNVERIFIED_SCOPE_V1",
+  "original_failed_Q": {
+    "retained_in_exact_NPZ": true,
+    "scheme": "Rot-BS & Rot-RIS",
+    "rho": 10,
+    "original_guard_source_line": 122,
+    "generic_rho0_error_not_actual_input": true,
+    "actual_binary64_eigh_minimum": -1.0756323601823129e-07,
+    "exact_lower_Hermitian_MP_minimum": "-5.4876333340836496403672804894e-8",
+    "full_stored_Q_antiHermitian_residual": "1.1964867523503384175125006614e-7",
+    "theory_same_auxiliary_minimum": "4.8171012672314714596365733608e-8",
+    "original_failed_result_not_replaced": true
+  },
+  "captured_Pcomm": {
+    "stored_active_nullspace_pollution_Fro": "1.4644733327865679911098453523e-7",
+    "pollution_divided_by_original_alpha_plus_nu": "2.99291420636",
+    "factored_candidate_does_not_project_that_rounded_Pcomm": true,
+    "raw_reconstructed_P_matrices_are_diagnostics_not_solver_RHS": true
+  },
+  "prior_three_state_arithmetic_candidate": {
+    "expanded_intermediate_gate_pass": false,
+    "original_Python_natural_exit": 1,
+    "reference_report_SHA256": "f7cae4e21aa55da48d1f3321ca0bc7cb55c40eb4e10948ef19b1ebd4e77e49b3",
+    "extra_lip_ga1e_minus5_bound_was_new_borrowed_check_not_original_acceptance_standard": true,
+    "different_states_and_scope_not_repaired_by_this_single_QCQP": true,
+    "previous18_file_package_unchanged": true
+  },
+  "new_host_transport_failures": [
+    {
+      "original_run_natural_exit": 1,
+      "error": "SciPy default31-character MAT struct field limit; candidate solution had computed but serialization failed before any MATLAB launch",
+      "host_only_fix": "long_field_names=True; new output-v2 preserves partial-v1",
+      "candidate_math_sources_unchanged": true,
+      "no_old_optimizer_MC_or_MP_replay": true,
+      "v1_SHA256": "9951cc3d611694c5ab2dea971524791c7587997b96a3f05e3c0aaf20f995cce6",
+      "v2_SHA256": "8c2e3b9179ca1b437bb5f7b3c804427aa64133371122ec4e890c86128c31b16a",
+      "whole_V1_text_restored_by_two_host_only_inverses": true
+    },
+    {
+      "actual_native_v2_natural_exit": 1,
+      "host_errors": [],
+      "source_and_input_unchanged": true,
+      "error": "rho transported as SciPy int64; MATLAB integer arithmetic made alpha zero. Original jsondecode rho is double10.",
+      "fix": "Only fixture rho=float10; new v3 output preserves v2. Candidate math unchanged.",
+      "v2_SHA256": "8c2e3b9179ca1b437bb5f7b3c804427aa64133371122ec4e890c86128c31b16a",
+      "v3_SHA256": "12dadcc8a3ef58d3d1832df56223ccfa274dfa8384b18ca4e80b5bb19dd12ed7",
+      "whole_v2_text_restored_by_two_host_only_inverse_changes": true,
+      "no_new_strategy_jitter_tol_or_budget_change": true
+    }
+  ],
+  "rho_dtype_error_scope": "Only new fixed-subproblem MAT fixture transported JSON integer10 as int64; original MATLAB jsondecode uses double10. Old native production/public18-file package were not modified or implicated.",
+  "only_original_alpha_positive_supported": true,
+  "alpha0_rho0_negative_mu_other_dimensions_or_full_trajectories_not_validated": true,
+  "no_jitter_negative_eig_clamp_rank_tolerance_solver_substitution_or_changed_bisection_tol": true,
+  "no_live_promotion_or_full_scenario_convergence_original_reference_or_paper_PASS": true
+}
