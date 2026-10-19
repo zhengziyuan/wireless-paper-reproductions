@@ -1,0 +1,121 @@
+{
+  "schema": "public-original-W2-evidence-provenance-and-execution-scope-v1",
+  "repository": "https://github.com/zhengziyuan/wireless-paper-reproductions",
+  "branch": "codex/resume-six-paper-reproductions-20261017",
+  "expected_remote_parent": "0da55e1dbf896c6731886f4543e2292a2a407266",
+  "expected_parent_tree": "636af7bf1561a0a33f3ff89153d6f56f56556199",
+  "repository_target": "strict/validation/isac014-stable-increment-firstscheme-returned-evidence-20261020-v1/W2-exact-replay-before-QP",
+  "prior_public_references": {
+    "evidence/actual-returned-blocks-MP80-MP100.json.gz": {
+      "repository_relative": "strict/validation/isac014-stable-increment-firstscheme-returned-evidence-20261020-v1/evidence/actual-returned-blocks-MP80-MP100.json.gz",
+      "bytes": 206041,
+      "SHA256": "0e9ed401bc66f8d232e1d7ca601a1516fb7c22f2268a168ffeeda07d27015f79"
+    },
+    "evidence/actual-own-W-versus-final-joint-scope.json": {
+      "repository_relative": "strict/validation/isac014-stable-increment-firstscheme-returned-evidence-20261020-v1/evidence/actual-own-W-versus-final-joint-scope.json",
+      "bytes": 15963,
+      "SHA256": "7c47acecbd917f3627fd7544453f3d06af2881921076ea4569b0b32e03a5f7b1"
+    },
+    "saved/original-config.json": {
+      "repository_relative": "strict/validation/isac014-stable-increment-firstscheme-returned-evidence-20261020-v1/saved/original-config.json",
+      "bytes": 5167,
+      "SHA256": "62d9450cd8ae67986a92c0cd7344f7788d75a3bfb8e89d11d54a59e501536460"
+    },
+    "saved/original-scenario.json": {
+      "repository_relative": "strict/validation/isac014-stable-increment-firstscheme-returned-evidence-20261020-v1/saved/original-scenario.json",
+      "bytes": 22737,
+      "SHA256": "3b5e8fced9d90337bc574d660ea29c0a2b1b67aae8fc11950cdbbb28d609c302"
+    },
+    "saved/actual-returned-inner-block-states.npz": {
+      "repository_relative": "strict/validation/isac014-stable-increment-firstscheme-returned-evidence-20261020-v1/saved/actual-returned-inner-block-states.npz",
+      "bytes": 58465,
+      "SHA256": "a042ada00209e5075b6203e7ab8b2fbc5c29ab9926e6ebc3005816861696d690"
+    },
+    "sources/executed/equivalent_runtime_case014_v1.py": {
+      "repository_relative": "strict/validation/isac014-stable-increment-firstscheme-returned-evidence-20261020-v1/sources/executed/equivalent_runtime_case014_v1.py",
+      "bytes": 2798,
+      "SHA256": "ec332540a25a67e205257d907fbe0fce8450e903e896e5be03fbc31932120243"
+    },
+    "sources/executed/stable_metrics.py": {
+      "repository_relative": "strict/validation/isac014-stable-increment-firstscheme-returned-evidence-20261020-v1/sources/executed/stable_metrics.py",
+      "bytes": 2383,
+      "SHA256": "e15ad67ffc92b0ea2b3cbbd5428ff8be30bc6630ab651188d15aa2f01bde8c29"
+    },
+    "sources/executed/structured_original_qcqp_candidate_v1.py": {
+      "repository_relative": "strict/validation/isac014-stable-increment-firstscheme-returned-evidence-20261020-v1/sources/executed/structured_original_qcqp_candidate_v1.py",
+      "bytes": 3221,
+      "SHA256": "1fa91846426407d7313f0ba452e2d81c60fa433c9513d8618f870414903f8881"
+    },
+    "sources/executed/stable_rotation_increment_v1.py": {
+      "repository_relative": "strict/validation/isac014-stable-increment-firstscheme-returned-evidence-20261020-v1/sources/executed/stable_rotation_increment_v1.py",
+      "bytes": 5769,
+      "SHA256": "07678a483b3f8c70bcaf06c91d2ad611b30594c1cb8f17199f63eaa63fb60c4c"
+    },
+    "sources/executed/sources/core_structured_case014_v1.py": {
+      "repository_relative": "strict/validation/isac014-stable-increment-firstscheme-returned-evidence-20261020-v1/sources/executed/sources/core_structured_case014_v1.py",
+      "bytes": 16632,
+      "SHA256": "4cb6fcaa62353196f6d70e3de9f6bdf8249d9c1c43e365880f83ff1dd3864404"
+    }
+  },
+  "actual_source_inputs": {
+    "evidence/actual-W2-exact-replay.json": {
+      "logical_origin": "local-origin/W2-replay-run\\ACTUAL_ORIGINAL_W2_ONE_UPDATE_SOURCE_REPLAY_AND_PASSIVE_QCQP_CLOSURE_V1.json",
+      "SHA256": "596d1b0c148ecbaeb582ab16f2a1f60c94e2c19ba262f229d0bd649474779192",
+      "bytes": 8426
+    },
+    "evidence/actual-W2-finite-coefficients.json": {
+      "logical_origin": "local-origin/W2-replay-run\\ACTUAL_W2_FINITE_PASSIVE_COEFFICIENT_READBACK_AND_PENDING_MP_V1.json",
+      "SHA256": "56eb0f28a1d6ead03e26dc2f22ffdf81b7b5d14ae878b4fa5803f49d40f85ec9",
+      "bytes": 8079
+    },
+    "evidence/actual-W2-probe-held-natural0.json": {
+      "logical_origin": "local-origin/W2-source\\actual-held-W2-probe-v1\\original-W2-probe-actual-owned-process.json",
+      "SHA256": "17f44cce46fb92bab6dc0ed5bb64be634fa510eaed69f2b0a55c0f785c141a3d",
+      "bytes": 13810
+    },
+    "evidence/actual-before-QP-MP-held-natural0.json": {
+      "logical_origin": "local-origin/data\\rt\\ISAC014-W2-QP-MP-held-v2\\W2-before-QP-MP-actual-owned-process.json",
+      "SHA256": "36cc16b52e9dc8ead91988acee134249a5d6a46eb48ead1c16f519329f9aad7b",
+      "bytes": 13920
+    },
+    "evidence/compact-causal-conclusion.json": {
+      "logical_origin": "local-origin/before-QP-MP-run\\ACTUAL_W2_EXACT_REPLAY_THREE_LAYER_CAUSAL_AND_DELIVERY_SCOPE_V1.json",
+      "SHA256": "0d88384ddd72218d7f59c64b066ee854f57161c7bf05092b3eb9707e14f53dc5",
+      "bytes": 21439
+    },
+    "evidence/actual-before-QP-MP80-MP100.json.gz": {
+      "logical_origin": "local-origin/before-QP-MP-run\\ACTUAL_W2_BEFORE_ONLY_AND_FIXED_QP_THREE_LAYER_MP80_MP100_V1.json",
+      "SHA256": "a0e6f14c54f621146b124dfad09f661c897bbe2f41bb885cf7dd952ba474f2fa",
+      "bytes": 46313
+    },
+    "saved/actual-original-W2-operands.npz": {
+      "logical_origin": "local-origin/W2-replay-run\\actual-original-W2-replay-and-passive-QCQP-operands.npz",
+      "SHA256": "0c5bc4e282da5e59129898f8012b3838009e0f14587f38cdd94fd4a9385f8ad5",
+      "bytes": 35664
+    },
+    "saved/original-W2-returned-status.json": {
+      "logical_origin": "local-origin/W2-source\\expected-original-W2-returned-status.json",
+      "SHA256": "b390c23a6a2de37b2fa29e0ec1760d7c494e86facbf53715cd55ce995cb67024",
+      "bytes": 551
+    },
+    "sources/executed/replay_only_original_W2_once_with_passive_actual_QCQP_operands_v1.py": {
+      "logical_origin": "local-origin/W2-source\\replay_only_original_W2_once_with_passive_actual_QCQP_operands_v1.py",
+      "SHA256": "32ee27cf08a4b84c05b8d46a2ca7957bc8331f58ce8fae8920b38b594f6ca925",
+      "bytes": 10013
+    },
+    "sources/executed/audit_only_actual_W2_before_physics_and_fixed_QP_MP80_MP100_v1.py": {
+      "logical_origin": "local-origin/W2-source\\before-and-QP-MP-prepared-v2\\audit_only_actual_W2_before_physics_and_fixed_QP_MP80_MP100_v1.py",
+      "SHA256": "4c201e9e75ce371d81adad1ae84812b1e22588f9f40a8b56e523a15cfef0d214",
+      "bytes": 17114
+    }
+  },
+  "archived_executed_entry_scope": "Two copied executable entries retain whole original bytes. They ran against private, source-pinned manifests and admissions. This package does not supply or claim an actually validated portable MP launcher. Do not execute the replay entry as a saved-only reader: it calls original update_w.",
+  "new_packet_mathematical_or_optimizer_MC_RNG_calls": 0,
+  "after_report_reused_not_recomputed": true,
+  "preservation": "JSON projection changes metadata path strings only. All numeric literal tokens, decoded float64 bits, and nonpath numeric strings are unchanged. Original NPZ bytes and all 80 dtype/shape/complex/F-order bit patterns are unchanged.",
+  "historical_flags_in_unmodified_early_reports": "The original replay/finite-readback receipts predate the later before/QP MP run and retain their then-pending flags. The new compact causal report and full MP report record the later actual closure; old reports were not edited to rewrite history.",
+  "paper_error_claimed": false,
+  "full_six_or_joint_stationarity_or_original_reference_or_full_paper_PASS": false,
+  "raw_private_manuscript_original_ZIP_large_old_states_and_after_MP_not_copied": true,
+  "original_V1_MP_sha_path_bug_caught_before_execution": true
+}
