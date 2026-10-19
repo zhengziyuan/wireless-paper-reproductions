@@ -15,6 +15,7 @@ The current correction/execution ledger is [all-paper issues](strict/ALL_PAPERS_
 
 Recent verified evidence (20 October 2026) is available in the following scoped bundles:
 
+- [Python ISAC014 remaining four schemes](strict/validation/isac014-stable-increment-firstscheme-returned-evidence-20261020-v1/python-remaining-four/README.md): all 78 actual block returns plus four finals completed the applicable saved-state MP80/MP100 physics, feasibility and formula checks. Scheme 3 retains its RCG failure and scheme 5 its PGA failure; W absolute stationarity, original-reference agreement and full-paper acceptance remain unestablished. Existing first/sixth schemes and native results were reused without new optimization or MC.
 - [Native ISAC014 remaining-five direct vectors](strict/validation/isac014-stable-increment-firstscheme-returned-evidence-20261020-v1/native-remaining-five/new-analytic-vectors/README.md): new native evaluations at 84 saved block inputs pass all 3,192 comparisons against existing MP80/MP100 vector references (maximum absolute error about 2.52e-13). The five final vectors are excluded; existing convergence and reference failures remain.
 - [Native ISAC014 remaining five schemes](strict/validation/isac014-stable-increment-firstscheme-returned-evidence-20261020-v1/native-remaining-five/README.md): 84 returned states plus five final states have completed saved-state MP80/MP100 physics, feasibility and formula checks. Schemes 3/5 retain strict-gradient and final-state failures; common Python evaluation at native arrays is distinct from direct native derivative-vector evidence.
 - [Cooperative U6 native Figure 4/5 results](strict/validation/cooperative-Fig4-Fig5-native24-unfitted-20261020-v1/README.md): all 24 configurations and 192 method values have closed producer/science bindings and an unfitted comparison with saved Python results and original EPS coordinates. Original-reference gaps remain; coordinate-step exceedance is not a statistical test or proof of a paper algorithm error.
@@ -190,4 +191,3 @@ These are newly computed iteration traces, **not published paper figures**. Metr
 ## Rights and citations
 
 Please cite the corresponding paper when using its model. This repository does not redistribute the papers or third-party solvers. No open-source license has been selected yet; public visibility alone is not a grant of an open-source license.
-
