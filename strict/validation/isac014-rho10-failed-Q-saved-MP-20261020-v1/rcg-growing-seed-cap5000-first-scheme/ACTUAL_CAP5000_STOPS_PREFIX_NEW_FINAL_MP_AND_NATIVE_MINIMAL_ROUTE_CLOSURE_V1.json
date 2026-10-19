@@ -1,0 +1,146 @@
+{
+  "schema": "ACTUAL_ONLY014_CAP5000_ALGORITHM_STOPS_BITEXACT_FIRSTCAP_PREFIX_AND_NEW_FINAL_MP_PHYSICS_SCOPED_CLOSURE_V1",
+  "bindings": {
+    "source-92543ce74c7f/ACTUAL_CAP5000_RETURN_AND_FIRST500_PREFIX_SAVED_SUMMARY_V1.json": "f4ae2c6156ef025c9f1d98b295dcd1b85c42f4f0b2aa8a66537ef5aadf1c9531",
+    "source-029b793ea479/ACTUAL_ISAC014_CAP5000_FINAL_MP80_MP100_PHYSICS_AND_SCALAR_CLOSURE_V1.json": "87069fb3112c9182fa79bb7ccbbe53c9c3fdde5979deb8a1763c6e0a3d009de4",
+    "source-328c6d50ec4b/full-result.json": "9f0db3c5e83cdd0d29cd3087587aa2d44c8fa2adfbcceb2daa1df7bed0061135",
+    "source-a465aab24e41/actual-source-input-and-result-closure.json": "3c31944cbdc29e73d6dc0cf3b5b0ed6d0250e0a21e84ee8086ffacbd2f38c173",
+    "source-07dbb06e68d9/ISAC014-RCG-growth-cap5000-actual-owned-process.json": "9c0493ccbb217a489656fa4e4730a47525d7cdbd9bee076f3ed8fdeac4ede378",
+    "source-482f7a7c91b4/ROOT_AUTHORIZED_ONCE_CAP5000_COLD_FIRST_SCHEME_PLAN_V1.json": "80c12115fd4c8719cea08a3fe375b12f45ff74069a50383eb9b46007b82692b1"
+  },
+  "actual_child_exit_code": 0,
+  "same_original_held_handle_natural_exit_and_sourceclose": true,
+  "host_errors": [],
+  "actual_elapsed_seconds": 269.0920934000169,
+  "previous_firstcap_500_all10_IEEE64_prefix_checks_pass": true,
+  "only_caps500_to5000_all_growth_step_scientific_source_exact": true,
+  "safetycap_provenance": "Explicit extension of unreported reconstruction safetycaps only, not author numeric budget. Old500 epochs retained. No second expansion or variant launched.",
+  "producer_algorithm_stops": {
+    "status": "executed",
+    "converged": true,
+    "inner_all_converged": true,
+    "full_converged": true,
+    "power_feasible": true,
+    "unit_modulus_error": 2.220446049250313e-16,
+    "rotation_feasible": true
+  },
+  "counts": {
+    "W": {
+      "blocks": 12,
+      "iterations": 14,
+      "all_recorded_stop_criteria_pass": true,
+      "no_budget_exhaustion": true
+    },
+    "RIS": {
+      "blocks": 12,
+      "iterations": 2358,
+      "all_recorded_stop_criteria_pass": true,
+      "no_budget_exhaustion": true
+    },
+    "rotation": {
+      "blocks": 12,
+      "iterations": 7119,
+      "all_recorded_stop_criteria_pass": true,
+      "no_budget_exhaustion": true
+    }
+  },
+  "PGA_stationarity_distinct_from_printed_ORstop": {
+    "projected_gradient_stops_at_AO": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "relative_step_stops_above1e_minus6_at_AO": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "their_final_recorded_PG_norms": [
+      1.2622148951054313e-06,
+      1.5948605155028278e-06,
+      1.973754395974983e-06,
+      2.12835571516429e-06,
+      1.8887376618022642e-06,
+      2.02486350958196e-06,
+      2.08628598022225e-06
+    ],
+    "their_relative_steps": [
+      9.491835709115425e-09,
+      9.448616666623326e-09,
+      9.622240743421275e-09,
+      9.777057960390945e-09,
+      9.041471162869407e-09,
+      9.135598843547009e-09,
+      9.416136490913415e-09
+    ],
+    "all12_negativeBB_or_minclip_count_zero": true,
+    "all_PGA_gradient_stationarity_PASS": false,
+    "printed_OR_stop_PASS_does_not_imply_stationarity": true
+  },
+  "new_final_independent_MP80_MP100": {
+    "actual_auditor_exit_code": 0,
+    "all6_fields_and_power_unit_rotation_constraints_PASS": true,
+    "source_and_saved_input_interval_closed": true,
+    "full_MP80_MP100_field_crossprecision_pass": true,
+    "actual_schemes": 1,
+    "scalar_records": 36,
+    "saved_adjacent_objective_differences": 9467,
+    "all_with_original_monotonic_tolerance": true,
+    "old_MP_PASS_not_inherited": true,
+    "intermediate_KKT_or_stationarity_not_checked_by_final_physics": true
+  },
+  "final_metrics": {
+    "utility": 19.32533134672468,
+    "rate": 29.325319899924548,
+    "nmse": 0.9999988553199868,
+    "iota": 64316741.23177934,
+    "sinr": [
+      0.0,
+      672668237.9874448
+    ]
+  },
+  "native_minimal_existing_source_route": {
+    "read_only_located_sources": {
+      "source-40143532eb96/run_strict_rotatable_isac.m": "181d8f02d990fb59a72765b19ff1c92491336ae3c3d056cc016692edf0129d23",
+      "source-fe8b2eb996f0/run_native_three_state_candidate_v1.m": "5571063f6093d2f8ab38dbc817ccc64209ade6d8cabe3e6127d5d72305b614d4",
+      "source-ac4378c680d7/solve_fixed_original_qcqp_matlab_v1.m": "f8183e36aa874bc832b50dcbf3696e28d8bfa3ea4b09bd908b0db9d44cbb44e5"
+    },
+    "original_full_runner": {
+      "path": "source-40143532eb96/run_strict_rotatable_isac.m",
+      "API": "run_strict_rotatable_isac(outputPath,scenarioPath,configPath,diagnosticMode,diagnosticScenePath)",
+      "actual_full_function": "is_full_scenario(c): six schemes; isolate first Rot-BS & Rot-RIS only in newcopy, preserve is_initialize/is_optimize/phase/PGA logic",
+      "firstscheme_parameters": "same cap5000 scenario JSON, originalnative cold SVD/pinv initializer, widths from unchanged scene and flags[1,1,1]"
+    },
+    "existing_stable_native": {
+      "path": "source-fe8b2eb996f0/run_native_three_state_candidate_v1.m",
+      "APIs": "local is_evaluate lines71-99, is_update_w explicit I/mu/eta preamble107-119",
+      "validated_scope": "Actualthree fixed states objective/derivatives/changedQT only; preserved extra intermediategatefailure. Not a completed native optimized trajectory.",
+      "port": "Lift exact stable is_evaluate and explicit selfexcluded Wauxiliary preamble into newcopy of originalfullrunner. Do not invoke the three-state wrapper for case014, whose top dispatch only149/159."
+    },
+    "existing_factor_native": {
+      "path": "source-ac4378c680d7/solve_fixed_original_qcqp_matlab_v1.m",
+      "API": "solve_fixed_original_qcqp_matlab_v1(inputPath,outputPath)",
+      "validated_scope": "Same fixed014 QP dual MP80/100 candidate already passed; no fullnativecold014trajectory.",
+      "port": "Lift unchanged numerical body into array-input/struct-return local helper so every update avoids filesystem MATtransport. Pass actual W/fc/mu/eta/lip/Ga/den/rho/power/bisectiontol. Preserve positivealpha, mu>=0, K<=M and errors; no bad denseP/Q solve, rankthreshold/eigenclamp/jitter/fallback."
+    },
+    "RCG_only_port": "In native is_update_theta initialize next_seed=spec.initial_step; trialalpha=next_seed; after real acceptance next_seed=2*alpha. Preserve exact rawPR/transport/retraction/Armijo80/1e-6 and PGA entire source.",
+    "remaining_actual_work": "Newisolated native fullfirstscheme source and host wrapper need implementation/review and an explicitly authorized unique actual run. No native variant or secondtrajectory started here.",
+    "no_crosslanguage_initialstate_or_trajectory_identity_assumption": true
+  },
+  "scientific_gate_matrix": {
+    "source_and_input": true,
+    "algorithm_recorded_ORstops": true,
+    "strict_all_inner_PGA_gradient_stationarity": false,
+    "new_final_MP_physics_constraints": true,
+    "full_trajectory_independent_endpoint_KKT": false,
+    "native_matching_complete_firstscheme": false,
+    "original_reference_or_full_paper_PASS": false
+  },
+  "no_new_optimizer_after_authorized_cap5000_return": true
+}
