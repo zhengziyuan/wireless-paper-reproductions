@@ -1,0 +1,499 @@
+{
+  "schema": "ACTUAL_CLOSED_CASE159_SIX_SCHEME_THIN_OUTCOME_AND_RETAINED_CONVERGENCE_FAILURE_REVIEW_V1",
+  "observed_UTC": "2026-10-19T07:11:57.153927+00:00",
+  "full_result": {
+    "path": "retained-evidence/full-result.json",
+    "bytes": 11155375,
+    "SHA256": "ba6aa5804738a0c392ce610e359cb6d248e4283765fc483e654827112939abe6",
+    "one_stream_decode_only": true,
+    "large_inner_objective_QCQP_trace_fields_lexically_skipped": true
+  },
+  "execution": {
+    "schema": "ACTUAL_CASE159_COLD_FULLSIX_STRUCTURED_ARITHMETIC_EXECUTION_CLOSURE_V1",
+    "source_and_input_interval_unchanged": true,
+    "host_errors": [],
+    "execution_error": null,
+    "complete_six_scheme_result_saved": true,
+    "existing_six_scheme_checks_all_satisfied": false,
+    "effective_entry_exit_code": 2,
+    "independent_physics_dual_language_original_reference_or_full_paper_pass": false,
+    "elapsed_seconds": 833.7126169999829,
+    "new_scenario_or_MC": false,
+    "original_failed_case159_outcomes_preserved": true
+  },
+  "source_before_after_existing_metadata_equal": true,
+  "source_interval_entry_count": 11,
+  "all_six_scheme_names_exact": true,
+  "six_scheme_summary": [
+    {
+      "scheme": "Rot-BS & Rot-RIS",
+      "checks": {
+        "status": "executed",
+        "converged": true,
+        "inner_all_converged": false,
+        "full_converged": false,
+        "power_feasible": true,
+        "unit_modulus_error": 2.220446049250313e-16,
+        "rotation_feasible": true
+      },
+      "final_metrics": {
+        "utility": 19.72941531337069,
+        "rate": 29.729415302264325,
+        "nmse": 0.9999999988893634,
+        "iota": 9921964319.298262,
+        "sinr": [
+          890114260.7691413,
+          0.0
+        ]
+      },
+      "history_summary": {
+        "converged": true,
+        "inner_all_converged": false,
+        "full_converged": false,
+        "iterations": 72,
+        "iteration_budget": 500,
+        "budget_exhausted": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 2.0915027115320242e-07,
+        "relative_tolerance": 1e-05,
+        "utility_count": 73,
+        "initial_utility": -5.329177610195935,
+        "final_utility": 19.72941531337069,
+        "actual_block_count": 72
+      },
+      "inner_unconverged_summary": {
+        "W": {
+          "unconverged_block_count": 0,
+          "first_unconverged_block": null,
+          "last_unconverged_block": null
+        },
+        "RIS": {
+          "unconverged_block_count": 71,
+          "first_unconverged_block": {
+            "AO_block_one_based": 2,
+            "applicable": true,
+            "converged": false,
+            "termination_reason": "maximum_iterations_without_criterion_stop",
+            "iterations": 500,
+            "updates": 500,
+            "iteration_budget": 500,
+            "budget_exhausted": true,
+            "capped_unconverged": true,
+            "last_checked_normalized_gradient_norm": 0.0005554477018899432,
+            "final_normalized_gradient_norm": 0.0005558747990150631,
+            "gradient_tolerance": 1e-06
+          },
+          "last_unconverged_block": {
+            "AO_block_one_based": 72,
+            "applicable": true,
+            "converged": false,
+            "termination_reason": "maximum_iterations_without_criterion_stop",
+            "iterations": 500,
+            "updates": 500,
+            "iteration_budget": 500,
+            "budget_exhausted": true,
+            "capped_unconverged": true,
+            "last_checked_normalized_gradient_norm": 1.5096345545515515e-05,
+            "final_normalized_gradient_norm": 1.5096192266911762e-05,
+            "gradient_tolerance": 1e-06
+          }
+        },
+        "rotation": {
+          "unconverged_block_count": 18,
+          "first_unconverged_block": {
+            "AO_block_one_based": 2,
+            "converged": false,
+            "termination_reason": "maximum_iterations_without_criterion_stop",
+            "iterations": 500,
+            "updates": 500,
+            "iteration_budget": 500,
+            "budget_exhausted": true,
+            "capped_unconverged": true,
+            "last_checked_projected_gradient_norm": 0.00443194850315295,
+            "final_projected_gradient_norm": 0.0072906810169973005,
+            "gradient_tolerance": 1e-06,
+            "relative_step": 0.0024679338927938955,
+            "relative_tolerance": 1e-08
+          },
+          "last_unconverged_block": {
+            "AO_block_one_based": 34,
+            "converged": false,
+            "termination_reason": "maximum_iterations_without_criterion_stop",
+            "iterations": 500,
+            "updates": 500,
+            "iteration_budget": 500,
+            "budget_exhausted": true,
+            "capped_unconverged": true,
+            "last_checked_projected_gradient_norm": 0.00033233047171372693,
+            "final_projected_gradient_norm": 0.0002567161341035429,
+            "gradient_tolerance": 1e-06,
+            "relative_step": 1.549601252854843e-05,
+            "relative_tolerance": 1e-08
+          }
+        }
+      }
+    },
+    {
+      "scheme": "Rot-BS & Fix-RIS",
+      "checks": {
+        "status": "executed",
+        "converged": true,
+        "inner_all_converged": false,
+        "full_converged": false,
+        "power_feasible": true,
+        "unit_modulus_error": 2.220446049250313e-16,
+        "rotation_feasible": true
+      },
+      "final_metrics": {
+        "utility": 17.031699798825205,
+        "rate": 27.031699095064415,
+        "nmse": 0.9999999296239209,
+        "iota": 328507478.3070872,
+        "sinr": [
+          137199414.56116623,
+          0.0
+        ]
+      },
+      "history_summary": {
+        "converged": true,
+        "inner_all_converged": false,
+        "full_converged": false,
+        "iterations": 21,
+        "iteration_budget": 500,
+        "budget_exhausted": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 9.42506188783382e-06,
+        "relative_tolerance": 1e-05,
+        "utility_count": 22,
+        "initial_utility": -5.329177610195935,
+        "final_utility": 17.031699798825205,
+        "actual_block_count": 21
+      },
+      "inner_unconverged_summary": {
+        "W": {
+          "unconverged_block_count": 1,
+          "first_unconverged_block": {
+            "AO_block_one_based": 2,
+            "converged": false,
+            "termination_reason": "maximum_iterations_without_criterion_stop",
+            "iterations": 10000,
+            "iteration_budget": 10000,
+            "budget_exhausted": true,
+            "capped_unconverged": true,
+            "relative_objective_improvement": 1.7835695282052968e-06,
+            "relative_step": 1.321193794448924e-06,
+            "relative_tolerance": 1e-06
+          },
+          "last_unconverged_block": {
+            "AO_block_one_based": 2,
+            "converged": false,
+            "termination_reason": "maximum_iterations_without_criterion_stop",
+            "iterations": 10000,
+            "iteration_budget": 10000,
+            "budget_exhausted": true,
+            "capped_unconverged": true,
+            "relative_objective_improvement": 1.7835695282052968e-06,
+            "relative_step": 1.321193794448924e-06,
+            "relative_tolerance": 1e-06
+          }
+        },
+        "RIS": {
+          "unconverged_block_count": 20,
+          "first_unconverged_block": {
+            "AO_block_one_based": 2,
+            "applicable": true,
+            "converged": false,
+            "termination_reason": "maximum_iterations_without_criterion_stop",
+            "iterations": 500,
+            "updates": 500,
+            "iteration_budget": 500,
+            "budget_exhausted": true,
+            "capped_unconverged": true,
+            "last_checked_normalized_gradient_norm": 0.00010914403825277906,
+            "final_normalized_gradient_norm": 0.00010913882431307071,
+            "gradient_tolerance": 1e-06
+          },
+          "last_unconverged_block": {
+            "AO_block_one_based": 21,
+            "applicable": true,
+            "converged": false,
+            "termination_reason": "maximum_iterations_without_criterion_stop",
+            "iterations": 500,
+            "updates": 500,
+            "iteration_budget": 500,
+            "budget_exhausted": true,
+            "capped_unconverged": true,
+            "last_checked_normalized_gradient_norm": 9.603160750127213e-06,
+            "final_normalized_gradient_norm": 9.602707000029619e-06,
+            "gradient_tolerance": 1e-06
+          }
+        },
+        "rotation": {
+          "unconverged_block_count": 15,
+          "first_unconverged_block": {
+            "AO_block_one_based": 2,
+            "converged": false,
+            "termination_reason": "maximum_iterations_without_criterion_stop",
+            "iterations": 500,
+            "updates": 500,
+            "iteration_budget": 500,
+            "budget_exhausted": true,
+            "capped_unconverged": true,
+            "last_checked_projected_gradient_norm": 6.734605041912338e-06,
+            "final_projected_gradient_norm": 9.704229880705845e-06,
+            "gradient_tolerance": 1e-06,
+            "relative_step": 4.0083444801177535e-06,
+            "relative_tolerance": 1e-08
+          },
+          "last_unconverged_block": {
+            "AO_block_one_based": 18,
+            "converged": false,
+            "termination_reason": "maximum_iterations_without_criterion_stop",
+            "iterations": 500,
+            "updates": 500,
+            "iteration_budget": 500,
+            "budget_exhausted": true,
+            "capped_unconverged": true,
+            "last_checked_projected_gradient_norm": 0.008062987797274065,
+            "final_projected_gradient_norm": 0.010796420370288507,
+            "gradient_tolerance": 1e-06,
+            "relative_step": 0.0008843551143267275,
+            "relative_tolerance": 1e-08
+          }
+        }
+      }
+    },
+    {
+      "scheme": "Fix-BS & Rot-RIS",
+      "checks": {
+        "status": "executed",
+        "converged": true,
+        "inner_all_converged": true,
+        "full_converged": true,
+        "power_feasible": true,
+        "unit_modulus_error": 0.0,
+        "rotation_feasible": true
+      },
+      "final_metrics": {
+        "utility": 1.317864568558985,
+        "rate": 11.317816859782075,
+        "nmse": 0.9999952291223091,
+        "iota": 3494.34230559864,
+        "sinr": [
+          2551.7151756631674,
+          0.0
+        ]
+      },
+      "history_summary": {
+        "converged": true,
+        "inner_all_converged": true,
+        "full_converged": true,
+        "iterations": 2,
+        "iteration_budget": 500,
+        "budget_exhausted": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 7.646532626329471e-06,
+        "relative_tolerance": 1e-05,
+        "utility_count": 3,
+        "initial_utility": -5.329177610195935,
+        "final_utility": 1.317864568558985,
+        "actual_block_count": 2
+      },
+      "inner_unconverged_summary": {
+        "W": {
+          "unconverged_block_count": 0,
+          "first_unconverged_block": null,
+          "last_unconverged_block": null
+        },
+        "RIS": {
+          "unconverged_block_count": 0,
+          "first_unconverged_block": null,
+          "last_unconverged_block": null
+        },
+        "rotation": {
+          "unconverged_block_count": 0,
+          "first_unconverged_block": null,
+          "last_unconverged_block": null
+        }
+      }
+    },
+    {
+      "scheme": "Fix-BS & Fix-RIS",
+      "checks": {
+        "status": "executed",
+        "converged": true,
+        "inner_all_converged": true,
+        "full_converged": true,
+        "power_feasible": true,
+        "unit_modulus_error": 0.0,
+        "rotation_feasible": true
+      },
+      "final_metrics": {
+        "utility": 1.317864568558985,
+        "rate": 11.317816859782075,
+        "nmse": 0.9999952291223091,
+        "iota": 3494.34230559864,
+        "sinr": [
+          2551.7151756631674,
+          0.0
+        ]
+      },
+      "history_summary": {
+        "converged": true,
+        "inner_all_converged": true,
+        "full_converged": true,
+        "iterations": 2,
+        "iteration_budget": 500,
+        "budget_exhausted": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 7.646532626329471e-06,
+        "relative_tolerance": 1e-05,
+        "utility_count": 3,
+        "initial_utility": -5.329177610195935,
+        "final_utility": 1.317864568558985,
+        "actual_block_count": 2
+      },
+      "inner_unconverged_summary": {
+        "W": {
+          "unconverged_block_count": 0,
+          "first_unconverged_block": null,
+          "last_unconverged_block": null
+        },
+        "RIS": {
+          "unconverged_block_count": 0,
+          "first_unconverged_block": null,
+          "last_unconverged_block": null
+        },
+        "rotation": {
+          "unconverged_block_count": 0,
+          "first_unconverged_block": null,
+          "last_unconverged_block": null
+        }
+      }
+    },
+    {
+      "scheme": "Rot-BS & No-RIS",
+      "checks": {
+        "status": "executed",
+        "converged": true,
+        "inner_all_converged": true,
+        "full_converged": true,
+        "power_feasible": true,
+        "unit_modulus_error": 0.0,
+        "rotation_feasible": true
+      },
+      "final_metrics": {
+        "utility": 2.3711689818756874,
+        "rate": 12.36052812864976,
+        "nmse": 0.9989359146774072,
+        "iota": 413.7463990188305,
+        "sinr": [
+          5257.837231294782,
+          0.0
+        ]
+      },
+      "history_summary": {
+        "converged": true,
+        "inner_all_converged": true,
+        "full_converged": true,
+        "iterations": 23,
+        "iteration_budget": 500,
+        "budget_exhausted": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 7.441977129503812e-06,
+        "relative_tolerance": 1e-05,
+        "utility_count": 24,
+        "initial_utility": -5.329177610195935,
+        "final_utility": 2.3711689818756874,
+        "actual_block_count": 23
+      },
+      "inner_unconverged_summary": {
+        "W": {
+          "unconverged_block_count": 0,
+          "first_unconverged_block": null,
+          "last_unconverged_block": null
+        },
+        "RIS": {
+          "unconverged_block_count": 0,
+          "first_unconverged_block": null,
+          "last_unconverged_block": null
+        },
+        "rotation": {
+          "unconverged_block_count": 0,
+          "first_unconverged_block": null,
+          "last_unconverged_block": null
+        }
+      }
+    },
+    {
+      "scheme": "Fix-BS & No-RIS",
+      "checks": {
+        "status": "executed",
+        "converged": true,
+        "inner_all_converged": true,
+        "full_converged": true,
+        "power_feasible": true,
+        "unit_modulus_error": 0.0,
+        "rotation_feasible": true
+      },
+      "final_metrics": {
+        "utility": 1.317864568558985,
+        "rate": 11.317816859782075,
+        "nmse": 0.9999952291223091,
+        "iota": 3494.34230559864,
+        "sinr": [
+          2551.7151756631674,
+          0.0
+        ]
+      },
+      "history_summary": {
+        "converged": true,
+        "inner_all_converged": true,
+        "full_converged": true,
+        "iterations": 2,
+        "iteration_budget": 500,
+        "budget_exhausted": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 7.646532626329471e-06,
+        "relative_tolerance": 1e-05,
+        "utility_count": 3,
+        "initial_utility": -5.329177610195935,
+        "final_utility": 1.317864568558985,
+        "actual_block_count": 2
+      },
+      "inner_unconverged_summary": {
+        "W": {
+          "unconverged_block_count": 0,
+          "first_unconverged_block": null,
+          "last_unconverged_block": null
+        },
+        "RIS": {
+          "unconverged_block_count": 0,
+          "first_unconverged_block": null,
+          "last_unconverged_block": null
+        },
+        "rotation": {
+          "unconverged_block_count": 0,
+          "first_unconverged_block": null,
+          "last_unconverged_block": null
+        }
+      }
+    }
+  ],
+  "passive_first_failure_and_methods": {
+    "schema": "PASSIVE_ONE_FIRST_REAL_EXCEPTION_AND_METHOD_COUNTS_V1",
+    "first_failure": null,
+    "method_calls": {
+      "optimize": 6,
+      "update_w": 122,
+      "update_theta": 97,
+      "update_rotation": 122
+    },
+    "observer_errors": [],
+    "no_optimizer_call_by_observer": true,
+    "no_RNG_or_sampling": true
+  },
+  "natural_exit2_is_retained_original_convergence_or_feasibility_false_not_hosterror": true,
+  "no_new_optimizer_MP_MC_RNG_native_or_full_physics_replay": true,
+  "independent_physics_dual_language_original_reference_or_full_paper_PASS": false
+}
