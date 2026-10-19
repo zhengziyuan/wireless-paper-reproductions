@@ -13,9 +13,10 @@ This is not the original private simulation source. Each paper has an explicit i
 The current correction/execution ledger is [all-paper issues](strict/ALL_PAPERS_ISSUES.md).
 
 
-Recent verified evidence (20 October 2026) is available in three scoped bundles:
+Recent verified evidence (20 October 2026) is available in the following scoped bundles:
 
 - [MA Figure 6: three coordinates in both languages](strict/validation/ma-figure6-three-coordinate-physical-and-gap-evidence-20261020-v1/README.md): six source-bound captures meet their original coordinate gap/primal tolerances, and the independent physical derivation meets the existing objective/tangent consistency checks. Historical stepwise bit paths and original-reference curve gaps remain distinct.
+- [Native ISAC014 analytical-vector follow-up](strict/validation/isac014-stable-increment-firstscheme-returned-evidence-20261020-v1/native-returned-states/new-analytic-vectors/README.md): newly executed native derivatives at all36 saved own-block states agree with the existing MP80/MP100 reference vectors across792 components per precision. This adds direct native component evidence; it neither recovers historical in-memory vectors nor covers the final37 state or upgrades joint stationarity.
 - [Native ISAC014 returned states](strict/validation/isac014-stable-increment-firstscheme-returned-evidence-20261020-v1/native-returned-states/README.md): 36 actual block returns plus the final state have independent MP80/MP100 evidence. Own RCG/PGA stops pass, while final joint stationarity does not. This packet's common Python formula comparisons at native states do not certify uncaptured native analytical vectors.
 - [ISAC014 W2 exact replay and cause analysis](strict/validation/isac014-stable-increment-firstscheme-returned-evidence-20261020-v1/W2-exact-replay-before-QP/README.md): an exactly reproduced single W update and saved-coefficient MP checks explain a nonstationary relative-objective stop under disclosed reconstruction controls. This is not a claimed paper-formula error or a new W stationarity certificate.
 
