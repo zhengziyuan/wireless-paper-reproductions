@@ -1,0 +1,115 @@
+{
+  "schema": "actual-new-native-canonical-author-U6-full8-four-saved-independent-science-closure-v1",
+  "scoped_saved_scientific_PASS": true,
+  "stage_receipts": {
+    "MC": {
+      "path": "local-source/81ecb03893b5/MC-ACTUAL_STAGE_SCOPE_OUTCOME_V1.json",
+      "SHA256": "e65d4b8786e62ba3f4ebe1f552b785c82bbde7d07f74deae83dd253daabf7959"
+    },
+    "ownstate": {
+      "path": "local-source/1ae8f28052b5/ownstate-ACTUAL_STAGE_SCOPE_OUTCOME_V1.json",
+      "SHA256": "d47c3084094d79b712d58d1c750b924bf6aaedf68f9ab140c350c74ceabf6a05"
+    },
+    "stops": {
+      "path": "local-source/d81bda681f25/stops-ACTUAL_STAGE_SCOPE_OUTCOME_V2.json",
+      "SHA256": "1c22132e39d21becbf2c2f96a65431feaa94ce1baada22ab17d7fdd1ca9033d5"
+    },
+    "initial": {
+      "path": "local-source/b881e3679510/initial-ACTUAL_STAGE_SCOPE_OUTCOME_V2.json",
+      "SHA256": "aad054b1c633ac3cfb20f04157250592b200eecefc27d3d200d3f61280ffb8e5"
+    }
+  },
+  "science_reports": {
+    "MC": {
+      "path": "local-source/8c4ae2844d89/ACTUAL_NEW_ONLINE_POWER24_FULL1000_SAVED_OPERAND_INDEPENDENT_CLOSURE_V1.json",
+      "SHA256": "cd4b8dfe882e706fc233b708260640d180146d3cf61236127ffc115975cba59d"
+    },
+    "ownstate": {
+      "path": "local-source/22dd140d975e/ACTUAL_NEW_FULL8_OWNSTATE_QT_PHASE_DIRECT_PREP7_INDEPENDENT_MP_CLOSURE_V1.json",
+      "SHA256": "9f2252646e4eedd023dd213aa2a235e742dde5e35c5848b1945214c5caa10439"
+    },
+    "phase": {
+      "path": "local-source/d18a1fbe1998/summary.json",
+      "SHA256": "b0749d5ae3f41576256b5c7447ce889387ec6b9855bb2844793d1d5c334ff791"
+    },
+    "stops": {
+      "path": "local-source/f27ab144ea10/stops-selection-MCbinding.json",
+      "SHA256": "73b8658be2b8442d541753c7f87c54796389ae20d9ed23feae7cf33e94086252"
+    },
+    "initial": {
+      "path": "local-source/476e98ed5cb8/initial-incumbent-MP.json",
+      "SHA256": "4c23680debb0fd47c3e49eb7ca6a43e3ae3494012f0f38d3b063a78a9b6b61ef"
+    }
+  },
+  "actual_dimensions": {
+    "J": 3,
+    "U": 6,
+    "N": 16,
+    "M": 25,
+    "K": 1
+  },
+  "actual_final_states": 8,
+  "actual_QT_candidates": 67,
+  "actual_phase_endpoints": 55,
+  "complex_gradient_coordinates_per_MP_lane": 8250,
+  "actual_preP7_indices_zero_based": [
+    30,
+    55
+  ],
+  "all8_final_states_all67_QT_and_all55_phase_original_fields_bounds_primal_convergence_and_MP80_MP100_pass": true,
+  "actual_direct_two_preP7_all_channel_coefficients_before_after_constraints_and_precision_pass": true,
+  "all_saved_original_stops_strict_PhiStar_mu_schedule_limits_and_11MC_inputs_pass": true,
+  "all_TS_initial_incumbents_saved_h0_and_native_recorded_initial_phase_dataflow_MP80_MP100_pass": true,
+  "actual_TS_initial_incumbent_calls": 42,
+  "actual_initial_arguments_individually_recorded_rows": 42,
+  "independent_MC": {
+    "count": 1000,
+    "link_samples": 18000,
+    "second_fourth_scalar_values": 36000,
+    "maximum_effective_h_error": 6.206335383118183e-17,
+    "maximum_second_error": 4.440892098500626e-16,
+    "maximum_fourth_error": 8.881784197001252e-16,
+    "original_reported_empirical_vs_theory_relative_errors": {
+      "second": 0.007288952535901491,
+      "fourth": 0.01441702682353078
+    },
+    "MP80_MP100_expected_moments_pass": true,
+    "legacy_all12000_field_means_actual36000_here": true,
+    "no_old_optional_cases_audited": true,
+    "original_online_draws_audited_not_regenerated": true
+  },
+  "actual_execution": {
+    "MC_natural_exit": 0,
+    "ownstate_natural_exit": 0,
+    "stops_V2_natural_exit": 0,
+    "initial_natural_exit": 0,
+    "ownstate_tool_session": 4804,
+    "initial_tool_session": 69832,
+    "first_stops_host_route_failure": {
+      "receipt": {
+        "path": "local-source/fcf18b5bccc7/stops-ACTUAL_STAGE_SCOPE_OUTCOME_V1.json",
+        "SHA256": "2e5d620550d1c80fc62536dbdbd29b4c7344486f00778882dcbf1cd44ff9507e"
+      },
+      "actual_exit": 1,
+      "cause": "Single-recording cache rejected the separate actual online moment input MAT after stop/PhiStar checks.",
+      "correction": "Separate host-only V2 admits exactly that input MAT with its recorded SHA; formulas and tolerances unchanged.",
+      "first_failure_retained": true
+    }
+  },
+  "metadata_restoration": {
+    "binding": {
+      "path": "local-source/2647c3e82367/ACTUAL_NATIVE_U6_FULL_JSON_METADATA_ONLY_RESTORATION_BINDING_V1.json",
+      "SHA256": "46062dd0478105bb92542fa428953122e65b784726babec2ef9bd1caf2d95a62"
+    },
+    "complete_original_JSON_SHA256": "998a1c191e60897eef08fac565b3aeb95fc5e0024572dbb4ba3874feeb44f79d",
+    "short_reported_and_tuned_controls_exact": true,
+    "original_recorded_numerical_arrays_not_edited": true
+  },
+  "original_producer_natural_exit": 0,
+  "all_auditor_source_intervals_closed": true,
+  "prior_Python_original_export_failure1_and_lost_recording_remain_separate": true,
+  "canonical_native_source_supported_U6_variant_not_old_U2_power24": true,
+  "full_controls_are_reconstruction_not_recovered_author_Manopt_or_population": true,
+  "actual_new_optimizers_RNG_samplers_MC_draws_or_old_bank_replays": 0,
+  "optimized_dual_solution_equality_original_reference_or_fullpaper_PASS": false
+}

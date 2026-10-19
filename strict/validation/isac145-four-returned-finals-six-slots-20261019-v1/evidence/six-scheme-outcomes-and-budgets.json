@@ -1,0 +1,675 @@
+{
+  "schema": "actual-ISAC145-natural0-four-final-states-six-status-slots-v2",
+  "actual_original_natural_exit": 0,
+  "actual_original_effective_host_exit": 0,
+  "closed_source_and_original_Popen_identity": {
+    "source_and_input_interval_unchanged": true,
+    "source_before": {
+      "artifacts/durable-recovery-20261017-2100/ISAC145-equivalent-arithmetic-cold-full-six-original-budget-v1-job.json": "c203bd1d56e98b3d2eef4b04a3ae14c65c40c455b60d4e3852ab429fea5a4fcf",
+      "artifacts/durable_owned_ISAC_equivalent_scientific_worker_v3.py": "721d24994263ebaeafd8e8d5956ddb23f6acd0c534803112431c56ffa7ff21b2",
+      "repository/tools/isac-line-search-replay/run_equivalent.py": "70308a1c97985b8e5b00c3834055db6a13502b4f010f01b78e2f9c79b527480f",
+      "repository/tools/isac-line-search-replay/equivalent_runtime.py": "6605b501e0a21efb03496ad47d70774e12d174768afd355e2a843285b4f12c2d",
+      "repository/tools/isac-line-search-replay/stable_metrics.py": "e15ad67ffc92b0ea2b3cbbd5428ff8be30bc6630ab651188d15aa2f01bde8c29",
+      "repository/strict/rotatable-isac/core.py": "07f2eb9d9f5011dde45a8c947dd87db31d15b7e6e8ab233e9f43429c408f2fbb",
+      "repository/strict/rotatable-isac/run.py": "29584a2dc08dbd36d2613fdc44394658a1c3ed1caecbcd42b11010fe42da6111",
+      "repository/strict/rotatable-isac/figures.py": "80109f69d5491125be9d734d6adb76bc154f9fb31465024530b6aea48177a057",
+      "repository/strict/rotatable-isac/isac_metadata.py": "fe51c21a4340c7a901ad2c3bbce6a323cdcc38950c5ccbed4f9bc2fbbc6497f3",
+      "artifacts/isac-original500-byte-identical-recovery-view-after-interruption-v2/run_config.json": "dd52f8b124cc1ec77ba71cf180048f6da665bb3809161dde6c922982c4eeec89",
+      "artifacts/ISAC149-two-final-states-same-arithmetic-causal-comparison-20261019-v1/future-case001-mc045-first-failed-RCG-trace-original-budget-v1/original-scenario.json": "e5d47af3400b9d81045d05b3b47c9b0c2501453ba1dea76486c0a20603995adf",
+      "artifacts/ISAC145-equivalent-arithmetic-cold-full-six-single-launch-v1/OWNER_SCOPE_ONLY_REUSE_OF_VERIFIED_V3_OWNERSHIP_NO_NEW_CONTROL_TEST_V1.json": "de43833820091adfd0479cc75916d5cb69c1903d3eb0c0f829f88a8011f57570",
+      "artifacts/ISAC145-equivalent-arithmetic-cold-full-six-single-launch-v1/ROOT_AUTHORIZED_UNIQUE_COLD_FULLSIX_SAME_CASE145_ORIGINAL_BUDGET_V1.json": "41e06752d98105f70fa17aaae7f17d916103977a0b38399891e2f9ac9b40ffe3",
+      "artifacts/launch_ISAC145_equivalent_cold_fullsix_once_v1.py": "85eca13f5fe145525dd4b59d592e22f0f3d1cd1ecb75206ae0c31da8774c2174"
+    },
+    "source_after": {
+      "artifacts/durable-recovery-20261017-2100/ISAC145-equivalent-arithmetic-cold-full-six-original-budget-v1-job.json": "c203bd1d56e98b3d2eef4b04a3ae14c65c40c455b60d4e3852ab429fea5a4fcf",
+      "artifacts/durable_owned_ISAC_equivalent_scientific_worker_v3.py": "721d24994263ebaeafd8e8d5956ddb23f6acd0c534803112431c56ffa7ff21b2",
+      "repository/tools/isac-line-search-replay/run_equivalent.py": "70308a1c97985b8e5b00c3834055db6a13502b4f010f01b78e2f9c79b527480f",
+      "repository/tools/isac-line-search-replay/equivalent_runtime.py": "6605b501e0a21efb03496ad47d70774e12d174768afd355e2a843285b4f12c2d",
+      "repository/tools/isac-line-search-replay/stable_metrics.py": "e15ad67ffc92b0ea2b3cbbd5428ff8be30bc6630ab651188d15aa2f01bde8c29",
+      "repository/strict/rotatable-isac/core.py": "07f2eb9d9f5011dde45a8c947dd87db31d15b7e6e8ab233e9f43429c408f2fbb",
+      "repository/strict/rotatable-isac/run.py": "29584a2dc08dbd36d2613fdc44394658a1c3ed1caecbcd42b11010fe42da6111",
+      "repository/strict/rotatable-isac/figures.py": "80109f69d5491125be9d734d6adb76bc154f9fb31465024530b6aea48177a057",
+      "repository/strict/rotatable-isac/isac_metadata.py": "fe51c21a4340c7a901ad2c3bbce6a323cdcc38950c5ccbed4f9bc2fbbc6497f3",
+      "artifacts/isac-original500-byte-identical-recovery-view-after-interruption-v2/run_config.json": "dd52f8b124cc1ec77ba71cf180048f6da665bb3809161dde6c922982c4eeec89",
+      "artifacts/ISAC149-two-final-states-same-arithmetic-causal-comparison-20261019-v1/future-case001-mc045-first-failed-RCG-trace-original-budget-v1/original-scenario.json": "e5d47af3400b9d81045d05b3b47c9b0c2501453ba1dea76486c0a20603995adf",
+      "artifacts/ISAC145-equivalent-arithmetic-cold-full-six-single-launch-v1/OWNER_SCOPE_ONLY_REUSE_OF_VERIFIED_V3_OWNERSHIP_NO_NEW_CONTROL_TEST_V1.json": "de43833820091adfd0479cc75916d5cb69c1903d3eb0c0f829f88a8011f57570",
+      "artifacts/ISAC145-equivalent-arithmetic-cold-full-six-single-launch-v1/ROOT_AUTHORIZED_UNIQUE_COLD_FULLSIX_SAME_CASE145_ORIGINAL_BUDGET_V1.json": "41e06752d98105f70fa17aaae7f17d916103977a0b38399891e2f9ac9b40ffe3",
+      "artifacts/launch_ISAC145_equivalent_cold_fullsix_once_v1.py": "85eca13f5fe145525dd4b59d592e22f0f3d1cd1ecb75206ae0c31da8774c2174"
+    },
+    "effective_entry_exit_code": 0,
+    "execution_error": null,
+    "original_owner_journal": {
+      "artifact": "artifacts/durable-recovery-20261017-2100/ISAC145-equivalent-arithmetic-cold-full-six-original-budget-v1-job-actual-owned-process.json",
+      "SHA256": "09626a7c219c3b5d64dc1741c37690fae4c78945cbc22c5c19fb57446e80ec40",
+      "bytes": 9164
+    },
+    "original_job": {
+      "artifact": "artifacts/durable-recovery-20261017-2100/ISAC145-equivalent-arithmetic-cold-full-six-original-budget-v1-job.json",
+      "SHA256": "c203bd1d56e98b3d2eef4b04a3ae14c65c40c455b60d4e3852ab429fea5a4fcf",
+      "bytes": 4525
+    },
+    "exact_original_Popen_identity": {
+      "PID": 40372,
+      "creation_FILETIME": 134368590087214968,
+      "associated_with_any_Windows_job": true
+    },
+    "actual_original_child_terminal": {
+      "PID": 40372,
+      "creation_FILETIME": 134368590087214968,
+      "associated_with_any_Windows_job": true,
+      "actual_OS_exit_code": 0,
+      "exact_original_Popen_handle_used": true
+    },
+    "observed_source_interval_scope": "Actual owned current run only, with14 closed code/input/job pins; no earlier source history inferred."
+  },
+  "original_result": {
+    "artifact": "artifacts/ISAC145-equivalent-arithmetic-cold-full-six-original-budget-actual-v1/full-result.json",
+    "SHA256": "e4904048aa934fe4521312072ae443b284b31e067f3ed0404e92eea60280828b",
+    "bytes": 127306222
+  },
+  "fixture": {
+    "path": "artifacts/ISAC145-natural0-six-saved-final-MP-prepared-v1/actual-four-final-states-with-six-original-status-slots-fixture.json",
+    "bytes": 62795,
+    "SHA256": "044d03371b5c34bb2564b3d729502223a71ecd3a3f746ab32082a81d9dd46774"
+  },
+  "full_converged_count": 2,
+  "not_full_converged": [
+    "Rot-BS & Rot-RIS",
+    "Rot-BS & Fix-RIS",
+    "Fix-BS & Rot-RIS",
+    "Fix-BS & Fix-RIS"
+  ],
+  "original_controls": {
+    "W_solver": {
+      "maximum_iterations": 10000,
+      "relative_tolerance": 1e-06,
+      "bisection_tolerance": 1e-12
+    },
+    "RCG_solver": {
+      "maximum_iterations": 500,
+      "gradient_tolerance": 1e-06,
+      "initial_step": 1.0,
+      "armijo": 0.0001,
+      "backtrack_factor": 0.5,
+      "maximum_backtracks": 80,
+      "mode": "documented_non_ascent_restart"
+    },
+    "PGA_solver": {
+      "maximum_iterations": 500,
+      "gradient_tolerance": 1e-06,
+      "relative_tolerance": 1e-08,
+      "initial_step": 0.01,
+      "minimum_step": 1e-10,
+      "maximum_step": 1,
+      "armijo": 0.0001,
+      "backtrack_factor": 0.5,
+      "maximum_backtracks": 80,
+      "BB_interpretation": "ascent_sign_correction"
+    },
+    "AO_solver": {
+      "maximum_iterations": 500,
+      "relative_tolerance": 1e-05
+    }
+  },
+  "six_actual_status_and_budget_rows": {
+    "Rot-BS & Rot-RIS": {
+      "checks": {
+        "status": "failed"
+      },
+      "original_failure": {
+        "status": "failed",
+        "error": "Printed RCG Armijo line search failed; no substitute solver."
+      },
+      "final_W_theta_rotation_iota_or_history_available": false,
+      "missing_not_reconstructed": true
+    },
+    "Rot-BS & Fix-RIS": {
+      "checks": {
+        "status": "failed"
+      },
+      "original_failure": {
+        "status": "failed",
+        "error": "Printed RCG Armijo line search failed; no substitute solver."
+      },
+      "final_W_theta_rotation_iota_or_history_available": false,
+      "missing_not_reconstructed": true
+    },
+    "Fix-BS & Rot-RIS": {
+      "checks": {
+        "status": "executed",
+        "converged": false,
+        "inner_all_converged": false,
+        "full_converged": false,
+        "power_feasible": true,
+        "unit_modulus_error": 2.220446049250313e-16,
+        "rotation_feasible": true
+      },
+      "outer_status": {
+        "converged": false,
+        "inner_all_converged": false,
+        "full_converged": false,
+        "iterations": 500,
+        "iteration_budget": 500,
+        "budget_exhausted": true,
+        "termination_reason": "maximum_iterations_without_criterion_stop",
+        "relative_objective_improvement": 0.00019936261908449967,
+        "relative_tolerance": 1e-05
+      },
+      "actual_AO_blocks": 500,
+      "all_block_statuses": {
+        "W": {
+          "block_count": 500,
+          "original_termination_reason_counts": {
+            "relative_objective_tolerance": 500
+          },
+          "scalar_count_ranges": {
+            "iterations": {
+              "min": 12,
+              "max": 1699,
+              "sum": 35611,
+              "observed": 500
+            }
+          },
+          "original_converged_true": 500,
+          "original_converged_false": 0,
+          "original_converged_unreported": 0
+        },
+        "RIS": {
+          "block_count": 500,
+          "original_termination_reason_counts": {
+            "maximum_iterations_without_criterion_stop": 500
+          },
+          "scalar_count_ranges": {
+            "updates": {
+              "min": 500,
+              "max": 500,
+              "sum": 250000,
+              "observed": 500
+            },
+            "iterations": {
+              "min": 500,
+              "max": 500,
+              "sum": 250000,
+              "observed": 500
+            }
+          },
+          "original_converged_true": 0,
+          "original_converged_false": 500,
+          "original_converged_unreported": 0
+        },
+        "rotation": {
+          "block_count": 500,
+          "original_termination_reason_counts": {
+            "relative_step_tolerance": 499,
+            "projected_gradient_tolerance": 1
+          },
+          "scalar_count_ranges": {
+            "updates": {
+              "min": 9,
+              "max": 315,
+              "sum": 26928,
+              "observed": 500
+            },
+            "iterations": {
+              "min": 9,
+              "max": 315,
+              "sum": 26929,
+              "observed": 500
+            }
+          },
+          "original_converged_true": 500,
+          "original_converged_false": 0,
+          "original_converged_unreported": 0
+        }
+      },
+      "final_actual_block": {
+        "W": {
+          "converged": true,
+          "termination_reason": "relative_objective_tolerance",
+          "iterations": 12,
+          "iteration_budget": 10000,
+          "budget_exhausted": false,
+          "capped_unconverged": false,
+          "relative_objective_improvement": 9.832487270618148e-07,
+          "relative_step": 2.8721944655452432e-05,
+          "relative_tolerance": 1e-06
+        },
+        "RIS": {
+          "mode": "documented_non_ascent_restart",
+          "final_objective": 22.389042054399827,
+          "applicable": true,
+          "converged": false,
+          "termination_reason": "maximum_iterations_without_criterion_stop",
+          "iterations": 500,
+          "updates": 500,
+          "iteration_budget": 500,
+          "budget_exhausted": true,
+          "capped_unconverged": true,
+          "last_checked_normalized_gradient_norm": 0.0022417681083812696,
+          "final_normalized_gradient_norm": 0.003016350225283453,
+          "gradient_tolerance": 1e-06
+        },
+        "rotation": {
+          "final_objective": 22.39036967669843,
+          "converged": true,
+          "termination_reason": "relative_step_tolerance",
+          "iterations": 55,
+          "updates": 55,
+          "iteration_budget": 500,
+          "budget_exhausted": false,
+          "capped_unconverged": false,
+          "last_checked_projected_gradient_norm": 9.278155741986483e-05,
+          "final_projected_gradient_norm": 0.0002749658472637811,
+          "gradient_tolerance": 1e-06,
+          "relative_step": 7.160347833963076e-09,
+          "relative_tolerance": 1e-08
+        }
+      },
+      "final_numeric_metric_fields": {
+        "utility": 22.39038771213156,
+        "rate": 22.778180531116575,
+        "nmse": 0.03877928189850143,
+        "iota": 47.42833937481245
+      }
+    },
+    "Fix-BS & Fix-RIS": {
+      "checks": {
+        "status": "executed",
+        "converged": false,
+        "inner_all_converged": false,
+        "full_converged": false,
+        "power_feasible": true,
+        "unit_modulus_error": 2.220446049250313e-16,
+        "rotation_feasible": true
+      },
+      "outer_status": {
+        "converged": false,
+        "inner_all_converged": false,
+        "full_converged": false,
+        "iterations": 500,
+        "iteration_budget": 500,
+        "budget_exhausted": true,
+        "termination_reason": "maximum_iterations_without_criterion_stop",
+        "relative_objective_improvement": 0.0003331438136436346,
+        "relative_tolerance": 1e-05
+      },
+      "actual_AO_blocks": 500,
+      "all_block_statuses": {
+        "W": {
+          "block_count": 500,
+          "original_termination_reason_counts": {
+            "relative_objective_tolerance": 500
+          },
+          "scalar_count_ranges": {
+            "iterations": {
+              "min": 3,
+              "max": 1699,
+              "sum": 38442,
+              "observed": 500
+            }
+          },
+          "original_converged_true": 500,
+          "original_converged_false": 0,
+          "original_converged_unreported": 0
+        },
+        "RIS": {
+          "block_count": 500,
+          "original_termination_reason_counts": {
+            "maximum_iterations_without_criterion_stop": 500
+          },
+          "scalar_count_ranges": {
+            "updates": {
+              "min": 500,
+              "max": 500,
+              "sum": 250000,
+              "observed": 500
+            },
+            "iterations": {
+              "min": 500,
+              "max": 500,
+              "sum": 250000,
+              "observed": 500
+            }
+          },
+          "original_converged_true": 0,
+          "original_converged_false": 500,
+          "original_converged_unreported": 0
+        },
+        "rotation": {
+          "block_count": 500,
+          "original_termination_reason_counts": {
+            "projected_gradient_tolerance": 500
+          },
+          "scalar_count_ranges": {
+            "updates": {
+              "min": 0,
+              "max": 0,
+              "sum": 0,
+              "observed": 500
+            },
+            "iterations": {
+              "min": 1,
+              "max": 1,
+              "sum": 500,
+              "observed": 500
+            }
+          },
+          "original_converged_true": 500,
+          "original_converged_false": 0,
+          "original_converged_unreported": 0
+        }
+      },
+      "final_actual_block": {
+        "W": {
+          "converged": true,
+          "termination_reason": "relative_objective_tolerance",
+          "iterations": 3,
+          "iteration_budget": 10000,
+          "budget_exhausted": false,
+          "capped_unconverged": false,
+          "relative_objective_improvement": 8.375744972819418e-07,
+          "relative_step": 8.639847205234138e-05,
+          "relative_tolerance": 1e-06
+        },
+        "RIS": {
+          "mode": "documented_non_ascent_restart",
+          "final_objective": 21.79881114239944,
+          "applicable": true,
+          "converged": false,
+          "termination_reason": "maximum_iterations_without_criterion_stop",
+          "iterations": 500,
+          "updates": 500,
+          "iteration_budget": 500,
+          "budget_exhausted": true,
+          "capped_unconverged": true,
+          "last_checked_normalized_gradient_norm": 0.00035382780824373526,
+          "final_normalized_gradient_norm": 0.0004752704283343819,
+          "gradient_tolerance": 1e-06
+        },
+        "rotation": {
+          "final_objective": 21.79881114239944,
+          "converged": true,
+          "termination_reason": "projected_gradient_tolerance",
+          "iterations": 1,
+          "updates": 0,
+          "iteration_budget": 500,
+          "budget_exhausted": false,
+          "capped_unconverged": false,
+          "last_checked_projected_gradient_norm": 0.0,
+          "final_projected_gradient_norm": 0.0,
+          "gradient_tolerance": 1e-06,
+          "relative_step": null,
+          "relative_tolerance": 1e-08
+        }
+      },
+      "final_numeric_metric_fields": {
+        "utility": 21.79881624578397,
+        "rate": 22.36460093630811,
+        "nmse": 0.05657846905241393,
+        "iota": 15.698761546896897
+      }
+    },
+    "Rot-BS & No-RIS": {
+      "checks": {
+        "status": "executed",
+        "converged": true,
+        "inner_all_converged": true,
+        "full_converged": true,
+        "power_feasible": true,
+        "unit_modulus_error": 0.0,
+        "rotation_feasible": true
+      },
+      "outer_status": {
+        "converged": true,
+        "inner_all_converged": true,
+        "full_converged": true,
+        "iterations": 390,
+        "iteration_budget": 500,
+        "budget_exhausted": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 9.990651999798433e-06,
+        "relative_tolerance": 1e-05
+      },
+      "actual_AO_blocks": 390,
+      "all_block_statuses": {
+        "W": {
+          "block_count": 390,
+          "original_termination_reason_counts": {
+            "relative_objective_tolerance": 390
+          },
+          "scalar_count_ranges": {
+            "iterations": {
+              "min": 2,
+              "max": 642,
+              "sum": 3922,
+              "observed": 390
+            }
+          },
+          "original_converged_true": 390,
+          "original_converged_false": 0,
+          "original_converged_unreported": 0
+        },
+        "RIS": {
+          "block_count": 390,
+          "original_termination_reason_counts": {
+            "not_applicable_no_RIS": 390
+          },
+          "scalar_count_ranges": {
+            "iterations": {
+              "min": 0,
+              "max": 0,
+              "sum": 0,
+              "observed": 390
+            }
+          },
+          "original_converged_true": 390,
+          "original_converged_false": 0,
+          "original_converged_unreported": 0
+        },
+        "rotation": {
+          "block_count": 390,
+          "original_termination_reason_counts": {
+            "relative_step_tolerance": 390
+          },
+          "scalar_count_ranges": {
+            "updates": {
+              "min": 11,
+              "max": 252,
+              "sum": 19552,
+              "observed": 390
+            },
+            "iterations": {
+              "min": 11,
+              "max": 252,
+              "sum": 19552,
+              "observed": 390
+            }
+          },
+          "original_converged_true": 390,
+          "original_converged_false": 0,
+          "original_converged_unreported": 0
+        }
+      },
+      "final_actual_block": {
+        "W": {
+          "converged": true,
+          "termination_reason": "relative_objective_tolerance",
+          "iterations": 2,
+          "iteration_budget": 10000,
+          "budget_exhausted": false,
+          "capped_unconverged": false,
+          "relative_objective_improvement": 8.773508934796479e-08,
+          "relative_step": 3.073975859489596e-05,
+          "relative_tolerance": 1e-06
+        },
+        "RIS": {
+          "applicable": false,
+          "converged": true,
+          "capped_unconverged": false,
+          "termination_reason": "not_applicable_no_RIS",
+          "iterations": 0,
+          "iteration_budget": 0,
+          "budget_exhausted": false
+        },
+        "rotation": {
+          "final_objective": 10.456610402202974,
+          "converged": true,
+          "termination_reason": "relative_step_tolerance",
+          "iterations": 30,
+          "updates": 30,
+          "iteration_budget": 500,
+          "budget_exhausted": false,
+          "capped_unconverged": false,
+          "last_checked_projected_gradient_norm": 0.00015848268735040304,
+          "final_projected_gradient_norm": 0.0001283866777513694,
+          "gradient_tolerance": 1e-06,
+          "relative_step": 9.108913172133127e-09,
+          "relative_tolerance": 1e-08
+        }
+      },
+      "final_numeric_metric_fields": {
+        "utility": 10.456610423243855,
+        "rate": 19.640416372566506,
+        "nmse": 0.918380594932265,
+        "iota": 31.38712837223288
+      }
+    },
+    "Fix-BS & No-RIS": {
+      "checks": {
+        "status": "executed",
+        "converged": true,
+        "inner_all_converged": true,
+        "full_converged": true,
+        "power_feasible": true,
+        "unit_modulus_error": 0.0,
+        "rotation_feasible": true
+      },
+      "outer_status": {
+        "converged": true,
+        "inner_all_converged": true,
+        "full_converged": true,
+        "iterations": 5,
+        "iteration_budget": 500,
+        "budget_exhausted": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 6.062401402253509e-06,
+        "relative_tolerance": 1e-05
+      },
+      "actual_AO_blocks": 5,
+      "all_block_statuses": {
+        "W": {
+          "block_count": 5,
+          "original_termination_reason_counts": {
+            "relative_objective_tolerance": 5
+          },
+          "scalar_count_ranges": {
+            "iterations": {
+              "min": 5,
+              "max": 642,
+              "sum": 747,
+              "observed": 5
+            }
+          },
+          "original_converged_true": 5,
+          "original_converged_false": 0,
+          "original_converged_unreported": 0
+        },
+        "RIS": {
+          "block_count": 5,
+          "original_termination_reason_counts": {
+            "not_applicable_no_RIS": 5
+          },
+          "scalar_count_ranges": {
+            "iterations": {
+              "min": 0,
+              "max": 0,
+              "sum": 0,
+              "observed": 5
+            }
+          },
+          "original_converged_true": 5,
+          "original_converged_false": 0,
+          "original_converged_unreported": 0
+        },
+        "rotation": {
+          "block_count": 5,
+          "original_termination_reason_counts": {
+            "projected_gradient_tolerance": 5
+          },
+          "scalar_count_ranges": {
+            "updates": {
+              "min": 0,
+              "max": 0,
+              "sum": 0,
+              "observed": 5
+            },
+            "iterations": {
+              "min": 1,
+              "max": 1,
+              "sum": 5,
+              "observed": 5
+            }
+          },
+          "original_converged_true": 5,
+          "original_converged_false": 0,
+          "original_converged_unreported": 0
+        }
+      },
+      "final_actual_block": {
+        "W": {
+          "converged": true,
+          "termination_reason": "relative_objective_tolerance",
+          "iterations": 5,
+          "iteration_budget": 10000,
+          "budget_exhausted": false,
+          "capped_unconverged": false,
+          "relative_objective_improvement": 9.509906441929138e-07,
+          "relative_step": 0.0001698528517481589,
+          "relative_tolerance": 1e-06
+        },
+        "RIS": {
+          "applicable": false,
+          "converged": true,
+          "capped_unconverged": false,
+          "termination_reason": "not_applicable_no_RIS",
+          "iterations": 0,
+          "iteration_budget": 0,
+          "budget_exhausted": false
+        },
+        "rotation": {
+          "final_objective": 5.644686922921727,
+          "converged": true,
+          "termination_reason": "projected_gradient_tolerance",
+          "iterations": 1,
+          "updates": 0,
+          "iteration_budget": 500,
+          "budget_exhausted": false,
+          "capped_unconverged": false,
+          "last_checked_projected_gradient_norm": 0.0,
+          "final_projected_gradient_norm": 0.0,
+          "gradient_tolerance": 1e-06,
+          "relative_step": null,
+          "relative_tolerance": 1e-08
+        }
+      },
+      "final_numeric_metric_fields": {
+        "utility": 5.6446880906355705,
+        "rate": 15.358229513805748,
+        "nmse": 0.9713541423170178,
+        "iota": 33.86540863946657
+      }
+    }
+  },
+  "new_optimizer_MC_RNG_MP_or_physical_evaluator_calls": 0,
+  "actual_returned_state_count": 4,
+  "missing_final_state_names": [
+    "Rot-BS & Rot-RIS",
+    "Rot-BS & Fix-RIS"
+  ],
+  "original_failed_scheme_count": 2,
+  "pure_extraction_v1_failed_assert_six_states_retained": true,
+  "required_second_full_parse_after_V1_schema_failure": true,
+  "additional_bounded_1MiB_prefix_diagnosis_retained": true,
+  "independent_four_final_physics_derivative_and_trajectory_acceptance_not_executed": true,
+  "full_trajectory_QCQP_KKT_reference_dual_or_fullpaper_PASS": false
+}

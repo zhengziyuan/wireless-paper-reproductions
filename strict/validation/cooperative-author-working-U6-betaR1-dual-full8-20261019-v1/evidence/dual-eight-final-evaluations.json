@@ -1,0 +1,359 @@
+{
+  "schema": "ACTUAL_NATIVE_AND_NEW_PYTHON_RECAPTURE_U6_EIGHT_FINAL_EVALUATIONS_UNFITTED_V1",
+  "scope": "Compare eight separately optimized actual final evaluation arrays; not a same-state oracle, statistical equivalence or reference test.",
+  "native_result": "local-source/79e406f1a0a7/actual-native-complete-timed-result.json",
+  "native_result_SHA256": "62a6702d836f2ebc404074b07a3ea163587502008e0d0bac6f69b1ba1eb2661e",
+  "python_new_recapture_result": "local-source/3a6687d285e2/case-python-recorded.json",
+  "python_new_recapture_result_SHA256": "f853f72bd17320722c35b71bd2289fa9801924ab0a7a82cc559211af005eaf18",
+  "python_terminal_journal": "local-source/612a569132ce/cooperative-author-U6-missing-recording-recapture-v1-job-actual-owned-process.json",
+  "python_terminal_shared_snapshot_SHA256": "793fdf01ad2b6f356b38ecbf708ba85f4f390bd0d2d0978a3e46c025e895f4cc",
+  "python_actual_natural_exit": 0,
+  "python_original_held_birth_and_exit_match": true,
+  "python_actual_source_and_job_closed": true,
+  "native_closed_preflight": "local-source/92a8fe91093c/ACTUAL_CLOSED_NATIVE_PREFLIGHT_FOR_ONE_SAVED_MR_S_COST_V1.json",
+  "native_reported_and_tuned_fields_exact_to_python": true,
+  "native_original_full_configuration_equals_python": true,
+  "python_saved_input_factory_receipt": "local-source/b440edfa62ae/CANONICAL_SAVED_FACTORY_BOUND_BEFORE_RECORDER_CAPTURE_V1.json",
+  "python_saved_input_factory_receipt_SHA256": "220808ad98e0bfd352286bcc6c049acfaaccbec2c7207a1eac41a273acf893f3",
+  "shared_canonical_input_NPZ_SHA256": "ce39e03acac33fa0670264ee5f49cf95f2ea6bf96334ab09fb0445978cf4df8e",
+  "native_format_only_canonical_MAT_readback_receipt": "local-source/3bbefc9945cc/ACTUAL_FORMAT_ONLY_CANONICAL_NPZ_TO_MAT_EXACT_READBACK_V1.json",
+  "old_first_python_host1_and_lostrecording_retained": true,
+  "new_python_is_explicit_new_optimization_recapture": true,
+  "known_scenario": "U6 J3 N16 M25 P50 INR.01 betaN100 betaR1 betaG1000; not final Fig4 betaR10",
+  "rows": [
+    {
+      "scheme": "AP-NoRIS",
+      "native_minSINR": 0.5218798275103679,
+      "python_recapture_minSINR": 0.5218798316552461,
+      "native_minus_python": -4.144878218426129e-09,
+      "absolute_relative_gap_to_python": 7.942208085106144e-09,
+      "native_sinr": [
+        0.5229223732725933,
+        0.5219391305784563,
+        0.5218798275103679,
+        0.5218798276265215,
+        0.5229223732722028,
+        0.5219391305779641
+      ],
+      "python_sinr": [
+        0.5229236290578847,
+        0.5219406538188578,
+        0.5218798316552461,
+        0.5218810375744231,
+        0.5229236291701577,
+        0.5219406548473768
+      ],
+      "native_satellite_power": [
+        3.274335195355426,
+        2.4116075188510224e-33,
+        3.274335195495804
+      ],
+      "python_satellite_power": [
+        3.274341585976731,
+        2.702452822564633e-33,
+        3.2743415988343543
+      ],
+      "native_GT_interference": [
+        0.009999999999981132
+      ],
+      "python_GT_interference": [
+        0.010000000184760882
+      ],
+      "native_internal_converged": true,
+      "python_internal_converged": true
+    },
+    {
+      "scheme": "AP-AO",
+      "native_minSINR": 0.9666600067799986,
+      "python_recapture_minSINR": 0.9666619018634686,
+      "native_minus_python": -1.8950834699271724e-06,
+      "absolute_relative_gap_to_python": 1.9604408390089158e-06,
+      "native_sinr": [
+        0.9666600069864162,
+        0.9666600067799986,
+        0.9666736511048822,
+        0.9667264334154082,
+        0.9666600072829767,
+        0.9666600074933508
+      ],
+      "python_sinr": [
+        0.9666619018634686,
+        0.9666619689387842,
+        0.966673659531306,
+        0.9667281183739207,
+        0.9666620355801522,
+        0.9666622198940555
+      ],
+      "native_satellite_power": [
+        2.3034279879135524,
+        1.5667179041461292e-56,
+        17.23332034373046
+      ],
+      "python_satellite_power": [
+        2.3034282157335855,
+        6.969733933615818e-143,
+        17.233346298209263
+      ],
+      "native_GT_interference": [
+        0.009999999999996444
+      ],
+      "python_GT_interference": [
+        0.010000000183888672
+      ],
+      "native_internal_converged": true,
+      "python_internal_converged": true
+    },
+    {
+      "scheme": "MR-S-NoRIS",
+      "native_minSINR": 0.5038070144780132,
+      "python_recapture_minSINR": 0.503806991747981,
+      "native_minus_python": 2.2730032189777205e-08,
+      "absolute_relative_gap_to_python": 4.5116547729745345e-08,
+      "native_sinr": [
+        0.5038074791041918,
+        0.5038070145313163,
+        0.5038070144780132,
+        0.5038070147677634,
+        0.5038074791042264,
+        0.5038070145313004
+      ],
+      "python_sinr": [
+        0.5038074850648108,
+        0.5038070886746089,
+        0.503806991747981,
+        0.5038070741214449,
+        0.5038074858235925,
+        0.5038070886766927
+      ],
+      "native_satellite_power": [
+        3.1608326496898353,
+        2.2485438415833826e-13,
+        3.1608326496913524
+      ],
+      "python_satellite_power": [
+        3.1608329832415407,
+        6.364649109579271e-10,
+        3.1608329851350114
+      ],
+      "native_GT_interference": [
+        0.009999999999995452
+      ],
+      "python_GT_interference": [
+        0.009999999980935372
+      ],
+      "native_internal_converged": true,
+      "python_internal_converged": true
+    },
+    {
+      "scheme": "MR-S-PA",
+      "native_minSINR": 0.9176582157099327,
+      "python_recapture_minSINR": 0.9176586112342997,
+      "native_minus_python": -3.955243670361597e-07,
+      "absolute_relative_gap_to_python": 4.310147174493991e-07,
+      "native_sinr": [
+        0.9176582159354237,
+        0.9176582158605834,
+        0.9176672950583066,
+        0.9177274285819906,
+        0.9176582159205406,
+        0.9176582157099327
+      ],
+      "python_sinr": [
+        0.9176602793943183,
+        0.9176586778775335,
+        0.9176673300449606,
+        0.917730410822622,
+        0.9176600446995243,
+        0.9176586112342997
+      ],
+      "native_satellite_power": [
+        2.030544565097036,
+        2.529014005286621e-13,
+        4.315180523035003
+      ],
+      "python_satellite_power": [
+        2.0305537770629036,
+        1.8369121821133528e-09,
+        4.315184169479528
+      ],
+      "native_GT_interference": [
+        0.009999999999994728
+      ],
+      "python_GT_interference": [
+        0.00999999993784848
+      ],
+      "native_internal_converged": true,
+      "python_internal_converged": true
+    },
+    {
+      "scheme": "MR-S-TS",
+      "native_minSINR": 0.9004166391312404,
+      "python_recapture_minSINR": 0.9004102282435166,
+      "native_minus_python": 6.410887723795611e-06,
+      "absolute_relative_gap_to_python": 7.119963237536415e-06,
+      "native_sinr": [
+        0.9004166397458486,
+        0.9004166401883614,
+        0.9004344939783675,
+        0.9004167760732791,
+        0.9004166397443109,
+        0.9004166391312404
+      ],
+      "python_sinr": [
+        0.9004129468845898,
+        0.9004102282435166,
+        0.9004270273770785,
+        0.9004122958785005,
+        0.9004132358089229,
+        0.900410241002029
+      ],
+      "native_satellite_power": [
+        3.029918117616594,
+        2.0777601475550064e-13,
+        3.2770389033423664
+      ],
+      "python_satellite_power": [
+        3.0299501255665815,
+        3.3487003639041024e-09,
+        3.2770306962898763
+      ],
+      "native_GT_interference": [
+        0.009999999999996338
+      ],
+      "python_GT_interference": [
+        0.009999999887154169
+      ],
+      "native_internal_converged": true,
+      "python_internal_converged": true
+    },
+    {
+      "scheme": "MR-TTS-NoRIS",
+      "native_minSINR": 0.5112738858606146,
+      "python_recapture_minSINR": 0.5112737992070915,
+      "native_minus_python": 8.665352313474983e-08,
+      "absolute_relative_gap_to_python": 1.6948555405955942e-07,
+      "native_sinr": [
+        0.5112749386648175,
+        0.5112738858965425,
+        0.5112738858606146,
+        0.5112738860510161,
+        0.5112749386648278,
+        0.5112738858965412
+      ],
+      "python_sinr": [
+        0.5112749335183305,
+        0.5112741609243465,
+        0.5112737992070915,
+        0.5112743990234552,
+        0.5112749191649157,
+        0.5112741609413324
+      ],
+      "native_satellite_power": [
+        3.180581689871687,
+        7.722495814963802e-14,
+        3.1805816898726618
+      ],
+      "python_satellite_power": [
+        3.180583227291646,
+        1.3598534235804533e-09,
+        3.1805832094124757
+      ],
+      "native_GT_interference": [
+        0.009999999999997787
+      ],
+      "python_GT_interference": [
+        0.009999999922163797
+      ],
+      "native_internal_converged": true,
+      "python_internal_converged": true
+    },
+    {
+      "scheme": "MR-TTS-PA",
+      "native_minSINR": 0.9248461429056697,
+      "python_recapture_minSINR": 0.9248466445393738,
+      "native_minus_python": -5.016337041308105e-07,
+      "absolute_relative_gap_to_python": 5.423966309362052e-07,
+      "native_sinr": [
+        0.924846143329379,
+        0.9248461429056697,
+        0.924856646416254,
+        0.9248855552299553,
+        0.9248461432687107,
+        0.9248461430298235
+      ],
+      "python_sinr": [
+        0.9248485568228773,
+        0.9248467155888163,
+        0.9248564352809268,
+        0.9248873028720276,
+        0.9248481872585473,
+        0.9248466445393738
+      ],
+      "native_satellite_power": [
+        2.0359638301943725,
+        2.8330172879192427e-13,
+        4.330690656191626
+      ],
+      "python_satellite_power": [
+        2.035978885216938,
+        1.2945408862374817e-09,
+        4.33068972646266
+      ],
+      "native_GT_interference": [
+        0.009999999999992166
+      ],
+      "python_GT_interference": [
+        0.009999999922312031
+      ],
+      "native_internal_converged": true,
+      "python_internal_converged": true
+    },
+    {
+      "scheme": "MR-TTS-TS",
+      "native_minSINR": 0.9068806839802633,
+      "python_recapture_minSINR": 0.9068676876268831,
+      "native_minus_python": 1.2996353380256842e-05,
+      "absolute_relative_gap_to_python": 1.43310358915379e-05,
+      "native_sinr": [
+        0.9068806847394452,
+        0.9068806855013368,
+        0.9069023077657998,
+        0.9068807192243639,
+        0.9068806847203637,
+        0.9068806839802633
+      ],
+      "python_sinr": [
+        0.9068700052540636,
+        0.9068676876268831,
+        0.9068884128722885,
+        0.9068693119556301,
+        0.9068703960975358,
+        0.9068677207775898
+      ],
+      "native_satellite_power": [
+        3.03888499860912,
+        8.395123384196102e-14,
+        3.2819400205042655
+      ],
+      "python_satellite_power": [
+        3.0388842526098325,
+        1.900035445415459e-09,
+        3.281956699173506
+      ],
+      "native_GT_interference": [
+        0.009999999999996435
+      ],
+      "python_GT_interference": [
+        0.0099999998860587
+      ],
+      "native_internal_converged": true,
+      "python_internal_converged": true
+    }
+  ],
+  "maximum_relative_minSINR_gap": 1.43310358915379e-05,
+  "independent_same_state_physics_PASS_inferred": false,
+  "optimized_solutions_equal_claimed": false,
+  "original_reference_or_fullpaper_PASS": false,
+  "performance_MC_or_confidence_interval_claimed": false,
+  "new_optimizer_MC_MP_RNG_calls_in_this_comparison": 0
+}
