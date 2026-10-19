@@ -1,3 +1,5 @@
+> Completion update (2026-10-20): the [full 900-case saved-mathematics evidence](../ma6-all900-saved-science-20261020-v1/README.md) is now available. All 900 cases pass the own-state mathematical and terminal sample/mean comparisons; 897/900 pass the original intermediate-path comparison. Three path exceptions and the original-reference gaps remain. The execution-status statements below describe this earlier first-case snapshot.
+
 # MA Figure6: complete saved-case mathematics and actual paired native witness
 
 The full target remains all900 configured Fig6 inputs from the preserved
