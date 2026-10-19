@@ -1,0 +1,31 @@
+{
+  "schema": "D3g1-independent-exact-global-grid-public-manifest-v1",
+  "actual_first_portable_use_exit_code": 0,
+  "files": {
+    "four-frozen-binary64-models.json": {
+      "bytes": 32356,
+      "SHA256": "cd8857d086928190cc48d04b6be78737cec01afbc5e240c0941c1f0953b97f84"
+    },
+    "original-source-bound-summary.json": {
+      "bytes": 24302,
+      "SHA256": "ee56d3440289ecbddc1bfdf9d0ce6c853e6aa4559223288fc3a00fbced8a0f38"
+    },
+    "portable-first-use.json": {
+      "bytes": 20966,
+      "SHA256": "b9b7c3beacce57c36c94ea8ecf18c1ae8e8fdafd4b7eb6e7ffa19dc348511594"
+    },
+    "README.md": {
+      "bytes": 4534,
+      "SHA256": "114b8c84fbebad77b632845fe2bc2751925b25882b060ac6b4ee7ce00df3b183"
+    },
+    "source-provenance.json": {
+      "bytes": 10887,
+      "SHA256": "acee2b77c6f9786a92ebb3d49276309c567fb28e273c28890a947a84d6acc074"
+    },
+    "verify_all126.py": {
+      "bytes": 15149,
+      "SHA256": "40a93a0ff9afb77302191d5de729af2f0fe2fbd5d0590cdac09eadf656cfacf1"
+    }
+  },
+  "note": "Manifest excludes itself. The external publication plan hashes every final file. The actual first-use receipt retains its earlier manifest epoch; only provenance/manifest and the added receipt were finalized after that run, not verifier or primitive data."
+}
