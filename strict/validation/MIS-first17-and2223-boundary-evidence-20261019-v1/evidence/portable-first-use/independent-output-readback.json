@@ -1,0 +1,140 @@
+{
+  "schema": "independent-five-mode-actual-output-boundary-and-archive-readback-v1",
+  "all_finite_readback_checks_pass": true,
+  "checks": {
+    "five_distinct_expected_actual_exit_codes": true,
+    "actual_root_source_before_after_same_nonempty_24": true,
+    "actual_root_V1_source_snapshot_exact_V1_plan_identities": true,
+    "root_retains_expected_scientific_false_and_no_optimizer": true,
+    "inspect_actual_output_identity": true,
+    "inspect_no_optimizer_RNG_or_MC": true,
+    "fig11_actual_output_identity": true,
+    "fig11_no_optimizer_RNG_or_MC": true,
+    "roundoff_actual_output_identity": true,
+    "roundoff_no_optimizer_RNG_or_MC": true,
+    "sensing2223_actual_output_identity": true,
+    "sensing2223_no_optimizer_RNG_or_MC": true,
+    "trace_actual_output_identity": true,
+    "trace_no_optimizer_RNG_or_MC": true,
+    "inspect_transport_pass": true,
+    "actual17_rows_and_implemented_KKT17_domain17_printed0": true,
+    "actual_exact_five_strict_norm_failures_retained": true,
+    "actual_all17_objective_comparisons_pass": true,
+    "actual_all17_physical_stop_and_comparison_fields_bitwise_archive": true,
+    "actual_final_binary_score_exact_archive": true,
+    "two_small_mu_all_shared_fields_bitwise_archive": true,
+    "new2223_physics_certificate_exact_archive": true,
+    "new2223_only_ownstate_pass_old_failure_preserved": true,
+    "trace33_and_all66_scalar_exactness_flags_match_archive": true,
+    "trace_first_objective_exact_old_new_archive": true,
+    "trace_specific_cause_not_claimed_and_old_failed_operands_not_recovered": true,
+    "all_nonmetadata_reader_sources_fixtures_reports_unchanged_from_actual_use": true
+  },
+  "failed_checks": [],
+  "actual_root_execution_receipt": {
+    "path": "evidence/portable-first-use/root-five-modes.json",
+    "original_SHA256": "ee137c3064f0b4918a5ff0c66ed2a4365f0388fff4b1b5e4b28a59e08bac16a9"
+  },
+  "actual_expected_exits": {
+    "inspect": 0,
+    "fig11": 2,
+    "roundoff": 0,
+    "sensing2223": 0,
+    "trace": 0
+  },
+  "actual_fig11_counts": {
+    "endpoints": 17,
+    "domain_pass": 17,
+    "implemented_projected_KKT_threshold_pass": 17,
+    "printed_form_below_selected_threshold_pass": 0,
+    "strict_norm_comparison_pass": 12,
+    "strict_norm_comparison_failed_stages_zero_based": [
+      11,
+      12,
+      13,
+      14,
+      16
+    ],
+    "objective_comparison_pass": 17,
+    "all17_strict_comparison_pass": false
+  },
+  "archived_fields_comparison": {
+    "fig11_all17_numerical_fields_bitwise_same": true,
+    "fig11_differing_stages": [],
+    "two_small_mu_shared_field_counts": [
+      15,
+      15
+    ],
+    "two_small_mu_differences": [],
+    "new2223_numerical_result_bitwise_same": true,
+    "trace_first_divergence33_and_objective_bits_same": true
+  },
+  "actual_output_identities": [
+    {
+      "mode": "inspect",
+      "path": "evidence/portable-first-use/inspect.json",
+      "original_actual_output_SHA256": "23e7b3b939b9f362aabf20ef4a4460921c8388b51d4345a7e96ee2f038b4f36c",
+      "original_bytes": 1204,
+      "actual_exit": 0
+    },
+    {
+      "mode": "fig11",
+      "path": "evidence/portable-first-use/fig11.json",
+      "original_actual_output_SHA256": "788fa906762670966c772fb3705656c39ba151cdedd672fe5a45c62fe3c17b03",
+      "original_bytes": 45524,
+      "actual_exit": 2
+    },
+    {
+      "mode": "roundoff",
+      "path": "evidence/portable-first-use/roundoff.json",
+      "original_actual_output_SHA256": "6203296e69b6ee2b9ba348c3dcb89fd122085fe486938626d8ee282db14ffb36",
+      "original_bytes": 3456,
+      "actual_exit": 0
+    },
+    {
+      "mode": "sensing2223",
+      "path": "evidence/portable-first-use/sensing2223.json",
+      "original_actual_output_SHA256": "ee87b96d49938304c210cf410be049abd7a954b65757c78606683620b9247614",
+      "original_bytes": 1764,
+      "actual_exit": 0
+    },
+    {
+      "mode": "trace",
+      "path": "evidence/portable-first-use/trace.json",
+      "original_actual_output_SHA256": "dc767709820f426771f7a9f4c30b7bc9fe01bb0853e724c0fe99f92878f66132",
+      "original_bytes": 1530,
+      "actual_exit": 0
+    }
+  ],
+  "source_before_after": {
+    "MANIFEST.json": "f9e4f013fab2a0811a377ce183dc486b526458327af66dd4086c5181c45e1edb",
+    "PROVENANCE.json": "e75f391f79db80743908f872b45906d9da0e8ae99f6e5064c0876b669d97b6d3",
+    "README.md": "ebc3efd66ca01e96ae43d694707a915ee395c6b0c7cdab59c1d34cf863e23732",
+    "read_saved_evidence_v1.py": "4b6a5f2843445a2a2f1dd4d73e7361abf0d07a0e05a83933252cd883aa270488",
+    "requirements.txt": "8e0775b4589c3d39b4172b2da90158edf6a7f9d7a2f5bfc5f34865304d47cfcf",
+    "evidence\\fig11-capture-reader-V1-failure-retained.json": "293432445029d9a728835ba46f3f98c22b8b08e1d0f1cd3d52719584037ac473",
+    "evidence\\fig11-capture.json": "f83370bfa60353111625565bfbf7bde72f4dc5e08dd51de73a8e73a1e61ad370",
+    "evidence\\fig11-Decimal60.json": "586500f22387e66ed898f7150c6f467abde9e85b088b30a6cd85a8e0807ae17b",
+    "evidence\\fig11-gates.json": "5a2427a9a801a8777c285c6893d9250539ecbad633dbb09b52855e419e2b9a49",
+    "evidence\\fig11-reference-dimension-inverse.json": "675209f9f329c0383c4be512818e6ed21871786591e908769a2b0eae13f5fa1c",
+    "evidence\\fig11-two-small-mu.json": "3643bc7245a7dd9880044d15a468f1d5ec0a6bb0eea2c19cf9621cc229c72869",
+    "evidence\\previous-threshold-attribution-and-source-scope.json": "c4add36518588175bb0d9df2fc2375d4e26ef03b2f6f380996af0fb72e430c04",
+    "evidence\\sensing2223-divergence.json": "26b9c0e26508603a4722b997d490f6bbdddfb94587e0e430c883e4835959126e",
+    "evidence\\sensing2223-new-run-scope.json": "f9c65d56e7622d41c916f71917a0bee20a3887b0b7d0f35e458e2c2dd6daac9b",
+    "evidence\\sensing2223-ownstate.json": "3932cb57f57c1ad198e306931ee0e3bc900b199ccfb5ff4d2d4c161988f32b3f",
+    "fixtures\\fig11-actual-records.json": "17fc334ca94f1a756e1eaddb1b8e1ad0c0701bbe183ebaf7056ecadb8c356182",
+    "fixtures\\fig11-actual-typed-states.npz": "6d83b29cdad30022e7395c3738e541dfaf41ad0b7d5cd1bc416511f4a87e4b3f",
+    "fixtures\\fig11-first-original-start.json.gz": "7565c8c706eee177470effe10a10a1383329f15c8900db9e60ebfa335fcc6290",
+    "fixtures\\sensing2223-new-original-result.json.gz": "451c24029b8b6cf2fd5bdd7101f89756073830279998b519a35e6fcc1751b7e8",
+    "fixtures\\sensing2223-old-outer1-all66.json": "3add4d2023961662c196fc0ebbd1dbca806ad6eaad7ae3cde7ec9961b4080ff1",
+    "fixtures\\sensing2223-settings.json": "9d330220a7488fbeb382dc54e623bce779f1a1b872a3c5a102bafb62b2cf9638",
+    "sources\\fig11_Decimal60_reference.py": "bcef73f7b799de7d3b16e407c6c4e24a640ba78468dacb29a0f954954480080b",
+    "sources\\frozen_communication_engine.py": "eb90ca857df1cf3aed094c91c1ccee1461e571a96f15e42f7545768acaa1de77",
+    "sources\\sensing_saved_reference.py": "1c39fa1aff6e6740eb8087012c7cf1e0da37f6a033ac6ee64ab1d4f6ef17c643"
+  },
+  "actual_source_interval_pass": true,
+  "original_root_source_snapshot_is_V1_before_metadata_seal": true,
+  "only_README_PROVENANCE_MANIFEST_and_added_firstuse_evidence_change_in_V2": true,
+  "mathematical_or_optimizer_MC_RNG_calls_in_this_readback": 0,
+  "no_figure_or_whole_trajectory_or_reference_dual_or_fullpaper_PASS": true
+}

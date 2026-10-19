@@ -1,0 +1,100 @@
+{
+  "schema": "actual-one-MIS2223-native-first-original-failure-prefix-v1",
+  "original_start": 2223,
+  "raw_original_dispatcher_start": 1,
+  "original_case_settings": "origin:resume-20261017/MIS-sensing-native-original6000-v5-recorded-v1/inputs/start-2223-settings.json",
+  "actual_source_before": [
+    {
+      "path": "origin:repository/strict/validation/sensing-same-cone-v5-components-v1/scientific-source-v5/mis_sensing_strict_engine.m",
+      "SHA256": "92035e715a9644f0bcd512f5ea1c46e785c394d316c3768416d9f748b2770487"
+    },
+    {
+      "path": "origin:repository/strict/validation/sensing-same-cone-v5-components-v1/scientific-source-v5/sorted_cone_rows_exact_binary_v2.m",
+      "SHA256": "f11097f4af7fbba53f89283757b9ac23686207806db7d1b8778d9f22f00a29eb"
+    },
+    {
+      "path": "origin:repository/strict/validation/sensing-same-cone-v5-components-v1/scientific-source-v5/figures.json",
+      "SHA256": "5648c2d705204c88171c4eb300e1c4e74774041decaa7a82f64a9efd1e485e78"
+    },
+    {
+      "path": "origin:repository/strict/validation/sensing-same-cone-v5-components-v1/scientific-source-v5/normalization_contract.m",
+      "SHA256": "da1a3a51f375863589995c95067c68ae40b3fc8a551fe6de104fe975dbeb6df0"
+    },
+    {
+      "path": "origin:resume-20261017/MIS-sensing-native-original6000-v5-recorded-v1/inputs/start-2223-settings.json",
+      "SHA256": "9153386bc1d44aec1cb8ba5b0e6b664d8f5d5b1dc243cf5016a3c584f78ab9a6"
+    },
+    {
+      "path": "origin:resume-20261017/MIS-sensing-native-original6000-v5-recorded-v1/starts/start-2223-receipt.json",
+      "SHA256": "bf730866615e08809253db65fea2215e296ddc0ea2206f4c4897c18a5325f404"
+    },
+    {
+      "path": "origin:resume-20261017/MIS2223-native-failure-prefix-prepared-v1/mis2223_original_engine_first_failure_prefix_v1.m",
+      "SHA256": "e410aff960664f2b5d6dd20e9f2f3f71c863f6717aa4598d758026e07a508a2c"
+    },
+    {
+      "path": "origin:resume-20261017/MIS2223-native-failure-prefix-prepared-v1/mis2223_passive_first_curve_failure_capture_v1.m",
+      "SHA256": "fa7761e5dffdd28d6b89c3e518beed264767f5edcaa9def303ffe0659b23af4d"
+    },
+    {
+      "path": "origin:resume-20261017/MIS2223-native-failure-prefix-prepared-v1/run_one_MIS2223_original_budget_first_failure_prefix_v1.m",
+      "SHA256": "f5b872655218ab6ec374fdc22102c6bf454a4284cf62cc36e9ee66c308b4937e"
+    }
+  ],
+  "actual_source_after": [
+    {
+      "path": "origin:repository/strict/validation/sensing-same-cone-v5-components-v1/scientific-source-v5/mis_sensing_strict_engine.m",
+      "SHA256": "92035e715a9644f0bcd512f5ea1c46e785c394d316c3768416d9f748b2770487"
+    },
+    {
+      "path": "origin:repository/strict/validation/sensing-same-cone-v5-components-v1/scientific-source-v5/sorted_cone_rows_exact_binary_v2.m",
+      "SHA256": "f11097f4af7fbba53f89283757b9ac23686207806db7d1b8778d9f22f00a29eb"
+    },
+    {
+      "path": "origin:repository/strict/validation/sensing-same-cone-v5-components-v1/scientific-source-v5/figures.json",
+      "SHA256": "5648c2d705204c88171c4eb300e1c4e74774041decaa7a82f64a9efd1e485e78"
+    },
+    {
+      "path": "origin:repository/strict/validation/sensing-same-cone-v5-components-v1/scientific-source-v5/normalization_contract.m",
+      "SHA256": "da1a3a51f375863589995c95067c68ae40b3fc8a551fe6de104fe975dbeb6df0"
+    },
+    {
+      "path": "origin:resume-20261017/MIS-sensing-native-original6000-v5-recorded-v1/inputs/start-2223-settings.json",
+      "SHA256": "9153386bc1d44aec1cb8ba5b0e6b664d8f5d5b1dc243cf5016a3c584f78ab9a6"
+    },
+    {
+      "path": "origin:resume-20261017/MIS-sensing-native-original6000-v5-recorded-v1/starts/start-2223-receipt.json",
+      "SHA256": "bf730866615e08809253db65fea2215e296ddc0ea2206f4c4897c18a5325f404"
+    },
+    {
+      "path": "origin:resume-20261017/MIS2223-native-failure-prefix-prepared-v1/mis2223_original_engine_first_failure_prefix_v1.m",
+      "SHA256": "e410aff960664f2b5d6dd20e9f2f3f71c863f6717aa4598d758026e07a508a2c"
+    },
+    {
+      "path": "origin:resume-20261017/MIS2223-native-failure-prefix-prepared-v1/mis2223_passive_first_curve_failure_capture_v1.m",
+      "SHA256": "fa7761e5dffdd28d6b89c3e518beed264767f5edcaa9def303ffe0659b23af4d"
+    },
+    {
+      "path": "origin:resume-20261017/MIS2223-native-failure-prefix-prepared-v1/run_one_MIS2223_original_budget_first_failure_prefix_v1.m",
+      "SHA256": "f5b872655218ab6ec374fdc22102c6bf454a4284cf62cc36e9ee66c308b4937e"
+    }
+  ],
+  "source_interval_pass": true,
+  "source_declared_failure_reproduced": false,
+  "intentional_diagnostic_boundary_after_original_nonempty_receipt": false,
+  "actual_observer": {
+    "curve_calls": 3113,
+    "successful_curve_calls": 3113,
+    "declared_failure_seen": false,
+    "failure_saved": false,
+    "failed_curve_calls_retained": 0,
+    "observer_errors": []
+  },
+  "unexpected_exception": [],
+  "actual_full_original_result_returned_without_failure": true,
+  "full30_original_outer_execution_claimed": true,
+  "original_case2223_saved_false_and_global720_false_retained": true,
+  "actual_effective_entry_exit_code": 0,
+  "elapsed_seconds": 134.8056587,
+  "independent_failed_operands_MP_or_causal_mechanism_or_paper_PASS": false
+}

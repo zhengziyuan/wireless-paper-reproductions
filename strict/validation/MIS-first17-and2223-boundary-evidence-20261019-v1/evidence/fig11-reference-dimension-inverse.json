@@ -1,0 +1,14 @@
+{
+  "original_kernel_path": "origin:repository/tools/mis-native-replay/independent_physical.py",
+  "original_kernel_SHA256": "54e91b92540aa6bc3716636c139ffb56e21d4a2bc0dccb078351377f9742800b",
+  "adapted_kernel_path": "origin:resume-20261017/MIS-Fig11-first-start17-Decimal60-ownstate-independent-v1/independent_physical_Fig11_exact_dimensions_v1.py",
+  "adapted_kernel_SHA256": "bcef73f7b799de7d3b16e407c6c4e24a640ba78468dacb29a0f954954480080b",
+  "exact_only_edit": {
+    "before": "if M!=4 or K!=4 or N not in (0,1) or U!=(4 if N else 1):raise ValueError('Original full Fig8 dimensions required')",
+    "after": "if M!=64 or K!=2 or N!=36 or U!=29:raise ValueError('Actual full Fig11 first MIS geometry64/36/2/29 required')"
+  },
+  "entire_original_source_reconstructed_byte_exact": true,
+  "all_physical_LSE_radial_angular_simplex_math_unchanged": true,
+  "old_Fig8_geometry_initial_input_functions_not_called": true,
+  "scientific_execution_in_preparation": false
+}
