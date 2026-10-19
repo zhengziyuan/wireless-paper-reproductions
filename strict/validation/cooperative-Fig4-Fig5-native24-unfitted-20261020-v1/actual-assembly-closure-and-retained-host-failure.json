@@ -1,0 +1,109 @@
+{
+  "schema": "actual-native24-saved-scalar-V1-host-failure-retained-and-V2-natural0-source-closure-v1",
+  "retained_V1": {
+    "schema": "actual-once-native24-saved-scalar-assembly-natural-return-and-source-closure-v1",
+    "started_UTC": "2026-10-19T22:32:50.035004+00:00",
+    "finished_UTC": "2026-10-19T22:32:50.391060+00:00",
+    "command": [
+      "source-633639c4c370/python.exe",
+      "-X",
+      "utf8",
+      "-B",
+      "source-67b4a062b838/collect_only_closed_native24_and_saved_Python192_v1.py",
+      "--finish",
+      "--plan",
+      "source-98bd0fa4385b/PREPARED_NATIVE24_CLOSED_SCALAR_EPS_AND_EXISTING_PYTHON192_ASSEMBLY_PLAN_V1.json",
+      "--output-dir",
+      "source-56581aa700c5/actual-v1"
+    ],
+    "actual_child_PID": 57996,
+    "actual_exit_code": 1,
+    "naturally_waited_on_same_original_Popen": true,
+    "source_before": {
+      "source-67b4a062b838/collect_only_closed_native24_and_saved_Python192_v1.py": "bb864fdd025896fd1e67dcdce99214f236510289ed62a302b78d315c51e7ea33",
+      "source-0206f947d964/collect_closed_U6_Fig4_Fig5_unfitted_reference_v1.py": "bc4e31f95f195fa349fc3473dbd2ee16a290753dc990e4dfaf3cbc10625125b9",
+      "source-72c96a81b364/prepare_minimal_portable_packet_v1.py": "c8911299fadd27d25c77eab5b8a67bc420bb4d38c76b194c42d1850c2e2129bd",
+      "source-1889a54e8a4f/root_shared_controller_snapshot_v1.py": "5d8f67462f99fe145a07a0ade4a8e9ce970c2150bdeca439963e18281cdbd4b5",
+      "source-98bd0fa4385b/PREPARED_NATIVE24_CLOSED_SCALAR_EPS_AND_EXISTING_PYTHON192_ASSEMBLY_PLAN_V1.json": "656ece862b820cbd6cb4f9b30bae03682f28b4b5675c9977d0c57cfcf37cdb9b",
+      "source-85b5f2d02828/EXACT_FUTURE_ONCE_SAVED_ONLY_NATIVE24_SCALAR_ASSEMBLY_COMMAND_V1.json": "2b002331dd69e1ecf5371721309758113ea3b2c883455724d7bb0fd74b2ca11e"
+    },
+    "source_after": {
+      "source-67b4a062b838/collect_only_closed_native24_and_saved_Python192_v1.py": "bb864fdd025896fd1e67dcdce99214f236510289ed62a302b78d315c51e7ea33",
+      "source-0206f947d964/collect_closed_U6_Fig4_Fig5_unfitted_reference_v1.py": "bc4e31f95f195fa349fc3473dbd2ee16a290753dc990e4dfaf3cbc10625125b9",
+      "source-72c96a81b364/prepare_minimal_portable_packet_v1.py": "c8911299fadd27d25c77eab5b8a67bc420bb4d38c76b194c42d1850c2e2129bd",
+      "source-1889a54e8a4f/root_shared_controller_snapshot_v1.py": "5d8f67462f99fe145a07a0ade4a8e9ce970c2150bdeca439963e18281cdbd4b5",
+      "source-98bd0fa4385b/PREPARED_NATIVE24_CLOSED_SCALAR_EPS_AND_EXISTING_PYTHON192_ASSEMBLY_PLAN_V1.json": "656ece862b820cbd6cb4f9b30bae03682f28b4b5675c9977d0c57cfcf37cdb9b",
+      "source-85b5f2d02828/EXACT_FUTURE_ONCE_SAVED_ONLY_NATIVE24_SCALAR_ASSEMBLY_COMMAND_V1.json": "2b002331dd69e1ecf5371721309758113ea3b2c883455724d7bb0fd74b2ca11e"
+    },
+    "source_interval_closed": true,
+    "actual_error": null,
+    "output": "source-56581aa700c5/actual-v1",
+    "no_MAT_MP_MC_optimizer_or_worker_actions": true,
+    "Git_or_LATEST_writes": false
+  },
+  "actual_V2": {
+    "schema": "actual-once-native24-saved-scalar-assembly-natural-return-and-source-closure-v2",
+    "started_UTC": "2026-10-19T22:34:05.435523+00:00",
+    "finished_UTC": "2026-10-19T22:34:08.223670+00:00",
+    "command": [
+      "source-633639c4c370/python.exe",
+      "-X",
+      "utf8",
+      "-B",
+      "source-ed4e0817e3e9/collect_only_closed_native24_and_saved_Python192_v2.py",
+      "--finish",
+      "--plan",
+      "source-949bc6944132/PREPARED_NATIVE24_CLOSED_SCALAR_EPS_AND_EXISTING_PYTHON192_ASSEMBLY_PLAN_V2.json",
+      "--output-dir",
+      "source-7a595e4a7550/actual-v2"
+    ],
+    "actual_child_PID": 13688,
+    "actual_exit_code": 0,
+    "naturally_waited_on_same_original_Popen": true,
+    "source_before": {
+      "source-0206f947d964/collect_closed_U6_Fig4_Fig5_unfitted_reference_v1.py": "bc4e31f95f195fa349fc3473dbd2ee16a290753dc990e4dfaf3cbc10625125b9",
+      "source-72c96a81b364/prepare_minimal_portable_packet_v1.py": "c8911299fadd27d25c77eab5b8a67bc420bb4d38c76b194c42d1850c2e2129bd",
+      "source-1889a54e8a4f/root_shared_controller_snapshot_v1.py": "5d8f67462f99fe145a07a0ade4a8e9ce970c2150bdeca439963e18281cdbd4b5",
+      "source-ed4e0817e3e9/collect_only_closed_native24_and_saved_Python192_v2.py": "59f58a090e482d77205e5cd3c278cc49c9478af6bd3a471c6fb16a48a39cf9da",
+      "source-949bc6944132/PREPARED_NATIVE24_CLOSED_SCALAR_EPS_AND_EXISTING_PYTHON192_ASSEMBLY_PLAN_V2.json": "ec798326d46fc686acd6792c53db481112afdfb16069b30a6df744b736bc527c",
+      "source-bf33e2b275d8/EXACT_FUTURE_ONCE_SAVED_ONLY_NATIVE24_SCALAR_ASSEMBLY_COMMAND_V2.json": "8296041523024738ceae2f68793ca1dc3e60941b9c7e945a9b6229b7b9357a69"
+    },
+    "source_after": {
+      "source-0206f947d964/collect_closed_U6_Fig4_Fig5_unfitted_reference_v1.py": "bc4e31f95f195fa349fc3473dbd2ee16a290753dc990e4dfaf3cbc10625125b9",
+      "source-72c96a81b364/prepare_minimal_portable_packet_v1.py": "c8911299fadd27d25c77eab5b8a67bc420bb4d38c76b194c42d1850c2e2129bd",
+      "source-1889a54e8a4f/root_shared_controller_snapshot_v1.py": "5d8f67462f99fe145a07a0ade4a8e9ce970c2150bdeca439963e18281cdbd4b5",
+      "source-ed4e0817e3e9/collect_only_closed_native24_and_saved_Python192_v2.py": "59f58a090e482d77205e5cd3c278cc49c9478af6bd3a471c6fb16a48a39cf9da",
+      "source-949bc6944132/PREPARED_NATIVE24_CLOSED_SCALAR_EPS_AND_EXISTING_PYTHON192_ASSEMBLY_PLAN_V2.json": "ec798326d46fc686acd6792c53db481112afdfb16069b30a6df744b736bc527c",
+      "source-bf33e2b275d8/EXACT_FUTURE_ONCE_SAVED_ONLY_NATIVE24_SCALAR_ASSEMBLY_COMMAND_V2.json": "8296041523024738ceae2f68793ca1dc3e60941b9c7e945a9b6229b7b9357a69"
+    },
+    "source_interval_closed": true,
+    "actual_error": null,
+    "output": "source-7a595e4a7550/actual-v2",
+    "V1_host_failure_retained": true,
+    "no_MAT_MP_MC_optimizer_or_worker_actions": true,
+    "Git_or_LATEST_writes": false
+  },
+  "V1_failure": {
+    "classification": "assembly metadata input-set mismatch; not numerical or scientific failure",
+    "actual_exception_type": "ValueError",
+    "actual_exception_message": "All generated missing native points and no extra point",
+    "actual_source_line": 51,
+    "construction_points": 24,
+    "new_producer_points": 23,
+    "extra_fixed_independently_closed_first_point": "kN20-INR001",
+    "no_assembly_output_created_by_V1": true
+  },
+  "V2_only_fix": "Require 24 distinct construction points = 23 new producer points disjoint-union fixed first point; remove only fixed first from new specs. All original per-point/first-point/science/source/reference gates retained.",
+  "actual_producer_owner": {
+    "path": "source-7e1d3e5e64ee/f45-u6-native-missing23-v2-job-actual-owned-process.json",
+    "bytes": 35313,
+    "SHA256": "d8bbd10e296c01b4d7ceb44724a22f9fe350ecd991a4f037248f51212956aa9c"
+  },
+  "actual_science_owner": {
+    "path": "source-348677331a87/actual-owned-process.json",
+    "bytes": 11285,
+    "SHA256": "aaeee9fec15c808b7cf733890ab5df5417b26d5d035138fb82a15b0cca8b18c1"
+  },
+  "completed_small_ledgers_unchanged": true,
+  "source_interval_scope": "Assembler 4 frozen source dependencies plus plan and command before/after; both closed progress ledgers identical before/after; each consumed closed JSON checked against its bound hash or actual recorded identity. Not a new RAW/stream audit."
+}

@@ -1,0 +1,72 @@
+{
+  "schema": "native24-U6-Fig4-Fig5-unfitted-scalar-scope-v1",
+  "actual_points": 24,
+  "methods_per_point": 8,
+  "actual_ordinates": 192,
+  "author_confirmed_users": 6,
+  "new_native_source_and_three_stage_closed_points": 23,
+  "exact_reused_native_four_stage_first_point": "kN20-INR001",
+  "all24_actual_result_configuration_and_science_bindings_pass": true,
+  "actual_scalar_assembly_exit": 0,
+  "scalar_source_interval_closed": true,
+  "original_V1_host_failure_retained": true,
+  "unfitted_EPS_comparison": {
+    "4": {
+      "native_unfitted_EPS": {
+        "count": 96,
+        "maximum_absolute": 0.32250509192695986,
+        "RMS": 0.06319311807718829,
+        "mean_signed": -0.005039702413417884
+      },
+      "native_minus_saved_Python": {
+        "count": 96,
+        "maximum_absolute": 0.0003153624171066127,
+        "RMS": 3.465023169299132e-05,
+        "mean_signed": -7.005214862543009e-06
+      },
+      "within_full_EPS_step": 16,
+      "outside_full_EPS_step": 80,
+      "full_EPS_ordinate_step": 3.32541567695962e-05,
+      "maximum_absolute_relative_EPS_gap": 0.036679016954178884
+    },
+    "5": {
+      "native_unfitted_EPS": {
+        "count": 96,
+        "maximum_absolute": 0.4736768860624694,
+        "RMS": 0.13075175907687217,
+        "mean_signed": -0.06239962141759642
+      },
+      "native_minus_saved_Python": {
+        "count": 96,
+        "maximum_absolute": 3.3907613887773635e-05,
+        "RMS": 4.0383531987054455e-06,
+        "mean_signed": -6.577574171648393e-07
+      },
+      "within_full_EPS_step": 1,
+      "outside_full_EPS_step": 95,
+      "full_EPS_ordinate_step": 1.0739856801909307e-05,
+      "maximum_absolute_relative_EPS_gap": 0.1168435417372319
+    }
+  },
+  "within_full_EPS_coordinate_step": 17,
+  "outside_full_EPS_coordinate_step": 175,
+  "same_state_physical_fields_tested_by_this_scalar_comparison": false,
+  "optimized_dual_equality_gate_applied": false,
+  "original_reference_PASS": false,
+  "optimized_dual_equality_PASS": false,
+  "full_paper_PASS": false,
+  "new_optimizer_MP_MC_RNG_channel_generation_calls": 0,
+  "interpretation": {
+    "author_confirmed_U6_J3_N16_M25_K1_P50_kR10_kG30": true,
+    "all24x8_are_saved_optimized_scenarios_not1000_performance_repetitions": true,
+    "MC1000_are_independent_channel_moment_populations_with_same_lane_family_reuse": true,
+    "no_fitting_interpolation_rescaling_or_hidden_unit_conversion": true,
+    "historical_W_versus_normalized_INR_mapping_unresolved": true,
+    "ordinal_pairing_not_unit_recovery": true,
+    "EPS_step_is_coordinate_quantization_not_CI": true,
+    "optimized_language_difference_not_same_state_physical_residual_or_solution_equality": true,
+    "author_cached_W_random_initial_phi_and_optimized_performance_population_not_recovered": true
+  },
+  "EPS_step_exceedance_is_not_statistical_significance_test": true,
+  "paper_algorithm_error_concluded_from_reference_gaps": false
+}
