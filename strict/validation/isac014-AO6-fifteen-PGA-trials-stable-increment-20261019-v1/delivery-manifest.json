@@ -1,0 +1,89 @@
+{
+  "schema": "actual-AO6-fixed15-full-delivery-manifest-v2",
+  "files": {
+    ".gitattributes": {
+      "bytes": 8,
+      "SHA256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    "evidence/actual-first-portable-fixed15-replay.json": {
+      "bytes": 20741,
+      "SHA256": "0f5c806a6e09bba621ae0614f2cf961628ba773911f8d457631835ed89ac95bd"
+    },
+    "evidence/capture-held-natural0.json": {
+      "bytes": 7254,
+      "SHA256": "0216cd4e4b5851b2a39aed7d13944fd0f138e2167614c2c8d360382d732ccf73"
+    },
+    "evidence/original-handoff.json": {
+      "bytes": 4705,
+      "SHA256": "ce23c4342e005c58a86a03011d38951384b71565eeb77aa2692e35856604ff4a"
+    },
+    "evidence/static-algebraic-scope-review.json": {
+      "bytes": 3605,
+      "SHA256": "0e3a2fbca8ea0f0a6acf6cbdbd4c17ab9106492e87789a5100cbfacec9d4aa89"
+    },
+    "input-manifest.json": {
+      "bytes": 1713,
+      "SHA256": "8c98f1317587873fb0ea766e7c3dd9eb8316b4efbcc791c0a09ac39697fee5f0"
+    },
+    "inputs/actual-MP80-MP100.json.gz": {
+      "bytes": 20969,
+      "SHA256": "3d1e789b3d14114463a02f2d3fed9bc1b3a7a729be0c0f0992c4b197bf6cf19b"
+    },
+    "inputs/actual-operands.npz": {
+      "bytes": 689855,
+      "SHA256": "9fe6b5640db66de2db7ca8f7624f4d225c76edd517afcd7197dc93cc3b6f2c9d"
+    },
+    "inputs/actual-stable-fifteen-versus-MP.json.gz": {
+      "bytes": 7829,
+      "SHA256": "4866dc8304b105aed737bafd3fdd49433a3fce0bc642d6f734a35a661e0afc1b"
+    },
+    "inputs/captured-prefix-and-fifteen.json.gz": {
+      "bytes": 230284,
+      "SHA256": "068dd4e3ce5f02b1193e687337443491543cb21a65bb922da9bcb6aa025f1d01"
+    },
+    "inputs/fixed-input-bindings.json": {
+      "bytes": 59252,
+      "SHA256": "2bbb35a1535064815258824a53f419931852587cfd7976b6b377c7a7c21ef176"
+    },
+    "inputs/original-config.json": {
+      "bytes": 5167,
+      "SHA256": "62d9450cd8ae67986a92c0cd7344f7788d75a3bfb8e89d11d54a59e501536460"
+    },
+    "inputs/original-scenario.json": {
+      "bytes": 22737,
+      "SHA256": "3b5e8fced9d90337bc574d660ea29c0a2b1b67aae8fc11950cdbbb28d609c302"
+    },
+    "provenance.json": {
+      "bytes": 8490,
+      "SHA256": "7703d531a318872a7bb32fd8a79a3c8edb310f56240b65432c2a30887576fb01"
+    },
+    "read_saved_fifteen.py": {
+      "bytes": 9323,
+      "SHA256": "55370aa19d6f842b51ab261bcc9a52bd1ea5d306acb21facd6615a154518e8db"
+    },
+    "README.md": {
+      "bytes": 5139,
+      "SHA256": "311756064c8dde6aacd0630b4046d224fd90d78a7ab7233845f1a4b9f6d4ab4d"
+    },
+    "scope-summary.json": {
+      "bytes": 3808,
+      "SHA256": "e450904a2b215503a13c81fcda3b4d6a636dfefc0245188a757e47990e0f2c3a"
+    },
+    "sources/core_original_case014_v1.py": {
+      "bytes": 16714,
+      "SHA256": "07f2eb9d9f5011dde45a8c947dd87db31d15b7e6e8ab233e9f43429c408f2fbb"
+    },
+    "sources/stable_rotation_increment_v1.py": {
+      "bytes": 5769,
+      "SHA256": "07678a483b3f8c70bcaf06c91d2ad611b30594c1cb8f17199f63eaa63fb60c4c"
+    }
+  },
+  "self_excluded_to_avoid_a_recursive_digest": true,
+  "portable_first_use_executed": true,
+  "actual_first_use_receipt": "evidence/actual-first-portable-fixed15-replay.json",
+  "actual_first_use_exit_code": 0,
+  "tested_input_manifest_SHA256": "8c98f1317587873fb0ea766e7c3dd9eb8316b4efbcc791c0a09ac39697fee5f0",
+  "tested_math_code_inputs_and_input_manifest_remain_exact": true,
+  "documentation_and_receipt_finalized_after_test_are_delivery_only": true,
+  "full_trajectory_stationarity_reference_PASS": false
+}
