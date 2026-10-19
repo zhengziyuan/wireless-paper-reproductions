@@ -1,0 +1,54 @@
+{
+  "schema": "ACTUAL_TWO_SAVED_ISAC145_OPERAND_AUDITS_V1",
+  "jobs": [
+    {
+      "name": "all80-trials",
+      "PID": 39100,
+      "natural_return_code": 0,
+      "finished_UTC": "2026-10-19T04:40:30.916550+00:00"
+    },
+    {
+      "name": "all-gradients",
+      "PID": 2072,
+      "natural_return_code": 0,
+      "finished_UTC": "2026-10-19T04:40:17.321255+00:00"
+    }
+  ],
+  "source_input_unchanged": true,
+  "source_input_after": {
+    "tools/isac-line-search-replay/audit_failure.py": "b05a3c958a79719339c61575ae69d65dd4432f47e6b3323e7bdd5977fc588e8b",
+    "tools/isac-line-search-replay/audit_stable_derivatives.py": "bd02ce41fadb77ac57dc2f81d43cd4043042c1d58681ffd782eb058941af51b6",
+    "tools/isac-line-search-replay/stable_metrics.py": "e15ad67ffc92b0ea2b3cbbd5428ff8be30bc6630ab651188d15aa2f01bde8c29",
+    "tools/isac-line-search-replay/equivalent_runtime.py": "6605b501e0a21efb03496ad47d70774e12d174768afd355e2a843285b4f12c2d",
+    "tools/isac-line-search-replay/mp_physical_reference.py": "d14050078d636ca33bd78fb2206406735a22589eeb0aa14b0f28c3d443d893bc",
+    "strict/rotatable-isac/core.py": "07f2eb9d9f5011dde45a8c947dd87db31d15b7e6e8ab233e9f43429c408f2fbb",
+    "strict/rotatable-isac/run.py": "29584a2dc08dbd36d2613fdc44394658a1c3ed1caecbcd42b11010fe42da6111",
+    "strict/rotatable-isac/figures.py": "80109f69d5491125be9d734d6adb76bc154f9fb31465024530b6aea48177a057",
+    "strict/rotatable-isac/isac_metadata.py": "fe51c21a4340c7a901ad2c3bbce6a323cdcc38950c5ccbed4f9bc2fbbc6497f3",
+    "actual-failure-arrays.npz": "fb3a406cc2caf9a39a9dcbaf06292a5ef2bceda5517cfccd97ebe24c95459771",
+    "actual-failure.json": "344a1a6991538a02420e81c5f254652c6fe436d915582f9ff598ee7d062f381c",
+    "captured-source-binding.json": "6f7f27a70df96f94c9694a6fe16107274fb159956651adf01099c65e8c39bec7",
+    "frozen-original-channel-fields.npz": "9dcce057ac8400d1246236f247941b9a876056aac1e1249735490b0f1825102e",
+    "original-scenario.json": "e5d47af3400b9d81045d05b3b47c9b0c2501453ba1dea76486c0a20603995adf"
+  },
+  "no_optimizer_or_RNG_called_by_launch": true,
+  "full_paper_pass": false,
+  "original_private_receipt_id": "ACTUAL_TWO_FINITE_AUDIT_NATURAL_TERMINALS_AND_SOURCE_CLOSURE_V1.json",
+  "original_private_receipt_SHA256": "d0cebbab7c850be646931c202c96bfb34a09f447530e24aa2033897388081ee5",
+  "publication_projection": "Only absolute source keys were made repository/capture relative; actual jobs/counts/gates/digests retained",
+  "original_capture_closed_snapshot": {
+    "source_receipt_id": "ACTUAL_ONE_CASE145_EXACT_IDENTITY_AND_CAPTURE_SNAPSHOT_AFTER_PORTABLE_PACKAGE_V2.json",
+    "source_receipt_SHA256": "d3fec8446cd9eb68517099d59a287b53ffead70f1c763455b9b9dca185c6bc48",
+    "original_owned_journal_SHA256": "a84a5601aa31cfffa29446ccd71b6881d60644ec04baafdbd7d25082aa750c94",
+    "observed_terminal_local": "2026-10-19T11:48:20.855661+08:00",
+    "actual_diagnostic_child_natural_return_code": 0,
+    "source_before_count": 12,
+    "source_after_count": 12,
+    "source_interval_equal": true,
+    "actual_saved_trial_count": 80,
+    "capture_failure_metadata_SHA256": "344a1a6991538a02420e81c5f254652c6fe436d915582f9ff598ee7d062f381c",
+    "original_failure_and_failed_stop_not_upgraded": true,
+    "legacy_owner_Popen_poll_returncode_semantics_not_V3_additional_terminal_fields": true,
+    "no_new_process_or_scientific_task_started_by_snapshot": true
+  }
+}
