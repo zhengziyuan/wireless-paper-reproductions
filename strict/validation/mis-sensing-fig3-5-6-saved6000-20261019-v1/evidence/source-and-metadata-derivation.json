@@ -1,0 +1,125 @@
+{
+  "scope": "source/metadata curation, not a new numerical execution",
+  "original_actual_field_evaluator_SHA256": "f51432292805b99713429792f71ae7395ede0aaef18b413101b8129ae4c3814d",
+  "exact_function_source_and_AST": [
+    {
+      "name": "reconstruct_model_config",
+      "source_SHA256": "ca16ba86c8f048c67746f09de527256f6e274e854a58f87d2dac51d5e9d4ffcb",
+      "exact_function_source": true
+    },
+    {
+      "name": "saved_state",
+      "source_SHA256": "05d5dce1aa0528199d7a7767bafa9e6fdc3b89593ec52e9ff47094d1532743c0",
+      "exact_function_source": true
+    },
+    {
+      "name": "evaluate",
+      "source_SHA256": "030ce5fc703a66c920244bb8929d50274552420d4b342e2b163b43cd6e7b163f",
+      "exact_function_source": true
+    }
+  ],
+  "frozen_libraries_and_renderers_exact_bytes": [
+    {
+      "relative_path": "sources/frozen_deterministic_Model_fields_v5.py",
+      "original_SHA256": "6d82528f0d0c5c0cbe66cb735dfa043817273f0c6807b71bcfa58cdeb86b535a",
+      "public_SHA256": "6d82528f0d0c5c0cbe66cb735dfa043817273f0c6807b71bcfa58cdeb86b535a",
+      "bytes": 1625,
+      "exact_bytes": true
+    },
+    {
+      "relative_path": "sources/frozen_normalization_v5_exact.py",
+      "original_SHA256": "2191745f9e3761d3ffcb3b8cd0dab2e8a7f071c10c8c8fb2486a3560ae7866b4",
+      "public_SHA256": "2191745f9e3761d3ffcb3b8cd0dab2e8a7f071c10c8c8fb2486a3560ae7866b4",
+      "bytes": 4514,
+      "exact_bytes": true
+    },
+    {
+      "relative_path": "sources/render_closed_saved_Fig5_Fig6_v2.py",
+      "original_SHA256": "db938a00981d3093dbd1133c081ebb301765d9b09f49ceb7aa08cc032c4ccf33",
+      "public_SHA256": "db938a00981d3093dbd1133c081ebb301765d9b09f49ceb7aa08cc032c4ccf33",
+      "bytes": 12601,
+      "exact_bytes": true
+    },
+    {
+      "relative_path": "sources/PREPARED_FIG5_FIG6_CLOSED_OUTPUT_ONLY_RENDER_PLAN_V2.json",
+      "original_SHA256": "c1f7fe1e8fb71cb80e288ff175ed9593c3baa479834b40aaf6d01c54f6ba8286",
+      "public_SHA256": "c1f7fe1e8fb71cb80e288ff175ed9593c3baa479834b40aaf6d01c54f6ba8286",
+      "bytes": 2463,
+      "exact_bytes": true
+    },
+    {
+      "relative_path": "sources/frozen_plot_beampatterns_v5.py",
+      "original_SHA256": "1f4dfe523361e86ce13aae3a4a3a09b50831e7b8b6a7a681a9876d60f0675a7d",
+      "public_SHA256": "1f4dfe523361e86ce13aae3a4a3a09b50831e7b8b6a7a681a9876d60f0675a7d",
+      "bytes": 1298,
+      "exact_bytes": true
+    }
+  ],
+  "saved_JSON_metadata_derivatives": [
+    {
+      "relative_path": "data/assembly-summary.json",
+      "original_SHA256": "137ad3054338b7d7799db914c8716b6c52fe478f2614ad0420f843b4d2d96565",
+      "public_SHA256": "8eb80afdfd518eeeeb922ec7d70243995981fde3dcb5a3399992cc4c875c95d4",
+      "original_bytes": 12371,
+      "public_bytes": 11522,
+      "absolute_path_strings_replaced": 6,
+      "entire_decoded_object_inverse_restored": true,
+      "all_numeric_values_arrays_shapes_booleans_and_other_strings_preserved": true
+    },
+    {
+      "relative_path": "data/selected-fixed-final-state.json",
+      "original_SHA256": "ecbcc59560ba2e3f9911b793317933a9ba98def4fc13f6d45bc4162c84ee62f8",
+      "public_SHA256": "5a26e80cd361f27ce11bfae76d67b2163193e4d6093dc05f3432dbd3bbb50128",
+      "original_bytes": 72973,
+      "public_bytes": 72268,
+      "absolute_path_strings_replaced": 5,
+      "entire_decoded_object_inverse_restored": true,
+      "all_numeric_values_arrays_shapes_booleans_and_other_strings_preserved": true
+    },
+    {
+      "relative_path": "evidence/deterministic-field-summary.json",
+      "original_SHA256": "468956cd54a55cb03d580b1a884c77df21c2a89f50e17962cd7610eccc286fc4",
+      "public_SHA256": "7ff6e09802f43008897d051a1adb16d767760b897e49a70b8ae7bcf577b4f63f",
+      "original_bytes": 3347,
+      "public_bytes": 2914,
+      "absolute_path_strings_replaced": 3,
+      "entire_decoded_object_inverse_restored": true,
+      "all_numeric_values_arrays_shapes_booleans_and_other_strings_preserved": true
+    },
+    {
+      "relative_path": "evidence/actual-output-and-visual-review.json",
+      "original_SHA256": "f02bc893fd2c886ad183c83ec16d408f7483f9a19945102360544f1c1a2d0728",
+      "public_SHA256": "4b37e1267f45719810985be7948e3f22fb8294465ad0e9a5cdf4c0550bd1f56e",
+      "original_bytes": 8878,
+      "public_bytes": 6569,
+      "absolute_path_strings_replaced": 21,
+      "entire_decoded_object_inverse_restored": true,
+      "all_numeric_values_arrays_shapes_booleans_and_other_strings_preserved": true
+    },
+    {
+      "relative_path": "evidence/display-provenance.json",
+      "original_SHA256": "eaa2370e05b1b98e85ebf4389fcbebc06d20f465248c675e96f47b4592139068",
+      "public_SHA256": "6e9727a1d6e6749a76481975a5a2dc55eb268ee39e6cc8210677a27dc7de2f36",
+      "original_bytes": 3350,
+      "public_bytes": 2838,
+      "absolute_path_strings_replaced": 3,
+      "entire_decoded_object_inverse_restored": true,
+      "all_numeric_values_arrays_shapes_booleans_and_other_strings_preserved": true
+    }
+  ],
+  "all_numeric_values_arrays_shapes_and_failed_flags_preserved": true,
+  "public_host_first_actual_use_pending": false,
+  "author_grid_selection_and_normalization_recovered": false,
+  "actual_portable_first_use_evidence": {
+    "relative_path": "evidence/portable-first-use-and-exact-output-comparison.json",
+    "SHA256": "1e234480c5ac5cb399b45104b49f229f7c5ebf612e609ee66e6d5d17f8cf04a7",
+    "bytes": 6908
+  },
+  "source_curation_performed_optimizer_RNG_MC_MP_or_field_execution": false,
+  "actual_portable_run_separate_from_source_curation": {
+    "mode": "all",
+    "natural_returncode": 0,
+    "saved_state_deterministic_fields_and_displays_executed": true,
+    "optimizer_RNG_MC_MP_or_reference_fit_called": false
+  }
+}

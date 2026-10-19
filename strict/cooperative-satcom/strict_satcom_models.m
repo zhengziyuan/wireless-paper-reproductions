@@ -125,7 +125,7 @@ end
 g=1i*phi.*gt;
 end
 
-function [value,g]=mr_phase(data,phi,p,smoothing,limit,tts)
+function [value,g]=mr_phase_subtractive(data,phi,p,smoothing,limit,tts)
 % Exact all-coordinate contraction. The scalar-coordinate oracle remains above.
 coef=mr_components(data,phi,tts);means=coef.mean;Q=coef.second;power=coef.power;l=coef.leak;
 [J,U,N]=size(means);M=size(phi,2);K=size(l,3);numerator=sum(p.*coef.signal,1).';den=coef.offset;
@@ -187,4 +187,11 @@ for u=1:U
     theta(u,:)=(dn*den(u)-numerator(u)*dd)/den(u)^2;
 end
 snr=numerator./den;g=1i*phi.*theta;
+end
+
+function [value,g]=mr_phase(data,phi,p,smoothing,limit,tts)
+% Equivalent positive conditional/Wick expression; original objective and stops.
+mode='mr_s'; if tts, mode='mr_tts'; end
+out=evaluate_positive_wick(data,phi,mode,p,smoothing,limit,[]);
+value=out.criterion; g=out.gradient;
 end

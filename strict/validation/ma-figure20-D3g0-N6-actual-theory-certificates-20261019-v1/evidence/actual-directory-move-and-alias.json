@@ -1,0 +1,164 @@
+{
+  "schema": "actual-closed-theory-gates-and-real-directory-move-alias-v1",
+  "owner": {
+    "PID": 25012,
+    "creation_FILETIME": 134369121888843316,
+    "associated_with_any_Windows_job": true
+  },
+  "child": {
+    "PID": 5840,
+    "creation_FILETIME": 134369121907024749,
+    "associated_with_any_Windows_job": true
+  },
+  "actual_natural_exit": 0,
+  "exact_original_handle": true,
+  "held_source_interval_closed": true,
+  "theory_source_interval_closed": true,
+  "independent_source_input_interval_closed": true,
+  "both_actual_original_theory_global_certificates_PASS": true,
+  "original_theory_closure": {
+    "path": "logical-source/0042/ACTUAL_PRIVATE_ORIGINAL_FIG20_TWO_THEORY_GRIDS_SOURCE_CLOSURE_V1.json",
+    "SHA256": "308dcd33082dd4c8ae8c5b6ae6f790fab842a4ef2cae4eb9b6e2c88ed199e2ff",
+    "bytes": 39003
+  },
+  "independent_certificate_reader": {
+    "path": "logical-source/0041/ACTUAL_ONLY_ORIGINAL_FIG20_THEORY_CERTIFICATES_INDEPENDENT_V1.json",
+    "SHA256": "b8609ff0432619db2828c3a16d24f0c0871986be7066109c5321999ecdb6d60e",
+    "bytes": 45008
+  },
+  "original_held_terminal": {
+    "path": "logical-source/0078/MA20-private-original-theory-v1-actual-owned-process.json",
+    "SHA256": "966950c2eef90ca2e3e6e5d6d152d8e55435500629d47146ef2aa37996c0dcc7",
+    "bytes": 25685
+  },
+  "actual_Directory_Move_receipt": {
+    "path": "logical-source/0043/ACTUAL_VERIFIED_THEORY_UNIT_DIRECTORY_MOVE_V1.json",
+    "SHA256": "7534503fdcdab29fad596c7c82f506a61a2875c6c83a1e0e3a2097049312cddc",
+    "bytes": 9417
+  },
+  "original_binding_plan_SHA256": "cb9290e550b15b5d13643778c23067ceebb50459b0eb557966747a947b88de85",
+  "original_input_fingerprint": "89016efa5290c9226df53d38264d34c33d8915f406c08a3a23cc0c12e2c291b1",
+  "old_publication_unit": "logical-source/0044/grid-publication-unit",
+  "current_publication_unit": "logical-source/0067/case-000-mc-000",
+  "original_private_unit_removed_by_single_actual_Directory_Move": true,
+  "all_moved_files_verified_byte_identical_by_actual_publisher": true,
+  "alias_resolution": "When an earlier source/input map names an old_absolute_path below, resolve it to current_absolute_path and require the same SHA256/bytes. Earlier before/after maps remain historical and are not rewritten. No symlink or fake marker is created.",
+  "files": [
+    {
+      "relative_path": "binding.json",
+      "old_absolute_path": "logical-source/0045/binding.json",
+      "current_absolute_path": "logical-source/0068/binding.json",
+      "SHA256": "8461329c0a94d7a744adc9af730e518d75ca1765e443ffc97ef82ff21c8dc028",
+      "bytes": 8191
+    },
+    {
+      "relative_path": "grid-MRT/binding.json",
+      "old_absolute_path": "logical-source/0046/binding.json",
+      "current_absolute_path": "logical-source/0069/binding.json",
+      "SHA256": "9afa9b471847b75685bb191e3d6a0aec4c653a9168c7316f3e0273f80d10330e",
+      "bytes": 9238
+    },
+    {
+      "relative_path": "grid-MRT/checkpoint.json",
+      "old_absolute_path": "logical-source/0047/checkpoint.json",
+      "current_absolute_path": "logical-source/0070/checkpoint.json",
+      "SHA256": "130058b3d338cb676f1ef16a71c532105c4f530892261ae1b7f75663eb905572",
+      "bytes": 1149
+    },
+    {
+      "relative_path": "grid-MRT/last-returned-batch.pickle",
+      "old_absolute_path": "logical-source/0048/last-returned-batch.pickle",
+      "current_absolute_path": "logical-source/0071/last-returned-batch.pickle",
+      "SHA256": "f0fa4c0909eb87a1f935c0e4d10e4ec6557517036c9502e44ddd361c373c340e",
+      "bytes": 3303
+    },
+    {
+      "relative_path": "grid-MRT/pruned-prefix-certificates.frames",
+      "old_absolute_path": "logical-source/0049/pruned-prefix-certificates.frames",
+      "current_absolute_path": "logical-source/0072/pruned-prefix-certificates.frames",
+      "SHA256": "3266e517f7caefd5dab9e9546382be65bece34ec298e64f7417d6fdc6b9c0310",
+      "bytes": 1869
+    },
+    {
+      "relative_path": "grid-ZF/binding.json",
+      "old_absolute_path": "logical-source/0050/binding.json",
+      "current_absolute_path": "logical-source/0073/binding.json",
+      "SHA256": "a596e53dbb2be1957724579f6808e429197dc4fe2e89803a2ba1bdd3c1388544",
+      "bytes": 9114
+    },
+    {
+      "relative_path": "grid-ZF/checkpoint.json",
+      "old_absolute_path": "logical-source/0051/checkpoint.json",
+      "current_absolute_path": "logical-source/0074/checkpoint.json",
+      "SHA256": "ac854c9624529bc577a8dc89e930bb0a732a28c373a0bcf78edc4b91a5ff410d",
+      "bytes": 4062
+    },
+    {
+      "relative_path": "grid-ZF/last-returned-batch.pickle",
+      "old_absolute_path": "logical-source/0052/last-returned-batch.pickle",
+      "current_absolute_path": "logical-source/0075/last-returned-batch.pickle",
+      "SHA256": "91cc2dd5fed0ab703ddc5abe6f8af7e719aa787a82df2e159168d2d97ea4eba9",
+      "bytes": 5525
+    },
+    {
+      "relative_path": "grid-ZF/pruned-prefix-certificates.frames",
+      "old_absolute_path": "logical-source/0053/pruned-prefix-certificates.frames",
+      "current_absolute_path": "logical-source/0076/pruned-prefix-certificates.frames",
+      "SHA256": "0b7a56fa22d38e26b697729c58accb62bdd43f666f22f1f93c78d7977775a911",
+      "bytes": 1178
+    }
+  ],
+  "rows": [
+    {
+      "mode": "MRT",
+      "grid_points": 9,
+      "complete_unordered_sets": 84,
+      "independently_counted_feasible_sets": 84,
+      "partition_covered_feasible_sets": 84,
+      "pruned_feasible_sets": 43,
+      "actual_independent_objective_evaluations": 41,
+      "verified_prune_count": 38,
+      "actual_saved_tangent_witness_count": 0,
+      "all_prune_uppers_le_prior_independent_leaf_incumbent": true,
+      "all_feasible_sets_partitioned_once": true,
+      "all_supplied_cuts_reached_once": true,
+      "earliest_canonical_global_winner_zero_based": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        8
+      ],
+      "unique_global_winner_independently_proven": true,
+      "scoped_independent_partition_and_bound_gate_pass": true
+    },
+    {
+      "mode": "ZF",
+      "grid_points": 9,
+      "complete_unordered_sets": 84,
+      "independently_counted_feasible_sets": 84,
+      "partition_covered_feasible_sets": 84,
+      "pruned_feasible_sets": 58,
+      "actual_independent_objective_evaluations": 26,
+      "verified_prune_count": 18,
+      "actual_saved_tangent_witness_count": 18,
+      "all_prune_uppers_le_prior_independent_leaf_incumbent": true,
+      "all_feasible_sets_partitioned_once": true,
+      "all_supplied_cuts_reached_once": true,
+      "earliest_canonical_global_winner_zero_based": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "unique_global_winner_independently_proven": true,
+      "scoped_independent_partition_and_bound_gate_pass": true
+    }
+  ],
+  "marker_scope": "At actual publication the unit held only original binding.json and two complete grids; no whole-point closed-result or active-case marker. Original parent retains first execution of components and final1000.",
+  "full_point_MA_FPA_MC_figure_native_reference_PASS": false,
+  "historical_author_search_criterion_recovered": false
+}

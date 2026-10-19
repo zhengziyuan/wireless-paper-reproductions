@@ -1,0 +1,1645 @@
+{
+  "schema": "safe-public-actual-RCG-records-with-NPZ-array-references-v1",
+  "original_tape_SHA256": "13dec758b9be88e5c359905141a330acd3e2c4449ae2dce99c2a32b019ca5c9b",
+  "original_tape_bytes": 17455,
+  "original_pickle_not_distributed": true,
+  "records": [
+    {
+      "event": "actual_start_header",
+      "bank_signature": "9c7c62247241a4f73451c879c6fbd18e9f3a39dd2c9d58521aeb4d21f38fb0ff",
+      "point_index": 0,
+      "baseline": "MIS",
+      "start_one_based": 1,
+      "exact_figure_point": {
+        "ms1": [
+          1,
+          64
+        ],
+        "ms2": [
+          1,
+          36
+        ],
+        "K": 2
+      },
+      "exact_settings": {
+        "initialization": {
+          "method": "portable_park_miller_uniform_circle_and_simplex",
+          "seed": 241219071,
+          "eta_initial": 0,
+          "lambda_initial": 0
+        },
+        "line_search": {
+          "line_search_policy": "original_per_block_backtracking",
+          "non_descent_policy": "documented_non_descent_restart",
+          "initial_step": 1,
+          "armijo_constant": 0.0001,
+          "backtrack_factor": 0.5,
+          "max_backtracks": 60
+        },
+        "inferred_or_tuned": {
+          "fig7_geometry_erratum": "COMM-GEOMETRY-FIG7: literal2x1 Eq3 implies even azimuth fields, contradicting original EPS. Figure uses same two elements in1x2 orientation with source shape retained. No phase/spacing fitted to original curves.",
+          "stable_objective_difference": "Same LSE minimized objective, evaluated by exact field increments and stable log1p/expm1 for small changes; independent75-digit Decimal full-dimension tests. No accepted-value slack.",
+          "accuracy_share_guard": "After exhausting raw PR and recorded steepest-block retries, a block below tolerance/sqrt(number_of_blocks) may remain unchanged; the full actual global KKT measure must still meet the unchanged threshold. This prevents machine-precision inactive blocks obstructing active blocks, and is not an early convergence certificate.",
+          "line_search": "Original distinct per-block alpha backtracking: each block uses actual projected/retracted displacement Armijo. The jointly combined block step is checked with total actual-displacement Armijo and is commonly scaled only if necessary; this coupling safeguard and constants are not specified in the paper. Common-alpha mode remains diagnostic only.",
+          "initialization": "Portable Park-Miller phases, independent positive simplex entries then row normalization; seed not published.",
+          "scheduling_recovery": "Largest relaxed entry, smallest index on exact tie; paper specifies thresholding but not its threshold.",
+          "non_descent": "Raw per-block PR coefficients and slopes are preserved and recorded. A block restarts minus its current gradient if either its raw tangent slope or its initial-step feasible projected displacement slope is nonnegative; raw_non_descent and projected_non_descent reasons are recorded separately. Exact zero-gradient/empty blocks and zero projected boundary motions are inactive. The source specifies an open simplex but its Euclidean projection reaches the closed boundary; this documented numerical safeguard reports raw row-mean and projected/KKT norms separately, using the latter for guarded stopping. literal_printed retains raw-direction diagnostics. No feasibility tolerance is relaxed.",
+          "distance": "Ambient product norm for outer step; intrinsic product distance not numerically specified.",
+          "spacing": "Half-wavelength element spacing and normal incidence chosen because numerical paragraph does not specify these.",
+          "budgets": "6000 independent starts, 4000 RCG cap and 1e-6 gradient threshold are implementation settings, not quoted communication-paper values.",
+          "continuation": "Five equally spaced initial mu in [100,1000], cycling across starts; final mu 1e-3. Paper prescribes equally spaced initial mu and halving but omits range/count/terminal value.",
+          "erratum": "Minimize -f so original maximization of negative softmin is respected; published negative-gradient directions for +f contradict the maximization statement."
+        },
+        "kind": "communications",
+        "reference_snr": 0.01,
+        "spacing_over_wavelength": 0.5,
+        "incidence_direction_cosines": [
+          0,
+          0
+        ],
+        "number_of_starts": 6000,
+        "initial_mu_values": [
+          100,
+          325,
+          550,
+          775,
+          1000
+        ],
+        "terminal_mu": 0.001,
+        "objective_convention": "maximize_negative_softmin",
+        "rcg_max_iterations": 4000,
+        "rcg_gradient_tolerance": 1e-06,
+        "azimuth_sampling": "inclusive_uniform_-60_to_60",
+        "elevation_deg": 45
+      },
+      "passive_binding_SHA256": "970de648de388ecafa336f6adfda63b408001cd4f29e71bf5fb321db5e8ac571",
+      "initialization": "Unchanged execute_start portable jump-ahead; actual initialized state is the first RCG input, no additional RNG calls",
+      "expected_mu": [
+        100.0,
+        50.0,
+        25.0,
+        12.5,
+        6.25,
+        3.125,
+        1.5625,
+        0.78125,
+        0.390625,
+        0.1953125,
+        0.09765625,
+        0.048828125,
+        0.0244140625,
+        0.01220703125,
+        0.006103515625,
+        0.0030517578125,
+        0.00152587890625
+      ]
+    },
+    {
+      "event": "actual_original_RCG_input",
+      "call": 1,
+      "mu": 100.0,
+      "options": {
+        "line_search_policy": "original_per_block_backtracking",
+        "non_descent_policy": "documented_non_descent_restart",
+        "initial_step": 1,
+        "armijo_constant": 0.0001,
+        "backtrack_factor": 0.5,
+        "max_backtracks": 60,
+        "max_iterations": 4000,
+        "gradient_tolerance": 1e-06
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "56369be31a33b5c2fe8fdcdd177d1db106d836b134b1b9ab69014865a6c22855"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "629801ed1adde71eae285238ead4d2d4633acd12741130b23a6d77f1a2c3f92a"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "de2ea17f9ff4c5e03a1d15abf15fff949d2605533b28323cdd21f1aff7270c35"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_01_phi",
+        "theta": "record_01_theta",
+        "X": "record_01_X"
+      }
+    },
+    {
+      "event": "actual_original_RCG_return",
+      "call": 1,
+      "mu": 100.0,
+      "actual_inner_history_length": 122,
+      "actual_stop": {
+        "reason": "gradient_tolerance",
+        "objective": 38.77325316675059,
+        "gradient_norm": 23.467267108279696,
+        "projected_kkt_norm": 9.976719367472093e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "878e42e92ebb6a94915c8fb17fdbd05a08229948ce89304cdf1415b729d7a4d5"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "4c0bcaf42efe9630832298cbdd0d1c5acb0378cae9897ac126614d87db728998"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_02_phi",
+        "theta": "record_02_theta",
+        "X": "record_02_X"
+      }
+    },
+    {
+      "event": "actual_original_RCG_input",
+      "call": 2,
+      "mu": 50.0,
+      "options": {
+        "line_search_policy": "original_per_block_backtracking",
+        "non_descent_policy": "documented_non_descent_restart",
+        "initial_step": 1,
+        "armijo_constant": 0.0001,
+        "backtrack_factor": 0.5,
+        "max_backtracks": 60,
+        "max_iterations": 4000,
+        "gradient_tolerance": 1e-06
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "878e42e92ebb6a94915c8fb17fdbd05a08229948ce89304cdf1415b729d7a4d5"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "4c0bcaf42efe9630832298cbdd0d1c5acb0378cae9897ac126614d87db728998"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_03_phi",
+        "theta": "record_03_theta",
+        "X": "record_03_X"
+      }
+    },
+    {
+      "event": "actual_original_RCG_return",
+      "call": 2,
+      "mu": 50.0,
+      "actual_inner_history_length": 1,
+      "actual_stop": {
+        "reason": "gradient_tolerance",
+        "objective": 4.115894138753351,
+        "gradient_norm": 23.467267113491715,
+        "projected_kkt_norm": 9.950312724704497e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "878e42e92ebb6a94915c8fb17fdbd05a08229948ce89304cdf1415b729d7a4d5"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "4c0bcaf42efe9630832298cbdd0d1c5acb0378cae9897ac126614d87db728998"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_04_phi",
+        "theta": "record_04_theta",
+        "X": "record_04_X"
+      }
+    },
+    {
+      "event": "actual_original_RCG_input",
+      "call": 3,
+      "mu": 25.0,
+      "options": {
+        "line_search_policy": "original_per_block_backtracking",
+        "non_descent_policy": "documented_non_descent_restart",
+        "initial_step": 1,
+        "armijo_constant": 0.0001,
+        "backtrack_factor": 0.5,
+        "max_backtracks": 60,
+        "max_iterations": 4000,
+        "gradient_tolerance": 1e-06
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "878e42e92ebb6a94915c8fb17fdbd05a08229948ce89304cdf1415b729d7a4d5"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "4c0bcaf42efe9630832298cbdd0d1c5acb0378cae9897ac126614d87db728998"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_05_phi",
+        "theta": "record_05_theta",
+        "X": "record_05_X"
+      }
+    },
+    {
+      "event": "actual_original_RCG_return",
+      "call": 3,
+      "mu": 25.0,
+      "actual_inner_history_length": 2,
+      "actual_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -13.212785375245975,
+        "gradient_norm": 23.467267127040124,
+        "projected_kkt_norm": 8.458749382735963e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ff9ca980b8f95a31057a3689dc5f72433b2688e211bdc5afea39aeb68b816b75"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "9923c7c23cce2c211261a98f63ec6c1822161b14a696d48cc6cc52a9d0c11031"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_06_phi",
+        "theta": "record_06_theta",
+        "X": "record_06_X"
+      }
+    },
+    {
+      "event": "actual_original_RCG_input",
+      "call": 4,
+      "mu": 12.5,
+      "options": {
+        "line_search_policy": "original_per_block_backtracking",
+        "non_descent_policy": "documented_non_descent_restart",
+        "initial_step": 1,
+        "armijo_constant": 0.0001,
+        "backtrack_factor": 0.5,
+        "max_backtracks": 60,
+        "max_iterations": 4000,
+        "gradient_tolerance": 1e-06
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ff9ca980b8f95a31057a3689dc5f72433b2688e211bdc5afea39aeb68b816b75"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "9923c7c23cce2c211261a98f63ec6c1822161b14a696d48cc6cc52a9d0c11031"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_07_phi",
+        "theta": "record_07_theta",
+        "X": "record_07_X"
+      }
+    },
+    {
+      "event": "actual_original_RCG_return",
+      "call": 4,
+      "mu": 12.5,
+      "actual_inner_history_length": 1,
+      "actual_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -21.877125132245283,
+        "gradient_norm": 23.46726713758543,
+        "projected_kkt_norm": 8.505262689795971e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ff9ca980b8f95a31057a3689dc5f72433b2688e211bdc5afea39aeb68b816b75"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "9923c7c23cce2c211261a98f63ec6c1822161b14a696d48cc6cc52a9d0c11031"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_08_phi",
+        "theta": "record_08_theta",
+        "X": "record_08_X"
+      }
+    },
+    {
+      "event": "actual_original_RCG_input",
+      "call": 5,
+      "mu": 6.25,
+      "options": {
+        "line_search_policy": "original_per_block_backtracking",
+        "non_descent_policy": "documented_non_descent_restart",
+        "initial_step": 1,
+        "armijo_constant": 0.0001,
+        "backtrack_factor": 0.5,
+        "max_backtracks": 60,
+        "max_iterations": 4000,
+        "gradient_tolerance": 1e-06
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ff9ca980b8f95a31057a3689dc5f72433b2688e211bdc5afea39aeb68b816b75"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "9923c7c23cce2c211261a98f63ec6c1822161b14a696d48cc6cc52a9d0c11031"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_09_phi",
+        "theta": "record_09_theta",
+        "X": "record_09_X"
+      }
+    },
+    {
+      "event": "actual_original_RCG_return",
+      "call": 5,
+      "mu": 6.25,
+      "actual_inner_history_length": 1,
+      "actual_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -26.209295010744924,
+        "gradient_norm": 23.467267158676087,
+        "projected_kkt_norm": 9.187821006111752e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ff9ca980b8f95a31057a3689dc5f72433b2688e211bdc5afea39aeb68b816b75"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "9923c7c23cce2c211261a98f63ec6c1822161b14a696d48cc6cc52a9d0c11031"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_10_phi",
+        "theta": "record_10_theta",
+        "X": "record_10_X"
+      }
+    },
+    {
+      "event": "actual_original_RCG_input",
+      "call": 6,
+      "mu": 3.125,
+      "options": {
+        "line_search_policy": "original_per_block_backtracking",
+        "non_descent_policy": "documented_non_descent_restart",
+        "initial_step": 1,
+        "armijo_constant": 0.0001,
+        "backtrack_factor": 0.5,
+        "max_backtracks": 60,
+        "max_iterations": 4000,
+        "gradient_tolerance": 1e-06
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ff9ca980b8f95a31057a3689dc5f72433b2688e211bdc5afea39aeb68b816b75"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "9923c7c23cce2c211261a98f63ec6c1822161b14a696d48cc6cc52a9d0c11031"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_11_phi",
+        "theta": "record_11_theta",
+        "X": "record_11_X"
+      }
+    },
+    {
+      "event": "actual_original_RCG_return",
+      "call": 6,
+      "mu": 3.125,
+      "actual_inner_history_length": 7,
+      "actual_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -28.37537994999615,
+        "gradient_norm": 23.467267144137146,
+        "projected_kkt_norm": 7.720296516956969e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "d1302e7a1f57fa89cca66c4b54e05920c0241b6c36e3b0e3f39319bfb0b64daa"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "e4558d23705ba8e305e5cd159b740f9b02de06647860a0fd82e34fc0816fd9d1"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_12_phi",
+        "theta": "record_12_theta",
+        "X": "record_12_X"
+      }
+    },
+    {
+      "event": "actual_original_RCG_input",
+      "call": 7,
+      "mu": 1.5625,
+      "options": {
+        "line_search_policy": "original_per_block_backtracking",
+        "non_descent_policy": "documented_non_descent_restart",
+        "initial_step": 1,
+        "armijo_constant": 0.0001,
+        "backtrack_factor": 0.5,
+        "max_backtracks": 60,
+        "max_iterations": 4000,
+        "gradient_tolerance": 1e-06
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "d1302e7a1f57fa89cca66c4b54e05920c0241b6c36e3b0e3f39319bfb0b64daa"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "e4558d23705ba8e305e5cd159b740f9b02de06647860a0fd82e34fc0816fd9d1"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_13_phi",
+        "theta": "record_13_theta",
+        "X": "record_13_X"
+      }
+    },
+    {
+      "event": "actual_original_RCG_return",
+      "call": 7,
+      "mu": 1.5625,
+      "actual_inner_history_length": 7,
+      "actual_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -29.458422419621677,
+        "gradient_norm": 23.467267206896583,
+        "projected_kkt_norm": 6.918444665065523e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "66ed0f1e4f3d42ce907f553c0e19a65dd24f0d3c3e9108d397ea6ebd300b0bae"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "a07367b04d27969eeae0d35fa803ae602056f7eb8a97b796418600f5f7589b4f"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_14_phi",
+        "theta": "record_14_theta",
+        "X": "record_14_X"
+      }
+    },
+    {
+      "event": "actual_original_RCG_input",
+      "call": 8,
+      "mu": 0.78125,
+      "options": {
+        "line_search_policy": "original_per_block_backtracking",
+        "non_descent_policy": "documented_non_descent_restart",
+        "initial_step": 1,
+        "armijo_constant": 0.0001,
+        "backtrack_factor": 0.5,
+        "max_backtracks": 60,
+        "max_iterations": 4000,
+        "gradient_tolerance": 1e-06
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "66ed0f1e4f3d42ce907f553c0e19a65dd24f0d3c3e9108d397ea6ebd300b0bae"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "a07367b04d27969eeae0d35fa803ae602056f7eb8a97b796418600f5f7589b4f"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_15_phi",
+        "theta": "record_15_theta",
+        "X": "record_15_X"
+      }
+    },
+    {
+      "event": "actual_original_RCG_return",
+      "call": 8,
+      "mu": 0.78125,
+      "actual_inner_history_length": 1,
+      "actual_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -29.999943654434134,
+        "gradient_norm": 23.46726719180826,
+        "projected_kkt_norm": 8.206586099501053e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "66ed0f1e4f3d42ce907f553c0e19a65dd24f0d3c3e9108d397ea6ebd300b0bae"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "a07367b04d27969eeae0d35fa803ae602056f7eb8a97b796418600f5f7589b4f"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_16_phi",
+        "theta": "record_16_theta",
+        "X": "record_16_X"
+      }
+    },
+    {
+      "event": "actual_original_RCG_input",
+      "call": 9,
+      "mu": 0.390625,
+      "options": {
+        "line_search_policy": "original_per_block_backtracking",
+        "non_descent_policy": "documented_non_descent_restart",
+        "initial_step": 1,
+        "armijo_constant": 0.0001,
+        "backtrack_factor": 0.5,
+        "max_backtracks": 60,
+        "max_iterations": 4000,
+        "gradient_tolerance": 1e-06
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "66ed0f1e4f3d42ce907f553c0e19a65dd24f0d3c3e9108d397ea6ebd300b0bae"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "a07367b04d27969eeae0d35fa803ae602056f7eb8a97b796418600f5f7589b4f"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_17_phi",
+        "theta": "record_17_theta",
+        "X": "record_17_X"
+      }
+    },
+    {
+      "event": "actual_original_RCG_return",
+      "call": 9,
+      "mu": 0.390625,
+      "actual_inner_history_length": 3,
+      "actual_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -30.270704271840376,
+        "gradient_norm": 23.467267250295585,
+        "projected_kkt_norm": 5.558601207600331e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "f3d42841b11623b3a6494523a41e7d66921bf075b873618b46b5c4932372dc2e"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "4e5d51ea3caf1aa0aceaf7518f8e534f6fa5c0c3623fe2f019c834fb487c26ff"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_18_phi",
+        "theta": "record_18_theta",
+        "X": "record_18_X"
+      }
+    },
+    {
+      "event": "actual_original_RCG_input",
+      "call": 10,
+      "mu": 0.1953125,
+      "options": {
+        "line_search_policy": "original_per_block_backtracking",
+        "non_descent_policy": "documented_non_descent_restart",
+        "initial_step": 1,
+        "armijo_constant": 0.0001,
+        "backtrack_factor": 0.5,
+        "max_backtracks": 60,
+        "max_iterations": 4000,
+        "gradient_tolerance": 1e-06
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "f3d42841b11623b3a6494523a41e7d66921bf075b873618b46b5c4932372dc2e"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "4e5d51ea3caf1aa0aceaf7518f8e534f6fa5c0c3623fe2f019c834fb487c26ff"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_19_phi",
+        "theta": "record_19_theta",
+        "X": "record_19_X"
+      }
+    },
+    {
+      "event": "actual_original_RCG_return",
+      "call": 10,
+      "mu": 0.1953125,
+      "actual_inner_history_length": 1,
+      "actual_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -30.40608458054349,
+        "gradient_norm": 23.467267279130983,
+        "projected_kkt_norm": 7.374957814303099e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "f3d42841b11623b3a6494523a41e7d66921bf075b873618b46b5c4932372dc2e"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "4e5d51ea3caf1aa0aceaf7518f8e534f6fa5c0c3623fe2f019c834fb487c26ff"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_20_phi",
+        "theta": "record_20_theta",
+        "X": "record_20_X"
+      }
+    },
+    {
+      "event": "actual_original_RCG_input",
+      "call": 11,
+      "mu": 0.09765625,
+      "options": {
+        "line_search_policy": "original_per_block_backtracking",
+        "non_descent_policy": "documented_non_descent_restart",
+        "initial_step": 1,
+        "armijo_constant": 0.0001,
+        "backtrack_factor": 0.5,
+        "max_backtracks": 60,
+        "max_iterations": 4000,
+        "gradient_tolerance": 1e-06
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "f3d42841b11623b3a6494523a41e7d66921bf075b873618b46b5c4932372dc2e"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "4e5d51ea3caf1aa0aceaf7518f8e534f6fa5c0c3623fe2f019c834fb487c26ff"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_21_phi",
+        "theta": "record_21_theta",
+        "X": "record_21_X"
+      }
+    },
+    {
+      "event": "actual_original_RCG_return",
+      "call": 11,
+      "mu": 0.09765625,
+      "actual_inner_history_length": 2,
+      "actual_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -30.473774734895056,
+        "gradient_norm": 23.467267210907394,
+        "projected_kkt_norm": 6.461745202239145e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ed57cfec830a103b068f3dde167708458b1180506e6cb0e9f082a4a9362af801"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "6243facf8c47e43b21df15f79a9d9ddcfb88cffc87a691840602ac3f8b014ce7"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_22_phi",
+        "theta": "record_22_theta",
+        "X": "record_22_X"
+      }
+    },
+    {
+      "event": "actual_original_RCG_input",
+      "call": 12,
+      "mu": 0.048828125,
+      "options": {
+        "line_search_policy": "original_per_block_backtracking",
+        "non_descent_policy": "documented_non_descent_restart",
+        "initial_step": 1,
+        "armijo_constant": 0.0001,
+        "backtrack_factor": 0.5,
+        "max_backtracks": 60,
+        "max_iterations": 4000,
+        "gradient_tolerance": 1e-06
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ed57cfec830a103b068f3dde167708458b1180506e6cb0e9f082a4a9362af801"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "6243facf8c47e43b21df15f79a9d9ddcfb88cffc87a691840602ac3f8b014ce7"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_23_phi",
+        "theta": "record_23_theta",
+        "X": "record_23_X"
+      }
+    },
+    {
+      "event": "actual_original_RCG_return",
+      "call": 12,
+      "mu": 0.048828125,
+      "actual_inner_history_length": 1,
+      "actual_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -30.507619812070832,
+        "gradient_norm": 23.46726720003727,
+        "projected_kkt_norm": 7.308713975724734e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ed57cfec830a103b068f3dde167708458b1180506e6cb0e9f082a4a9362af801"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "6243facf8c47e43b21df15f79a9d9ddcfb88cffc87a691840602ac3f8b014ce7"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_24_phi",
+        "theta": "record_24_theta",
+        "X": "record_24_X"
+      }
+    },
+    {
+      "event": "actual_original_RCG_input",
+      "call": 13,
+      "mu": 0.0244140625,
+      "options": {
+        "line_search_policy": "original_per_block_backtracking",
+        "non_descent_policy": "documented_non_descent_restart",
+        "initial_step": 1,
+        "armijo_constant": 0.0001,
+        "backtrack_factor": 0.5,
+        "max_backtracks": 60,
+        "max_iterations": 4000,
+        "gradient_tolerance": 1e-06
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ed57cfec830a103b068f3dde167708458b1180506e6cb0e9f082a4a9362af801"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "6243facf8c47e43b21df15f79a9d9ddcfb88cffc87a691840602ac3f8b014ce7"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_25_phi",
+        "theta": "record_25_theta",
+        "X": "record_25_X"
+      }
+    },
+    {
+      "event": "actual_original_RCG_return",
+      "call": 13,
+      "mu": 0.0244140625,
+      "actual_inner_history_length": 1,
+      "actual_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -30.524542350658724,
+        "gradient_norm": 23.467267178297075,
+        "projected_kkt_norm": 9.375437290093203e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ed57cfec830a103b068f3dde167708458b1180506e6cb0e9f082a4a9362af801"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "6243facf8c47e43b21df15f79a9d9ddcfb88cffc87a691840602ac3f8b014ce7"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_26_phi",
+        "theta": "record_26_theta",
+        "X": "record_26_X"
+      }
+    },
+    {
+      "event": "actual_original_RCG_input",
+      "call": 14,
+      "mu": 0.01220703125,
+      "options": {
+        "line_search_policy": "original_per_block_backtracking",
+        "non_descent_policy": "documented_non_descent_restart",
+        "initial_step": 1,
+        "armijo_constant": 0.0001,
+        "backtrack_factor": 0.5,
+        "max_backtracks": 60,
+        "max_iterations": 4000,
+        "gradient_tolerance": 1e-06
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ed57cfec830a103b068f3dde167708458b1180506e6cb0e9f082a4a9362af801"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "6243facf8c47e43b21df15f79a9d9ddcfb88cffc87a691840602ac3f8b014ce7"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_27_phi",
+        "theta": "record_27_theta",
+        "X": "record_27_X"
+      }
+    },
+    {
+      "event": "actual_original_RCG_return",
+      "call": 14,
+      "mu": 0.01220703125,
+      "actual_inner_history_length": 2,
+      "actual_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -30.533003619952648,
+        "gradient_norm": 23.467267292073466,
+        "projected_kkt_norm": 8.510880157924267e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ae9e2058d6dd53a4dcebb98169093216e6ad2d586bffb087e20469b8ae2425b6"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "cf8ed5b8b9042f691a5b550bd23f22ef8758ebeedc33700913c6bf29742f4881"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_28_phi",
+        "theta": "record_28_theta",
+        "X": "record_28_X"
+      }
+    },
+    {
+      "event": "actual_original_RCG_input",
+      "call": 15,
+      "mu": 0.006103515625,
+      "options": {
+        "line_search_policy": "original_per_block_backtracking",
+        "non_descent_policy": "documented_non_descent_restart",
+        "initial_step": 1,
+        "armijo_constant": 0.0001,
+        "backtrack_factor": 0.5,
+        "max_backtracks": 60,
+        "max_iterations": 4000,
+        "gradient_tolerance": 1e-06
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ae9e2058d6dd53a4dcebb98169093216e6ad2d586bffb087e20469b8ae2425b6"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "cf8ed5b8b9042f691a5b550bd23f22ef8758ebeedc33700913c6bf29742f4881"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_29_phi",
+        "theta": "record_29_theta",
+        "X": "record_29_X"
+      }
+    },
+    {
+      "event": "actual_original_RCG_return",
+      "call": 15,
+      "mu": 0.006103515625,
+      "actual_inner_history_length": 2,
+      "actual_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -30.53723425459964,
+        "gradient_norm": 23.467267230875663,
+        "projected_kkt_norm": 5.474846869241809e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ff28cd2777e7f6fc60d9eacfeafc7b7c7090d232261cd88e9d661ff6c496f8ff"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "f7122ade50f87d9eaa63dfa40d9a80b119a2babc768435d3d837b891e2fdafab"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_30_phi",
+        "theta": "record_30_theta",
+        "X": "record_30_X"
+      }
+    },
+    {
+      "event": "actual_original_RCG_input",
+      "call": 16,
+      "mu": 0.0030517578125,
+      "options": {
+        "line_search_policy": "original_per_block_backtracking",
+        "non_descent_policy": "documented_non_descent_restart",
+        "initial_step": 1,
+        "armijo_constant": 0.0001,
+        "backtrack_factor": 0.5,
+        "max_backtracks": 60,
+        "max_iterations": 4000,
+        "gradient_tolerance": 1e-06
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ff28cd2777e7f6fc60d9eacfeafc7b7c7090d232261cd88e9d661ff6c496f8ff"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "f7122ade50f87d9eaa63dfa40d9a80b119a2babc768435d3d837b891e2fdafab"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_31_phi",
+        "theta": "record_31_theta",
+        "X": "record_31_X"
+      }
+    },
+    {
+      "event": "actual_original_RCG_return",
+      "call": 16,
+      "mu": 0.0030517578125,
+      "actual_inner_history_length": 1,
+      "actual_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -30.539349571923125,
+        "gradient_norm": 23.467267240006542,
+        "projected_kkt_norm": 5.367410212327787e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ff28cd2777e7f6fc60d9eacfeafc7b7c7090d232261cd88e9d661ff6c496f8ff"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "f7122ade50f87d9eaa63dfa40d9a80b119a2babc768435d3d837b891e2fdafab"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_32_phi",
+        "theta": "record_32_theta",
+        "X": "record_32_X"
+      }
+    },
+    {
+      "event": "actual_original_RCG_input",
+      "call": 17,
+      "mu": 0.00152587890625,
+      "options": {
+        "line_search_policy": "original_per_block_backtracking",
+        "non_descent_policy": "documented_non_descent_restart",
+        "initial_step": 1,
+        "armijo_constant": 0.0001,
+        "backtrack_factor": 0.5,
+        "max_backtracks": 60,
+        "max_iterations": 4000,
+        "gradient_tolerance": 1e-06
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ff28cd2777e7f6fc60d9eacfeafc7b7c7090d232261cd88e9d661ff6c496f8ff"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "f7122ade50f87d9eaa63dfa40d9a80b119a2babc768435d3d837b891e2fdafab"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_33_phi",
+        "theta": "record_33_theta",
+        "X": "record_33_X"
+      }
+    },
+    {
+      "event": "actual_original_RCG_return",
+      "call": 17,
+      "mu": 0.00152587890625,
+      "actual_inner_history_length": 1,
+      "actual_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -30.54040723058487,
+        "gradient_norm": 23.467267258268315,
+        "projected_kkt_norm": 5.860920128399927e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      },
+      "shared_state_schema": "original engine.serialize(typed_state); field names phi/theta/X retained; no duplicate numeric copy",
+      "array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ff28cd2777e7f6fc60d9eacfeafc7b7c7090d232261cd88e9d661ff6c496f8ff"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "f7122ade50f87d9eaa63dfa40d9a80b119a2babc768435d3d837b891e2fdafab"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "typed_state_array_keys": {
+        "phi": "record_34_phi",
+        "theta": "record_34_theta",
+        "X": "record_34_X"
+      }
+    },
+    {
+      "event": "actual_start_observer_terminal",
+      "original_start_returned": true,
+      "original_error": null,
+      "observer": {
+        "actual_original_RCG_calls": 17,
+        "actual_original_RCG_returns": 17,
+        "actual_original_RCG_exceptions": 0,
+        "original_expected_mu": [
+          100.0,
+          50.0,
+          25.0,
+          12.5,
+          6.25,
+          3.125,
+          1.5625,
+          0.78125,
+          0.390625,
+          0.1953125,
+          0.09765625,
+          0.048828125,
+          0.0244140625,
+          0.01220703125,
+          0.006103515625,
+          0.0030517578125,
+          0.00152587890625
+        ],
+        "actual_mu": [
+          100.0,
+          50.0,
+          25.0,
+          12.5,
+          6.25,
+          3.125,
+          1.5625,
+          0.78125,
+          0.390625,
+          0.1953125,
+          0.09765625,
+          0.048828125,
+          0.0244140625,
+          0.01220703125,
+          0.006103515625,
+          0.0030517578125,
+          0.00152587890625
+        ],
+        "callback_errors": [],
+        "every_required_mu_actual_input_and_return_captured": true,
+        "original_arguments_returns_and_optimizer_control_not_modified": true
+      }
+    }
+  ]
+}

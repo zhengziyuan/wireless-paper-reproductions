@@ -291,3 +291,33 @@ source-compliant geometry runners and distinct batches are documented in
 `GEOMETRY_CONTRACT.md`; previous numerical receipts are never relabelled or
 mixed with the new version. Correct mathematical identities and complete
 execution alone also do not establish agreement with original EPS ordinates.
+
+## Source check17 October: repeated G-scatter coefficient
+
+The supplied author source `ch_third.tex` (SHA256
+`684b2de6bb9dd18828fcec33a378d886a085aab7367fb535bac401f51b496794`)
+uses the standard Rician factors in Eq3-1 at line40. Its later satellite-to-RIS
+G expansion at line489, immediately before the labelled statistical problem
+(3-41), instead repeats `sqrt(beta_S/(1+beta_S))` for both LoS and NLoS terms.
+Line492 explicitly declares unit-variance complex Gaussian NLoS components.
+
+Consequently, the late printed per-entry scatter variance is
+`mu_S0 * beta_S/(1+beta_S)`, whereas Eq3-1 requires
+`mu_S0/(1+beta_S)`. The discrepancy is a factor10 at10dB and100 at20dB;
+the two expressions coincide at0dB only. The current implemented convention
+follows normalized Eq3-1. All7200 G mean/variance components in the18 native
+contexts independently match its declared Rician factor; no optimizer was
+changed or rerun for this check.
+
+[The exact rational counterexamples and fresh source-read receipt](../validation/hotspot-native18-replay-20261017/rician-source-coefficient-audit.json)
+are reproduced by `audit_rician_source_coefficient.py`. This is a contradiction
+in the supplied author source, with final-publisher equation equivalence still
+unverified. It cannot itself explain the NoRIS reference discrepancy, because
+G is absent from that baseline.
+
+The same source calls P_T the maximum **total** beam power at line101, with
+its **100 W** table row at line681. All five hotspot configurations and all18
+saved native case configurations already use100 W; the replayed constructor
+contexts also retain100 W. An earlier description of50 W in this note was a
+documentation error, not a configuration or saved-result error. A per-feed
+reinterpretation is not an authorized correction of this supplied model.

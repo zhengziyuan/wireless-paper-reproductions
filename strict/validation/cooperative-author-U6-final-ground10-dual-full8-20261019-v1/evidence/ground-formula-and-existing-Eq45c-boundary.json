@@ -1,0 +1,252 @@
+{
+  "schema": "read-only-author-RIS-formula-final-groundK-and-known-fourth-erratum-scope-v1",
+  "scope": "Source algebra and prepared deterministic input only. No optimizer/RNG/MC/MP execution.",
+  "final_PDF": {
+    "SHA256": "6fceff0ae4641d429ec8238429b4757bc398e64015ac0d7b88b4ed02987962d0",
+    "ground_K_anchor": "Final printed p291, Fig4/5 paragraph; page-13.txt lines60-62",
+    "printed_own_fourth_anchor": "Final printed p290, Eq45c; page-12.txt lines38-55",
+    "chi_definitions_anchor": "Final printed p287; page-09.txt lines21-29; chi5/6 page-12.txt after Eq45d"
+  },
+  "known_published_error": {
+    "path": "local-source/7491e9709a38/ALGORITHMS_AND_SOURCE_NOTES.md",
+    "SHA256": "60438ab132135df39c0bf534a9e862cd604f38b24de60314e4002e38e4eb579c",
+    "exact_anchor": "ALGORITHMS_AND_SOURCE_NOTES.md table Eq45c, p290",
+    "fourth_algebraic_counterexample_already_public": true,
+    "not_a_new_paper_error": true,
+    "existing_four": [
+      "Eq12",
+      "Eq30d",
+      "Eq11c",
+      "Eq45c"
+    ]
+  },
+  "author_cost_source": {
+    "path": "local-source/ba487221a853/TTS_Cen_RIS_MR_cost.m",
+    "SHA256": "359901b210aa6099b2b3fa0aae2ff54dd2a91c27830aa193264a467879873111",
+    "chi_definitions_lines": [
+      35,
+      38
+    ],
+    "own_fourth_lines": [
+      108,
+      113
+    ],
+    "issue_scope": "This supplied TTS cost formula has its own different direct-limit discrepancy; not evidence of a newly discovered printed error or the actually executed separate NoRIS implementation."
+  },
+  "variables": {
+    "s": "||m||^2",
+    "v": "beta_LL^2, complex variance per direct channel component",
+    "m": "alpha_LL*hbar + alpha_LR*alpha_R*Gbar*diag(rbar)*phi",
+    "NoRIS": "mu_R=0 => alpha_R=beta_R=0; fixed finite direct and satellite-RIS coefficients",
+    "chi_reduction": {
+      "chi1": 0,
+      "chi2": 0,
+      "chi3": "v",
+      "chi4": 0,
+      "chi5": 0,
+      "chi6": 0,
+      "source_chi7": "v"
+    }
+  },
+  "exact_CN_identity": {
+    "formula": "s^2 + 2*(N+1)*v*s + N*(N+1)*v^2",
+    "derivation_terms": [
+      {
+        "term": "s^2",
+        "value": "s^2"
+      },
+      {
+        "term": "2*s*E||z||^2",
+        "value": "2*N*v*s"
+      },
+      {
+        "term": "E(2 Re(m^H z))^2",
+        "value": "2*v*s"
+      },
+      {
+        "term": "E||z||^4",
+        "value": "N*(N+1)*v^2"
+      },
+      {
+        "term": "remaining odd/linear cross moments",
+        "value": 0
+      }
+    ],
+    "assumption": "z is proper CN(0,v I_N); exact moment algebra, no sampling or numerical tolerance."
+  },
+  "printed_Eq45c_all_grouped_terms": [
+    {
+      "term": "s^2",
+      "NoRIS": "s^2",
+      "survives": true
+    },
+    {
+      "term": "(chi3+N*chi3+2*chi4*N*M)*s",
+      "NoRIS": "(N+1)*v*s",
+      "survives": true
+    },
+    {
+      "term": "2*chi4*||Gbar^H*m||^2",
+      "NoRIS": 0,
+      "survives": false
+    },
+    {
+      "term": "4*N*chi6*Re(phi^H*Rbar^H*(chi1*hbar+chi2*Rbar*phi))",
+      "NoRIS": 0,
+      "survives": false
+    },
+    {
+      "term": "chi5*chi6*M^2*N",
+      "NoRIS": 0,
+      "survives": false
+    },
+    {
+      "term": "(2*chi5*chi6+chi6^2+2*chi4*chi3)*M*N^2",
+      "NoRIS": 0,
+      "survives": false
+    },
+    {
+      "term": "2*chi4^2*M^2*N^2",
+      "NoRIS": 0,
+      "survives": false
+    },
+    {
+      "term": "(chi6^2+2*chi4*chi3)*M*N",
+      "NoRIS": 0,
+      "survives": false
+    },
+    {
+      "term": "chi3^2*N*(N+1)",
+      "NoRIS": "N*(N+1)*v^2",
+      "survives": true
+    }
+  ],
+  "author_cost_all_additive_terms": [
+    {
+      "term": "s^2",
+      "NoRIS": "s^2",
+      "survives": true
+    },
+    {
+      "term": "(2*N*chi7+chi3)*s",
+      "NoRIS": "(2*N+1)*v*s",
+      "survives": true
+    },
+    {
+      "term": "2*chi4*||Gbar^H*m||^2",
+      "NoRIS": 0,
+      "survives": false
+    },
+    {
+      "term": "4*N*alpha_R*alpha_LR*chi6*Re(m^H*Gbar*diag(rbar)*phi)",
+      "NoRIS": 0,
+      "survives": false
+    },
+    {
+      "term": "2*M*N^2*chi5*chi6",
+      "NoRIS": 0,
+      "survives": false
+    },
+    {
+      "term": "M*N^2*chi6^2",
+      "NoRIS": 0,
+      "survives": false
+    },
+    {
+      "term": "M^2*N^2*chi4^2",
+      "NoRIS": 0,
+      "survives": false
+    },
+    {
+      "term": "(N^2+N)*chi7^2",
+      "NoRIS": "N*(N+1)*v^2",
+      "survives": true
+    },
+    {
+      "term": "-M^2*N*chi4^2",
+      "NoRIS": 0,
+      "survives": false
+    },
+    {
+      "term": "M^2*N*chi5*chi6",
+      "NoRIS": 0,
+      "survives": false
+    },
+    {
+      "term": "M*N*chi6^2",
+      "NoRIS": 0,
+      "survives": false
+    }
+  ],
+  "direct_limit_comparison": {
+    "exact": "s^2+(2*N+2)*v*s+N*(N+1)*v^2",
+    "author_working_cost": "s^2+(2*N+1)*v*s+N*(N+1)*v^2",
+    "printed_Eq45c": "s^2+(N+1)*v*s+N*(N+1)*v^2",
+    "author_missing_term": "v*s",
+    "printed_missing_term": "(N+1)*v*s",
+    "all_other_chi_terms_vanish": true
+  },
+  "exact_counterexample": {
+    "N": 1,
+    "s": 1,
+    "v": 1,
+    "exact": 7,
+    "author_working_cost": 6,
+    "printed": 5,
+    "exact_breakdown": {
+      "s_squared": 1,
+      "2_N_v_s": 2,
+      "2_v_s": 2,
+      "N_Nplus1_v_squared": 2
+    },
+    "printed_counterexample_is_previously_public": true
+  },
+  "RIS_semantic_findings": [
+    {
+      "topic": "Ground Rician factor",
+      "observation": "INIT:5 beta_R=1; final p291 Fig4/5 kappa_R=10dB. Existing canonical enabled input retained source beta_R1.",
+      "next_missing_only_step": "From saved H_RU_LOS and enabled mu_RU, construct only r_mean/r_var at linearK10. No empirical scaling."
+    },
+    {
+      "topic": "RIS enabled/NoRIS stage",
+      "anchors": "S_AO lines8-17; INIT477-483",
+      "observation": "Enabled coefficient is (.02*sqrt(G_R_NGSO))^2, retained saved value about .004; INIT explicitly overwrites mu_RU=0. These are distinct stages."
+    },
+    {
+      "topic": "Conjugation",
+      "anchors": "INIT512-518 and H_NR_LOS/H_RU_LOS/H_GR_LOS definitions",
+      "identity": "(phi' diag(H_RU') H_NR')' = H_NR diag(H_RU) phi; source LOS already includes its conjugate-transposes.",
+      "finding": "No demonstrated conjugation mismatch in eleven-field adapter/current G@(phi*r) mapping."
+    },
+    {
+      "topic": "Noise and GEO power",
+      "anchors": "INIT satellite mu normalization, GEO mu definitions and adapter V2 build_channel_data",
+      "finding": "Satellite mu already divide by kBT. GEO mu already include source P_T_GSO once. Receiver offset is1+GEO second moment; no second noise/GEO/aperture factor is justified."
+    },
+    {
+      "topic": "MR penalty",
+      "anchors": "S_Cen_RIS_MR_cost132-138; TTS_Cen_RIS_MR_cost147-152; final Eq33a/36/47; positive_wick.py70-71,102",
+      "finding": "Working source uses max(leak-varsigma,0)^2; printed/current corrected mathematical objective uses the full residual square. This is a source variant, not itself proof current wrong or a new paper error; AP-AO does not use this MR penalty."
+    },
+    {
+      "topic": "Scalar author expansions versus general conditional moments",
+      "finding": "Symbolic reduction relies on ideal LOS vector norms. Literal huge-phase rounding cannot be promoted to an observed AP cause without a saved fixed-state source/current coefficient comparison."
+    }
+  ],
+  "causality_limits": {
+    "observed_RIS_reference_gap_not_causally_explained": true,
+    "NoRIS_reference_agreement_does_not_validate_ground_Rician_factor": true,
+    "TTS_own_fourth_discrepancy_cannot_explain_AP_AO_gap": true,
+    "fixed_state_source_HTheta_Xi_f1_vs_current_coefficients_is_permitted_future_missing_only_check": true,
+    "parameter_or_formula_changes_must_not_be_fitted_to_the_historical_curves": true
+  },
+  "source_and_numerical_status": {
+    "original_source_unmodified": true,
+    "source_formula_arithmetic_only_no_new_optimizer_MC_MP": true,
+    "earlier_strict_complex_component_failures_retained": 10,
+    "storage_dtype_only_misclassifications_additively_explained": 29,
+    "raw_numeric_comparison_pass": 120,
+    "raw_numeric_comparison_total": 130,
+    "no_scientific_reference_or_full_paper_gate_upgraded": true
+  }
+}

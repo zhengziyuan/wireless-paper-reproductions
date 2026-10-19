@@ -1,0 +1,149 @@
+{
+  "schema": "ACTUAL_PORTABLE_MIS_SAVED_FIGURES_FIRST_USE_AND_EXACT_OUTPUT_COMPARISON_V1",
+  "created_UTC": "2026-10-19T02:23:37.408316+00:00",
+  "actual_public_CLI_mode": "all",
+  "actual_natural_returncode": 0,
+  "source_package_manifest_at_execution_SHA256": "48b604dacc67f492fba759d5cef0c54f0ef4dd35ffd089f5b3cddfba79f8fdcc",
+  "source_and_input_at_execution": {
+    "data/assembly-summary.json": "8eb80afdfd518eeeeb922ec7d70243995981fde3dcb5a3399992cc4c875c95d4",
+    "data/fig5-fig6-saved-curves.json": "03c1b7e8d6f43d61afcbe38f068a1c8443cdca83dfe521cc858fc5be63d7da53",
+    "data/selected-fixed-final-state.json": "5a26e80cd361f27ce11bfae76d67b2163193e4d6093dc05f3432dbd3bbb50128",
+    "sources/frozen_deterministic_Model_fields_v5.py": "6d82528f0d0c5c0cbe66cb735dfa043817273f0c6807b71bcfa58cdeb86b535a",
+    "sources/frozen_normalization_v5_exact.py": "2191745f9e3761d3ffcb3b8cd0dab2e8a7f071c10c8c8fb2486a3560ae7866b4",
+    "sources/frozen_plot_beampatterns_v5.py": "1f4dfe523361e86ce13aae3a4a3a09b50831e7b8b6a7a681a9876d60f0675a7d",
+    "sources/PREPARED_FIG5_FIG6_CLOSED_OUTPUT_ONLY_RENDER_PLAN_V2.json": "c1f7fe1e8fb71cb80e288ff175ed9593c3baa479834b40aaf6d01c54f6ba8286",
+    "sources/regenerate_saved_outputs.py": "29af58b36b4d255da5ac55821331183ddf3130c9e927ac8849666c260b2e8b41",
+    "sources/render_closed_saved_Fig5_Fig6_v2.py": "db938a00981d3093dbd1133c081ebb301765d9b09f49ceb7aa08cc032c4ccf33",
+    "sources/saved_Fig3_field_kernel.py": "9a80ec3bee926958c689858f9140c7dbc6c5def3b1e1d3d792830aa6e30ae44f"
+  },
+  "checks": {
+    "observed_original_exec_session_10131_natural_exit0": true,
+    "source_and_saved_inputs_unchanged": true,
+    "full_nine_panel_numeric_samples_exact_equal": true,
+    "selected_original_3072": true,
+    "original_combined_false_retained": true,
+    "no_new_optimizer_RNG_MC_MP_reference_fit": true,
+    "all_11_PNGs_pixel_equal_to_visually_reviewed_originals": true,
+    "six_fig5_fig6_outputs_present": true
+  },
+  "all_scoped_checks_pass": true,
+  "image_comparisons": [
+    {
+      "relative_published_figure": "figures/fig3-target-1.png",
+      "new_png_SHA256": "79033bfef2b6ece25644e853189eacf4ab57120bd23150f64c52519684fd77a1",
+      "published_png_SHA256": "79033bfef2b6ece25644e853189eacf4ab57120bd23150f64c52519684fd77a1",
+      "image_size": [
+        1350,
+        570
+      ],
+      "exact_pixel_equality_to_actual_visually_reviewed_figure": true
+    },
+    {
+      "relative_published_figure": "figures/fig3-target-2.png",
+      "new_png_SHA256": "6dad03357d23ec33b78dcb4f716926673e9dfd43d3c1a1444d0617c982dc66e4",
+      "published_png_SHA256": "6dad03357d23ec33b78dcb4f716926673e9dfd43d3c1a1444d0617c982dc66e4",
+      "image_size": [
+        1350,
+        570
+      ],
+      "exact_pixel_equality_to_actual_visually_reviewed_figure": true
+    },
+    {
+      "relative_published_figure": "figures/fig3-target-3.png",
+      "new_png_SHA256": "7d7690fdaf9331feecfcb368510b2078ca174346ecd6fd2bc61e7d39df041691",
+      "published_png_SHA256": "7d7690fdaf9331feecfcb368510b2078ca174346ecd6fd2bc61e7d39df041691",
+      "image_size": [
+        1350,
+        570
+      ],
+      "exact_pixel_equality_to_actual_visually_reviewed_figure": true
+    },
+    {
+      "relative_published_figure": "figures/fig3-target-4.png",
+      "new_png_SHA256": "99982bb91f84b14e01eeb11adb5212c90f90e55f684046e3101ee671d8f0dbfd",
+      "published_png_SHA256": "99982bb91f84b14e01eeb11adb5212c90f90e55f684046e3101ee671d8f0dbfd",
+      "image_size": [
+        1350,
+        570
+      ],
+      "exact_pixel_equality_to_actual_visually_reviewed_figure": true
+    },
+    {
+      "relative_published_figure": "figures/fig3-target-5.png",
+      "new_png_SHA256": "9d39bc6b505261fca02f8cf85e78bc0df46fd79357e09bec18ab2eee49657101",
+      "published_png_SHA256": "9d39bc6b505261fca02f8cf85e78bc0df46fd79357e09bec18ab2eee49657101",
+      "image_size": [
+        1350,
+        570
+      ],
+      "exact_pixel_equality_to_actual_visually_reviewed_figure": true
+    },
+    {
+      "relative_published_figure": "figures/fig3-target-6.png",
+      "new_png_SHA256": "7732496bcac449427c0f900c5df7ee8c294f45868c757d91e4dc38cd071ab022",
+      "published_png_SHA256": "7732496bcac449427c0f900c5df7ee8c294f45868c757d91e4dc38cd071ab022",
+      "image_size": [
+        1350,
+        570
+      ],
+      "exact_pixel_equality_to_actual_visually_reviewed_figure": true
+    },
+    {
+      "relative_published_figure": "figures/fig3-target-7.png",
+      "new_png_SHA256": "ac5ca6e14d5b75379fa3e5b0bbf9285c9ffb704de88450bd73b6fb5851ead863",
+      "published_png_SHA256": "ac5ca6e14d5b75379fa3e5b0bbf9285c9ffb704de88450bd73b6fb5851ead863",
+      "image_size": [
+        1350,
+        570
+      ],
+      "exact_pixel_equality_to_actual_visually_reviewed_figure": true
+    },
+    {
+      "relative_published_figure": "figures/fig3-target-8.png",
+      "new_png_SHA256": "0d78613feba7342923c7618049c549a8d6bef7939c4be9077015b39f169f4faf",
+      "published_png_SHA256": "0d78613feba7342923c7618049c549a8d6bef7939c4be9077015b39f169f4faf",
+      "image_size": [
+        1350,
+        570
+      ],
+      "exact_pixel_equality_to_actual_visually_reviewed_figure": true
+    },
+    {
+      "relative_published_figure": "figures/fig3-target-9.png",
+      "new_png_SHA256": "adf18645abc20fba57b29aedd704b8b6fdfa41c0a54882751ee88a0c9fc40e4f",
+      "published_png_SHA256": "adf18645abc20fba57b29aedd704b8b6fdfa41c0a54882751ee88a0c9fc40e4f",
+      "image_size": [
+        1350,
+        570
+      ],
+      "exact_pixel_equality_to_actual_visually_reviewed_figure": true
+    },
+    {
+      "relative_published_figure": "figures/Fig5-saved-fixed-selection.png",
+      "new_png_SHA256": "7015991fadcc853a2ee3823df8e416dce9b12cbb6c33af07ac15b57ff207897d",
+      "published_png_SHA256": "7015991fadcc853a2ee3823df8e416dce9b12cbb6c33af07ac15b57ff207897d",
+      "image_size": [
+        1520,
+        980
+      ],
+      "exact_pixel_equality_to_actual_visually_reviewed_figure": true
+    },
+    {
+      "relative_published_figure": "figures/Fig6-saved-fixed-selection.png",
+      "new_png_SHA256": "dcb6f602c41f39aa35205c3f177579b66d35f143517f58ad2c9917c151f1504b",
+      "published_png_SHA256": "dcb6f602c41f39aa35205c3f177579b66d35f143517f58ad2c9917c151f1504b",
+      "image_size": [
+        1520,
+        980
+      ],
+      "exact_pixel_equality_to_actual_visually_reviewed_figure": true
+    }
+  ],
+  "actual_generated_fig3_grid_bytes": 22700499,
+  "full_grid_numeric_comparison_scope": "nine newly regenerated panels against the prior deterministic saved-state field output; no population RAW or original MP reread",
+  "visual_review_scope": "new PNG pixels exactly match the 11 original figures already visually reviewed; PDF/SVG existence only in this first-use check",
+  "original_reference_gate": false,
+  "dual_language_figure_gate": false,
+  "all6000_original_convergence_pass": false,
+  "whole_paper_PASS": false
+}

@@ -1,0 +1,82 @@
+{
+  "observed_UTC": "2026-10-19T20:28:19.237423+00:00",
+  "owner": {
+    "PID": 36592,
+    "creation_FILETIME": 134369152988934458,
+    "associated_with_any_Windows_job": true
+  },
+  "owner_parent_PID": 9196,
+  "scientific_role": "Original complete cold first Rot-BS & Rot-RIS scheme with validated stable PGA arithmetic and passive returned-state capture; not a full six-scheme campaign",
+  "job": "local-origin/native-firstscheme-preparation\\ROOT_AUTHORIZED_ONCE_NATIVE_STABLE_PGA_COMPLETE_FIRST_SCHEME_JOB_V1.json",
+  "source_before": {
+    "local-origin/native-firstscheme-preparation\\run_native_case014_first_scheme_stable_PGA_full_v1.m": "76ae3a9001cf623709119ff783d03cefc5823cd63c2d3bb9779183b8ebb00315",
+    "local-origin/native-firstscheme-preparation\\stable_rotation_utility_increment_native_v1.m": "e1ad6ca56ced1010ab6ebd96499322bd0586b71cf3a8d4456335b6ca8f6040a1",
+    "local-origin/native-firstscheme-preparation\\solve_original_factor_QP_array_v1.m": "7231d5b2a5001ae02618bf3b0e5b06ee7c4c07a262ba73219965c3c7f4849a97",
+    "local-origin/native-firstscheme-preparation\\original-scenario.json": "3b5e8fced9d90337bc574d660ea29c0a2b1b67aae8fc11950cdbbb28d609c302",
+    "local-origin/native-firstscheme-preparation\\original-config.json": "62d9450cd8ae67986a92c0cd7344f7788d75a3bfb8e89d11d54a59e501536460",
+    "local-origin/native-firstscheme-preparation\\EXACT_PASSIVE_RETURN_CAPTURE_AND_WHOLE_REVIEWED_NATIVE_SOURCE_INVERSE_V1.json": "d1cdebe183d7deccf7da3a3d3faf5dab6665dc820c4fc174c0c38ce65776e0c9",
+    "local-origin/native-firstscheme-preparation\\PREPARED_NOT_STARTED_NATIVE_STABLE_PGA_COMPLETE_FIRST_SCHEME_PLAN_V1.json": "9bce4ef913d1d3978e8e251d52457db5be4a45bf7d773302a550c6cff0425a72",
+    "local-origin/native-firstscheme-preparation\\run_once_native_first_scheme_using_existing_held_API_v1.py": "196fc5d6333d615d06d13425530d08889377d79fa972b825e4f9ee5eaf58f5e9",
+    "local-origin/data\\resume-20261017\\ISAC014-native-stable-PGA-increment-fixed15-prepared-v2\\ACTUAL_NATIVE_FIXED15_V1_FAILURE_V2_CLOSED_ARITHMETIC_AND_MP100_UNIFIED_RECEIPT_V1.json": "453940a701b69a4154e746b5e1c283b5a26be121ac81f594f9b12378eff0aa28",
+    "local-origin/data\\resume-20261017\\cooperative-author-physical-input-differential-v1\\final-author-confirmed-U6-Fig4-Fig5-missing23-per-language-prepared-v1\\run_one_serial_missing23_lane_v2.py": "8aa766976c7d773b63ea0699e90d42374cfdb98b2ba119e7498eb06171234c8b",
+    "local-origin/data\\resume-20261017\\cooperative-author-physical-input-differential-v1\\durable_owned_author_U6_full_eight_worker_v1.py": "7294cd64cb78504490c7d3b569d29161f2031fa33835b90d845aa6fb36191ecf",
+    "local-origin/native-firstscheme-preparation\\ROOT_AUTHORIZED_ONCE_NATIVE_STABLE_PGA_COMPLETE_FIRST_SCHEME_JOB_V1.json": "255ae0f90d6496dc597ea635b9c17747cc0eccf24643005340bc2a6e920f9760"
+  },
+  "command": [
+    "private-origin/MATLAB.exe",
+    "-singleCompThread",
+    "-batch",
+    "try;restoredefaultpath;addpath('local-origin/native-firstscheme-preparation');r=run_native_case014_first_scheme_stable_PGA_full_v1('local-origin/data/ISAC014-native-stable-PGA-full-actual-v1/full-result.json','local-origin/native-firstscheme-preparation/original-scenario.json','local-origin/native-firstscheme-preparation/original-config.json');exit(r.effective_entry_exit_code);catch e;disp(getReport(e,'extended','hyperlinks','off'));exit(1);end;"
+  ],
+  "cwd": "local-origin/native-firstscheme-preparation",
+  "root_authorization_scope": "exactly one native cold Rot-BS and Rot-RIS first scheme; no other schemes or campaign",
+  "no_original_owner_main_or_other_controller_main_executed": true,
+  "new_MC_RNG_calls": 0,
+  "permitted_original_full_first_scheme_calls": 1,
+  "generic_owned_API_scientific_production_preserved_flag_means_no_changed_controls_not_production_science_PASS": true,
+  "native_trajectory_or_stationarity_PASS": false,
+  "original_reference_or_full_paper_PASS": false,
+  "host_errors": [],
+  "scientific_production_preserved_full_reconstruction_controls": true,
+  "natural_wait_completed": true,
+  "initial_child_birth_observed": true,
+  "actual_child_PID_after_Popen": 6356,
+  "status": "actual_scientific_child_returned",
+  "console_log": "local-origin/native-firstscheme-preparation\\actual-held-native-first-scheme-v1\\native-first-scheme-actual-console.log",
+  "child": {
+    "PID": 6356,
+    "creation_FILETIME": 134369152992434377,
+    "associated_with_any_Windows_job": true
+  },
+  "natural_wait_return_monotonic_ns": 473527578000000,
+  "actual_wait_interruption_count": 0,
+  "observed_local": "2026-10-20T04:38:18.316833+08:00",
+  "actual_child_terminal_exit_code": 0,
+  "actual_child_terminal_observation": {
+    "PID": 6356,
+    "creation_FILETIME": 134369152992434377,
+    "associated_with_any_Windows_job": true,
+    "actual_OS_exit_code": 0,
+    "exact_original_Popen_handle_used": true
+  },
+  "birth_comparison_available": true,
+  "exact_original_handle_birth_and_exit_match": true,
+  "source_after": {
+    "local-origin/native-firstscheme-preparation\\run_native_case014_first_scheme_stable_PGA_full_v1.m": "76ae3a9001cf623709119ff783d03cefc5823cd63c2d3bb9779183b8ebb00315",
+    "local-origin/native-firstscheme-preparation\\stable_rotation_utility_increment_native_v1.m": "e1ad6ca56ced1010ab6ebd96499322bd0586b71cf3a8d4456335b6ca8f6040a1",
+    "local-origin/native-firstscheme-preparation\\solve_original_factor_QP_array_v1.m": "7231d5b2a5001ae02618bf3b0e5b06ee7c4c07a262ba73219965c3c7f4849a97",
+    "local-origin/native-firstscheme-preparation\\original-scenario.json": "3b5e8fced9d90337bc574d660ea29c0a2b1b67aae8fc11950cdbbb28d609c302",
+    "local-origin/native-firstscheme-preparation\\original-config.json": "62d9450cd8ae67986a92c0cd7344f7788d75a3bfb8e89d11d54a59e501536460",
+    "local-origin/native-firstscheme-preparation\\EXACT_PASSIVE_RETURN_CAPTURE_AND_WHOLE_REVIEWED_NATIVE_SOURCE_INVERSE_V1.json": "d1cdebe183d7deccf7da3a3d3faf5dab6665dc820c4fc174c0c38ce65776e0c9",
+    "local-origin/native-firstscheme-preparation\\PREPARED_NOT_STARTED_NATIVE_STABLE_PGA_COMPLETE_FIRST_SCHEME_PLAN_V1.json": "9bce4ef913d1d3978e8e251d52457db5be4a45bf7d773302a550c6cff0425a72",
+    "local-origin/native-firstscheme-preparation\\run_once_native_first_scheme_using_existing_held_API_v1.py": "196fc5d6333d615d06d13425530d08889377d79fa972b825e4f9ee5eaf58f5e9",
+    "local-origin/data\\resume-20261017\\ISAC014-native-stable-PGA-increment-fixed15-prepared-v2\\ACTUAL_NATIVE_FIXED15_V1_FAILURE_V2_CLOSED_ARITHMETIC_AND_MP100_UNIFIED_RECEIPT_V1.json": "453940a701b69a4154e746b5e1c283b5a26be121ac81f594f9b12378eff0aa28",
+    "local-origin/data\\resume-20261017\\cooperative-author-physical-input-differential-v1\\final-author-confirmed-U6-Fig4-Fig5-missing23-per-language-prepared-v1\\run_one_serial_missing23_lane_v2.py": "8aa766976c7d773b63ea0699e90d42374cfdb98b2ba119e7498eb06171234c8b",
+    "local-origin/data\\resume-20261017\\cooperative-author-physical-input-differential-v1\\durable_owned_author_U6_full_eight_worker_v1.py": "7294cd64cb78504490c7d3b569d29161f2031fa33835b90d845aa6fb36191ecf",
+    "local-origin/native-firstscheme-preparation\\ROOT_AUTHORIZED_ONCE_NATIVE_STABLE_PGA_COMPLETE_FIRST_SCHEME_JOB_V1.json": "255ae0f90d6496dc597ea635b9c17747cc0eccf24643005340bc2a6e920f9760"
+  },
+  "all_watched_source_and_job_bytes_unchanged": true,
+  "effective_host_exit_code": 0,
+  "no_signal_timeout_kill_restart_or_second_child": true,
+  "full_paper_or_original_reference_pass": false
+}

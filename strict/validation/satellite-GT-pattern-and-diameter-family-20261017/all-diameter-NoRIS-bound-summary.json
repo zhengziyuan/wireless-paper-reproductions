@@ -1,0 +1,53 @@
+{
+  "scope": "Diameter-only hypothesis: all18 actual RIS-size cases, NoRIS bounds for every S.1428 q>=20 with all other inputs fixed",
+  "original_case_ordinals": [
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65
+  ],
+  "configuration_count": 18,
+  "original_baseline_q": 48.03322970853389,
+  "actual_original_angles_degrees": [
+    29.054105564761848,
+    0.0,
+    29.054105564761848
+  ],
+  "source_and_inputs_unchanged": true,
+  "precisions": [
+    80,
+    100
+  ],
+  "maximum_MP80_MP100_difference": "6.82324929734990277856519249445731982930011963140976309688978848460429977841177485545219028804714881327401e-77",
+  "prior_full_matrix_MP_quotient_solves_reused_by_exact_input_hash": true,
+  "new_matrix_solve_optimizer_or_random_draw_calls": 0,
+  "theorem": "Replace each positive GT second-moment matrix by its smallest scalar-gain envelope over q>=20. This relaxes leakage; the saved useful/leakage quotients scale by gain(q0)/gain_floor. The existing min-SINR relaxation then upper-bounds every diameter.",
+  "simultaneous_diameter_attainability_of_independent_gain_floors_required": false,
+  "mathematical_bound_does_not_require_a_diameter_grid_search": true,
+  "conservative_relative_numeric_envelope": 1e-10,
+  "conservative_absolute_numeric_envelope": 1e-12,
+  "full_floating_point_interval_certificate": false,
+  "source_NoRIS_reference_points_per_language": 54,
+  "source_points_exceeding_all_diameter_bound_after_rounding": {
+    "python": 54,
+    "matlab": 54
+  },
+  "all_diameter_gain_floor_and_MP_arithmetic_checks_pass": true,
+  "author_original_geometry_gains_satellite_beam_pattern_or_reference_recovered": false,
+  "alternate_receive_pattern_outside_S1428_family_ruled_out": false,
+  "author_paper_error_or_original_curve_or_full_paper_pass": false
+}

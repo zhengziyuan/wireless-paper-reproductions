@@ -1,0 +1,124 @@
+{
+  "schema": "actual-N6-original-typed-recipe-vs-existing-complete84-proven-operands-v1",
+  "rows": [
+    {
+      "mode": "MRT",
+      "all_exact_grid_constant_phasor_term_diagonal_and_n_m_values_identical": true,
+      "original_constructor_typed_identity": {
+        "schema": "actual-exact-model-typed-operands-v1",
+        "mode": "MRT",
+        "N": 6,
+        "M": 5,
+        "D": 3,
+        "groups": {
+          "grid": {
+            "type": "ndarray",
+            "typed_SHA256": "5b0c42bce43138374215380ba85f8136ce273ea394292308affbdfe28e2df238"
+          },
+          "compatible": {
+            "type": "list",
+            "typed_SHA256": "571f4daaeb9c6d10d724b2eadc23f753d3537023f7d7593bdb3d10f5fc91092c"
+          },
+          "terms": {
+            "type": "dict",
+            "typed_SHA256": "42990cdebd87ec1b55a109a827f214e91cab2cabcf2456d8a1a470d8e9caa74a"
+          },
+          "diagonal": {
+            "type": "NoneType",
+            "typed_SHA256": "6c09635decb8153d3c12e3782a69fd2eb097426f912547d351a8647b27d5580a"
+          },
+          "base": {
+            "type": "list",
+            "typed_SHA256": "a48e15150f2fc83142a1f169e983c50fbc2eff911c8cd6a8c305015e63001a1c"
+          },
+          "numerator": {
+            "type": "list",
+            "typed_SHA256": "dc7f1cdaa1f5402904aab4cad0b1faf6fabf3a7d9f97dc1fe3f4c433ce6a9a21"
+          },
+          "coefficient": {
+            "type": "dict",
+            "typed_SHA256": "477725ad6d97f2bdef487116c4dee8c000fb55b1f0ddfcdfd10b6f0dcd030e1a"
+          }
+        },
+        "typed_serialization": "local trusted Python pickle5 digest; no unpickle input",
+        "SHA256": "304eb909cad00dc0d14906e7c206f82eba97554e494a51241d1a9d3c13656514"
+      },
+      "existing_complete84_science_reused": true,
+      "new_objective_or_bound_calls": 0
+    },
+    {
+      "mode": "ZF",
+      "all_exact_grid_constant_phasor_term_diagonal_and_n_m_values_identical": true,
+      "original_constructor_typed_identity": {
+        "schema": "actual-exact-model-typed-operands-v1",
+        "mode": "ZF",
+        "N": 6,
+        "M": 5,
+        "D": 3,
+        "groups": {
+          "grid": {
+            "type": "ndarray",
+            "typed_SHA256": "5b0c42bce43138374215380ba85f8136ce273ea394292308affbdfe28e2df238"
+          },
+          "compatible": {
+            "type": "list",
+            "typed_SHA256": "571f4daaeb9c6d10d724b2eadc23f753d3537023f7d7593bdb3d10f5fc91092c"
+          },
+          "terms": {
+            "type": "dict",
+            "typed_SHA256": "779b105f5471e49b19d9724f1a89f9a66cd7b9998d4e1635db11c5f40e334cab"
+          },
+          "diagonal": {
+            "type": "list",
+            "typed_SHA256": "ca016fb2e99e83ae89d19cc471b819eb6186e8e15abf2fae7eb375469eeebb24"
+          },
+          "base": {
+            "type": "list",
+            "typed_SHA256": "87c0a6dc04e6c27d0079153390ba3c309fd6fe73789ee7c6a6b52bbda0d5154d"
+          },
+          "eta": {
+            "type": "list",
+            "typed_SHA256": "d8039651740894bc1ff95209beb6932b3f116f093a5eadb214cdfa17bf88cd59"
+          }
+        },
+        "typed_serialization": "local trusted Python pickle5 digest; no unpickle input",
+        "SHA256": "a3f966b7340bbae0966ada1a84fafabf3c3cd5eae54f646129d094a1a3e50459"
+      },
+      "existing_complete84_science_reused": true,
+      "new_objective_or_bound_calls": 0
+    }
+  ],
+  "all_checks_pass": true,
+  "original_typed_constructor_proof": {
+    "path": "logical-source/0011/ACTUAL_PYTHONV3_EXACT_CLOSED_PROOF_IMPORT_AND_N6_TYPED_SOURCE_BINDING_V1.json",
+    "SHA256": "7d4931f33c4b4fc2dfd5b53618653a1a516709cf5a8b596211692bece9dd313f"
+  },
+  "complete84_scientific_proof": {
+    "path": "logical-source/0009/ACTUAL_N6M5_ALL84_INDEPENDENT_VALUES_ALL_BASE_TANGENT_UPPERS_AND_ANALYTIC_PARTITION_V1.json",
+    "SHA256": "1f37beb967ccd6deb300d830c93f9a2da1945750ab1f76d66bb97479fbed66dc"
+  },
+  "source_input_before": {
+    "logical-source/0016/bind_actual_N6_recipe_to_existing_complete84_operand_proof_v1.py": "50eccc084797474ec270cb28f127af91842596fcd76eb386ef5ffe48fc3e458f",
+    "logical-source/0015/PREPARED_PYTHON2600_GENERIC_NM_EXACT_PROOF_REUSE_CONSUMER_PLAN_V3.json": "346c7c3e672ec1fd90fa55768388ee42dee0db4f928d3a4fb468b626dc85e01e",
+    "logical-source/0009/ACTUAL_N6M5_ALL84_INDEPENDENT_VALUES_ALL_BASE_TANGENT_UPPERS_AND_ANALYTIC_PARTITION_V1.json": "1f37beb967ccd6deb300d830c93f9a2da1945750ab1f76d66bb97479fbed66dc",
+    "logical-source/0010/original-Fig20-g0-deterministic-N6M5-frozen-binary64-primitives.json": "86d3c26398a93234b4fcc1a4d52df6e1d739d1f388ba7d5d29b4832414642884",
+    "logical-source/0011/ACTUAL_PYTHONV3_EXACT_CLOSED_PROOF_IMPORT_AND_N6_TYPED_SOURCE_BINDING_V1.json": "7d4931f33c4b4fc2dfd5b53618653a1a516709cf5a8b596211692bece9dd313f",
+    "logical-source/0012/independent_generic_statistical_grid_math_v1.py": "a54c9546dc28acb25816296933d9cccfdfcc4fce6fbffbc8656bc1d3a0d05d2d",
+    "logical-source/0017/independent_python_N6M5_dimensional_route_v3.py": "813288a5bb2ad4468adc0e3f56651f978ff74990ba641af9e639c31552b15456",
+    "logical-source/0013/verify_all126.py": "40a93a0ff9afb77302191d5de729af2f0fe2fbd5d0590cdac09eadf656cfacf1",
+    "logical-source/0064/case-000-mc-000.json": "56bae9f5ea12ba15a90af436eb7bf6a7135aaef1e7d744d01c409dd1a36bfe0e"
+  },
+  "source_input_after": {
+    "logical-source/0016/bind_actual_N6_recipe_to_existing_complete84_operand_proof_v1.py": "50eccc084797474ec270cb28f127af91842596fcd76eb386ef5ffe48fc3e458f",
+    "logical-source/0015/PREPARED_PYTHON2600_GENERIC_NM_EXACT_PROOF_REUSE_CONSUMER_PLAN_V3.json": "346c7c3e672ec1fd90fa55768388ee42dee0db4f928d3a4fb468b626dc85e01e",
+    "logical-source/0009/ACTUAL_N6M5_ALL84_INDEPENDENT_VALUES_ALL_BASE_TANGENT_UPPERS_AND_ANALYTIC_PARTITION_V1.json": "1f37beb967ccd6deb300d830c93f9a2da1945750ab1f76d66bb97479fbed66dc",
+    "logical-source/0010/original-Fig20-g0-deterministic-N6M5-frozen-binary64-primitives.json": "86d3c26398a93234b4fcc1a4d52df6e1d739d1f388ba7d5d29b4832414642884",
+    "logical-source/0011/ACTUAL_PYTHONV3_EXACT_CLOSED_PROOF_IMPORT_AND_N6_TYPED_SOURCE_BINDING_V1.json": "7d4931f33c4b4fc2dfd5b53618653a1a516709cf5a8b596211692bece9dd313f",
+    "logical-source/0012/independent_generic_statistical_grid_math_v1.py": "a54c9546dc28acb25816296933d9cccfdfcc4fce6fbffbc8656bc1d3a0d05d2d",
+    "logical-source/0017/independent_python_N6M5_dimensional_route_v3.py": "813288a5bb2ad4468adc0e3f56651f978ff74990ba641af9e639c31552b15456",
+    "logical-source/0013/verify_all126.py": "40a93a0ff9afb77302191d5de729af2f0fe2fbd5d0590cdac09eadf656cfacf1",
+    "logical-source/0064/case-000-mc-000.json": "56bae9f5ea12ba15a90af436eb7bf6a7135aaef1e7d744d01c409dd1a36bfe0e"
+  },
+  "source_input_interval_closed": true,
+  "new_objective_bound_optimizer_MC_RNG_calls": 0
+}

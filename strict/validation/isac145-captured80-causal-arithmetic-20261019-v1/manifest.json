@@ -1,0 +1,76 @@
+{
+  "schema": "ISAC145-actual80-fixed-state-diagnostic-public-files-v2",
+  "files": {
+    "actual-failure-arrays.npz": {
+      "bytes": 71910,
+      "SHA256": "fb3a406cc2caf9a39a9dcbaf06292a5ef2bceda5517cfccd97ebe24c95459771"
+    },
+    "actual-failure.json": {
+      "bytes": 12350,
+      "SHA256": "344a1a6991538a02420e81c5f254652c6fe436d915582f9ff598ee7d062f381c"
+    },
+    "all-gradients.json": {
+      "bytes": 37102,
+      "SHA256": "50841483afd5706f0e1da9f0228de042c0c42e7fbb8d0ae072a97bd9d6d3c819"
+    },
+    "all80-trials/frozen_original_binary64_fields-MP100.json": {
+      "bytes": 91283,
+      "SHA256": "a566c78e814c5979dc9c0de454987fbe0fc85288732d7c14a5c74dfe7b939479"
+    },
+    "all80-trials/frozen_original_binary64_fields-MP80.json": {
+      "bytes": 91329,
+      "SHA256": "89224f8957769cf71258383b4c09a66a4287749d1c33ff9f1377350ca666567c"
+    },
+    "all80-trials/full_original_physics-MP100.json": {
+      "bytes": 91201,
+      "SHA256": "4e74284a90f30c118b8bbc909d7692f9da8ecd5d8cfd673d2f7f5ec50bbbb280"
+    },
+    "all80-trials/full_original_physics-MP80.json": {
+      "bytes": 91206,
+      "SHA256": "31113dc0d30c9d0d01d42a3b29c2b48c5af9a6454bfd754f65f7baf154a65b4d"
+    },
+    "all80-trials/summary.json": {
+      "bytes": 11700,
+      "SHA256": "732ba52cee3b8ddea92aa0fbe188861fa6b12fd0808281a74d2bf06fea89bb4b"
+    },
+    "captured-source-binding.json": {
+      "bytes": 777,
+      "SHA256": "6f7f27a70df96f94c9694a6fe16107274fb159956651adf01099c65e8c39bec7"
+    },
+    "evidence/audit-natural-terminals-and-source-closure.json": {
+      "bytes": 3381,
+      "SHA256": "9acce2ed04689882d96fa31c918276bdffa945a72ad0549ca2243d2116055461"
+    },
+    "evidence/independent-causal-scope-review.json": {
+      "bytes": 7633,
+      "SHA256": "65711201853c20628447ef48630fb3553c43b3449e0d5f409e2fb65604626c35"
+    },
+    "frozen-original-channel-fields.npz": {
+      "bytes": 46548,
+      "SHA256": "9dcce057ac8400d1246236f247941b9a876056aac1e1249735490b0f1825102e"
+    },
+    "original-scenario.json": {
+      "bytes": 14829,
+      "SHA256": "e5d47af3400b9d81045d05b3b47c9b0c2501453ba1dea76486c0a20603995adf"
+    },
+    "provenance.json": {
+      "bytes": 20918,
+      "SHA256": "1e1bd2a408363c211cfb57a107796b0158abbb4a0672992fc9861e534624a1d1"
+    },
+    "README.md": {
+      "bytes": 5011,
+      "SHA256": "487b612419790193570b8d42713a3746c85156a87187bbde858673d61b0f3474"
+    }
+  },
+  "exact_original_capture_files": 5,
+  "exact_original_numeric_and_capture_payloads": 11,
+  "all4_complete_MP80_trial_reports": true,
+  "all_fixed_state_derivative_components_included": true,
+  "original_failure_and45_stable_tail_falseaccepts_retained": true,
+  "actual_capture_diagnostic_and_two_audit_natural_return_codes": [
+    0,
+    0,
+    0
+  ],
+  "complete_convergence_dual_reference_and_paper_PASS": false
+}

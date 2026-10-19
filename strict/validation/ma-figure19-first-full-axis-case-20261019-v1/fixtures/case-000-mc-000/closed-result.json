@@ -1,0 +1,40 @@
+{
+  "actual_result": "fixtures/case-000-mc-000/case-000-mc-000-python.json.gz",
+  "actual_result_SHA256": "28767b51b659c79dcdc2b00da6458b9ffe424ad353b1d7caa169b073ae19fc35",
+  "actual_typed_return": "not-included/actual-original-return.pickle",
+  "actual_typed_return_SHA256": "a4197fe54043f945242e43a3e6a2f3bf5ed364dd7e47aef50f30f4419dc7bb5d",
+  "case_binding": {
+    "actual_job_SHA256": "8b06102799e38afb405b4ee96c8da8705b26108be9842aedd1031c6ed3de31de",
+    "bank": "archive/MA19-full-axis-shared-input-bank-v1",
+    "configuration_SHA256": "a2d775c024214b4d4f4704b26e9f7d477a1f5c72a361a63afc78874b7b262094",
+    "exact_historical_author_search_objective_recovered": false,
+    "figure": 19,
+    "input_fingerprint": "0d18ad5248f81bef90da49a2cc02fb1b11ca6fea912a373b4846d2a19e7a1479",
+    "manifest_SHA256": "844dcb7013521accda9305a2735973fada83ac87d693b36aae9ac87582d8a06d",
+    "original_bank_plan_SHA256": "8bbeff843828d4b9038e3d73a8ffb12aba8cdeea1180f5ea77e434da12ba45d4",
+    "original_runtime_implementation_fingerprint": "b3b8134f4c9be5213dee91930e240792be509003a1b840848131e1f2621ee5ef",
+    "prepared_plan_SHA256": "619a5de0a91221c5f8619a5cef86ca5a49f8bcc592ce7c70c3046c136693c16e",
+    "schema": "prepared-original-full-axis-python-host-v1",
+    "source_pins": {
+      "repository/strict/two-timescale-ma/brute_force.py": "3f946a57a78fcc3af4fb5557713df8233134bf606ed9815bd6d7de7f927a99d6",
+      "repository/strict/two-timescale-ma/configs/figure19-full-axis-ao10000-fixed-mc-protocol-v2.json": "a2d775c024214b4d4f4704b26e9f7d477a1f5c72a361a63afc78874b7b262094",
+      "repository/strict/two-timescale-ma/configs/figure20-full-axis-ao10000-fixed-mc-protocol-v2.json": "18e756769a4069be4ef714301b37353407247ffcdb9fdcd4d03b3686b7a82452",
+      "repository/strict/two-timescale-ma/coordinate_exact.py": "360f92b22c866a2290bd81cf295fbb759d50ee6729e85877670eabf534b2a3a8",
+      "repository/strict/two-timescale-ma/core.py": "f2b68eaf0a88392947a19dd4d332b2c442f28d1b99f250e02643a99fdbd09d24",
+      "repository/strict/two-timescale-ma/figures.py": "02ee1d5e1d2e13e937ee0f39298756d85aeef75392f8112ab88eaa4c72bbcd38",
+      "repository/strict/two-timescale-ma/ma_metadata.py": "a597168948d81d8a93c4ba8bf3fd28402d067c4b2aa1183005dfa4c6ba05023d",
+      "repository/strict/two-timescale-ma/run.py": "32b5a7c87d4701847e2ecfcd5d3d4bdeb84fd5011edea18a7fc0b17c1d2fcbe8",
+      "archive/MA19-MA20-missing-only-ordered-prefix-prepared-v1/durable_original_grid_host_v3.py": "963cf5cc3e835c21e7c811c8865523cad6ecf6054eb209a72b3b2a0d04666b04",
+      "archive/MA19-MA20-missing-only-ordered-prefix-prepared-v1/run_missing_only_MA19_MA20_original_ordered_MC_v3.py": "fbd755910467800ff347d980a2d7924f995b062b90c98e30960ff5936af066e2"
+    }
+  },
+  "host_elapsed_seconds": 834.7865948000108,
+  "independent_scientific_PASS": false,
+  "no_automatic_retry": true,
+  "original_function_calls_fresh": 3006,
+  "original_function_calls_reused": 0,
+  "original_implemented_checks": true,
+  "original_reference_PASS": false,
+  "paper_PASS": false,
+  "status": "original_returned_numeric_checks_pass"
+}

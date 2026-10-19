@@ -1,0 +1,54 @@
+"""Preparation-only adapter for immutable original full-shape audit helpers.
+
+Importing this file does not import NumPy, a physical oracle or a solver.
+The only removed statement is a Figure-3-specific saved MRT MC-history
+assertion: Figure 5 does not record that optional history. All terminal
+1000-draw physical, rate, power and independent benchmark-stop checks remain.
+This is a trusted SHA-bound generator interface, not hostile JSON validation.
+"""
+from __future__ import annotations
+
+import ast
+import hashlib
+from pathlib import Path
+
+
+ORIGINAL_HELPER_SHA = "7e9eb5623305d62805047548d0cade3f12302929bd333658b5bf6b146391be49"
+REMOVED_STATEMENT = '''if scheme == "MA-MRT":
+            assert abs(raw["history"]["mrt"]["instantaneous_MC_mean"][-1]-np.mean(values)) < MEAN_ATOL'''
+
+
+def terminal_source_pair(path: Path) -> tuple[str, str]:
+    data = path.read_bytes()
+    if hashlib.sha256(data).hexdigest() != ORIGINAL_HELPER_SHA:
+        raise ValueError("Immutable original audit helper SHA changed")
+    text = data.decode("utf-8")
+    tree = ast.parse(text)
+    nodes = [n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == "terminal_audit"]
+    if len(nodes) != 1:
+        raise ValueError("Exactly one original terminal_audit is required")
+    original = ast.get_source_segment(text, nodes[0])
+    if original.count(REMOVED_STATEMENT) != 1:
+        raise ValueError("Figure-specific assertion must appear exactly once")
+    adapted = original.replace(REMOVED_STATEMENT, "", 1)
+    reverse = adapted.replace('        reports[scheme] = {',
+                              '        ' + REMOVED_STATEMENT + '\n        reports[scheme] = {', 1)
+    # The subtraction leaves the original indentation-only line. Canonical
+    # AST, not incidental blank-line bytes, proves the complete inverse.
+    if ast.dump(ast.parse(reverse), include_attributes=False) != ast.dump(ast.parse(original), include_attributes=False):
+        raise ValueError("Adapter inverse changed an original numerical statement")
+    return original, adapted
+
+
+def build_terminal_adapter(path: Path, original_module):
+    """Future-only: caller has explicitly loaded the pinned physical helpers."""
+    original, adapted = terminal_source_pair(path)
+    namespace = original_module.__dict__.copy()
+    exec(compile(adapted, str(path) + ":fig05-only-terminal-adapter", "exec"), namespace)
+    return namespace["terminal_audit"], {
+        "original_terminal_source_sha256": hashlib.sha256(original.encode()).hexdigest(),
+        "adapted_terminal_source_sha256": hashlib.sha256(adapted.encode()).hexdigest(),
+        "only_omitted_optional_saved_MRT_MC_history_assertion": True,
+        "terminal_physical_and_original_benchmark_mathematics_changed": False,
+        "missing_Figure5_MC_history_manufactured": False,
+    }

@@ -1,0 +1,197 @@
+{
+  "schema": "PORTABLE_ONE_FIXED_STRUCTURED_QCQP_EXISTING_REFERENCE_CHECK_V1",
+  "created_UTC": "2026-10-19T05:55:36.309030+00:00",
+  "one_existing_fixed_subproblem": true,
+  "scoped_pass": true,
+  "Python_fixed_solve_executed": false,
+  "native_values": "User-selected result MAT",
+  "external_native": {
+    "SHA256": "524413ae94310d67fd530a945b747a1c607686199f2638d39065b185780ac838",
+    "bytes": 2291,
+    "file_before_after_equal": true,
+    "producer_source_and_input_identity_not_certified_by_numeric_file_alone": true
+  },
+  "new_optimization_trajectory_MC_RNG_or_MP_reference_solve_calls": 0,
+  "source_and_input_before_after_equal": true,
+  "reference_A": "Original structure from exact promoted captured auxiliaries",
+  "reference_B": "Independent full physical recomputation at same state",
+  "stored_bad_Q_or_P_not_used_as_theoretical_reference": true,
+  "lanes": {
+    "80": {
+      "Python": {
+        "A": {
+          "checks": {
+            "original_power": true,
+            "original_selected_nu": true,
+            "original_bisection_steps": true,
+            "original_doublings": true,
+            "original_nu_interval_stop": true,
+            "added_reference_solution_comparison": true,
+            "added_QCQP_objective_comparison": true,
+            "added_full_physical_utility_comparison": true,
+            "original_physical_non_decrease": true
+          },
+          "solution_max_error": "0.00000000000000016848680040773948329491451293606119004933411833556674892428073938106688583506985707688488401109846291489919288",
+          "power": "0.63095442941762754090458297380094236309871924771802501760707109895032959336883624583057331325328249157770231734",
+          "nu": "0.00000000076033757068216800689697265625",
+          "QCQP_objective_error": "0.000000000000000000000045785974955515492786036889875947899990455661379730571921230254643662804158957491750232310939510337511764038943",
+          "stationarity_Fro_diagnostic": "0.00000031336185906826539191114877474528783014360660722981559486470473954154331913724418714462554775892124908989797232",
+          "stationarity_norm_relative_diagnostic": "0.0000000000000001989023237244451190657069962170698278881182779455780617323208866959556357937170285414607129246684428478600186",
+          "physical_utility": "19.584341874952996220241702709096927406652580656877290724340506290934107835491462337843209340574824107431754982"
+        },
+        "B": {
+          "checks": {
+            "original_power": true,
+            "original_selected_nu": true,
+            "original_bisection_steps": true,
+            "original_doublings": true,
+            "original_nu_interval_stop": true,
+            "added_reference_solution_comparison": true,
+            "added_QCQP_objective_comparison": true,
+            "added_full_physical_utility_comparison": true,
+            "original_physical_non_decrease": true
+          },
+          "solution_max_error": "0.0000000000000071635892039054826447086770826966752594550654996737342465618187615628542487463240429826680255848352929018267822",
+          "power": "0.63095442941762754090458297380094236309871924771802501760707109895032959336883624583057331325328249157770231734",
+          "nu": "0.00000000076033757068216800689697265625",
+          "QCQP_objective_error": "0.000000000000000000000028325240911383543123578957472820901775599583867219282916313553317860557070005162230049120618685709449755275058",
+          "stationarity_Fro_diagnostic": "0.00000024442094914205542825089558142619330260342321338200032498209320616501794492911384368416291607649190414298075765",
+          "stationarity_norm_relative_diagnostic": "0.0000000000000001551429793871858998034854800745578650685177752952308165466000127863155383732217842592982018390790189824660019",
+          "physical_utility": "19.584341874952996220241702709096927406652580656877290724340506290934107835491462337843209340574824107431754982"
+        }
+      },
+      "MATLAB": {
+        "A": {
+          "checks": {
+            "original_power": true,
+            "original_selected_nu": true,
+            "original_bisection_steps": true,
+            "original_doublings": true,
+            "original_nu_interval_stop": true,
+            "added_reference_solution_comparison": true,
+            "added_QCQP_objective_comparison": true,
+            "added_full_physical_utility_comparison": true,
+            "original_physical_non_decrease": true
+          },
+          "solution_max_error": "0.000000000000000090626817790479820537244330558141276729685996438979065111671128357679812007747711411036880274057379637130789277",
+          "power": "0.63095442941762740264599225423841580127710972883823957914300670281720724696908898662340159121124198203011303183",
+          "nu": "0.00000000076033757068216800689697265625",
+          "QCQP_objective_error": "0.0000000000000000000000050060271724226421975847733549398420152860401156661768631768244062223520169796584995743247254275169120790658445",
+          "stationarity_Fro_diagnostic": "0.00000010398242661617747842918207515264896981846615386076283124521106538233460219831418240797180828608393938245175202",
+          "stationarity_norm_relative_diagnostic": "0.000000000000000066001479382207382639510517458142783558133360661306852325908787682576456433364429150351508588885061163480231492",
+          "physical_utility": "19.584341874952995866774250859569648791924958539556572442052961589254983496787418087998533238022138765952676596"
+        },
+        "B": {
+          "checks": {
+            "original_power": true,
+            "original_selected_nu": true,
+            "original_bisection_steps": true,
+            "original_doublings": true,
+            "original_nu_interval_stop": true,
+            "added_reference_solution_comparison": true,
+            "added_QCQP_objective_comparison": true,
+            "added_full_physical_utility_comparison": true,
+            "original_physical_non_decrease": true
+          },
+          "solution_max_error": "0.0000000000000070957146061324950367099971215226804529131018186760625073931147512898156230758267436030198361694076053710887185",
+          "power": "0.63095442941762740264599225423841580127710972883823957914300670281720724696908898662340159121124198203011303183",
+          "nu": "0.00000000076033757068216800689697265625",
+          "QCQP_objective_error": "0.0000000000000000000000010047330452646293220979714527305537431196222756043414493216920633209228663224837441514055375027731410333497149",
+          "stationarity_Fro_diagnostic": "0.000000033541508600377329808214826341512360875427837750360664593176560748435715612935562185509329992161376154337871261",
+          "stationarity_norm_relative_diagnostic": "0.000000000000000021290030971850513635818239322908979466170848900792544287356575029622610975663911124539013813648445602573896292",
+          "physical_utility": "19.584341874952995866774250859569648791924958539556572442052961589254983496787418087998533238022138765952676596"
+        }
+      }
+    },
+    "100": {
+      "Python": {
+        "A": {
+          "checks": {
+            "original_power": true,
+            "original_selected_nu": true,
+            "original_bisection_steps": true,
+            "original_doublings": true,
+            "original_nu_interval_stop": true,
+            "added_reference_solution_comparison": true,
+            "added_QCQP_objective_comparison": true,
+            "added_full_physical_utility_comparison": true,
+            "original_physical_non_decrease": true
+          },
+          "solution_max_error": "0.0000000000000001684868004077394832949145129360611900493341183355668838817573017776844978203455543971104364121198570480618315",
+          "power": "0.63095442941762754090458297380094236309871924771802501760707109895032959336883624583057331325328249157770231734",
+          "nu": "0.00000000076033757068216800689697265625",
+          "QCQP_objective_error": "0.000000000000000000000045785974955515492786036889875947899990455661379731019673794988866724661187668265665109109833982081203605274117",
+          "stationarity_Fro_diagnostic": "0.0000003133618590682653919111487747452878301436066072298155948647047395384162657751312029927595737532725366273895779",
+          "stationarity_norm_relative_diagnostic": "0.00000000000000019890232372444511906570699621706982788811827794557806173232088669397077974906638011776363394073755352524680446",
+          "physical_utility": "19.584341874952996220241702709096927406652580656877290724340506290934107835491462253382789496356052789531034471"
+        },
+        "B": {
+          "checks": {
+            "original_power": true,
+            "original_selected_nu": true,
+            "original_bisection_steps": true,
+            "original_doublings": true,
+            "original_nu_interval_stop": true,
+            "added_reference_solution_comparison": true,
+            "added_QCQP_objective_comparison": true,
+            "added_full_physical_utility_comparison": true,
+            "original_physical_non_decrease": true
+          },
+          "solution_max_error": "0.0000000000000071635892039054826447086770826966752594550654996737399443462218273147802201871357181023896184035488035116811221",
+          "power": "0.63095442941762754090458297380094236309871924771802501760707109895032959336883624583057331325328249157770231734",
+          "nu": "0.00000000076033757068216800689697265625",
+          "QCQP_objective_error": "0.000000000000000000000028325240911383543123578957472820901775599583867217691993508142618120164778055964808660761821174894132893610969",
+          "stationarity_Fro_diagnostic": "0.00000024442094914205542825089558142619330260342321338200032498209320616125058204901245918274666287133777925497100643",
+          "stationarity_norm_relative_diagnostic": "0.00000000000000015514297938718589980348548007455786506851777529523081654660001278392425438670914643536561998959331405903626704",
+          "physical_utility": "19.584341874952996220241702709096927406652580656877290724340506290934107835491462253382789496356052789531034471"
+        }
+      },
+      "MATLAB": {
+        "A": {
+          "checks": {
+            "original_power": true,
+            "original_selected_nu": true,
+            "original_bisection_steps": true,
+            "original_doublings": true,
+            "original_nu_interval_stop": true,
+            "added_reference_solution_comparison": true,
+            "added_QCQP_objective_comparison": true,
+            "added_full_physical_utility_comparison": true,
+            "original_physical_non_decrease": true
+          },
+          "solution_max_error": "0.000000000000000090626817790479820537244330558141276729685996438987263767826342824477968239201683252473625739589708362309033297",
+          "power": "0.63095442941762740264599225423841580127710972883823957914300670281720724696908898609629169404971582081268432926",
+          "nu": "0.00000000076033757068216800689697265625",
+          "QCQP_objective_error": "0.000000000000000000000005006027172422642197584773354939842015286040115668702359068558212080283350363956636461639646137565339130950348",
+          "stationarity_Fro_diagnostic": "0.00000010398242661617747842918207515264896981846615386076283124521106537951076861839166713830956370761431396940839979",
+          "stationarity_norm_relative_diagnostic": "0.000000000000000066001479382207382639510517458142783558133360661306852325908787680784065162366293223555436570740958232942974857",
+          "physical_utility": "19.584341874952995866774250859569648791924958539556572442052961589254983496787418058666306352073443792334067364"
+        },
+        "B": {
+          "checks": {
+            "original_power": true,
+            "original_selected_nu": true,
+            "original_bisection_steps": true,
+            "original_doublings": true,
+            "original_nu_interval_stop": true,
+            "added_reference_solution_comparison": true,
+            "added_QCQP_objective_comparison": true,
+            "added_full_physical_utility_comparison": true,
+            "original_physical_non_decrease": true
+          },
+          "solution_max_error": "0.0000000000000070957146061324950367099971215226804529131018186760682470843952314426396641600169653568935288692319503114213079",
+          "power": "0.63095442941762740264599225423841580127710972883823957914300670281720724696908898609629169404971582081268432926",
+          "nu": "0.00000000076033757068216800689697265625",
+          "QCQP_objective_error": "0.0000000000000000000000010047330452646293220979714527305537431196222756025205788646729115786969215199438612831214762511163713118978816",
+          "stationarity_Fro_diagnostic": "0.000000033541508600377329808214826341512360875427837750360664593176560745004234524566095437435184366903544122203910359",
+          "stationarity_norm_relative_diagnostic": "0.000000000000000021290030971850513635818239322908979466170848900792544287356575027444523534185999376026426627360016417130866846",
+          "physical_utility": "19.584341874952995866774250859569648791924958539556572442052961589254983496787418058666306352073443792334067364"
+        }
+      }
+    }
+  },
+  "comparison_tolerance_scope": "Added W/objective/utility comparison uses disclosed scene verification_tolerance1e-7; it is not a new algorithm stop",
+  "stationarity_scope": "Absolute and relative residuals are recorded diagnostics; original source had no residual cutoff and this entry introduces none",
+  "original_failed_Q_and_previous_expanded_gatefalse_retained": true,
+  "full_trajectory_convergence_or_paper_PASS": false
+}

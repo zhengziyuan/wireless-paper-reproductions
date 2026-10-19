@@ -70,7 +70,7 @@ def import_metadata(path, name):
 
 def metadata_inputs(repo):
     strict = repo / "strict"
-    paths = [strict / "reproduce.py", strict / "table_reproduction.py", strict / "mis_population_evidence.py",
+    paths = [strict / "reproduce.py", strict / "table_reproduction.py", strict / "replay_parameter_tables_matlab.m", strict / "run_mis_matlab_figure_checked.m", strict / "mis_population_evidence.py",
              strict / "render_figure.py", strict / "mis-sensing/mis_sensing_strict_engine.m"]
     for paper in PAPERS:
         paths.append(strict / "figure-catalog" / (paper + ".json"))
@@ -162,8 +162,6 @@ def make_plan(repo, output, python, matlab=None, workers=1):
                 if matlab and language == "matlab":
                     original += ["--matlab", str(matlab)]
                 blockers = [error] if error else []
-                if paper == "mis-sensing" and number in (15, 16) and language == "matlab":
-                    blockers.append("Current MATLAB ris_baselines omits target_start_banks; strict renderer requires every target's6000 summaries. No expensive incomplete full-render command is launched.")
                 command = [str(python), "-B", str(strict / "reproduce.py"), *original]
                 if language == "matlab":
                     command = [str(python), "-B", str(Path(__file__).with_name("native_dispatch.py")),
@@ -189,13 +187,15 @@ def make_plan(repo, output, python, matlab=None, workers=1):
                 destination = output / identifier
                 argv = ["--paper", paper, "--table", "1", "--language", language,
                         "--output-dir", str(destination), "--execute"]
+                if matlab and language == "matlab":
+                    argv += ["--matlab", str(matlab)]
                 tasks.append({"id": identifier, "artifact_index": len(artifacts) - 1, "language": language,
                               "command": [str(python), "-B", str(strict / "reproduce.py"), *argv],
                               "original_strict_cli_arguments": argv, "output_dir": str(destination),
                               "dependency": None, "source_result": None,
-                              "required_outputs": [str(destination / "actual-both-table-canonical-parameter-replay.json")],
+                              "required_outputs": [str(destination / ("actual-both-table-canonical-parameter-replay-matlab.json" if language == "matlab" else "actual-both-table-canonical-parameter-replay.json"))],
                               "required_plot_directory": None,
-                              "blockers": ([error] if error else []) + (["No MATLAB table interface: execute_table only accepts Python metadata audit; no MATLAB substitute."] if language == "matlab" else []),
+                              "blockers": [error] if error else [],
                               "scientific_reproduction_certified": False})
     after = metadata_inputs(repo)
     if before != after:

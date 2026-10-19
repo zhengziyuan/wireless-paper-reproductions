@@ -1,0 +1,104 @@
+{
+  "archive": {
+    "filename": "all6000-audit-and-nine-actual-states.tar.gz",
+    "bytes": 2712329,
+    "sha256": "6c65955bd84a02ca996d84658aad4bfec28c18b9a452f53027cbe941056a29d1",
+    "parts": [
+      {
+        "file": "all6000-audit-and-nine-actual-states.tar.gz.part000",
+        "bytes": 524288,
+        "sha256": "e2d9563b17a850f1584399514677dbb8b0d91c10babfc450fe1d15d480c55c44"
+      },
+      {
+        "file": "all6000-audit-and-nine-actual-states.tar.gz.part001",
+        "bytes": 524288,
+        "sha256": "bfedac5b5d0557eb6bb962363000a11dcd19780218bdbfbbfa9b260cf4a461f1"
+      },
+      {
+        "file": "all6000-audit-and-nine-actual-states.tar.gz.part002",
+        "bytes": 524288,
+        "sha256": "7e0a45925cf8047f75fd46fc999b18734f790f57f1a0d1c2d56980d1e42f3144"
+      },
+      {
+        "file": "all6000-audit-and-nine-actual-states.tar.gz.part003",
+        "bytes": 524288,
+        "sha256": "b9d1433066d9a504be1551b1c2b5dae7b1cd8d236d0e6bc3a72485e035817288"
+      },
+      {
+        "file": "all6000-audit-and-nine-actual-states.tar.gz.part004",
+        "bytes": 524288,
+        "sha256": "3e7823122c41223a5f05c7cf526d77c21ee08fd1800934244eaef0b7c73aa824"
+      },
+      {
+        "file": "all6000-audit-and-nine-actual-states.tar.gz.part005",
+        "bytes": 90889,
+        "sha256": "5cc90f5078cd3a92d0e5288a8af11825751b4514d8795c3ae847e93846f66ed5"
+      }
+    ]
+  },
+  "files": {
+    "actual-all6000-independent-report.json": {
+      "bytes": 9692242,
+      "sha256": "3eb30b78330a0ac3ee93545f7cd683a7caef5298d16a843ccdd08356767b5021"
+    },
+    "actual-io-wrapper-receipt.json": {
+      "bytes": 501,
+      "sha256": "fc701faaf33f3a718a99b04d7c1673b680fb879601e59fc67753027f4fac2118"
+    },
+    "original-Python-execution-summary.json": {
+      "bytes": 533,
+      "sha256": "9fa6f6c367ee6a49a37c4533201052fe7cbc66867adda0f92dc57ee7d5f60242"
+    },
+    "original-Python-manifest.json": {
+      "bytes": 10510,
+      "sha256": "b960216d61c43f9bd9ec6c2cffc4756e92a3219dfb7c26d0ca7674a999ddd250"
+    },
+    "original-settings.json": {
+      "bytes": 7511,
+      "sha256": "a3cc57dc9e0b3958b1f898d5c7f6eae089e0e8c4949414f873d02d5925bd890b"
+    },
+    "native/start-0001.json.gz": {
+      "bytes": 623467,
+      "sha256": "5a48c2be8e745d20b53e68da6ceb3aab755a6c0f31cf57668971841cec060b3d"
+    },
+    "native/start-0001-receipt.json": {
+      "bytes": 2455,
+      "sha256": "d3ca61a708fdf79e8843ed01db4a9c7716083cb05914859df5c433c811d7a163"
+    },
+    "native/start-0001-independent.json": {
+      "bytes": 1721,
+      "sha256": "93ed0b0969c01f7bbbcd4de12462874290a0f789da73cc2349b6c445f988b817"
+    },
+    "native/start-0002.json.gz": {
+      "bytes": 423850,
+      "sha256": "4c3a6fd5026fb8bba85eb46a86ec4665375de543bb28e4df67517455f3cedaa6"
+    },
+    "native/start-0002-receipt.json": {
+      "bytes": 2452,
+      "sha256": "b0a788ec162c91bc2899f9846d78b37e409b7cfd2a87de92ca96d6587815fcb2"
+    },
+    "native/start-0002-independent.json": {
+      "bytes": 1700,
+      "sha256": "d79e382ffffaaefa1faa53f55bd0b205a3642abb97a7e6dd2409285c84adfa4a"
+    },
+    "native/start-0377-reused.json.gz": {
+      "bytes": 639074,
+      "sha256": "99adeb666fa62600c1de9fa2c0e9973aa5d7f842ce71bff11f423d57e34cfafc"
+    },
+    "native/start-0377-actual-binding.json": {
+      "bytes": 16586,
+      "sha256": "bcb37a4ed00150528b08b337a2818811598a1a6198a488be5112626060894ac8"
+    },
+    "six-Python-state-views.json": {
+      "bytes": 649346,
+      "sha256": "c3e75508b7a9bed3d0e065f92842301ebc0d6dae73a62be179f0c2ff6bc01fa9"
+    },
+    "exact-original-initialization-index.json": {
+      "bytes": 721433,
+      "sha256": "d882d1230db20afca9208816dee614fd7a1f0988da5a2cb96873f2151b370635"
+    }
+  },
+  "scope": "Actual all6000 audit report plus nine actual final-state witnesses",
+  "all6000_raw_state_population_included": false,
+  "original_complete_convergence_or_reference_pass": false
+}

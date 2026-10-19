@@ -1,0 +1,22 @@
+{
+  "scope": "Byte-exact public-packet roundtrip and independent checks of restored diagnostic witnesses and original reference values",
+  "archive_sha256": "0388bbebed1873d089280c0bdf462f26c0493ea3924ee1fa112f6ae9dd0a7513",
+  "every_original_and_restored_payload_matches_manifest": true,
+  "verified_payloads": 38,
+  "actual_final_states": 384,
+  "all384_MP_report_and_complete_numeric_inputs_byte_equal": true,
+  "full384_MP_physics_repeated_locally_after_restoration": false,
+  "restored_actual_first_phase_cross_evaluation_MP80_MP100_pass": true,
+  "restored_both_new_same_data_phase_controls_MP80_MP100_pass": true,
+  "restored_NoRIS_bound_MP80_MP100_pass": true,
+  "restored_all192_reference_pairs_per_language_pass": true,
+  "restored_reference_agreement_or_unit_resolution_claimed": false,
+  "old_power_archive_reader_regression": {
+    "payloads": 28,
+    "all384_states_and_exact0to23_slots_restored": true,
+    "archive_sha256": "e308bd15f3000192f90a62f5b622c4e4ce3146f44b3a1ffd9a901e93288f8b0d"
+  },
+  "original_EPS_axes_and_eight_legend_colors_visually_checked": true,
+  "all_four_computed_curve_PNGs_visually_checked": true,
+  "new_optimizer_or_MC_calls": 0
+}

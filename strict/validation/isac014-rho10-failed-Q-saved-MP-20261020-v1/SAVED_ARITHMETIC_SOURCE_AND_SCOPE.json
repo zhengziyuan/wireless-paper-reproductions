@@ -1,0 +1,32 @@
+{
+  "schema": "ISAC014_PUBLIC_SAVED_ARITHMETIC_SOURCE_AND_SCOPE_V1",
+  "original_core_SHA256": "07f2eb9d9f5011dde45a8c947dd87db31d15b7e6e8ab233e9f43429c408f2fbb",
+  "original_core_repository_path": "strict/rotatable-isac/core.py",
+  "actual_operands_NPZ_SHA256": "635f106c9c5b5ec02a21117d532325cbd66bbddf6d4caf2016faf0c6c9b901e4",
+  "original_complete_scenario_SHA256": "1854197e30970f2014a6412c4bc89fe279c7f7e569457047b8fca0c2d0a30a0e",
+  "public_scenario_selected_original_keys": [
+    "rho",
+    "power",
+    "noise",
+    "desired_pattern",
+    "verification_tolerance",
+    "AO_solver",
+    "W_solver",
+    "RCG_solver",
+    "PGA_solver"
+  ],
+  "public_scenario_is_not_complete_channel_generator_input": true,
+  "original_readers_SHA256": {
+    "diagnose_saved_actual_Q_MP80_MP100_v1.py": "c498ee7abd57208d7555820482a93e71c1415c3d3b3accf944553785603d3d80",
+    "solve_only_saved_rank1_QCQP_MP80_MP100_v1.py": "dd0a9ce171c563842a162064b24e840de5191ca26f05e268f7ca4145c259bc5a"
+  },
+  "portable_reader_exact_change": "Only reader1 CAP/HELD routing header is replaced by package-relative paths; its exact original bytes are recovered by the recorded inverse. Reader2 is whole-byte identical.",
+  "formulas_and_numeric_thresholds_unchanged": true,
+  "full_core_or_optimizer_not_required_or_imported": true,
+  "original_capture_exit0_means_capture_success_only": true,
+  "original_optimization_failure_retained": true,
+  "code_arithmetic_failure_not_paper_formula_error": true,
+  "fixed_QCQP_MP_reference_is_independent_original_formula_not_candidate_output": true,
+  "correction_trajectory_executed_or_passed": false,
+  "full_case_or_paper_or_reference_PASS": false
+}

@@ -1,0 +1,65 @@
+{
+  "schema": "fixed-W2-evidence-file-manifest-v1",
+  "repository_target": "strict/validation/isac014-stable-increment-firstscheme-returned-evidence-20261020-v1/W2-exact-replay-before-QP",
+  "expected_parent": "0da55e1dbf896c6731886f4543e2292a2a407266",
+  "branch": "codex/resume-six-paper-reproductions-20261017",
+  "files_excluding_this_manifest": {
+    ".gitattributes": {
+      "bytes": 8,
+      "SHA256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    "evidence/actual-before-QP-MP-held-natural0.json": {
+      "bytes": 10227,
+      "SHA256": "597c31655b8908f528388b51b4571fde22599580161a91de05c48626aa1538fc"
+    },
+    "evidence/actual-before-QP-MP80-MP100.json.gz": {
+      "bytes": 11638,
+      "SHA256": "a6805889512465fcdf34d0459b422ddb3b1f85e850fa33838b07dcc30de125a0"
+    },
+    "evidence/actual-W2-exact-replay.json": {
+      "bytes": 5234,
+      "SHA256": "722b7334402d23011274a2b364fcd4b2683c3539783ed92c06c4d4b781a825b8"
+    },
+    "evidence/actual-W2-finite-coefficients.json": {
+      "bytes": 6967,
+      "SHA256": "c73efbf60d9339ae879a604100c00ec4dc9d6ddc6ffce452732182e3e1eff5d5"
+    },
+    "evidence/actual-W2-probe-held-natural0.json": {
+      "bytes": 8970,
+      "SHA256": "71f59aa64226e4a8ac36a0e27d94c7e849b6b05da12414d6547c547936a6b0c2"
+    },
+    "evidence/compact-causal-conclusion.json": {
+      "bytes": 20997,
+      "SHA256": "e362d18fe4f7a1f316dfbb52ffbc8df20743024534034bb93683e22e2b6ae8de"
+    },
+    "provenance-and-scope.json": {
+      "bytes": 8022,
+      "SHA256": "1cce73a8547c9e73af92bc77427ad0f8f8823ef510b8066401daaa00080595a7"
+    },
+    "README.md": {
+      "bytes": 7388,
+      "SHA256": "99fb974e263380bbd0cd5b2a98f7e0da6dfed097cde2a3ff61baeeadbafe307a"
+    },
+    "saved/actual-original-W2-operands.npz": {
+      "bytes": 35664,
+      "SHA256": "0c5bc4e282da5e59129898f8012b3838009e0f14587f38cdd94fd4a9385f8ad5"
+    },
+    "saved/original-W2-returned-status.json": {
+      "bytes": 551,
+      "SHA256": "b390c23a6a2de37b2fa29e0ec1760d7c494e86facbf53715cd55ce995cb67024"
+    },
+    "sources/executed/audit_only_actual_W2_before_physics_and_fixed_QP_MP80_MP100_v1.py": {
+      "bytes": 17114,
+      "SHA256": "4c201e9e75ce371d81adad1ae84812b1e22588f9f40a8b56e523a15cfef0d214"
+    },
+    "sources/executed/replay_only_original_W2_once_with_passive_actual_QCQP_operands_v1.py": {
+      "bytes": 10013,
+      "SHA256": "32ee27cf08a4b84c05b8d46a2ca7957bc8331f58ce8fae8920b38b594f6ca925"
+    },
+    "transport-preservation.json": {
+      "bytes": 21774,
+      "SHA256": "5a7da8944c597a377994a2ac933207adcfb53a6e06669f2b505506216f5c1691"
+    }
+  },
+  "no_science_or_portable_firstuse_implied": true
+}

@@ -1,0 +1,230 @@
+{
+  "scope": "two-source-parameter-table dual-language metadata replay",
+  "matched_rows": 36,
+  "matched_numeric_rows": 34,
+  "unverified_external_pattern_rows": 2,
+  "input_sha256": {
+    "actual-table-replay-python.json": "776d4cbb82e70439e1ac560c954f24013ba4fdb3317aba4553ee5492876cffc1",
+    "actual-table-replay-matlab.json": "3187cf869cf4567ec37fedbeb6ee67d0815689159d0d4a0dbb6940c26c03e90c"
+  },
+  "numeric_parameter_replay_passed": true,
+  "full_figure_or_physical_or_publisher_equivalence_pass": false,
+  "rows": [
+    {
+      "paper": "cooperative-satcom",
+      "parameter_id": "GEO_Rician",
+      "numeric": true,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "cooperative-satcom",
+      "parameter_id": "GEO_equivalent_power",
+      "numeric": true,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "cooperative-satcom",
+      "parameter_id": "GT_pattern_reference",
+      "numeric": false,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "cooperative-satcom",
+      "parameter_id": "LEO_Rician",
+      "numeric": true,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "cooperative-satcom",
+      "parameter_id": "LEO_power",
+      "numeric": true,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "cooperative-satcom",
+      "parameter_id": "RIS_LU_distance",
+      "numeric": true,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "cooperative-satcom",
+      "parameter_id": "RIS_subsurface_count",
+      "numeric": true,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "cooperative-satcom",
+      "parameter_id": "antenna_satellite_counts",
+      "numeric": true,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "cooperative-satcom",
+      "parameter_id": "carrier",
+      "numeric": true,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "cooperative-satcom",
+      "parameter_id": "element_size",
+      "numeric": true,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "cooperative-satcom",
+      "parameter_id": "ground_Rician",
+      "numeric": true,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "cooperative-satcom",
+      "parameter_id": "microelements",
+      "numeric": true,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "cooperative-satcom",
+      "parameter_id": "noise",
+      "numeric": true,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "cooperative-satcom",
+      "parameter_id": "normalized_inter_system_interference",
+      "numeric": true,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "cooperative-satcom",
+      "parameter_id": "orbit_heights",
+      "numeric": true,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "cooperative-satcom",
+      "parameter_id": "user_terminal_counts",
+      "numeric": true,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "ESA_pattern_reference",
+      "numeric": false,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "NHU_SINR",
+      "numeric": true,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "RIS_HU_amplitude_distance",
+      "numeric": true,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "RIS_subsurface_count",
+      "numeric": true,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "all_HU_pair_spacing",
+      "numeric": true,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "antenna_diameter",
+      "numeric": true,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "bandwidth",
+      "numeric": true,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "carrier",
+      "numeric": true,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "element_size",
+      "numeric": true,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "feeds",
+      "numeric": true,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "ground_Rician",
+      "numeric": true,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "hotspot_users",
+      "numeric": true,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "microelements",
+      "numeric": true,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "noise_temperature",
+      "numeric": true,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "non_hotspot_users",
+      "numeric": true,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "orbit",
+      "numeric": true,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "peak_transmit_gain",
+      "numeric": true,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "power",
+      "numeric": true,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "satellite_Rician",
+      "numeric": true,
+      "both_language_values_match": true
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "streams",
+      "numeric": true,
+      "both_language_values_match": true
+    }
+  ]
+}

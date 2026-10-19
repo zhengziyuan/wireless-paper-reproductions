@@ -39,11 +39,12 @@ class TableRoutes(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "Canonical"):
                 tables.table_plan("cooperative-satcom", 1)
 
-    def test_no_silent_matlab_substitution_or_changed_plan_execution(self):
+    def test_missing_matlab_or_changed_plan_never_dispatches(self):
         plan = tables.table_plan("hotspot-satcom", 1)
-        with tempfile.TemporaryDirectory() as folder, mock.patch.object(tables.subprocess, "run") as run:
+        with tempfile.TemporaryDirectory() as folder, mock.patch.object(tables.subprocess, "run") as run, \
+                mock.patch.object(tables.shutil, "which", return_value=None):
             output = Path(folder) / "must-not-exist"
-            with self.assertRaisesRegex(ValueError, "not a MATLAB"):
+            with self.assertRaisesRegex(ValueError, "MATLAB executable unavailable"):
                 tables.execute_table(plan, "matlab", output)
             changed = dict(plan, full_reproduction_passed=True)
             with self.assertRaisesRegex(ValueError, "Changed"):

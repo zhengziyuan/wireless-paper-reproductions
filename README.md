@@ -11,6 +11,23 @@ This is not the original private simulation source. Each paper has an explicit i
 中文说明：这里公开的是按论文理论重新编写的 MATLAB/Python 双实现，不是原作者私有仿真代码。核心检查、完整尺寸的调试实验与全部图表复现分开记录；通过核心检查不代表完整复现。所有尚未实现的公式、未收敛的运行和调试数值设置均明确列出，不用替代方法补位。
 
 The current correction/execution ledger is [all-paper issues](strict/ALL_PAPERS_ISSUES.md).
+
+
+Recent verified evidence (20 October 2026) is available in the following scoped bundles:
+
+- [Python ISAC014 remaining four schemes](strict/validation/isac014-stable-increment-firstscheme-returned-evidence-20261020-v1/python-remaining-four/README.md): all 78 actual block returns plus four finals completed the applicable saved-state MP80/MP100 physics, feasibility and formula checks. Scheme 3 retains its RCG failure and scheme 5 its PGA failure; W absolute stationarity, original-reference agreement and full-paper acceptance remain unestablished. Existing first/sixth schemes and native results were reused without new optimization or MC.
+- [Native ISAC014 remaining-five direct vectors](strict/validation/isac014-stable-increment-firstscheme-returned-evidence-20261020-v1/native-remaining-five/new-analytic-vectors/README.md): new native evaluations at 84 saved block inputs pass all 3,192 comparisons against existing MP80/MP100 vector references (maximum absolute error about 2.52e-13). The five final vectors are excluded; existing convergence and reference failures remain.
+- [Native ISAC014 remaining five schemes](strict/validation/isac014-stable-increment-firstscheme-returned-evidence-20261020-v1/native-remaining-five/README.md): 84 returned states plus five final states have completed saved-state MP80/MP100 physics, feasibility and formula checks. Schemes 3/5 retain strict-gradient and final-state failures; common Python evaluation at native arrays is distinct from direct native derivative-vector evidence.
+- [Cooperative U6 native Figure 4/5 results](strict/validation/cooperative-Fig4-Fig5-native24-unfitted-20261020-v1/README.md): all 24 configurations and 192 method values have closed producer/science bindings and an unfitted comparison with saved Python results and original EPS coordinates. Original-reference gaps remain; coordinate-step exceedance is not a statistical test or proof of a paper algorithm error.
+- [MA Figure 6: three coordinates in both languages](strict/validation/ma-figure6-three-coordinate-physical-and-gap-evidence-20261020-v1/README.md): six source-bound captures meet their original coordinate gap/primal tolerances, and the independent physical derivation meets the existing objective/tangent consistency checks. Historical stepwise bit paths and original-reference curve gaps remain distinct.
+- [Native ISAC014 analytical-vector follow-up](strict/validation/isac014-stable-increment-firstscheme-returned-evidence-20261020-v1/native-returned-states/new-analytic-vectors/README.md): newly executed native derivatives at all36 saved own-block states agree with the existing MP80/MP100 reference vectors across792 components per precision. This adds direct native component evidence; it neither recovers historical in-memory vectors nor covers the final37 state or upgrades joint stationarity.
+- [Native ISAC014 returned states](strict/validation/isac014-stable-increment-firstscheme-returned-evidence-20261020-v1/native-returned-states/README.md): 36 actual block returns plus the final state have independent MP80/MP100 evidence. Own RCG/PGA stops pass, while final joint stationarity does not. This packet's common Python formula comparisons at native states do not certify uncaptured native analytical vectors.
+- [ISAC014 W2 exact replay and cause analysis](strict/validation/isac014-stable-increment-firstscheme-returned-evidence-20261020-v1/W2-exact-replay-before-QP/README.md): an exactly reproduced single W update and saved-coefficient MP checks explain a nonstationary relative-objective stop under disclosed reconstruction controls. This is not a claimed paper-formula error or a new W stationarity certificate.
+
+The bundles preserve actual failed attempts and separate numerical checks,
+physical feasibility, own-block stopping, final joint diagnostics, and original
+reference agreement. They do not certify a complete figure bank or full paper.
+
 The [MIS communications source-theory audit](strict/validation/mis-communications-line-search-theory-v1/README.md)
 adds runnable exact raw-PR and stationarity counterexamples, including a true
 MIS specialization. It does not change the algorithms or assign these generic

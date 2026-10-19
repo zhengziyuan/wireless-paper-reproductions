@@ -1,0 +1,92 @@
+{
+  "schema": "SOURCE_PRESERVING_PORTABLE_FIXED_QCQP_CANDIDATE_PREPARATION_V1",
+  "created_UTC": "2026-10-19T05:47:44.403554+00:00",
+  "exact_copies": [
+    {
+      "path": "sources/structured_original_qcqp_candidate_v1.py",
+      "bytes": 3221,
+      "SHA256": "1fa91846426407d7313f0ba452e2d81c60fa433c9513d8618f870414903f8881",
+      "derivation": "Exact bytes of preserved actual source/input/result"
+    },
+    {
+      "path": "sources/solve_fixed_original_qcqp_matlab_v1.m",
+      "bytes": 2555,
+      "SHA256": "f8183e36aa874bc832b50dcbf3696e28d8bfa3ea4b09bd908b0db9d44cbb44e5",
+      "derivation": "Exact bytes of preserved actual source/input/result"
+    },
+    {
+      "path": "data/actual-failed-Q-operands.npz",
+      "bytes": 30678,
+      "SHA256": "85c6151950d8c226a03ba1387301c8a64e8eb773fa46769bd764a9acc8062a1b",
+      "derivation": "Exact bytes of preserved actual source/input/result"
+    },
+    {
+      "path": "data/scenario.json",
+      "bytes": 14837,
+      "SHA256": "eb00188adf97ee6f9243a5b2272246634bb0758b44b92b133f8a0f9e26faa729",
+      "derivation": "Exact bytes of preserved actual source/input/result"
+    },
+    {
+      "path": "data/exact-captured-fixed-subproblem.mat",
+      "bytes": 2256,
+      "SHA256": "f4c4d087dcba032fcd5cad70c5203b20e05f145f4acf106bb6787a28dbf799f5",
+      "derivation": "Exact bytes of preserved actual source/input/result"
+    },
+    {
+      "path": "results/actual-python-fixed-qcqp.mat",
+      "bytes": 5960,
+      "SHA256": "0b56bda9df8768f92cf2b7a0d7a9e253da2339af439f02d6876184ace7d6a0ee",
+      "derivation": "Exact bytes of preserved actual source/input/result"
+    },
+    {
+      "path": "results/actual-matlab-fixed-qcqp.mat",
+      "bytes": 2291,
+      "SHA256": "0db495b1f7d59bfd5d7f69e52057cbd13da7d2151201c085b05634686f816e66",
+      "derivation": "Exact bytes of preserved actual source/input/result"
+    },
+    {
+      "path": "sources/historical_original_core.py",
+      "bytes": 16714,
+      "SHA256": "07f2eb9d9f5011dde45a8c947dd87db31d15b7e6e8ab233e9f43429c408f2fbb",
+      "derivation": "Exact bytes of preserved actual source/input/result"
+    }
+  ],
+  "lossless_reference_copies": [
+    {
+      "path": "references/original-structure-MP80-reference.json.gz",
+      "compressed_SHA256": "50b76246efe86c7cd690cc505e53092fd8ecf9a2794aaae608b1433d055d2f65",
+      "uncompressed_original_bytes": 381352,
+      "uncompressed_original_SHA256": "bedeeec3f498769a2df7074df4b220822c6cd1518be8bf0fa1e8efcfb3c9bc14",
+      "lossless_original_byte_identity": true
+    },
+    {
+      "path": "references/original-structure-MP100-reference.json.gz",
+      "compressed_SHA256": "b0c4699e991c188ccdf762376ef71415ecd83520ea3141b0fe210f7a6b61953d",
+      "uncompressed_original_bytes": 435099,
+      "uncompressed_original_SHA256": "ad4be491acdbbaa8f9e16f88667afa0376b5eeb400663f303d70f2e19b22a2b1",
+      "lossless_original_byte_identity": true
+    }
+  ],
+  "original_comparison_driver_SHA256": "12a39acdee9784b8306bae573514f4e7ec39e0b057236272c72f0eb0060c21ce",
+  "comparison_helpers": {
+    "path": "sources/comparison_helpers.py",
+    "SHA256": "1cb5d8e4ccbfe6641b1bba14efebbe8a12b9692e6ea0d70444463ac765e6fe89",
+    "functions_exact_source_text": [
+      "ex",
+      "matrix",
+      "txt",
+      "fro",
+      "power",
+      "objective",
+      "physical"
+    ],
+    "new_formula_or_reference_calculation": false
+  },
+  "metadata_only_paths_projection": true,
+  "private_paths_or_large_case_RAW_included": false,
+  "only_original30KB_capture": true,
+  "portable_first_use_pending": false,
+  "new_optimization_MC_RNG_or_high_precision_reference_execution_in_preparation": false,
+  "actual_portable_first_use": "results/portable-first-use-closure.json",
+  "numeric_sources_and_original_inputs_unchanged_after_first_use": true
+}

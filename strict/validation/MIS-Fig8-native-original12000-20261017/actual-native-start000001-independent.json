@@ -1,0 +1,911 @@
+{
+  "scope": "actual_native_one_full_start_each_own_mu_saved_endpoint_not_every_inner_state",
+  "scheme": "MIS",
+  "start": 1,
+  "actual_endpoints_checked": 17,
+  "actual_unreported_implementation_controls6000_100000_1e_minus6_retained": true,
+  "all_independent_physical_consistency_and_domains_checked": true,
+  "all_original_independent_true_gradient_stops_pass": true,
+  "original_native_source_solver_stop_gate": true,
+  "all_required_one_start_gates_pass": true,
+  "actual_stored_C_used_not_substituted_with_reconstructed_C": true,
+  "maximum_independent_geometry_C_abs_error": 8.743006318923108e-16,
+  "actual_original_rng_integer_identities_exact": true,
+  "initial_X_abs_difference": 0.0,
+  "actual_each_endpoint_evidence": [
+    {
+      "stage_index": 0,
+      "mu": 100,
+      "iterations_recorded": 1199,
+      "actual_reason": "gradient_tolerance",
+      "independent_physical": {
+        "method": "independent Decimal60 angular/radial projected-norm identity and uncentered simplex oracle",
+        "projected_kkt_norm": 9.940221920933038e-07,
+        "projected_kkt_norm_decimal": "9.94022192093303791374204642332544320957647216520041781268525E-7",
+        "printed_rowmean_norm": 0.03144780882875244,
+        "phi_norm": 9.940159641354124e-07,
+        "theta_norm": 3.518723905543055e-09,
+        "X_norm": 0.0,
+        "objective": 138.53526627838738,
+        "min_binary_snr": 0.06242020224935664,
+        "min_relaxed_snr": 0.06242020224935664,
+        "binary_schedule": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ],
+        "domain_feasible": true,
+        "maximum_radius_error": 1.4372960716043274e-16,
+        "maximum_simplex_sum_error": 0.0,
+        "unchanged_implemented_1e_minus6_gate_pass": true,
+        "printed_open_simplex_gradient_criterion_claimed": false
+      },
+      "saved_norm_abs_error": 5.030952190216917e-18,
+      "saved_objective_abs_error": 0.0,
+      "original_true_gradient_stop": true
+    },
+    {
+      "stage_index": 1,
+      "mu": 50.0,
+      "iterations_recorded": 62,
+      "actual_reason": "gradient_tolerance",
+      "independent_physical": {
+        "method": "independent Decimal60 angular/radial projected-norm identity and uncentered simplex oracle",
+        "projected_kkt_norm": 9.785362118256022e-07,
+        "projected_kkt_norm_decimal": "9.78536211825602221943532415929085420695070697851875817781126E-7",
+        "printed_rowmean_norm": 0.03144289485001705,
+        "phi_norm": 5.304808509891379e-07,
+        "theta_norm": 8.222671005140848e-07,
+        "X_norm": 0.0,
+        "objective": 69.22055326177042,
+        "min_binary_snr": 0.06242827658465925,
+        "min_relaxed_snr": 0.06242827658465925,
+        "binary_schedule": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ],
+        "domain_feasible": true,
+        "maximum_radius_error": 1.5075898295186297e-16,
+        "maximum_simplex_sum_error": 0.0,
+        "unchanged_implemented_1e_minus6_gate_pass": true,
+        "printed_open_simplex_gradient_criterion_claimed": false
+      },
+      "saved_norm_abs_error": 3.768237824097569e-18,
+      "saved_objective_abs_error": 1.4210854715202004e-14,
+      "original_true_gradient_stop": true
+    },
+    {
+      "stage_index": 2,
+      "mu": 25.0,
+      "iterations_recorded": 95,
+      "actual_reason": "gradient_tolerance",
+      "independent_physical": {
+        "method": "independent Decimal60 angular/radial projected-norm identity and uncentered simplex oracle",
+        "projected_kkt_norm": 9.82390579261894e-07,
+        "projected_kkt_norm_decimal": "9.82390579261893986860095094205486774061974939414161734663820E-7",
+        "printed_rowmean_norm": 0.03143321019512774,
+        "phi_norm": 5.504238971553463e-07,
+        "theta_norm": 8.137105035962363e-07,
+        "X_norm": 0.0,
+        "objective": 34.56320430667463,
+        "min_binary_snr": 0.06244210470001841,
+        "min_relaxed_snr": 0.06244210470001841,
+        "binary_schedule": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ],
+        "domain_feasible": true,
+        "maximum_radius_error": 1.6488887010985434e-16,
+        "maximum_simplex_sum_error": 0.0,
+        "unchanged_implemented_1e_minus6_gate_pass": true,
+        "printed_open_simplex_gradient_criterion_claimed": false
+      },
+      "saved_norm_abs_error": 3.990795730988636e-18,
+      "saved_objective_abs_error": 0.0,
+      "original_true_gradient_stop": true
+    },
+    {
+      "stage_index": 3,
+      "mu": 12.5,
+      "iterations_recorded": 126,
+      "actual_reason": "gradient_tolerance",
+      "independent_physical": {
+        "method": "independent Decimal60 angular/radial projected-norm identity and uncentered simplex oracle",
+        "projected_kkt_norm": 9.976048027751872e-07,
+        "projected_kkt_norm_decimal": "9.97604802775187214147724377893198455377966994491697909576232E-7",
+        "printed_rowmean_norm": 0.03141391134532416,
+        "phi_norm": 6.064763490865432e-07,
+        "theta_norm": 7.920869778747645e-07,
+        "X_norm": 0.0,
+        "objective": 17.23454491496613,
+        "min_binary_snr": 0.062467269386459606,
+        "min_relaxed_snr": 0.062467269386459606,
+        "binary_schedule": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ],
+        "domain_feasible": true,
+        "maximum_radius_error": 1.4277508168396187e-16,
+        "maximum_simplex_sum_error": 0.0,
+        "unchanged_implemented_1e_minus6_gate_pass": true,
+        "printed_open_simplex_gradient_criterion_claimed": false
+      },
+      "saved_norm_abs_error": 3.0901879498205012e-18,
+      "saved_objective_abs_error": 0.0,
+      "original_true_gradient_stop": true
+    },
+    {
+      "stage_index": 4,
+      "mu": 6.25,
+      "iterations_recorded": 160,
+      "actual_reason": "gradient_tolerance",
+      "independent_physical": {
+        "method": "independent Decimal60 angular/radial projected-norm identity and uncentered simplex oracle",
+        "projected_kkt_norm": 9.818128541305605e-07,
+        "projected_kkt_norm_decimal": "9.81812854130560405614335510168967328046135265082038035430550E-7",
+        "printed_rowmean_norm": 0.03137554128968108,
+        "phi_norm": 6.184154155036795e-07,
+        "theta_norm": 7.625738353781938e-07,
+        "X_norm": 0.0,
+        "objective": 8.570245308466085,
+        "min_binary_snr": 0.06251654487887628,
+        "min_relaxed_snr": 0.06251654487887628,
+        "binary_schedule": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ],
+        "domain_feasible": true,
+        "maximum_radius_error": 1.3412764299904303e-16,
+        "maximum_simplex_sum_error": 0.0,
+        "unchanged_implemented_1e_minus6_gate_pass": true,
+        "printed_open_simplex_gradient_criterion_claimed": false
+      },
+      "saved_norm_abs_error": 5.481997234629832e-18,
+      "saved_objective_abs_error": 1.7763568394002505e-15,
+      "original_true_gradient_stop": true
+    },
+    {
+      "stage_index": 5,
+      "mu": 3.125,
+      "iterations_recorded": 194,
+      "actual_reason": "gradient_tolerance",
+      "independent_physical": {
+        "method": "independent Decimal60 angular/radial projected-norm identity and uncentered simplex oracle",
+        "projected_kkt_norm": 9.850455642149905e-07,
+        "projected_kkt_norm_decimal": "9.85045564214990453966046784366540943863686450813554842528491E-7",
+        "printed_rowmean_norm": 0.03129969764079714,
+        "phi_norm": 6.282535426584101e-07,
+        "theta_norm": 7.586911425058199e-07,
+        "X_norm": 0.0,
+        "objective": 4.238155354534833,
+        "min_binary_snr": 0.06261447229208277,
+        "min_relaxed_snr": 0.06261447229208277,
+        "binary_schedule": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ],
+        "domain_feasible": true,
+        "maximum_radius_error": 1.5558650792163508e-16,
+        "maximum_simplex_sum_error": 0.0,
+        "unchanged_implemented_1e_minus6_gate_pass": true,
+        "printed_open_simplex_gradient_criterion_claimed": false
+      },
+      "saved_norm_abs_error": 1.4456734827262771e-18,
+      "saved_objective_abs_error": 0.0,
+      "original_true_gradient_stop": true
+    },
+    {
+      "stage_index": 6,
+      "mu": 1.5625,
+      "iterations_recorded": 228,
+      "actual_reason": "gradient_tolerance",
+      "independent_physical": {
+        "method": "independent Decimal60 angular/radial projected-norm identity and uncentered simplex oracle",
+        "projected_kkt_norm": 9.959985360733497e-07,
+        "projected_kkt_norm_decimal": "9.95998536073349717614714486327064586174956797110261469555305E-7",
+        "printed_rowmean_norm": 0.031151618629010176,
+        "phi_norm": 6.395023495500564e-07,
+        "theta_norm": 7.635769959736956e-07,
+        "X_norm": 0.0,
+        "objective": 2.0722287582411236,
+        "min_binary_snr": 0.06280864769894612,
+        "min_relaxed_snr": 0.06280864769894612,
+        "binary_schedule": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ],
+        "domain_feasible": true,
+        "maximum_radius_error": 1.5903310467713257e-16,
+        "maximum_simplex_sum_error": 0.0,
+        "unchanged_implemented_1e_minus6_gate_pass": true,
+        "printed_open_simplex_gradient_criterion_claimed": false
+      },
+      "saved_norm_abs_error": 2.621778729988873e-18,
+      "saved_objective_abs_error": 4.440892098500626e-16,
+      "original_true_gradient_stop": true
+    },
+    {
+      "stage_index": 7,
+      "mu": 0.78125,
+      "iterations_recorded": 263,
+      "actual_reason": "gradient_tolerance",
+      "independent_physical": {
+        "method": "independent Decimal60 angular/radial projected-norm identity and uncentered simplex oracle",
+        "projected_kkt_norm": 9.835401417604562e-07,
+        "projected_kkt_norm_decimal": "9.83540141760456288166098292553958649644840812475595553664455E-7",
+        "printed_rowmean_norm": 0.03086993132797148,
+        "phi_norm": 6.364414282513839e-07,
+        "theta_norm": 7.498623332715926e-07,
+        "X_norm": 0.0,
+        "objective": 0.9894969535620752,
+        "min_binary_snr": 0.06319014412990197,
+        "min_relaxed_snr": 0.06319014412990197,
+        "binary_schedule": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ],
+        "domain_feasible": true,
+        "maximum_radius_error": 9.597987930181044e-17,
+        "maximum_simplex_sum_error": 0.0,
+        "unchanged_implemented_1e_minus6_gate_pass": true,
+        "printed_open_simplex_gradient_criterion_claimed": false
+      },
+      "saved_norm_abs_error": 7.481418506623608e-19,
+      "saved_objective_abs_error": 1.1102230246251565e-16,
+      "original_true_gradient_stop": true
+    },
+    {
+      "stage_index": 8,
+      "mu": 0.390625,
+      "iterations_recorded": 296,
+      "actual_reason": "gradient_tolerance",
+      "independent_physical": {
+        "method": "independent Decimal60 angular/radial projected-norm identity and uncentered simplex oracle",
+        "projected_kkt_norm": 9.927388834553524e-07,
+        "projected_kkt_norm_decimal": "9.92738883455352345525514976299539462469105208990869363282431E-7",
+        "printed_rowmean_norm": 0.03036412518098136,
+        "phi_norm": 6.512362800083095e-07,
+        "theta_norm": 7.492808541028646e-07,
+        "X_norm": 0.0,
+        "objective": 0.4485731038400987,
+        "min_binary_snr": 0.0639239030424026,
+        "min_relaxed_snr": 0.0639239030424026,
+        "binary_schedule": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ],
+        "domain_feasible": true,
+        "maximum_radius_error": 1.3122393169576486e-16,
+        "maximum_simplex_sum_error": 0.0,
+        "unchanged_implemented_1e_minus6_gate_pass": true,
+        "printed_open_simplex_gradient_criterion_claimed": false
+      },
+      "saved_norm_abs_error": 2.693564772268675e-19,
+      "saved_objective_abs_error": 5.551115123125783e-17,
+      "original_true_gradient_stop": true
+    },
+    {
+      "stage_index": 9,
+      "mu": 0.1953125,
+      "iterations_recorded": 327,
+      "actual_reason": "gradient_tolerance",
+      "independent_physical": {
+        "method": "independent Decimal60 angular/radial projected-norm identity and uncentered simplex oracle",
+        "projected_kkt_norm": 9.942861589370602e-07,
+        "projected_kkt_norm_decimal": "9.94286158937060141150719496003979214237795877921856851999433E-7",
+        "printed_rowmean_norm": 0.029572863065692217,
+        "phi_norm": 6.688586620451357e-07,
+        "theta_norm": 7.35685432818269e-07,
+        "X_norm": 0.0,
+        "objective": 0.17891403342665366,
+        "min_binary_snr": 0.06526606477711766,
+        "min_relaxed_snr": 0.06526606477711766,
+        "binary_schedule": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ],
+        "domain_feasible": true,
+        "maximum_radius_error": 1.8202063187112352e-16,
+        "maximum_simplex_sum_error": 0.0,
+        "unchanged_implemented_1e_minus6_gate_pass": true,
+        "printed_open_simplex_gradient_criterion_claimed": false
+      },
+      "saved_norm_abs_error": 4.171637265227429e-18,
+      "saved_objective_abs_error": 2.7755575615628914e-17,
+      "original_true_gradient_stop": true
+    },
+    {
+      "stage_index": 10,
+      "mu": 0.09765625,
+      "iterations_recorded": 352,
+      "actual_reason": "gradient_tolerance",
+      "independent_physical": {
+        "method": "independent Decimal60 angular/radial projected-norm identity and uncentered simplex oracle",
+        "projected_kkt_norm": 9.981569675851404e-07,
+        "projected_kkt_norm_decimal": "9.98156967585140334529420827468460357020530022162133651617326E-7",
+        "printed_rowmean_norm": 0.028722301249542705,
+        "phi_norm": 6.985050156862028e-07,
+        "theta_norm": 7.130274012967387e-07,
+        "X_norm": 0.0,
+        "objective": 0.045398718172413303,
+        "min_binary_snr": 0.06744844734035202,
+        "min_relaxed_snr": 0.06744844734035202,
+        "binary_schedule": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ],
+        "domain_feasible": true,
+        "maximum_radius_error": 5.817722336675838e-17,
+        "maximum_simplex_sum_error": 0.0,
+        "unchanged_implemented_1e_minus6_gate_pass": true,
+        "printed_open_simplex_gradient_criterion_claimed": false
+      },
+      "saved_norm_abs_error": 3.9427266112319545e-18,
+      "saved_objective_abs_error": 6.938893903907228e-18,
+      "original_true_gradient_stop": true
+    },
+    {
+      "stage_index": 11,
+      "mu": 0.048828125,
+      "iterations_recorded": 367,
+      "actual_reason": "gradient_tolerance",
+      "independent_physical": {
+        "method": "independent Decimal60 angular/radial projected-norm identity and uncentered simplex oracle",
+        "projected_kkt_norm": 9.849241854025605e-07,
+        "projected_kkt_norm_decimal": "9.84924185402560602940416975861552458268872571680842377838364E-7",
+        "printed_rowmean_norm": 0.02866890439131121,
+        "phi_norm": 7.188724252157954e-07,
+        "theta_norm": 6.732741546021637e-07,
+        "X_norm": 0.0,
+        "objective": -0.019585064422655993,
+        "min_binary_snr": 0.0702459014984051,
+        "min_relaxed_snr": 0.0702459014984051,
+        "binary_schedule": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ],
+        "domain_feasible": true,
+        "maximum_radius_error": 1.3535248105006011e-16,
+        "maximum_simplex_sum_error": 0.0,
+        "unchanged_implemented_1e_minus6_gate_pass": true,
+        "printed_open_simplex_gradient_criterion_claimed": false
+      },
+      "saved_norm_abs_error": 1.222480301124769e-18,
+      "saved_objective_abs_error": 1.3877787807814457e-17,
+      "original_true_gradient_stop": true
+    },
+    {
+      "stage_index": 12,
+      "mu": 0.0244140625,
+      "iterations_recorded": 364,
+      "actual_reason": "gradient_tolerance",
+      "independent_physical": {
+        "method": "independent Decimal60 angular/radial projected-norm identity and uncentered simplex oracle",
+        "projected_kkt_norm": 9.85313726963057e-07,
+        "projected_kkt_norm_decimal": "9.85313726963056843056629107297307836628705767508877504790773E-7",
+        "printed_rowmean_norm": 0.030126324173988972,
+        "phi_norm": 7.376545455352488e-07,
+        "theta_norm": 6.532296012835111e-07,
+        "X_norm": 0.0,
+        "objective": -0.050266617700993166,
+        "min_binary_snr": 0.07276020315531538,
+        "min_relaxed_snr": 0.07276020315531538,
+        "binary_schedule": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ],
+        "domain_feasible": true,
+        "maximum_radius_error": 1.0623482305456506e-16,
+        "maximum_simplex_sum_error": 0.0,
+        "unchanged_implemented_1e_minus6_gate_pass": true,
+        "printed_open_simplex_gradient_criterion_claimed": false
+      },
+      "saved_norm_abs_error": 1.2182451363884975e-18,
+      "saved_objective_abs_error": 6.938893903907228e-18,
+      "original_true_gradient_stop": true
+    },
+    {
+      "stage_index": 13,
+      "mu": 0.01220703125,
+      "iterations_recorded": 337,
+      "actual_reason": "gradient_tolerance",
+      "independent_physical": {
+        "method": "independent Decimal60 angular/radial projected-norm identity and uncentered simplex oracle",
+        "projected_kkt_norm": 9.904327140143006e-07,
+        "projected_kkt_norm_decimal": "9.90432714014300592472502195411005468983474602705939939028644E-7",
+        "printed_rowmean_norm": 0.03243478585479551,
+        "phi_norm": 7.473954707418848e-07,
+        "theta_norm": 6.498899686133413e-07,
+        "X_norm": 0.0,
+        "objective": -0.06422379891294977,
+        "min_binary_snr": 0.07430537938877993,
+        "min_relaxed_snr": 0.07430537938877993,
+        "binary_schedule": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ],
+        "domain_feasible": true,
+        "maximum_radius_error": 1.7655343005322691e-16,
+        "maximum_simplex_sum_error": 0.0,
+        "unchanged_implemented_1e_minus6_gate_pass": true,
+        "printed_open_simplex_gradient_criterion_claimed": false
+      },
+      "saved_norm_abs_error": 9.497356921088843e-19,
+      "saved_objective_abs_error": 2.7755575615628914e-17,
+      "original_true_gradient_stop": true
+    },
+    {
+      "stage_index": 14,
+      "mu": 0.006103515625,
+      "iterations_recorded": 277,
+      "actual_reason": "gradient_tolerance",
+      "independent_physical": {
+        "method": "independent Decimal60 angular/radial projected-norm identity and uncentered simplex oracle",
+        "projected_kkt_norm": 9.871741629729646e-07,
+        "projected_kkt_norm_decimal": "9.87174162972964627758777337873612307193695896693343694843412E-7",
+        "printed_rowmean_norm": 0.03454839434336788,
+        "phi_norm": 7.451942388967494e-07,
+        "theta_norm": 6.474553068409183e-07,
+        "X_norm": 0.0,
+        "objective": -0.07035466566761342,
+        "min_binary_snr": 0.07496914578650872,
+        "min_relaxed_snr": 0.07496914578650872,
+        "binary_schedule": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ],
+        "domain_feasible": true,
+        "maximum_radius_error": 1.794470403047319e-16,
+        "maximum_simplex_sum_error": 0.0,
+        "unchanged_implemented_1e_minus6_gate_pass": true,
+        "printed_open_simplex_gradient_criterion_claimed": false
+      },
+      "saved_norm_abs_error": 1.504542272560451e-18,
+      "saved_objective_abs_error": 0.0,
+      "original_true_gradient_stop": true
+    },
+    {
+      "stage_index": 15,
+      "mu": 0.0030517578125,
+      "iterations_recorded": 128,
+      "actual_reason": "gradient_tolerance",
+      "independent_physical": {
+        "method": "independent Decimal60 angular/radial projected-norm identity and uncentered simplex oracle",
+        "projected_kkt_norm": 9.854355889870704e-07,
+        "projected_kkt_norm_decimal": "9.85435588987070463807352229859491317481044119651109184430842E-7",
+        "printed_rowmean_norm": 0.03597643875406856,
+        "phi_norm": 9.837900199858031e-07,
+        "theta_norm": 5.692536006585704e-08,
+        "X_norm": 0.0,
+        "objective": -0.07297758550432185,
+        "min_binary_snr": 0.0751488725331431,
+        "min_relaxed_snr": 0.0751488725331431,
+        "binary_schedule": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ],
+        "domain_feasible": true,
+        "maximum_radius_error": 1.2742975019095658e-16,
+        "maximum_simplex_sum_error": 0.0,
+        "unchanged_implemented_1e_minus6_gate_pass": true,
+        "printed_open_simplex_gradient_criterion_claimed": false
+      },
+      "saved_norm_abs_error": 1.3080306287974533e-17,
+      "saved_objective_abs_error": 2.7755575615628914e-17,
+      "original_true_gradient_stop": true
+    },
+    {
+      "stage_index": 16,
+      "mu": 0.00152587890625,
+      "iterations_recorded": 208,
+      "actual_reason": "gradient_tolerance",
+      "independent_physical": {
+        "method": "independent Decimal60 angular/radial projected-norm identity and uncentered simplex oracle",
+        "projected_kkt_norm": 9.367937896381069e-07,
+        "projected_kkt_norm_decimal": "9.36793789638106887439659325336927915781439241808114969128374E-7",
+        "printed_rowmean_norm": 0.03653175840908366,
+        "phi_norm": 4.85863076111404e-07,
+        "theta_norm": 8.009492340817174e-07,
+        "X_norm": 0.0,
+        "objective": -0.07410626543477071,
+        "min_binary_snr": 0.07516553254958225,
+        "min_relaxed_snr": 0.07516553254958225,
+        "binary_schedule": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ],
+        "domain_feasible": true,
+        "maximum_radius_error": 1.7056623561928815e-16,
+        "maximum_simplex_sum_error": 0.0,
+        "unchanged_implemented_1e_minus6_gate_pass": true,
+        "printed_open_simplex_gradient_criterion_claimed": false
+      },
+      "saved_norm_abs_error": 2.9459911784622973e-16,
+      "saved_objective_abs_error": 0.0,
+      "original_true_gradient_stop": true
+    }
+  ],
+  "before_after_hashes_identical": true,
+  "actual_source_input_raw_sha256": {
+    "oracle": "54e91b92540aa6bc3716636c139ffb56e21d4a2bc0dccb078351377f9742800b",
+    "auditor": "b8ee4ad53be61b7cfd0d74a9ffde752e4b7d63392e19394ffa36aa6de4809d55",
+    "full_mat": "161b950d20bd184b8c7752a6838c2821ee3670e124a13d93e9203d162e03b71b",
+    "initial_json": "3ec3f325e4fb9510dd415cac5986fe726a372fc1cb6fe8e1b33f2c1754707afd",
+    "record_json": "b725c1fdd67f65aefd1ea6852ed70a9c978448e48fa40bfe1bf1d9b90e4e67d3"
+  },
+  "every_inner_state_replayed": false,
+  "all12000_population_or_historical_figure_certificate": false
+}

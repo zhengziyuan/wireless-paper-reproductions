@@ -1,0 +1,35 @@
+{
+  "schema": "ACTUAL_DUAL_LANGUAGE_STRUCTURED_FIXED_QCQP_PROCESS_CLOSURE_V1",
+  "created_UTC": "2026-10-19T05:36:30.648769+00:00",
+  "Python_completed": true,
+  "MATLAB_natural_exit_code": 0,
+  "identity": {
+    "PID": 34576,
+    "actual_creation_FILETIME": 134368617449747821,
+    "same_Popen_handle": true
+  },
+  "host_errors": [],
+  "source_and_exact_input_unchanged": true,
+  "exact_binary64_input_MAT_roundtrip": true,
+  "only_one_captured_subproblem_per_language": true,
+  "no_trajectory_MC_or_new_MP_reference": true,
+  "elapsed_seconds": 45.715025300043635,
+  "output_SHA256": {
+    "actual-matlab-fixed-qcqp.mat": "0db495b1f7d59bfd5d7f69e52057cbd13da7d2151201c085b05634686f816e66",
+    "actual-python-fixed-qcqp.mat": "0b56bda9df8768f92cf2b7a0d7a9e253da2339af439f02d6876184ace7d6a0ee"
+  },
+  "scientific_PASS_not_inferred_from_host0": true,
+  "source_before": {
+    "structured_original_qcqp_candidate_v1.py": "1fa91846426407d7313f0ba452e2d81c60fa433c9513d8618f870414903f8881",
+    "solve_fixed_original_qcqp_matlab_v1.m": "f8183e36aa874bc832b50dcbf3696e28d8bfa3ea4b09bd908b0db9d44cbb44e5",
+    "run_fixed_subproblem_candidates_v3.py": "12dadcc8a3ef58d3d1832df56223ccfa274dfa8384b18ca4e80b5bb19dd12ed7",
+    "exact-captured-fixed-subproblem.mat": "f4c4d087dcba032fcd5cad70c5203b20e05f145f4acf106bb6787a28dbf799f5"
+  },
+  "source_after": {
+    "structured_original_qcqp_candidate_v1.py": "1fa91846426407d7313f0ba452e2d81c60fa433c9513d8618f870414903f8881",
+    "solve_fixed_original_qcqp_matlab_v1.m": "f8183e36aa874bc832b50dcbf3696e28d8bfa3ea4b09bd908b0db9d44cbb44e5",
+    "run_fixed_subproblem_candidates_v3.py": "12dadcc8a3ef58d3d1832df56223ccfa274dfa8384b18ca4e80b5bb19dd12ed7",
+    "exact-captured-fixed-subproblem.mat": "f4c4d087dcba032fcd5cad70c5203b20e05f145f4acf106bb6787a28dbf799f5"
+  },
+  "private_source_receipt_SHA256": "53ebec8e77c220c8df4b5fdb66eb3384367e12c54ac5dbfc74b0748e372c9ced"
+}

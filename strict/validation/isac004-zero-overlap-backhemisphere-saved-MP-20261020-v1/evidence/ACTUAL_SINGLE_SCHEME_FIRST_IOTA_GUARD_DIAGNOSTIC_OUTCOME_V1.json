@@ -1,0 +1,53 @@
+{
+  "schema": "actual-case004-new-single-original-scheme-iota-diagnostic-outcome-v1",
+  "started_UTC": "2026-10-19T17:21:37.757924+00:00",
+  "completed_UTC": "2026-10-19T17:22:10.088253+00:00",
+  "source_before": {
+    "local-artifact-001/capture_only_original_case004_RotBS_NoRIS_first_iota_guard_v1.py": "a3e3eb2d8a1696e823732f0a8a10d260a632557cb13726171213d92971ffdf0b",
+    "local-artifact-002/selected_original_run_scenario_single_NoRIS_v1.py": "e9d3ca1a740194b1da09df64d8a24efe1881cd235ad3287b77b530e4df9ad000",
+    "local-artifact-003/EXACT_ORIGINAL_SCHEME_SELECTION_WHOLE_SOURCE_INVERSE_AND_PASSIVE_IOTA_TAP_SCOPE_V1.json": "1e3921d3704a259d20875e425892ac4799d7748f1d831f219a72b9d7437f4eb2",
+    "local-artifact-004/core.py": "07f2eb9d9f5011dde45a8c947dd87db31d15b7e6e8ab233e9f43429c408f2fbb",
+    "local-artifact-005/run.py": "29584a2dc08dbd36d2613fdc44394658a1c3ed1caecbcd42b11010fe42da6111",
+    "local-artifact-006/isac_metadata.py": "fe51c21a4340c7a901ad2c3bbce6a323cdcc38950c5ccbed4f9bc2fbbc6497f3",
+    "local-artifact-007/run_config.json": "dd52f8b124cc1ec77ba71cf180048f6da665bb3809161dde6c922982c4eeec89",
+    "local-artifact-008/case-000-mc-004.json": "b4d7145b3fccebeeb402903766a3b4913bdf1fd71b4d8a88e50cce183e73d1f1",
+    "local-artifact-009/PREPARED_NOT_STARTED_ORIGINAL_CASE004_SINGLE_NoRIS_IOTA_GUARD_DIAGNOSTIC_PLAN_V1.json": "8b305d725b5ca5234b151b7c24b6b08caeaf81ea4055bf19efd5e12c15247685"
+  },
+  "source_after": {
+    "local-artifact-001/capture_only_original_case004_RotBS_NoRIS_first_iota_guard_v1.py": "a3e3eb2d8a1696e823732f0a8a10d260a632557cb13726171213d92971ffdf0b",
+    "local-artifact-002/selected_original_run_scenario_single_NoRIS_v1.py": "e9d3ca1a740194b1da09df64d8a24efe1881cd235ad3287b77b530e4df9ad000",
+    "local-artifact-003/EXACT_ORIGINAL_SCHEME_SELECTION_WHOLE_SOURCE_INVERSE_AND_PASSIVE_IOTA_TAP_SCOPE_V1.json": "1e3921d3704a259d20875e425892ac4799d7748f1d831f219a72b9d7437f4eb2",
+    "local-artifact-004/core.py": "07f2eb9d9f5011dde45a8c947dd87db31d15b7e6e8ab233e9f43429c408f2fbb",
+    "local-artifact-005/run.py": "29584a2dc08dbd36d2613fdc44394658a1c3ed1caecbcd42b11010fe42da6111",
+    "local-artifact-006/isac_metadata.py": "fe51c21a4340c7a901ad2c3bbce6a323cdcc38950c5ccbed4f9bc2fbbc6497f3",
+    "local-artifact-007/run_config.json": "dd52f8b124cc1ec77ba71cf180048f6da665bb3809161dde6c922982c4eeec89",
+    "local-artifact-008/case-000-mc-004.json": "b4d7145b3fccebeeb402903766a3b4913bdf1fd71b4d8a88e50cce183e73d1f1",
+    "local-artifact-009/PREPARED_NOT_STARTED_ORIGINAL_CASE004_SINGLE_NoRIS_IOTA_GUARD_DIAGNOSTIC_PLAN_V1.json": "8b305d725b5ca5234b151b7c24b6b08caeaf81ea4055bf19efd5e12c15247685"
+  },
+  "source_closed": true,
+  "source_read_errors": [],
+  "execution_exception": null,
+  "observer_transport_errors": [],
+  "scheme": "Rot-BS & No-RIS",
+  "original_scheme_failed": true,
+  "original_guard_exception_retained": true,
+  "first_original_iota_guard_capture_complete": true,
+  "old_iota_failure_not_reproduced_in_this_diagnostic": false,
+  "original_result_available": true,
+  "actual_original_evaluate_calls_observed": 3395,
+  "new_original_scheme_optimizer_calls": 1,
+  "actual_original_initializations": 1,
+  "other_original_scheme_optimizer_calls": 0,
+  "new_scenario_or_MC_population_RNG_calls": 0,
+  "kernel_unchanged": true,
+  "original_failed_case_and_all500_outputs_rewritten": false,
+  "process_exit_code": 0,
+  "exit_semantics": "0=successful complete diagnostic capture of the retained original failure; 2=target guard not captured; 1=execution/transport/source failure. No code is a six-scheme scientific PASS.",
+  "runtime": {
+    "Python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "local-artifact-010/python.exe",
+    "NumPy": "2.5.3",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "full_case_or_original500_or_reference_or_paper_PASS": false
+}

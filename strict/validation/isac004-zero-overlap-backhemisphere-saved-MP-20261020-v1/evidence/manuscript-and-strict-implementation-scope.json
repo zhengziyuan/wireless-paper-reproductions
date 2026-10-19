@@ -1,0 +1,21 @@
+{
+  "source_url": "https://arxiv.org/html/2512.20987v2#S2.SS4",
+  "source_version": "arXiv2512.20987v2,28February2026",
+  "exact_anchors": {
+    "NMSE": "Eq22; HTML lines206-207",
+    "exact_iota_minimizer": "Eq23; lines210-212 explicitly require d>0",
+    "practical_safeguard": "Paragraph immediately afterEq23, HTML line213"
+  },
+  "paper_definitions": {
+    "c": "||p||^2",
+    "d": "pd^T p",
+    "e": "||pd||^2"
+  },
+  "exact_theory": "Eq23 c/d is conditional on d>0 and is not itself an error. Actual c>0,d=0 has infimumNMSE1 but no finite positive-iota minimizer.",
+  "practical_paper_formula": "The paper explicitly supplies iota=c/(d+epsilon), epsilon>0 small. Its numerical epsilon is not reported in that paragraph.",
+  "current_strict_source": "Frozen strict core raises when d<=configured1e-14; it does not execute the paper practical denominator safeguard. This reachable d=0 failure is an implementation scope gap, not proof that the paper omitted a safeguard.",
+  "important_scope": "An epsilon safeguarded update is not the exact conditional argmin for positive epsilon; exact-argmin monotonicity/stationarity arguments cannot automatically be transferred without qualification.",
+  "saved_math_identity": "At c>0,e>0, NMSE(c/(d+epsilon))=1+(epsilon^2-d^2)/(c*e), whereas the exact closed-beta infimum is1-d^2/(c*e). No epsilon value is fitted or executed here.",
+  "future_only": "Configured1e-14 could be declared as a reconstruction value in a separate practical-branch diagnostic; it is not recovered author epsilon. No practical branch or optimizer rerun is part of this packet.",
+  "supersedes_only": "The earlier actual numeric report listed manuscript anchoring as pending. This clarification resolves that source question without changing any recorded number or old failure."
+}

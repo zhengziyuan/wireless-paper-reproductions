@@ -1,0 +1,76 @@
+{
+  "observed_local": "2026-10-17T15:40:47.004166+08:00",
+  "historical_PID": 30452,
+  "historical_exact_birth_utc": 134366802062600916,
+  "terminal_tool_session": 8355,
+  "terminal_exit_code_observed": 0,
+  "result": "E:\\ZiyuanZhengProject\\paper-reproduction-data\\resume-20261017\\isac045-full6-equivalent-stable-v1\\case-000-mc-045-python.json",
+  "result_sha256": "22bd8df4451ac0a491624f9b37a9c911abe9b122a8b6f58ead03df12f04d4b7b",
+  "original_checks": {
+    "Rot-BS & Rot-RIS": {
+      "status": "failed"
+    },
+    "Rot-BS & Fix-RIS": {
+      "status": "executed",
+      "converged": false,
+      "inner_all_converged": false,
+      "full_converged": false,
+      "power_feasible": true,
+      "unit_modulus_error": 2.220446049250313e-16,
+      "rotation_feasible": true
+    },
+    "Fix-BS & Rot-RIS": {
+      "status": "executed",
+      "converged": false,
+      "inner_all_converged": false,
+      "full_converged": false,
+      "power_feasible": true,
+      "unit_modulus_error": 2.220446049250313e-16,
+      "rotation_feasible": true
+    },
+    "Fix-BS & Fix-RIS": {
+      "status": "executed",
+      "converged": false,
+      "inner_all_converged": false,
+      "full_converged": false,
+      "power_feasible": true,
+      "unit_modulus_error": 2.220446049250313e-16,
+      "rotation_feasible": true
+    },
+    "Rot-BS & No-RIS": {
+      "status": "executed",
+      "converged": false,
+      "inner_all_converged": true,
+      "full_converged": false,
+      "power_feasible": true,
+      "unit_modulus_error": 0.0,
+      "rotation_feasible": true
+    },
+    "Fix-BS & No-RIS": {
+      "status": "executed",
+      "converged": true,
+      "inner_all_converged": true,
+      "full_converged": true,
+      "power_feasible": true,
+      "unit_modulus_error": 0.0,
+      "rotation_feasible": true
+    }
+  },
+  "whole_six_scheme_pass": false,
+  "restarted": false,
+  "actual_result_bytes": 190303353,
+  "actual_result_sha256": "22bd8df4451ac0a491624f9b37a9c911abe9b122a8b6f58ead03df12f04d4b7b",
+  "executed_source_binding": {
+    "strict/rotatable-isac/core.py": "07f2eb9d9f5011dde45a8c947dd87db31d15b7e6e8ab233e9f43429c408f2fbb",
+    "strict/rotatable-isac/run.py": "29584a2dc08dbd36d2613fdc44394658a1c3ed1caecbcd42b11010fe42da6111",
+    "strict/rotatable-isac/isac_metadata.py": "fe51c21a4340c7a901ad2c3bbce6a323cdcc38950c5ccbed4f9bc2fbbc6497f3",
+    "tools/isac-line-search-replay/equivalent_runtime.py": "6605b501e0a21efb03496ad47d70774e12d174768afd355e2a843285b4f12c2d",
+    "tools/isac-line-search-replay/stable_metrics.py": "e15ad67ffc92b0ea2b3cbbd5428ff8be30bc6630ab651188d15aa2f01bde8c29",
+    "tools/isac-line-search-replay/run_equivalent.py": "70308a1c97985b8e5b00c3834055db6a13502b4f010f01b78e2f9c79b527480f"
+  },
+  "input_config_sha256": "dd52f8b124cc1ec77ba71cf180048f6da665bb3809161dde6c922982c4eeec89",
+  "input_scenario_sha256": "c723de9f9dab819f53a894f8c4b5ba2a88ac5a3a1be77a5ca4cbf5b337edeb0a",
+  "source_and_input_match_independently_verified": true,
+  "actual_elapsed_seconds": 15279.514844999998,
+  "failed_scheme_state_or_trial_tape_available": false
+}

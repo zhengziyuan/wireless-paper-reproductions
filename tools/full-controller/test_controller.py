@@ -58,9 +58,9 @@ class Controls(unittest.TestCase):
         with self.assertRaises(ValueError):
             driver.validate_plan(value)
 
-    def test_table_and_RIS_native_interface_blockers_retained(self):
+    def test_table_and_RIS_native_interfaces_are_available(self):
         blocked = [task for task in self.plan["tasks"] if task["blockers"]]
-        self.assertEqual({task["id"] for task in blocked}, {"cooperative-satcom-table01-matlab", "hotspot-satcom-table01-matlab", "mis-sensing-figure15-matlab", "mis-sensing-figure16-matlab"})
+        self.assertEqual(blocked, [])
         for task in blocked:
             self.assertIn("--execute", task["original_strict_cli_arguments"])
             self.assertFalse(task["scientific_reproduction_certified"])

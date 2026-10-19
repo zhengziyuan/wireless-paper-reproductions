@@ -1,0 +1,67 @@
+{
+  "schema": "actual-source-byte-identity-and-scoped-metadata-projection-v1",
+  "files": [
+    {
+      "path": "sources/audit_only_six_captured_coordinate_coefficients_MP80_MP100_v3.py",
+      "SHA256": "3299ea55c2449bce7e686d74bf5f9c9db5f2fbfd117bc82d99684d4af1a87f4d",
+      "bytes": 29287,
+      "whole_original_source_bytes_preserved": true
+    },
+    {
+      "path": "sources/audit_only_three_saved_prestate_physical_coefficients_v1.py",
+      "SHA256": "899f89cd78d3242544d836bd485fc819eb1affdf2a5957e1d320171a63ee6297",
+      "bytes": 12934,
+      "whole_original_source_bytes_preserved": true
+    },
+    {
+      "path": "sources/independent_physical_MA_coefficient_reference_v1.py",
+      "SHA256": "1b5fd5157f9ae7e0ab00790f39506377999904ad55c0c5327ef96bac9531228d",
+      "bytes": 7349,
+      "whole_original_source_bytes_preserved": true
+    },
+    {
+      "path": "sources/capture-providers/replay_one_saved_coordinate_python_v1.py",
+      "SHA256": "cf7f0a24b790d1073e633128da35a6b6c845393e8de5714e98ca6d0c2855f193",
+      "bytes": 9849,
+      "whole_original_source_bytes_preserved": true
+    },
+    {
+      "path": "sources/capture-providers/python-provider/coordinate_exact.py",
+      "SHA256": "360f92b22c866a2290bd81cf295fbb759d50ee6729e85877670eabf534b2a3a8",
+      "bytes": 9337,
+      "whole_original_source_bytes_preserved": true
+    },
+    {
+      "path": "sources/capture-providers/python-provider/core.py",
+      "SHA256": "f2b68eaf0a88392947a19dd4d332b2c442f28d1b99f250e02643a99fdbd09d24",
+      "bytes": 15566,
+      "whole_original_source_bytes_preserved": true
+    },
+    {
+      "path": "sources/capture-providers/python-provider/run.py",
+      "SHA256": "32b5a7c87d4701847e2ecfcd5d3d4bdeb84fd5011edea18a7fc0b17c1d2fcbe8",
+      "bytes": 10004,
+      "whole_original_source_bytes_preserved": true
+    },
+    {
+      "path": "sources/capture-providers/native-runtime/replay_one_saved_coordinate_native_v1.m",
+      "SHA256": "6efb0435ba237d2fef39e33f84c9093fda5aca05e923aa87d346cc932cd25ae4",
+      "bytes": 13464,
+      "whole_original_source_bytes_preserved": true
+    },
+    {
+      "path": "sources/capture-providers/native-runtime/ma_exact_coordinate.m",
+      "SHA256": "c93250af2dd2372d75739debeef35d8eb8db7280718011f0af603ddeea439325",
+      "bytes": 8366,
+      "whole_original_source_bytes_preserved": true
+    },
+    {
+      "path": "sources/capture-providers/native-runtime/ma6_passive_capture_v1.m",
+      "SHA256": "d7ef9c89cd50b0100cd06894d891031eedbafd8f620f2b672c4af63ffad9c6e0",
+      "bytes": 566,
+      "whole_original_source_bytes_preserved": true
+    }
+  ],
+  "source_scope": "Audit numerical bodies and actual capture-generation sources are whole-byte copies. Only replay_saved_evidence_v1.py performs relative host IO; direct provider invocation is not the public replay command.",
+  "curvature_interpretation": "MRT equation_29a_max_eigenvalue retained; no printed29b reinterpretation. ZF physical MP uses theoretical Hermitian X; original Python lower-eig/native symavg interpretations remain separately reported."
+}

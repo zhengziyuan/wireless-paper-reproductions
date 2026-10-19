@@ -1,0 +1,57 @@
+{
+  "schema": "actual-single-first-Fig11-start-capture-completeness-readback-v1",
+  "observed_UTC": "2026-10-19T12:55:15.204253+00:00",
+  "scope": "Only actual first MIS start1 / point0 / 17 actual mu RCG inputs and returns",
+  "new_optimizer_calls": 0,
+  "new_objective_gradient_model_calls": 0,
+  "new_RNG_MC_MP_calls": 0,
+  "other_start_tapes_or_results_read": 0,
+  "scientific_gradient_KKT_feasibility_or_reference_PASS": false,
+  "global_campaign_natural_terminal_or_source_interval_closed": false,
+  "checks": {
+    "one_real_joint_closed_first_start": true,
+    "compressed_tape_exact_closed_SHA256_and_size_before_unpickle": true,
+    "original_start_gzip_exact_closed_SHA256": true,
+    "exactly36_records_header17_input_return_terminal": true,
+    "header_original_point_start_settings_and_source_binding": true,
+    "terminal_observer_exact_joint_closure": true,
+    "all17_actual_original_mu_halving_values_exact": false
+  },
+  "failures": [
+    {
+      "type": "ValueError",
+      "message": "all17_actual_original_mu_halving_values_exact",
+      "traceback": "Traceback (most recent call last):\n  File \"origin:resume-20261017/MIS-communications-Fig11-full48-passive-endpoints-prepared-v1/read_only_actual_first_start_capture_v1.py\", line 109, in main\n    need('all17_actual_original_mu_halving_values_exact', len(wanted_mu) == 17 and\n  File \"origin:resume-20261017/MIS-communications-Fig11-full48-passive-endpoints-prepared-v1/read_only_actual_first_start_capture_v1.py\", line 55, in need\n    raise ValueError(name)\nValueError: all17_actual_original_mu_halving_values_exact\n"
+    }
+  ],
+  "immutable_inputs": {
+    "observation": {
+      "path": "origin:resume-20261017/MIS-communications-Fig11-full48-passive-endpoints-prepared-v1/ACTUAL_ONCE_FIRST_FULL48_FIG11_OWNER_PROGRESS_AND_FIRST_START_STATUS_V1.json",
+      "SHA256": "0f34a2f47fc8bfcec918449db96ceb2283570ff39d0f6b8299a932af3c6e85a0"
+    },
+    "frozen_plan": {
+      "path": "origin:resume-20261017/MIS-communications-Fig11-full48-passive-endpoints-prepared-v1/PREPARED_FULL_FIG11_ORIGINAL48_PASSIVE_ENDPOINTS_SERIAL_PLAN_V2.json",
+      "SHA256": "b02636b883cdf82b3682431182a84ab04aaada75e448f7a5170f0c6a3bfa97d8"
+    },
+    "first_joint_closed_receipt": {
+      "path": "origin:resume-20261017/MIS-comm-F11-py-full-v1/actual-RCG-endpoints/point-0000-MIS-0001.closed.json",
+      "SHA256": "586288edc4d38b5f11b1cda46ceecd53bc136bffa9c15ecb36f17fde0239333d",
+      "exact_body_reused_from_once_observation": true
+    }
+  },
+  "actual_tape": {
+    "path": "origin:resume-20261017/MIS-comm-F11-py-full-v1/actual-RCG-endpoints/point-0000-MIS-0001.attempt-54608-445399000000000.pickle.gz",
+    "SHA256": "13dec758b9be88e5c359905141a330acd3e2c4449ae2dce99c2a32b019ca5c9b",
+    "bytes": 17455,
+    "pickle_records": 36,
+    "format": "trusted-local-gzip-sequential-pickle-protocol5-actual-RCG-endpoints-v1",
+    "actual_records": 36,
+    "bytes_verified_before_trusted_local_unpickle": true
+  },
+  "actual_original_start": {
+    "path": "origin:resume-20261017/MIS-comm-F11-py-full-v1/starts/point-0000-MIS-0001.json.gz",
+    "SHA256": "7565c8c706eee177470effe10a10a1383329f15c8900db9e60ebfa335fcc6290",
+    "compressed_bytes": 24793
+  },
+  "all_single_start_capture_readback_checks_pass": false
+}

@@ -1,0 +1,262 @@
+{
+  "schema": "actual-original-case004-single-scheme-first-iota-guard-operands-v1",
+  "scheme": "Rot-BS & No-RIS",
+  "exception": "Exact iota* is undefined at this zero-overlap pattern; no fabricated sensing score is returned.",
+  "original_exception_allowed_to_propagate_and_original_run_catch_unchanged": true,
+  "original_evaluate_call_ordinal_1based": 3395,
+  "raw_numeric_backup": {
+    "file": "actual-first-iota-guard-operands.npz",
+    "SHA256": "0949b55d22eb395da936642ff402c217cf587f0a5abc9b6d52f0d08f730285aa",
+    "bytes": 90054
+  },
+  "actual_scheme_scene": {
+    "file": "actual-failed-scheme-scene.json",
+    "SHA256": "89a1faa4d6e31c052d70d42361c595db4e208e529e4f8bb0617066a9f24e6a40"
+  },
+  "numeric_field_inventory": {
+    "w": {
+      "dtype": "<c16",
+      "shape": [
+        4,
+        6
+      ],
+      "is_complex": true,
+      "is_fortran_contiguous": false,
+      "all_finite": true,
+      "C_order_IEEE_bytes_SHA256": "b81010f6dffdff0e6bdcadcf17208ab3016ddb2fa9b8554c0b3ed0e3df895268"
+    },
+    "theta": {
+      "dtype": "<c16",
+      "shape": [
+        36
+      ],
+      "is_complex": true,
+      "is_fortran_contiguous": true,
+      "all_finite": true,
+      "C_order_IEEE_bytes_SHA256": "c99db606a1ef65534a3c67317a4020a3c71f3cec43593b605b0c86076f567b8b"
+    },
+    "r": {
+      "dtype": "<f8",
+      "shape": [
+        6
+      ],
+      "is_complex": false,
+      "is_fortran_contiguous": true,
+      "all_finite": true,
+      "C_order_IEEE_bytes_SHA256": "45d3fa1645435e732298bc7e9fa2489cdc64d5f42828a5c54bddfb6dbda62728"
+    },
+    "field": {
+      "dtype": "<c16",
+      "shape": [
+        4,
+        68
+      ],
+      "is_complex": true,
+      "is_fortran_contiguous": false,
+      "all_finite": true,
+      "C_order_IEEE_bytes_SHA256": "9b184de1e1d51361415bc1f071c1ea40788c301554a8655386670f1d5a6bc876"
+    },
+    "jac": {
+      "dtype": "<c16",
+      "shape": [
+        4,
+        68,
+        6
+      ],
+      "is_complex": true,
+      "is_fortran_contiguous": false,
+      "all_finite": true,
+      "C_order_IEEE_bytes_SHA256": "8fca1eca00b762cda8ec3d76003ae700ce8dc00364f3758fb164c248d709d794"
+    },
+    "bridge": {
+      "dtype": "<c16",
+      "shape": [
+        4,
+        36
+      ],
+      "is_complex": true,
+      "is_fortran_contiguous": false,
+      "all_finite": true,
+      "C_order_IEEE_bytes_SHA256": "cfc335996cfae29fdf14fd2db7ea853366d350a5d387aa3c322616e81dacd56b"
+    },
+    "g": {
+      "dtype": "<c16",
+      "shape": [
+        36,
+        68
+      ],
+      "is_complex": true,
+      "is_fortran_contiguous": false,
+      "all_finite": true,
+      "C_order_IEEE_bytes_SHA256": "b78358fb8d082b28ebc504d212e6481e8f0473ef9b47cb3ce2e95c005fe1fad0"
+    },
+    "k": {
+      "dtype": "<i8",
+      "shape": [],
+      "is_complex": false,
+      "is_fortran_contiguous": true,
+      "all_finite": true,
+      "C_order_IEEE_bytes_SHA256": "d86e8112f3c4c4442126f8e9f44f16867da487f29052bf91b810457db34209a4"
+    },
+    "fc": {
+      "dtype": "<c16",
+      "shape": [
+        4,
+        2
+      ],
+      "is_complex": true,
+      "is_fortran_contiguous": false,
+      "all_finite": true,
+      "C_order_IEEE_bytes_SHA256": "e55ecb18643b7c8da62215749d12f3b537a4246064be57c771841bd4d505a90a"
+    },
+    "fs": {
+      "dtype": "<c16",
+      "shape": [
+        4,
+        66
+      ],
+      "is_complex": true,
+      "is_fortran_contiguous": false,
+      "all_finite": true,
+      "C_order_IEEE_bytes_SHA256": "dc89c70f0e4e21755dda15621b8b6083ee00c1fb43c6724ab0c116fb47eb193f"
+    },
+    "y": {
+      "dtype": "<c16",
+      "shape": [
+        2,
+        6
+      ],
+      "is_complex": true,
+      "is_fortran_contiguous": false,
+      "all_finite": true,
+      "C_order_IEEE_bytes_SHA256": "ffc00828572e246a8761e861fb7c57376b0f97544fe9bf5b0f018750e85ce292"
+    },
+    "z": {
+      "dtype": "<c16",
+      "shape": [
+        66,
+        6
+      ],
+      "is_complex": true,
+      "is_fortran_contiguous": false,
+      "all_finite": true,
+      "C_order_IEEE_bytes_SHA256": "308ca054ccdca36b88066da9722a8bdd120de1271cc8fd846c57773f6c552186"
+    },
+    "total": {
+      "dtype": "<f8",
+      "shape": [
+        2
+      ],
+      "is_complex": false,
+      "is_fortran_contiguous": true,
+      "all_finite": true,
+      "C_order_IEEE_bytes_SHA256": "826ead99de78b9d30acbf905de204b5b5cad6a92eab58505d20f02e7e27b47ce"
+    },
+    "signal": {
+      "dtype": "<f8",
+      "shape": [
+        2
+      ],
+      "is_complex": false,
+      "is_fortran_contiguous": true,
+      "all_finite": true,
+      "C_order_IEEE_bytes_SHA256": "d40000e50e91a6bf936e3ef1aee6a7e8405189b1a1511ef7050ed5f942cd5125"
+    },
+    "interference": {
+      "dtype": "<f8",
+      "shape": [
+        2
+      ],
+      "is_complex": false,
+      "is_fortran_contiguous": true,
+      "all_finite": true,
+      "C_order_IEEE_bytes_SHA256": "840d689c6def2dab73e75374670032c247627e9534126bad818bd1b7254fce43"
+    },
+    "rate": {
+      "dtype": "<f8",
+      "shape": [],
+      "is_complex": false,
+      "is_fortran_contiguous": true,
+      "all_finite": true,
+      "C_order_IEEE_bytes_SHA256": "cd8723f507605e92f7011d8a3a59508bd0630ad18371b8c66dad2c0e32a23422"
+    },
+    "p": {
+      "dtype": "<f8",
+      "shape": [
+        66
+      ],
+      "is_complex": false,
+      "is_fortran_contiguous": true,
+      "all_finite": true,
+      "C_order_IEEE_bytes_SHA256": "94b2ac9f9222aff1b70db410ecdcaa93c15cac465859a4084440ad32aff2c9e8"
+    },
+    "pd": {
+      "dtype": "<f8",
+      "shape": [
+        66
+      ],
+      "is_complex": false,
+      "is_fortran_contiguous": true,
+      "all_finite": true,
+      "C_order_IEEE_bytes_SHA256": "994612a6644aeccd3819d2e2a59ba64d424b82d10f02dcaeb780cd311a2de93d"
+    },
+    "energy": {
+      "dtype": "<f8",
+      "shape": [],
+      "is_complex": false,
+      "is_fortran_contiguous": true,
+      "all_finite": true,
+      "C_order_IEEE_bytes_SHA256": "3f710ac088db33363087de2b9a657541fe5447821debaa9fe5cbd538eb1a5f29"
+    },
+    "overlap": {
+      "dtype": "<f8",
+      "shape": [],
+      "is_complex": false,
+      "is_fortran_contiguous": true,
+      "all_finite": true,
+      "C_order_IEEE_bytes_SHA256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+    },
+    "iota_denominator_epsilon": {
+      "dtype": "<f8",
+      "shape": [],
+      "is_complex": false,
+      "is_fortran_contiguous": true,
+      "all_finite": true,
+      "C_order_IEEE_bytes_SHA256": "57523cdc2c7172f4fd82b3beccbad524d250dd1c85b8ace41c637f8962580fa5"
+    }
+  },
+  "actual_overlap_float_hex": "0x0.0p+0",
+  "actual_epsilon_float_hex": "0x1.6849b86a12b9bp-47",
+  "original_guard_predicate": "overlap <= c[\"iota_denominator_epsilon\"]",
+  "original_iota_formula_not_reached": "float(p @ p / overlap)",
+  "actual_original_call_stack": [
+    {
+      "function": "evaluate",
+      "source_line": 82,
+      "iteration": null,
+      "iota": null,
+      "relative_objective": null
+    },
+    {
+      "function": "optimize",
+      "source_line": 244,
+      "iteration": 3,
+      "iota": 71094.53011551316,
+      "relative_objective": 0.09008483706610045
+    }
+  ],
+  "source_and_input_binding": {
+    "local-artifact-001/capture_only_original_case004_RotBS_NoRIS_first_iota_guard_v1.py": "a3e3eb2d8a1696e823732f0a8a10d260a632557cb13726171213d92971ffdf0b",
+    "local-artifact-002/selected_original_run_scenario_single_NoRIS_v1.py": "e9d3ca1a740194b1da09df64d8a24efe1881cd235ad3287b77b530e4df9ad000",
+    "local-artifact-003/EXACT_ORIGINAL_SCHEME_SELECTION_WHOLE_SOURCE_INVERSE_AND_PASSIVE_IOTA_TAP_SCOPE_V1.json": "1e3921d3704a259d20875e425892ac4799d7748f1d831f219a72b9d7437f4eb2",
+    "local-artifact-004/core.py": "07f2eb9d9f5011dde45a8c947dd87db31d15b7e6e8ab233e9f43429c408f2fbb",
+    "local-artifact-005/run.py": "29584a2dc08dbd36d2613fdc44394658a1c3ed1caecbcd42b11010fe42da6111",
+    "local-artifact-006/isac_metadata.py": "fe51c21a4340c7a901ad2c3bbce6a323cdcc38950c5ccbed4f9bc2fbbc6497f3",
+    "local-artifact-007/run_config.json": "dd52f8b124cc1ec77ba71cf180048f6da665bb3809161dde6c922982c4eeec89",
+    "local-artifact-008/case-000-mc-004.json": "b4d7145b3fccebeeb402903766a3b4913bdf1fd71b4d8a88e50cce183e73d1f1",
+    "local-artifact-009/PREPARED_NOT_STARTED_ORIGINAL_CASE004_SINGLE_NoRIS_IOTA_GUARD_DIAGNOSTIC_PLAN_V1.json": "8b305d725b5ca5234b151b7c24b6b08caeaf81ea4055bf19efd5e12c15247685"
+  },
+  "observer_extra_evaluate_channels_optimizer_or_RNG_calls": 0,
+  "mathematical_degeneracy_or_roundoff_cause_proved": false,
+  "new_original_budget_diagnostic_not_recovered_historical_tape": true
+}
