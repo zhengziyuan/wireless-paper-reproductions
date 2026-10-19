@@ -1,0 +1,72 @@
+{
+  "schema": "ACTUAL_COMPLETE192_CORRECTED_FIG12_AND_VISUAL_REVIEW_V1",
+  "created_UTC": "2026-10-19T02:46:30.944006+00:00",
+  "checks": {
+    "actual_V3_exec_exit0_observed": true,
+    "all192_available": true,
+    "96_AP_exact_reuse": true,
+    "96_corrected_TS": true,
+    "no_missing_slots": true,
+    "source_interval_equal": true,
+    "all192_unique_language_case_method_slots": true,
+    "all_96_original_plus96_python_plus96_native_plotted": true,
+    "no_new_optimizer_MC_RNG_or_physical_oracle": true
+  },
+  "all_scoped_checks_pass": true,
+  "source_interval_count": 441,
+  "inputs": {
+    "summary.json": {
+      "path": "undistributed/local-identity-9a49cafda87e4dff",
+      "SHA256": "3bbcc662a7f229e3d5e068766cfa5c3bf6fd41d75919a28f253eaa5880969555",
+      "bytes": 245070
+    },
+    "all192-dual-language-source-bound-sumrates-and-unfitted-source-gaps.json": {
+      "path": "undistributed/local-identity-fa1b05d9841e13cd",
+      "SHA256": "8ab7d3fc89f47b54092f5274a3697fecfd45576f37f2e99a05c7823308c3311a",
+      "bytes": 1083998
+    },
+    "plot-generation-summary.json": {
+      "path": "undistributed/local-identity-17305064363d0f47",
+      "SHA256": "44479a3e51219059cda6a552931c52c84c24d68f63b78e83b613d2416355806a",
+      "bytes": 2850
+    }
+  },
+  "V3_entry": {
+    "path": "undistributed/local-identity-531f24b7db227dd2",
+    "SHA256": "14671949feebf1771ec5d7ab910bb3aba7f0103d3cb7c9799ec2866b9ff49754",
+    "bytes": 4357
+  },
+  "retained_initial_partial": {
+    "path": "undistributed/local-identity-5230936d47e8ed3f",
+    "available_slots": 168,
+    "missing_native_slots": 24,
+    "reason": "Single-latitude MATLAB JSON scalar vs original length-one array; V3 changes only a local shape view after exact float64 equality."
+  },
+  "actual_root_visual_review": {
+    "method": "Opened the generated full PNG in view_image",
+    "all_four_panels_visible": true,
+    "labels_legends_and_disclosure_text_readable": true,
+    "no_clipped_axes_or_legend": true,
+    "noticed_python_native_TS_tail_difference_MSC_kappa0": true,
+    "large_published_reference_gaps_visible": true
+  },
+  "maximum_unfitted_numeric_reference_gap_bpsHz": 15.336630403244865,
+  "reference_gap_is_diagnostic_given_unresolved_axis_units": true,
+  "outputs": {
+    "Fig12-all192-derived-and-all96-published-unfitted-diagnostic.png": {
+      "path": "undistributed/local-identity-13ba633ddcde674f",
+      "SHA256": "b38f71822de81fafd2c4ca9d15264fdba4e50256992d9bd97b668ac5907db225",
+      "bytes": 359887
+    },
+    "Fig12-all192-derived-and-all96-published-unfitted-diagnostic.svg": {
+      "path": "undistributed/local-identity-36601b7de898f92d",
+      "SHA256": "50fd362d23e83bf5d09b6ff09ac5a5cc8f7697393ef7d597ba7e8bbf32252d1b",
+      "bytes": 92138
+    }
+  },
+  "threshold_W_vs_normalized_INR_mapping_unresolved": true,
+  "configured1000_draws_are_optimized_performance_MC": false,
+  "original_reference_gate": false,
+  "independently_optimized_dual_language_equal_gate": false,
+  "whole_paper_PASS": false
+}
