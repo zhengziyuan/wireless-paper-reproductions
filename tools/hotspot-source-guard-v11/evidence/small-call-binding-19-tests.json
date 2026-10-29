@@ -1,0 +1,98 @@
+{
+  "schema": "ACTUAL_HOTSPOT_V11_SMALL_CALL_BINDING_REGRESSION_V1",
+  "UTC": "2026-10-29T07:22:14.073669+00:00",
+  "actual_tests_run": 19,
+  "actual_failure_count": 0,
+  "actual_error_count": 0,
+  "failure_details": [],
+  "error_details": [],
+  "all_regressions_pass": true,
+  "original_v10_and_canonical_small_source_before": {
+    "E:\\ZiyuanZhengProject\\paper-reproduction-data\\resume-20261017\\hotspot-full18-closed-E-binding-v1\\complete-independent-MP-v10\\consume_closed_full18_independent_MP80_MP100_sourceonly_v10.py": "77b59d11f1f9296ee17e9e9f830327e7648662a84310544f58e2819f382878e4",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\work\\immutable-code-fields-v1\\canonical_code_fields.py": "b2010a0e6853cfadcb8f2bd36e7426aaaf44d313e9e0c988a0a711599187755b"
+  },
+  "original_v10_and_canonical_small_source_after": {
+    "E:\\ZiyuanZhengProject\\paper-reproduction-data\\resume-20261017\\hotspot-full18-closed-E-binding-v1\\complete-independent-MP-v10\\consume_closed_full18_independent_MP80_MP100_sourceonly_v10.py": "77b59d11f1f9296ee17e9e9f830327e7648662a84310544f58e2819f382878e4",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\work\\immutable-code-fields-v1\\canonical_code_fields.py": "b2010a0e6853cfadcb8f2bd36e7426aaaf44d313e9e0c988a0a711599187755b"
+  },
+  "original_small_sources_unchanged": true,
+  "arithmetic_and_trace_comparison": {
+    "scalar_binary64_hex": [
+      "0000000000000640",
+      "0000000000e01640",
+      "87b56f58fb463340"
+    ],
+    "numeric_call_sequence": [
+      "nested",
+      "nested.<locals>.inner",
+      "leaf",
+      "leaf",
+      "nested.<locals>.<genexpr>",
+      "leaf",
+      "nested.<locals>.<genexpr>",
+      "leaf",
+      "nested.<locals>.<genexpr>",
+      "leaf",
+      "nested.<locals>.<genexpr>",
+      "nested",
+      "nested.<locals>.inner",
+      "leaf",
+      "leaf",
+      "nested.<locals>.<genexpr>",
+      "leaf",
+      "nested.<locals>.<genexpr>",
+      "leaf",
+      "nested.<locals>.<genexpr>",
+      "leaf",
+      "nested.<locals>.<genexpr>",
+      "nested",
+      "nested.<locals>.inner",
+      "leaf",
+      "leaf",
+      "nested.<locals>.<genexpr>",
+      "leaf",
+      "nested.<locals>.<genexpr>",
+      "leaf",
+      "nested.<locals>.<genexpr>",
+      "leaf",
+      "nested.<locals>.<genexpr>"
+    ],
+    "v10_numeric_calls": 33,
+    "v11_numeric_calls": 33,
+    "v10_event_counts": {
+      "call": 33,
+      "line": 36,
+      "return": 33,
+      "exception": 0
+    },
+    "v11_event_counts": {
+      "call": 33,
+      "line": 0,
+      "return": 0,
+      "exception": 0
+    },
+    "identical_canonical_verified_code_set": true
+  },
+  "actual_importlib_future_regressions": [
+    {
+      "source_declares_future_annotations": true,
+      "imported_function_has_future_annotations_flag": true,
+      "v10_numeric_calls": 11,
+      "v11_numeric_calls": 11,
+      "scalar_binary64_hex": "0000000000e01640",
+      "identical_canonical_verified_code_set": true
+    },
+    {
+      "source_declares_future_annotations": false,
+      "imported_function_has_future_annotations_flag": false,
+      "v10_numeric_calls": 11,
+      "v11_numeric_calls": 11,
+      "scalar_binary64_hex": "0000000000e01640",
+      "identical_canonical_verified_code_set": true
+    }
+  ],
+  "actual_MP80_MP100_geometry_validation_performed": false,
+  "actual_original_production_or_optimizer_or_MC_or_native_execution": false,
+  "scientific_physical_convergence_dual_language_reference_or_paper_PASS": false,
+  "current_thread_trace_after": null
+}
