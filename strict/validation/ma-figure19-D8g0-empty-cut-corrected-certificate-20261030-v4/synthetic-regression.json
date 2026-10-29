@@ -1,0 +1,62 @@
+{
+  "schema": "SYNTHETIC_MA_EMPTY_FEASIBLE_CUT_REGRESSION_V4",
+  "all_pass": true,
+  "tests": [
+    {
+      "name": "frozen_v2_rejects_valid_empty_cut",
+      "pass_": true
+    },
+    {
+      "name": "v4_empty_cut_covered_zero_and_full_partition_matches_all35_combinations",
+      "pass_": true
+    },
+    {
+      "name": "wrong_upper_digest_still_rejected",
+      "pass_": true
+    },
+    {
+      "name": "upper_above_prior_incumbent_still_rejected",
+      "pass_": true
+    },
+    {
+      "name": "wrong_traversal_counter_still_rejected",
+      "pass_": true
+    },
+    {
+      "name": "wrong_winner_still_rejected",
+      "pass_": true
+    },
+    {
+      "name": "unreachable_cut_still_rejected",
+      "pass_": true
+    },
+    {
+      "name": "negative_cardinality_still_rejected",
+      "pass_": true
+    },
+    {
+      "name": "noninteger_cardinality_still_rejected",
+      "pass_": true
+    }
+  ],
+  "graph_vertices": 7,
+  "complete_candidate_subsets": 35,
+  "exact_feasible_subsets": 1,
+  "cut_prefix": [
+    0,
+    4
+  ],
+  "remaining_vertices": [
+    5,
+    6
+  ],
+  "remaining_pair_incompatible": true,
+  "unchanged_function_AST_except_one_assertion": true,
+  "actual_saved_experiments_read": false,
+  "actual149_failures_revalidated": false,
+  "numerical_optimizer_MC_RNG_calls": 0,
+  "scientific_or_paper_PASS": false,
+  "adapter_SHA256": "98d36bfdc3632a3d7bfaeaf0bc4667f265ebd27b273689e89503d5815c106a89",
+  "frozen_reader_SHA256": "30d26f1d1198566ef1dc36babc210e822371006a2cd8671b7016e085f0d8a7fe",
+  "UTC": "2026-10-29T19:21:20.284189+00:00"
+}

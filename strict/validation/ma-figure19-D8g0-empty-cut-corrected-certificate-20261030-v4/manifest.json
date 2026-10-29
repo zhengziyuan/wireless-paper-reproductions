@@ -1,0 +1,65 @@
+{
+  "schema": "PUBLIC_MA19_D8G0_EMPTY_CUT_CORRECTION_SOURCE_AND_EXECUTED_EVIDENCE_MANIFEST_V4",
+  "repository": "zhengziyuan/wireless-paper-reproductions",
+  "directory": "strict/validation/ma-figure19-D8g0-empty-cut-corrected-certificate-20261030-v4",
+  "files_excluding_this_manifest": [
+    {
+      "path": "verify_saved_ma_empty_cuts_v4.py",
+      "bytes": 13476,
+      "SHA256": "98d36bfdc3632a3d7bfaeaf0bc4667f265ebd27b273689e89503d5815c106a89"
+    },
+    {
+      "path": "verify_one_closed_python_grid_prune_trie_compact_v2.py",
+      "bytes": 20209,
+      "SHA256": "30d26f1d1198566ef1dc36babc210e822371006a2cd8671b7016e085f0d8a7fe"
+    },
+    {
+      "path": "synthetic-regression.json",
+      "bytes": 1560,
+      "SHA256": "59d30662b155948f8df8099e9ce97e0a51e3309debf543a2e16bcabe4f5a5f58"
+    },
+    {
+      "path": "saved-verification-summary.json",
+      "bytes": 7369,
+      "SHA256": "f1196a55cebf6f9f0ca6ac0301a8d05665d252b5c68c2f744b1ac2c3e244dd1a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5923,
+      "SHA256": "d0e9edf2f6a8435dec6c177c44254ef727be649f66ad97c88ec27f22c324c60f"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 24,
+      "SHA256": "c009e5d8823a97b08b42a35ddbf53d6c36c2229a79f42a8e3ecaf776f603f798"
+    }
+  ],
+  "shared_dependencies_referenced_not_copied": [
+    {
+      "role": "independent_certificate_framing_and_bounds",
+      "path": "strict/validation/ma-figure20-D3g0-N6-actual-theory-certificates-20261019-v1/sources/certificate_helpers.py",
+      "bytes": 21419,
+      "SHA256": "39e55c5e3b8ba7b20433638db16189e7ab3f993c775ffa451f527a6376913d45",
+      "git_blob_SHA": "0ffe33c86576f106b59aba8bea9c4e8ccdfc1152",
+      "verified_ref": "dac006a7b183376bb7fdab1df28118f9776105cd",
+      "complete_public_body_equal_to_local_actual_input": true,
+      "url": "https://github.com/zhengziyuan/wireless-paper-reproductions/blob/dac006a7b183376bb7fdab1df28118f9776105cd/strict/validation/ma-figure20-D3g0-N6-actual-theory-certificates-20261019-v1/sources/certificate_helpers.py"
+    },
+    {
+      "role": "independent_rational_and_cofactor_kernel",
+      "path": "strict/validation/ma-figure19-D3g1-exact-global-grid-20261020-v1/verify_all126.py",
+      "bytes": 15149,
+      "SHA256": "40a93a0ff9afb77302191d5de729af2f0fe2fbd5d0590cdac09eadf656cfacf1",
+      "git_blob_SHA": "8dba11bfd3f3fe23282e5e02e3c03479cedf3038",
+      "verified_ref": "8940cb14243b36449716839fe9d0238055eb6f1f",
+      "complete_public_body_equal_to_local_actual_input": true,
+      "url": "https://github.com/zhengziyuan/wireless-paper-reproductions/blob/8940cb14243b36449716839fe9d0238055eb6f1f/strict/validation/ma-figure19-D3g1-exact-global-grid-20261020-v1/verify_all126.py"
+    }
+  ],
+  "standalone_synthetic_regression_available": true,
+  "standalone_actual_D8g0_replay_available": false,
+  "source_bytes_unchanged_from_recorded_run": true,
+  "private_paths_or_large_certificates_included": false,
+  "new_numeric_runs_for_publication": 0,
+  "scope": "One saved Python Fig19 D8/g0 independent discrete partition-and-bound certificate. No native, original-reference, whole-figure or full-paper pass."
+}
