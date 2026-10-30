@@ -62,10 +62,16 @@ nonnegative squared term. This is an independently derived observation, not an
 official publisher erratum or evidence of the author's original numerical run.
 
 Let `Q_k = E[h_k h_k^H]`, `D_k^H D_k = Q_k`, and
-`I_k(W) = sum_{j != k} ||D_k w_j||² + sigma²`. The correct QoS is
+`I_k(W) = sum_{j != k} ||D_k w_j||² + sigma²`. Under the paper's stated
+simultaneous-transmission signal model, the full-interference QoS ratio is
 `||D_k w_k||² / I_k(W) >= tau_k`. The interference index is all transmitted
-streams J, as uniquely follows from the received signal before 3-41; the K-only
-denominator in 3-41b omits HU interference and is an explicit index erratum.
+streams J: final IEEE Eq. (4a) uses J excluding k, while Eq. (32b) uses only
+K excluding k and does not specify cancellation of HU streams. The exact
+constructed example in `../../tools/hotspot-index-model-scope-v1/` shows that
+these two constraints can make opposite feasibility decisions. The full-J
+version is an explicit correction to the printed K-only formulation, not a
+claim about the model used by the authors' historical results. Both are ratios
+of expected powers, not an assertion of exact expected instantaneous SINR.
 
 For every vector b, completing the square gives the exact identity
 
