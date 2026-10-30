@@ -17,8 +17,9 @@ are among the uncovered combinations.
 
 This is a combinatorial consistency check. Matching counts do not prove
 that each uncovered geometry was actually evaluated, nor that a numerical
-upper bound justified any prefix. It does not prove that unordered choices
-cover labelled-antenna permutations for the intended objective. It does not validate the original author's
+upper bound justified any prefix. A separate [algebraic argument](STATISTICAL_PERMUTATION_INVARIANCE.md)
+shows that unordered choices cover labelled permutations for the selected
+statistical objectives in exact arithmetic. It does not validate the original author's
 unknown search criterion, MATLAB, reference figures or the full paper.
 See the [saved winner physics evidence](../../strict/validation/ma-figure20-d3-g0-grid-physics-component-20261030-v1/README.md)
 for separate checks on the retained 1,000-sample evaluations.
