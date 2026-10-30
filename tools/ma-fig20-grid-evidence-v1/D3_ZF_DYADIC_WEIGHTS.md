@@ -14,7 +14,9 @@ still to be selected. All 18 saved rows meet these hypersimplex conditions.
 Being a valid tangent point does **not** prove the tangent upper bound, its
 saved digest, the historical incumbent, or the safety of pruning. Those need
 an independent calculation of the five-user statistical objective and the
-actual search chronology. This check is not MATLAB, reference-figure or paper
+actual search chronology. The separate [mathematical derivation](ZF_TANGENT_BOUND_MATH.md)
+states the conditions under which such a tangent bound is valid; it does not
+verify these particular saved certificates. This check is not MATLAB, reference-figure or paper
 acceptance.
 
 From this directory with Python 3 and a new output path:
