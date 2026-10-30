@@ -25,8 +25,11 @@ def check(record):
         raise ValueError('requires the saved RIS-enabled state')
     n, j, u, k = (p[x] for x in ('N', 'J', 'U', 'K'))
     if (not all(type(x) is int for x in (n, j, u, k)) or
-            (n, j, u, k) != (16, 16, 3, 13) or t['feed_center_spacing_m'] != 50000):
-        raise ValueError('this bounded audit is for the declared U3 case only')
+            (n, j) != (16, 16) or not 1 <= u <= 6 or k != 16-u or
+            t['feed_center_spacing_m'] != 50000 or
+            type(p['kappa_satellite_db']) not in (int, float) or
+            p['kappa_satellite_db'] not in (0, 10, 20)):
+        raise ValueError('requires the declared U1..U6, beta 0/10/20 dB, 16-stream geometry')
     re, im = state['W']['real'], state['W']['imag']
     if len(re) != n or len(im) != n or any(len(row) != j for row in re + im):
         raise ValueError('beam dimensions do not match the declared case')
@@ -115,7 +118,7 @@ def check(record):
         margin = received[user]/denominator-target
         margins.append(margin)
     return {
-        'scope': '13 NHU QoS ratios, one saved binary64 beam, reconstructed geometry',
+        'scope': f'{k} NHU QoS ratios, one saved binary64 beam, reconstructed geometry',
         'arithmetic': 'mpmath.iv 65 decimal digits, entire Bessel series with explicit geometric tail',
         'model_conditions': ['exact decoded binary64 inputs, ideal real arithmetic',
                              'current geometry and all-J interference, not authenticated historic inputs',
@@ -123,6 +126,8 @@ def check(record):
         'target_interval': str(target),
         'nhu_margin_intervals': [str(m) for m in margins],
         'all_margin_lower_bounds_positive': all(m.a > 0 for m in margins),
+        'definitely_negative_count': sum(m.b < 0 for m in margins),
+        'zero_crossing_count': sum(m.a <= 0 <= m.b for m in margins),
         'phase_unit_modulus_proven': False,
         'historical_source_authenticated': False,
         'convergence_or_full_paper_pass': False,
