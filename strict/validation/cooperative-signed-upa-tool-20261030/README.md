@@ -121,3 +121,22 @@ These checks concern only this stored input and conditional construction; the
 handedness has not been recovered from a physical measurement, the other
 channel components are not assembled here, and no corrected optimization,
 MATLAB implementation or original-figure agreement is established.
+
+## Conditional full distribution moments
+
+`candidate_moments_v1.construct` assembles the four directional mean arrays
+and the matching GEO second moment in memory. It retains each saved link's
+first complex coefficient, copies the saved variances and limits, and checks
+that co-located GEO and direct-link LOS directions agree. It also checks every
+saved link against a reconstruction of the source's folded directions. The
+actual U6/K1 test uses author-reconstructed coordinates, which are not bound by
+the NPZ; it observes near-boresight residuals up to `2.65e-6` for direct and
+`1.50e-5` for RIS-user directions. Its explicitly chosen thresholds apply only
+to that reconstruction and are not paper-accuracy criteria.
+
+`python -B verify_candidate_moments_v1.py` exercises all four global
+satellite/RIS handedness combinations, preserves the saved inputs, and rejects
+invalid geometry, inconsistent co-located directions, wrong dimensions and
+negative variances. These are candidate distribution moments, not generated
+channel samples, optimized beams, MATLAB validation, or figure reproduction.
+The historic physical handedness remains unknown.
