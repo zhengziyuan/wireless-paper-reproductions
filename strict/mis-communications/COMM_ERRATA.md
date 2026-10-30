@@ -6,6 +6,21 @@ These corrections are independently derived, not a claim that a publisher has
 issued an erratum. Full6000-start figure execution and original-plot agreement
 remain separate gates.
 
+## COMM-BEAM-DIMENSION: final IEEE version, printed p. 5753
+
+The final published text declares `G` as M-by-L and the BS array response as
+L-by-1, but describes the beamforming vector `w_k` as M-by-1. Equation (6)
+uses `G w_{k,u}`, and the MRT expression conjugate-transposes a 1-by-L row;
+both require `w_k` to be L-by-1. Thus the printed M-by-1 dimension is a
+typographical inconsistency whenever M differs from L. This is an independent
+reading of the final IEEE version, not an official IEEE erratum or evidence
+that any numerical implementation or figure has passed.
+
+The final version's system model (printed p. 5752) specifies half-wavelength
+element spacing for both layers. A previous description of that spacing as an
+inference is superseded; no historical settings or numerical results are
+rewritten. The incident direction remains a separate assumption.
+
 ## COMM-GEOMETRY-FIG7: the source axis and the original plot disagree
 
 Eq3's array exponent is `r*cos(az)*sin(el)+c*sin(az)*sin(el)`.
