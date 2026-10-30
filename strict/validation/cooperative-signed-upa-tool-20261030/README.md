@@ -93,3 +93,31 @@ before full channels or figures are claimed corrected. Scalar GEO links do not
 use these UPA factors and are not changed. MATLAB implementation, independent
 dual-language checks, physical feasibility, full-budget convergence and
 reference-figure comparisons remain open.
+
+## Conditional GEO-interference second moment
+
+`gt_second_v1.candidate_gt_second` constructs an **in-memory candidate** from
+the actual saved `gt_second` and `d_mean`, and a caller-supplied oriented
+`a_N_K`. The caller must provide the user and GEO-user coordinates, an explicit
+co-location mapping, and the Rician factor. The function checks co-location,
+unit-magnitude LOS vectors, Hermitian symmetry, positive semidefiniteness and
+the source model `Q = mu/(1+beta) * (I + beta * a * a^H)`. It then applies
+the diagonal unitary transformation `Q_new = D Q D^H`, where `D` maps the
+saved LOS direction to the candidate. This preserves the existing gain,
+isotropic scatter contribution, diagonal and eigenvalues; the common LOS
+propagation phase cancels in `Q`. It makes no random draws and changes neither
+the stored input nor any result. It rejects incompatible geometry or source
+moments rather than silently adapting them.
+
+`python -B verify_gt_second_v1.py` checks the actual saved U6/K1 input with
+user 3 co-located with GEO user 1 and `beta_N=100`, for both global satellite
+second-axis handedness choices. The positions are reconstructed from the
+author's geometry; the saved NPZ does not itself bind those coordinates.
+The co-location conclusion is conditional on that geometry. The maximum relative saved-model residual was
+`7.9e-16`; the minimum eigenvalue before and after was `5.43513e-6`, and the
+largest relative entrywise covariance change was `0.926125` for both choices.
+An independent rank-one reconstruction agrees with the transformed result.
+These checks concern only this stored input and conditional construction; the
+handedness has not been recovered from a physical measurement, the other
+channel components are not assembled here, and no corrected optimization,
+MATLAB implementation or original-figure agreement is established.
