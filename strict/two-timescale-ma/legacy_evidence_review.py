@@ -75,9 +75,40 @@ def inspect(result, job, config, manifest, job_name):
                       'minimum_sample_rate': min(rates) if rates_ok else None,
                       'fpa_reported_no_nonconverged_samples': convergence}
     stored_checks = {name: result.get('checks', {}).get(name) is True for name in CHECKS}
+    # These are recorded scalar diagnostics, not independently reconstructed
+    # beamformers/channels. In particular, raw leakage is not scale-normalized.
+    budget = job.get('power')
+    if not finite_real(budget) or budget < 0:
+        raise ValueError('job power must be a finite nonnegative number')
+    # A bounded binary64 field-comparison tolerance, scaled to the actual
+    # stored budget; this is not a verified physical feasibility tolerance.
+    power_tolerance = 0.0 if budget == 0 else 32 * math.ulp(float(budget))
+    recorded_ma_diagnostics = {}
+    for name in ('MA-MRT', 'MA-ZF'):
+        item = schemes.get(name, {})
+        powers = item.get('powers')
+        leakage = item.get('off_diagonal_amplitude')
+        powers_ok = (type(powers) is list and len(powers) == sample_count
+                     and all(finite_real(v) and v >= 0 for v in powers))
+        leakage_ok = (type(leakage) is list and len(leakage) == sample_count
+                      and all(finite_real(v) and v >= 0 for v in leakage))
+        recorded_ma_diagnostics[name] = {
+            'power_samples_finite_nonnegative': powers_ok,
+            'stored_power_within_budget': (max(powers) <= budget + power_tolerance) if powers_ok else False,
+            'power_budget': budget,
+            'power_tolerance': power_tolerance,
+            'max_stored_power': max(powers) if powers_ok else None,
+            'max_abs_power_deviation_from_budget': max(abs(v-budget) for v in powers) if powers_ok else None,
+            'raw_leakage_samples_finite_nonnegative': leakage_ok,
+            'max_raw_off_diagonal_amplitude': max(leakage) if leakage_ok else None,
+        }
     all_rate_fields = all(row['rates_finite_nonnegative'] and row['stored_mean_matches_samples']
                           for row in rows.values())
     fpa_markers = all(rows[name]['fpa_reported_no_nonconverged_samples'] for name in SCHEMES if name.startswith('FPA-'))
+    rate_and_flag_consistent = bool(identity and all_rate_fields and fpa_markers and all(stored_checks.values()))
+    power_fields_consistent = all(d['power_samples_finite_nonnegative'] and d['stored_power_within_budget']
+                                  and d['raw_leakage_samples_finite_nonnegative']
+                                  for d in recorded_ma_diagnostics.values())
     return {'scope': 'one saved record: metadata, rate arrays and stored flags only',
             'metadata_fields_consistent': identity,
             'stored_implementation_fingerprint': result.get('implementation_fingerprint'),
@@ -85,7 +116,10 @@ def inspect(result, job, config, manifest, job_name):
             'input_fingerprint_recomputed': False,
             'ao_and_geometry_stored_flags': stored_checks,
             'scheme_checks': rows,
-            'stored_numerical_fields_consistent': bool(identity and all_rate_fields and fpa_markers and all(stored_checks.values())),
+            'stored_MA_power_and_raw_leakage': recorded_ma_diagnostics,
+            'stored_rates_and_flags_consistent': rate_and_flag_consistent,
+            'stored_power_and_leakage_fields_consistent': power_fields_consistent,
+            'stored_numerical_fields_consistent': bool(rate_and_flag_consistent and power_fields_consistent),
             'physical_feasibility_independently_verified': False,
             'mathematical_convergence_proven': False,
             'dual_language_verified': False,
@@ -93,6 +127,7 @@ def inspect(result, job, config, manifest, job_name):
             'original_figure_complete': False,
             'limitations': ['fingerprint metadata matching does not certify actual loaded source or input bytes',
                             'stored flags are not independent feasibility or convergence checks',
+                            'power and raw leakage are saved diagnostics, not independently recomputed beamforming or normalized interference',
                             'this reviews one record only and does not rerun the simulation']}
 
 
