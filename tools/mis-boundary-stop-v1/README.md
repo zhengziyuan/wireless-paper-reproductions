@@ -23,17 +23,12 @@ run and does not validate a figure. A policy other than the two named policies
 is rejected before evaluating the objective; an absent policy retains the
 original default `literal_printed`.
 
-The corresponding MATLAB change is **local static preparation only**, not a
-published or runtime-verified MATLAB implementation. The locally prepared
-independently named MATLAB source
-`strict/mis-communications/mis_communications_strict_engine_boundary_stop_v1.m`
-keeps the original source beside it (original SHA-256
-`763a55bbcd74561c56f4bf668ef634863546b2cf235d16ab1854102d32da2108`). It
-selects the same stopping measure as its RCG policy and includes a synthetic
-boundary self-test. The variant is not included in this Python-only release.
-Its MATLAB self-test was launched without the required
-external storage guard and stopped; no MATLAB test success is claimed. The
-attempt and retained temporary files are recorded in the local data tree.
+The corresponding MATLAB change is **local static preparation only**; this
+Python-only release does not include a runtime-verified MATLAB variant. A
+MATLAB self-test was launched without the required external storage guard and
+stopped; no MATLAB test success is claimed. Its record and retained temporary
+files remain in the local data tree. The unmodified original MATLAB engine has
+SHA-256 `763a55bbcd74561c56f4bf668ef634863546b2cf235d16ab1854102d32da2108`.
 
 The Python synthetic tests use the minimization objective `-X[0]+X[1]` on
 the simplex at `[1,0]`: row-mean norm `sqrt(2)` and projected KKT residual
