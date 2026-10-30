@@ -10,6 +10,7 @@ import math
 from pathlib import Path
 import numpy as np
 from ma_metadata import bank_complete,complete,implemented_complete,implementation_fingerprint,original_scope_available
+from figures import write_or_verify
 
 
 def terminal_hold_mean(values):
@@ -84,7 +85,8 @@ def aggregate(bank):
     ready=not missing and not invalid and all(len(items)==100 for items in by_case)
     receipt={"paper_id":"two-timescale-ma","figure":plan["figure"],"engine":"python",
         "input_bank_complete":True,"expected_jobs":manifest["expected_jobs"],"complete_jobs":sum(map(len,by_case)),
-        "overall_implemented_scope_success":ready,"full_execution_verified":ready and original_scope,
+        "overall_implemented_scope_success":ready,"full_execution_verified":False,
+        "original_scenarios_independently_verified":False,
         "original_scope_available":original_scope,"printed_correlated_ZF_closed_form_recovered":False,
         "missing_results":missing,"invalid_or_nonconverged_results":invalid,"geometries_per_point":100,"nlos_per_geometry":1000,
         "failed_samples_discarded_for_curve":False,"original_curve_closeness_verified":False,
@@ -120,22 +122,33 @@ def aggregate(bank):
 
 
 def render(data,path):
+    import io
     import matplotlib
     matplotlib.use("Agg")
+    matplotlib.rcParams['svg.hashsalt']='two-timescale-ma-v2'
     import matplotlib.pyplot as plt
     fig,ax=plt.subplots(figsize=(8.2,5.2));markers=["o","s","^","D","v","P"]
     for i,series in enumerate(data["series"]):
         ax.plot(series["x"],series["y"],label=series["label"],marker=markers[i%6],linewidth=1.5,
             markersize=3,markevery=max(1,len(series["x"])//12))
     ax.set_xlabel(f'{data["x_name"]} ({data["x_unit"]})');ax.set_ylabel(f'{data["y_name"]} ({data["y_unit"]})')
-    ax.grid(True,alpha=.25);ax.legend(fontsize=6);fig.tight_layout();fig.savefig(path.with_suffix(".png"),dpi=220);fig.savefig(path.with_suffix(".svg"));plt.close(fig)
+    ax.grid(True,alpha=.25);ax.legend(fontsize=6);fig.tight_layout()
+    # Compare fully rendered bytes before any existing file can be reused.
+    # A partial render remains evidence and is never silently overwritten.
+    try:
+        png=io.BytesIO();svg=io.BytesIO()
+        fig.savefig(png,format='png',dpi=220)
+        fig.savefig(svg,format='svg',metadata={'Date':None})
+        write_or_verify(path.with_suffix('.png'),png.getvalue())
+        write_or_verify(path.with_suffix('.svg'),svg.getvalue())
+    finally:plt.close(fig)
 
 
 if __name__=="__main__":
     p=argparse.ArgumentParser();p.add_argument("--bank",type=Path,required=True);p.add_argument("--output-dir",type=Path,required=True)
     args=p.parse_args();args.output_dir.mkdir(parents=True,exist_ok=True);receipt,data=aggregate(args.bank)
-    (args.output_dir/"readiness.json").write_text(json.dumps(receipt,indent=2)+"\n",encoding="utf-8")
+    write_or_verify(args.output_dir/"readiness_v2.json",(json.dumps(receipt,indent=2)+"\n").encode())
     if data is not None:
-        path=args.output_dir/f'ma-figure-{data["figure"]:02d}'
-        path.with_suffix(".json").write_text(json.dumps(data,indent=2,allow_nan=False)+"\n",encoding="utf-8");render(data,path)
+        path=args.output_dir/f'ma-figure-{data["figure"]:02d}-v2'
+        write_or_verify(path.with_suffix(".json"),(json.dumps(data,indent=2,allow_nan=False)+"\n").encode());render(data,path)
     print(json.dumps({"full_execution_verified":receipt["full_execution_verified"],"figure_rendered":data is not None,"complete_jobs":receipt["complete_jobs"]}))

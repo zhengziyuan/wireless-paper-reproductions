@@ -137,6 +137,10 @@ if __name__=="__main__":
     p=argparse.ArgumentParser();p.add_argument("--config",type=Path,default=Path(__file__).with_name("full_config.json"))
     p.add_argument("--component-test",action="store_true");p.add_argument("--job",type=Path)
     p.add_argument("--output",type=Path,required=True);args=p.parse_args()
+    if args.job:
+        raise RuntimeError("MA job execution disabled pending a reviewed storage guard and non-overwriting recovery")
+    if args.output.exists():
+        raise FileExistsError(f"Existing output is preserved: {args.output}")
     config=json.loads(args.config.read_text());start=time.perf_counter()
     if args.component_test: result=component_test(config)
     elif args.job:
@@ -148,5 +152,6 @@ if __name__=="__main__":
     from ma_metadata import implementation_fingerprint
     result["implementation_fingerprint"]=implementation_fingerprint()
     args.output.parent.mkdir(parents=True,exist_ok=True)
-    args.output.write_text(json.dumps(result,indent=2,allow_nan=False)+"\n")
+    with args.output.open('x',encoding='utf-8') as out:
+        out.write(json.dumps(result,indent=2,allow_nan=False)+"\n")
     print(json.dumps({"mode":result["mode"],"checks":result["checks"]}))
