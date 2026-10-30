@@ -6,6 +6,7 @@ correlated-Wishart formula. Incomplete full banks yield readiness only.
 from __future__ import annotations
 import argparse
 import json
+import math
 from pathlib import Path
 import numpy as np
 from ma_metadata import bank_complete,complete,implemented_complete,implementation_fingerprint,original_scope_available
@@ -24,6 +25,36 @@ def nested(record,path):
     return record
 
 
+def checked_saved_mean(record, name, expected_count):
+    """Validate the saved plotted mean against its complete stored samples.
+
+    This is an engineering consistency check only; it does not establish
+    convergence, physical feasibility or agreement with a paper figure.
+    The tolerance bounds accumulated binary64 roundoff for two nonnegative
+    sums and subsequent division. Subnormal inputs fail closed rather than relying
+    on an unsupported relative-error bound.
+    """
+    metric=nested(record,name) if name.startswith("metrics.") else record["metrics"]["schemes"][name]
+    rates=metric["sample_sum_rates"]; saved=metric["mean_sum_rate"]
+    if not isinstance(rates,list) or type(expected_count) is not int or expected_count<=0 or len(rates)!=expected_count:
+        raise ValueError("incomplete saved rate samples")
+    if type(saved) not in (int,float) or not math.isfinite(saved) or saved<0:
+        raise ValueError("invalid saved rate mean")
+    tiny=np.finfo(float).tiny
+    if any(type(x) not in (int,float) or not math.isfinite(x) or x<0 or (0<x<tiny) for x in rates):
+        raise ValueError("invalid or subnormal saved rate")
+    with np.errstate(over="ignore",invalid="ignore"):
+        observed=float(np.mean(rates))
+    if not math.isfinite(observed) or (0<observed<tiny) or (0<saved<tiny):
+        raise ValueError("invalid or subnormal rate mean")
+    unit_roundoff=np.finfo(float).eps/2
+    nu=(expected_count+4)*unit_roundoff
+    if nu>=1:raise ValueError("unsupported sample count for rounding bound")
+    allowance=(2*nu/(1-nu))*max(abs(observed),abs(saved))
+    if abs(saved-observed)>allowance:raise ValueError("saved mean is inconsistent with samples")
+    return float(saved)
+
+
 def aggregate(bank):
     config_bytes=(bank/"run_config.json").read_bytes();config=json.loads(config_bytes)
     manifest=json.loads((bank/"manifest.json").read_text());plan=json.loads((bank/"plan.json").read_text())
@@ -38,8 +69,17 @@ def aggregate(bank):
         if not path.exists():missing.append(path.name);continue
         try:record=json.loads(path.read_text())
         except (OSError,ValueError):invalid.append(path.name);continue
-        job=json.loads((bank/"jobs"/entry["filename"]).read_text())
-        if not implemented_complete(record,entry["input_fingerprint"],job,config):invalid.append(path.name);continue
+        try:
+            job=json.loads((bank/"jobs"/entry["filename"]).read_text())
+            valid=implemented_complete(record,entry["input_fingerprint"],job,config)
+        except (OSError,ValueError,TypeError,KeyError,AttributeError,OverflowError,RecursionError):
+            invalid.append(path.name);continue
+        if not valid:invalid.append(path.name);continue
+        if plan["figure"] not in [3,4,13,14,15,16]:
+            names=catalog["default_schemes"] if spec["series"]=="default_schemes" else spec["series"]
+            try:
+                for name in names:checked_saved_mean(record,name,config["nlos_realizations_per_geometry"])
+            except (KeyError,TypeError,ValueError,OverflowError,AttributeError):invalid.append(path.name);continue
         by_case[entry["case_index"]].append(record)
     ready=not missing and not invalid and all(len(items)==100 for items in by_case)
     receipt={"paper_id":"two-timescale-ma","figure":plan["figure"],"engine":"python",
@@ -51,7 +91,7 @@ def aggregate(bank):
         "implementation_fingerprint":implementation_fingerprint()}
     if not ready or not original_scope:return receipt,None
     figure=spec["figure"];series=[]
-    if figure in [3,4,13,15]:
+    if figure in [3,4,13,14,15,16]:
         for case,items in zip(plan["cases"],by_case):
             for source_path in spec["series"]:
                 curve=terminal_hold_mean([nested(r,source_path) for r in items])
