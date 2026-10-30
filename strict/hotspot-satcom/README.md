@@ -3,9 +3,11 @@
 DOI: [10.1109/TWC.2023.3309957](https://doi.org/10.1109/TWC.2023.3309957).
 
 Independent implementations of the supplied author model, not original author
-code. The final 17-page IEEE full text and historical original-curve agreement
-remain unverified. Private manuscripts, author artwork and reference ordinates
-are not redistributed or presented as simulation output.
+code. Selected statistical-QoS equations and scenario details have now been
+checked directly against the final 17-page IEEE publication; this is not a
+complete publisher-source audit. Historical original-curve agreement remains
+unverified. Private manuscripts, author artwork and reference ordinates are
+not redistributed or presented as simulation output.
 
 ## Model and explicit errata
 

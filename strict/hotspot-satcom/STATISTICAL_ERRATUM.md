@@ -1,7 +1,9 @@
 # Explicit statistical-CSI erratum and exact original-model corrections
 
-These corrections concern the supplied author thesis, equations 3-41 through
-3-57. Equivalence to a different final publisher version is not asserted. The
+These corrections were developed for the supplied author thesis, equations
+3-41 through 3-57. The final IEEE publication has now been checked for the
+specific statistical-QoS statements below; no full source or figure equivalence
+is asserted. The
 printed-algorithm entry raises an explicit error; the working entry is labelled
 `corrected_QT_erratum`. The working physical branch retains the **early ESA-
 weighted finite-Rician signal model**, average-SINR QoS, sum-rate objective,
@@ -27,7 +29,14 @@ the stated theorem/argument, not a reason to replace the original optimizer.
 
 Source anchors are `ch_third.tex:349-353` (printed block with zero last diagonal)
 and `ch_third.tex:390` (PSD, monotonicity and global-optimality claim). They are
-anchors in the supplied author thesis, not verified final-publisher locations.
+anchors in the supplied author thesis. The final IEEE version (printed p. 3654,
+Eq. (20) and the following RGD paragraph) also prints the zero-diagonal block
+and describes P_U as positive semidefinite as a reason for convergence; it
+references Eq. (18) even though the displayed block occurs in Eq. (20). The
+final-version mathematical counterexample applies whenever the displayed
+off-diagonal block has a nonzero entry. Monotonic objective values alone do not
+prove convergence of the iterates. This targeted comparison is not an official
+erratum or proof that any particular numerical run fails.
 The reproducible independent check is `audit_single_hu_guarantee.py`; its actual
 receipt `outputs/single-HU-guarantee-counterexamples.json` records determinant
 −1 and eigenvalues approximately −0.618034 and1.618034 for `[1,1;1,0]`. For the
@@ -41,6 +50,16 @@ substitutes for the original full-scene simulations or evidence of an author
 initialization. The existing original full-size RGD is not replaced.
 
 ## 1. The stated full-rank average-SINR QoS is not the printed scalar SOC
+
+The final IEEE version retains the relevant contradiction on printed p. 3656:
+the original ratio constraint is (32b), the NHU covariance is (33b), and the
+claimed conic replacement and its augmented definitions are (36d)–(36e).
+The independent exact rational counterexample in
+`../../tools/hotspot-final-qos-counterexample-v1/` gives a feasible original
+QoS point rejected by literal (36d). Removing the right-hand square alone does
+not repair that example because the imaginary block inside the norm adds a
+nonnegative squared term. This is an independently derived observation, not an
+official publisher erratum or evidence of the author's original numerical run.
 
 Let `Q_k = E[h_k h_k^H]`, `D_k^H D_k = Q_k`, and
 `I_k(W) = sum_{j != k} ||D_k w_j||² + sigma²`. The correct QoS is
