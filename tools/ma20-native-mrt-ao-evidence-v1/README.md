@@ -59,4 +59,3 @@ handling for negative changes or a zero previous objective differs from the
 executed helper. In this recorded trajectory no sweep change was negative and
 no preceding sweep objective was zero. A separately reviewed source package is
 needed to replay the native execution itself.
-
