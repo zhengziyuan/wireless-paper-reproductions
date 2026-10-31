@@ -10,9 +10,12 @@ The saved channel moments and the saved Psi matrices originate from the same
 historical run. Reconstructing Psi from the moments is a separate calculation,
 not an independent experiment. The noise and SINR targets were extracted from
 each start's final record and applied to all four saved iterations of that
-start. Their equality to the parameters used at every iteration has not been
-independently established. Units are the implementation's saved normalized
-units; no physical-unit or quadrature-error certificate is claimed.
+start. A later check of the eight saved QT_begin records found all 136 binary64
+parameter values identical to their corresponding final records; see the
+[QT parameter evidence](../hotspot-case13-qt-parameter-evidence-v1/README.md).
+This remains subject to the source limitations described there. Units are the
+implementation's saved normalized units; no physical-unit or quadrature-error
+certificate is claimed.
 
 The original guarded computation used exact rational arithmetic on the saved
 binary64 values, all 15 other transmitted streams in each NHU denominator, and
