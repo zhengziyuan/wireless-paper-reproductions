@@ -1,0 +1,91 @@
+{
+  "schema": "MA20_ZF_FIG5_DONOR_CONDITIONAL_EVIDENCE_V1",
+  "result": {
+    "schema": "MA20_ZF_FIG5_DONOR_CONDITIONAL_REPLAY_PREPARED_V2",
+    "saved_sweeps": 33,
+    "coordinates_examined": 198,
+    "failures": [],
+    "old_region_interpretation": "current_run_scenario_default_for_job_without_override",
+    "old_region_lower": [
+      -2.0,
+      -3.0
+    ],
+    "old_region_upper": [
+      2.0,
+      3.0
+    ],
+    "configured_AO_iteration_cap": 10000,
+    "configured_nlos_count": 1000,
+    "conditional_same_source_check_pass": true,
+    "maximum_saved_large_box_gap": 9.408248048970891E-13,
+    "maximum_recomputed_large_box_gap": 9.543396170539541E-13,
+    "maximum_recomputed_target_gap": 7.293986395253599E-13,
+    "maximum_objective_error": 0.0,
+    "maximum_sweep_objective_error": 0.0,
+    "minimum_target_box_margin": 1.0324136562319572,
+    "minimum_spacing": 0.5,
+    "minimum_linearized_spacing_residual": -5.551115123125783E-17,
+    "conditional_on_historical_single_coordinate_order": true,
+    "historical_producer_or_input_authenticated": false,
+    "solver_rerun": false,
+    "float_gap_is_interval_certificate": false,
+    "same_source_floating_gap_check_not_rigorous": true,
+    "full_physical_validation": false,
+    "full_figure_or_paper_pass": false,
+    "source_input_identity_held_during_read": true,
+    "current_input_producer_authenticated": false,
+    "dependency_versions": {
+      "numpy": "2.5.3",
+      "scipy": "1.18.1"
+    },
+    "floating_point_gap_bound_not_interval_certified": true
+  },
+  "resource_terminal": {
+    "automatic_restart_allowed": false,
+    "elapsed_seconds": 2.0459999999729916,
+    "guard_error": null,
+    "guard_success": true,
+    "hard_filesystem_quota": false,
+    "historical_chunk_content_reverified": false,
+    "minimum_E_free_bytes": 139752476672,
+    "output_bytes_before_terminal": 1568,
+    "resource_envelope_pass": true,
+    "returncode": 0,
+    "schema": "ACTUAL_MA20_ZF_FIG5_DONOR_AUDIT_GUARD_TERMINAL_V2",
+    "scientific_acceptance": false,
+    "serialized_result_structure_pass": true,
+    "terminal_reason": "natural_exit",
+    "wait_and_pipe_errors": []
+  },
+  "previous_attempt": {
+    "terminal": {
+      "automatic_restart_allowed": false,
+      "elapsed_seconds": 2.030999999959022,
+      "guard_error": null,
+      "guard_success": false,
+      "hard_filesystem_quota": false,
+      "historical_chunk_content_reverified": false,
+      "minimum_E_free_bytes": 139755212800,
+      "output_bytes_before_terminal": 1092,
+      "resource_envelope_pass": true,
+      "returncode": 1,
+      "schema": "ACTUAL_MA20_ZF_FIG5_DONOR_AUDIT_GUARD_TERMINAL_V1",
+      "scientific_acceptance": false,
+      "serialized_result_structure_pass": false,
+      "terminal_reason": "natural_exit",
+      "wait_and_pipe_errors": []
+    },
+    "observed_exception": "KeyError: region_lower",
+    "description": "The old job had no explicit region. The first reader assumed one and exited before the coordinate replay."
+  },
+  "source_sha256": {
+    "core": "f2b68eaf0a88392947a19dd4d332b2c442f28d1b99f250e02643a99fdbd09d24",
+    "run": "07480fec915c6be88184ba8d8d085b00f2a9be34ebee13f6aaf036dcecbaf638",
+    "coordinate": "360f92b22c866a2290bd81cf295fbb759d50ee6729e85877670eabf534b2a3a8",
+    "worker": "8ec929d34da0dc10b103a716303ea625a914ac13434a17abe9199cd35e294d59",
+    "held": "cda403970c6d25a744fd618f5daa551206fc02cfb6aa6108b473cc8429c7ab59",
+    "handshake": "f6bc36ffea57e34761828887ca70ea0a0e83dce6c71265e5aa2e55c42aa23f69"
+  },
+  "config_sha256": "6cf6bf50fff8c96c08a2ee380a559c4a56e6b16dec76dcdfbf92a4f36bfdcd3a",
+  "full_paper_pass": false
+}
