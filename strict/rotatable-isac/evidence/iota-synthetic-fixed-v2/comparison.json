@@ -1,0 +1,66 @@
+{
+  "schema": "ISAC_IOTA_SYNTHETIC_CROSS_LANGUAGE_REVIEW_V1",
+  "cases": [
+    {
+      "index": 0,
+      "status": "matched",
+      "max_absolute_difference": 0.0
+    },
+    {
+      "index": 1,
+      "status": "matched",
+      "max_absolute_difference": 0.0
+    },
+    {
+      "index": 2,
+      "status": "failed_as_expected",
+      "reason": "exact_zero_overlap_no_finite_minimizer"
+    },
+    {
+      "index": 3,
+      "status": "matched",
+      "max_absolute_difference": 0.0
+    },
+    {
+      "index": 4,
+      "status": "failed_as_expected",
+      "reason": "zero_pattern_energy"
+    },
+    {
+      "index": 5,
+      "status": "failed_as_expected",
+      "reason": "zero_desired_energy"
+    },
+    {
+      "index": 6,
+      "status": "failed_as_expected",
+      "reason": "epsilon_not_real"
+    },
+    {
+      "index": 7,
+      "status": "failed_as_expected",
+      "reason": "epsilon_not_finite_positive"
+    },
+    {
+      "index": 8,
+      "status": "matched",
+      "max_absolute_difference": 0.0
+    },
+    {
+      "index": 9,
+      "status": "failed_as_expected",
+      "reason": "pattern_negative_or_nonfinite"
+    },
+    {
+      "index": 10,
+      "status": "failed_as_expected",
+      "reason": "exact_disallows_epsilon"
+    }
+  ],
+  "matched_cases": 4,
+  "matched_expected_failures": 7,
+  "is_original_paper_reproduction": false,
+  "uses_real_saved_states": false,
+  "source_provenance_verified": false,
+  "full_scientific_acceptance": false
+}
