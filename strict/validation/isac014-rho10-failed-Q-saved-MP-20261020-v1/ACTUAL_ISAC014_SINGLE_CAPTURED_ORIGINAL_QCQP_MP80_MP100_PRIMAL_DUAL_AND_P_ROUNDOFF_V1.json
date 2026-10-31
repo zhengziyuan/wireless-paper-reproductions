@@ -1,0 +1,145 @@
+{
+  "schema": "ACTUAL_ISAC014_SINGLE_CAPTURED_ORIGINAL_QCQP_MP80_MP100_PRIMAL_DUAL_AND_P_ROUNDOFF_V1",
+  "source_before": {
+    "source-3a8c71464043/solve_only_saved_rank1_QCQP_MP80_MP100_v1.py": "dd0a9ce171c563842a162064b24e840de5191ca26f05e268f7ca4145c259bc5a",
+    "source-57d28c9fdb04/diagnose_saved_actual_Q_MP80_MP100_v1.py": "c498ee7abd57208d7555820482a93e71c1415c3d3b3accf944553785603d3d80",
+    "source-af7f67c9885d/actual-failed-Q-operands.npz": "635f106c9c5b5ec02a21117d532325cbd66bbddf6d4caf2016faf0c6c9b901e4",
+    "source-d461f3c39920/original-scenario.json": "1854197e30970f2014a6412c4bc89fe279c7f7e569457047b8fca0c2d0a30a0e",
+    "source-e4b14834e245/actual-failed-Q-capture-or-nonreproduction.json": "d9313309f45ad68b585605529e39061805102402b611ceead9535c96f7b5ab1b",
+    "source-64003c565cca/actual-owned-ISAC014-single-diagnostic.json": "7872dcb9d9e57ba190a05cf7c0bfe4ba9098bd1c26e42546378190dab6ee1c6e"
+  },
+  "source_after": {
+    "source-3a8c71464043/solve_only_saved_rank1_QCQP_MP80_MP100_v1.py": "dd0a9ce171c563842a162064b24e840de5191ca26f05e268f7ca4145c259bc5a",
+    "source-57d28c9fdb04/diagnose_saved_actual_Q_MP80_MP100_v1.py": "c498ee7abd57208d7555820482a93e71c1415c3d3b3accf944553785603d3d80",
+    "source-af7f67c9885d/actual-failed-Q-operands.npz": "635f106c9c5b5ec02a21117d532325cbd66bbddf6d4caf2016faf0c6c9b901e4",
+    "source-d461f3c39920/original-scenario.json": "1854197e30970f2014a6412c4bc89fe279c7f7e569457047b8fca0c2d0a30a0e",
+    "source-e4b14834e245/actual-failed-Q-capture-or-nonreproduction.json": "d9313309f45ad68b585605529e39061805102402b611ceead9535c96f7b5ab1b",
+    "source-64003c565cca/actual-owned-ISAC014-single-diagnostic.json": "7872dcb9d9e57ba190a05cf7c0bfe4ba9098bd1c26e42546378190dab6ee1c6e"
+  },
+  "source_interval_closed": true,
+  "MP_lanes": [
+    {
+      "decimal_precision": 80,
+      "exact_original_expression_Q_and_P_from_saved_coefficients": {
+        "scope": "Unrounded original algebra from actual saved fc/mu/eta/lip/ga/den; alpha and sensing P retained separately",
+        "nu": "0.0",
+        "unconstrained_power": "0.38880679552299740975275263184526522622788572122352012283026882975",
+        "power": "0.38880679552299740975275263184526522622788572122352012283026882975",
+        "power_cap": "0.39810717055349720272516833574627526104450225830078125",
+        "primal_power_slack": "0.0093003750304997929724157039010100348166165370772611271697311702485",
+        "stationarity_Frobenius": "9.2977618311840973313782848244859620821302046526518706482895464464e-55",
+        "relative_stationarity": "3.6408242135292669893776261394240043424685491805869612681201725464e-64",
+        "complementarity": "0.0",
+        "dual_nonnegative": true,
+        "feasible": true,
+        "positive_shift_min_eigenvalue": "0.0000000034054621609582792733684707646907958298131332572427119306615320302",
+        "root_bisection_steps": 0,
+        "original_production_bisection_tolerance_changed": false,
+        "independent_reference_root_accuracy_only": true,
+        "solution_minus_original_incumbent_Frobenius": "0.080909332006058163925729289668113005967701458544782801399500549028",
+        "same_saved_fixed_channels_physical_objective": {
+          "rate": "28.756350388911320568844268870177472820810383723450762886424189008",
+          "NMSE": "0.99999999998998977305973234590780475849626233188426215202058531131",
+          "utility": "18.756350389011422838246945411099425235847760404608141366218335895"
+        },
+        "positive_structure_KKT_PASS": true
+      },
+      "structured_Q_but_original_dense_saved_P": {
+        "scope": "Counterfactual diagnostic: repair positive Q representation alone while retaining corrupted dense saved P",
+        "nu": "0.00000021820979471118452855039765963835217220404484380120966327523372513",
+        "unconstrained_power": "415.57077280716175999314764568081294017354749963637447683070254936",
+        "power": "0.39810717055349720272516833574627526104450225830078124999601975262",
+        "power_cap": "0.39810717055349720272516833574627526104450225830078125",
+        "primal_power_slack": "3.9802473750943987072850747642803846970491354375092018968009952048e-57",
+        "stationarity_Frobenius": "6.1997699374239185511740317858068319886437262190063848926622853813e-57",
+        "relative_stationarity": "2.4124412186626909377140312770770031654155757095820080643313916127e-66",
+        "complementarity": "8.6852896261907982544101020370621887096658937179692680733335174034e-64",
+        "dual_nonnegative": true,
+        "feasible": true,
+        "positive_shift_min_eigenvalue": "0.00000022161525687214280782376613040304296803385797705845237520589525716",
+        "root_bisection_steps": 200,
+        "original_production_bisection_tolerance_changed": false,
+        "independent_reference_root_accuracy_only": true,
+        "solution_minus_original_incumbent_Frobenius": "0.343703253314493812146014792259084447122774958144766719191197553",
+        "same_saved_fixed_channels_physical_objective": {
+          "rate": "28.756350388911319997600804169091670300275498805774964918099587993",
+          "NMSE": "0.99999999999298174686366885136747167594677538800714339775181447994",
+          "utility": "18.756350388981502528964115655416953540807744925703530940581443194"
+        },
+        "positive_structure_KKT_PASS": true
+      },
+      "exact_original_P_minus_actual_dense_P_Frobenius": "0.00000013799922753483771143019160622608495396576728193630532094235637731",
+      "original_incumbent_physical_objective": {
+        "rate": "28.756350382548035500743907941783143815650529198217418082051471693",
+        "NMSE": "0.99999999999556148397702651872747547734020313739454476433721014598",
+        "utility": "18.756350382592420660973642754508389042248497824271970438679370234"
+      },
+      "scope": "Only one captured fixed QCQP and fixed-channel scalar contractions; no original optimizer function is imported or executed."
+    },
+    {
+      "decimal_precision": 100,
+      "exact_original_expression_Q_and_P_from_saved_coefficients": {
+        "scope": "Unrounded original algebra from actual saved fc/mu/eta/lip/ga/den; alpha and sensing P retained separately",
+        "nu": "0.0",
+        "unconstrained_power": "0.38880679552299740975275263184526522622788572122352012283026882922",
+        "power": "0.38880679552299740975275263184526522622788572122352012283026882922",
+        "power_cap": "0.39810717055349720272516833574627526104450225830078125",
+        "primal_power_slack": "0.0093003750304997929724157039010100348166165370772611271697311707817",
+        "stationarity_Frobenius": "2.2655003792654780936265508993116496374131620727901594847597880243e-75",
+        "relative_stationarity": "8.8712625536666887625460436597282557465321028434554166636610271689e-85",
+        "complementarity": "0.0",
+        "dual_nonnegative": true,
+        "feasible": true,
+        "positive_shift_min_eigenvalue": "0.0000000034054621609582792733684707646907958298131332572427119306615320302",
+        "root_bisection_steps": 0,
+        "original_production_bisection_tolerance_changed": false,
+        "independent_reference_root_accuracy_only": true,
+        "solution_minus_original_incumbent_Frobenius": "0.080909332006058163925729289668113005967701458544782801399500548992",
+        "same_saved_fixed_channels_physical_objective": {
+          "rate": "28.756350388911320568844268870177472820810383723450762886424189006",
+          "NMSE": "0.99999999998998977305973234590780475849626233188426215202058531131",
+          "utility": "18.756350389011422838246945411099425235847760404608141366218335893"
+        },
+        "positive_structure_KKT_PASS": true
+      },
+      "structured_Q_but_original_dense_saved_P": {
+        "scope": "Counterfactual diagnostic: repair positive Q representation alone while retaining corrupted dense saved P",
+        "nu": "0.00000021820979471118452855039765963835217220404484380120966327073597212",
+        "unconstrained_power": "415.57077280716175999314764568081294017354749963637447683070254936",
+        "power": "0.39810717055349720272516833574627526104450225830078125",
+        "power_cap": "0.39810717055349720272516833574627526104450225830078125",
+        "primal_power_slack": "1.4482254053685672612584860933828045369326445389276610215983472241e-75",
+        "stationarity_Frobenius": "4.1967870040659541602958657282594816797821531912147441224078888414e-77",
+        "relative_stationarity": "1.633044783394570685232818139677043012231326759218856557807888937e-86",
+        "complementarity": "3.160169684009970583061114786669589456021719626911011790927684833e-82",
+        "dual_nonnegative": true,
+        "feasible": true,
+        "positive_shift_min_eigenvalue": "0.00000022161525687214280782376613040304296803385797705845237520139750415",
+        "root_bisection_steps": 266,
+        "original_production_bisection_tolerance_changed": false,
+        "independent_reference_root_accuracy_only": true,
+        "solution_minus_original_incumbent_Frobenius": "0.34370325331449381214601479225908444712277495814476671919468533707",
+        "same_saved_fixed_channels_physical_objective": {
+          "rate": "28.756350388911319997600804169091670300275498805774964918099587993",
+          "NMSE": "0.99999999999298174686366885136747167594677538800714339775181447994",
+          "utility": "18.756350388981502528964115655416953540807744925703530940581443194"
+        },
+        "positive_structure_KKT_PASS": true
+      },
+      "exact_original_P_minus_actual_dense_P_Frobenius": "0.00000013799922753483771143019160622608495396576728193630532094235637731",
+      "original_incumbent_physical_objective": {
+        "rate": "28.756350382548035500743907941783143815650529198217418082051471693",
+        "NMSE": "0.99999999999556148397702651872747547734020313739454476433721014598",
+        "utility": "18.756350382592420660973642754508389042248497824271970438679370234"
+      },
+      "scope": "Only one captured fixed QCQP and fixed-channel scalar contractions; no original optimizer function is imported or executed."
+    }
+  ],
+  "actual_failed_Q_guard_retained": true,
+  "actual_current_nu_was_unassigned": true,
+  "saved_fixed_QCQP_reference_not_original_full_optimization": true,
+  "production_sources_changed": false,
+  "new_trajectory_optimizer_or_MC_or_RNG_calls": 0,
+  "full_algorithm_or_reference_PASS": false,
+  "elapsed_seconds": 0.4758893999969587
+}

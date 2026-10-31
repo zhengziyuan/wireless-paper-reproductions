@@ -1,0 +1,74 @@
+{
+  "schema": "actual-only-native36-new-analytic-vector-existing-MP-comparison-closed-handoff-v1",
+  "native_probe_held_journal": {
+    "path": "local-origin/native-vector-host-v2\\actual-held-v2\\native36-new-analytic-probe-actual-owned-process.json",
+    "SHA256": "4b77e2ba5a3b291e3a880860655bd90bd5a932181e09c88cb42830eb2fee48a1",
+    "owner": {
+      "PID": 2924,
+      "creation_FILETIME": 134369212889424813,
+      "associated_with_any_Windows_job": true
+    },
+    "child": {
+      "PID": 29196,
+      "creation_FILETIME": 134369212894330105,
+      "associated_with_any_Windows_job": true
+    },
+    "actual_native_child_exit": 0,
+    "naturally_waited_original_handle_exact": true,
+    "source_guard_count": 14,
+    "source_interval_closed": true,
+    "host_errors": []
+  },
+  "pipeline_receipt": {
+    "path": "local-origin/native-vector-host-v2\\actual-held-v2\\ACTUAL_NEW_NATIVE_PROBE_AND_EXISTING_DECIMAL_COMPARISON_PIPELINE_RETURN_V1.json",
+    "SHA256": "9344890c5ba09ed20c0c2a88d2df5e6c0be5583bcc1ea782f849791b015e99c4",
+    "comparison_and_owner_return_code": 1,
+    "retained_error": {
+      "type": "ModuleNotFoundError",
+      "message": "No module named 'scipy'",
+      "traceback": "Traceback (most recent call last):\n  File \"local-origin/native-vector-host-v2\\run_one_native36_probe_existing_held_then_saved_decimal_comparison_v1.py\", line 46, in main\n    compare=load('only_existing_saved_decimal_comparison',job['comparison_entry']);code=compare.run(plan,journal)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"local-origin/native-vector-host-v2\\run_one_native36_probe_existing_held_then_saved_decimal_comparison_v1.py\", line 17, in load\n    spec=importlib.util.spec_from_file_location(name,path);m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);return m\n                                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap_external>\", line 999, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"sources/compare_only_saved_native_vectors_to_existing_MP_decimals_v1.py\", line 7, in <module>\n    from scipy.io import loadmat\nModuleNotFoundError: No module named 'scipy'\n"
+    }
+  },
+  "separate_actual_saved_decimal_stage": {
+    "path": "local-origin/native-vector-host-v2\\ACTUAL_ONLY_SAVED_DECIMAL_STAGE_EXISTING_ENVIRONMENT_FIRST_USE_V1.json",
+    "SHA256": "e93413059278c6b9360660b264921aed83f43d199a9a6b9f3dd93c065a70a677",
+    "actual_exit": 0,
+    "source_input_interval_closed": true
+  },
+  "actual_saved_decimal_report": {
+    "path": "local-origin/native-vector-actual-v2\\ACTUAL_NEW_NATIVE36_ANALYTIC_VECTORS_VS_EXISTING_MP80_MP100_SAVED_DECIMALS_V1.json",
+    "SHA256": "cbbfb448e83ceab1b909ca30814edb5606cdbf4728d6fd64cd18ce2669686032",
+    "bytes": 379212
+  },
+  "actual_native_vector_MAT": {
+    "path": "saved/actual-new-native36-analytic-vectors.mat",
+    "SHA256": "06405b5b35aca27cb3809c388bddc5f3035e68c892c16b2740df5b86df22a860"
+  },
+  "new_sourcebound_native_evaluate_calls": 36,
+  "counts": {
+    "update_w": 12,
+    "update_theta": 12,
+    "update_rotation": 12
+  },
+  "components_per_precision": 792,
+  "existing_reference_precisions": [
+    80,
+    100
+  ],
+  "all_36_native_vectors_existing_abs_gate_PASS": true,
+  "maximum_absolute_error": "2.309748658960939414295195790574539185233368349231970693200825701893075146878579590491779512481375149E-13",
+  "typed_real_imag_F_binary64_all_match": true,
+  "saved_comparison_source_input_interval_closed": true,
+  "new_MP_optimizer_update_MC_RNG_or_trial_calls": 0,
+  "original_bound": "exact Decimal.from_float(1e-5), strict less-than complex magnitude",
+  "final37_native_analytic_vectors_still_unverified_no_saved_MP_vector": true,
+  "historical_native_gradient_memory_not_recovered": true,
+  "new_native_execution_not_Python64_surrogate_vector": true,
+  "old_final_joint_RCG_PGA_failures_and_W_diagnostics_not_promoted": true,
+  "V1_preload_natural1_retained": {
+    "path": "local-origin/native-vector-host-v1\\actual-held-v1\\native36-new-analytic-probe-actual-owned-process.json",
+    "SHA256": "8acfe385aa2b91a5743e15a338f1d9b76121eaa296b63768861fc4772fe866fd",
+    "new_derivative_calls_reached": 0
+  },
+  "original_reference_fullsix_fullpaper_PASS": false
+}

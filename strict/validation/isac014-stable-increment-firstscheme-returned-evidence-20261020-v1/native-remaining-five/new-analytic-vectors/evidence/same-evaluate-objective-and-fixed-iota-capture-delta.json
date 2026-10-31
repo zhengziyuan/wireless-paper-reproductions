@@ -1,0 +1,25 @@
+{
+  "schema": "prepared-only-objective-capture-same-native-evaluate-call-v2",
+  "pre_objective_history": "source-8086f5fa4d14/pre-objective-capture-preparation-v1",
+  "source_changes": {
+    "probe_top_v1.m.txt": {
+      "old_SHA256": "9c4600a691c757333c4396424e33946bc384adf4ca93fffb2eeac9916b3f1fc8",
+      "new_SHA256": "84668316c5698e68cbf62d57a70934e2ddea9f9dd733ed393dc6d490ca9a39e3",
+      "objective_recorded_from_same_existing_evaluate_call": true
+    },
+    "probe_only_saved_native_remaining5_84_vectors_v1.m": {
+      "old_SHA256": "9aa2572c3fff31e27c3d4a174a27a5f446fb511dc96aac0b9436727438de5287",
+      "new_SHA256": "c23599e95bedbcbc1658bd27ee51872866ee72be5a844f9c2d9b19cc1d1cec68",
+      "objective_recorded_from_same_existing_evaluate_call": true
+    },
+    "compare_only_native84_vectors_to_existing_MP_decimals_v1.py": {
+      "old_SHA256": "faece1ade99b8226306b0b8a4d0cac836a871f3a76aef36c7aa692eb61d5d29a",
+      "new_SHA256": "91bd9a513a2c0e7e3b37fed00761798d7ef482aa0af174479aa6cd657c7e6cb8",
+      "original_gradient_error_loop_and_gate_unchanged": true
+    }
+  },
+  "native_five_science_function_suffix_SHA256_unchanged": "3f5c43fffbf637c2b61b15172f73e88261d351dbbf6a3a7d2f6f2ff84e82fb35",
+  "new_native_evaluate_calls_still84": true,
+  "no_MP_optimizer_MC_RNG_or_new_trials": true,
+  "gradient_comparison_and_original_tolerance_unchanged": true
+}

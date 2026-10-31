@@ -1,0 +1,302 @@
+{
+  "schema": "actual-native-remaining-five-89-saved-states-scope-v1",
+  "original_native_producer_exit": 2,
+  "MP_reader_actual_natural_exit": 0,
+  "MP_reader_source_input_interval_closed": true,
+  "returned_internal_states": 84,
+  "final_states": 5,
+  "total_distinct_saved_states_checked": 89,
+  "exact_completed_prior_reuse": {
+    "scheme_ordinals": [
+      2,
+      3
+    ],
+    "internal_states": 42,
+    "final_states": 2,
+    "new_MP_calls_for_these_states": 0
+  },
+  "new_V2_MP": {
+    "scheme_ordinals": [
+      4,
+      5,
+      6
+    ],
+    "internal_states": 42,
+    "final_states": 3
+  },
+  "schemes": [
+    {
+      "scheme_ordinal": 2,
+      "scheme_name": "Rot-BS & Fix-RIS",
+      "producer_entry_exit": 0,
+      "algorithm_full_stop": true,
+      "AO_blocks": 2,
+      "returned_inner_blocks": 6,
+      "final_states_checked": 1,
+      "all_saved_states_checked": 7,
+      "physics_feasibility_and_corresponding_gradient_formula_PASS": true,
+      "own_returned_strict_RCG_PGA_pass": true,
+      "strict_RCG_failed_calls": [],
+      "strict_PGA_failed_calls": [],
+      "RCG_applicable": true,
+      "final_RCG_strict_gradient_pass": true,
+      "final_PGA_strict_gradient_pass": true,
+      "final_joint_residuals": {
+        "scope": "Joint final W/theta/r with final optimal iota, distinct from earlier block-return stops; same-provider fixed evaluation is new saved-only diagnostic, not an algorithm stopping record.",
+        "parts": {
+          "W": {
+            "component_count": 24,
+            "maximum_component_error": "0.00000000000000070556088074624617186357305044352001263160647810534516570764060763881953537032975914491757140501854600527",
+            "existing_derivative_absolute_1e_minus5_pass": true,
+            "power_ball_multiplier_ray_estimate": "3.62975123303092848789348262206638334909723850721225348582813257046704042180488039320053254748740149298836",
+            "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "2.58031451598113649657296277944944916258822315945271880207446685149097626531723481041623354234002583952456",
+            "unit_gradient_step_projected_power_ball_residual": "0.287612384387531329709528821842934866217690419217149582577814457498446699040572390945993710951454806100745",
+            "complementarity_lambda_power_slack": "0.00233496071486550242831373151063082690042147483228366847993223437571493510863098347609347819089063565432299",
+            "author_W_stationarity_absolute_gate_reported": false,
+            "stationarity_PASS_not_assigned": true
+          },
+          "RCG": {
+            "component_count": 36,
+            "maximum_component_error": "0.00000000000000431861780303014663442051812902483066424630192082438173201581663122696673488176050828993898246993784667112",
+            "existing_derivative_absolute_1e_minus5_pass": true,
+            "normalized_unit_circle_tangent_norm": "0.000000825675902225816523184647944075870920289378326738626992055368650934714061862437076640084471446353747842195",
+            "strict_gradient_threshold": 1e-06,
+            "strict_gradient_pass": true
+          },
+          "PGA": {
+            "component_count": 6,
+            "maximum_component_error": "0.0000000000000390523104857007668752072385219506518579544958037268751122348359647843974879105489760694829793617154046268",
+            "existing_derivative_absolute_1e_minus5_pass": true,
+            "projected_gradient_norm": "0.000000910881259303459380456541210593387450003172902920322748950584176373075613935802541605974807296496615795085",
+            "strict_gradient_threshold": 1e-06,
+            "strict_gradient_pass": true,
+            "reference": "Unchanged independent MP rotation central difference h=1e-20"
+          }
+        },
+        "existing_derivative_absolute_1e_minus5_pass": true,
+        "joint_full_stationarity_PASS_not_assigned": true
+      },
+      "source_report_original_SHA256": "945c2093ec66a05d552659ae47274fa98d02a3e1eca639692e2b76a8de94e819",
+      "source_report_public_path": "reports/scheme-02-MP80-MP100.json.gz",
+      "exact_prior_MP_reused": true
+    },
+    {
+      "scheme_ordinal": 3,
+      "scheme_name": "Fix-BS & Rot-RIS",
+      "producer_entry_exit": 2,
+      "algorithm_full_stop": false,
+      "AO_blocks": 12,
+      "returned_inner_blocks": 36,
+      "final_states_checked": 1,
+      "all_saved_states_checked": 37,
+      "physics_feasibility_and_corresponding_gradient_formula_PASS": true,
+      "own_returned_strict_RCG_PGA_pass": false,
+      "strict_RCG_failed_calls": [
+        6
+      ],
+      "strict_PGA_failed_calls": [],
+      "RCG_applicable": true,
+      "final_RCG_strict_gradient_pass": false,
+      "final_PGA_strict_gradient_pass": false,
+      "final_joint_residuals": {
+        "scope": "Joint final W/theta/r with final optimal iota, distinct from earlier block-return stops; same-provider fixed evaluation is new saved-only diagnostic, not an algorithm stopping record.",
+        "parts": {
+          "W": {
+            "component_count": 24,
+            "maximum_component_error": "0.000000000000000692360100188725699239273440920799058968565386241620784291003753061112191243264453558511606265075610511428",
+            "existing_derivative_absolute_1e_minus5_pass": true,
+            "power_ball_multiplier_ray_estimate": "3.62388606910429447930164396414427736440717239418597036539307242894430616826548628448595443035649719553562",
+            "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "0.47191771929270423212819221988390398371679524581787978474544528651914561948911801155668286659573060182034",
+            "unit_gradient_step_projected_power_ball_residual": "0.0570420810232801433314698897116309982010776003880476040222638935724876529938096653200597691424761447848577",
+            "complementarity_lambda_power_slack": "0.0000000000369647820103679957653342306352755829433409093461557740326806730945180143484873090609516262617181530644789",
+            "author_W_stationarity_absolute_gate_reported": false,
+            "stationarity_PASS_not_assigned": true
+          },
+          "RCG": {
+            "component_count": 36,
+            "maximum_component_error": "0.00000000000000747611608645813667248648604464870340886090570446205948525321173847918431397281440700631461383894646383169",
+            "existing_derivative_absolute_1e_minus5_pass": true,
+            "normalized_unit_circle_tangent_norm": "0.000313442322577118753025501725395880268655261132122683827480300143052140178314230301718117148074030322424262",
+            "strict_gradient_threshold": 1e-06,
+            "strict_gradient_pass": false
+          },
+          "PGA": {
+            "component_count": 6,
+            "maximum_component_error": "0.000000000000133997959056823358579094582881365055239202633323709797163386271316821901586749616185434753051544429483883",
+            "existing_derivative_absolute_1e_minus5_pass": true,
+            "projected_gradient_norm": "0.00000288276515439913150694183455391668522713364648550126265941514039490509129867269343423177586335101606810835",
+            "strict_gradient_threshold": 1e-06,
+            "strict_gradient_pass": false,
+            "reference": "Unchanged independent MP rotation central difference h=1e-20"
+          }
+        },
+        "existing_derivative_absolute_1e_minus5_pass": true,
+        "joint_full_stationarity_PASS_not_assigned": true
+      },
+      "source_report_original_SHA256": "e2fecd8b2ef25a0fd6e290e03bde2de4d6acbdfee0651cf2143a2e5da270f53c",
+      "source_report_public_path": "reports/scheme-03-MP80-MP100.json.gz",
+      "exact_prior_MP_reused": true
+    },
+    {
+      "scheme_ordinal": 4,
+      "scheme_name": "Fix-BS & Fix-RIS",
+      "producer_entry_exit": 0,
+      "algorithm_full_stop": true,
+      "AO_blocks": 2,
+      "returned_inner_blocks": 6,
+      "final_states_checked": 1,
+      "all_saved_states_checked": 7,
+      "physics_feasibility_and_corresponding_gradient_formula_PASS": true,
+      "own_returned_strict_RCG_PGA_pass": true,
+      "strict_RCG_failed_calls": [],
+      "strict_PGA_failed_calls": [],
+      "RCG_applicable": true,
+      "final_RCG_strict_gradient_pass": true,
+      "final_PGA_strict_gradient_pass": true,
+      "final_joint_residuals": {
+        "scope": "Joint final W/theta/r with final optimal iota, distinct from earlier block-return stops; same-provider fixed evaluation is new saved-only diagnostic, not an algorithm stopping record.",
+        "parts": {
+          "W": {
+            "component_count": 24,
+            "maximum_component_error": "0.000000000000000503547523543861215461117075792117519188052594125234021271219755119061431395350412691648092323539368065885",
+            "existing_derivative_absolute_1e_minus5_pass": true,
+            "power_ball_multiplier_ray_estimate": "3.62388598694589514196461879047800949538336128995797031526032031267808759195752717713870244530497513690924",
+            "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "0.489824116880596270741213344333974047633679004143461042979007575413761545723622651720315093057151307511576",
+            "unit_gradient_step_projected_power_ball_residual": "0.0591924737058100277740802050619112452887679926226287738938034643145320290014415346800580641079809647046092",
+            "complementarity_lambda_power_slack": "0.0000000000269291561815896680164873310415126128047056838444443238411764390678489370520671634457866303254883835210608",
+            "author_W_stationarity_absolute_gate_reported": false,
+            "stationarity_PASS_not_assigned": true
+          },
+          "RCG": {
+            "component_count": 36,
+            "maximum_component_error": "0.00000000000000425341876559051397810789715500676264166865912778667245495322943474327257935559563454917981320137905062883",
+            "existing_derivative_absolute_1e_minus5_pass": true,
+            "normalized_unit_circle_tangent_norm": "0.000000993407701322999275109680394601347128066236017553393787088447621422372099694918871588739472054880900016624",
+            "strict_gradient_threshold": 1e-06,
+            "strict_gradient_pass": true
+          },
+          "PGA": {
+            "component_count": 6,
+            "maximum_component_error": "0.0000000000000384092278798432767167378423229379978383813605937758087123815790666717023049469362396856525982265207377736",
+            "existing_derivative_absolute_1e_minus5_pass": true,
+            "projected_gradient_norm": "0.0",
+            "strict_gradient_threshold": 1e-06,
+            "strict_gradient_pass": true,
+            "reference": "Unchanged independent MP rotation central difference h=1e-20"
+          }
+        },
+        "existing_derivative_absolute_1e_minus5_pass": true,
+        "joint_full_stationarity_PASS_not_assigned": true
+      },
+      "source_report_original_SHA256": "1e37587933d85120ae4b70f3c9b308c13413d2ded5485dabb4ba62989117eb9f",
+      "source_report_public_path": "reports/scheme-04-MP80-MP100.json.gz",
+      "exact_prior_MP_reused": false
+    },
+    {
+      "scheme_ordinal": 5,
+      "scheme_name": "Rot-BS & No-RIS",
+      "producer_entry_exit": 2,
+      "algorithm_full_stop": false,
+      "AO_blocks": 15,
+      "returned_inner_blocks": 30,
+      "final_states_checked": 1,
+      "all_saved_states_checked": 31,
+      "physics_feasibility_and_corresponding_gradient_formula_PASS": true,
+      "own_returned_strict_RCG_PGA_pass": false,
+      "strict_RCG_failed_calls": [],
+      "strict_PGA_failed_calls": [
+        1,
+        2
+      ],
+      "RCG_applicable": false,
+      "final_RCG_strict_gradient_pass": null,
+      "final_PGA_strict_gradient_pass": false,
+      "final_joint_residuals": {
+        "scope": "Joint final W/theta/r with final optimal iota, distinct from earlier block-return stops; same-provider fixed evaluation is new saved-only diagnostic, not an algorithm stopping record.",
+        "parts": {
+          "W": {
+            "component_count": 24,
+            "maximum_component_error": "0.000000000000000611910884103426075157987609331645872578488269958195940925307736416403257172723593471404308642684007089219",
+            "existing_derivative_absolute_1e_minus5_pass": true,
+            "power_ball_multiplier_ray_estimate": "3.62370564192818932662025177708996657013489132840370318333473865123115043441473179886550068927506602343564",
+            "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "0.0106684804546494477047546846028677612779998283624282888151860084594701731218727061393024285133867692950582",
+            "unit_gradient_step_projected_power_ball_residual": "0.00129355300375463051223188320558507336827985989362320776160896631062553796482092492255315469417169660857616",
+            "complementarity_lambda_power_slack": "0.00000000000000041674399660734564171520304038913802822155420132953648683158609560351444261511948372451372760137605340271",
+            "author_W_stationarity_absolute_gate_reported": false,
+            "stationarity_PASS_not_assigned": true
+          },
+          "PGA": {
+            "component_count": 6,
+            "maximum_component_error": "0.00000000000000059934481465831717790231159170592385513687770263808421721406238909958836176833982092872166941452833153635",
+            "existing_derivative_absolute_1e_minus5_pass": true,
+            "projected_gradient_norm": "0.00000910987796528889341151647958586944615695157569956830606639047249117988899431859683819958458718472139529596",
+            "strict_gradient_threshold": 1e-06,
+            "strict_gradient_pass": false,
+            "reference": "Unchanged independent MP rotation central difference h=1e-20"
+          }
+        },
+        "existing_derivative_absolute_1e_minus5_pass": true,
+        "joint_full_stationarity_PASS_not_assigned": true
+      },
+      "source_report_original_SHA256": "9cc935ec6bef0940e2deea66e116756df7e7152e148047d747d422dd779ea5f5",
+      "source_report_public_path": "reports/scheme-05-MP80-MP100.json.gz",
+      "exact_prior_MP_reused": false
+    },
+    {
+      "scheme_ordinal": 6,
+      "scheme_name": "Fix-BS & No-RIS",
+      "producer_entry_exit": 0,
+      "algorithm_full_stop": true,
+      "AO_blocks": 3,
+      "returned_inner_blocks": 6,
+      "final_states_checked": 1,
+      "all_saved_states_checked": 7,
+      "physics_feasibility_and_corresponding_gradient_formula_PASS": true,
+      "own_returned_strict_RCG_PGA_pass": true,
+      "strict_RCG_failed_calls": [],
+      "strict_PGA_failed_calls": [],
+      "RCG_applicable": false,
+      "final_RCG_strict_gradient_pass": null,
+      "final_PGA_strict_gradient_pass": true,
+      "final_joint_residuals": {
+        "scope": "Joint final W/theta/r with final optimal iota, distinct from earlier block-return stops; same-provider fixed evaluation is new saved-only diagnostic, not an algorithm stopping record.",
+        "parts": {
+          "W": {
+            "component_count": 24,
+            "maximum_component_error": "0.000000000000000500540034845348978168647455349287255666408506585837842238574811828613669226606272590172860540096870084751",
+            "existing_derivative_absolute_1e_minus5_pass": true,
+            "power_ball_multiplier_ray_estimate": "3.62358232356332094392581979847951189023025176142395905297058433124336875001945636260230287299300528955358",
+            "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "0.000594010895072399689449370363522504755249725189729735939874709390005648614018542759443406774222625609425752",
+            "unit_gradient_step_projected_power_ball_residual": "0.0000720260741219270104652182991139417629294874641749599822960748327238766689199992562276216678233147963580757",
+            "complementarity_lambda_power_slack": "-0.000000000000000224094733834838789762448605031931563346875479526920854980031097840927175182316506811528023798830509859519",
+            "author_W_stationarity_absolute_gate_reported": false,
+            "stationarity_PASS_not_assigned": true
+          },
+          "PGA": {
+            "component_count": 6,
+            "maximum_component_error": "0.000000000000000497224174578562614917218506533580436227994434489909182030686539372128799361637644897589630173854403577477",
+            "existing_derivative_absolute_1e_minus5_pass": true,
+            "projected_gradient_norm": "0.0",
+            "strict_gradient_threshold": 1e-06,
+            "strict_gradient_pass": true,
+            "reference": "Unchanged independent MP rotation central difference h=1e-20"
+          }
+        },
+        "existing_derivative_absolute_1e_minus5_pass": true,
+        "joint_full_stationarity_PASS_not_assigned": true
+      },
+      "source_report_original_SHA256": "81131b0123dff95f323bb2be9c5d69e8311e0b31ce893424ada7b24c8bba9a5f",
+      "source_report_public_path": "reports/scheme-06-MP80-MP100.json.gz",
+      "exact_prior_MP_reused": false
+    }
+  ],
+  "all_five_physics_feasibility_and_corresponding_gradient_formula_PASS": true,
+  "common_Python64_at_native_arrays_is_not_native_captured_derivative_vector": true,
+  "new_direct_native_vector_probe_for_these84_not_included_or_claimed": true,
+  "NoRIS_RCG_not_applicable_not_a_PASS": true,
+  "original_fixed_block_iota_not_assumed_optimal": true,
+  "W_no_author_absolute_gate_assigned": true,
+  "final_joint_stationarity_PASS_not_assigned": true,
+  "original_reference_optimized_dual_fullsix_fullpaper_PASS": false,
+  "new_packaging_math_optimizer_MC_RNG_or_worker_calls": 0
+}

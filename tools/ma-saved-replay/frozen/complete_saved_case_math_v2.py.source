@@ -1,0 +1,170 @@
+"""Future independent saved-state extension. No scientific imports at module load.
+
+Original three math helpers remain whole-BYTE unchanged. This adds observations
+and stricter source-config gap/stop binding, never an outer update/optimizer.
+"""
+from __future__ import annotations
+import hashlib
+from pathlib import Path
+import closed900_contract_stdlib_v2 as C
+
+def direct_design_gradient(t, antenna, mode, directions, beta, noise, power, kap, np):
+    """Differentiate Eq13/Eq37 through the full Gram matrix, not the MM minorant."""
+    n,m=t.shape[0],len(beta)
+    C.require(noise.shape==(m,), 'Original full M-vector noise contract')
+    h=np.exp(2j*np.pi*(t@directions.T))
+    gram=h.conj().T@h
+    result=[]
+    for axis in range(2):
+        dh=2j*np.pi*directions[:,axis]*h[antenna]
+        dgram=np.outer(dh.conj(),h[antenna])+np.outer(h[antenna].conj(),dh)
+        if mode=='zf':
+            sigma=np.eye(m)/(kap+1)+kap/(kap+1)*gram/n
+            inv=np.linalg.inv(sigma)
+            dsigma=kap/(kap+1)*dgram/n
+            dinv=-inv@dsigma@inv
+            q=np.diag(inv).real
+            eta=power*beta*(n-m)/(m*noise)
+            value=-np.sum(eta/(np.log(2)*q*(q+eta))*np.diag(dinv).real)
+        else:
+            num=beta**2*(n*n+n*(2*kap+1)/(kap+1)**2)
+            scale=np.outer(beta,beta)*kap**2/(kap+1)**2
+            np.fill_diagonal(scale,0)
+            diffuse=np.outer(beta,beta)*n*(2*kap+1)/(kap+1)**2
+            np.fill_diagonal(diffuse,0)
+            den=noise*n*np.sum(beta)/power+np.sum(scale*abs(gram)**2+diffuse,axis=1)
+            dden=np.sum(scale*2*np.real(gram.conj()*dgram),axis=1)
+            value=-np.sum(num/(np.log(2)*den*(den+num))*dden)
+        result.append(float(value))
+    return np.asarray(result)
+
+def complete_saved_state_audit(raw, job, cfg, independent, certificates, output):
+    # This entry is never called by preparation or STD tests.
+    import numpy as np
+    C.require((job['figure'],job['N'],job['M'],job['kappa'],job['A'])==(5,6,5,100,2),'Exact Fig5 original full case')
+    initial,lower,upper,draws,noise,channel,design=independent.geometry_functions(job,cfg)
+    C.require(draws.shape==(1000,6,5) and np.all(np.isfinite(draws)) and noise.shape==(5,), 'All original finite channel draws/noise vector')
+    geom=job['geometry']; elev=np.asarray(geom['elevation']); az=np.asarray(geom['azimuth'])
+    directions=np.c_[np.cos(elev)*np.sin(az),np.sin(elev)]
+    beta=1e-4*np.asarray(geom['distances_m'])**-2.8
+    output=Path(output)
+    C.require(not output.exists(), 'Fresh case observation folder')
+    output.mkdir(parents=True)
+    report={}; all_failures=[]
+    for mode in ('mrt','zf'):
+        history=raw['history'][mode]
+        C.require(history.get('converged') is True and history.get('termination')=='fractional_increase','Actual complete original source stop schema')
+        positions=np.asarray(history['positions'],float)
+        objectives=history['objective']; updates=history['coordinate_updates']
+        C.require(positions.shape==(len(objectives),6,2) and np.all(np.isfinite(positions)),'Complete finite sweep states')
+        C.require(np.array_equal(positions[0],initial),'Original initial half-wavelength lattice')
+        C.require(len(updates)==6*(len(objectives)-1),'Whole all6 coordinates every sweep')
+        stop_error=None
+        try:
+            fractions=C.stops_contract(objectives,cfg['fractional_increase_threshold'],cfg['maximum_AO_iterations'])
+        except Exception as exc:
+            fractions=[];stop_error={'type':type(exc).__name__,'message':str(exc)}
+            all_failures.append({'mode':mode,'kind':'complete_source_stop_transcript','error':stop_error})
+        modepath=output/mode; modepath.mkdir()
+        states={}; observations=[]
+        def observe_state(t, role):
+            # Only exact native binary64 state bytes within THIS case/mode are
+            # deduplicated; all source-order links remain, no approximate cache.
+            data=np.asarray(t,dtype='<f8').tobytes(order='C')
+            identity=hashlib.sha256(data).hexdigest()
+            if identity not in states:
+                rates,powers=independent.ma_rates(channel(t),job['power'],noise,mode)
+                good=(rates.shape==(1000,) and powers.shape==(1000,) and np.all(np.isfinite(rates)) and np.all(np.isfinite(powers)) and float(np.max(powers)-job['power'])<1e-9)
+                distances=np.linalg.norm(t[:,None,:]-t[None,:,:],axis=2)+np.eye(6)*1e9
+                feasible=(np.all(t>=lower-cfg['verification_tolerance']) and np.all(t<=upper+cfg['verification_tolerance']) and float(np.min(distances))>=.5-cfg['verification_tolerance'])
+                item={'native_binary64_Corder_position_bytes_hex':data.hex(),'position':t.tolist(),
+                      'fresh_independent_design_objective':float(design(t,mode)),
+                      'fresh_independent_all1000_sample_sum_rates':rates.tolist(),
+                      'fresh_independent_all1000_total_powers':powers.tolist(),
+                      'fresh_independent_MC_mean':float(np.mean(rates)),
+                      'minimum_pair_spacing':float(np.min(distances)),
+                      'all1000_finite_and_power_gate':bool(good),'physical_box_spacing_gate':bool(feasible),
+                      'original_saved_MC_history_available':False}
+                C.fresh_json(modepath/('state-'+identity+'.json'),item)
+                states[identity]={'file':'state-'+identity+'.json','sha256':C.sha(modepath/('state-'+identity+'.json'))}
+                if not good or not feasible:all_failures.append({'mode':mode,'kind':'full1000_saved_state','state_identity':identity})
+            return {'role':role,'state_identity':identity,**states[identity]}
+        sweep_links=[observe_state(t,{'kind':'accepted_sweep','index':i}) for i,t in enumerate(positions)]
+        for index,record in enumerate(updates):
+            sweep,antenna=divmod(index,6)
+            C.require(type(record['sweep']) is int and record['sweep']==sweep and type(record['antenna']) is int and record['antenna']==antenna,'Original causal sweep/antenna order')
+            pre=positions[sweep].copy(); pre[:antenna]=positions[sweep+1,:antenna]
+            post=pre.copy(); post[antenna]=positions[sweep+1,antenna]; delta=post[antenna]-pre[antenna]
+            prelink=observe_state(pre,{'kind':'coordinate_pre','index':index})
+            postlink=observe_state(post,{'kind':'coordinate_post','index':index})
+            A,b,vertices,primal_tol=certificates.polygon_vertices(pre,antenna,lower,upper)
+            # All source-determinant decisions retained. Floating enumeration
+            # is not an interval proof of mathematical vertex completeness.
+            pair_diagnostics=[]
+            for ii in range(len(A)):
+                for jj in range(ii):
+                    det=float(A[ii,0]*A[jj,1]-A[ii,1]*A[jj,0])
+                    pair_diagnostics.append({'i':ii,'j':jj,'actual_binary64_determinant':det,
+                        'original_near_parallel_cutoff':1e-13,'original_pair_skipped':abs(det)<=1e-13,
+                        'pair_matrix_condition_2norm':float(np.linalg.cond(np.asarray([A[ii],A[jj]])))})
+            domain=None; vertex_domain=None
+            if mode=='mrt':
+                grad,curvature=certificates.mrt_expansion(pre,antenna,directions,beta,noise,job['power'],job['kappa'])
+                increment=float(grad@delta-curvature/2*(delta@delta)); at_delta=grad-curvature*delta
+                tangent=grad
+            else:
+                base,grad,curvature=certificates.zf_expansion(pre,antenna,directions,beta,noise,job['power'],job['kappa'])
+                change=grad@delta-curvature/2*(delta@delta); domain=base+change
+                vertex_domain=base[None,:]+vertices@grad.T-np.sum(vertices*vertices,axis=1)[:,None]*curvature[None,:]/2
+                # Invalid polygon vertices are not evaluated by the log.
+                C.require(np.all(domain>0) and np.all(np.isfinite(domain)), 'All user accepted ZF log domains')
+                increment=float(np.sum(np.log1p(change/base))/np.log(2))
+                at_delta=np.sum((grad-curvature[:,None]*delta)/domain[:,None],axis=0)/np.log(2)
+                tangent=np.sum(grad/base[:,None],axis=0)/np.log(2)
+            direct_grad=direct_design_gradient(pre,antenna,mode,directions,beta,noise,job['power'],job['kappa'],np)
+            gap=max(0.,float(np.max((vertices-delta)@at_delta)))
+            primal=max(0.,float(np.max(A@delta-b)))
+            fixed_tol=C.fixed_gap_tolerance(cfg,record['before'])
+            saved=record['certificate']
+            finite=all(np.all(np.isfinite(x)) for x in (grad,curvature,tangent,direct_grad,at_delta,A,b,vertices))
+            gradient_error=float(np.max(abs(tangent-direct_grad)))
+            identities={
+                'saved_before_after_independent_design':max(abs(design(pre,mode)-record['before']),abs(design(post,mode)-record['after']))<1e-9,
+                'full_Gram_direct_vs_minorant_tangent_gradient':gradient_error<1e-9,
+                'source_fixed_gap_tolerance_exact_identity':type(saved['global_objective_gap_tolerance']) in (int,float) and saved['global_objective_gap_tolerance']==fixed_tol,
+                'source_fixed_global_coordinate_gap':gap<=fixed_tol,
+                'independent_normalized_polygon_primal':primal<=primal_tol,
+                'independent_minorant_saved_increment':abs(increment-saved['minorant_increment'])<1e-9,
+                'surrogate_causal_identity':abs(record['surrogate']-record['before']-increment)<1e-9,
+                'original_actual_minus_minorant_lower_bound':abs(record['after']-record['surrogate']-record['lower_bound_gap'])<1e-9 and record['lower_bound_gap']>=-1e-9,
+                'original_source_certificate_flags':saved['original_subproblem_unchanged'] is True and saved['certified_without_conic_solver_status'] is True and record['original_subproblem_unchanged'] is True,
+                'all_finite':bool(finite),
+            }
+            observation={'index':index,'sweep':sweep,'antenna':antenna,'pre':prelink,'post':postlink,'delta':delta.tolist(),
+                'full_normalized_polygon_A':A.tolist(),'full_normalized_polygon_b':b.tolist(),'all_polygon_vertices':vertices.tolist(),
+                'all_polygon_line_pair_determinant_and_condition_observations':pair_diagnostics,
+                'interval_certified_complete_mathematical_vertex_enumeration':False,
+                'independent_minorant_coordinate_gradient':grad.tolist(),'independent_minorant_curvature':np.asarray(curvature).tolist(),
+                'independent_design_gradient_full_Gram':direct_grad.tolist(),'independent_minorant_tangent_gradient':tangent.tolist(),
+                'independent_accepted_minorant_gradient':at_delta.tolist(),'tangent_gradient_abs_error':gradient_error,
+                'independent_minorant_increment':increment,'independent_concave_tangent_global_gap':gap,
+                'fixed_gap_tolerance_from_original_config_and_source_before':fixed_tol,'saved_gap_tolerance_unchanged':saved['global_objective_gap_tolerance'],
+                'independent_primal_violation':primal,'original_primal_tolerance':primal_tol,
+                'all_accepted_ZF_user_log_domains':None if domain is None else domain.tolist(),
+                'all_ZF_polygon_vertex_user_domains_not_logged':None if vertex_domain is None else vertex_domain.tolist(),
+                'gates':{key:bool(value) for key,value in identities.items()},
+                'global_gap_scope':'original concave coordinate minorant ONLY; not global nonconvex AO optimum',
+                'gradient_identity_validation_atol_predeclared_not_algorithm_or_paper_stop':1e-9,
+                'original_saved_gradient_RAW_available':False}
+            file=modepath/f'coordinate-{index:06d}.json'
+            C.fresh_json(file,observation)
+            observations.append({'index':index,'file':file.name,'sha256':C.sha(file),'all_gates_passed':all(identities.values())})
+            if not all(identities.values()):all_failures.append({'mode':mode,'kind':'coordinate_gate','index':index,'failed_gates':[k for k,v in identities.items() if not v]})
+        report[mode]={'all_source_order_sweeps':sweep_links,'all_source_order_coordinates':observations,'unique_exact_state_count':len(states),
+            'complete_fractional_transcript':fractions,'stop_error':stop_error,
+            'every_pre_post_and_accepted_state_all1000_MC_independently_recomputed':True,
+            'original_saved_intermediate1000_MC_history_available':False,'all_original_coordinate_gradients_and_gaps_independently_observed':True}
+    report['failures']=all_failures
+    report['complete_saved_state_extension_gates_passed']=not all_failures
+    C.fresh_json(output/'complete-state-coordinate-math.json',report)
+    return report

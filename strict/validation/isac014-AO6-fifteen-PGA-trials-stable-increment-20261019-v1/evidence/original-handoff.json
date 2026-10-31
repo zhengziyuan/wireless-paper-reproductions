@@ -1,0 +1,79 @@
+{
+  "schema": "actual-AO6-original-prefix-and-saved-fifteen-trial-cause-next-prepared-handoff-v1",
+  "actual_capture_journal": {
+    "path": "logical-source/0017/ISAC014-AO6-PGA-prefix-capture-actual-owned-process.json",
+    "bytes": 12424,
+    "SHA256": "d4bf4ff8216fde548f3017134b5409396dedcbdbf920805ed104073b8e09449b"
+  },
+  "owner_record": {
+    "PID": 55312,
+    "creation_FILETIME": 134369118947933883,
+    "associated_with_any_Windows_job": true
+  },
+  "initial_child_birth_from_held_journal": {
+    "PID": 28932,
+    "creation_FILETIME": 134369118951108416,
+    "associated_with_any_Windows_job": true
+  },
+  "capture_natural_exit_code": 0,
+  "same_original_held_handle_birth_and_exit": true,
+  "source_closed": true,
+  "host_errors": [],
+  "capture_elapsed_seconds": 131.47927670000354,
+  "all_six_original_blocks_IEEE64_equal": true,
+  "original_trial_count": 15,
+  "original_rejected": 14,
+  "original_accepted": 1,
+  "MP_report": {
+    "path": "logical-source/0004/ACTUAL_AO6_FIFTEEN_ORIGINAL_TRIALS_FULLPHYSICS_AND_FROZEN_CHANNEL_MP80_MP100_V1.json",
+    "bytes": 85695,
+    "SHA256": "d4ad08d10053038d7274d7a601a34ea6a74d91e41754d7a8da05ebb740d7fa90"
+  },
+  "candidate_actual_comparison": {
+    "path": "logical-source/0005/ACTUAL_SAME_FIFTEEN_TRIAL_STABLE_INCREMENT_VERSUS_CLOSED_MP80_MP100_V1.json",
+    "bytes": 29948,
+    "SHA256": "b9a8bf1baadef2210ffe45fde6e946f512625fb197434c056d0718604b6c1a70"
+  },
+  "MP80_MP100_stable": true,
+  "MP80_MP100_maximum_absolute_difference": "1.33933518247127613668622548786066623753784062037587893057973932832761377930487516194861585344007665998269e-59",
+  "fullphysical_false_rejections": 14,
+  "frozen_captured_channel_false_rejections": 1,
+  "fullphysical_false_acceptances": 0,
+  "fullphysical_PG_norm": "0.000001194690890376815373272251521211858820090446696127542672059786234294792929314217668745301234496087095",
+  "strict_PG_threshold_unchanged": 1e-06,
+  "strict_PG_pass": false,
+  "actual_rounded_binary64_dot_source_inequality_addendum": {
+    "all_fifteen_MP100_fullphysics_margins_positive": true,
+    "minimum_margin": "0.00000000000000000100887362909322396264505618826747783824928017779710374651688780168200708646677259088237649234184413361088",
+    "no_objective_gradient_oracle_recomputed": true,
+    "scope": "Main report uses exact promoted g dot saved delta and also stores original rounded dot. This addendum substitutes the exact promoted actual binary64 dot. All original false-rejection classifications unchanged."
+  },
+  "candidate_same_fifteen_decisions_match_MP100": true,
+  "candidate_increment_abs_error_max": "0.0000000000000000000000107180965835440873635724368377130883336732439198341771890547707917591992803015032418518789900000000000039",
+  "candidate_increment_relative_error_max": "0.000000000667422691025774699485630550972140751441137633791365008215735014819584003342242457724652269189840120245665",
+  "actual_hemisphere_minimum_absolute_cosine": 0.002513970286016187,
+  "hemisphere_crossings": 0,
+  "literal_nonfront_response_fallback_cases": 1035,
+  "cause_supported": "All fourteen rejected actual displacements improve the same full physical utility and satisfy original Armijo. Captured rounded channels make thirteen of those displacements appear decreasing even with MP contractions; trial0 is additionally rejected by binary64 scalar evaluation. Stable original-formula increments remove these observed false rejections without changing actual trial points or thresholds. This proves the fixed fixture cause, not future trajectory convergence.",
+  "prepared_next_plan": {
+    "path": "logical-source/0039/PREPARED_ONLY_STABLE_PGA_INCREMENT_SAME_CONTROLS_COLD_FIRST_SCHEME_PLAN_V1.json",
+    "bytes": 6116,
+    "SHA256": "517a0230cce68dc42a4f2c0db2b8519959fb4c3bd76bf75578974c773807bd19"
+  },
+  "source_inverse": {
+    "path": "logical-source/0038/EXACT_WHOLE_PREVIOUS_SOURCE_INVERSE_AND_ONLY_PGA_ACCEPTANCE_ARITHMETIC_DELTA_V1.json",
+    "bytes": 9034,
+    "SHA256": "c9baa33c3a80f0afdc92ed81b374c0787a5661a181bc2781835734b6eda20f01"
+  },
+  "new_trajectory_started": false,
+  "no_running_process_left_by_this_capture_or_saved_diagnosis": true,
+  "original_algorithm_OR_stop_and_strict_stationarity_separate": true,
+  "old_failed_outcomes_preserved": true,
+  "native_trajectory_not_started": true,
+  "full_reference_dual_or_paper_PASS": false,
+  "preparation_host_error_retained": {
+    "event": "Builder initial encoding label utf8-sig rejected before any scientific import/run; corrected to utf-8-sig; exact already-written identical draft source adopted, original builder draft preserved.",
+    "draft_file": "logical-source/0040/build_draft_before_encoding_label_fix.py",
+    "scientific_calls": 0
+  }
+}

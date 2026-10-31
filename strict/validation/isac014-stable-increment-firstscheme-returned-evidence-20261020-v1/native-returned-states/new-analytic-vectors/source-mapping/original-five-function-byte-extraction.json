@@ -1,0 +1,36 @@
+{
+  "schema": "wholebyte-native-five-local-functions-extraction-and-existing-MP-vector-layout-v1",
+  "original_source": "parent-origin/executed-native\\run_native_case014_first_scheme_stable_PGA_full_v1.m",
+  "original_SHA256": "76ae3a9001cf623709119ff783d03cefc5823cd63c2d3bb9779183b8ebb00315",
+  "original_byte_length": 30906,
+  "start_byte_offset": 3799,
+  "end_byte_offset_exclusive": 8243,
+  "source_line_start": 44,
+  "source_line_end": 123,
+  "extracted_bytes": 4444,
+  "extracted_SHA256": "3f5c43fffbf637c2b61b15172f73e88261d351dbbf6a3a7d2f6f2ff84e82fb35",
+  "new_driver": "local-origin/native-vector-host-v1\\probe_only_saved_native36_analytic_vectors_v1.m",
+  "new_driver_SHA256": "aec42b3d24b4c2c9a82bc5dcd9914dc84f8d8dacd2d4184e365f48fb145a9580",
+  "exact_inverse": "Remove the new top-level IO/hash functions; original[start:end] is the exact unchanged driver suffix.",
+  "functions": [
+    "is_rotation",
+    "is_response",
+    "is_channel_base",
+    "is_channels",
+    "is_evaluate"
+  ],
+  "no_update_initializer_optimizer_sampler_rng_or_QP_function_in_driver": true,
+  "existing_reference": "parent-origin/native-saved-MP\\ACTUAL_NATIVE_NEW36_AND_FINAL_EXISTING_MP80_MP100_PHYSICS_AND_GRADIENTS_V1.json",
+  "existing_reference_SHA256": "f83b256a80721fa546c4157983f2f65a5c4fb4ba12814fb36476ba2853dab44b",
+  "precision_lanes": [
+    "80",
+    "100"
+  ],
+  "first36_full_vectors_available": true,
+  "reference_flatten": "NumPy default C order",
+  "component_count_per_precision": 792,
+  "final37_missing_vectors_not_covered": true,
+  "new_native_execution_not_historical_memory_recovery": true,
+  "no_formula_or_original_binary64_1e_minus5_gate_change": true,
+  "preparation_evaluate_MP_optimizer_MC_RNG_calls": 0
+}

@@ -1,0 +1,201 @@
+{
+  "schema": "actual-final-ground-kappa10-U6-one-point-full8-four-saved-independent-gates-closure-v1",
+  "all_four_actual_saved_scientific_stages_pass": true,
+  "actual_stages": {
+    "MC1000": {
+      "report": {
+        "path": "local-source/95412bf19a9e/ACTUAL_NEW_ONLINE_POWER24_FULL1000_SAVED_OPERAND_INDEPENDENT_CLOSURE_V1.json",
+        "SHA256": "bab66e49534951f20f0135bde3ce9f4983a3d3d79fd3f6692ac3ee599892039b",
+        "bytes": 14409
+      },
+      "host_source_and_raw_binding": {
+        "path": "local-source/08c4f9b3255f/MC1000-actual-source-raw-loader-and-stage-outcome.json",
+        "SHA256": "9193363303d4bad997791e470742c35d9570fdfb85ef530a7e5874fa241bb395",
+        "bytes": 18530
+      },
+      "required_flags": {
+        "all_independent_checks_pass": true
+      },
+      "actual_stage_pass": true,
+      "source_interval_pass": true,
+      "errors_retained": null
+    },
+    "ownstate": {
+      "report": {
+        "path": "local-source/2fd88e7ca2be/ownstate-QT-phase-ACTUAL_FULL8_SAVED_OWNSTATE_SCOPE_SUMMARY_V1.json",
+        "SHA256": "80483dd16e917857db5ab0ec6a36d13951467a602b7b608ce16c3b46fbad15d2",
+        "bytes": 1599
+      },
+      "host_source_and_raw_binding": {
+        "path": "local-source/a139cfd94b69/ownstate-actual-source-raw-loader-and-stage-outcome.json",
+        "SHA256": "9a9aea0451b78b3472253150d19a2c4954665dcd5343416d34c7a3bf7166374a",
+        "bytes": 18755
+      },
+      "required_flags": {
+        "all8_new_states_all_actual_QT_all_phase_and_direct_preP7_MP80_MP100_pass": true,
+        "actual_same_handle_source_interval_pass": true,
+        "original_native_or_python_source_input_closed": true
+      },
+      "actual_stage_pass": true,
+      "source_interval_pass": true,
+      "errors_retained": null
+    },
+    "stops": {
+      "report": {
+        "path": "local-source/03d496a9d75f/stops-selection-freshMCinput-binding.json",
+        "SHA256": "ada488a4070eb3273df2e2fa8ada1327276963e7b9f96d9632b96f6795d57cb1",
+        "bytes": 11480
+      },
+      "host_source_and_raw_binding": {
+        "path": "local-source/af2ed2ab2c5b/stops-actual-source-raw-loader-and-stage-outcome.json",
+        "SHA256": "e8fc562017a074b70e2983b38e296dcbb8bfabdee91cd9b228c36183a031f03d",
+        "bytes": 17922
+      },
+      "required_flags": {
+        "all8_signed_relative_stops_solver_diagnostics_and_phase_status_bijections_pass": true,
+        "all_recorded_phase_unit_domains_and_phase_context_fields_pass": true,
+        "both_full_mu_halving_fixed_preamble_power_and_strict_PhiStar_pass": true,
+        "all11_online_MC_and_full8_input_arrays_bitwise_identical": true
+      },
+      "actual_stage_pass": true,
+      "source_interval_pass": true,
+      "errors_retained": null
+    },
+    "initial": {
+      "report": {
+        "path": "local-source/4ef585caf504/TS-initial-incumbent-MP.json",
+        "SHA256": "7492afbdd84162f8b42271e0567e43aff69381dd4682c20056d2f8428f993b6d",
+        "bytes": 62340
+      },
+      "host_source_and_raw_binding": {
+        "path": "local-source/4fe8f2e85bb1/initial-actual-source-raw-loader-and-stage-outcome.json",
+        "SHA256": "6f2a7629aa541863e23164eb5a85015011e7d32e0c9e45d0f7e774a4c010800c",
+        "bytes": 17702
+      },
+      "required_flags": {
+        "all_actual_TS_initial_incumbents_independent_MP80_MP100_and_saved_h0_fields_pass": true
+      },
+      "actual_stage_pass": true,
+      "source_interval_pass": true,
+      "errors_retained": null
+    }
+  },
+  "stage_order": [
+    "MC1000",
+    "ownstate",
+    "stops",
+    "initial"
+  ],
+  "actual_tool_natural_exit_observations": {
+    "MC1000": {
+      "tool_session_id": 94968,
+      "terminal_exit_code": 0
+    },
+    "ownstate": {
+      "tool_session_id": 24236,
+      "terminal_exit_code": 0
+    },
+    "stops": {
+      "completed_exec_chunk_id": "72d133",
+      "terminal_exit_code": 0
+    },
+    "initial": {
+      "tool_session_id": 2718,
+      "terminal_exit_code": 0
+    }
+  },
+  "actual_new_auditor_invocations": 4,
+  "actual_new_optimizer_RNG_MC_draw_or_input_generation_calls": 0,
+  "prepared_reader_plan": {
+    "path": "local-source/943842f61c9c/PREPARED_FINAL_GROUND_KAPPA10_U6_FOUR_SAVED_SCIENCE_STAGES_PLAN_V1.json",
+    "SHA256": "c8d5091200f2ca798b1bd52b2c2bcbc4efadba6854b67c0f66c2dbb145deb347",
+    "bytes": 19200
+  },
+  "actual_admission": {
+    "path": "local-source/d685f0dd37df/ROOT_ACTUAL_FINAL_GROUND_KAPPA10_CLOSED_RECORDING_FOUR_SAVED_SCIENCE_ADMISSION_V1.json",
+    "SHA256": "08575bfbe43ca95f68151227f64e4021fc104ee45ae265d7d01c464e53a582ef",
+    "bytes": 3764
+  },
+  "actual_input": {
+    "configuration_SHA256": "1be0843c852d9fdafe00896e903472a2ad5596da26d3bd62573f2ca534e23acc",
+    "canonical_data_NPZ_SHA256": "ca584f9bdf3eb551f8399026c82693c8072cb7c10e1e198baf29f8a7d5f93353",
+    "dimensions": {
+      "J": 3,
+      "U": 6,
+      "N": 16,
+      "M": 25,
+      "K": 1
+    },
+    "source_working_linear_beta_R": 1,
+    "selected_linear_beta_R": 10,
+    "kappa_N_R_G_dB": [
+      20,
+      10,
+      30
+    ],
+    "power_W_each_satellite": 50,
+    "normalized_INR": 0.01
+  },
+  "ownstate_scope": {
+    "actual_final_states": 8,
+    "actual_QT_candidates": 56,
+    "actual_phase_endpoints": 53,
+    "complex_coordinates_per_phase": 150,
+    "total_complex_gradient_components": 7950,
+    "actual_preP7_indices": [
+      26,
+      47
+    ],
+    "all_actual_states_candidates_phase_operands_gradients_and_direct_preP7_MP80_MP100": true,
+    "actual_same_held_producer_handle_and_source_interval_pass": true,
+    "original_producer_source_input_closed": true,
+    "actual_producer_natural_exit": 0
+  },
+  "fresh_original1000": {
+    "count": 1000,
+    "links_per_draw": 18,
+    "sample_moment_values": 36000,
+    "checks": {
+      "all_actual_effective_h_vectors_match_physical_contraction": true,
+      "actual_recorded_exact_second_fourth_match_independent_theory": true,
+      "all12000_reported_sample_moments_match_physical_received_signal": true,
+      "all_raw_operands_consumed": true,
+      "empirical_second_and_fourth_moments_match_native": true,
+      "independent_finite_Rician_expected_moments_MP80_MP100_pass": true,
+      "original_reported_MC_error_metrics_reproduced": true
+    },
+    "all_independent_checks_pass": true,
+    "maximum_effective_h_component_error": 6.938893903907228e-17,
+    "maximum_sample_second_error": 4.440892098500626e-16,
+    "maximum_sample_fourth_error": 8.881784197001252e-16,
+    "second_moment_max_relative_error": 0.004583429642163943,
+    "fourth_moment_max_relative_error": 0.009255954026168358,
+    "maximum_MP80_MP100_expected_moment_difference": "4.357655290929824212799999999999948291656311398364075088230326927203514707505010274773809413565427665e-80",
+    "raw_primitive_payload_SHA256": "797c61de4d5130aca995b4b07fbac05f7f51ae62f26c717b6855e56a3f9d6827",
+    "complete_metadata_SHA256": "9f7d2c722cb52b2a0737cb3b091f9dcd3adb804e102c0a5cd58dce93cf54c84b",
+    "original1000_callback_operands_captured": true,
+    "old_betaR1_MC_audit_or_return_reused": false,
+    "optimized_performance_MC_population_recovered": false
+  },
+  "initial_incumbent_source_dataflow": {
+    "actual_saved_summary": {
+      "path": "local-source/4ef585caf504/TS-initial-incumbent-MP.json",
+      "SHA256": "7492afbdd84162f8b42271e0567e43aff69381dd4682c20056d2f8428f993b6d",
+      "bytes": 62340
+    },
+    "source_proven_initial_incumbents_not_claimed_all_directly_captured": true,
+    "original_thresholds_precision_and_source_assigned_phase_continuity_preserved": true,
+    "all_actual_TS_initial_incumbents_independent_MP80_MP100_and_saved_h0_fields_pass": true
+  },
+  "retained_scope": {
+    "original_betaR1_results_and_initial_export_failure_retained": true,
+    "earlier_raw_input_strict_complex_failures_retained": 10,
+    "author_cached_W_random_phase_and_performance_averaging_population_recovered": false,
+    "original_reference_PASS": false,
+    "independent_optimized_solution_equality_PASS": false,
+    "final_U2_or_all_six_papers_full_scenarios_PASS": false,
+    "full_paper_PASS": false,
+    "reference_comparison_scope": "Root observed five RIS curves now within0.188-0.660percent absolute relative discrepancy at this one point, still far outside EPS precision. This gate is not promoted.",
+    "interpretation": "One new U6 point and original current reconstruction controls only.1000 draws validate moments, not optimized performance averaging."
+  }
+}

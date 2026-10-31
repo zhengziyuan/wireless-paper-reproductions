@@ -1,0 +1,102 @@
+{
+  "actual_negative_controls": 15,
+  "all_expected_invalid_full_native_moment_evidence_rejected": true,
+  "complete183_case67_group_positive_control_pass": true,
+  "original_full_group0_primitive_positive_control_pass": true,
+  "complete1000_draw_archive_positive_control_pass": true,
+  "source_before": {
+    "E:\\ZiyuanZhengProject\\paper-reproduction-data\\resume-20261017\\cooperative-native183-complete-moment-recipe-public-staging-v1\\recipe-manifest.json": "63f7b306d96940f5b20a300fa26a8eef1a13614a2a549453335618ed881e5fbb",
+    "E:\\ZiyuanZhengProject\\paper-reproduction-data\\resume-20261017\\cooperative-native183-complete-moment-recipe-public-staging-v1\\complete-native183-moment-recipe.json": "ec203644ce159ab38f0861c4dfeb1ae38664ff5136a384b50a08e03775f6d8e3",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\cooperative-stable-replay\\native183_moment_recipe_v1.py": "ebc3aac386743b3043c2b7db02122a7e7a729be5c7278393a8f1c7ff320e778c",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\cooperative-stable-replay\\test_native183_moment_recipe_controls_v1.py": "27686f49836654ae07cd9dbba7847a136f2543fa072520a390d7d97d2a6de1dd",
+    "E:\\ZiyuanZhengProject\\paper-reproduction-data\\resume-20261017\\cooperative-native-case000-MC1000-primitives-v1\\index.json": "3c71e5c17923adc8de798c2608ceb78ec1fd2910810b1ef3fcefb721da7d2ce9",
+    "E:\\ZiyuanZhengProject\\paper-reproduction-data\\resume-20261017\\cooperative-native-case000-MC1000-primitives-v1\\declared-moment-stream.bin": "1b12ac9d28223d652bdd753607cdb2488c7fcf9e12f4d0d33b6d0961fd39d8f1"
+  },
+  "source_after": {
+    "E:\\ZiyuanZhengProject\\paper-reproduction-data\\resume-20261017\\cooperative-native183-complete-moment-recipe-public-staging-v1\\recipe-manifest.json": "63f7b306d96940f5b20a300fa26a8eef1a13614a2a549453335618ed881e5fbb",
+    "E:\\ZiyuanZhengProject\\paper-reproduction-data\\resume-20261017\\cooperative-native183-complete-moment-recipe-public-staging-v1\\complete-native183-moment-recipe.json": "ec203644ce159ab38f0861c4dfeb1ae38664ff5136a384b50a08e03775f6d8e3",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\cooperative-stable-replay\\native183_moment_recipe_v1.py": "ebc3aac386743b3043c2b7db02122a7e7a729be5c7278393a8f1c7ff320e778c",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\cooperative-stable-replay\\test_native183_moment_recipe_controls_v1.py": "27686f49836654ae07cd9dbba7847a136f2543fa072520a390d7d97d2a6de1dd",
+    "E:\\ZiyuanZhengProject\\paper-reproduction-data\\resume-20261017\\cooperative-native-case000-MC1000-primitives-v1\\index.json": "3c71e5c17923adc8de798c2608ceb78ec1fd2910810b1ef3fcefb721da7d2ce9",
+    "E:\\ZiyuanZhengProject\\paper-reproduction-data\\resume-20261017\\cooperative-native-case000-MC1000-primitives-v1\\declared-moment-stream.bin": "1b12ac9d28223d652bdd753607cdb2488c7fcf9e12f4d0d33b6d0961fd39d8f1"
+  },
+  "controls": [
+    {
+      "control": "one_original_case_removed",
+      "rejected": true,
+      "actual_reason": "A complete original case/group ordinal is missing or duplicated"
+    },
+    {
+      "control": "duplicate_original_case_ordinal",
+      "rejected": true,
+      "actual_reason": "A complete original case/group ordinal is missing or duplicated"
+    },
+    {
+      "control": "one_exact_group_removed",
+      "rejected": true,
+      "actual_reason": "A complete original case/group ordinal is missing or duplicated"
+    },
+    {
+      "control": "different_exact_coefficients_relabelled_as_same_group",
+      "rejected": true,
+      "actual_reason": "Duplicated exact native input group"
+    },
+    {
+      "control": "configured1000_reduced_to999",
+      "rejected": true,
+      "actual_reason": "Require complete original dimensions and1000 draws"
+    },
+    {
+      "control": "original_complex_vector_dimension_changed",
+      "rejected": true,
+      "actual_reason": "Full r,G,d and both per-link powers are required"
+    },
+    {
+      "control": "full_primitive_bank_replaced_by_short_norms",
+      "rejected": true,
+      "actual_reason": "Full r,G,d and both per-link powers are required"
+    },
+    {
+      "control": "wrong_original_case_to_group_alias",
+      "rejected": true,
+      "actual_reason": "A native case was assigned to different exact coefficients/seed/count/source"
+    },
+    {
+      "control": "changed_complete_draw_archive_bytes",
+      "rejected": true,
+      "actual_reason": "A complete recipe/native numerical member differs: references/group-000/all1000-native-sample-moments.npz"
+    },
+    {
+      "control": "one_full_complex_operand_byte_changed",
+      "rejected": true,
+      "actual_reason": "Every actual full r,G,d operand byte must match"
+    },
+    {
+      "control": "one_full_operand_binary64_value_missing",
+      "rejected": true,
+      "actual_reason": "Every actual full r,G,d operand byte must match"
+    },
+    {
+      "control": "different_original_native_seed",
+      "rejected": true,
+      "actual_reason": "The full declared native moment export header differs"
+    },
+    {
+      "control": "one_original_per_draw_moment_row_missing",
+      "rejected": true,
+      "actual_reason": "Changed shape/dtype or nonfinite per-draw moment"
+    },
+    {
+      "control": "nonfinite_per_draw_moment",
+      "rejected": true,
+      "actual_reason": "Changed shape/dtype or nonfinite per-draw moment"
+    },
+    {
+      "control": "one_original_native_sample_power_bit_changed",
+      "rejected": true,
+      "actual_reason": "Original native per-draw powers differ"
+    }
+  ],
+  "original_optimizer_calls": 0,
+  "configured_performance_MC_or_original_reference_pass": false
+}

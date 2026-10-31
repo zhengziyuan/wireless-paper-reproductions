@@ -1,0 +1,174 @@
+{
+  "schema": "PARTIAL_FIRST_NATIVE_CASE_EXECUTED_IMPLEMENTATION_AND_DATA_MANIFEST_V1",
+  "artifact_kind": "Prepared immutable partial-evidence snapshot; actual publication recorded separately",
+  "scope": {
+    "original_case": 1,
+    "N": 16,
+    "K": 15,
+    "U": 1,
+    "complete_rows": 15,
+    "precisions": [
+      80,
+      100
+    ],
+    "complete_row_precision_pairs": 30,
+    "native_complex_components_checked": 256,
+    "crossprecision_real_imag_checks": 512,
+    "ordered_cross_products_per_precision": 210,
+    "full_paper_or_all_six_PASS": false
+  },
+  "data": [
+    {
+      "package_relative_path": "native-input-words.json",
+      "bytes": 34283,
+      "SHA256": "abeb5ddccb9f8f5b0eb5a3106d281eec610d179b8e59722e92b289d644358d76"
+    },
+    {
+      "package_relative_path": "scope-and-results.json",
+      "bytes": 3350,
+      "SHA256": "b42348e9eb787f0ce0b667184e0bbdb633c2d9e6c36bcacec8bf556b726e52b8"
+    },
+    {
+      "package_relative_path": "first-case-projector-values-only.json.gz",
+      "bytes": 179325,
+      "SHA256": "a8a7121773b1453fb78305fd2f78af9a5ecdd9c1aaf3ae2a07b379c786d71d37"
+    },
+    {
+      "package_relative_path": "all256-native-P-components-original-gates.jsonl.gz",
+      "bytes": 184700,
+      "SHA256": "7ceb974a6bff652d96d2b71f3e285176b7d2f4dac1afb832a4fd806d590f1f49"
+    }
+  ],
+  "executed_sources": [
+    {
+      "name": "compute_first_case_rows.py",
+      "bytes": 22459,
+      "executed_original_SHA256": "c891d850d8af940cd9c5f00bbc220070103b6dc8b2201c82136a4f6311f2668e",
+      "recorded_execution_role": "Executed rows1..14 host; current hash bound by actual final row-batch terminal",
+      "included_in_this_release": false,
+      "omitted_reason": "Historical machine-specific execution host; private source/cache admissions are absent. No portable replacement was executed. Only its original execution fingerprint is disclosed."
+    },
+    {
+      "name": "compare_first_case_composite.py",
+      "bytes": 31318,
+      "executed_original_SHA256": "ea59f51ba66ec867cc554602a0ab81471a1e2408a97e4c4c03e3647c8862deba",
+      "recorded_execution_role": "Executed hit-only composite host",
+      "included_in_this_release": false,
+      "omitted_reason": "Historical machine-specific execution host; private source/cache admissions are absent. No portable replacement was executed. Only its original execution fingerprint is disclosed."
+    },
+    {
+      "name": "verify_persistent_projector_cache.py",
+      "bytes": 22343,
+      "executed_original_SHA256": "bea279d15fd019c9aefeca16a40ee8ec66e36b3042b84883370dc603566fd16e",
+      "recorded_execution_role": "Executed row0 cache producer and stable helper source",
+      "included_in_this_release": false,
+      "omitted_reason": "Historical machine-specific execution host; private source/cache admissions are absent. No portable replacement was executed. Only its original execution fingerprint is disclosed."
+    },
+    {
+      "name": "precision_keyed_projector.py",
+      "bytes": 2983,
+      "executed_original_SHA256": "7bc74b3ed97d8a9d2a13cf26ec2d001d72b46ccfb7480885f1ac11ca3149dc8d",
+      "recorded_execution_role": "Actual memo projector numeric source; original136 quad recipe",
+      "included_in_this_release": true,
+      "package_relative_path": "sources/precision_keyed_projector.py"
+    },
+    {
+      "name": "persistent_exact_kernel_cache.py",
+      "bytes": 34021,
+      "executed_original_SHA256": "f040b842bb45a7429babb7b72d6c2b7ed9800ffcdf24729a49b629d2e755850b",
+      "recorded_execution_role": "Executed exact MPword cache encoding/admitted-hit verification",
+      "included_in_this_release": true,
+      "package_relative_path": "sources/persistent_exact_kernel_cache.py"
+    },
+    {
+      "name": "exact_kernel_dependencies_sourceonly_v1.py",
+      "bytes": 6593,
+      "executed_original_SHA256": "5111b67c375094a0c4dbd01b3f37436cc2361074d8a52fec294a750dc4239751",
+      "recorded_execution_role": "Original six whole key functions used; other file functions not newly certified",
+      "included_in_this_release": true,
+      "package_relative_path": "sources/exact_kernel_dependencies_sourceonly_v1.py"
+    },
+    {
+      "name": "canonical_code_fields.py",
+      "bytes": 3227,
+      "executed_original_SHA256": "b2010a0e6853cfadcb8f2bd36e7426aaaf44d313e9e0c988a0a711599187755b",
+      "recorded_execution_role": "Executed canonical numeric code-field source binding",
+      "included_in_this_release": true,
+      "package_relative_path": "sources/canonical_code_fields.py"
+    },
+    {
+      "name": "independent_geometry_kernels_sourceonly_v1.py",
+      "bytes": 6678,
+      "executed_original_SHA256": "ab1bd6f3f45c25d1dbf5d845a45bf7ef95624cf7f4dc7ba1bf0e1ae7f233de6d",
+      "recorded_execution_role": "Original complete_projector_square; ordered15+210 products and final symmetrization",
+      "included_in_this_release": true,
+      "package_relative_path": "sources/independent_geometry_kernels_sourceonly_v1.py"
+    },
+    {
+      "name": "full_coordinate_comparison_sourceonly_v4.py",
+      "bytes": 16973,
+      "executed_original_SHA256": "bc6eea60b6a40df011b85b8d0604882b08c6dce8aaa3b548bb394a7815fa61d4",
+      "recorded_execution_role": "Original compare_value called for all256 native complex entries",
+      "included_in_this_release": true,
+      "package_relative_path": "sources/full_coordinate_comparison_sourceonly_v4.py"
+    },
+    {
+      "name": "literal_typed_MP_adapter_sourceonly_v1.py",
+      "bytes": 5753,
+      "executed_original_SHA256": "4ec08af71144d9720267c1ce571aa7a0e42db6cfdb8d6bc1f6ed9ab613940f81",
+      "recorded_execution_role": "Declared loaded aggregation dependency; no claim that every function in this whole file was executed",
+      "included_in_this_release": true,
+      "package_relative_path": "sources/literal_typed_MP_adapter_sourceonly_v1.py"
+    },
+    {
+      "name": "exact_CVX_SDPT3_terminal_contract_stdlib_v3.py",
+      "bytes": 9639,
+      "executed_original_SHA256": "a54726da7f0deb79c753aea3d7c1f5ca731061bf588e5d8e54ab3567273b86da",
+      "recorded_execution_role": "Declared loaded aggregation dependency; no claim that every function in this whole file was executed",
+      "included_in_this_release": true,
+      "package_relative_path": "sources/exact_CVX_SDPT3_terminal_contract_stdlib_v3.py"
+    },
+    {
+      "name": "bounded_closed_typed_reader_sourceonly_v1.py",
+      "bytes": 15982,
+      "executed_original_SHA256": "55eaacb3afdad7e812c1f8080638390de248fbb0807e332a0e5d0b79fff4ac43",
+      "recorded_execution_role": "Declared loaded aggregation dependency; no claim that every function in this whole file was executed",
+      "included_in_this_release": true,
+      "package_relative_path": "sources/bounded_closed_typed_reader_sourceonly_v1.py"
+    },
+    {
+      "name": "full18_scientific_scope_contract_stdlib_v1.py",
+      "bytes": 16308,
+      "executed_original_SHA256": "4d8542cabcbf24f84d1383e7240a6c1f8533413a14c86760f3b24eed74a7b53c",
+      "recorded_execution_role": "Declared loaded aggregation dependency; no claim that every function in this whole file was executed",
+      "included_in_this_release": true,
+      "package_relative_path": "sources/full18_scientific_scope_contract_stdlib_v1.py"
+    }
+  ],
+  "included_source_count": 10,
+  "fingerprint_only_omitted_host_count": 3,
+  "existing_guard_dependency": {
+    "repository_path": "tools/hotspot-source-guard-v11/call_only_numeric_source_guard.py",
+    "immutable_commit": "973d44d2116d8af01274651b99c5bb9ba33fe75c",
+    "bytes": 8101,
+    "SHA256": "8477e6cc75a754e8887fc95770f7f60e03ac1b8ab13f034dded78208e057b56a",
+    "reuploaded_here": false
+  },
+  "recorded_runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "mpmath_version": "1.4.1",
+    "selected_mpmath_source_files": 93,
+    "recorded_complete_source_epoch_SHA256": "77be0b924452969c33cdac4149eae1ac9034d197ced71ed999ca9b9b21e55bd0",
+    "dependency_sources_bundled": false,
+    "recorded_run_metadata_not_fresh_package_equivalence_proof": true
+  },
+  "limitations": [
+    "Executed-source and saved-result provenance only; no validated standalone portable entry point.",
+    "Three historical hosts are fingerprint-only omissions. Replacing their paths creates new code requiring new execution evidence.",
+    "Historical cache keys are opaque provenance; private descriptor preimages and complete three-file cache admissions are absent. The original cache API cannot replay this value-only export.",
+    "The 93 frozen mpmath sources are not bundled. Version text alone does not establish byte-identical runtime equivalence.",
+    "Loaded dependency provenance does not mean every function in the whole file was executed or certified.",
+    "No rigorous quadrature-error certificate, full optimizer, physical feasibility, convergence, original-paper-reference, full18 or six-paper acceptance claim."
+  ],
+  "metadata_history": "scope-and-results.json retains its historical Prepared locally publication_status; it describes preparation, not subsequent remote publication. Actual upload/readback is recorded separately."
+}

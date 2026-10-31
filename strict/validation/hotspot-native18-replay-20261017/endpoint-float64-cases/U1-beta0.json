@@ -1,0 +1,82 @@
+{
+  "U": 1,
+  "beta_db": 0,
+  "starts": 6,
+  "failed_starts": 0,
+  "case_errors": [],
+  "maximum_metric_error": 1.3130829756846651e-11,
+  "records": [
+    {
+      "U": 1,
+      "beta_db": 0,
+      "scheme": "NoRIS",
+      "start_id": 0,
+      "metric_max_absolute_error": 4.263256414560601e-14,
+      "power_margin": 7.105427357601002e-14,
+      "minimum_NHU_margin": 2.2506585484194375e-10,
+      "cross_language_final_phase_gradient_norm": null,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "U": 1,
+      "beta_db": 0,
+      "scheme": "NoRIS",
+      "start_id": 1,
+      "metric_max_absolute_error": 2.842170943040401e-14,
+      "power_margin": 1.2036593943776097e-10,
+      "minimum_NHU_margin": 5.669632541227543e-10,
+      "cross_language_final_phase_gradient_norm": null,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "U": 1,
+      "beta_db": 0,
+      "scheme": "TwoStage",
+      "start_id": 0,
+      "metric_max_absolute_error": 2.2737367544323206e-13,
+      "power_margin": 5.675531156157376e-10,
+      "minimum_NHU_margin": 1.1560805646126937e-09,
+      "cross_language_final_phase_gradient_norm": 1.7283489723547706e-10,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "U": 1,
+      "beta_db": 0,
+      "scheme": "TwoStage",
+      "start_id": 1,
+      "metric_max_absolute_error": 1.3017142919125035e-11,
+      "power_margin": 1.0081322443511453e-09,
+      "minimum_NHU_margin": 2.3774773261209248e-09,
+      "cross_language_final_phase_gradient_norm": 3.669611530296376e-07,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "U": 1,
+      "beta_db": 0,
+      "scheme": "AO",
+      "start_id": 0,
+      "metric_max_absolute_error": 1.3130829756846651e-11,
+      "power_margin": 5.809397407574579e-11,
+      "minimum_NHU_margin": 4.809466158661735e-10,
+      "cross_language_final_phase_gradient_norm": 4.5993963239902613e-08,
+      "passed": true,
+      "issues": []
+    },
+    {
+      "U": 1,
+      "beta_db": 0,
+      "scheme": "AO",
+      "start_id": 1,
+      "metric_max_absolute_error": 1.2846612662542611e-11,
+      "power_margin": 1.6821388726384612e-10,
+      "minimum_NHU_margin": 7.753360176110391e-10,
+      "cross_language_final_phase_gradient_norm": 8.871344834887653e-07,
+      "passed": true,
+      "issues": []
+    }
+  ]
+}

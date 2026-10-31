@@ -1,0 +1,53 @@
+{
+  "schema": "MA6-900-closed-science-summary-evidence-v1",
+  "configured_population": {
+    "figure": 6,
+    "N": 6,
+    "M": 5,
+    "kappa": 6,
+    "A": 2,
+    "powers_dBm": [
+      9,
+      12,
+      15,
+      18,
+      21,
+      24,
+      27,
+      30,
+      33
+    ],
+    "geometries_per_power": 100,
+    "NLoS_samples_per_geometry": 1000
+  },
+  "files": {
+    "actual-aggregate.json": {
+      "bytes": 15622,
+      "sha256": "879b829042b3284561e09e74112a6f424e021643e88d2bd758b415de5504e2e7"
+    },
+    "actual-population-closure.json": {
+      "bytes": 977,
+      "sha256": "e27b2e57da45583ec348554df7dd193f2dc6dd93935a376d6fca89620a2da0c0"
+    },
+    "actual-summary-replay.json": {
+      "bytes": 451,
+      "sha256": "358987bb39b988572b0c73f306a2af758fe2bfcb399b5b37864cf2ef401a6ca6"
+    },
+    "all900-scientific-summaries.json.gz": {
+      "bytes": 353392,
+      "sha256": "7c955cb5bef12f5074b31a378a9b86c038b5e487912286faef9a83a76b1875aa"
+    },
+    "README.md": {
+      "bytes": 6172,
+      "sha256": "269de41081742962a578f51429c4260ea7d55a32ae001d4e1b883594b5a711e0"
+    },
+    "replay_summary.py": {
+      "bytes": 5839,
+      "sha256": "f88c5e11cdb4972a2c1b86663e4a4e7e31c3423929683dd70e09f9d63ed50251"
+    }
+  },
+  "source_summary_gates_are_retained_not_replaced_by_controller_tests": true,
+  "public_command_replays_summary_aggregation_only": true,
+  "original_paper_MC_counts_and_seed_not_recovered": true,
+  "full_paper_pass": false
+}

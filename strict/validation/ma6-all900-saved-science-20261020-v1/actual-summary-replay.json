@@ -1,0 +1,17 @@
+{
+  "all900_delivered_summary_aggregation_replayed": true,
+  "counts": {
+    "math_pass": 900,
+    "same_paths": 897,
+    "same_terminal_samples": 900,
+    "mean_within_1e_9": 900,
+    "evaluator_residual_within_2e_7": 900
+  },
+  "retained_trajectory_exception_cases": [
+    "case-006-mc-024",
+    "case-006-mc-027",
+    "case-008-mc-024"
+  ],
+  "underlying_all900_physics_rerun_by_this_command": false,
+  "optimizer_or_RNG_calls": 0
+}

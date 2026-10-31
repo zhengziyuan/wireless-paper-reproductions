@@ -1,0 +1,154 @@
+{
+  "schema": "ISAC014_RETURNED_FIRST_SCHEME_SAVED_EVIDENCE_SCHEMA_AND_SCOPE_V1",
+  "actual_elapsed_seconds": 390.11146099999314,
+  "actual_original_held_exit_code": 2,
+  "actual_source_interval_closed": true,
+  "selected_scheme": "Rot-BS & Rot-RIS",
+  "actual_new_schemes": 1,
+  "other_five_schemes_not_executed": true,
+  "existing_actual_final_physics_MP80_MP100_pass": true,
+  "original_full_convergence_PASS": false,
+  "retained_counts": {
+    "AO_blocks": 18,
+    "W_original_stops": 18,
+    "RIS_gradient_caps": 18,
+    "PGA_caps": 13,
+    "PGA_relative_step_OR_stops": 5
+  },
+  "all_PGA_final_gradient_norms_above_original_selected_tolerance": true,
+  "scalar_histories_whole_numeric_tokens_preserved": true,
+  "all54_row_file_original_gzip_bytes_identical": true,
+  "only_final_W_theta_rotation_arrays_saved": true,
+  "not_full_trajectory_states_or_independent_allstep_physics": true,
+  "numerical_controls_provenance": "Caps500/10000,1e-6/1e-8 thresholds and numerical seed/min/max/Armijo constants are explicitly disclosed reconstruction controls, not reported author numbers.",
+  "printed_BB_rule": "R1 TeX L971-976 prints positive s dot delta_gradient denominator and explicitly clips to [alpha_min,alpha_max]. The executed ascent_sign_correction uses a negative denominator and is separately disclosed.",
+  "printed_PGA_stop": "R1 TeX L981,L1019-1021 prints projected-gradient OR relative accepted-angle step; the latter is not a KKT certificate.",
+  "source_R1_TeX_SHA256": "aa71da008c68caa605ec3ed17520fcb81796561f315667eeb2f7dddf1487d2d2",
+  "clipped_tiny_PGA_event_scope": "A separate first-block passive capture reproduced the original first-block scalars exactly. Its MP evidence supports true tiny Armijo acceptance and OR-step stopping at nonstationary PGnorm; original operands3.24MB remain local and are not delivered here.",
+  "new_RCG_seed_experiment_not_part_of_this_packet": true,
+  "full_case_or_dual_language_or_reference_or_paper_PASS": false,
+  "raw_mathematics_and_numeric_data_unmodified": true,
+  "source_and_data_whole_byte_files": [
+    {
+      "path": "equivalent_runtime_case014_v1.py",
+      "SHA256": "781d7ad5f01df8d460c6a4eb905dd7f6cdd0026752465d0d26e6345901e5fc12",
+      "whole_bytes_identical_actual_executed_source": true
+    },
+    {
+      "path": "passive_first_failure_v1.py",
+      "SHA256": "855bb184d28c9a760b21b5dcb0d880b89a81b7bbf5e526d965dbbf3cbc7544a1",
+      "whole_bytes_identical_actual_executed_source": true
+    },
+    {
+      "path": "run_case014_equivalent_first_scheme_v1.py",
+      "SHA256": "facff577ed4c74c94a76e7d274e7f03e782d07b9f96477829ab1c0c4add68637",
+      "whole_bytes_identical_actual_executed_source": true
+    },
+    {
+      "path": "stable_metrics.py",
+      "SHA256": "e15ad67ffc92b0ea2b3cbbd5428ff8be30bc6630ab651188d15aa2f01bde8c29",
+      "whole_bytes_identical_actual_executed_source": true
+    },
+    {
+      "path": "structured_original_qcqp_candidate_v1.py",
+      "SHA256": "1fa91846426407d7313f0ba452e2d81c60fa433c9513d8618f870414903f8881",
+      "whole_bytes_identical_actual_executed_source": true
+    },
+    {
+      "path": "sources/core_original_case014_v1.py",
+      "SHA256": "07f2eb9d9f5011dde45a8c947dd87db31d15b7e6e8ab233e9f43429c408f2fbb",
+      "whole_bytes_identical_actual_executed_source": true
+    },
+    {
+      "path": "sources/core_structured_case014_v1.py",
+      "SHA256": "a0284f77a1704a35bbba000db0ccf5c59687d4a3dbc524aff8458367537888c1",
+      "whole_bytes_identical_actual_executed_source": true
+    },
+    {
+      "path": "sources/run_selected_first_scheme_case014_v1.py",
+      "SHA256": "7339b40b3efa519bf9f44fee3127451e30e0d3c255bcff01680362a10abde145",
+      "whole_bytes_identical_actual_executed_source": true
+    },
+    {
+      "path": "original-config.json",
+      "SHA256": "dd52f8b124cc1ec77ba71cf180048f6da665bb3809161dde6c922982c4eeec89",
+      "whole_bytes_identical_actual_saved_data": true
+    },
+    {
+      "path": "original-scenario.json",
+      "SHA256": "1854197e30970f2014a6412c4bc89fe279c7f7e569457047b8fca0c2d0a30a0e",
+      "whole_bytes_identical_actual_saved_data": true
+    },
+    {
+      "path": "one-actual-final-state-and-original-checks.json",
+      "SHA256": "d95d0b4395eeb8299858da5aab20cda6f32fd6d6cc8d3016a64f9962eb8d2fd8",
+      "whole_bytes_identical_actual_saved_data": true
+    },
+    {
+      "path": "all54-saved-block-scalar-records-and-monotonicity.json.gz",
+      "SHA256": "52c495351804810263bd2ed1fcce0366359d0ebf858684da0f4af3f5c8881c21",
+      "whole_bytes_identical_actual_saved_data": true
+    }
+  ],
+  "projected_JSON_original_and_public_identities": [
+    {
+      "original_name": "ACTUAL_ONLY_ISAC014_FIRST_SCHEME_FINAL_MP80_MP100_PHYSICS_AND_SAVED_SCALAR_RECORD_CLOSURE_V1.json",
+      "original_SHA256": "c0b5a7f258523a8e1cd91101574da72c320b03cedfb67b3e1748128346d47855",
+      "public_name": "ACTUAL_ONLY_ISAC014_FIRST_SCHEME_FINAL_MP80_MP100_PHYSICS_AND_SAVED_SCALAR_RECORD_CLOSURE_V1.json",
+      "public_SHA256": "535854bceffa8534a0b51a92df96d4fe9cb2edc18c63d13c6eab2359cc178ffd",
+      "all_numeric_JSON_tokens_whole_bytes_and_scalar_types_preserved": true,
+      "metadata_path_projection_only": true
+    },
+    {
+      "original_name": "ACTUAL_014_COMPLETE_FIRST_SCHEME_REMAINING_STOPS_STEP_SCALES_AND_UNREPORTED_CAP_PROVENANCE_V1.json",
+      "original_SHA256": "ec6ea72210266ad82df66adcd1908a6e6708a6689753c3b63c1141d48a36a8ca",
+      "public_name": "ACTUAL_014_COMPLETE_FIRST_SCHEME_REMAINING_STOPS_STEP_SCALES_AND_UNREPORTED_CAP_PROVENANCE_V1.json",
+      "public_SHA256": "9a7e9b95afb32a1486a44c30685eea1cda0a169becab3806402d833aea2cffca",
+      "all_numeric_JSON_tokens_whole_bytes_and_scalar_types_preserved": true,
+      "metadata_path_projection_only": true
+    },
+    {
+      "original_name": "ACTUAL_CAPTURE_MP_AND_EXACT_SOURCE_NEXT_STEP_HANDOFF_V1.json",
+      "original_SHA256": "27702dbab6fc0fc4e9987f6721713b71b7fd173329f675b466a676c0c450c247",
+      "public_name": "ACTUAL_CAPTURE_MP_AND_EXACT_SOURCE_NEXT_STEP_HANDOFF_V1.json",
+      "public_SHA256": "a53fe236c124d61d5dbd9fcfc22a491ec5fac2cb6d1e0f2e362129cb753ad2db",
+      "all_numeric_JSON_tokens_whole_bytes_and_scalar_types_preserved": true,
+      "metadata_path_projection_only": true
+    },
+    {
+      "original_name": "actual-source-input-and-result-closure.json",
+      "original_SHA256": "a8c76d93710be18547f2eb3ec8fc0d5a9f0e0bbc111fa6b62efb55e0550d7f9c",
+      "public_name": "actual-source-input-and-result-closure.json",
+      "public_SHA256": "a8c76d93710be18547f2eb3ec8fc0d5a9f0e0bbc111fa6b62efb55e0550d7f9c",
+      "all_numeric_JSON_tokens_whole_bytes_and_scalar_types_preserved": true,
+      "metadata_path_projection_only": true
+    },
+    {
+      "original_name": "actual-owned-ISAC014-structured-first-scheme.json",
+      "original_SHA256": "79d4e67a1ed1c7ad4be56b908add13f9f484d37a40c90df4fe764392de94519a",
+      "public_name": "actual-owned-ISAC014-structured-first-scheme.json",
+      "public_SHA256": "51ec20ca79691b97c09a3d5f23014804f7446a92ac995ab335035c9203f4040d",
+      "all_numeric_JSON_tokens_whole_bytes_and_scalar_types_preserved": true,
+      "metadata_path_projection_only": true
+    },
+    {
+      "original_name": "SOURCE_MANIFEST_V1.json",
+      "original_SHA256": "34aa9a3235d88d0bc2f0c9500fcc4ac29a26a21bcfcd3e2cfae0ae6a1b47260e",
+      "public_name": "SOURCE_MANIFEST_V1.json",
+      "public_SHA256": "b8b28a42903b18b6193ee647006c8b84ecbbc41869d47dc740be416c44fe0b69",
+      "all_numeric_JSON_tokens_whole_bytes_and_scalar_types_preserved": true,
+      "metadata_path_projection_only": true
+    },
+    {
+      "original_name": "full-result.json",
+      "original_SHA256": "65e2873292d5845ff26cb29fd2ff18143b5d2159f386e7e13f2f053faf560d69",
+      "public_name": "actual-returned-first-scheme-full-scalar-history.json.gz",
+      "public_SHA256": "344a4833a4a17c5b2762003675ec0b96855c3b903f96d4f449d0c8bd5e1bfa63",
+      "all_numeric_JSON_tokens_whole_bytes_and_scalar_types_preserved": true,
+      "metadata_path_projection_only": true
+    }
+  ],
+  "packet_full_scheme_execution_not_repeated": true,
+  "optional_public_source_execution_route_prepared_not_package_firstuse": true,
+  "new_optimizer_or_MP_MC_RNG_calls_by_packaging": 0
+}

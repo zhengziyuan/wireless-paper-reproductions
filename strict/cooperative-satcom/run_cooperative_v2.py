@@ -18,7 +18,7 @@ from receipts import save
 
 def actual_hashes():
     base=Path(__file__).parent
-    names=('core.py','models.py','increments.py','increments_v2.py','algorithms.py',
+    names=('core.py','models.py','positive_wick.py','increments.py','increments_v2.py','algorithms.py',
            'spectral_rmo.py','qt_numerical_guard.py','termination.py','scenario.py',
            'run.py','receipts.py','run_cooperative_v2.py','v2_config.json')
     return {n:hashlib.sha256((base/n).read_bytes()).hexdigest() for n in names}

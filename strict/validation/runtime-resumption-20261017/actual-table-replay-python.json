@@ -1,0 +1,734 @@
+{
+  "scope": "Fresh portable canonical-byte/parameter replay of two retained author-table mappings; no optimizer or new private-source access",
+  "actual_source_read_receipt_sha256": "3f6a1e42284f82831775007bd339976f8446722dbcb09d585e869bcb85fc67ac",
+  "author_source_hashes": {
+    "cooperative-satcom": "786351541a13cf99f711a1e8d5a6ad8cfc38d03e728cf52ccb3e9d0aaad347a8",
+    "hotspot-satcom": "684b2de6bb9dd18828fcec33a378d886a085aab7367fb535bac401f51b496794"
+  },
+  "canonical_source_and_configurations_before": {
+    "strict/cooperative-satcom/spectral_config.json": "086d63de49ebfe19b1cec833ecebb76d49e75788e7ad244e8e06f03b5b5b6eef",
+    "strict/hotspot-satcom/instantaneous_geometry_config.json": "5423d02b19a7d1a634782f689f8c1cc14c511932865eaa3b554b3eaad75be669",
+    "strict/hotspot-satcom/statistical_validated_config.json": "7f75eeaca62d0a68b053f53e7e841101f31d6539e645ea1a4239ea867a4fbdce",
+    "strict/hotspot-satcom/run_statistical_validated.py": "d0140c1d538a40a1a679a4d295e72c05a791dfd4cb4fd36efe3f0307659686e4",
+    "strict/hotspot-satcom/run_strict_hotspot_statistical_validated.m": "49aa8b1825ac2a4f3bcb88e99bea20e3643cd374e57184d31bc4690f888fa6f8",
+    "strict/cooperative-satcom/scenario.py": "7dbc490944c2fd7aaa2fc862068508530faab10b8c2dcb63eccf5511c74a62ba",
+    "strict/hotspot-satcom/scenario.py": "ca0365b3a368b9869a3cf28857e02e2e47bd8a7e7c68761cb67519b66ead6db4"
+  },
+  "canonical_source_and_configurations_after": {
+    "strict/cooperative-satcom/spectral_config.json": "086d63de49ebfe19b1cec833ecebb76d49e75788e7ad244e8e06f03b5b5b6eef",
+    "strict/hotspot-satcom/instantaneous_geometry_config.json": "5423d02b19a7d1a634782f689f8c1cc14c511932865eaa3b554b3eaad75be669",
+    "strict/hotspot-satcom/statistical_validated_config.json": "7f75eeaca62d0a68b053f53e7e841101f31d6539e645ea1a4239ea867a4fbdce",
+    "strict/hotspot-satcom/run_statistical_validated.py": "d0140c1d538a40a1a679a4d295e72c05a791dfd4cb4fd36efe3f0307659686e4",
+    "strict/hotspot-satcom/run_strict_hotspot_statistical_validated.m": "49aa8b1825ac2a4f3bcb88e99bea20e3643cd374e57184d31bc4690f888fa6f8",
+    "strict/cooperative-satcom/scenario.py": "7dbc490944c2fd7aaa2fc862068508530faab10b8c2dcb63eccf5511c74a62ba",
+    "strict/hotspot-satcom/scenario.py": "ca0365b3a368b9869a3cf28857e02e2e47bd8a7e7c68761cb67519b66ead6db4"
+  },
+  "all_canonical_bytes_match_recorded_source_evidence": true,
+  "all36_row_mappings_checked": true,
+  "all34_numeric_parameter_rows_match": true,
+  "two_external_pattern_reference_rows_are_not_certified": true,
+  "all_pairwise_realized_geometry_checks_performed": false,
+  "full_figure_optimization_performed": false,
+  "final_publisher_table_equivalence_verified": false,
+  "rows": [
+    {
+      "paper": "cooperative-satcom",
+      "parameter_id": "orbit_heights",
+      "source_line": 791,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "leo_height_m",
+          "unit": "m",
+          "expected": 550000,
+          "observed": 550000,
+          "passed": true
+        },
+        {
+          "key": "geo_height_m",
+          "unit": "m",
+          "expected": 36000000,
+          "observed": 36000000,
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "cooperative-satcom",
+      "parameter_id": "carrier",
+      "source_line": 792,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "frequency_hz",
+          "unit": "Hz",
+          "expected": 12000000000,
+          "observed": 12000000000,
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "cooperative-satcom",
+      "parameter_id": "antenna_satellite_counts",
+      "source_line": 793,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "N",
+          "unit": "count",
+          "expected": 16,
+          "observed": 16,
+          "passed": true
+        },
+        {
+          "key": "J",
+          "unit": "count",
+          "expected": 3,
+          "observed": 3,
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "cooperative-satcom",
+      "parameter_id": "user_terminal_counts",
+      "source_line": 794,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "U",
+          "unit": "count",
+          "expected": 2,
+          "observed": 2,
+          "passed": true
+        },
+        {
+          "key": "K",
+          "unit": "count",
+          "expected": 1,
+          "observed": 1,
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "cooperative-satcom",
+      "parameter_id": "normalized_inter_system_interference",
+      "source_line": 795,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "interference_to_noise_db",
+          "unit": "dB relative to normalized noise",
+          "expected": -12.2,
+          "observed": -12.2,
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "cooperative-satcom",
+      "parameter_id": "LEO_power",
+      "source_line": 796,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "power_w",
+          "unit": "W per LEO",
+          "expected": 50,
+          "observed": 50,
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "cooperative-satcom",
+      "parameter_id": "GEO_equivalent_power",
+      "source_line": 797,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "geo_power_w",
+          "unit": "W",
+          "expected": 2000,
+          "observed": 2000,
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "cooperative-satcom",
+      "parameter_id": "GT_pattern_reference",
+      "source_line": 798,
+      "has_numeric_parameter_binding": false,
+      "checks": [],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "cooperative-satcom",
+      "parameter_id": "noise",
+      "source_line": 799,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "noise_dbm",
+          "unit": "dBm",
+          "expected": -94,
+          "observed": -94,
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "cooperative-satcom",
+      "parameter_id": "RIS_subsurface_count",
+      "source_line": 800,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "M",
+          "unit": "count",
+          "expected": 25,
+          "observed": 25,
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "cooperative-satcom",
+      "parameter_id": "microelements",
+      "source_line": 801,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "subsurface_elements",
+          "unit": "counts per axis",
+          "expected": [
+            100,
+            100
+          ],
+          "observed": [
+            100,
+            100
+          ],
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "cooperative-satcom",
+      "parameter_id": "element_size",
+      "source_line": 802,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "element_size_m",
+          "unit": "m per axis",
+          "expected": [
+            0.01,
+            0.01
+          ],
+          "observed": [
+            0.01,
+            0.01
+          ],
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "cooperative-satcom",
+      "parameter_id": "RIS_LU_distance",
+      "source_line": 803,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "ris_lu_distance_m",
+          "unit": "m",
+          "expected": 100,
+          "observed": 100,
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "cooperative-satcom",
+      "parameter_id": "ground_Rician",
+      "source_line": 804,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "kappa_ground_db",
+          "unit": "dB",
+          "expected": 10,
+          "observed": 10,
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "cooperative-satcom",
+      "parameter_id": "GEO_Rician",
+      "source_line": 805,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "kappa_geo_db",
+          "unit": "dB",
+          "expected": 30,
+          "observed": 30,
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "cooperative-satcom",
+      "parameter_id": "LEO_Rician",
+      "source_line": 806,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "kappa_leo_db",
+          "unit": "dB",
+          "expected": 20,
+          "observed": 20,
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "orbit",
+      "source_line": 674,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "leo_height_m",
+          "unit": "m",
+          "expected": 550000,
+          "observed": 550000,
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "carrier",
+      "source_line": 675,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "frequency_hz",
+          "unit": "Hz",
+          "expected": 12000000000,
+          "observed": 12000000000,
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "feeds",
+      "source_line": 676,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "N",
+          "unit": "count",
+          "expected": 16,
+          "observed": 16,
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "streams",
+      "source_line": 677,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "J",
+          "unit": "count",
+          "expected": 16,
+          "observed": 16,
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "hotspot_users",
+      "source_line": 678,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "U",
+          "unit": "count; figure may explicitly override",
+          "expected": 6,
+          "observed": 6,
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "non_hotspot_users",
+      "source_line": 679,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "K",
+          "unit": "count; derived J-U in user sweeps",
+          "expected": 10,
+          "observed": 10,
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "NHU_SINR",
+      "source_line": 680,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "nhu_sinr_db",
+          "unit": "dB instantaneous",
+          "expected": 3,
+          "observed": 3,
+          "passed": true
+        },
+        {
+          "key": "nhu_statistical_sinr_db",
+          "unit": "dB statistical LoS-labelled source branch",
+          "expected": -3,
+          "observed": -3,
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "power",
+      "source_line": 681,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "power_w",
+          "unit": "W",
+          "expected": 100,
+          "observed": 100,
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "ESA_pattern_reference",
+      "source_line": 682,
+      "has_numeric_parameter_binding": false,
+      "checks": [],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "peak_transmit_gain",
+      "source_line": 683,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "satellite_gain_dbi",
+          "unit": "dBi",
+          "expected": 50,
+          "observed": 50,
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "antenna_diameter",
+      "source_line": 684,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "antenna_diameter_m",
+          "unit": "m",
+          "expected": 0.5,
+          "observed": 0.5,
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "noise_temperature",
+      "source_line": 685,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "temperature_k",
+          "unit": "K",
+          "expected": 235.3,
+          "observed": 235.3,
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "bandwidth",
+      "source_line": 686,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "bandwidth_hz",
+          "unit": "Hz",
+          "expected": 200000000,
+          "observed": 200000000,
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "RIS_subsurface_count",
+      "source_line": 687,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "M",
+          "unit": "count",
+          "expected": 25,
+          "observed": 25,
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "microelements",
+      "source_line": 688,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "subsurface_elements",
+          "unit": "counts per axis; Fig9 count-only override keeps centers fixed",
+          "expected": [
+            200,
+            140
+          ],
+          "observed": [
+            200,
+            140
+          ],
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "element_size",
+      "source_line": 689,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "element_size_m",
+          "unit": "m per axis",
+          "expected": [
+            0.01,
+            0.01
+          ],
+          "observed": [
+            0.01,
+            0.01
+          ],
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "RIS_HU_amplitude_distance",
+      "source_line": 690,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "ris_hu_distance_m",
+          "unit": "m common amplitude; user offsets still affect phase",
+          "expected": 400,
+          "observed": 400,
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "ground_Rician",
+      "source_line": 691,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "kappa_ground_db",
+          "unit": "dB instantaneous",
+          "expected": 0,
+          "observed": 0,
+          "passed": true
+        },
+        {
+          "key": "kappa_ground_statistical_db",
+          "unit": "dB statistical LoS-labelled source branch",
+          "expected": 20,
+          "observed": 20,
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "satellite_Rician",
+      "source_line": 692,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "kappa_satellite_db",
+          "unit": "dB default; figures may override",
+          "expected": 20,
+          "observed": 20,
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    },
+    {
+      "paper": "hotspot-satcom",
+      "parameter_id": "all_HU_pair_spacing",
+      "source_line": 693,
+      "has_numeric_parameter_binding": true,
+      "checks": [
+        {
+          "key": "hu_spacing_m_range",
+          "unit": "m all pair distances",
+          "expected": [
+            10,
+            20
+          ],
+          "observed": [
+            10,
+            20
+          ],
+          "passed": true
+        }
+      ],
+      "machine_bindings_pass": true,
+      "pattern_or_realized_geometry_certified": false
+    }
+  ],
+  "negative_controls": [
+    {
+      "control": "unconverted_GEO_kW",
+      "rejected": true
+    },
+    {
+      "control": "unconverted_LEO_km",
+      "rejected": true
+    },
+    {
+      "control": "wrong_cooperative_ground_Rician",
+      "rejected": true
+    },
+    {
+      "control": "instantaneous_negative3",
+      "rejected": true
+    },
+    {
+      "control": "statistical_positive3",
+      "rejected": true
+    },
+    {
+      "control": "statistical_zero_ground_Rician",
+      "rejected": true
+    },
+    {
+      "control": "wrong_hotspot_element_counts",
+      "rejected": true
+    },
+    {
+      "control": "wrong_hotspot_common_amplitude_distance",
+      "rejected": true
+    },
+    {
+      "control": "missing_source_pairwise_spacing_interval",
+      "rejected": true
+    }
+  ]
+}

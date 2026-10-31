@@ -1,0 +1,13 @@
+{
+  "schema": "actual-bounded-geometry-component-execution-v1",
+  "UTC": "2026-10-29T07:20:18.444366+00:00",
+  "returncode": 1,
+  "timed_out": false,
+  "seconds": 3.60999999998603,
+  "stdout_tail": "",
+  "stderr_tail": "Traceback (most recent call last):\n  File \"E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\hotspot-source-guard-v11\\compare_full18_geometry.py\", line 182, in <module>\n    raise SystemExit(main(parser.parse_args()))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\hotspot-source-guard-v11\\compare_full18_geometry.py\", line 136, in main\n    result = kernel.deterministic_geometry(context, formula, config, lane)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"E:\\ZiyuanZhengProject\\academic-homepage\\work\\hotspot-full18-complete-typedstream-science-checker-prepared-v1\\independent_geometry_kernels_sourceonly_v1.py\", line 15, in deterministic_geometry\n    def deterministic_geometry(mp,F,config,lane):\n    \n  File \"E:\\ZiyuanZhengProject\\paper-reproduction-data\\resume-20261017\\hotspot-full18-closed-E-binding-v1\\complete-independent-MP-v10\\consume_closed_full18_independent_MP80_MP100_sourceonly_v10.py\", line 128, in trace\n    need(canonical in self.compiled[binding],'Every immutable typed code field equals whole pinned compiled source; no raw-ref/intern gate')\n  File \"E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\hotspot-source-guard-v11\\test_call_only_numeric_source_guard.py\", line 56, in need\n    raise ValueError(message)\nValueError: Every immutable typed code field equals whole pinned compiled source; no raw-ref/intern gate\n",
+  "free_before_bytes": 141273522176,
+  "free_after_bytes": 141273513984,
+  "full_paper_acceptance": false,
+  "admission": "E:\\ZiyuanZhengProject\\paper-reproduction-data\\resume-20261017\\storage-control-20261020\\ADMITTED_FULL18_FIXED_GEOMETRY_BINDER_COMPARISON_20261029.json"
+}

@@ -1,0 +1,41 @@
+{
+  "scope": "Optimizer-independent NoRIS upper bound for the actual binary input groups and all72 source NoRIS ordinates per language",
+  "case_scope": "interference",
+  "source_horizontal_unit_conformance_verified": false,
+  "source_unit_caveat": "Source EPS prints W while implementation uses noise-normalized I/N. Source ordinate comparison is conditional on identifying these scalar grids, not proof that the original W input violates the bound.",
+  "source_and_inputs_unchanged": true,
+  "mathematical_bound_assumptions": [
+    "one shared GT interference limit",
+    "positive-definite GT second moments",
+    "nonnegative MR powers and channel variances",
+    "original noncoherent sum-of-powers useful numerator",
+    "denominator at least positive noise plus GEO interference"
+  ],
+  "relaxation_discards": [
+    "all satellite transmit-power constraints",
+    "all nonnegative intra-system interference"
+  ],
+  "theorem": "t <= I / sum_u(offset_u / max_j B_ju)",
+  "theorem_derivation": "n_u <= max_j B_ju * L_u; den_u >= offset_u; t <= n_u/den_u implies L_u >= t*offset_u/max_j B_ju; sum_u L_u <= I.",
+  "precisions": [
+    80,
+    100
+  ],
+  "maximum_MP80_MP100_coefficient_difference": "4.15805170761251361988711667353417422625083671550657297910117929476855770995611367007755628972238617128242e-78",
+  "precision_absolute_bound": "1e-40",
+  "all_bound_evaluations_and_source_bindings_pass": true,
+  "all_actual_NoRIS_values_within_relaxation_bound": true,
+  "source_reference_ordinates_per_language": 72,
+  "source_reference_exceeds_fixed_input_bound_per_language": {
+    "python": 72,
+    "matlab": 72
+  },
+  "conclusion": "For the reported above-bound ordinates, no optimizer on these fixed inputs can reproduce the supplied source curve. Source-conforming physical coefficients remain unresolved; this is not a contradiction of the author paper under its unrecovered inputs.",
+  "cause_identified_as_unique_gain_pattern_or_geometry": false,
+  "source_parameters_fitted": false,
+  "optimizer_or_random_draw_calls": 0,
+  "original_curve_or_full_paper_pass": false,
+  "elapsed_seconds": 2.154301200003829,
+  "full_detail_file_in_archive": "independent-NoRIS-input-bound-MP80-MP100.json",
+  "full_detail_sha256": "96f1cdf4e81c23ead21d30f64656a7683db9e0585af849166ba3aeb91cbb4883"
+}

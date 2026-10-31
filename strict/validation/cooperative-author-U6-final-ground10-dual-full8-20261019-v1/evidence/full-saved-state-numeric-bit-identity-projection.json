@@ -1,0 +1,70 @@
+{
+  "schema": "ACTUAL_METADATA_PATH_ONLY_FULL_SAVED_STATE_PROJECTION_V1",
+  "jobs": [
+    {
+      "input": "local-source/a4c4290af1a5/actual-native-complete-timed-result.json.states.mat",
+      "output": "local-source/e7ea179dccc3/native-full-states.mat",
+      "numeric_leaf_count": 2701,
+      "original_numeric_digest": "fc744d3615129fb1a00ec078473110ac9b5ca56826b7f4fd9a7185351c7d8a1d",
+      "projected_numeric_digest": "fc744d3615129fb1a00ec078473110ac9b5ca56826b7f4fd9a7185351c7d8a1d",
+      "written_readback_numeric_digest": "fc744d3615129fb1a00ec078473110ac9b5ca56826b7f4fd9a7185351c7d8a1d",
+      "all_numeric_classes_shapes_and_real_imag_bits_identical": true,
+      "only_path_strings_projected": true,
+      "path_metadata_fields_changed": []
+    },
+    {
+      "input": "local-source/0d3f998787b4/actual-python-recording.mat",
+      "output": "local-source/0b5cb4faf74b/python-full-states.mat",
+      "numeric_leaf_count": 3174,
+      "original_numeric_digest": "e65ad368c8041390a61213f6652f3ad3a80864a94a04cc705eb31ea6d6b7ebcb",
+      "projected_numeric_digest": "e65ad368c8041390a61213f6652f3ad3a80864a94a04cc705eb31ea6d6b7ebcb",
+      "written_readback_numeric_digest": "e65ad368c8041390a61213f6652f3ad3a80864a94a04cc705eb31ea6d6b7ebcb",
+      "all_numeric_classes_shapes_and_real_imag_bits_identical": true,
+      "only_path_strings_projected": true,
+      "path_metadata_fields_changed": []
+    },
+    {
+      "input": "local-source/8429438954c5/canonical-native-U6-final-ground10-eleven-fields-and-limits.mat",
+      "output": "local-source/3eb0aefb9e96/canonical-input.mat",
+      "numeric_leaf_count": 16,
+      "original_numeric_digest": "beb0f627539ccb58055733f2c6a8cd2122932bf3f88493be4ae0d1797aa3c781",
+      "projected_numeric_digest": "beb0f627539ccb58055733f2c6a8cd2122932bf3f88493be4ae0d1797aa3c781",
+      "written_readback_numeric_digest": "beb0f627539ccb58055733f2c6a8cd2122932bf3f88493be4ae0d1797aa3c781",
+      "all_numeric_classes_shapes_and_real_imag_bits_identical": true,
+      "only_path_strings_projected": true,
+      "path_metadata_fields_changed": []
+    },
+    {
+      "input": "local-source/87362b4a1d73/actual-native-complete-timed-result.json.full-result-before-JSON.mat",
+      "output": "local-source/b7ec3d18d83c/native-full-result.mat",
+      "numeric_leaf_count": 1465,
+      "original_numeric_digest": "39b3d61b8b35bb32a55237e808b6723156bdc6bf0a25f188352d051416e97ad6",
+      "projected_numeric_digest": "39b3d61b8b35bb32a55237e808b6723156bdc6bf0a25f188352d051416e97ad6",
+      "written_readback_numeric_digest": "39b3d61b8b35bb32a55237e808b6723156bdc6bf0a25f188352d051416e97ad6",
+      "all_numeric_classes_shapes_and_real_imag_bits_identical": true,
+      "only_path_strings_projected": true,
+      "path_metadata_fields_changed": [
+        "root(1).result(1).executed_source_hashes(1).final_Algorithm3_V2_source(1).path",
+        "root(1).result(1).executed_source_hashes(1).actual_timed_algorithm_entry(1).path",
+        "root(1).result(1).executed_source_hashes(1).actual_timed_runner_entry(1).path",
+        "root(1).result(1).executed_source_hashes(1).actual_timed_hash_entry(1).path",
+        "root(1).result(1).executed_source_hashes(1).actual_complex_JSON_transport(1).path",
+        "root(1).result(1).executed_source_hashes(1).actual_complex_JSON_selftest(1).path",
+        "root(1).result(1).canonical_saved_input_before(1).canonical_MAT(1).path",
+        "root(1).result(1).canonical_saved_input_before(1).configuration(1).path",
+        "root(1).result(1).canonical_saved_input_before(1).actual_new_runner(1).path",
+        "root(1).result(1).canonical_saved_input_before(1).actual_saved_loader(1).path",
+        "root(1).result(1).canonical_saved_input_before(1).actual_passive_MC_capture(1).path",
+        "root(1).result(1).canonical_saved_input_after(1).canonical_MAT(1).path",
+        "root(1).result(1).canonical_saved_input_after(1).configuration(1).path",
+        "root(1).result(1).canonical_saved_input_after(1).actual_new_runner(1).path",
+        "root(1).result(1).canonical_saved_input_after(1).actual_saved_loader(1).path",
+        "root(1).result(1).canonical_saved_input_after(1).actual_passive_MC_capture(1).path",
+        "root(1).result(1).measured_pipeline_clocks(1).prefdir",
+        "root(1).result(1).measured_pipeline_clocks(1).tempdir"
+      ]
+    }
+  ],
+  "RNG_unchanged": true,
+  "optimizer_MC_MP_or_new_scientific_operations": 0
+}

@@ -1,0 +1,162 @@
+"""SOURCE ONLY closed Fig5 metadata contracts; imports the standard library only."""
+from __future__ import annotations
+import ast
+import hashlib
+import json
+import math
+import struct
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[1]
+BANK = 'work/full-paper-banks/ma-figure05-20261004-ao10000-v2'
+AUTHORITY = 'work/ma-full900-safe-same-bank-recovery-source-prepared-v1/ACTUAL-root-Fig5-original-full900-safe-recovery-v1'
+OUTER = 'work/durable-paper-workers-v1/ACTUAL-root-Fig5-original-full900-safe-recovery-v1'
+OLD_PACKET = 'work/ma-figure05-full900-independent-route-v1/prepared-source-and-metadata-v1/prepared-full900-independent-route-v1.json'
+PRIVATE = 'D:/北邮课程报告/论文素材库/Two_Timescale_Design_for_Movable_Antenna_Enabled_Multiuser_MIMO_Systems_R2/bare_jrnl.tex'
+PRIVATE_SHA = '9ba173a0da8fcd472bb211155e0a4c1e7b9a0104a718bd88ac166808be876b19'
+PY_FP = 'b3b8134f4c9be5213dee91930e240792be509003a1b840848131e1f2621ee5ef'
+PINS = {
+    OUTER+'/actual-durable-parent-completion.json': '8978553c1e9690c148c18b61fe3b8fa5226b8eec76911eea2e2126e9e0b61eaf',
+    AUTHORITY+'/actual-safe-recovery-parent-completion.json': '31dad21db9f2448b38405fb670e4af339ef7481f1433de639320892522969a4e',
+    AUTHORITY+'/execution-summary.json': '0ed1b2d5e837265c596ce2129307caa1be765eaf9723267ed7e69fa8ac292122',
+    BANK+'/manifest.json': 'ab923e219b55b1e2ee5b51ef18b314b376225f4ce690deeecc57b40b59e90264',
+    BANK+'/run_config.json': '72bd6211cd90e238bfa34a25d4f8e56d29454b01c51aca32aa483488475a0d80',
+    BANK+'/plan.json': '00c313b30730c467d6986e384b7a87e50ff56a9260f0a86d5c66af7ac44a5599',
+    OLD_PACKET: '9f1b0da3e851a26ca859d68764b121f6c5f732ee14441998d6db286ca271ffdd',
+}
+POWERS = [9,12,15,18,21,24,27,30,33]
+SCHEMES = {'MA-MRT','MA-ZF','FPA-MRT','FPA-ZF','FPA-OPT'}
+MISSING = {
+    'actual_complete_native900_available': False,
+    'all900_independent_dual_language_gates_passed': False,
+    'original_saved_FPA_each_step_W_QT_KKT_available': False,
+    'original_saved_coordinate_gradient_RAW_available': False,
+    'original_saved_intermediate1000_MC_history_available': False,
+    'original_author_hidden_stop_quantity_uniquely_recovered': False,
+    'original_author_random_records_or_MC_counts_recovered': False,
+    'original_figure_closeness_verified': False,
+    'full_paper_strict_reproduction_passed': False,
+    'complete_transitive_runtime_binary_provenance': False,
+}
+
+def require(condition, message):
+    if not condition:
+        raise ValueError(message)
+
+def sha(path):
+    digest = hashlib.sha256()
+    with Path(path).open('rb') as handle:
+        for block in iter(lambda:handle.read(1024*1024), b''):
+            digest.update(block)
+    return digest.hexdigest()
+
+def read_json(path):
+    return json.loads(Path(path).read_bytes())
+
+def fresh_json(path, value):
+    path = Path(path)
+    require(not path.exists(), 'Never overwrite earlier evidence')
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open('x', encoding='utf-8') as handle:
+        json.dump(retain_nonfinite(value), handle, indent=2, allow_nan=False)
+        handle.write('\n')
+
+def positional_ast(data):
+    return ast.dump(ast.parse(data.decode('utf-8')), include_attributes=True)
+
+def retain_nonfinite(value):
+    if type(value) is float and not math.isfinite(value):
+        return {'nonfinite_actual_binary64_hex_le':struct.pack('<d',value).hex(),
+                'classification':'NaN' if math.isnan(value) else '+Inf' if value>0 else '-Inf',
+                'unavailable_or_failed_is_NOT_PASS':True}
+    if isinstance(value,dict):return {key:retain_nonfinite(item) for key,item in value.items()}
+    if isinstance(value,(list,tuple)):return [retain_nonfinite(item) for item in value]
+    return value
+
+def population(records):
+    require(isinstance(records,list) and len(records)==900, 'Exactly all900 slots')
+    expected = {(c,r) for c in range(9) for r in range(100)}
+    seen=set()
+    for row in records:
+        c,r = row.get('case_index'),row.get('realization')
+        require(type(c) is int and type(r) is int and (c,r) in expected and (c,r) not in seen, 'Exact labels; no coercion/duplicates')
+        require(row.get('filename') == f'case-{c:03d}-mc-{r:03d}.json', 'Exact source filename')
+        require(isinstance(row.get('input_fingerprint'),str) and len(row['input_fingerprint'])==64, 'Source input fingerprint')
+        seen.add((c,r))
+    require(seen==expected, 'All original900, no survivor selection')
+
+def config_contract(cfg, manifest, plan):
+    population(manifest['files'])
+    require(type(plan.get('figure')) is int and plan['figure']==5 and plan['jobs']==900 and plan['full'] is True, 'Fig5 only, not live Fig6')
+    require([row['point'] for row in plan['cases']]==POWERS, 'Whole nine power points')
+    require(all((row['N'],row['M'],row['kappa'],row['A'])==(6,5,100,2) for row in plan['cases']), 'Original full kappa100 dimensions')
+    require(cfg['geometry_realizations']==100 and cfg['nlos_realizations_per_geometry']==1000, 'Whole100 x1000 draws')
+    require(cfg['maximum_AO_iterations']==10000 and cfg['fractional_increase_threshold']==5e-5, 'Actual frozen source stops/cap')
+    require(cfg['verification_tolerance']==1e-6, 'Original primal/objective verification tolerance')
+    opts=cfg['convex_solver']['options']
+    require(opts['objective_gap_absolute_tolerance']==1e-10 and opts['objective_gap_relative_tolerance']==1e-10, 'Original fixed coordinate gaps')
+    spec=cfg['benchmark_solver']
+    require(spec['maximum_iterations']==1500 and spec['fractional_tolerance']==5e-5 and spec['bisection_tolerance']==1e-12 and spec['spectral_zero_tolerance']==1e-12, 'Original complete benchmark controls')
+
+def closed_contract(outer, inner, summary):
+    require(type(outer.get('actual_worker_exit')) is int and outer['actual_worker_exit']==0 and outer.get('actual_exception') is None, 'Genuine outer closed0/null')
+    require(outer.get('all_selected_source_input_and_runtime_bytes_unchanged') is True, 'Actual outer source B_A')
+    require(outer.get('source_observation_errors')=={}, 'No hidden actual source observation error')
+    require(isinstance(outer.get('extra_bound_sources_before'),dict) and len(outer['extra_bound_sources_before'])==924 and outer['extra_bound_sources_before']==outer.get('extra_bound_sources_after'),'Whole actual outer924 source+input metadata interval')
+    require(inner.get('figure')==5 and inner.get('exception') is None and inner.get('selected_source_B_A') is True, 'Genuine inner Fig5 source interval')
+    require(inner.get('source_before')==inner.get('source_after') and isinstance(inner.get('source_before'),dict), 'Complete actual inner source interval')
+    require(type(inner.get('actually_classified_slots')) is int and inner['actually_classified_slots']==900 and inner.get('full900_execution_complete') is True, 'Genuine full900 classified closure')
+    require(type(summary.get('expected_jobs')) is int and type(summary.get('finished_jobs')) is int and summary['expected_jobs']==900 and summary['finished_jobs']==900, 'All900 summary')
+    population(summary['records'])
+    require(all(row.get('status')=='reused_converged' for row in summary['records']), 'Exact actual reused classification, not fresh run claim')
+
+def classification_contract(record, row):
+    c,r=row['case_index'],row['realization']; stem=Path(row['filename']).stem
+    expected=(ROOT/BANK/(stem+'-python.json')).resolve()
+    require(record.get('original_filename')==row['filename'] and type(record.get('case_index')) is int and record['case_index']==c and type(record.get('realization')) is int and record['realization']==r, 'Actual class slot identity')
+    require(Path(record['old_result_path']).resolve()==expected and Path(record['target']).resolve()==expected, 'Genuine reused same-bank path')
+    require(record.get('old_result_present') is True and record.get('original_reusable_complete_payload_gate_actual_return') is True, 'Retain actual original reuse predicate only')
+    require(record.get('independent_or_original_figure_PASS_not_inferred') is True and record.get('old_failed_or_partial_result_not_removed') is True and record.get('old_source_runtime_input_mismatch_or_failure_not_promoted') is False, 'Original false/retention semantics')
+    require(isinstance(record.get('old_result_before_sha256'),str) and len(record['old_result_before_sha256'])==64, 'Actual old RAW observation SHA')
+    return record['old_result_before_sha256']
+
+def fixed_gap_tolerance(cfg, source_before):
+    require(type(source_before) in (int,float) and math.isfinite(source_before), 'Finite saved source objective')
+    opts=cfg['convex_solver']['options']
+    return max(opts['objective_gap_absolute_tolerance'], opts['objective_gap_relative_tolerance']*abs(source_before))
+
+def exact_fig5_adapter_whole_module(data):
+    """Only existing authorized Fig3 optional-history omission; whole inverse.
+
+    The original module itself is never edited. The removed statement is
+    restored at the EXACT byte offset, with original whitespace and all module
+    code retained, so the entire positioned AST (not function summary) matches.
+    """
+    text=data.decode('utf-8');tree=ast.parse(text)
+    terminal=next(node for node in tree.body if isinstance(node,ast.FunctionDef) and node.name=='terminal_audit')
+    loop=next(node for node in terminal.body if isinstance(node,ast.For))
+    candidate=[node for node in loop.body if isinstance(node,ast.If) and ast.get_source_segment(text,node.test)=='scheme == "MA-MRT"']
+    require(len(candidate)==1,'One original optional saved MRT MC assertion')
+    statement=ast.get_source_segment(text,candidate[0])
+    require('instantaneous_MC_mean' in statement and statement.count('assert ')==1,'Only precise old optional MC assertion')
+    offset=text.index(statement)
+    require(text.count(statement)==1,'No ambiguous adapter offset')
+    changed=text[:offset]+text[offset+len(statement):]
+    restored=changed[:offset]+statement+changed[offset:]
+    require(restored.encode('utf-8')==data and positional_ast(restored.encode())==positional_ast(data),'Whole module BYTE + position-AST adapter inverse')
+    return {'removed_byte_offset':len(text[:offset].encode()),'removed_utf8_bytes':statement.encode().hex(),
+            'original_whole_module_sha256':hashlib.sha256(data).hexdigest(),
+            'adapted_whole_module_sha256':hashlib.sha256(changed.encode()).hexdigest(),
+            'restored_whole_module_sha256':hashlib.sha256(restored.encode()).hexdigest(),
+            'whole_BYTE_inverse':True,'whole_position_AST_inverse':True,'changed':changed}
+
+def stops_contract(values, threshold, cap):
+    require(isinstance(values,list) and 2<=len(values)<=cap+1 and all(type(v) in (int,float) and math.isfinite(v) and v!=0 for v in values), 'All finite complete sweep objectives')
+    fractions=[(b-a)/abs(a) for a,b in zip(values,values[1:])]
+    require(all(v>=threshold for v in fractions[:-1]), 'No earlier source stop may be skipped')
+    require(fractions[-1]<threshold, 'Genuine final source stop')
+    return fractions
+
+def complete_python_lane(attempted, passed, failures, unchanged):
+    return type(attempted) is int and type(passed) is int and attempted==passed==900 and isinstance(failures,list) and not failures and unchanged is True

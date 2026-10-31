@@ -1,0 +1,265 @@
+{
+  "observed_local": "2026-10-18T03:49:18.288098+08:00",
+  "scope": "preserved-local-ISAC49-legacy1000x13-and-initial138-MP-fields-v1",
+  "actual_complete_native_table_shape": [
+    1000,
+    13
+  ],
+  "actual_complete_native_binary64_values": 13000,
+  "actual_distinct_original_CSV_rows": 20,
+  "actual_saved_initial_numeric_variables": 138,
+  "actual_full_fresh_physical_matrices_per_precision": 11,
+  "actual_fresh_matrix_real_imag_coordinates_per_precision": 7940,
+  "actual_complete_physical_scalar_metrics_per_precision": 69,
+  "actual_original_saved_physical_coordinates_per_precision": 772,
+  "actual_original_saved_metrics_per_precision": 69,
+  "every_complete_given_record_source_declaration_and_initial_physical_field_replay_pass": true,
+  "actual_negative_controls": 27,
+  "all_expected_invalid_complete_fields_records_cohorts_grids_and_transport_controls_rejected": true,
+  "actual_control_counts": {
+    "complete_records_source_and_grids": 14,
+    "complete_physical_fields": 7,
+    "transport_and_scope": 6
+  },
+  "records": {
+    "scope": "preserved-local-ISAC49-legacy1000x13-and-initial138-MP-fields-v1",
+    "complete_native_table_shape": [
+      1000,
+      13
+    ],
+    "complete_native_binary64_values": 13000,
+    "complete_saved_job_descriptors": 1000,
+    "complete_saved_native_generated_CSV_rows": 1000,
+    "complete_distinct_original_CSV_rows": 20,
+    "matched_parameter_original_CSV_MAT_metric_differences": 60,
+    "original_CSV_rows_with_all_metrics_agreeing": 0,
+    "original_CSV_rows_with_same_iteration_count": 14,
+    "saved_source_cap1500_rows": 636,
+    "saved_source_MSE_above0_1_rows": 296,
+    "cap_and_threshold_categories_can_overlap": true,
+    "actual_executed_version_or_per_record_stationarity_not_proved": true,
+    "saved_numeric_variables_exactly_reconstructed": 138,
+    "complete_saved_hex_real_imag_observations": 3704,
+    "observation_aliases_not_claimed_as_independent_draws": true,
+    "all20x5_nominal_exponent_columns_identical": true,
+    "complete_saved10x6_power_values": 60,
+    "all_zero_original_power_rows": [
+      9
+    ],
+    "complete_source_declaration_tasks_regenerated": [
+      20,
+      1000
+    ],
+    "source_declaration_matching_slots": [
+      20,
+      0
+    ],
+    "all_five_external_parameter_transfers_recomputed": true,
+    "retained_whole_local_archive_metadata_members": 49,
+    "retained_actual_successful_source_bound_readers": 4,
+    "retained_failed_host_intake_or_fixture_epochs": 3,
+    "fresh_original_optimizer_initializer_sampler_or_native_MAT_export_calls": 0,
+    "fresh_full_archived_source_MAT_or_publisher_documents_read": 0,
+    "original_model_generation_recipe_reference_convergence_dual_language_or_full_six_paper_pass": false
+  },
+  "physical": {
+    "actual_preserved_initial_states": 1,
+    "actual_complete_numeric_variables": 138,
+    "all_actual_saved_physical_coordinates_and_metrics": {
+      "80": {
+        "saved_physical_real_imag_coordinates": 772,
+        "actual_saved_metric_values": 69,
+        "maximum_actual_binary64_saved_gap": "7.683786147862114228086537473018538089058e-16",
+        "all_complete_fields_pass": true,
+        "fields": [
+          {
+            "field": "all_original_user_h",
+            "real_imag_coordinates": 16,
+            "maximum_gap": "7.32662647201228919572145095177e-17"
+          },
+          {
+            "field": "all_original_user_g",
+            "real_imag_coordinates": 144,
+            "maximum_gap": "7.68378614786211422808653747302e-16"
+          },
+          {
+            "field": "all_original_BB",
+            "real_imag_coordinates": 288,
+            "maximum_gap": "0.0"
+          },
+          {
+            "field": "all_original_transmit_covariance",
+            "real_imag_coordinates": 32,
+            "maximum_gap": "2.65065591913985474362560193435e-19"
+          },
+          {
+            "field": "all_original_BS_positions",
+            "real_imag_coordinates": 24,
+            "maximum_gap": "0.0"
+          },
+          {
+            "field": "all_original_RIS_positions",
+            "real_imag_coordinates": 216,
+            "maximum_gap": "7.21644966006351751275360584259e-16"
+          },
+          {
+            "field": "all_original_BS_frame",
+            "real_imag_coordinates": 18,
+            "maximum_gap": "0.0"
+          },
+          {
+            "field": "all_original_RIS_frame",
+            "real_imag_coordinates": 18,
+            "maximum_gap": "0.0"
+          },
+          {
+            "field": "actual_last_saved_user_field",
+            "real_imag_coordinates": 8,
+            "maximum_gap": "7.32662647201228919572145095177e-17"
+          },
+          {
+            "field": "actual_last_saved_target_field",
+            "real_imag_coordinates": 8,
+            "maximum_gap": "1.95818075030533890704434388139e-16"
+          },
+          {
+            "field": "Pgrid",
+            "all_scalar_values": 66,
+            "maximum_gap": "3.55168780380533177697164762399e-18"
+          },
+          {
+            "field": "SINR",
+            "all_scalar_values": 2,
+            "maximum_gap": "1.34458281165052242218192735842e-16"
+          },
+          {
+            "field": "raw_MSE",
+            "all_scalar_values": 1,
+            "maximum_gap": "4.37725694411351731400036098737e-18"
+          }
+        ]
+      },
+      "100": {
+        "saved_physical_real_imag_coordinates": 772,
+        "actual_saved_metric_values": 69,
+        "maximum_actual_binary64_saved_gap": "7.683786147862114228086537473018538089058e-16",
+        "all_complete_fields_pass": true,
+        "fields": [
+          {
+            "field": "all_original_user_h",
+            "real_imag_coordinates": 16,
+            "maximum_gap": "7.32662647201228919572145095177e-17"
+          },
+          {
+            "field": "all_original_user_g",
+            "real_imag_coordinates": 144,
+            "maximum_gap": "7.68378614786211422808653747302e-16"
+          },
+          {
+            "field": "all_original_BB",
+            "real_imag_coordinates": 288,
+            "maximum_gap": "0.0"
+          },
+          {
+            "field": "all_original_transmit_covariance",
+            "real_imag_coordinates": 32,
+            "maximum_gap": "2.65065591913985474362560193435e-19"
+          },
+          {
+            "field": "all_original_BS_positions",
+            "real_imag_coordinates": 24,
+            "maximum_gap": "0.0"
+          },
+          {
+            "field": "all_original_RIS_positions",
+            "real_imag_coordinates": 216,
+            "maximum_gap": "7.21644966006351751275360584259e-16"
+          },
+          {
+            "field": "all_original_BS_frame",
+            "real_imag_coordinates": 18,
+            "maximum_gap": "0.0"
+          },
+          {
+            "field": "all_original_RIS_frame",
+            "real_imag_coordinates": 18,
+            "maximum_gap": "0.0"
+          },
+          {
+            "field": "actual_last_saved_user_field",
+            "real_imag_coordinates": 8,
+            "maximum_gap": "7.32662647201228919572145095177e-17"
+          },
+          {
+            "field": "actual_last_saved_target_field",
+            "real_imag_coordinates": 8,
+            "maximum_gap": "1.95818075030533890704434388139e-16"
+          },
+          {
+            "field": "Pgrid",
+            "all_scalar_values": 66,
+            "maximum_gap": "3.55168780380533177697164762399e-18"
+          },
+          {
+            "field": "SINR",
+            "all_scalar_values": 2,
+            "maximum_gap": "1.34458281165052242218192735842e-16"
+          },
+          {
+            "field": "raw_MSE",
+            "all_scalar_values": 1,
+            "maximum_gap": "4.37725694411351731400036098737e-18"
+          }
+        ]
+      }
+    },
+    "full_MP_fields": {
+      "actual_complete_coordinate_and_metric_counts_per_precision": {
+        "80": {
+          "full_matrix_real_imag_coordinates": 7940,
+          "full_scalar_metrics": 69
+        },
+        "100": {
+          "full_matrix_real_imag_coordinates": 7940,
+          "full_scalar_metrics": 69
+        }
+      },
+      "maximum_fresh_sealed_or_MP80_MP100_gap": "1.6474672554634791758905e-78",
+      "all_complete_precision_lanes_pass": true
+    },
+    "complete_exact_saved_user_first_ray_pairs": 2,
+    "legacy_negative_cosine_bridge_initial_visible_paths": 0,
+    "original_snapshot_is_initial_not_final_optimizer_return": true,
+    "original_per_cell_binary64_target_direction_intermediates_not_saved": true,
+    "independent_MP_target_recipe_uses_exact_saved_grid_angles": true,
+    "fresh_original_optimizer_initializer_sampler_native_MAT_export_or_source_document_calls": 0,
+    "final_R1_model_source_generation_recipe_stationarity_original_reference_or_full_six_paper_pass": false
+  },
+  "actual_fresh_original_optimizer_initializer_sampler_native_MAT_export_or_author_source_calls": 0,
+  "actual_fresh_full_archived_source_MAT_or_publisher_documents_read": 0,
+  "retained_local_whole49_source_binding_and_four_successful_readers_are_not_fresh_CI_source_inspection": true,
+  "original_source_generation_recipe_model_conformance_reference_dual_language_or_full_six_paper_pass": false,
+  "source_before": {
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\isac-legacy-record-audit\\evidence.py": "16158c3110096e33f0e86999dc0f7c88d34ba167312f2a92e61be1dd50f11d9e",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\isac-legacy-record-audit\\legacy_fields.py": "216fcdc7835c9100d2f0043fd61edf0653ebbf66e7bbe388e6832ef184711866",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\isac-legacy-record-audit\\records.py": "4d4ecff236f1321ec11c825cdcf4d7160a1e93b7dc3a093592e04b5f799cc7d1",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\isac-legacy-record-audit\\physical_replay.py": "9a2fb79a086043347d3b98fbc28f10c5dedb930218bbd31dbb009b887ead894b",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\isac-legacy-record-audit\\replay_full_evidence.py": "1bbe32721d908fcadc68f236c4a938a242ce460547cf7281ae3de05d5a166392",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\isac-legacy-record-audit\\requirements.txt": "f5eed4fa0ff9d50171b9857728e41177edf2e0f8195a51f285746c54ade5ecda",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\isac-line-search-replay\\mp_physical_reference.py": "d14050078d636ca33bd78fb2206406735a22589eeb0aa14b0f28c3d443d893bc",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-preserved49-legacy-records-20261018\\archive-manifest.json": "9221beb895538138b2095d394be17622845fceebf53d172b1a93253e4a267e21",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-preserved49-legacy-records-20261018\\isac-legacy-records.tar.gz.part000": "a8a988b53d8c8b43d102f49a861c8d85ef1862f29e1676aa269bc3cb4d082d59"
+  },
+  "source_after": {
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\isac-legacy-record-audit\\evidence.py": "16158c3110096e33f0e86999dc0f7c88d34ba167312f2a92e61be1dd50f11d9e",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\isac-legacy-record-audit\\legacy_fields.py": "216fcdc7835c9100d2f0043fd61edf0653ebbf66e7bbe388e6832ef184711866",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\isac-legacy-record-audit\\records.py": "4d4ecff236f1321ec11c825cdcf4d7160a1e93b7dc3a093592e04b5f799cc7d1",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\isac-legacy-record-audit\\physical_replay.py": "9a2fb79a086043347d3b98fbc28f10c5dedb930218bbd31dbb009b887ead894b",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\isac-legacy-record-audit\\replay_full_evidence.py": "1bbe32721d908fcadc68f236c4a938a242ce460547cf7281ae3de05d5a166392",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\isac-legacy-record-audit\\requirements.txt": "f5eed4fa0ff9d50171b9857728e41177edf2e0f8195a51f285746c54ade5ecda",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\isac-line-search-replay\\mp_physical_reference.py": "d14050078d636ca33bd78fb2206406735a22589eeb0aa14b0f28c3d443d893bc",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-preserved49-legacy-records-20261018\\archive-manifest.json": "9221beb895538138b2095d394be17622845fceebf53d172b1a93253e4a267e21",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-preserved49-legacy-records-20261018\\isac-legacy-records.tar.gz.part000": "a8a988b53d8c8b43d102f49a861c8d85ef1862f29e1676aa269bc3cb4d082d59"
+  },
+  "elapsed_seconds": 1.4935343000106514
+}

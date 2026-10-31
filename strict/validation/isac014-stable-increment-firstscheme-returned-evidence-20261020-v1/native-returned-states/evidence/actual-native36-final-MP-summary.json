@@ -1,0 +1,311 @@
+{
+  "schema": "actual-only-native36-and-final-natural-held-MP-scope-and-failures-v1",
+  "reader_held_journal": {
+    "path": "local-origin/native-saved-MP-preparation\\actual-unique-native36-saved-MP-environment-host-v2\\held\\native-new36-saved-MP-actual-owned-process.json",
+    "SHA256": "f0de6030ba17da60cee9368268bfdc0c49c8152a30275951914bdf3de9efb350",
+    "owner": {
+      "PID": 45252,
+      "creation_FILETIME": 134369177239481067,
+      "associated_with_any_Windows_job": true
+    },
+    "child": {
+      "PID": 42356,
+      "creation_FILETIME": 134369177243789259,
+      "associated_with_any_Windows_job": true
+    },
+    "actual_child_terminal_exit_code": 0,
+    "effective_host_exit_code": 0,
+    "natural_wait_completed": true,
+    "exact_original_handle_birth_and_exit_match": true,
+    "source_pin_count": 38,
+    "source_interval_closed": true,
+    "host_errors": []
+  },
+  "actual_MP_report": {
+    "path": "local-origin/native-saved-MP-results\\ACTUAL_NATIVE_NEW36_AND_FINAL_EXISTING_MP80_MP100_PHYSICS_AND_GRADIENTS_V1.json",
+    "SHA256": "f83b256a80721fa546c4157983f2f65a5c4fb4ba12814fb36476ba2853dab44b",
+    "bytes": 737075
+  },
+  "actual_typed_MAT_input_receipt": {
+    "path": "local-origin/native-saved-MP-results\\ACTUAL_NATIVE_MAT_TYPED_STATE_SCHEMA_AND_INPUT_BINDING_V1.json",
+    "SHA256": "2863cd5adad68b32356ae0c586824599723ffc12cec5d6b94dd7f91776f3ab6d",
+    "bytes": 86891,
+    "semantic_shape_complex_and_compact_double_checks_pass": true,
+    "returned_states": 36,
+    "numeric_class_shadow_values_never_used": true,
+    "class_shadow_warning_count": 72,
+    "array_inventory_count": 111,
+    "compact_double_cast_count": 5,
+    "fixed_component_returns_IEEE64_equal": true,
+    "JSON_transport_notes": []
+  },
+  "native_producer_exit_from_original_journal_not_reader_exit": 0,
+  "actual_reader_source_and_input_interval_closed": true,
+  "actual_reader_source_input_count": 33,
+  "all_new_native_states_scoped_physics_feasibility_and_common_gradient_formulas_PASS": true,
+  "returned_inner_blocks": 36,
+  "returned_per_method": {
+    "update_w": 12,
+    "update_theta": 12,
+    "update_rotation": 12
+  },
+  "native_final_ownstate_also_checked": true,
+  "MP80_MP100_maximum_absolute_difference": "1.48573387520519320955322111155372444515782763375260540737692516389888821154306835843420185621783984052037e-59",
+  "crossprecision_pass": true,
+  "native_strict_PGA_failed_block_calls": [],
+  "native_strict_RCG_failed_block_calls": [],
+  "native_own_block_RCG_PGA_strict_pass": true,
+  "native_final_joint_diagnostics": {
+    "scope": "Joint final W/theta/r with final optimal iota, distinct from earlier block-return stops; same-provider fixed evaluation is new saved-only diagnostic, not an algorithm stopping record.",
+    "parts": {
+      "W": {
+        "component_count": 24,
+        "maximum_component_error": "0.000000000000000743114017596299401558858958792350690568493540144768817742907726919302257242055298086945904842245483874974",
+        "existing_derivative_absolute_1e_minus5_pass": true,
+        "power_ball_multiplier_ray_estimate": "3.69969056023008157823083540290357708637048139258535894944004030677002500380710112927536738550526573498788",
+        "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "2.58062548059009068705373783584315301051586810000409527274623949700316218663209288529768049392684500149973",
+        "unit_gradient_step_projected_power_ball_residual": "0.284586782169304567107305752688545437943314767525448791845225498336709403401236100893604224700145389117682",
+        "complementarity_lambda_power_slack": "0.0301783021124514273789968570464074666110964490959218875915693801338958968398407021832585412042941945406189",
+        "author_W_stationarity_absolute_gate_reported": false,
+        "stationarity_PASS_not_assigned": true
+      },
+      "RCG": {
+        "component_count": 36,
+        "maximum_component_error": "0.00000000000000753406885047781243500489454735208805946030303922830510946691869475827218344695462374329748895612896588928",
+        "existing_derivative_absolute_1e_minus5_pass": true,
+        "normalized_unit_circle_tangent_norm": "0.00033235653809261034951439999077882749284442426583109650326499338455313397331692191765007910221910503340766",
+        "strict_gradient_threshold": 1e-06,
+        "strict_gradient_pass": false
+      },
+      "PGA": {
+        "component_count": 6,
+        "maximum_component_error": "0.0000000000000952711437023973417910071511430864228603650539522321531212676579690594222935190017046100380195186132145319",
+        "existing_derivative_absolute_1e_minus5_pass": true,
+        "projected_gradient_norm": "0.00000278912015940712892691703831573087441167394647615447793598246421757390551121283323116169177373098949170571",
+        "strict_gradient_threshold": 1e-06,
+        "strict_gradient_pass": false,
+        "reference": "Unchanged independent MP rotation central difference h=1e-20"
+      }
+    },
+    "existing_derivative_absolute_1e_minus5_pass": true,
+    "joint_full_stationarity_PASS_not_assigned": true
+  },
+  "native_final_joint_RCG_PGA_strict_pass": false,
+  "native_W_own_return_diagnostics": [
+    {
+      "block": 1,
+      "original_actual_flags": {
+        "converged": true,
+        "termination_reason": "relative_objective_tolerance",
+        "iterations": 3,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "power_ball_multiplier_ray_estimate": "3.62374656151968887837874219171905310887891898152026192663139387481807773506621373558879919460259607409338",
+      "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "0.000000000478111191368861382826543555407993702331246152885001512609475385068651521075513695486500773283791328676841",
+      "unit_gradient_step_projected_power_ball_residual": "0.0000000000579704868194596436297423181033355516977955709863631536889280782331718424992446232792041154790461468770139",
+      "complementarity_lambda_power_slack": "0.00000000000000201971085605322414820281080107496853817293686989784166214343242466632638893197977823678820115926464299692",
+      "author_W_stationarity_absolute_gate_reported": false,
+      "stationarity_PASS_not_assigned": true
+    },
+    {
+      "block": 2,
+      "original_actual_flags": {
+        "converged": true,
+        "termination_reason": "relative_objective_tolerance",
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "power_ball_multiplier_ray_estimate": "3.68352214132588575116699880064169895425786335723995366887650127446048979505812018557164951979071487221551",
+      "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "2.52530997696447151402590739600369697669531575918264826464809880085425296287064748989384618962528268126608",
+      "unit_gradient_step_projected_power_ball_residual": "0.280049802872989849160420188756434179669743233032732435689592369913250553855266987163957503671765642617146",
+      "complementarity_lambda_power_slack": "0.023741539578720177928655506748464581751904361017114039435709147016754361704066090966138339990082226015545",
+      "author_W_stationarity_absolute_gate_reported": false,
+      "stationarity_PASS_not_assigned": true
+    },
+    {
+      "block": 3,
+      "original_actual_flags": {
+        "converged": true,
+        "termination_reason": "relative_objective_tolerance",
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "power_ball_multiplier_ray_estimate": "3.685287840928216774999455724958911424510164890660698871301587122548344875822638777367057787521644033329",
+      "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "2.56739086207822737339464332377446540005794351327548186639932113333729911933348057164325875230568570688691",
+      "unit_gradient_step_projected_power_ball_residual": "0.283953763924506128605320323185773641560056802598316917100665929593894746231068667574613771898061555833324",
+      "complementarity_lambda_power_slack": "0.0244444767314740398228603593362858277534951257171600130133408460127347116783094791092480439085449234810213",
+      "author_W_stationarity_absolute_gate_reported": false,
+      "stationarity_PASS_not_assigned": true
+    },
+    {
+      "block": 4,
+      "original_actual_flags": {
+        "converged": true,
+        "termination_reason": "relative_objective_tolerance",
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "power_ball_multiplier_ray_estimate": "3.68573966561563259784428274253477879098994928219526394398100718721202632013736396327044516389922256504418",
+      "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "2.56995905093033418823318877925037021075857400664677451195902797356993864147015197910105157535090925707627",
+      "unit_gradient_step_projected_power_ball_residual": "0.284176373396504412345601271743710614196032512033676432740633494353774254174117422165811072029303230786778",
+      "complementarity_lambda_power_slack": "0.0246243512502536541470277670691908106967999454710810093699416573284391283128743940679492612023050821565814",
+      "author_W_stationarity_absolute_gate_reported": false,
+      "stationarity_PASS_not_assigned": true
+    },
+    {
+      "block": 5,
+      "original_actual_flags": {
+        "converged": true,
+        "termination_reason": "relative_objective_tolerance",
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "power_ball_multiplier_ray_estimate": "3.68650969666603186288192270483485853681479863817848833318388170223066379063476577619882895580305172986092",
+      "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "2.57032284130499746958415059134204230186561352378046918225433175519490529271505940719210994830184394227699",
+      "unit_gradient_step_projected_power_ball_residual": "0.28417778209038538936199617112933367264216487305684548033825388455766829346873916592355889815510098605738",
+      "complementarity_lambda_power_slack": "0.0249309059480516086022103311307058430444008033072185840384865543628952283961807878266395986585592376401158",
+      "author_W_stationarity_absolute_gate_reported": false,
+      "stationarity_PASS_not_assigned": true
+    },
+    {
+      "block": 6,
+      "original_actual_flags": {
+        "converged": true,
+        "termination_reason": "relative_objective_tolerance",
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "power_ball_multiplier_ray_estimate": "3.68794533589029563092478012117844846971755361800225274672429263293851699900228780299401996486520291168348",
+      "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "2.57026660401505149224292037523469452724646770521732339416513303954407047696254084968742913968086832982738",
+      "unit_gradient_step_projected_power_ball_residual": "0.28411131770595636087873719841679242010068501641430397383676627602819316723199671382603695000370863709054",
+      "complementarity_lambda_power_slack": "0.0255024439941759925877004207030235510975309596639709932484351661425675690061511939677670770256895937477531",
+      "author_W_stationarity_absolute_gate_reported": false,
+      "stationarity_PASS_not_assigned": true
+    },
+    {
+      "block": 7,
+      "original_actual_flags": {
+        "converged": true,
+        "termination_reason": "relative_objective_tolerance",
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "power_ball_multiplier_ray_estimate": "3.69536786498004235998428719563307296518531519570111725830479006479574441623922577904047605012266649474795",
+      "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "2.56450668961047949319926857806583143924712518235757079867557447131845094031225204358046126619152869651763",
+      "unit_gradient_step_projected_power_ball_residual": "0.283254511065915930989203694795895970657500563659897709515283068781937989349085176437046285686685701203557",
+      "complementarity_lambda_power_slack": "0.0284574059056887390599820954725718353047246710809904175249642443846689224872364154088767603728357327993019",
+      "author_W_stationarity_absolute_gate_reported": false,
+      "stationarity_PASS_not_assigned": true
+    },
+    {
+      "block": 8,
+      "original_actual_flags": {
+        "converged": true,
+        "termination_reason": "relative_objective_tolerance",
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "power_ball_multiplier_ray_estimate": "3.69710378342357285410580251455750200449129577003429743319609991413057766146594368831338871073782430801867",
+      "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "2.57544934614638588498416002740915448062087979095729680107023885655385580036246391195704903530948210152432",
+      "unit_gradient_step_projected_power_ball_residual": "0.284210142907975093177603878711220418961373224915405935410203750501226243173628414722788894714559306394261",
+      "complementarity_lambda_power_slack": "0.0291484872676313682060728746215812441001732268067630692750028169475134868629697402602231240718386002203875",
+      "author_W_stationarity_absolute_gate_reported": false,
+      "stationarity_PASS_not_assigned": true
+    },
+    {
+      "block": 9,
+      "original_actual_flags": {
+        "converged": true,
+        "termination_reason": "relative_objective_tolerance",
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "power_ball_multiplier_ray_estimate": "3.69805955445683756158953928113912953598703777167514367966670680919457521671398464387883973372783254452377",
+      "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "2.57763702388600459198810925160371838484651103615962796156052062701675549732484930652337503091462407400383",
+      "unit_gradient_step_projected_power_ball_residual": "0.284375197539226388114040858388311606181681851737216595149327252340283139678411811462420156051140388318861",
+      "complementarity_lambda_power_slack": "0.0295289865761552142536279859915736625648228971345061901755546073051941881471996586715754322821899970670654",
+      "author_W_stationarity_absolute_gate_reported": false,
+      "stationarity_PASS_not_assigned": true
+    },
+    {
+      "block": 10,
+      "original_actual_flags": {
+        "converged": true,
+        "termination_reason": "relative_objective_tolerance",
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "power_ball_multiplier_ray_estimate": "3.69867670443875313058606532635438612562441792701984292979003868507413348067714619332783573158584688183042",
+      "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "2.57872594195399517341842371487658196939037383104923623995080437450046800062181978479390627156653447849518",
+      "unit_gradient_step_projected_power_ball_residual": "0.284451346056719064046680474779797597133701990751034065341673819966191746478355443528922197679638175038692",
+      "complementarity_lambda_power_slack": "0.0297746784196846869507733600544215764753814043850661246897215449555585647995421243534962532257055977830492",
+      "author_W_stationarity_absolute_gate_reported": false,
+      "stationarity_PASS_not_assigned": true
+    },
+    {
+      "block": 11,
+      "original_actual_flags": {
+        "converged": true,
+        "termination_reason": "relative_objective_tolerance",
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "power_ball_multiplier_ray_estimate": "3.69919943138756747672449715078228194741557932048430021544861446051537131699868077962789835861131607547267",
+      "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "2.57928521170474861296457416876883137671472057809961990698640916928071248777596438400139063560176863049102",
+      "unit_gradient_step_projected_power_ball_residual": "0.284481759025125670679280133857643703711802212078494618901494031275230121856233025415087068565369030351709",
+      "complementarity_lambda_power_slack": "0.029982779776962344085302004407825165394422136386009475420592248925002330199764280536591830410177887363123",
+      "author_W_stationarity_absolute_gate_reported": false,
+      "stationarity_PASS_not_assigned": true
+    },
+    {
+      "block": 12,
+      "original_actual_flags": {
+        "converged": true,
+        "termination_reason": "relative_objective_tolerance",
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "power_ball_multiplier_ray_estimate": "3.69969056129677901998299485110130136290497487644883448434033082729164119251062135624002854922271868013708",
+      "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "2.57970534108671313203072646921445150478856116742110329358558102357197967657173363138100857769844578000936",
+      "unit_gradient_step_projected_power_ball_residual": "0.284500448906010307516834581782897588989473608507156982454988699620356988155927870057671221986848762567329",
+      "complementarity_lambda_power_slack": "0.0301783021211524571369487707944253351600140026688942324070950854358826559838012507556840346354928320682524",
+      "author_W_stationarity_absolute_gate_reported": false,
+      "stationarity_PASS_not_assigned": true
+    }
+  ],
+  "native_W_author_absolute_stationarity_gate": null,
+  "binary64_formula_comparator_scope": "Frozen common Python arithmetic provider on each actual native state; native per-coordinate analytic vectors were not captured. Stored native RCG/PGA norms are separately reported alongside newly computed MP norms.",
+  "native_per_coordinate_analytic_vector_verification_still_pending": true,
+  "no_Python_PASS_or_failure_inherited": true,
+  "initial_preimport_natural1_preserved": {
+    "stage": "local-origin/native-saved-MP-preparation\\actual-unique-native36-saved-MP-launch-v1",
+    "MP_calls_reached": 0
+  },
+  "corrected_environment_is_job_only_existing_numeric_audit_deps_plus_repro_site_no_install": true,
+  "no_optimizer_new_trajectory_MC_RNG_old_fixed15_or_old_Python_MP_calls": true,
+  "original_reference_native_fullsix_or_fullpaper_PASS": false
+}

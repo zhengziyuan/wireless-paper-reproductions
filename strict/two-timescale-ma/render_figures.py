@@ -6,9 +6,11 @@ correlated-Wishart formula. Incomplete full banks yield readiness only.
 from __future__ import annotations
 import argparse
 import json
+import math
 from pathlib import Path
 import numpy as np
 from ma_metadata import bank_complete,complete,implemented_complete,implementation_fingerprint,original_scope_available
+from figures import write_or_verify
 
 
 def terminal_hold_mean(values):
@@ -22,6 +24,36 @@ def terminal_hold_mean(values):
 def nested(record,path):
     for name in path.split("."):record=record[name]
     return record
+
+
+def checked_saved_mean(record, name, expected_count):
+    """Validate the saved plotted mean against its complete stored samples.
+
+    This is an engineering consistency check only; it does not establish
+    convergence, physical feasibility or agreement with a paper figure.
+    The tolerance bounds accumulated binary64 roundoff for two nonnegative
+    sums and subsequent division. Subnormal inputs fail closed rather than relying
+    on an unsupported relative-error bound.
+    """
+    metric=nested(record,name) if name.startswith("metrics.") else record["metrics"]["schemes"][name]
+    rates=metric["sample_sum_rates"]; saved=metric["mean_sum_rate"]
+    if not isinstance(rates,list) or type(expected_count) is not int or expected_count<=0 or len(rates)!=expected_count:
+        raise ValueError("incomplete saved rate samples")
+    if type(saved) not in (int,float) or not math.isfinite(saved) or saved<0:
+        raise ValueError("invalid saved rate mean")
+    tiny=np.finfo(float).tiny
+    if any(type(x) not in (int,float) or not math.isfinite(x) or x<0 or (0<x<tiny) for x in rates):
+        raise ValueError("invalid or subnormal saved rate")
+    with np.errstate(over="ignore",invalid="ignore"):
+        observed=float(np.mean(rates))
+    if not math.isfinite(observed) or (0<observed<tiny) or (0<saved<tiny):
+        raise ValueError("invalid or subnormal rate mean")
+    unit_roundoff=np.finfo(float).eps/2
+    nu=(expected_count+4)*unit_roundoff
+    if nu>=1:raise ValueError("unsupported sample count for rounding bound")
+    allowance=(2*nu/(1-nu))*max(abs(observed),abs(saved))
+    if abs(saved-observed)>allowance:raise ValueError("saved mean is inconsistent with samples")
+    return float(saved)
 
 
 def aggregate(bank):
@@ -38,20 +70,30 @@ def aggregate(bank):
         if not path.exists():missing.append(path.name);continue
         try:record=json.loads(path.read_text())
         except (OSError,ValueError):invalid.append(path.name);continue
-        job=json.loads((bank/"jobs"/entry["filename"]).read_text())
-        if not implemented_complete(record,entry["input_fingerprint"],job,config):invalid.append(path.name);continue
+        try:
+            job=json.loads((bank/"jobs"/entry["filename"]).read_text())
+            valid=implemented_complete(record,entry["input_fingerprint"],job,config)
+        except (OSError,ValueError,TypeError,KeyError,AttributeError,OverflowError,RecursionError):
+            invalid.append(path.name);continue
+        if not valid:invalid.append(path.name);continue
+        if plan["figure"] not in [3,4,13,14,15,16]:
+            names=catalog["default_schemes"] if spec["series"]=="default_schemes" else spec["series"]
+            try:
+                for name in names:checked_saved_mean(record,name,config["nlos_realizations_per_geometry"])
+            except (KeyError,TypeError,ValueError,OverflowError,AttributeError):invalid.append(path.name);continue
         by_case[entry["case_index"]].append(record)
     ready=not missing and not invalid and all(len(items)==100 for items in by_case)
     receipt={"paper_id":"two-timescale-ma","figure":plan["figure"],"engine":"python",
         "input_bank_complete":True,"expected_jobs":manifest["expected_jobs"],"complete_jobs":sum(map(len,by_case)),
-        "overall_implemented_scope_success":ready,"full_execution_verified":ready and original_scope,
+        "overall_implemented_scope_success":ready,"full_execution_verified":False,
+        "original_scenarios_independently_verified":False,
         "original_scope_available":original_scope,"printed_correlated_ZF_closed_form_recovered":False,
         "missing_results":missing,"invalid_or_nonconverged_results":invalid,"geometries_per_point":100,"nlos_per_geometry":1000,
         "failed_samples_discarded_for_curve":False,"original_curve_closeness_verified":False,
         "implementation_fingerprint":implementation_fingerprint()}
     if not ready or not original_scope:return receipt,None
     figure=spec["figure"];series=[]
-    if figure in [3,4,13,15]:
+    if figure in [3,4,13,14,15,16]:
         for case,items in zip(plan["cases"],by_case):
             for source_path in spec["series"]:
                 curve=terminal_hold_mean([nested(r,source_path) for r in items])
@@ -80,22 +122,33 @@ def aggregate(bank):
 
 
 def render(data,path):
+    import io
     import matplotlib
     matplotlib.use("Agg")
+    matplotlib.rcParams['svg.hashsalt']='two-timescale-ma-v2'
     import matplotlib.pyplot as plt
     fig,ax=plt.subplots(figsize=(8.2,5.2));markers=["o","s","^","D","v","P"]
     for i,series in enumerate(data["series"]):
         ax.plot(series["x"],series["y"],label=series["label"],marker=markers[i%6],linewidth=1.5,
             markersize=3,markevery=max(1,len(series["x"])//12))
     ax.set_xlabel(f'{data["x_name"]} ({data["x_unit"]})');ax.set_ylabel(f'{data["y_name"]} ({data["y_unit"]})')
-    ax.grid(True,alpha=.25);ax.legend(fontsize=6);fig.tight_layout();fig.savefig(path.with_suffix(".png"),dpi=220);fig.savefig(path.with_suffix(".svg"));plt.close(fig)
+    ax.grid(True,alpha=.25);ax.legend(fontsize=6);fig.tight_layout()
+    # Compare fully rendered bytes before any existing file can be reused.
+    # A partial render remains evidence and is never silently overwritten.
+    try:
+        png=io.BytesIO();svg=io.BytesIO()
+        fig.savefig(png,format='png',dpi=220)
+        fig.savefig(svg,format='svg',metadata={'Date':None})
+        write_or_verify(path.with_suffix('.png'),png.getvalue())
+        write_or_verify(path.with_suffix('.svg'),svg.getvalue())
+    finally:plt.close(fig)
 
 
 if __name__=="__main__":
     p=argparse.ArgumentParser();p.add_argument("--bank",type=Path,required=True);p.add_argument("--output-dir",type=Path,required=True)
     args=p.parse_args();args.output_dir.mkdir(parents=True,exist_ok=True);receipt,data=aggregate(args.bank)
-    (args.output_dir/"readiness.json").write_text(json.dumps(receipt,indent=2)+"\n",encoding="utf-8")
+    write_or_verify(args.output_dir/"readiness_v2.json",(json.dumps(receipt,indent=2)+"\n").encode())
     if data is not None:
-        path=args.output_dir/f'ma-figure-{data["figure"]:02d}'
-        path.with_suffix(".json").write_text(json.dumps(data,indent=2,allow_nan=False)+"\n",encoding="utf-8");render(data,path)
+        path=args.output_dir/f'ma-figure-{data["figure"]:02d}-v2'
+        write_or_verify(path.with_suffix(".json"),(json.dumps(data,indent=2,allow_nan=False)+"\n").encode());render(data,path)
     print(json.dumps({"full_execution_verified":receipt["full_execution_verified"],"figure_rendered":data is not None,"complete_jobs":receipt["complete_jobs"]}))

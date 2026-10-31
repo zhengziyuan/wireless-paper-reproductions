@@ -1,0 +1,88 @@
+{
+  "official_source_records": [
+    {
+      "key": "S1428-1",
+      "url": "https://www.itu.int/dms_pubrec/itu-r/rec/s/R-REC-S.1428-1-200102-I!!PDF-E.pdf",
+      "sha256": "4517d788547e419d35681ef5e275e8c66b00287859d09ace7eb60ff4566300bb",
+      "bytes": 23310,
+      "PDF_pages": 3,
+      "visually_checked_PDF_pages": [
+        2,
+        3
+      ],
+      "clauses": "recommends1, all three D/lambda families",
+      "absolute_gain_unit": "dBi",
+      "frequency_range_GHz": [
+        10.7,
+        30
+      ]
+    },
+    {
+      "key": "S1503-3",
+      "url": "https://www.itu.int/dms_pubrec/itu-r/rec/s/R-REC-S.1503-3-201801-S!!PDF-E.pdf",
+      "sha256": "e4e7df0d7484f81a2f663f2c816b59513b2a7cc2f695b023f827d4be7ed8178d",
+      "bytes": 2635581,
+      "PDF_pages": 134,
+      "visually_checked_PDF_pages": [
+        130
+      ],
+      "printed_page": 128,
+      "clause": "D6.5.1.1",
+      "FSS_reference_to_S1428_verified": true,
+      "edition_is_author_cited_2018_version": true
+    },
+    {
+      "key": "S1419-0",
+      "url": "https://www.itu.int/dms_pubrec/itu-r/rec/s/R-REC-S.1419-0-199911-I!!PDF-E.pdf",
+      "sha256": "0bdf429ec3900049fcb523f9b96074711c51ace7321abdcfd72a5eb99d79c576",
+      "bytes": 18636,
+      "PDF_pages": 3,
+      "visually_checked_PDF_pages": [
+        1,
+        2,
+        3
+      ],
+      "edition_year": 1999,
+      "scoped_frequency_bands_GHz": [
+        [
+          19.3,
+          19.7
+        ],
+        [
+          29.1,
+          29.5
+        ]
+      ],
+      "source_role": "Coordination/mitigation techniques and examples; does not uniquely specify the missing12GHz simulation antenna diameter/beam gains"
+    }
+  ],
+  "source_PDFs_or_pages_redistributed": false,
+  "primary_pages_visually_checked_with_Ghostscript": true,
+  "initial_Poppler_render_lost_Symbol_glyphs_and_was_not_used_for_formula_admission": true,
+  "original_author_Chapter4_source_sha256": "786351541a13cf99f711a1e8d5a6ad8cfc38d03e728cf52ccb3e9d0aaad347a8",
+  "original_author_bibliography_sha256": "cac31041353b3fa3a6c091123b3b7ff96c767ad9b8f709d70e3bc27d4bbc89bf",
+  "author_table_source_line": 798,
+  "author_reported_multibeam_pathloss_statement_line": 763,
+  "current_explicit_unreported_defaults": {
+    "gt_diameter_m": 1.2,
+    "leo_element_gain_dbi": 40,
+    "geo_gain_dbi": 40,
+    "lu_gain_dbi": 0
+  },
+  "antenna_diameter_alone_excluded_as_explanation_for_M18_NoRIS_gap_with_other_inputs_fixed": true,
+  "source_complete_LEO_GEO_multibeam_patterns_or_terminal_gains_recovered": false,
+  "final_publisher_PDF_readback": {
+    "article_number": "10679992",
+    "doi_query": "10.1109/JSAC.2024.3460068",
+    "metadata_found": true,
+    "existing_profile_access_check": "sign-in page detected",
+    "actual_PDF_downloaded": false,
+    "missing_or_absent_publisher_document_inferred": false
+  },
+  "author_EURECOM_PDF_attempt": {
+    "HTTP_status": 429,
+    "actual_PDF_downloaded": false,
+    "source_absence_inferred": false
+  },
+  "full_original_scenario_or_paper_conformance_pass": false
+}

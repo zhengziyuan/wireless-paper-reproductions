@@ -1,0 +1,65 @@
+{
+  "schema": "final-source-and-unit-boundary-summary-v1",
+  "paper_id": "cooperative-satcom",
+  "doi": "10.1109/JSAC.2024.3460068",
+  "final_source_pages": 18,
+  "published_pages": [
+    279,
+    296
+  ],
+  "final_source_PDF_SHA256": "6fceff0ae4641d429ec8238429b4757bc398e64015ac0d7b88b4ed02987962d0",
+  "PDF_distributed": false,
+  "existing_global_registry_language_tasks": 154,
+  "global_registry_receipt_id": "all154-final-publisher-expanded-scope-preserving-frozen150-v1.json",
+  "global_registry_receipt_sha256": "b1012eb2861db969cd18936cc35b0e2081b4b948e3780dcd92bf86c1e0a5d8d2",
+  "this_package_does_not_rewrite_or_recount_global_catalog": true,
+  "Fig12_scope": {
+    "curves": 8,
+    "reference_points": 96,
+    "ordinate": "sum achievable rate in bit/s/Hz"
+  },
+  "Fig13_scope": {
+    "configurations": [
+      {
+        "M": 25,
+        "N": 16,
+        "J": 3
+      },
+      {
+        "M": 15,
+        "N": 16,
+        "J": 3
+      },
+      {
+        "M": 25,
+        "N": 48,
+        "J": 1
+      }
+    ],
+    "kappa_N_dB": 10,
+    "kappa_R_dB": 9,
+    "methods": [
+      "AP-NoRIS",
+      "AP-AO",
+      "MR-S-PA",
+      "MR-S-TS",
+      "MR-TTS-PA",
+      "MR-TTS-TS"
+    ],
+    "required_language_timing_records": 36,
+    "required_wall_and_CPU_values": 72,
+    "actual_author_historical_timing_recovered": false
+  },
+  "unit_boundary": {
+    "current_bank_variable": "dimensionless interference-to-noise ratio",
+    "noise_dBm": -94,
+    "I_W_per_I_over_N": 3.9810717055349727e-13,
+    "current_bank_physical_conversion_resolved": true,
+    "author_executed_plot_normalization_convention_recovered": false,
+    "source_unit_receipt_id": "actual-dimensionally-exact-I-over-N-to-W-conversion-and-fixed-bank-literal-W-redundancy-v1.json",
+    "source_unit_receipt_sha256": "4e8db2aaf74ab5b72d2924459761d8b29ab1709f2b3af19adf20e6707539976e",
+    "literal_W_fixed144_input_bound_W": 1.413604043842846e-06,
+    "unit_conflict_is_separate_from_four_algebraic_counterexamples": true
+  },
+  "full_reference_or_paperPASS": false
+}

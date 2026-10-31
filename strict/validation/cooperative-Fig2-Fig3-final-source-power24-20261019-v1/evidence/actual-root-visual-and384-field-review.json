@@ -1,0 +1,70 @@
+{
+  "schema": "actual-power24-figures-field-evaluation-and-visual-review-v1",
+  "UTC": "2026-10-19T07:06:59.896435+00:00",
+  "assembly": {
+    "path": "retained-evidence/cooperative-final-Algorithm3-correction-v1/Fig2-Fig3-final-source-corrected24-actual-saved-v1/ACTUAL_COMPLETE24_FRESH_ALL8_FIG2_FIG3_ASSEMBLY_SCOPE_V1.json",
+    "bytes": 6606,
+    "SHA256": "a198dcb1536fd0e3e9f7593fab4100da31ef779cf55177dcb4ada0a4303ae144"
+  },
+  "field_evaluation": {
+    "path": "retained-evidence/cooperative-final-Algorithm3-correction-v1/Fig2-Fig3-final-source-corrected24-actual-saved-v1/same-actual-state-fields-new23-v1/ACTUAL_REMAINING23_FIXED_STATE_FIELDS_PLUS_EXACT_FIRSTCASE_REUSE_V1.json",
+    "bytes": 302234,
+    "SHA256": "f43d24f0fa5d20ab0899ba09f88455522676226ceceaa3ca100875b7a2953098"
+  },
+  "independent_solution_gaps": {
+    "path": "retained-evidence/cooperative-final-Algorithm3-correction-v1/Fig2-Fig3-final-source-corrected24-actual-saved-v1/all24_unfitted_independently_optimized_solution_gaps_not_a_same_state_gate.json",
+    "bytes": 79159,
+    "SHA256": "0df337540ba01d0ecbbf52445340104c2458fedc43bf64c34b6027d5038cfe2c"
+  },
+  "actual_held_exec_session_results": {
+    "assembly_render": {
+      "returned_exit_code": 0
+    },
+    "remaining23_same_state_fields": {
+      "returned_exit_code": 0
+    }
+  },
+  "both_recorded_source_intervals_unchanged": true,
+  "actual_case_lanes": 48,
+  "actual_performance_rows": 384,
+  "new_same_state_rows": 368,
+  "exact_reused_case000_rows": 16,
+  "all384_same_actual_state_fields_pass": true,
+  "new_field_maximum_absolute_errors": {
+    "sinr": 1.2789769243681803e-13,
+    "denominator": 3.907985046680551e-14,
+    "satellite_power": 3.3306690738754696e-16,
+    "gt_interference": 2.0816681711721685e-17
+  },
+  "field_abs_tolerance": 1e-09,
+  "field_rel_tolerance": 1e-10,
+  "field_evaluation_scope": "Frozen Python physical field evaluator applied to both implementations actual saved states using each actual saved input data. This is not a new native optimizer/evaluator execution.",
+  "maximum_independently_optimized_absolute_gap": 0.11990043650593663,
+  "maximum_independently_optimized_relative_gap": 0.04827026538004336,
+  "visual_review": {
+    "method": "Root viewed both actual PNG images with view_image at full returned rendering.",
+    "reviewed_PNGs": [
+      {
+        "path": "retained-evidence/cooperative-final-Algorithm3-correction-v1/Fig2-Fig3-final-source-corrected24-actual-saved-v1/rendered-Fig2-Fig3/figures/Fig02-corrected-Algorithm3-saved-dual-and-unfitted-author-reference.png",
+        "bytes": 162108,
+        "SHA256": "f19bdad74b330ad2d14821d35458c8ba4b8ecc09b32f0cdd2b40c7ba60b2110b"
+      },
+      {
+        "path": "retained-evidence/cooperative-final-Algorithm3-correction-v1/Fig2-Fig3-final-source-corrected24-actual-saved-v1/rendered-Fig2-Fig3/figures/Fig03-corrected-Algorithm3-saved-dual-and-unfitted-author-reference.png",
+        "bytes": 158155,
+        "SHA256": "59b81b27f5ace1d238128c581afe794c8d0b428160082bcea93c9e4375e8a3d4"
+      }
+    ],
+    "axes_units_titles_legend_and_disclosures_legible": true,
+    "no_visible_label_clipping_or_overlap": true,
+    "unfitted_reference_and_computed_curves_shown_in_separate_labeled_panels": true,
+    "different_y_scales_explicitly_visible": true,
+    "finding": "Large reference gaps remain visible; corrected computed curves are largely interference-limited/flat in appearance. Plot appearance alone does not identify the physical cause.",
+    "plot_layout_acceptance_only": true
+  },
+  "configured1000_draws_are_channel_moments_not_optimized_MC_mean": true,
+  "new_optimization_MC_RNG_MP_calls": 0,
+  "original_reference_acceptance": false,
+  "independent_optimized_solution_equality_claim": false,
+  "complete_paper_or_six_paper_acceptance": false
+}

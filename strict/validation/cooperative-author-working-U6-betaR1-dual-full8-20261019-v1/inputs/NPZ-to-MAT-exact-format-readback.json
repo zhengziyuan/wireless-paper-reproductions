@@ -1,0 +1,164 @@
+{
+  "schema": "ACTUAL_CANONICAL_NPZ_TO_NATIVE_MAT_FORMAT_ONLY_EXACT_ROUNDTRIP_V1",
+  "input_npz": "local-source/76388dc3d7da/channel-data-and-limits.npz",
+  "input_npz_SHA256": "ce39e03acac33fa0670264ee5f49cf95f2ea6bf96334ab09fb0445978cf4df8e",
+  "configuration": "local-source/55123edaa440/configuration-requires-saved-source-factory.json",
+  "configuration_SHA256": "998a1c191e60897eef08fac565b3aeb95fc5e0024572dbb4ba3874feeb44f79d",
+  "output_mat": "local-source/9272e1ed80dc/canonical-native-U6-eleven-fields-and-limits.mat",
+  "output_mat_SHA256": "cc9a176813692300d592de139085c51ae7a6f964151dcc57d059514f630664e6",
+  "all11_field_original_indices_dtype_signed_zero_and_column_major_bytes_preserved": true,
+  "only_shape_change": "NPZ1D r_var/geo_d_mean/geo_d_var/geo_G_var and limits become MATcolumns; original index order/raw bytes unchanged",
+  "fields": {
+    "d_mean": {
+      "NPZ_shape": [
+        3,
+        6,
+        16
+      ],
+      "MAT_shape": [
+        3,
+        6,
+        16
+      ],
+      "dtype": "complex128",
+      "column_major_raw_SHA256": "3db64b0bf78ebb21a9d8787ff803a22d7c47d3842a3ebe3b512fa27da00d5319",
+      "actual_MAT_roundtrip_dtype_shape_and_raw_bytes_exact": true
+    },
+    "d_var": {
+      "NPZ_shape": [
+        3,
+        6
+      ],
+      "MAT_shape": [
+        3,
+        6
+      ],
+      "dtype": "float64",
+      "column_major_raw_SHA256": "336ee9d03bf94ae9f2595e077fce41017f177ffbe557484c2e68a0b1f7b95154",
+      "actual_MAT_roundtrip_dtype_shape_and_raw_bytes_exact": true
+    },
+    "G_mean": {
+      "NPZ_shape": [
+        3,
+        6,
+        16,
+        25
+      ],
+      "MAT_shape": [
+        3,
+        6,
+        16,
+        25
+      ],
+      "dtype": "complex128",
+      "column_major_raw_SHA256": "000cb68c94a2b250814dfb60505133df08912cd765480559a3c54c89efed67a6",
+      "actual_MAT_roundtrip_dtype_shape_and_raw_bytes_exact": true
+    },
+    "G_var": {
+      "NPZ_shape": [
+        3,
+        6
+      ],
+      "MAT_shape": [
+        3,
+        6
+      ],
+      "dtype": "float64",
+      "column_major_raw_SHA256": "cc5326d3d39a300072c865d1fca8fae7f2bb89ef67ede5308566061b765fc1a4",
+      "actual_MAT_roundtrip_dtype_shape_and_raw_bytes_exact": true
+    },
+    "r_mean": {
+      "NPZ_shape": [
+        6,
+        25
+      ],
+      "MAT_shape": [
+        6,
+        25
+      ],
+      "dtype": "complex128",
+      "column_major_raw_SHA256": "3aeb70e1ead0c9387a01ab309fd1b7db4a354b2c70c7c64a38592bc90f96af36",
+      "actual_MAT_roundtrip_dtype_shape_and_raw_bytes_exact": true
+    },
+    "r_var": {
+      "NPZ_shape": [
+        6
+      ],
+      "MAT_shape": [
+        6,
+        1
+      ],
+      "dtype": "float64",
+      "column_major_raw_SHA256": "bd32d2208be9cb5a25987206a93585f987a6b8a2b29108ecfcd343fb03159be1",
+      "actual_MAT_roundtrip_dtype_shape_and_raw_bytes_exact": true
+    },
+    "gt_second": {
+      "NPZ_shape": [
+        3,
+        1,
+        16,
+        16
+      ],
+      "MAT_shape": [
+        3,
+        1,
+        16,
+        16
+      ],
+      "dtype": "complex128",
+      "column_major_raw_SHA256": "4f1f9f2d327d26fa8ca10403cf76bf2133f5010045c69904de069c87bb8c1ae8",
+      "actual_MAT_roundtrip_dtype_shape_and_raw_bytes_exact": true
+    },
+    "geo_d_mean": {
+      "NPZ_shape": [
+        6
+      ],
+      "MAT_shape": [
+        6,
+        1
+      ],
+      "dtype": "complex128",
+      "column_major_raw_SHA256": "a6d8b57733ad7b27e04336886494011e1156bb42cdd5854adb8c019576be560c",
+      "actual_MAT_roundtrip_dtype_shape_and_raw_bytes_exact": true
+    },
+    "geo_d_var": {
+      "NPZ_shape": [
+        6
+      ],
+      "MAT_shape": [
+        6,
+        1
+      ],
+      "dtype": "float64",
+      "column_major_raw_SHA256": "22022a70f4cd0bba5b8cae7c31256586861ba09bbba562143a7fcdb9aa2419ac",
+      "actual_MAT_roundtrip_dtype_shape_and_raw_bytes_exact": true
+    },
+    "geo_G_mean": {
+      "NPZ_shape": [
+        6,
+        25
+      ],
+      "MAT_shape": [
+        6,
+        25
+      ],
+      "dtype": "complex128",
+      "column_major_raw_SHA256": "2e9f596e38168db21c4cdc58c39616d7bece1c3865949fb5fe61ec2f77a84523",
+      "actual_MAT_roundtrip_dtype_shape_and_raw_bytes_exact": true
+    },
+    "geo_G_var": {
+      "NPZ_shape": [
+        6
+      ],
+      "MAT_shape": [
+        6,
+        1
+      ],
+      "dtype": "float64",
+      "column_major_raw_SHA256": "b96afe4f4d151221857323dee61fdfc46df731f052c4a2968371bc6dd8d4ab82",
+      "actual_MAT_roundtrip_dtype_shape_and_raw_bytes_exact": true
+    }
+  },
+  "new_geometry_channel_RNG_MC_or_optimization_calls": 0,
+  "no_author_prefix_or_random_channels_replayed": true
+}

@@ -1,0 +1,226 @@
+{
+  "paper_id": "hotspot-satcom",
+  "figure": 10,
+  "data_kind": "independent_simulation_curves",
+  "panels": [
+    {
+      "source_id": "3-10",
+      "curves": [
+        {
+          "label": "AO_kS0",
+          "x": [
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            5.0,
+            6.0
+          ],
+          "y": [
+            8.375649939829353,
+            9.222082949697553,
+            9.851000220940515,
+            10.335648783725704,
+            10.33962702487921,
+            10.34359628140172
+          ]
+        },
+        {
+          "label": "TwoStage_kS0",
+          "x": [
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            5.0,
+            6.0
+          ],
+          "y": [
+            8.375656261866277,
+            5.349570188518814,
+            9.557043098725869,
+            9.819321756276334,
+            9.767852406591347,
+            5.249448648144705
+          ]
+        },
+        {
+          "label": "NoRIS_kS0",
+          "x": [
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            5.0,
+            6.0
+          ],
+          "y": [
+            3.610045534038617,
+            4.07605794780032,
+            4.420662410408484,
+            4.705379123473345,
+            4.7091583630832,
+            4.712928968615465
+          ]
+        },
+        {
+          "label": "AO_kS10",
+          "x": [
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            5.0,
+            6.0
+          ],
+          "y": [
+            9.899356614718522,
+            10.419291717224734,
+            10.843936473013766,
+            11.182254940826928,
+            11.186268325516592,
+            11.190273831778581
+          ]
+        },
+        {
+          "label": "TwoStage_kS10",
+          "x": [
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            5.0,
+            6.0
+          ],
+          "y": [
+            9.899378938037207,
+            6.965607609075885,
+            10.548857102975097,
+            10.684706128429365,
+            10.729611708430163,
+            7.979228168630044
+          ]
+        },
+        {
+          "label": "NoRIS_kS10",
+          "x": [
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            5.0,
+            6.0
+          ],
+          "y": [
+            4.416633217044148,
+            4.762578580521476,
+            5.033915264453876,
+            5.262969241378426,
+            5.266865699075501,
+            5.270754618926058
+          ]
+        },
+        {
+          "label": "AO_kS20",
+          "x": [
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            5.0,
+            6.0
+          ],
+          "y": [
+            10.56800246049656,
+            10.845773126834201,
+            11.094369442901364,
+            11.30378878261979,
+            11.307807193568129,
+            11.311817969519076
+          ]
+        },
+        {
+          "label": "TwoStage_kS20",
+          "x": [
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            5.0,
+            6.0
+          ],
+          "y": [
+            10.568003155045348,
+            7.42123530826062,
+            10.799653115734218,
+            10.808101364610065,
+            10.860489986095292,
+            8.183199541610307
+          ]
+        },
+        {
+          "label": "NoRIS_kS20",
+          "x": [
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            5.0,
+            6.0
+          ],
+          "y": [
+            4.73676691939597,
+            4.980609520303517,
+            5.179421204595579,
+            5.351729376892089,
+            5.355643605014225,
+            5.359550535056885
+          ]
+        }
+      ],
+      "x": {
+        "quantity": "HU count",
+        "unit": "index"
+      },
+      "y": {
+        "quantity": "source ratio-of-expected-powers HU sum rate",
+        "unit": "bps/Hz"
+      },
+      "algorithm": "explicit_corrected_vector_QT_erratum_not_printed_invalid_SOC",
+      "exact_ergodic_E_log_MC_stored_separately": true
+    }
+  ],
+  "full_execution_verified": true,
+  "all_source_panels_present": true,
+  "failed_samples_discarded": false,
+  "hotspot_HU_pair_distance_contract_declared": true,
+  "scenario_source_constraints_verified": false,
+  "source_conforming_full_execution_verified": false,
+  "source_conformance_note": "A declared HU-distance contract and numerical gates do not establish every source assumption, historical feed/LoS geometry, covariance convention or author initialization.",
+  "published_figure_reproduction_certified": false,
+  "original_curve_closeness_verified": false,
+  "source_version": "author_thesis_Chapter3_TeX_and_original_EPS",
+  "final_published_figure_numbering_verified": false,
+  "input_file_sha256": {
+    "0:case-01-matlab.json": "bd2d857c57dcb89e5f7d21c4b85db4f246dd31db6314b4795480b310f51cc015",
+    "1:case-02-matlab.json": "85a193622fff43ebc25656b2d04280beb5f7583533f892d36fa9cbd56ec510e8",
+    "2:case-03-matlab.json": "a7f535c24bfb8f0406092602f367d55d4d46b988ad617dd6de243df72d42eae2",
+    "3:case-04-matlab.json": "d15910dce1256dbf10ecef5ea96a13da524d506ed298bc84917d436e8351fdcf",
+    "4:case-05-matlab.json": "0dd7e3512f4261104a2bfd3bcb20b3f7210aa3d1ec21b329ba433739f7491047",
+    "5:case-06-matlab.json": "a569890cb624e383ebb3eb2d9b703b882ba400e7971b05903c11ecb61eeff3bb",
+    "6:case-07-matlab.json": "844ba7a50115ff406b7a7a94d172089b6a1b465158eb87f9e4d05bcc29c30bf5",
+    "7:case-08-matlab.json": "161bce236fafefd29cb09e4890e61bea32b88936d37dd43057cdc677e7469771",
+    "8:case-09-matlab.json": "c0b62728c420ef9aee4014fc79f3363349ce490c3fa97169eb87d3fd51808f8f",
+    "9:case-10-matlab.json": "0c8144e8d61628c000f35a9026e2479ee1b34581368c44791f466c255647b809",
+    "10:case-11-matlab.json": "44ce6028a8ee257e4fc06f034a4e38e0904d5230bd4d83ac5799d28d3eb845fb",
+    "11:case-12-matlab.json": "9f6590b06229231298230264ee4f7b49d52f65f6a7751954796d081fbc0a7f9b",
+    "12:case-13-matlab.json": "36a42e9e4a598744de91d54cda1b19402a7b11cab849b5dc62e7c4e58c812eea",
+    "13:case-14-matlab.json": "b52fcb066fbd0d8539956e6003a940414a53f9d28692a246ab901539d7a3cacb",
+    "14:case-15-matlab.json": "dcf07edad5320b2969508faceee491ecec9423e3d7c61be4128e65dfaec05f2a",
+    "15:case-16-matlab.json": "c3bae92a2a9f3dd7a14bd93901dc70b0fe18bafe8be3828d6f1d8fb48788f889",
+    "16:case-17-matlab.json": "465e33021972bb583b2694e5c090f1eba6f928558c308265eb67ce58fb23a1c0",
+    "17:case-18-matlab.json": "c83ea7e05523462cee195a2cad39e6de849f66ca3d9874021df586f0fb11b11e"
+  },
+  "renderer_source_sha256": "e8b86dc376444928cdbb48f05525a966fdaac376e8ec162a44c1665226a60f7d",
+  "input_and_renderer_unchanged_during_render": true
+}

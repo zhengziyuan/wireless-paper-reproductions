@@ -1,0 +1,40 @@
+{
+  "schema": "ACTUAL_DUAL_LANGUAGE_STRUCTURED_FIXED_QCQP_PROCESS_CLOSURE_V1",
+  "created_UTC": "2026-10-19T18:02:21.366615+00:00",
+  "Python_completed": true,
+  "MATLAB_natural_exit_code": 0,
+  "identity": {
+    "PID": 3140,
+    "actual_creation_FILETIME": 134369064909130827,
+    "same_Popen_handle": true
+  },
+  "host_errors": [],
+  "source_before": {
+    "source-0586d23a302d/structured_original_qcqp_candidate_v1.py": "1fa91846426407d7313f0ba452e2d81c60fa433c9513d8618f870414903f8881",
+    "source-ac4378c680d7/solve_fixed_original_qcqp_matlab_v1.m": "f8183e36aa874bc832b50dcbf3696e28d8bfa3ea4b09bd908b0db9d44cbb44e5",
+    "source-a2e956dd2da2/run_fixed_case014_candidates_v2.py": "a7a1f6fa02316fff7c84817c9d8d5d5aca53c6ba16a2969f99304a478af3d601",
+    "source-1ae78bc6dce6/exact-captured-fixed-subproblem.mat": "419587ae1a330912e0155f720a208f574df32e9e56b16a95e452fe34b1ee3b62",
+    "source-e4b14834e245/actual-failed-Q-capture-or-nonreproduction.json": "d9313309f45ad68b585605529e39061805102402b611ceead9535c96f7b5ab1b",
+    "source-af7f67c9885d/actual-failed-Q-operands.npz": "635f106c9c5b5ec02a21117d532325cbd66bbddf6d4caf2016faf0c6c9b901e4",
+    "source-d461f3c39920/original-scenario.json": "1854197e30970f2014a6412c4bc89fe279c7f7e569457047b8fca0c2d0a30a0e"
+  },
+  "source_after": {
+    "source-0586d23a302d/structured_original_qcqp_candidate_v1.py": "1fa91846426407d7313f0ba452e2d81c60fa433c9513d8618f870414903f8881",
+    "source-ac4378c680d7/solve_fixed_original_qcqp_matlab_v1.m": "f8183e36aa874bc832b50dcbf3696e28d8bfa3ea4b09bd908b0db9d44cbb44e5",
+    "source-a2e956dd2da2/run_fixed_case014_candidates_v2.py": "a7a1f6fa02316fff7c84817c9d8d5d5aca53c6ba16a2969f99304a478af3d601",
+    "source-1ae78bc6dce6/exact-captured-fixed-subproblem.mat": "419587ae1a330912e0155f720a208f574df32e9e56b16a95e452fe34b1ee3b62",
+    "source-e4b14834e245/actual-failed-Q-capture-or-nonreproduction.json": "d9313309f45ad68b585605529e39061805102402b611ceead9535c96f7b5ab1b",
+    "source-af7f67c9885d/actual-failed-Q-operands.npz": "635f106c9c5b5ec02a21117d532325cbd66bbddf6d4caf2016faf0c6c9b901e4",
+    "source-d461f3c39920/original-scenario.json": "1854197e30970f2014a6412c4bc89fe279c7f7e569457047b8fca0c2d0a30a0e"
+  },
+  "source_and_exact_input_unchanged": true,
+  "exact_binary64_input_MAT_roundtrip": true,
+  "only_one_captured_subproblem_per_language": true,
+  "no_trajectory_MC_or_new_MP_reference": true,
+  "elapsed_seconds": 50.491779900039546,
+  "output_SHA256": {
+    "actual-matlab-fixed-qcqp.mat": "8f34bcd05107a9a5dc8d7d7c2f2b090a571d5afb23fbf15bcc89cd863a450a2b",
+    "actual-python-fixed-qcqp.mat": "7df985cfda58ce5f61c995721228df5f41c9822e6425429b6568aac9ecff6011"
+  },
+  "scientific_PASS_not_inferred_from_host0": true
+}

@@ -1,0 +1,103 @@
+{
+  "schema": "two-actual-Fig11-small-mu-identical-state-LSE-weight-roundoff-causal-comparison-v1",
+  "source_scientific_report": "origin:resume-20261017/MIS-Fig11-first-start17-Decimal60-ownstate-independent-v1/actual-scientific-readback-v1/ACTUAL_ONLY_FIRST_Fig11_START1_ALL17_TYPED_ENDPOINT_DECIMAL60_PHYSICS_LSE_BOTH_GRADIENT_CRITERIA_V1.json",
+  "source_scientific_report_SHA256": "19cb97a5377bd6b9f73b9679696ea1fa63b803572e02ae589bef18034338fb3a",
+  "frozen_evaluator_source": "origin:repository/strict/mis-communications/engine.py",
+  "frozen_evaluator_SHA256": "eb90ca857df1cf3aed094c91c1ccee1461e571a96f15e42f7545768acaa1de77",
+  "physical_kernel_SHA256": "bcef73f7b799de7d3b16e407c6c4e24a640ba78468dacb29a0f954954480080b",
+  "exact_kernel_return_only_edit": {
+    "before": "'printed_open_simplex_gradient_criterion_claimed':False}",
+    "after": "'printed_open_simplex_gradient_criterion_claimed':False,'causal_users_decimal':[str(v) for v in users],'causal_weights_decimal':[str(v) for v in weights]}"
+  },
+  "entire_kernel_inverse_exact": true,
+  "all_existing_Decimal_physical_math_unchanged": true,
+  "rows": [
+    {
+      "stage": 12,
+      "mu": 0.0244140625,
+      "actual_saved_KKT": 9.375437290093203e-07,
+      "frozen_source_fixed_state_KKT": 9.375437290093203e-07,
+      "frozen_source_recomputed_KKT_equals_saved_exactly": true,
+      "independent_Decimal60_KKT": 9.375423101150874e-07,
+      "original_double_minus_reference_KKT": 1.4188942328610373e-12,
+      "diagnostic_exact_reference_weight_only_KKT": 9.375423102600051e-07,
+      "diagnostic_exact_weight_KKT_minus_full_Decimal60": 1.4491770227543577e-16,
+      "users_binary64": [
+        30.541464891846847,
+        30.541464886646377
+      ],
+      "users_full_Decimal60": [
+        "30.5414648918468326659754853596643512483729786145675101223585",
+        "30.5414648866463797854428829432045691077942004131513738890278"
+      ],
+      "users_binary64_minus_Decimal60": [
+        "1.38750814625393866593603001170885574898776415E-14",
+        "-2.6328414659055461757247680773662763738890278E-15"
+      ],
+      "weights_binary64": [
+        0.49999994674719345,
+        0.5000000532528065
+      ],
+      "weights_full_Decimal60": [
+        "0.499999946747362503346352610305959036910486092831107912210496",
+        "0.500000053252637496653647389694040963089513907168892087789505"
+      ],
+      "weights_binary64_minus_Decimal60": [
+        "-1.69056674110975718550993466329446102592287210496E-13",
+        "1.69001162959744460723972284746041561576662210495E-13"
+      ],
+      "induced_two_user_log_odds_error_from_rounded_user_scores": "6.76164523149104448925084393244869995059882774528E-13",
+      "source_fixed_state_objective": -30.524542350658724,
+      "actual_saved_objective": -30.524542350658724,
+      "original_strict5e_minus13_comparison_not_relaxed": true,
+      "actual_algorithm1e_minus6_gate_still_passes": true
+    },
+    {
+      "stage": 16,
+      "mu": 0.00152587890625,
+      "actual_saved_KKT": 5.860920128399927e-07,
+      "frozen_source_fixed_state_KKT": 5.860920128399927e-07,
+      "frozen_source_recomputed_KKT_equals_saved_exactly": true,
+      "independent_Decimal60_KKT": 5.860874562779653e-07,
+      "original_double_minus_reference_KKT": 4.556562027440167e-12,
+      "diagnostic_exact_reference_weight_only_KKT": 5.860874564160253e-07,
+      "diagnostic_exact_weight_KKT_minus_full_Decimal60": 1.3806001765534655e-16,
+      "users_binary64": [
+        30.5414648891101,
+        30.54146488938312
+      ],
+      "users_full_Decimal60": [
+        "30.5414648891100997277278289985591495691151186736920422125351",
+        "30.5414648893831154628703432443590289801384771782796551174919"
+      ],
+      "users_binary64_minus_Decimal60": [
+        "-9.040065557784149373231739565643170422125351E-16",
+        "5.8543530696717052334099982415717203448825081E-15"
+      ],
+      "weights_binary64": [
+        0.5000000447320053,
+        0.4999999552679947
+      ],
+      "weights_full_Decimal60": [
+        "0.500000044730898045749414698569200010466666222398880526495781",
+        "0.499999955269101954250585301430799989533333777601119473504220"
+      ],
+      "weights_binary64_minus_Decimal60": [
+        "1.107276318476785469937129449753760511275723504219E-12",
+        "-1.107276318476785469937129449753760511275723504220E-12"
+      ],
+      "induced_two_user_log_odds_error_from_rounded_user_scores": "-4.429158564134990755091691731770433462006607511552E-12",
+      "source_fixed_state_objective": -30.54040723058487,
+      "actual_saved_objective": -30.54040723058487,
+      "original_strict5e_minus13_comparison_not_relaxed": true,
+      "actual_algorithm1e_minus6_gate_still_passes": true
+    }
+  ],
+  "actual_fixed_state_evaluator_calls": 2,
+  "actual_deterministic_model_factories": 1,
+  "optimizer_initializer_MC_or_RNG_calls": 0,
+  "producer_source_tolerances_and_states_unchanged": true,
+  "no_counterfactual_weights_installed_or_claimed_as_an_actual_producer_result": true,
+  "original_strict_comparison_failure_and_unreported_author_epsilon_scope_retained": true,
+  "fullfigure_reference_dual_or_paper_PASS": false
+}

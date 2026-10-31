@@ -1,0 +1,136 @@
+{
+  "schema": "ACTUAL_DUAL_LANGUAGE_THREE_FIXED_STATE_CANDIDATE_OUTCOME_SCOPE_V1",
+  "Python": {
+    "actual_process_exit_code": 1,
+    "elapsed_seconds": 37.764825299964286,
+    "physical_fields_passed": true,
+    "derivatives_passed": true,
+    "changed_self_excluded_and_final_QT_q_p_passed": true,
+    "expanded_all_coefficients_gate_passed": false,
+    "expanded_failure_scope": "Additional unchanged lip/ga intermediate comparisons only",
+    "source_SHA256": "d9e7e4cbb1bcefb7aab4a28e1b32bfe2088228e42f5819857c8be62b680bed0e",
+    "report_SHA256": "f7cae4e21aa55da48d1f3321ca0bc7cb55c40eb4e10948ef19b1ebd4e77e49b3",
+    "complete_original_derivative_vectors_not_serialized": true
+  },
+  "MATLAB": {
+    "actual_process_exit_code": 0,
+    "elapsed_seconds": 44.73660410003504,
+    "host_errors": [],
+    "modified_branches_passed": true,
+    "expanded_all_coefficients_gate_passed": false,
+    "actual_report_SHA256": "2652a0b589ab9c310df430de39a39c31fe97ce5224741b1f757633800813b3ce",
+    "original_subtractive_fixed_state_physical_checks_passed": [
+      false,
+      false,
+      false
+    ]
+  },
+  "MP80_MP100_precision_pass": true,
+  "maximum_MP80_MP100_difference": "1.8179437193316344763165490717693874503856553202565257846870389155730365791888810966902113789955866283814e-58",
+  "extra_threshold": {
+    "absolute_comparison_bound": 1e-05,
+    "source": "Borrowed for new intermediate coverage from existing derivative component bound",
+    "recovered_original_lip_or_ga_acceptance_standard": false,
+    "all_extra_failures_retained": true
+  },
+  "original_case_failures": [
+    {
+      "ordinal": 149,
+      "original_all_six_converged": false,
+      "failed_scheme_returns": {}
+    },
+    {
+      "ordinal": 159,
+      "original_all_six_converged": false,
+      "failed_scheme_returns": {
+        "Rot-BS & Rot-RIS": {
+          "status": "failed",
+          "error": "QCQP Q is not positive definite; rho=0 singular case requires explicit source handling."
+        }
+      }
+    }
+  ],
+  "strict_Python_extra_failures": [
+    {
+      "key": "case149-state1",
+      "scheme": "Fix-BS & Rot-RIS",
+      "coefficient": "lip",
+      "unchanged_source_assignment_AST": true,
+      "component_count": 66,
+      "failed_component_indices": [
+        57
+      ],
+      "original_strict_absolute_bound_retained": "1e-05",
+      "maximum_absolute_error": "0.000016606725680864488202986801915162321839621360693128597782650151833059923787575515306262102910425491376185",
+      "maximum_reference_magnitude": "472281463.64898177298165556129304701319808483767816037863930687140221734984816694007621242448469373789709",
+      "maximum_relative_error_among_failed_components": "0.0000000000000351627725394009159690769494320430691028127211391368358711600786782994052959705329002887709985838123288955",
+      "relative_error_is_diagnostic_only_not_a_replacement_gate": true
+    },
+    {
+      "key": "case159-state0",
+      "scheme": "Rot-BS & Fix-RIS",
+      "coefficient": "lip",
+      "unchanged_source_assignment_AST": true,
+      "component_count": 66,
+      "failed_component_indices": [
+        5,
+        10,
+        11,
+        23,
+        29,
+        40,
+        57,
+        65
+      ],
+      "original_strict_absolute_bound_retained": "1e-05",
+      "maximum_absolute_error": "0.0226290225890658861707051087729652523175994024758771317393435182702034557388623560502926366981184897919238",
+      "maximum_reference_magnitude": "374152618560.687646537188675178192648184805266141158230706018596301258863760103124767222743982700769806145",
+      "maximum_relative_error_among_failed_components": "0.000000000000580613707850684068829390756381579323790092692492439398256117914215016957520661935197165905518867280412676",
+      "relative_error_is_diagnostic_only_not_a_replacement_gate": true
+    },
+    {
+      "key": "case159-state0",
+      "scheme": "Rot-BS & Fix-RIS",
+      "coefficient": "ga",
+      "unchanged_source_assignment_AST": true,
+      "component_count": 24,
+      "failed_component_indices": [
+        0,
+        6,
+        12,
+        18
+      ],
+      "original_strict_absolute_bound_retained": "1e-05",
+      "maximum_absolute_error": "0.0114278419163393743258984628366725112472053772279402846571785252574265639428534980790018830907062648244475",
+      "maximum_reference_magnitude": "12268687730.3578664746434062725355048083301754984693231068047226773484962797654811219541938200754198009891",
+      "maximum_relative_error_among_failed_components": "0.00000000000195725543799720556844359725084410705777641215888217655062197215189152304810534856140184080748717036003096",
+      "relative_error_is_diagnostic_only_not_a_replacement_gate": true
+    }
+  ],
+  "full_convergence_dual_optimized_equality_original_reference_or_paper_PASS": false,
+  "first_portable_use_pending": false,
+  "actual_portable_first_use": {
+    "path": "results/actual-portable-first-use.json",
+    "SHA256": "343fd044632ad79d8c0fbd3b11b154d3ef8ba9ca2e94ff718858d5025b9fd5ca",
+    "natural_exit_code": 1,
+    "physical_derivatives_changed_QT_passed": true,
+    "expanded_all_coefficients_gate_passed": false,
+    "Python_fixed_state_evaluation": true,
+    "existing_native_MAT_only": true,
+    "new_optimizer_MC_MP_calls": 0,
+    "fresh_public_native_MATLAB_batch_pending": false,
+    "executed_manifest_SHA256": "4787312fcd496a6dd3a46f94c2ce20a7c8da76d5386760d7827461529239dcf7",
+    "metadata_added_after_natural_close_runtime_and_data_unchanged": true
+  },
+  "actual_public_relative_native_first_use": {
+    "path": "results/actual-public-relative-native-first-use.json",
+    "SHA256": "94cb2a71981159906182312191d9817434077b3dd3312e058f1e8ed0bdeddb70",
+    "MATLAB_natural_exit_code": 0,
+    "checker_natural_exit_code": 1,
+    "physical_derivatives_changed_QT_passed": true,
+    "expanded_gate_passed": false,
+    "source_and_same_three_input_bytes_unchanged": true,
+    "new_optimizer_MC_MP_Python_audit_calls": 0,
+    "native_public_layout_first_use_pending": false
+  }
+}

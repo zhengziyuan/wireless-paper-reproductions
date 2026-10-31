@@ -1,0 +1,165 @@
+{
+  "schema": "PUBLIC_ONE_SAVED_MA19_D8G0_EMPTY_CUT_CORRECTED_CERTIFICATE_SUMMARY_V4",
+  "recorded_UTC": "2026-10-29T19:36:28.955534+00:00",
+  "point": {
+    "figure": 19,
+    "point": 8,
+    "realization": 0,
+    "N": 4,
+    "M": 3,
+    "brute_force_D": 8
+  },
+  "actual_reader_exit_code": 0,
+  "source_input_interval_closed": true,
+  "all_two_modes_partition_bound_and_global_grid_gate_pass": true,
+  "rows": [
+    {
+      "mode": "MRT",
+      "grid_points": 64,
+      "complete_unordered_sets": 635376,
+      "independently_counted_feasible_sets": 446421,
+      "partition_covered_feasible_sets": 446421,
+      "pruned_feasible_sets": 414954,
+      "actual_independent_objective_evaluations": 31467,
+      "pruned_subtree_objective_evaluations": 0,
+      "independent_prefix_counts": {
+        "nodes": 66050,
+        "leaves": 31467,
+        "infeasible": 2752,
+        "prunes": 28921,
+        "branches": 2910
+      },
+      "verified_prune_count": 28921,
+      "verified_exact_upper_hashes": 28921,
+      "all_prune_uppers_le_prior_independent_leaf_incumbent": true,
+      "all_feasible_sets_partitioned_once": true,
+      "all_supplied_cuts_reached_once": true,
+      "actual_saved_tangent_witness_count": 0,
+      "unpruned_exact_leaf_stream_SHA256": "730a48722200e6438b4993eeadb7f32001a91a2b8ad2f0669f79794d1cb1388d",
+      "verified_cut_stream_SHA256": "7a046514196581dee5f643ee73d2e33947fa6d92838f920142b59bc6068db4ac",
+      "earliest_canonical_global_winner_zero_based": [
+        15,
+        25,
+        47,
+        57
+      ],
+      "all_cut_uppers_strictly_below_final_best": true,
+      "observed_global_ties_in_unpruned_leaves": 1,
+      "unique_global_winner_independently_proven": true,
+      "scoped_independent_partition_and_bound_gate_pass": true,
+      "empty_feasible_completion_prune_count": 59,
+      "positive_feasible_completion_prune_count": 28862,
+      "saved_tangent_witness_readback": {
+        "count": 0,
+        "ordered_SHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_witness_values_recomputed_and_checked": true,
+        "duplicate_body_retained": false
+      },
+      "original_upper_incumbent_coverage_counter_winner_and_uniqueness_checks_unchanged": true,
+      "verified_prune_rows_count": 28921,
+      "actual_typed_model_identity_SHA256": "4bfcc235e3f1fce9a7a46a22713a811ac47a9b48c2b486a907893742cfd92483",
+      "certificate_framing": {
+        "frame_count": 258,
+        "frame_payload_digests_and_chain_pass": true,
+        "certificate_bytes": 1320866,
+        "final_chain": "4fa0a6570e18a1cecc7271d771a3e93142b6d835481f791e3236df79bb449384"
+      }
+    },
+    {
+      "mode": "ZF",
+      "grid_points": 64,
+      "complete_unordered_sets": 635376,
+      "independently_counted_feasible_sets": 446421,
+      "partition_covered_feasible_sets": 446421,
+      "pruned_feasible_sets": 410194,
+      "actual_independent_objective_evaluations": 36227,
+      "pruned_subtree_objective_evaluations": 0,
+      "independent_prefix_counts": {
+        "nodes": 70006,
+        "leaves": 36227,
+        "infeasible": 2630,
+        "prunes": 28039,
+        "branches": 3110
+      },
+      "verified_prune_count": 28039,
+      "verified_exact_upper_hashes": 28039,
+      "all_prune_uppers_le_prior_independent_leaf_incumbent": true,
+      "all_feasible_sets_partitioned_once": true,
+      "all_supplied_cuts_reached_once": true,
+      "actual_saved_tangent_witness_count": 97,
+      "unpruned_exact_leaf_stream_SHA256": "1ecacf18896c097a2737acf6fef448c25e9ea46bba2e4fb4e8bb928ab9459d46",
+      "verified_cut_stream_SHA256": "d4ab5076f5c31ff55290e7899c6135cb3253dcb854596f8efd2a68978dd1934d",
+      "earliest_canonical_global_winner_zero_based": [
+        15,
+        25,
+        47,
+        57
+      ],
+      "all_cut_uppers_strictly_below_final_best": true,
+      "observed_global_ties_in_unpruned_leaves": 1,
+      "unique_global_winner_independently_proven": true,
+      "scoped_independent_partition_and_bound_gate_pass": true,
+      "empty_feasible_completion_prune_count": 58,
+      "positive_feasible_completion_prune_count": 27981,
+      "saved_tangent_witness_readback": {
+        "count": 97,
+        "ordered_SHA256": "e345117f849c5cf9ea8ebe278c21a584130d2914a9dafa29397948ae7d92b35c",
+        "original_witness_values_recomputed_and_checked": true,
+        "duplicate_body_retained": false
+      },
+      "original_upper_incumbent_coverage_counter_winner_and_uniqueness_checks_unchanged": true,
+      "verified_prune_rows_count": 28039,
+      "actual_typed_model_identity_SHA256": "9d3ecbb46b3880afd679a8f444e996272f8dbaa70175c7fb8a9dde5c6ee24990",
+      "certificate_framing": {
+        "frame_count": 272,
+        "frame_payload_digests_and_chain_pass": true,
+        "certificate_bytes": 1289459,
+        "final_chain": "c771d437f44bb02a12a179183c3ea9e50d26f00ef6c920e4bb917674f915dd41"
+      }
+    }
+  ],
+  "original_local_report": {
+    "bytes": 26323,
+    "SHA256": "3483aa2a23d8407ab4f8d5906e589b301733f279f3664592243d4daff062d6ed"
+  },
+  "original_local_guard_terminal": {
+    "bytes": 11438,
+    "SHA256": "d8890aba4ec84ce4fea883badcc39c5fe50818dbbfd2d4fed1f9a7aff112e1c2"
+  },
+  "independent_local_fact": {
+    "bytes": 2157,
+    "SHA256": "fcb7c4c5375ebfba84ca20c3ceb620f6d18c6ecf7da38abfd93754eaae4a2e06"
+  },
+  "historical_failure": {
+    "preserved": true,
+    "bytes": 10339,
+    "SHA256": "5a77394abec5b90a5fdddad558457c35bfc760e5c1eb2074b229be090e20ba10",
+    "exit_code": 2,
+    "failure_stage": "independent_saved_certificate_gate",
+    "message": "Empty feasible cut"
+  },
+  "elapsed_seconds": 220.672,
+  "total_guarded_batch_bytes": 39728,
+  "bound_files": 19,
+  "other_original_failed_points_not_rechecked": 148,
+  "new_optimizer_MC_or_search_calls": 0,
+  "adapter_SHA256": "98d36bfdc3632a3d7bfaeaf0bc4667f265ebd27b273689e89503d5815c106a89",
+  "frozen_reader_SHA256": "30d26f1d1198566ef1dc36babc210e822371006a2cd8671b7016e085f0d8a7fe",
+  "public_actual_D8g0_replay_inputs_included": false,
+  "synthetic_regression_is_not_actual_point_proof": true,
+  "native_gate": false,
+  "original_reference_gate": false,
+  "full2600_gate": false,
+  "full_paper_PASS": false,
+  "historical_author_target_recovered": false,
+  "theoretical_objective_scope": "User-selected MRT Eq13 / ZF Eq39 theoretical candidate scoring; historical author search protocol remains unestablished.",
+  "limitations": [
+    "No pruned subtree objective was evaluated; safety uses the independently reconstructed upper proof and exact comparison with prior unpruned leaf incumbent.",
+    "The historical full branch event/decision digest is unavailable and not reconstructed.",
+    "Typed primitive provenance is inherited and matched; symbolic transcendental input exactness is not claimed.",
+    "Only the explicitly supplied closed Python point; no batch worker is started. Native needs its own operands and new bound/leaf checks, with recursive refinement when unsafe to close.",
+    "Compact evidence summary, not a standalone replay of the original D8/g0 certificate. Input commitments do not provide the omitted inputs.",
+    "No continuous-position optimality, new physics validation, or original-reference pass. Original full experimental budgets remain required.",
+    "This is a reproduction validation-reader correction, not an established error in the original paper."
+  ]
+}

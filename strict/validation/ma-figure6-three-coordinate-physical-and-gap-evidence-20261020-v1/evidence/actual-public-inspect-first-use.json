@@ -1,0 +1,55 @@
+{
+  "schema": "actual-public-inspect-first-use-original49-layout-projected-v1",
+  "stage": "inspect",
+  "actual_natural_exit": 0,
+  "natural_same_original_handle_wait": true,
+  "owner": {
+    "PID": 58160,
+    "creation_FILETIME": 134369193169488536,
+    "associated_with_any_Windows_job": true
+  },
+  "child_initial": {
+    "PID": 17228,
+    "creation_FILETIME": 134369193175388226,
+    "associated_with_any_Windows_job": true
+  },
+  "child_terminal": {
+    "PID": 17228,
+    "creation_FILETIME": 134369193175388226,
+    "associated_with_any_Windows_job": true,
+    "actual_OS_exit_code": 0,
+    "exact_original_Popen_handle_used": true
+  },
+  "exact_initial_birth_terminal_exit_match": true,
+  "source_input_interval_closed": true,
+  "errors": [],
+  "tested_original_public_file_count": 49,
+  "manifest_verified_nonmanifest_files": 48,
+  "tested_original_manifest": {
+    "path": "MANIFEST.json",
+    "SHA256": "d5473f07bdcccf8bb7be74aa793418eeb355071be0004084acf47b6df9438c79",
+    "bytes": 9017
+  },
+  "tested_replay_source": {
+    "path": "replay_saved_evidence_v1.py",
+    "SHA256": "287e345b86bc1be3ad6bf5927e90c9aa1050a8207f7ad5d9c9884bd2e420b897",
+    "bytes": 6670
+  },
+  "original_full_execution_receipt_SHA256": "97becc9f23f169ec5ebb33b59ad9f8fc52e74c486c70bbd995510ce5d10965e7",
+  "stdout": {
+    "SHA256": "415e5a9b636b2fcc8ce9b6cbe63973a5e724fc6013cc115fb3238469106da364",
+    "bytes": 2440
+  },
+  "stderr": {
+    "SHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "all_tested49_source_and_evidence_bytes_unchanged_during_actual_execution": true,
+  "actual_MP_solver_MC_or_trajectory_calls": 0,
+  "public_numerical_stages_first_use": {
+    "fixed-coeff": "pending",
+    "physical-coeff": "pending"
+  },
+  "final_v2_scope": "This receipt records original49-file layout execution. Final-v2 updates only README/SCOPE/manifest plus this receipt; all other46 files including the replay source, numeric inputs and existing reports remain exact bytes. No repeated inspect or MP was performed for final-v2.",
+  "local_execution_identity_only": "Recorded PID/birth values identify that local completed process; no remote executable/session access is implied."
+}

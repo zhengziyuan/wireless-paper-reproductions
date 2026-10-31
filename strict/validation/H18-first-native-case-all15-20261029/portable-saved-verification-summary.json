@@ -1,0 +1,103 @@
+{
+  "schema": "PUBLIC_ACTUAL_PORTABLE_SAVED_FIRST_CASE_VERIFICATION_SUMMARY_V1",
+  "status": "SAVED_EVIDENCE_VERIFIED",
+  "saved_evidence_verification_pass": true,
+  "UTC": "2026-10-29T16:17:39.656502+00:00",
+  "scope": {
+    "original_case": 1,
+    "N": 16,
+    "K": 15,
+    "U": 1,
+    "saved_row_precision_pairs": 30,
+    "full_paper_or_all_six_PASS": false
+  },
+  "actual_execution": {
+    "input_mode": "Explicit paths to existing published source/data bytes; no copied package tree.",
+    "package_dir_CLI_actually_executed": false,
+    "terminal_reason": "natural_exit",
+    "returncode": 0,
+    "elapsed_seconds": 6.656,
+    "retained_run_bytes": 78314,
+    "source_input_interval_closed": true,
+    "guard_error": null,
+    "hard_filesystem_quota": false
+  },
+  "checks": {
+    "saved_matrices": 30,
+    "row_crossprecision": {
+      "rows": 15,
+      "checks_per_row": 512,
+      "checked_count": 7680,
+      "failure_count": 0,
+      "all_pass": true,
+      "gate": "abs(a-b)<=epsilon+epsilon*max(abs(a),abs(b)); epsilon=MP100(1e-40)"
+    },
+    "full_moment": {
+      "precisions": [
+        80,
+        100
+      ],
+      "row_terms_per_precision": 15,
+      "ordered_cross_products_per_precision": 210,
+      "formula": "I-sum(M_k)+sum_{k!=j}(M_k*M_j), followed by original Hermitian symmetrization",
+      "function": "unchanged independent_geometry_kernels_sourceonly_v1.complete_projector_square",
+      "integration_calls": 0,
+      "optimizer_calls": 0,
+      "new_independent_row_kernel_calls": 0
+    },
+    "native_composite": {
+      "native_complex_checks": 256,
+      "crossprecision_real_imag_checks": 512,
+      "native_all_pass": true,
+      "crossprecision_all_pass": true,
+      "native_failure_count": 0,
+      "crossprecision_failure_count": 0,
+      "maximum_native_scaled_error": "0.000000162458861812271412670919464454263073997066478902130756434215671043390206718543612435976467727199453995748",
+      "worst_native_index": 221,
+      "ordered_all256_current_comparison_SHA256": "7d2e9b76e809173eee242787c95e11277a43d55f5960e82a3cb80d811c80be6f",
+      "field_absolute": "0.000000001",
+      "field_relative": "0.0000000001",
+      "crossprecision_epsilon": "1e-40"
+    },
+    "historical_saved_replay": {
+      "component_records_checked": 256,
+      "exact_native_and_reference_MP_tuples_match": true,
+      "exact_tuple_mismatch_count": 0,
+      "entire_original_comparison_records_match": true,
+      "comparison_record_mismatch_count": 0
+    }
+  },
+  "provenance_separate_from_scientific_checks": {
+    "public_input_snapshot_commit": "8e1450ab018f09adb8d7f7c80789585a2db1984c",
+    "verifier_source": {
+      "package_relative_path": "verify_portable_saved_first_case.py",
+      "bytes": 23798,
+      "SHA256": "dcc061e5a2f7e751b1b6b0471acb488dae52c257c165be1218ae07016c448ae0"
+    },
+    "recorded_runtime": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "mpmath_version": "1.4.1"
+    },
+    "four_public_inputs_and_six_original_source_files_match_pinned_bytes": true,
+    "source_and_input_interval_unchanged": true,
+    "private_receipt_commitments": {
+      "full_verifier_report_SHA256": "6406a3c100c1cdb5e484350ac1b73fea86e1e577ae54be93acd12713e865bd6c",
+      "guard_terminal_SHA256": "5c6bd734d058718874b5bffc020c7219794f7ac9f64fa47355b1b556ee4d20d2",
+      "guard_source_SHA256": "54d054209c5c4ae4bed634af6ba8b9ff1f9011b1531e7bf0cf131adaf3844dcd"
+    },
+    "local_paths_and_full_private_source_maps_omitted": true,
+    "private_cache_admission_replayed": false,
+    "historical_runtime_byte_equivalence_proven": false
+  },
+  "limitations": [
+    "Saved-row self-consistency and full composite checks only; no new integration from NHU operands.",
+    "MP80/MP100 agreement is not a rigorous quadrature error certificate.",
+    "No proof of private cache admission or historical runtime byte equivalence.",
+    "No optimizer convergence, physical feasibility, full published scenario, figure, or paper PASS.",
+    "The complete second-moment formula is retained; it is not a claim of a joint-nullspace projector.",
+    "The size bound is for this output file; CPU, memory, and OS storage protection are external.",
+    "This sanitized summary preserves scoped results and receipt commitments; full private receipts contain local paths and are not included.",
+    "The original public-implementation-manifest.json remains the immutable historical source/data snapshot; it does not inventory this later verifier addition."
+  ]
+}

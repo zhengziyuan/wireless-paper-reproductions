@@ -1,0 +1,35 @@
+{
+  "schema": "actual-ISAC159-six-final-independent-MP-closure-summary-v1",
+  "UTC": "2026-10-19T07:44:18.284918+00:00",
+  "full_report": {
+    "path": "retained-evidence/ACTUAL_SIX_FINAL_PHYSICS_AND_LAST_FIXED_IOTA_DERIVATIVES_MP80_MP100_V1.json",
+    "bytes": 330974,
+    "SHA256": "df9c7662b442ae35e7b1c2a8fe94f53721a6e48365cbf2805183fd97953cee39"
+  },
+  "actual_exec_session": 85116,
+  "actual_natural_audit_exit": 0,
+  "audit_elapsed_seconds": 66.68647400004556,
+  "six_actual_final_states_at_both80_and100_digits_checked": true,
+  "fixed_physics_fields_and_power_unit_modulus_rotation_feasibility_pass": true,
+  "all_fixed_iota_derivative_comparisons_pass": true,
+  "gradient_component_maximum_absolute_errors": {
+    "W": 1.046618958837034e-15,
+    "RIS": 8.123902650292821e-15,
+    "rotation": 1.8941938739488377e-14
+  },
+  "MP80_MP100_maximum_derivative_and_objective_difference": "4.88374249514192865675291134721134499777225657378207696908500343683931507892334051318927282098111612410777e-60",
+  "all_recorded_source_input_pins_unchanged": true,
+  "original_optimization_natural_exit": 2,
+  "original_full_converged": 4,
+  "original_failed_inner_schemes": [
+    "Rot-BS & Rot-RIS",
+    "Rot-BS & Fix-RIS"
+  ],
+  "exact_Rot_Rot_last_phase_MP_norm": "0.0000150961922669279805870660919877718834772059719108870881779591085217381079646835326980863530472748507702823",
+  "exact_Rot_Rot_saved_phase_norm_absolute_error": "0.0000000000000000162189831208396908618988976633201383880037053028585217381079646835326980863530472748507702823298252879661",
+  "original_phase_gradient_threshold": 1e-06,
+  "Rot_Fix_actual_post_rotation_final_phase_MP_norm": "0.00000989379418996165981367256342466769088442588581801137959859591343698972681965913307004680875115988655472858",
+  "Rot_Fix_historical_pre_rotation_phase_norm_not_reconstructed": true,
+  "full_trajectory_QCQP_KKT_dual_original_reference_and_all_six_papers_pass": false,
+  "no_new_optimizer_MC_RNG_or_budget_changes": true
+}

@@ -266,7 +266,7 @@ def beampattern_samples(model,state,selected,objective="sinr"):
 
 def ris_baselines(model,settings,checkpoint_prefix=None):
     out={}
-    continuous=[]; quantized={1:[],2:[]}; converged=[]
+    continuous=[]; quantized={1:[],2:[]}; converged=[]; start_banks=[]
     for k in range(model.targets):
         order=[k]+[j for j in range(model.targets) if j!=k]
         cfg=dict(model.config,ms2=[0,0],number_of_targets=1,
@@ -276,6 +276,7 @@ def ris_baselines(model,settings,checkpoint_prefix=None):
         ris=Model(cfg)
         ck=None if checkpoint_prefix is None else Path(str(checkpoint_prefix)+"-ris-target-"+str(k)+".json")
         run=optimize(ris,settings,"sinr",seed_offset=100000+k,checkpoint_path=ck)
+        start_banks.append(run)
         if run["best_feasible"] is None:
             return {"available":False,"reason":"At least one independently optimized RIS target has no feasible run"}
         converged.append(run["overall_full_success"])
@@ -288,7 +289,7 @@ def ris_baselines(model,settings,checkpoint_prefix=None):
             # floor(a+0.5), not language-dependent bankers rounding.
             z["phi"]=np.exp(1j*step*np.floor(np.angle(phi)/step+.5))
             quantized[bits].append(float(ris.metric(z,"sinr")[0,0]))
-    return {"available":True,"optimization_convergence_verified":all(converged),"continuous":continuous,"one_bit":quantized[1],"two_bit":quantized[2]}
+    return {"available":True,"optimization_convergence_verified":all(converged),"continuous":continuous,"one_bit":quantized[1],"two_bit":quantized[2],"target_start_banks":start_banks}
 
 def component_test(guarded=False):
     fixture=json.loads((HERE/"unit_fixture.json").read_text())

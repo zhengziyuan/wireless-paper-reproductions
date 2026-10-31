@@ -49,7 +49,9 @@ def compare(python_result,matlab_result):
 if __name__=="__main__":
     p=argparse.ArgumentParser();p.add_argument("--python-result",type=Path,required=True);p.add_argument("--matlab-result",type=Path,required=True)
     p.add_argument("--output",type=Path,required=True);args=p.parse_args()
+    if args.output.exists():raise FileExistsError(f"Existing output is preserved: {args.output}")
     py=args.python_result.read_bytes();mat=args.matlab_result.read_bytes();result=compare(json.loads(py),json.loads(mat))
     result["Python_result_sha256"]=hashlib.sha256(py).hexdigest();result["MATLAB_result_sha256"]=hashlib.sha256(mat).hexdigest()
-    args.output.parent.mkdir(parents=True,exist_ok=True);args.output.write_text(json.dumps(result,indent=2,allow_nan=False)+"\n",encoding="utf-8")
+    args.output.parent.mkdir(parents=True,exist_ok=True)
+    with args.output.open('x',encoding='utf-8') as out:out.write(json.dumps(result,indent=2,allow_nan=False)+"\n")
     print(json.dumps({"all_passed":result["all_passed"],"array_errors":result["array_errors"]}))

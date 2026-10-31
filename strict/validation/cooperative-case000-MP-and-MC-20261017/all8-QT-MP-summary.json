@@ -1,0 +1,24 @@
+{
+  "scope": "All8 actual final states and all saved QT inputs/candidates: independent MP80/100 physical metrics, constraints, QT and nondecrease",
+  "source_input_sha256": {
+    "result": "cd1727991714bf139bf5d4b378e12bc9c9a99fcb800641a79f008a652cda6354",
+    "states": "8af292783a96bf5466b54fbc13ed5251135318ad3b6d614a939f4bce83795152",
+    "auditor": "142145c1b07a9e56b448f9ae06e4b1b9d0e485d8a95a8841270ec4c2ff2af2f1",
+    "reference": "fa3ab6b598e14901757d80128715eb2eafad160c893d5671e9fe6eccd9b36a0a"
+  },
+  "source_and_inputs_unchanged": true,
+  "dimensions": {
+    "J": 3,
+    "U": 2,
+    "N": 16,
+    "M": 25
+  },
+  "final_states": 8,
+  "QT_candidates": 31,
+  "scalar_values_per_precision": 622,
+  "maximum_MP80_MP100_difference": "1.48015637145359293558789192287574072617405370989802387564191509078889888151120018034758778778090996916762e-79",
+  "precision_absolute_bound": "1e-40",
+  "all_physical_QT_and_precision_checks_pass": true,
+  "elapsed_seconds": 9.340873100009048,
+  "phase_stops_MC_original_reference_or_full183_pass": false
+}

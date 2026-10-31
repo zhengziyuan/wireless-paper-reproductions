@@ -1,0 +1,28 @@
+{
+  "schema": "actual-new-014-nu0-None-MAT-export-failure-and-host-only-v2-fix-v1",
+  "created_UTC": "2026-10-19T18:01:13.643217+00:00",
+  "original_v1_entry": "source-1e03efb946ef/run_fixed_case014_candidates_v1.py",
+  "original_v1_entry_SHA256": "6f10af5445161fbbb7d468f1fc554b2a774726268629fb770e8765951561aa6d",
+  "actual_original_process_exit": 1,
+  "actual_failure": "scipy.io.savemat TypeError: Could not convert None to array. Python fixed solver returned; scalar nu0 has unused bracket_lo/hi=None. Failure occurred before native Popen.",
+  "actual_native_started_in_V1": false,
+  "actual_previous_output_preserved": "source-c2e7f34d0bcb/ISAC014-fixed-original-QCQP-candidates-actual-v1",
+  "previous_Python_solution_not_promoted_to_complete_saved_validation": true,
+  "new_V2_entry": "source-a2e956dd2da2/run_fixed_case014_candidates_v2.py",
+  "new_V2_SHA256": "a7a1f6fa02316fff7c84817c9d8d5d5aca53c6ba16a2969f99304a478af3d601",
+  "host_changes": [
+    {
+      "old": "O=R/'ISAC014-fixed-original-QCQP-candidates-actual-v1'",
+      "new": "O=R/'ISAC014-fixed-original-QCQP-candidates-actual-v2'"
+    },
+    {
+      "old": "savemat(O/'actual-python-fixed-qcqp.mat',dict(result=dict(solution=solution,**info)),do_compression=False,long_field_names=True)",
+      "new": "np.savez(O/'actual-python-fixed-qcqp-exact-array-backup.npz',solution=solution,**{k:v for k,v in info.items() if isinstance(v,np.ndarray)})\n    mat_info={k:(np.empty((0,0)) if v is None else v) for k,v in info.items()}\n    savemat(O/'actual-python-fixed-qcqp.mat',dict(result=dict(solution=solution,**mat_info)),do_compression=False,long_field_names=True)"
+    }
+  ],
+  "whole_V1_bytes_recovered": true,
+  "both_candidate_mathematical_sources_unchanged": true,
+  "unused_None_bracket_semantics": "Only the MAT transport projects None to empty0x0; original solver info and JSON null are retained. It is not a numerical zero or a bracket actually visited.",
+  "fixed_subproblem_retry_necessary_to_save_return_after_transport_failure": true,
+  "no_optimizer_trajectory_MC_RNG_or_MP": true
+}

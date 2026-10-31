@@ -1,7 +1,9 @@
 # Explicit statistical-CSI erratum and exact original-model corrections
 
-These corrections concern the supplied author thesis, equations 3-41 through
-3-57. Equivalence to a different final publisher version is not asserted. The
+These corrections were developed for the supplied author thesis, equations
+3-41 through 3-57. The final IEEE publication has now been checked for the
+specific statistical-QoS statements below; no full source or figure equivalence
+is asserted. The
 printed-algorithm entry raises an explicit error; the working entry is labelled
 `corrected_QT_erratum`. The working physical branch retains the **early ESA-
 weighted finite-Rician signal model**, average-SINR QoS, sum-rate objective,
@@ -27,7 +29,14 @@ the stated theorem/argument, not a reason to replace the original optimizer.
 
 Source anchors are `ch_third.tex:349-353` (printed block with zero last diagonal)
 and `ch_third.tex:390` (PSD, monotonicity and global-optimality claim). They are
-anchors in the supplied author thesis, not verified final-publisher locations.
+anchors in the supplied author thesis. The final IEEE version (printed p. 3654,
+Eq. (20) and the following RGD paragraph) also prints the zero-diagonal block
+and describes P_U as positive semidefinite as a reason for convergence; it
+references Eq. (18) even though the displayed block occurs in Eq. (20). The
+final-version mathematical counterexample applies whenever the displayed
+off-diagonal block has a nonzero entry. Monotonic objective values alone do not
+prove convergence of the iterates. This targeted comparison is not an official
+erratum or proof that any particular numerical run fails.
 The reproducible independent check is `audit_single_hu_guarantee.py`; its actual
 receipt `outputs/single-HU-guarantee-counterexamples.json` records determinant
 −1 and eigenvalues approximately −0.618034 and1.618034 for `[1,1;1,0]`. For the
@@ -42,11 +51,27 @@ initialization. The existing original full-size RGD is not replaced.
 
 ## 1. The stated full-rank average-SINR QoS is not the printed scalar SOC
 
+The final IEEE version retains the relevant contradiction on printed p. 3656:
+the original ratio constraint is (32b), the NHU covariance is (33b), and the
+claimed conic replacement and its augmented definitions are (36d)–(36e).
+The independent exact rational counterexample in
+`../../tools/hotspot-final-qos-counterexample-v1/` gives a feasible original
+QoS point rejected by literal (36d). Removing the right-hand square alone does
+not repair that example because the imaginary block inside the norm adds a
+nonnegative squared term. This is an independently derived observation, not an
+official publisher erratum or evidence of the author's original numerical run.
+
 Let `Q_k = E[h_k h_k^H]`, `D_k^H D_k = Q_k`, and
-`I_k(W) = sum_{j != k} ||D_k w_j||² + sigma²`. The correct QoS is
+`I_k(W) = sum_{j != k} ||D_k w_j||² + sigma²`. Under the paper's stated
+simultaneous-transmission signal model, the full-interference QoS ratio is
 `||D_k w_k||² / I_k(W) >= tau_k`. The interference index is all transmitted
-streams J, as uniquely follows from the received signal before 3-41; the K-only
-denominator in 3-41b omits HU interference and is an explicit index erratum.
+streams J: final IEEE Eq. (4a) uses J excluding k, while Eq. (32b) uses only
+K excluding k and does not specify cancellation of HU streams. The exact
+constructed example in `../../tools/hotspot-index-model-scope-v1/` shows that
+these two constraints can make opposite feasibility decisions. The full-J
+version is an explicit correction to the printed K-only formulation, not a
+claim about the model used by the authors' historical results. Both are ratios
+of expected powers, not an assertion of exact expected instantaneous SINR.
 
 For every vector b, completing the square gives the exact identity
 
@@ -291,3 +316,33 @@ source-compliant geometry runners and distinct batches are documented in
 `GEOMETRY_CONTRACT.md`; previous numerical receipts are never relabelled or
 mixed with the new version. Correct mathematical identities and complete
 execution alone also do not establish agreement with original EPS ordinates.
+
+## Source check17 October: repeated G-scatter coefficient
+
+The supplied author source `ch_third.tex` (SHA256
+`684b2de6bb9dd18828fcec33a378d886a085aab7367fb535bac401f51b496794`)
+uses the standard Rician factors in Eq3-1 at line40. Its later satellite-to-RIS
+G expansion at line489, immediately before the labelled statistical problem
+(3-41), instead repeats `sqrt(beta_S/(1+beta_S))` for both LoS and NLoS terms.
+Line492 explicitly declares unit-variance complex Gaussian NLoS components.
+
+Consequently, the late printed per-entry scatter variance is
+`mu_S0 * beta_S/(1+beta_S)`, whereas Eq3-1 requires
+`mu_S0/(1+beta_S)`. The discrepancy is a factor10 at10dB and100 at20dB;
+the two expressions coincide at0dB only. The current implemented convention
+follows normalized Eq3-1. All7200 G mean/variance components in the18 native
+contexts independently match its declared Rician factor; no optimizer was
+changed or rerun for this check.
+
+[The exact rational counterexamples and fresh source-read receipt](../validation/hotspot-native18-replay-20261017/rician-source-coefficient-audit.json)
+are reproduced by `audit_rician_source_coefficient.py`. This is a contradiction
+in the supplied author source, with final-publisher equation equivalence still
+unverified. It cannot itself explain the NoRIS reference discrepancy, because
+G is absent from that baseline.
+
+The same source calls P_T the maximum **total** beam power at line101, with
+its **100 W** table row at line681. All five hotspot configurations and all18
+saved native case configurations already use100 W; the replayed constructor
+contexts also retain100 W. An earlier description of50 W in this note was a
+documentation error, not a configuration or saved-result error. A per-feed
+reinterpretation is not an authorized correction of this supplied model.

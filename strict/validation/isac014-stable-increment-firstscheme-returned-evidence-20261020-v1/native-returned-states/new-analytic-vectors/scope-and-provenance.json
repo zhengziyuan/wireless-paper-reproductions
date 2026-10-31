@@ -1,0 +1,125 @@
+{
+  "schema": "native36-new-sourcebound-analytic-vector-addendum-scope-v1",
+  "parent_artifacts": {
+    "original_native_input_MAT": {
+      "public_relative_path": "../saved/actual-native-first-scheme-states.mat",
+      "bytes": 771973,
+      "SHA256": "bb9d369047d1ed691bc51e2c74dba2c8935d272880c1ddd7f53b19b634ef54a5",
+      "original_unprojected_SHA256": "bb9d369047d1ed691bc51e2c74dba2c8935d272880c1ddd7f53b19b634ef54a5"
+    },
+    "existing_MP80_MP100_report": {
+      "public_relative_path": "../evidence/actual-native36-final-MP80-MP100.json.gz",
+      "bytes": 207813,
+      "SHA256": "17ad2aa57b310e2f9a3dce5e1ca715577626193c9cab8b212916205c924b2928",
+      "public_uncompressed_SHA256": "28a0097789ab54bfc9934009a2f82ecc76684f6069532427cc12bf6d1484facd",
+      "original_unprojected_source_SHA256": "f83b256a80721fa546c4157983f2f65a5c4fb4ba12814fb36476ba2853dab44b",
+      "difference": "Parent public report changes path metadata only; all numeric tokens and MP decimal strings are unchanged, as its transport-preservation.json records."
+    },
+    "original_native_five_function_source": {
+      "public_relative_path": "../sources/executed-native/run_native_case014_first_scheme_stable_PGA_full_v1.m",
+      "bytes": 30906,
+      "SHA256": "76ae3a9001cf623709119ff783d03cefc5823cd63c2d3bb9779183b8ebb00315"
+    },
+    "parent_transport_proof": {
+      "public_relative_path": "../transport-preservation.json",
+      "bytes": 6162,
+      "SHA256": "fe5d3a692e4ebc7e53fd650537c18746ed132e72488ae7c4e19455c0ef5869d7"
+    }
+  },
+  "actual_vector_counts": {
+    "update_w": 12,
+    "update_theta": 12,
+    "update_rotation": 12
+  },
+  "components_per_precision": 792,
+  "reference_precisions": [
+    80,
+    100
+  ],
+  "all36_vectors_original_absolute_gate_PASS": true,
+  "maximum_absolute_error": "2.309748658960939414295195790574539185233368349231970693200825701893075146878579590491779512481375149E-13",
+  "gate": "Strict complex magnitude less than exact original binary64 1e-5, implemented by Decimal.from_float(1e-5).",
+  "input_binding": "Original native MAT SHA plus actual returned index/method/call/fixediota. New vector real/imag F-order binary64 hashes all match; comparisons restore native shape then flatten C as the existing reference did.",
+  "new_native_source_evaluations": 36,
+  "new_MP_reference_evaluations": 0,
+  "new_optimizer_updates_MC_RNG_trials": 0,
+  "native_probe_actual_exit": 0,
+  "saved_comparison_actual_exit": 0,
+  "native_and_comparison_source_intervals_closed": true,
+  "final37_native_analytic_vector_gate_still_pending": true,
+  "historical_inmemory_native_vectors_recovered": false,
+  "original_joint_RCG_PGA_failures_and_W_diagnostics_unchanged": true,
+  "original_reference_fullsix_fullpaper_PASS": false,
+  "portable_replay_or_inspector_created_or_executed_for_this_addendum": false,
+  "source_entry_scope": "Actual executed sources, retained whole-byte for provenance. The comparison entry remains frozen-plan/closed-journal bound; it is not presented as a new portable launcher.",
+  "no_expected_parent_or_ref_in_this_preparation": true,
+  "origins": {
+    "saved/actual-new-native36-analytic-vectors.mat": {
+      "logical_origin": "saved/actual-new-native36-analytic-vectors.mat",
+      "original_SHA256": "06405b5b35aca27cb3809c388bddc5f3035e68c892c16b2740df5b86df22a860",
+      "original_bytes": 415034,
+      "copied_wholebytes": true
+    },
+    "sources/probe_only_saved_native36_analytic_vectors_v1.m": {
+      "logical_origin": "sources/probe_only_saved_native36_analytic_vectors_v1.m",
+      "original_SHA256": "fb94aadc6a9b335a4b33977b8bca0675497a6706c39e684d4b51dfafbbc1050c",
+      "original_bytes": 7991,
+      "copied_wholebytes": true
+    },
+    "sources/compare_only_saved_native_vectors_to_existing_MP_decimals_v1.py": {
+      "logical_origin": "sources/compare_only_saved_native_vectors_to_existing_MP_decimals_v1.py",
+      "original_SHA256": "984789010278198a0f14ed5c2f2c31d5cb74368524151e2f7f8dd8802e9b7f3a",
+      "original_bytes": 7249,
+      "copied_wholebytes": true
+    },
+    "evidence/actual-comparison-MP80-MP100.json.gz": {
+      "logical_origin": "local-origin/native-vector-actual-v2\\ACTUAL_NEW_NATIVE36_ANALYTIC_VECTORS_VS_EXISTING_MP80_MP100_SAVED_DECIMALS_V1.json",
+      "original_SHA256": "cbbfb448e83ceab1b909ca30814edb5606cdbf4728d6fd64cd18ce2669686032",
+      "original_bytes": 379212,
+      "public_uncompressed_SHA256": "02f1355f43546cbdae2684b1f24936dcfc98d79056fa41f7d7dc42fd0c2cc308",
+      "metadata_projection_only": true
+    },
+    "evidence/actual-vector-closure-and-scope.json": {
+      "logical_origin": "local-origin/native-vector-actual-v2\\ACTUAL_NATIVE36_VECTOR_GAP_CLOSED_ONLY_NEW_SOURCE_EXECUTION_AND_REUSED_MP_SCOPE_V1.json",
+      "original_SHA256": "57a1bd43ff9b47e9c0a32d74ad12444f6db62f6d3cee9c6a0e89cce8453ce2cc",
+      "original_bytes": 5304,
+      "public_uncompressed_SHA256": "fb2ee9dc75f4f827f2017f730b0d84931d8d84f9f44bf7d6be75d6aacd1a5472",
+      "metadata_projection_only": true
+    },
+    "evidence/actual-native-probe-held-natural0.json.gz": {
+      "logical_origin": "local-origin/native-vector-host-v2\\actual-held-v2\\native36-new-analytic-probe-actual-owned-process.json",
+      "original_SHA256": "4b77e2ba5a3b291e3a880860655bd90bd5a932181e09c88cb42830eb2fee48a1",
+      "original_bytes": 10872,
+      "public_uncompressed_SHA256": "24bc9bff0e6c8c842cfeee3353f670532e3144af0baef8eff196307ffed8a269",
+      "metadata_projection_only": true
+    },
+    "evidence/actual-saved-comparison-first-use0.json": {
+      "logical_origin": "local-origin/native-vector-host-v2\\ACTUAL_ONLY_SAVED_DECIMAL_STAGE_EXISTING_ENVIRONMENT_FIRST_USE_V1.json",
+      "original_SHA256": "e93413059278c6b9360660b264921aed83f43d199a9a6b9f3dd93c065a70a677",
+      "original_bytes": 4740,
+      "public_uncompressed_SHA256": "bcf6f1b952c78067ae8c78983bcd5e3456bbb0410c4e67786052709b88b65599",
+      "metadata_projection_only": true
+    },
+    "evidence/actual-native36-probe-completion.json": {
+      "logical_origin": "local-origin/native-vector-actual-v2\\actual-native36-probe-completion.json",
+      "original_SHA256": "3a83604de092583ff89525156e725bfb2d0d1af918b052a253fcad8f6c8aab85",
+      "original_bytes": 460,
+      "public_uncompressed_SHA256": "3a83604de092583ff89525156e725bfb2d0d1af918b052a253fcad8f6c8aab85",
+      "metadata_projection_only": true
+    },
+    "source-mapping/original-five-function-byte-extraction.json": {
+      "logical_origin": "local-origin/native-vector-host-v1\\EXACT_FIVE_NATIVE_PHYSICS_DERIVATIVE_FUNCTIONS_EXTRACTION_AND_REFERENCE_ROW_SCHEMA_V1.json",
+      "original_SHA256": "3f2138de2cfaeb110de34f4a31432ef2a41e727d0bb34d84c4edc47030f59c2a",
+      "original_bytes": 2020,
+      "public_uncompressed_SHA256": "b5627f50f7ef15847a1c155aa513885196cea6bae932449881efd8ad4db4aade",
+      "metadata_projection_only": true
+    },
+    "source-mapping/exact-host-V1-to-V2-inverse.json": {
+      "logical_origin": "local-origin/native-vector-host-v2\\EXACT_V1_PRELOAD_NATURAL1_RETAINED_AND_ONLY_COMPUTER_API_HOST_V2_DELTA_V1.json",
+      "original_SHA256": "f6af7fd081e720434a0a84d4c13fd48a83bde89525854c99bafd3ec0aef86f20",
+      "original_bytes": 2143,
+      "public_uncompressed_SHA256": "80ecff94165da8c0b9bc736938801ed170a837c9615aa96d75594615cf0acc3f",
+      "metadata_projection_only": true
+    }
+  }
+}

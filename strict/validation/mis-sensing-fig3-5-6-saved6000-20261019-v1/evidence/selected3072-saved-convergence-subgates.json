@@ -1,0 +1,46 @@
+{
+  "schema": "SELECTED3072_ORIGINAL_SAVED_CONVERGENCE_SUBGATES_V1",
+  "original_start": 3072,
+  "source_receipt_file": "start-3072-receipt.json",
+  "source_receipt_SHA256": "ee39f80a522cf43c7504a02fbb5a6249020e0317bdae577cf41a08deece65db3",
+  "source_receipt_bytes": 2746,
+  "saved_fields": {
+    "execution_error": false,
+    "original_domain_feasible": true,
+    "original_eta_binary_feasible": true,
+    "original_primal_feasible": true,
+    "original_convergence_feasibility_verified": false,
+    "actual_solver_status": {
+      "final_inner_stationary": true,
+      "all_inner_tolerances_satisfied": false,
+      "final_inner_residual": 1.169242374518452e-06,
+      "final_inner_tolerance": 1.2589254117941667e-06,
+      "outer_stopping_applicable": true,
+      "outer_stopping_met": true,
+      "outer_early_stopping_met": false,
+      "prescribed_outer_budget_execution_complete": true,
+      "outer_termination_valid": true,
+      "original_problem_kkt_certificate": {
+        "scope": "original_P2.1_SINR_relaxed_constrained_projected_KKT_not_global_optimality",
+        "stationarity_norm": 1.169242374518452e-06,
+        "stationarity_tolerance": 1.2589254117941667e-06,
+        "maximum_positive_primal_residual": 1.1070966365878121e-08,
+        "maximum_negative_dual_residual": 0,
+        "maximum_absolute_complementarity": 1.4569197016481093e-09,
+        "feasibility_tolerance": 1e-06,
+        "maximum_phase_modulus_error": 1.1102230246251565e-16,
+        "maximum_simplex_storage_error": 0,
+        "original_problem_kkt_verified": true
+      },
+      "original_problem_kkt_verified": true,
+      "continuation_complete": true,
+      "inner_iteration_cap_exits": 1,
+      "inner_failure_exits": 0,
+      "convergence_verified": false,
+      "final_inner_exit_reason": "gradient_tolerance"
+    }
+  },
+  "interpretation": "Final saved primal/binary/domain feasibility and original constrained KKT are true. The combined flag remains false because one earlier inner solve reached its4000-iteration cap. This receipt does not locate that earlier outer/block or prove an original-paper error.",
+  "no_RAW_or_MP_or_optimizer_rerun": true,
+  "original_reference_or_dual_figure_or_full_paper_PASS": false
+}

@@ -1,0 +1,118 @@
+{
+  "schema": "ACTUAL014_BITEXACT_FIRST_BLOCK_CAPTURE_MP_CURVATURE_AND_MINIMAL_NEXT_CHOICES_HANDOFF_V1",
+  "status": "finite_capture_and_fixed_operands_MP_complete_no_new_variant_started",
+  "evidence": {
+    "source-bcf906b9a2b6/ACTUAL_FIRST_BLOCK_CAPTURE_AND_IEEE_PREFIX_CLOSURE_V1.json": "e7102036dd09b2197ab8dd8eadda85c5dec706c329eb33e9973de5f514702ad3",
+    "source-3ba31997ab8e/actual-first-block-operands.npz": "fc4ac001fabb595b66ecb9644bfebd49457e940a6ab673bccedd3a5adc3e299e",
+    "source-13497656f223/ISAC014-first-block-capture-actual-owned-process.json": "ec39c923d255e02aaa0d1a3524a3b76b55278c6f5c9b527b60a862db2326308b",
+    "source-0f2ba19702d2/ACTUAL_FIRST_BLOCK_FIXED_OPERANDS_MP80_MP100_DIAGNOSIS_V1.json": "f03170b47003c472e7a4f92747fe56331e14f2008c1c89ccfd9165e31fcfc6a3",
+    "source-d1ca217bb71d/capture_ISAC014_first_W_RCG_PGA_prefix_v1.py": "2f7e11a53bf567eb7cf8a2b53805c2b8bf1bd2fca4cf9ebfeafae27614e82fc5",
+    "source-fda9035eae71/audit_only_captured_first_block_MP80_MP100_v1.py": "769bce647f240b5dfc0fbad3254c9164bab797fdf98f2eb4aa192c1f6534b07b"
+  },
+  "lifecycle": {
+    "owner": {
+      "PID": 25140,
+      "creation_FILETIME": 134369085046234397,
+      "associated_with_any_Windows_job": true
+    },
+    "child": {
+      "PID": 50704,
+      "creation_FILETIME": 134369085049526836,
+      "associated_with_any_Windows_job": true
+    },
+    "actual_child_terminal_exit_code": 0,
+    "natural_wait_completed": true,
+    "exact_original_handle_birth_and_exit_match": true,
+    "all_watched_source_and_job_bytes_unchanged": true,
+    "host_errors": []
+  },
+  "capture_scope": {
+    "cold_initialization_original_config_scenario": true,
+    "same_full_first_W_RCG500_PGA38_scalar_history_all_IEEE64_equal": true,
+    "only_calls": {
+      "W": 1,
+      "RCG": 1,
+      "PGA": 1
+    },
+    "actual_capture_seconds": 2.484583500016015,
+    "no_second_AO_or_other_scheme": true,
+    "old_unrecorded_intermediate_arrays_not_claimed_equal": true,
+    "no_optimizer_MC_or_RNG_in_MP_stage": true,
+    "fixed_operands_MP80_MP100_actual_exit_code": 0,
+    "existing_gradient_absolute_1e_minus5_and_MP_stability_pass": true,
+    "MP_elapsed_seconds": 33.230143899971154
+  },
+  "direct_original_source_read": {
+    "path": "source-f1d05ced6ba7/bare_jrnl.tex",
+    "SHA256": "aa71da008c68caa605ec3ed17520fcb81796561f315667eeb2f7dddf1487d2d2",
+    "matching_preexisting_audit_SHA256": true,
+    "printed_BB_plus_sign": "R1 L971-975: alpha_BB=||s||^2/(s^T delta_gradient)",
+    "printed_clipping": "R1 L976 explicitly clips to [alpha_min,alpha_max]; no separate nonpositive reset is specified. A negative printed BB is thus mapped to the positive lower endpoint.",
+    "printed_PGA_stopping": "R1 L981 and L1019-1021 explicitly allow projected-gradient OR relative accepted-angle step. Step-stop does not establish stationarity.",
+    "printed_RCG_step": "R1 L757 and L767 require Armijo backtracking but give no numerical initial seed/reset/growth rule.",
+    "numeric_constants_not_assigned_in_text": "Caps500, gradients1e-6, relative1e-8, initialRCG1, PGAalpha0.01/min1e-10/max1, Armijo1e-4 and backtrack0.5 are disclosed project reconstruction controls.",
+    "existing_variant_sign_difference": "The captured arithmetic variant uses the previously disclosed ascent_sign_correction denominator -s^T delta_gradient. This sign differs from the printed BB formula and must remain disclosed separately."
+  },
+  "RCG_actual_mechanism": {
+    "all500_first_trial_alpha1_accepted": true,
+    "last_gradient_norm_MP": "0.0010360136631504474613166377045651981370528557977223873572148845787279719689727592626583695625316358612371",
+    "gradient_threshold": 1e-06,
+    "gradient_pass": false,
+    "last_direction_cosine_with_g": 1.0,
+    "last_MP_directional_slope": "0.0000386304811724765970776404409566163767711376432908257696061894709556331933253569602116691752406811568081016",
+    "last_MP_retraction_curvature": "0.00000000928033669432903475566539426953448146663416266640013237091857990398730955112239848478422284868173045815653",
+    "local_abs_slope_over_curvature_alpha_scale": 4162.616340857833,
+    "alpha1_quadratic_over_linear_ratio": 0.00012011676288594974,
+    "last_actual_MP_improvement": "0.0000386351004767941350475351701042309300179555229012338327183969372699125890529860071187554908053433116788958",
+    "last_actual_MP_Armijo_margin": "0.0000386312374286768873989083133885237572717929666336122395208719741703127476107237161005599883153697199146129",
+    "conclusion": "Actual gradient and successful ascent are resolved above numerical noise. The reset-to1 line search is not being reduced by Armijo; the tail is locally weak-curvature, nearly gradient-aligned ascent. This supports testing a scale-aware positive initial seed but does not prove any larger step safe or convergence within500. Positive directional curvature is not a concave quadratic maximum: do not use slope/curvature as a proven optimal step or global bound."
+  },
+  "PGA_actual_mechanism": {
+    "iteration_zero_based": 37,
+    "MP_s_dot_gradient_difference": "0.00000000615510266172435316030484229008024163898970865788771224842046770063911379162799433765982714364466030123796",
+    "ascent_corrected_MP_BB": "-281.801867073776309828023741240282864232513268894537239187765670285479258645712580818663708977115973990733",
+    "original_unnegated_formula_at_this_event_would_be_positive_then_clipped_to_max1": true,
+    "actual_seed": 1e-10,
+    "actual_gradient_norm_MP": "0.00169977911516556252615520616176421280232500556057124998026681196447064230907126937503072649611274864706634",
+    "gradient_threshold": 1e-06,
+    "KKT_gradient_pass": false,
+    "actual_relative_step_MP": "0.000000000000169966691198865997973476217694661281242067829701302035700717438950292199080203789375041790959099931461115",
+    "relative_step_threshold": 1e-08,
+    "printed_relative_step_stop_satisfied": true,
+    "actual_MP_Armijo_acceptance_confirmed": true,
+    "actual_MP_utility_delta": "0.000000000000000288905812511135969063292873975509467388831709902162494303271618379724977185505884365253653156024607899473",
+    "actual_utility_ULP": 3.552713678800501e-15,
+    "MP_delta_in_utility_ULPs": 0.08131975684814514,
+    "binary64_reported_utility_delta": 3.552713678800501e-15,
+    "Armijo_required_in_utility_ULPs": 8.1319756852009e-06,
+    "first_order_alpha_above_relative_stop_scale": "0.00000588311734788315506479355485735239932840129849973676467765873341514018938323377678745985868163029803955342",
+    "conclusion": "Positive s dot delta_gradient is a real positive integrated directional curvature along this displacement, not an erroneous gradient/sign caused by roundoff. The existing minus-sign BB convention makes the seed negative, and the printed clipping rule then forces1e-10. The actual tiny step truly satisfies Armijo and the printed relative-step stop while remaining nonstationary. Do not call this a false Armijo acceptance, universal local convexity, or a proved paper algebra error."
+  },
+  "finite_next_choices": {
+    "recommended_minimal_new_variant": {
+      "scope": "One new cold case014 first RotBS-RotRIS full dependency trajectory only, after root selection; no other schemes, no splice of old AO/inner blocks.",
+      "PGA_nonpositive_BB_seed_reset": "Keep the current disclosed ascent_sign_correction and all positive-BB clipping. If its raw BB <=0, reset to the existing positive initial_step0.01 before the unchanged original projected ascent/Armijo. Log raw_BB, chosen seed, reset reason and returned PG/relative-step separately. No new numeric value is introduced.",
+      "PGA_provenance": "This deliberately changes the explicitly printed clipping safeguard for nonpositive BB; it is a disclosed numerical algorithm variant, not merely filling an unspecified parameter and not a recovered author implementation. No stationarity claim from relative-step alone.",
+      "RCG_seed_choice": "Within each RCG block start at original initial_step1; on later iterations set trial seed=last accepted alpha/backtrack_factor (growth factor2 inherited from existing0.5) instead of resetting to1. Retain original PR/transport/retraction, documented non-ascent restart, Armijo1e-4, backtrack0.5 and80 trials. This is an unreported initial-scale policy choice, not a change to the gradient/direction equation.",
+      "RCG_provenance": "No claim that dynamicseed2 growth is the author setting or proved successful; it avoids fitting the new seed to an observed terminal value.",
+      "unchanged_controls": [
+        "Full cold initial W/theta/r and all physical inputs",
+        "Original structured Q/P and explicit-interference arithmetic variant",
+        "RCG500/PGA500/AO500/W10000 safetycaps",
+        "Strict gradient1e-6 and relative-step1e-8 numerical thresholds",
+        "PGA bounds, projected-gradient direction, original OR stop expression",
+        "Original Armijo/backtracking acceptance and all failed outcomes"
+      ],
+      "interpretation": "Log criterion_stop, gradient_stationarity and budget_exhaustion independently; a printed relative-step stop never upgrades KKT. Root may select PGA-only for a more isolated seed experiment, but old RCG500 cap is then expected to remain an unresolved gate."
+    },
+    "literal_plus_BB_comparator_not_selected": "Reverting to the printed +s dot delta_gradient gives a positive seed for this one event, but earlier source-bound diagnostics already found adverse clipping for negative curvature. This single event does not justify silently removing the disclosed ascent-sign variant or claiming a global remedy.",
+    "cap_only_extension_not_recommended": "Prior case001 same-prefix10000 tests remained capped. This diagnostic establishes concrete seed/scale mechanisms; blind larger safetycaps are not the next evidence-led choice."
+  },
+  "execution_state": {
+    "no_new_trajectory_or_seed_variant_started": true,
+    "active_sources_untouched": true,
+    "all_original_failures_and_fullscheme_exit2_retained": true,
+    "source_closure_gradient_pass_not_full_convergence": true,
+    "original_reference_dual_language_full_paper_PASS": false
+  }
+}

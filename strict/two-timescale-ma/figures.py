@@ -11,6 +11,22 @@ from run import run_job
 from ma_metadata import fingerprint,reusable,bank_complete,implementation_fingerprint,original_scope_available
 
 
+def write_or_verify(path, data, *, windows_text_newlines=False):
+    """Create once or reuse an identical file without rewriting it."""
+    path=Path(path)
+    try:
+        with path.open('xb') as out:out.write(data)
+    except FileExistsError:
+        if not path.is_file():
+            raise FileExistsError(f"Existing path is not a file and is preserved: {path}")
+        existing=path.read_bytes()
+        # Older JSON reports used Windows text-mode writes. Preserve/reuse
+        # byte-identical content with only CRLF-vs-LF differences.
+        equal = existing==data or (windows_text_newlines and existing.replace(b'\r\n',b'\n')==data)
+        if not equal:
+            raise FileExistsError(f"Existing file differs and is preserved: {path}")
+
+
 def cases(config,figure):
     sweep=config["sweeps"];base=dict(N=6,M=5,kappa=100.,power=1.,A=2.)
     records=[]
@@ -61,48 +77,58 @@ def make_job(case,config,realization):
 
 if __name__=="__main__":
     p=argparse.ArgumentParser();p.add_argument("--figure",type=int,required=True);p.add_argument("--config",type=Path,default=Path(__file__).with_name("full_config.json"));p.add_argument("--output-dir",type=Path,required=True)
-    p.add_argument("--prepare",action="store_true");p.add_argument("--execute",action="store_true");args=p.parse_args();config_bytes=args.config.read_bytes();config=json.loads(config_bytes);case_list=cases(config,args.figure)
+    p.add_argument("--prepare",action="store_true");p.add_argument("--execute",action="store_true");args=p.parse_args()
+    if args.execute:
+        raise RuntimeError("MA figure execution disabled pending a reviewed storage guard and non-overwriting recovery")
+    if args.prepare:
+        raise RuntimeError("MA input-bank preparation disabled pending a reviewed storage guard and bounded output location")
+    config_bytes=args.config.read_bytes();config=json.loads(config_bytes);case_list=cases(config,args.figure)
     original_available=all(original_scope_available(case) for case in case_list)
     blockers=[] if original_available else ["Correlated-ZF Eq72/74/75 have unresolved dimensions and row-correlated Wishart assumptions. No replacement formula is used."]
     plan={"paper_id":"two-timescale-ma","figure":args.figure,"full":True,"geometry_realizations":config["geometry_realizations"],"nlos_per_geometry":config["nlos_realizations_per_geometry"],"cases":case_list,"jobs":len(case_list)*config["geometry_realizations"],
           "original_figure_scope_available":original_available,"original_figure_blockers":blockers,
           "model_comparison_protocol":"Figs13/15 evaluate Eq68/69 and iid rates on the original iid Algorithm1 trajectory; source-supported interpretation, not recovered original records or verified original-curve closeness.",
           "warning":"Figs19/20 are exhaustive and may be computationally prohibitive. Correlated-ZF analytical75 remains blocked; correlated MC uses valid model68.","executed":False}
-    args.output_dir.mkdir(parents=True,exist_ok=True);(args.output_dir/"plan.json").write_text(json.dumps(plan,indent=2)+"\n")
+    args.output_dir.mkdir(parents=True,exist_ok=True);write_or_verify(args.output_dir/"plan.json",(json.dumps(plan,indent=2)+"\n").encode(),windows_text_newlines=True)
     if args.prepare or args.execute:
         jobs_dir=args.output_dir/"jobs";jobs_dir.mkdir(exist_ok=True)
-        (args.output_dir/"run_config.json").write_bytes(config_bytes)
+        write_or_verify(args.output_dir/"run_config.json",config_bytes)
         entries=[];successful=np.zeros((len(case_list),config["geometry_realizations"]),dtype=bool);implemented_successful=np.zeros_like(successful)
         for index,case in enumerate(case_list):
             for realization in range(config["geometry_realizations"]):
                 stem=f"case-{index:03d}-mc-{realization:03d}";job=make_job(case,config,realization)
                 job_bytes=(json.dumps(job,separators=(",",":"))+"\n").encode("utf-8")
                 expected=fingerprint(config_bytes,job_bytes)
-                path=jobs_dir/(stem+".json");path.write_bytes(job_bytes)
+                path=jobs_dir/(stem+".json");write_or_verify(path,job_bytes)
                 entries.append({"filename":path.name,"case_index":index,"realization":realization,"input_fingerprint":expected})
                 if args.execute:
                     result_path=args.output_dir/(stem+"-python.json")
-                    if not reusable(result_path,expected,job,config):
+                    if result_path.exists() and not reusable(result_path,expected,job,config):
+                        raise FileExistsError(f"Existing result is not reusable and is preserved: {result_path}")
+                    if not result_path.exists():
                         try:result=run_job(job,config)
                         except Exception as error:result={"paper_id":"two-timescale-ma","mode":"full_scenario","status":"failed","error":str(error),"case":case,"realization":realization}
                         result["input_fingerprint"]=expected
                         result["implementation_fingerprint"]=implementation_fingerprint()
-                        result_path.write_text(json.dumps(result,indent=2,allow_nan=False)+"\n")
+                        with result_path.open('x',encoding='utf-8') as out:
+                            out.write(json.dumps(result,indent=2,allow_nan=False)+"\n")
                     implemented_successful[index,realization]=reusable(result_path,expected,job,config)
                     successful[index,realization]=implemented_successful[index,realization] and original_scope_available(job)
         manifest={"paper_id":"two-timescale-ma","case_count":len(case_list),"realizations_per_case":config["geometry_realizations"],
                   "nlos_per_geometry":config["nlos_realizations_per_geometry"],"expected_jobs":len(entries),"input_bank_complete":True,
                   "config_sha256":hashlib.sha256(config_bytes).hexdigest(),"files":entries}
         valid_bank=bank_complete(jobs_dir,manifest,config_bytes);manifest["input_bank_complete"]=valid_bank
-        (args.output_dir/"manifest.json").write_text(json.dumps(manifest,indent=2)+"\n")
+        write_or_verify(args.output_dir/"manifest.json",(json.dumps(manifest,indent=2)+"\n").encode(),windows_text_newlines=True)
         summary={"paper_id":"two-timescale-ma","figure":args.figure,"input_bank_complete":valid_bank,"expected_jobs":len(entries),
                  "successful_jobs":int(successful.sum()),"per_case_all_success":successful.all(axis=1).tolist(),
                  "implemented_scope_successful_jobs":int(implemented_successful.sum()),"per_case_implemented_scope_success":implemented_successful.all(axis=1).tolist(),
                  "overall_implemented_scope_success":bool(args.execute and valid_bank and implemented_successful.all()),
-                 "overall_full_success":bool(args.execute and valid_bank and successful.all()),
-                 "original_figure_complete":bool(args.execute and valid_bank and successful.all()),
+                 "overall_full_success":False,
+                 "original_figure_complete":False,
                  "original_curve_closeness_verified":False,
-                 "original_figure_status":"blocked_by_source_formulation" if not original_available else ("complete" if args.execute and valid_bank and successful.all() else "not_run_or_incomplete"),
+                 "original_figure_status":"blocked_by_source_formulation" if not original_available else ("reference_not_verified" if args.execute and valid_bank and successful.all() else "not_run_or_incomplete"),
                  "original_figure_blockers":blockers,"executed":args.execute}
-        (args.output_dir/"full_summary.json").write_text(json.dumps(summary,indent=2)+"\n")
+        # A versioned summary preserves any earlier status and its evidence.
+        summary_name="full_summary_v2_execute.json" if args.execute else "full_summary_v2_prepare.json"
+        write_or_verify(args.output_dir/summary_name,(json.dumps(summary,indent=2)+"\n").encode())
     print(json.dumps(plan))

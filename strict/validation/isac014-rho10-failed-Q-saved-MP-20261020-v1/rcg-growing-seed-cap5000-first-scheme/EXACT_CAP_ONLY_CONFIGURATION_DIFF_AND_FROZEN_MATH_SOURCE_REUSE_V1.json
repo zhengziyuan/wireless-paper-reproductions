@@ -1,0 +1,105 @@
+{
+  "schema": "actual-cap5000-config-only-extension-growth-scientific-source-exact-reuse-v1",
+  "config_diff": [
+    {
+      "path": "/RCG_solver/maximum_iterations",
+      "old": 500,
+      "new": 5000
+    },
+    {
+      "path": "/PGA_solver/maximum_iterations",
+      "old": 500,
+      "new": 5000
+    }
+  ],
+  "scenario_diff": [
+    {
+      "path": "/RCG_solver/maximum_iterations",
+      "old": 500,
+      "new": 5000
+    },
+    {
+      "path": "/PGA_solver/maximum_iterations",
+      "old": 500,
+      "new": 5000
+    }
+  ],
+  "all_other_config_scene_members_equal": true,
+  "all_growth_seed_math_and_8_other_source_files_exact": {
+    "equivalent_runtime_case014_v1.py": {
+      "old_SHA256": "781d7ad5f01df8d460c6a4eb905dd7f6cdd0026752465d0d26e6345901e5fc12",
+      "new_SHA256": "781d7ad5f01df8d460c6a4eb905dd7f6cdd0026752465d0d26e6345901e5fc12",
+      "whole_bytes_equal": true
+    },
+    "passive_first_failure_v1.py": {
+      "old_SHA256": "855bb184d28c9a760b21b5dcb0d880b89a81b7bbf5e526d965dbbf3cbc7544a1",
+      "new_SHA256": "855bb184d28c9a760b21b5dcb0d880b89a81b7bbf5e526d965dbbf3cbc7544a1",
+      "whole_bytes_equal": true
+    },
+    "stable_metrics.py": {
+      "old_SHA256": "e15ad67ffc92b0ea2b3cbbd5428ff8be30bc6630ab651188d15aa2f01bde8c29",
+      "new_SHA256": "e15ad67ffc92b0ea2b3cbbd5428ff8be30bc6630ab651188d15aa2f01bde8c29",
+      "whole_bytes_equal": true
+    },
+    "structured_original_qcqp_candidate_v1.py": {
+      "old_SHA256": "1fa91846426407d7313f0ba452e2d81c60fa433c9513d8618f870414903f8881",
+      "new_SHA256": "1fa91846426407d7313f0ba452e2d81c60fa433c9513d8618f870414903f8881",
+      "whole_bytes_equal": true
+    },
+    "sources/core_original_case014_v1.py": {
+      "old_SHA256": "07f2eb9d9f5011dde45a8c947dd87db31d15b7e6e8ab233e9f43429c408f2fbb",
+      "new_SHA256": "07f2eb9d9f5011dde45a8c947dd87db31d15b7e6e8ab233e9f43429c408f2fbb",
+      "whole_bytes_equal": true
+    },
+    "sources/core_structured_case014_v1.py": {
+      "old_SHA256": "4df631cc7ad55005461781cee4b666c66c98f8d9b7135944f693d499d0db4522",
+      "new_SHA256": "4df631cc7ad55005461781cee4b666c66c98f8d9b7135944f693d499d0db4522",
+      "whole_bytes_equal": true
+    },
+    "sources/run_selected_first_scheme_case014_v1.py": {
+      "old_SHA256": "7339b40b3efa519bf9f44fee3127451e30e0d3c255bcff01680362a10abde145",
+      "new_SHA256": "7339b40b3efa519bf9f44fee3127451e30e0d3c255bcff01680362a10abde145",
+      "whole_bytes_equal": true
+    },
+    "passive_RCG_seed_trace_v1.py": {
+      "old_SHA256": "7692fc1ea636b90ac623bc8ed6975f090f88d22ff95ffb4f7eac9dd3d59333d3",
+      "new_SHA256": "7692fc1ea636b90ac623bc8ed6975f090f88d22ff95ffb4f7eac9dd3d59333d3",
+      "whole_bytes_equal": true
+    }
+  },
+  "actual_entry_metadata_and_passive_only_changes": [
+    {
+      "old": "Cold case014 first scheme with disclosed unreported RCG seed growth; all numerical config unchanged.",
+      "new": "Cold case014 first scheme: identical growth-seed math, only disclosed RCG/PGA safetycaps500->5000."
+    },
+    {
+      "old": "from passive_RCG_seed_trace_v1 import PassiveRCGSeedTrace",
+      "new": "from passive_original_cap_prefix_v1 import PassiveCapBoundaryTrace as PassiveRCGSeedTrace"
+    },
+    {
+      "old": "only_original_first_RotBS_RotRIS_RCG_growing_seed_variant",
+      "new": "only_original_first_RotBS_RotRIS_RCG_growth_cap5000_variant"
+    },
+    {
+      "old": "previous explicit I/factored QCQP plus unreported RCG trial seed2x previous accepted. PGA untouched.",
+      "new": "previous explicit I/factored QCQP plus growth seed unchanged; only RCG/PGA unreported safetycaps500->5000, all other controls unchanged."
+    },
+    {
+      "old": "original_all28_config_members_unchanged=True,",
+      "new": "original_all28_config_members_unchanged=False,current_all28_explicit_configuration_members_embedded_exact=True,only_RCG_PGA_reconstruction_safety_caps_extended_from500_to5000=True,"
+    },
+    {
+      "old": "Only RCG initial trial seed policy changes; all budgets/stops/PGA unchanged.",
+      "new": "RCG growth-seed policy unchanged; only RCG/PGA safetycaps500->5000. All gradients, stops, step rules, W/AO controls unchanged."
+    }
+  ],
+  "entry_whole_prior_source_inverse": true,
+  "unchanged_W_AO_and_all_step_gradient_relative_Armijo_parameters": true,
+  "extra_observer": "No calculations: copies firstPGA iteration0/499/500 original utility/checkedgradient/previousstep scalar locals.",
+  "source_provenance": "5000 is extended unreported reconstruction safetycap, not an author reported numerical budget. No success claim.",
+  "prior500_closed_epoch_preserved": {
+    "path": "source-c401f825ab01/full-result.json",
+    "SHA256": "5aec72eb77596b31317a9e7a9e21008972485522c871c3d292c4761a1cbecb7a"
+  },
+  "scientific_runs_during_preparation": 0
+}

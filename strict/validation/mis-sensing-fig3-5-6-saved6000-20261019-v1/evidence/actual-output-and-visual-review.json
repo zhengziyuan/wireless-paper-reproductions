@@ -1,0 +1,173 @@
+{
+  "schema": "ACTUAL_SAVED6000_FIG3_FIG5_FIG6_DETERMINISTIC_FIELDS_AND_VISUAL_REVIEW_V1",
+  "recorded_China_time": "2026-10-19T10:09:52.280329+08:00",
+  "assembly_review": {
+    "path": "undistributed/local-identity-92a3ca88fd68cfa5f1cd",
+    "SHA256": "889cba87c5cccdddf53e0e597d55a21c1478781ab8fd3ef88979597a879b86dd"
+  },
+  "actual_tool_exits": {
+    "Fig5_Fig6_initial_render": 0,
+    "Fig3_deterministic_full_grid": 0,
+    "Fig3_all_nine_PNG_render": 0,
+    "Fig5_Fig6_V2_render": 0
+  },
+  "checks": {
+    "nine_maps": true,
+    "grid91x361": true,
+    "selected_identity_closed": true,
+    "field_code_unchanged": true,
+    "display_sources_and_three_inputs_unchanged": true,
+    "selected_original_start": true,
+    "selected_original_combined_false": true,
+    "all6000_mean_and720_retained_false": true,
+    "all_actual_histories30_no_derived_hold": true
+  },
+  "failed_checks": [],
+  "selected_input": {
+    "path": "undistributed/local-identity-0ae93a31efed5fa28a7e",
+    "SHA256": "ecbcc59560ba2e3f9911b793317933a9ba98def4fc13f6d45bc4162c84ee62f8",
+    "bytes": 72973
+  },
+  "Fig3_field_output": {
+    "path": "undistributed/local-identity-1b94440dd01b2ddb1bcf",
+    "SHA256": "f67efe6ca9e91d9b3443f4bbc90398ff3585ef3afd5a6552fd16fc038fd08c2c",
+    "bytes": 22701671
+  },
+  "Fig3_field_summary": {
+    "path": "undistributed/local-identity-4895204289575862a0dc",
+    "SHA256": "468956cd54a55cb03d580b1a884c77df21c2a89f50e17962cd7610eccc286fc4",
+    "bytes": 3347
+  },
+  "Fig5_Fig6_display_provenance": {
+    "path": "undistributed/local-identity-d4686c09dcacffa7a73d",
+    "SHA256": "eaa2370e05b1b98e85ebf4389fcbebc06d20f465248c675e96f47b4592139068",
+    "bytes": 3350
+  },
+  "observed_target_SINR_linear": [
+    65.17456997502106,
+    65.17456997598647,
+    65.17456997305446,
+    65.17456997455182,
+    65.17456997503972,
+    65.17456997555766,
+    65.17456997516133,
+    65.17456997916214,
+    65.17456997646048
+  ],
+  "observed_target_SINR_dB": [
+    18.140781743537296,
+    18.14078174360163,
+    18.14078174340625,
+    18.14078174350603,
+    18.14078174353854,
+    18.140781743573054,
+    18.140781743546647,
+    18.140781743813243,
+    18.140781743633212
+  ],
+  "stored_native_min_binary_metric": 65.17456997305436,
+  "observed_min_field_minus_native_metric": 9.947598300641403e-14,
+  "visual_review": {
+    "completed": true,
+    "method": "Actual PNG viewing: nine-panel contact sheet plus both full-size V2 convergence plots",
+    "reviewed_paths": [
+      "undistributed/local-identity-6221fc67959e79de2b9c",
+      "undistributed/local-identity-0d9f107e80d5a5910252",
+      "undistributed/local-identity-54139cfd2209ca25a21f"
+    ],
+    "findings": [
+      "All nine maps present with readable axes, titles and color scales.",
+      "V1 omitted visible isolated positive samples on a broken log curve; V1 retained and V2 marker correction actually rendered.",
+      "V2 shows isolated positive residuals including iteration30 and retains exact zeros as axis markers without epsilon replacement.",
+      "Selected3072 original combined=false is visible; actual30-iteration histories and all6000 mean/720 false are disclosed."
+    ]
+  },
+  "outputs": [
+    {
+      "path": "undistributed/local-identity-67ba4289279d96be4683",
+      "SHA256": "79033bfef2b6ece25644e853189eacf4ab57120bd23150f64c52519684fd77a1",
+      "bytes": 104058
+    },
+    {
+      "path": "undistributed/local-identity-85ecfe118ab56dcb2356",
+      "SHA256": "6dad03357d23ec33b78dcb4f716926673e9dfd43d3c1a1444d0617c982dc66e4",
+      "bytes": 102206
+    },
+    {
+      "path": "undistributed/local-identity-f953f4b5cf5791f60ae8",
+      "SHA256": "7d7690fdaf9331feecfcb368510b2078ca174346ecd6fd2bc61e7d39df041691",
+      "bytes": 147539
+    },
+    {
+      "path": "undistributed/local-identity-769363288e100b544279",
+      "SHA256": "99982bb91f84b14e01eeb11adb5212c90f90e55f684046e3101ee671d8f0dbfd",
+      "bytes": 103308
+    },
+    {
+      "path": "undistributed/local-identity-4054c6c7d1bd61f2f371",
+      "SHA256": "9d39bc6b505261fca02f8cf85e78bc0df46fd79357e09bec18ab2eee49657101",
+      "bytes": 142484
+    },
+    {
+      "path": "undistributed/local-identity-7e18bce49c29986bfa77",
+      "SHA256": "7732496bcac449427c0f900c5df7ee8c294f45868c757d91e4dc38cd071ab022",
+      "bytes": 102329
+    },
+    {
+      "path": "undistributed/local-identity-25ac3f9a6d0574772888",
+      "SHA256": "ac5ca6e14d5b75379fa3e5b0bbf9285c9ffb704de88450bd73b6fb5851ead863",
+      "bytes": 144502
+    },
+    {
+      "path": "undistributed/local-identity-3c6448288451b0d221e9",
+      "SHA256": "0d78613feba7342923c7618049c549a8d6bef7939c4be9077015b39f169f4faf",
+      "bytes": 103361
+    },
+    {
+      "path": "undistributed/local-identity-a35f80bf1521becf3e23",
+      "SHA256": "adf18645abc20fba57b29aedd704b8b6fdfa41c0a54882751ee88a0c9fc40e4f",
+      "bytes": 142155
+    },
+    {
+      "path": "undistributed/local-identity-0d9f107e80d5a5910252",
+      "SHA256": "7015991fadcc853a2ee3823df8e416dce9b12cbb6c33af07ac15b57ff207897d",
+      "bytes": 75544
+    },
+    {
+      "path": "undistributed/local-identity-ab79c71851a90c8fdb63",
+      "SHA256": "03e8a56f27d44b0a55e4342bfc7d34d2ea4035d94ad63e0be4486a10dad383ea",
+      "bytes": 17449
+    },
+    {
+      "path": "undistributed/local-identity-8b759d036959f3b04d73",
+      "SHA256": "e4cb272224a34fb99565605650c4df34efa815cdda9620e804a6dd7077fb81ab",
+      "bytes": 60075
+    },
+    {
+      "path": "undistributed/local-identity-54139cfd2209ca25a21f",
+      "SHA256": "dcb6f602c41f39aa35205c3f177579b66d35f143517f58ad2c9917c151f1504b",
+      "bytes": 133304
+    },
+    {
+      "path": "undistributed/local-identity-4025ae8f625dbba14584",
+      "SHA256": "9743d06148e5b3ef2d12f63b9ba7519e044b012535398ad03adeef33deba9a53",
+      "bytes": 23720
+    },
+    {
+      "path": "undistributed/local-identity-dced69b89414abfe5692",
+      "SHA256": "59cb3c2611ece929a034dfbe1542ceb38048804df9c0200bda22894d1efbf2d5",
+      "bytes": 101941
+    }
+  ],
+  "scope_limits": {
+    "new_optimizer_RNG_MC_or_old_MP_replay": false,
+    "native_saved_state_with_Python_deterministic_field_evaluation": true,
+    "no_new_MATLAB_grid_or_dual_figure_gate": true,
+    "literal_normalization": "inverse_watt/raw_per_PRI/gain1; raw noise tentatively clarified by user, inverse unit and effective gain unresolved",
+    "author_sampling_grid_selection_and_aggregate_violation_norm_not_recovered": true,
+    "full_original_convergence_gate": false,
+    "original_reference_gate": false,
+    "dual_language_figure_gate": false,
+    "whole_paper_or_all_six_PASS": false
+  }
+}

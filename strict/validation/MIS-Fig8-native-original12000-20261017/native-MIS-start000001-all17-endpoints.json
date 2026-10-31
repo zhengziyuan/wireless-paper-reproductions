@@ -1,0 +1,1250 @@
+{
+  "scope": "actual_native_all_mu_numerical_endpoint_view_not_all_inner_states",
+  "scheme": "MIS",
+  "start": 1,
+  "settings": {
+    "initialization": {
+      "method": "portable_park_miller_uniform_circle_and_simplex",
+      "seed": 241219071.0,
+      "eta_initial": 0,
+      "lambda_initial": 0
+    },
+    "line_search": {
+      "line_search_policy": "original_per_block_backtracking",
+      "non_descent_policy": "documented_non_descent_restart",
+      "initial_step": 1,
+      "armijo_constant": 0.0001,
+      "backtrack_factor": 0.5,
+      "max_backtracks": 60
+    },
+    "inferred_or_tuned": {
+      "fig7_geometry_erratum": "COMM-GEOMETRY-FIG7: literal2x1 Eq3 implies even azimuth fields, contradicting original EPS. Figure uses same two elements in1x2 orientation with source shape retained. No phase/spacing fitted to original curves.",
+      "stable_objective_difference": "Same LSE minimized objective, evaluated by exact field increments and stable log1p/expm1 for small changes; independent75-digit Decimal full-dimension tests. No accepted-value slack.",
+      "accuracy_share_guard": "After exhausting raw PR and recorded steepest-block retries, a block below tolerance/sqrt(number_of_blocks) may remain unchanged; the full actual global KKT measure must still meet the unchanged threshold. This prevents machine-precision inactive blocks obstructing active blocks, and is not an early convergence certificate.",
+      "line_search": "Original distinct per-block alpha backtracking: each block uses actual projected/retracted displacement Armijo. The jointly combined block step is checked with total actual-displacement Armijo and is commonly scaled only if necessary; this coupling safeguard and constants are not specified in the paper. Common-alpha mode remains diagnostic only.",
+      "initialization": "Portable Park-Miller phases, independent positive simplex entries then row normalization; seed not published.",
+      "scheduling_recovery": "Largest relaxed entry, smallest index on exact tie; paper specifies thresholding but not its threshold.",
+      "non_descent": "Raw per-block PR coefficients and slopes are preserved and recorded. A block restarts minus its current gradient if either its raw tangent slope or its initial-step feasible projected displacement slope is nonnegative; raw_non_descent and projected_non_descent reasons are recorded separately. Exact zero-gradient/empty blocks and zero projected boundary motions are inactive. The source specifies an open simplex but its Euclidean projection reaches the closed boundary; this documented numerical safeguard reports raw row-mean and projected/KKT norms separately, using the latter for guarded stopping. literal_printed retains raw-direction diagnostics. No feasibility tolerance is relaxed.",
+      "distance": "Ambient product norm for outer step; intrinsic product distance not numerically specified.",
+      "spacing": "Half-wavelength element spacing and normal incidence chosen because numerical paragraph does not specify these.",
+      "budgets": "6000 independent starts, 4000 RCG cap and 1e-6 gradient threshold are implementation settings, not quoted communication-paper values.",
+      "continuation": "Five equally spaced initial mu in [100,1000], cycling across starts; final mu 1e-3. Paper prescribes equally spaced initial mu and halving but omits range/count/terminal value.",
+      "erratum": "Minimize -f so original maximization of negative softmin is respected; published negative-gradient directions for +f contradict the maximization statement."
+    },
+    "kind": "communications",
+    "reference_snr": 0.01,
+    "spacing_over_wavelength": 0.5,
+    "incidence_direction_cosines": [
+      0,
+      0
+    ],
+    "number_of_starts": 6000,
+    "initial_mu_values": [
+      100,
+      325,
+      550,
+      775,
+      1000
+    ],
+    "terminal_mu": 0.001,
+    "objective_convention": "maximize_negative_softmin",
+    "rcg_max_iterations": 100000,
+    "rcg_gradient_tolerance": 1e-06,
+    "azimuth_sampling": "inclusive_uniform_-60_to_60",
+    "elevation_deg": 45
+  },
+  "configuration": {
+    "ms1": [
+      2,
+      2
+    ],
+    "ms2": [
+      1,
+      1
+    ],
+    "azimuth_deg": [
+      -60.0,
+      -20.0,
+      20.0,
+      60.0
+    ],
+    "elevation_deg": [
+      45.0,
+      45.0,
+      45.0,
+      45.0
+    ],
+    "spacing_over_wavelength": 0.5,
+    "incidence_direction_cosines": [
+      0,
+      0
+    ],
+    "number_of_targets": 4,
+    "reference_snr": 0.01
+  },
+  "coefficients": {
+    "real": [
+      [
+        1,
+        -0.34574104434877917,
+        0.4440158403262133,
+        0.6872469198049824
+      ],
+      [
+        1,
+        0.7249891196495339,
+        -0.49399261869764316,
+        0.24071447172346644
+      ],
+      [
+        1,
+        0.7249891196495339,
+        -0.49399261869764316,
+        -0.956993019209411
+      ],
+      [
+        1,
+        -0.34574104434877917,
+        0.4440158403262133,
+        -0.9942759204885538
+      ]
+    ],
+    "imag": [
+      [
+        0,
+        -0.9383299687490619,
+        0.8960189359268066,
+        -0.726423892241
+      ],
+      [
+        0,
+        -0.6887603185359866,
+        0.8694660963328271,
+        0.9705959731540681
+      ],
+      [
+        0,
+        0.6887603185359866,
+        0.8694660963328271,
+        0.29011094633683826
+      ],
+      [
+        0,
+        0.9383299687490619,
+        0.8960189359268066,
+        0.1068428469137684
+      ]
+    ]
+  },
+  "indices_zero_based": [
+    [
+      0
+    ],
+    [
+      1
+    ],
+    [
+      2
+    ],
+    [
+      3
+    ]
+  ],
+  "initial_state": {
+    "phi": {
+      "real": [
+        0.9030389765936186,
+        -0.4609074273983953,
+        0.8703193339292585,
+        -0.9245721203740878
+      ],
+      "imag": [
+        -0.4295586185292408,
+        0.8874482201058228,
+        0.4924878242037378,
+        0.38100707897224617
+      ]
+    },
+    "theta": {
+      "real": [
+        0.8583075893969379
+      ],
+      "imag": [
+        -0.5131355395834688
+      ]
+    },
+    "X": [
+      [
+        0.34423498888468235,
+        0.022680284450827332,
+        0.34147149311096486,
+        0.2916132335535254
+      ],
+      [
+        0.04410491168974438,
+        0.3337002242380492,
+        0.40254563369115876,
+        0.21964923038104756
+      ],
+      [
+        0.36950371802167375,
+        0.011341830361867757,
+        0.334141803911149,
+        0.28501264770530943
+      ],
+      [
+        0.30564403367827675,
+        0.14268902461381353,
+        0.3491866149167386,
+        0.2024803267911712
+      ]
+    ]
+  },
+  "initial_rng_before_after": [
+    241219071.0,
+    1963319547.0
+  ],
+  "endpoints": [
+    {
+      "mu": 100.0,
+      "state": {
+        "phi": {
+          "real": [
+            0.9968838543631593,
+            -0.996875326523639,
+            0.8098847979269782,
+            -0.8098813288300135
+          ],
+          "imag": [
+            -0.07888333734098538,
+            0.07899103346828898,
+            -0.586588965193497,
+            0.5865937548359439
+          ]
+        },
+        "theta": {
+          "real": [
+            -0.12208687126989612
+          ],
+          "imag": [
+            -0.9925194183810854
+          ]
+        },
+        "X": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ]
+      },
+      "stop": {
+        "reason": "gradient_tolerance",
+        "projected_kkt_norm": 9.940221920882729e-07,
+        "objective": 138.53526627838738
+      },
+      "recorded_inner_iterations": 1199
+    },
+    {
+      "mu": 50.0,
+      "state": {
+        "phi": {
+          "real": [
+            0.9968842185092129,
+            -0.9968802791659822,
+            0.8098641147666507,
+            -0.809862510008342
+          ],
+          "imag": [
+            -0.07887873533009863,
+            0.07892850568681559,
+            -0.5866175207179116,
+            0.5866197361860479
+          ]
+        },
+        "theta": {
+          "real": [
+            -0.12226049120782961
+          ],
+          "imag": [
+            -0.992498046491589
+          ]
+        },
+        "X": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ]
+      },
+      "stop": {
+        "reason": "gradient_tolerance",
+        "projected_kkt_norm": 9.78536211821834e-07,
+        "objective": 69.22055326177043
+      },
+      "recorded_inner_iterations": 62
+    },
+    {
+      "mu": 25.0,
+      "state": {
+        "phi": {
+          "real": [
+            0.9968867593269173,
+            -0.9968855855747407,
+            0.8098343733433636,
+            -0.8098338941359089
+          ],
+          "imag": [
+            -0.07884661742064115,
+            0.0788614561957013,
+            -0.5866585785203875,
+            0.5866592400266698
+          ]
+        },
+        "theta": {
+          "real": [
+            -0.12267338097978406
+          ],
+          "imag": [
+            -0.9924470976324073
+          ]
+        },
+        "X": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ]
+      },
+      "stop": {
+        "reason": "gradient_tolerance",
+        "projected_kkt_norm": 9.823905792579032e-07,
+        "objective": 34.56320430667463
+      },
+      "recorded_inner_iterations": 95
+    },
+    {
+      "mu": 12.5,
+      "state": {
+        "phi": {
+          "real": [
+            0.9968935466098636,
+            -0.9968933421694013,
+            0.8097800389914377,
+            -0.8097799551826408
+          ],
+          "imag": [
+            -0.07876075626609759,
+            0.07876334387468041,
+            -0.5867335753568443,
+            0.5867336910254944
+          ]
+        },
+        "theta": {
+          "real": [
+            -0.12350622323812199
+          ],
+          "imag": [
+            -0.9923437976938514
+          ]
+        },
+        "X": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ]
+      },
+      "stop": {
+        "reason": "gradient_tolerance",
+        "projected_kkt_norm": 9.97604802772097e-07,
+        "objective": 17.23454491496613
+      },
+      "recorded_inner_iterations": 126
+    },
+    {
+      "mu": 6.25,
+      "state": {
+        "phi": {
+          "real": [
+            0.996907849124942,
+            -0.9969078271449906,
+            0.8096726383560249,
+            -0.8096726292728414
+          ],
+          "imag": [
+            -0.07857951611636517,
+            0.07857979496698732,
+            -0.5868817757415828,
+            0.586881788272906
+          ]
+        },
+        "theta": {
+          "real": [
+            -0.12517111605272965
+          ],
+          "imag": [
+            -0.9921351680623534
+          ]
+        },
+        "X": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ]
+      },
+      "stop": {
+        "reason": "gradient_tolerance",
+        "projected_kkt_norm": 9.818128541250785e-07,
+        "objective": 8.570245308466083
+      },
+      "recorded_inner_iterations": 160
+    },
+    {
+      "mu": 3.125,
+      "state": {
+        "phi": {
+          "real": [
+            0.9969366637098923,
+            -0.9969366622145114,
+            0.8094567943695092,
+            -0.8094567937416152
+          ],
+          "imag": [
+            -0.078213097055346,
+            0.07821311611609066,
+            -0.5871794428018048,
+            0.5871794436673891
+          ]
+        },
+        "theta": {
+          "real": [
+            -0.1284891695596696
+          ],
+          "imag": [
+            -0.9917109121643599
+          ]
+        },
+        "X": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ]
+      },
+      "stop": {
+        "reason": "gradient_tolerance",
+        "projected_kkt_norm": 9.850455642164362e-07,
+        "objective": 4.238155354534833
+      },
+      "recorded_inner_iterations": 194
+    },
+    {
+      "mu": 1.5625,
+      "state": {
+        "phi": {
+          "real": [
+            0.9969943666364556,
+            -0.9969943666161933,
+            0.8090213091148876,
+            -0.8090213091061081
+          ],
+          "imag": [
+            -0.07747407885978778,
+            0.07747407912053979,
+            -0.5877793135165896,
+            0.5877793135286741
+          ]
+        },
+        "theta": {
+          "real": [
+            -0.13508386910668255
+          ],
+          "imag": [
+            -0.9908341679146762
+          ]
+        },
+        "X": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ]
+      },
+      "stop": {
+        "reason": "gradient_tolerance",
+        "projected_kkt_norm": 9.959985360759715e-07,
+        "objective": 2.072228758241124
+      },
+      "recorded_inner_iterations": 228
+    },
+    {
+      "mu": 0.78125,
+      "state": {
+        "phi": {
+          "real": [
+            0.9971097526159317,
+            -0.9971097526156347,
+            0.8081364315065079,
+            -0.8081364315063713
+          ],
+          "imag": [
+            -0.07597460916777088,
+            0.07597460917166807,
+            -0.5889953379033888,
+            0.5889953379035763
+          ]
+        },
+        "theta": {
+          "real": [
+            -0.14810014271642735
+          ],
+          "imag": [
+            -0.9889723695469829
+          ]
+        },
+        "X": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ]
+      },
+      "stop": {
+        "reason": "gradient_tolerance",
+        "projected_kkt_norm": 9.835401417612044e-07,
+        "objective": 0.9894969535620751
+      },
+      "recorded_inner_iterations": 263
+    },
+    {
+      "mu": 0.390625,
+      "state": {
+        "phi": {
+          "real": [
+            0.9973391366495218,
+            -0.997339136649522,
+            0.8063175861212062,
+            -0.8063175861212063
+          ],
+          "imag": [
+            -0.07290162211629296,
+            0.07290162211628892,
+            -0.5914828402512379,
+            0.5914828402512377
+          ]
+        },
+        "theta": {
+          "real": [
+            -0.17336441094897762
+          ],
+          "imag": [
+            -0.9848577465889752
+          ]
+        },
+        "X": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ]
+      },
+      "stop": {
+        "reason": "gradient_tolerance",
+        "projected_kkt_norm": 9.92738883455083e-07,
+        "objective": 0.44857310384009874
+      },
+      "recorded_inner_iterations": 296
+    },
+    {
+      "mu": 0.1953125,
+      "state": {
+        "phi": {
+          "real": [
+            0.9977815749988261,
+            -0.9977815749988261,
+            0.8025488113862483,
+            -0.8025488113862483
+          ],
+          "imag": [
+            -0.0665727316013238,
+            0.06657273160132378,
+            -0.5965864609111745,
+            0.5965864609111745
+          ]
+        },
+        "theta": {
+          "real": [
+            -0.2204448031313582
+          ],
+          "imag": [
+            -0.9753994508776274
+          ]
+        },
+        "X": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ]
+      },
+      "stop": {
+        "reason": "gradient_tolerance",
+        "projected_kkt_norm": 9.942861589328886e-07,
+        "objective": 0.17891403342665368
+      },
+      "recorded_inner_iterations": 327
+    },
+    {
+      "mu": 0.09765625,
+      "state": {
+        "phi": {
+          "real": [
+            0.9985463270013015,
+            -0.9985463270013015,
+            0.7949102798675673,
+            -0.7949102798675671
+          ],
+          "imag": [
+            -0.0539002118011588,
+            0.05390021180115883,
+            -0.6067269954113348,
+            0.6067269954113349
+          ]
+        },
+        "theta": {
+          "real": [
+            -0.2999564864124455
+          ],
+          "imag": [
+            -0.9539528847165883
+          ]
+        },
+        "X": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ]
+      },
+      "stop": {
+        "reason": "gradient_tolerance",
+        "projected_kkt_norm": 9.981569675890831e-07,
+        "objective": 0.0453987181724133
+      },
+      "recorded_inner_iterations": 352
+    },
+    {
+      "mu": 0.048828125,
+      "state": {
+        "phi": {
+          "real": [
+            0.9995073351161246,
+            -0.9995073351161246,
+            0.7810369565112784,
+            -0.7810369565112784
+          ],
+          "imag": [
+            -0.03138609642920406,
+            0.03138609642920411,
+            -0.6244848057107552,
+            0.6244848057107553
+          ]
+        },
+        "theta": {
+          "real": [
+            -0.40993554247774994
+          ],
+          "imag": [
+            -0.9121144944651812
+          ]
+        },
+        "X": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ]
+      },
+      "stop": {
+        "reason": "gradient_tolerance",
+        "projected_kkt_norm": 9.84924185401338e-07,
+        "objective": -0.01958506442265598
+      },
+      "recorded_inner_iterations": 367
+    },
+    {
+      "mu": 0.0244140625,
+      "state": {
+        "phi": {
+          "real": [
+            0.9999999371167413,
+            -0.9999999371167413,
+            0.7608219298789795,
+            -0.7608219298789795
+          ],
+          "imag": [
+            0.00035463574748117733,
+            -0.00035463574748126125,
+            -0.6489607006708691,
+            0.6489607006708692
+          ]
+        },
+        "theta": {
+          "real": [
+            -0.5243128975295117
+          ],
+          "imag": [
+            -0.8515256810479692
+          ]
+        },
+        "X": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ]
+      },
+      "stop": {
+        "reason": "gradient_tolerance",
+        "projected_kkt_norm": 9.853137269642752e-07,
+        "objective": -0.05026661770099317
+      },
+      "recorded_inner_iterations": 364
+    },
+    {
+      "mu": 0.01220703125,
+      "state": {
+        "phi": {
+          "real": [
+            0.999393777023625,
+            -0.999393777023625,
+            0.7380065415329399,
+            -0.7380065415329399
+          ],
+          "imag": [
+            0.03481491701057136,
+            -0.03481491701057131,
+            -0.674793557063632,
+            0.6747935570636322
+          ]
+        },
+        "theta": {
+          "real": [
+            -0.6155706714518133
+          ],
+          "imag": [
+            -0.7880816889437058
+          ]
+        },
+        "X": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ]
+      },
+      "stop": {
+        "reason": "gradient_tolerance",
+        "projected_kkt_norm": 9.904327140152504e-07,
+        "objective": -0.06422379891294974
+      },
+      "recorded_inner_iterations": 337
+    },
+    {
+      "mu": 0.006103515625,
+      "state": {
+        "phi": {
+          "real": [
+            0.9978908507268058,
+            -0.9978908507268058,
+            0.7173376237241749,
+            -0.7173376237241748
+          ],
+          "imag": [
+            0.06491417438227136,
+            -0.06491417438227144,
+            -0.6967257233587364,
+            0.6967257233587365
+          ]
+        },
+        "theta": {
+          "real": [
+            -0.6765115456296072
+          ],
+          "imag": [
+            -0.7364320258040385
+          ]
+        },
+        "X": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ]
+      },
+      "stop": {
+        "reason": "gradient_tolerance",
+        "projected_kkt_norm": 9.8717416297146e-07,
+        "objective": -0.07035466566761342
+      },
+      "recorded_inner_iterations": 277
+    },
+    {
+      "mu": 0.0030517578125,
+      "state": {
+        "phi": {
+          "real": [
+            0.9962902434320782,
+            -0.9962902434320782,
+            0.7024045334744783,
+            -0.7024045334744782
+          ],
+          "imag": [
+            0.08605667226921127,
+            -0.0860566722692119,
+            -0.7117779649262125,
+            0.7117779649262126
+          ]
+        },
+        "theta": {
+          "real": [
+            -0.7115831723122653
+          ],
+          "imag": [
+            -0.7026018708216006
+          ]
+        },
+        "X": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ]
+      },
+      "stop": {
+        "reason": "gradient_tolerance",
+        "projected_kkt_norm": 9.854355889739901e-07,
+        "objective": -0.07297758550432187
+      },
+      "recorded_inner_iterations": 128
+    },
+    {
+      "mu": 0.00152587890625,
+      "state": {
+        "phi": {
+          "real": [
+            0.9955073744057853,
+            -0.9955073568653275,
+            0.6962121681768838,
+            -0.6962121682112155
+          ],
+          "imag": [
+            0.09468404038537635,
+            -0.09468422480545334,
+            -0.7178360654651191,
+            0.7178360654318214
+          ]
+        },
+        "theta": {
+          "real": [
+            -0.7242072355969265
+          ],
+          "imag": [
+            -0.6895823953009953
+          ]
+        },
+        "X": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ]
+      },
+      "stop": {
+        "reason": "gradient_tolerance",
+        "projected_kkt_norm": 9.367937893435077e-07,
+        "objective": -0.07410626543477071
+      },
+      "recorded_inner_iterations": 208
+    }
+  ],
+  "final_metrics": {
+    "min_relaxed_snr": 0.07516553254958226,
+    "min_binary_snr": 0.07516553254958226,
+    "binary_schedule": [
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ]
+    ]
+  },
+  "original_native_input_hashes": {
+    "oracle": "54e91b92540aa6bc3716636c139ffb56e21d4a2bc0dccb078351377f9742800b",
+    "auditor": "b8ee4ad53be61b7cfd0d74a9ffde752e4b7d63392e19394ffa36aa6de4809d55",
+    "full_mat": "161b950d20bd184b8c7752a6838c2821ee3670e124a13d93e9203d162e03b71b",
+    "initial_json": "3ec3f325e4fb9510dd415cac5986fe726a372fc1cb6fe8e1b33f2c1754707afd",
+    "record_json": "b725c1fdd67f65aefd1ea6852ed70a9c978448e48fa40bfe1bf1d9b90e4e67d3"
+  },
+  "omitted_metadata": "Local observer record_folder only; raw full history remains in source-bound native MAT library"
+}
