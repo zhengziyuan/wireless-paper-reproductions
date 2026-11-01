@@ -1,0 +1,1034 @@
+{
+  "schema": "CASE13_RECORDED_STOP_CONSUMER_V1",
+  "extraction_summary_declares_completed": true,
+  "expected_events_and_histories_present": true,
+  "no_detected_nested_interpretation_errors": true,
+  "all_74_extracted_fields_independently_interpreted": false,
+  "partial_final_line": false,
+  "recorded_event_counts_by_action": {
+    "QT_loop_end": {
+      "records": 4,
+      "uninspectable_events": 0,
+      "recorded_negative_steps": 0,
+      "reported_stop_converged_true": 4,
+      "reported_stop_converged_false": 0,
+      "negative_reported_norms": 0,
+      "history_count_inconsistencies": 0,
+      "residual_inconsistencies": 0,
+      "declared_flag_inconsistencies": 0,
+      "nested_fields_uninspectable": 0,
+      "reported_final_algorithm_success_false": 0,
+      "unsupported_stop_rules": 0
+    },
+    "phase_end": {
+      "records": 10,
+      "uninspectable_events": 0,
+      "recorded_negative_steps": 0,
+      "reported_stop_converged_true": 10,
+      "reported_stop_converged_false": 0,
+      "negative_reported_norms": 0,
+      "history_count_inconsistencies": 0,
+      "residual_inconsistencies": 0,
+      "declared_flag_inconsistencies": 0,
+      "nested_fields_uninspectable": 0,
+      "reported_final_algorithm_success_false": 0,
+      "unsupported_stop_rules": 0
+    },
+    "AO_iteration": {
+      "records": 8,
+      "uninspectable_events": 0,
+      "recorded_negative_steps": 0,
+      "reported_stop_converged_true": 8,
+      "reported_stop_converged_false": 0,
+      "negative_reported_norms": 0,
+      "history_count_inconsistencies": 0,
+      "residual_inconsistencies": 0,
+      "declared_flag_inconsistencies": 0,
+      "nested_fields_uninspectable": 0,
+      "reported_final_algorithm_success_false": 0,
+      "unsupported_stop_rules": 0
+    },
+    "execute_final": {
+      "records": 6,
+      "uninspectable_events": 0,
+      "recorded_negative_steps": 0,
+      "reported_stop_converged_true": 16,
+      "reported_stop_converged_false": 0,
+      "negative_reported_norms": 0,
+      "history_count_inconsistencies": 0,
+      "residual_inconsistencies": 0,
+      "declared_flag_inconsistencies": 0,
+      "nested_fields_uninspectable": 0,
+      "reported_final_algorithm_success_false": 0,
+      "unsupported_stop_rules": 0
+    }
+  },
+  "records": [
+    {
+      "action": "QT_loop_end",
+      "ordinal": 1327161,
+      "scheme": "NoRIS",
+      "start_id": 0,
+      "history": {
+        "recorded_points": 4,
+        "recorded_negative_differences": [],
+        "all_recorded_differences_nonnegative": true
+      },
+      "source_trajectory_complete_proven": false,
+      "stop_check": {
+        "converged": true,
+        "termination": "relative_improvement",
+        "iterations": 3.0,
+        "iteration_cap": 200.0,
+        "stop_rule": "signed_relative_objective_increase",
+        "threshold": 0.0001,
+        "final_residual": 4.3301461971875824e-05,
+        "history_count_matches_reported_iterations": true,
+        "saved_history_completeness_proven": false,
+        "comparison_mixed_tolerance_formula": "1e-12*max(1,abs(a),abs(b))",
+        "recomputed_residual": 4.3301461971875824e-05,
+        "residual_matches_record": true,
+        "recomputed_expression_triggered": true,
+        "negative_final_residual": false,
+        "flag_agrees_with_recomputed_expression": true
+      }
+    },
+    {
+      "action": "execute_final",
+      "ordinal": 1327162,
+      "scheme": "NoRIS",
+      "start_id": 0,
+      "history": {
+        "recorded_points": 4,
+        "recorded_negative_differences": [],
+        "all_recorded_differences_nonnegative": true
+      },
+      "source_trajectory_complete_proven": false,
+      "final_status_report": {
+        "reported_converged": true,
+        "reported_algorithm_success": true,
+        "reported_termination": "all_original_stop_rules_reached",
+        "blocks_interpreted_as_independent_scientific_pass": false,
+        "blocks": [
+          {
+            "converged": true,
+            "termination": "relative_improvement",
+            "iterations": 3.0,
+            "iteration_cap": 200.0,
+            "stop_rule": "signed_relative_objective_increase",
+            "threshold": 0.0001,
+            "final_residual": 4.3301461971875824e-05,
+            "history_for_this_stop_provided": false,
+            "negative_reported_residual": false,
+            "expression_on_reported_residual": true
+          }
+        ]
+      }
+    },
+    {
+      "action": "QT_loop_end",
+      "ordinal": 1327226,
+      "scheme": "NoRIS",
+      "start_id": 1,
+      "history": {
+        "recorded_points": 4,
+        "recorded_negative_differences": [],
+        "all_recorded_differences_nonnegative": true
+      },
+      "source_trajectory_complete_proven": false,
+      "stop_check": {
+        "converged": true,
+        "termination": "relative_improvement",
+        "iterations": 3.0,
+        "iteration_cap": 200.0,
+        "stop_rule": "signed_relative_objective_increase",
+        "threshold": 0.0001,
+        "final_residual": 4.330174944844962e-05,
+        "history_count_matches_reported_iterations": true,
+        "saved_history_completeness_proven": false,
+        "comparison_mixed_tolerance_formula": "1e-12*max(1,abs(a),abs(b))",
+        "recomputed_residual": 4.330174944844962e-05,
+        "residual_matches_record": true,
+        "recomputed_expression_triggered": true,
+        "negative_final_residual": false,
+        "flag_agrees_with_recomputed_expression": true
+      }
+    },
+    {
+      "action": "execute_final",
+      "ordinal": 1327227,
+      "scheme": "NoRIS",
+      "start_id": 1,
+      "history": {
+        "recorded_points": 4,
+        "recorded_negative_differences": [],
+        "all_recorded_differences_nonnegative": true
+      },
+      "source_trajectory_complete_proven": false,
+      "final_status_report": {
+        "reported_converged": true,
+        "reported_algorithm_success": true,
+        "reported_termination": "all_original_stop_rules_reached",
+        "blocks_interpreted_as_independent_scientific_pass": false,
+        "blocks": [
+          {
+            "converged": true,
+            "termination": "relative_improvement",
+            "iterations": 3.0,
+            "iteration_cap": 200.0,
+            "stop_rule": "signed_relative_objective_increase",
+            "threshold": 0.0001,
+            "final_residual": 4.330174944844962e-05,
+            "history_for_this_stop_provided": false,
+            "negative_reported_residual": false,
+            "expression_on_reported_residual": true
+          }
+        ]
+      }
+    },
+    {
+      "action": "phase_end",
+      "ordinal": 1327318,
+      "scheme": "TwoStage",
+      "start_id": 0,
+      "history": {
+        "recorded_points": 19,
+        "recorded_negative_differences": [],
+        "all_recorded_differences_nonnegative": true
+      },
+      "source_trajectory_complete_proven": false,
+      "stop_check": {
+        "converged": true,
+        "termination": "gradient_tolerance",
+        "iterations": 18.0,
+        "iteration_cap": 100000.0,
+        "stop_rule": "Riemannian_gradient_norm",
+        "threshold": 1e-06,
+        "final_residual": 3.292690620573287e-10,
+        "history_count_matches_reported_iterations": true,
+        "saved_history_completeness_proven": false,
+        "comparison_mixed_tolerance_formula": "1e-12*max(1,abs(a),abs(b))",
+        "nonnegative_norm": true,
+        "recomputed_expression_triggered": true,
+        "recomputed_gradient_norm": 3.292690620573287e-10,
+        "gradient_matches_record": true,
+        "flag_agrees_with_recomputed_expression": true
+      }
+    },
+    {
+      "action": "QT_loop_end",
+      "ordinal": 1327397,
+      "scheme": "TwoStage",
+      "start_id": 0,
+      "history": {
+        "recorded_points": 5,
+        "recorded_negative_differences": [],
+        "all_recorded_differences_nonnegative": true
+      },
+      "source_trajectory_complete_proven": false,
+      "stop_check": {
+        "converged": true,
+        "termination": "relative_improvement",
+        "iterations": 4.0,
+        "iteration_cap": 200.0,
+        "stop_rule": "signed_relative_objective_increase",
+        "threshold": 0.0001,
+        "final_residual": 3.813691320167061e-05,
+        "history_count_matches_reported_iterations": true,
+        "saved_history_completeness_proven": false,
+        "comparison_mixed_tolerance_formula": "1e-12*max(1,abs(a),abs(b))",
+        "recomputed_residual": 3.813691320167061e-05,
+        "residual_matches_record": true,
+        "recomputed_expression_triggered": true,
+        "negative_final_residual": false,
+        "flag_agrees_with_recomputed_expression": true
+      }
+    },
+    {
+      "action": "execute_final",
+      "ordinal": 1327398,
+      "scheme": "TwoStage",
+      "start_id": 0,
+      "history": {
+        "kind": "separate_QT_and_phase_histories",
+        "blocks": {
+          "QT": {
+            "recorded_points": 5,
+            "recorded_negative_differences": [],
+            "all_recorded_differences_nonnegative": true
+          },
+          "phase": {
+            "recorded_points": 19,
+            "recorded_negative_differences": [],
+            "all_recorded_differences_nonnegative": true
+          }
+        },
+        "recorded_negative_differences": [],
+        "all_recorded_differences_nonnegative": true,
+        "cross_block_difference_computed": false
+      },
+      "source_trajectory_complete_proven": false,
+      "final_status_report": {
+        "reported_converged": true,
+        "reported_algorithm_success": true,
+        "reported_termination": "all_original_stop_rules_reached",
+        "blocks_interpreted_as_independent_scientific_pass": false,
+        "blocks": [
+          {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 18.0,
+            "iteration_cap": 100000.0,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 3.292690620573287e-10,
+            "history_for_this_stop_provided": false,
+            "nonnegative_norm": true,
+            "expression_on_reported_norm": true
+          },
+          {
+            "converged": true,
+            "termination": "relative_improvement",
+            "iterations": 4.0,
+            "iteration_cap": 200.0,
+            "stop_rule": "signed_relative_objective_increase",
+            "threshold": 0.0001,
+            "final_residual": 3.813691320167061e-05,
+            "history_for_this_stop_provided": false,
+            "negative_reported_residual": false,
+            "expression_on_reported_residual": true
+          }
+        ]
+      }
+    },
+    {
+      "action": "phase_end",
+      "ordinal": 1327488,
+      "scheme": "TwoStage",
+      "start_id": 1,
+      "history": {
+        "recorded_points": 19,
+        "recorded_negative_differences": [],
+        "all_recorded_differences_nonnegative": true
+      },
+      "source_trajectory_complete_proven": false,
+      "stop_check": {
+        "converged": true,
+        "termination": "gradient_tolerance",
+        "iterations": 18.0,
+        "iteration_cap": 100000.0,
+        "stop_rule": "Riemannian_gradient_norm",
+        "threshold": 1e-06,
+        "final_residual": 4.362692892877391e-07,
+        "history_count_matches_reported_iterations": true,
+        "saved_history_completeness_proven": false,
+        "comparison_mixed_tolerance_formula": "1e-12*max(1,abs(a),abs(b))",
+        "nonnegative_norm": true,
+        "recomputed_expression_triggered": true,
+        "recomputed_gradient_norm": 4.362692892877391e-07,
+        "gradient_matches_record": true,
+        "flag_agrees_with_recomputed_expression": true
+      }
+    },
+    {
+      "action": "QT_loop_end",
+      "ordinal": 1327567,
+      "scheme": "TwoStage",
+      "start_id": 1,
+      "history": {
+        "recorded_points": 5,
+        "recorded_negative_differences": [],
+        "all_recorded_differences_nonnegative": true
+      },
+      "source_trajectory_complete_proven": false,
+      "stop_check": {
+        "converged": true,
+        "termination": "relative_improvement",
+        "iterations": 4.0,
+        "iteration_cap": 200.0,
+        "stop_rule": "signed_relative_objective_increase",
+        "threshold": 0.0001,
+        "final_residual": 3.854566890806653e-05,
+        "history_count_matches_reported_iterations": true,
+        "saved_history_completeness_proven": false,
+        "comparison_mixed_tolerance_formula": "1e-12*max(1,abs(a),abs(b))",
+        "recomputed_residual": 3.854566890806653e-05,
+        "residual_matches_record": true,
+        "recomputed_expression_triggered": true,
+        "negative_final_residual": false,
+        "flag_agrees_with_recomputed_expression": true
+      }
+    },
+    {
+      "action": "execute_final",
+      "ordinal": 1327568,
+      "scheme": "TwoStage",
+      "start_id": 1,
+      "history": {
+        "kind": "separate_QT_and_phase_histories",
+        "blocks": {
+          "QT": {
+            "recorded_points": 5,
+            "recorded_negative_differences": [],
+            "all_recorded_differences_nonnegative": true
+          },
+          "phase": {
+            "recorded_points": 19,
+            "recorded_negative_differences": [],
+            "all_recorded_differences_nonnegative": true
+          }
+        },
+        "recorded_negative_differences": [],
+        "all_recorded_differences_nonnegative": true,
+        "cross_block_difference_computed": false
+      },
+      "source_trajectory_complete_proven": false,
+      "final_status_report": {
+        "reported_converged": true,
+        "reported_algorithm_success": true,
+        "reported_termination": "all_original_stop_rules_reached",
+        "blocks_interpreted_as_independent_scientific_pass": false,
+        "blocks": [
+          {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 18.0,
+            "iteration_cap": 100000.0,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 4.362692892877391e-07,
+            "history_for_this_stop_provided": false,
+            "nonnegative_norm": true,
+            "expression_on_reported_norm": true
+          },
+          {
+            "converged": true,
+            "termination": "relative_improvement",
+            "iterations": 4.0,
+            "iteration_cap": 200.0,
+            "stop_rule": "signed_relative_objective_increase",
+            "threshold": 0.0001,
+            "final_residual": 3.854566890806653e-05,
+            "history_for_this_stop_provided": false,
+            "negative_reported_residual": false,
+            "expression_on_reported_residual": true
+          }
+        ]
+      }
+    },
+    {
+      "action": "phase_end",
+      "ordinal": 1327665,
+      "scheme": "AO",
+      "start_id": 0,
+      "history": {
+        "recorded_points": 17,
+        "recorded_negative_differences": [],
+        "all_recorded_differences_nonnegative": true
+      },
+      "source_trajectory_complete_proven": false,
+      "stop_check": {
+        "converged": true,
+        "termination": "gradient_tolerance",
+        "iterations": 16.0,
+        "iteration_cap": 100000.0,
+        "stop_rule": "Riemannian_gradient_norm",
+        "threshold": 1e-06,
+        "final_residual": 1.4394022670769235e-07,
+        "history_count_matches_reported_iterations": true,
+        "saved_history_completeness_proven": false,
+        "comparison_mixed_tolerance_formula": "1e-12*max(1,abs(a),abs(b))",
+        "nonnegative_norm": true,
+        "recomputed_expression_triggered": true,
+        "recomputed_gradient_norm": 1.4394022670769235e-07,
+        "gradient_matches_record": true,
+        "flag_agrees_with_recomputed_expression": true
+      }
+    },
+    {
+      "action": "AO_iteration",
+      "ordinal": 1327666,
+      "scheme": "AO",
+      "start_id": 0,
+      "history": {
+        "recorded_points": 2,
+        "recorded_negative_differences": [],
+        "all_recorded_differences_nonnegative": true
+      },
+      "source_trajectory_complete_proven": false,
+      "phase_stop_report": {
+        "converged": true,
+        "termination": "gradient_tolerance",
+        "iterations": 16.0,
+        "iteration_cap": 100000.0,
+        "stop_rule": "Riemannian_gradient_norm",
+        "threshold": 1e-06,
+        "final_residual": 1.4394022670769235e-07,
+        "history_for_this_stop_provided": false,
+        "nonnegative_norm": true,
+        "expression_on_reported_norm": true
+      },
+      "QT_solver_status_reported": "Solved",
+      "QT_bound_max_violation_reported": 0.0,
+      "QT_info_proves_physical_feasibility": false
+    },
+    {
+      "action": "phase_end",
+      "ordinal": 1327712,
+      "scheme": "AO",
+      "start_id": 0,
+      "history": {
+        "recorded_points": 5,
+        "recorded_negative_differences": [],
+        "all_recorded_differences_nonnegative": true
+      },
+      "source_trajectory_complete_proven": false,
+      "stop_check": {
+        "converged": true,
+        "termination": "gradient_tolerance",
+        "iterations": 4.0,
+        "iteration_cap": 100000.0,
+        "stop_rule": "Riemannian_gradient_norm",
+        "threshold": 1e-06,
+        "final_residual": 2.80894253628501e-09,
+        "history_count_matches_reported_iterations": true,
+        "saved_history_completeness_proven": false,
+        "comparison_mixed_tolerance_formula": "1e-12*max(1,abs(a),abs(b))",
+        "nonnegative_norm": true,
+        "recomputed_expression_triggered": true,
+        "recomputed_gradient_norm": 2.80894253628501e-09,
+        "gradient_matches_record": true,
+        "flag_agrees_with_recomputed_expression": true
+      }
+    },
+    {
+      "action": "AO_iteration",
+      "ordinal": 1327713,
+      "scheme": "AO",
+      "start_id": 0,
+      "history": {
+        "recorded_points": 3,
+        "recorded_negative_differences": [],
+        "all_recorded_differences_nonnegative": true
+      },
+      "source_trajectory_complete_proven": false,
+      "phase_stop_report": {
+        "converged": true,
+        "termination": "gradient_tolerance",
+        "iterations": 4.0,
+        "iteration_cap": 100000.0,
+        "stop_rule": "Riemannian_gradient_norm",
+        "threshold": 1e-06,
+        "final_residual": 2.80894253628501e-09,
+        "history_for_this_stop_provided": false,
+        "nonnegative_norm": true,
+        "expression_on_reported_norm": true
+      },
+      "QT_solver_status_reported": "Solved",
+      "QT_bound_max_violation_reported": 0.0,
+      "QT_info_proves_physical_feasibility": false
+    },
+    {
+      "action": "phase_end",
+      "ordinal": 1327754,
+      "scheme": "AO",
+      "start_id": 0,
+      "history": {
+        "recorded_points": 3,
+        "recorded_negative_differences": [],
+        "all_recorded_differences_nonnegative": true
+      },
+      "source_trajectory_complete_proven": false,
+      "stop_check": {
+        "converged": true,
+        "termination": "gradient_tolerance",
+        "iterations": 2.0,
+        "iteration_cap": 100000.0,
+        "stop_rule": "Riemannian_gradient_norm",
+        "threshold": 1e-06,
+        "final_residual": 4.065192803498822e-12,
+        "history_count_matches_reported_iterations": true,
+        "saved_history_completeness_proven": false,
+        "comparison_mixed_tolerance_formula": "1e-12*max(1,abs(a),abs(b))",
+        "nonnegative_norm": true,
+        "recomputed_expression_triggered": true,
+        "recomputed_gradient_norm": 4.065192803498822e-12,
+        "gradient_matches_record": true,
+        "flag_agrees_with_recomputed_expression": true
+      }
+    },
+    {
+      "action": "AO_iteration",
+      "ordinal": 1327755,
+      "scheme": "AO",
+      "start_id": 0,
+      "history": {
+        "recorded_points": 4,
+        "recorded_negative_differences": [],
+        "all_recorded_differences_nonnegative": true
+      },
+      "source_trajectory_complete_proven": false,
+      "phase_stop_report": {
+        "converged": true,
+        "termination": "gradient_tolerance",
+        "iterations": 2.0,
+        "iteration_cap": 100000.0,
+        "stop_rule": "Riemannian_gradient_norm",
+        "threshold": 1e-06,
+        "final_residual": 4.065192803498822e-12,
+        "history_for_this_stop_provided": false,
+        "nonnegative_norm": true,
+        "expression_on_reported_norm": true
+      },
+      "QT_solver_status_reported": "Solved",
+      "QT_bound_max_violation_reported": 0.0,
+      "QT_info_proves_physical_feasibility": false
+    },
+    {
+      "action": "phase_end",
+      "ordinal": 1327777,
+      "scheme": "AO",
+      "start_id": 0,
+      "history": {
+        "recorded_points": 1,
+        "recorded_negative_differences": [],
+        "all_recorded_differences_nonnegative": null
+      },
+      "source_trajectory_complete_proven": false,
+      "stop_check": {
+        "converged": true,
+        "termination": "gradient_tolerance",
+        "iterations": 0.0,
+        "iteration_cap": 100000.0,
+        "stop_rule": "Riemannian_gradient_norm",
+        "threshold": 1e-06,
+        "final_residual": 6.894337899210288e-08,
+        "history_count_matches_reported_iterations": true,
+        "saved_history_completeness_proven": false,
+        "comparison_mixed_tolerance_formula": "1e-12*max(1,abs(a),abs(b))",
+        "nonnegative_norm": true,
+        "recomputed_expression_triggered": true,
+        "recomputed_gradient_norm": 6.894337899210288e-08,
+        "gradient_matches_record": true,
+        "flag_agrees_with_recomputed_expression": true
+      }
+    },
+    {
+      "action": "AO_iteration",
+      "ordinal": 1327778,
+      "scheme": "AO",
+      "start_id": 0,
+      "history": {
+        "recorded_points": 5,
+        "recorded_negative_differences": [],
+        "all_recorded_differences_nonnegative": true
+      },
+      "source_trajectory_complete_proven": false,
+      "phase_stop_report": {
+        "converged": true,
+        "termination": "gradient_tolerance",
+        "iterations": 0.0,
+        "iteration_cap": 100000.0,
+        "stop_rule": "Riemannian_gradient_norm",
+        "threshold": 1e-06,
+        "final_residual": 6.894337899210288e-08,
+        "history_for_this_stop_provided": false,
+        "nonnegative_norm": true,
+        "expression_on_reported_norm": true
+      },
+      "QT_solver_status_reported": "Solved",
+      "QT_bound_max_violation_reported": 0.0,
+      "QT_info_proves_physical_feasibility": false
+    },
+    {
+      "action": "execute_final",
+      "ordinal": 1327779,
+      "scheme": "AO",
+      "start_id": 0,
+      "history": {
+        "recorded_points": 5,
+        "recorded_negative_differences": [],
+        "all_recorded_differences_nonnegative": true
+      },
+      "source_trajectory_complete_proven": false,
+      "final_status_report": {
+        "reported_converged": true,
+        "reported_algorithm_success": true,
+        "reported_termination": "all_original_stop_rules_reached",
+        "blocks_interpreted_as_independent_scientific_pass": false,
+        "blocks": [
+          {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 16.0,
+            "iteration_cap": 100000.0,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 1.4394022670769235e-07,
+            "history_for_this_stop_provided": false,
+            "nonnegative_norm": true,
+            "expression_on_reported_norm": true
+          },
+          {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 4.0,
+            "iteration_cap": 100000.0,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 2.80894253628501e-09,
+            "history_for_this_stop_provided": false,
+            "nonnegative_norm": true,
+            "expression_on_reported_norm": true
+          },
+          {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 2.0,
+            "iteration_cap": 100000.0,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 4.065192803498822e-12,
+            "history_for_this_stop_provided": false,
+            "nonnegative_norm": true,
+            "expression_on_reported_norm": true
+          },
+          {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 0.0,
+            "iteration_cap": 100000.0,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 6.894337899210288e-08,
+            "history_for_this_stop_provided": false,
+            "nonnegative_norm": true,
+            "expression_on_reported_norm": true
+          },
+          {
+            "converged": true,
+            "termination": "relative_improvement",
+            "iterations": 4.0,
+            "iteration_cap": 200.0,
+            "stop_rule": "signed_relative_objective_increase",
+            "threshold": 0.0001,
+            "final_residual": 4.058595625796576e-05,
+            "history_for_this_stop_provided": false,
+            "negative_reported_residual": false,
+            "expression_on_reported_residual": true
+          }
+        ]
+      }
+    },
+    {
+      "action": "phase_end",
+      "ordinal": 1327875,
+      "scheme": "AO",
+      "start_id": 1,
+      "history": {
+        "recorded_points": 17,
+        "recorded_negative_differences": [],
+        "all_recorded_differences_nonnegative": true
+      },
+      "source_trajectory_complete_proven": false,
+      "stop_check": {
+        "converged": true,
+        "termination": "gradient_tolerance",
+        "iterations": 16.0,
+        "iteration_cap": 100000.0,
+        "stop_rule": "Riemannian_gradient_norm",
+        "threshold": 1e-06,
+        "final_residual": 2.7677779283778753e-07,
+        "history_count_matches_reported_iterations": true,
+        "saved_history_completeness_proven": false,
+        "comparison_mixed_tolerance_formula": "1e-12*max(1,abs(a),abs(b))",
+        "nonnegative_norm": true,
+        "recomputed_expression_triggered": true,
+        "recomputed_gradient_norm": 2.7677779283778753e-07,
+        "gradient_matches_record": true,
+        "flag_agrees_with_recomputed_expression": true
+      }
+    },
+    {
+      "action": "AO_iteration",
+      "ordinal": 1327876,
+      "scheme": "AO",
+      "start_id": 1,
+      "history": {
+        "recorded_points": 2,
+        "recorded_negative_differences": [],
+        "all_recorded_differences_nonnegative": true
+      },
+      "source_trajectory_complete_proven": false,
+      "phase_stop_report": {
+        "converged": true,
+        "termination": "gradient_tolerance",
+        "iterations": 16.0,
+        "iteration_cap": 100000.0,
+        "stop_rule": "Riemannian_gradient_norm",
+        "threshold": 1e-06,
+        "final_residual": 2.7677779283778753e-07,
+        "history_for_this_stop_provided": false,
+        "nonnegative_norm": true,
+        "expression_on_reported_norm": true
+      },
+      "QT_solver_status_reported": "Solved",
+      "QT_bound_max_violation_reported": 0.0,
+      "QT_info_proves_physical_feasibility": false
+    },
+    {
+      "action": "phase_end",
+      "ordinal": 1327925,
+      "scheme": "AO",
+      "start_id": 1,
+      "history": {
+        "recorded_points": 7,
+        "recorded_negative_differences": [],
+        "all_recorded_differences_nonnegative": true
+      },
+      "source_trajectory_complete_proven": false,
+      "stop_check": {
+        "converged": true,
+        "termination": "gradient_tolerance",
+        "iterations": 6.0,
+        "iteration_cap": 100000.0,
+        "stop_rule": "Riemannian_gradient_norm",
+        "threshold": 1e-06,
+        "final_residual": 4.104078176199701e-09,
+        "history_count_matches_reported_iterations": true,
+        "saved_history_completeness_proven": false,
+        "comparison_mixed_tolerance_formula": "1e-12*max(1,abs(a),abs(b))",
+        "nonnegative_norm": true,
+        "recomputed_expression_triggered": true,
+        "recomputed_gradient_norm": 4.104078176199701e-09,
+        "gradient_matches_record": true,
+        "flag_agrees_with_recomputed_expression": true
+      }
+    },
+    {
+      "action": "AO_iteration",
+      "ordinal": 1327926,
+      "scheme": "AO",
+      "start_id": 1,
+      "history": {
+        "recorded_points": 3,
+        "recorded_negative_differences": [],
+        "all_recorded_differences_nonnegative": true
+      },
+      "source_trajectory_complete_proven": false,
+      "phase_stop_report": {
+        "converged": true,
+        "termination": "gradient_tolerance",
+        "iterations": 6.0,
+        "iteration_cap": 100000.0,
+        "stop_rule": "Riemannian_gradient_norm",
+        "threshold": 1e-06,
+        "final_residual": 4.104078176199701e-09,
+        "history_for_this_stop_provided": false,
+        "nonnegative_norm": true,
+        "expression_on_reported_norm": true
+      },
+      "QT_solver_status_reported": "Solved",
+      "QT_bound_max_violation_reported": 0.0,
+      "QT_info_proves_physical_feasibility": false
+    },
+    {
+      "action": "phase_end",
+      "ordinal": 1327963,
+      "scheme": "AO",
+      "start_id": 1,
+      "history": {
+        "recorded_points": 3,
+        "recorded_negative_differences": [],
+        "all_recorded_differences_nonnegative": true
+      },
+      "source_trajectory_complete_proven": false,
+      "stop_check": {
+        "converged": true,
+        "termination": "gradient_tolerance",
+        "iterations": 2.0,
+        "iteration_cap": 100000.0,
+        "stop_rule": "Riemannian_gradient_norm",
+        "threshold": 1e-06,
+        "final_residual": 7.71283945287175e-09,
+        "history_count_matches_reported_iterations": true,
+        "saved_history_completeness_proven": false,
+        "comparison_mixed_tolerance_formula": "1e-12*max(1,abs(a),abs(b))",
+        "nonnegative_norm": true,
+        "recomputed_expression_triggered": true,
+        "recomputed_gradient_norm": 7.71283945287175e-09,
+        "gradient_matches_record": true,
+        "flag_agrees_with_recomputed_expression": true
+      }
+    },
+    {
+      "action": "AO_iteration",
+      "ordinal": 1327964,
+      "scheme": "AO",
+      "start_id": 1,
+      "history": {
+        "recorded_points": 4,
+        "recorded_negative_differences": [],
+        "all_recorded_differences_nonnegative": true
+      },
+      "source_trajectory_complete_proven": false,
+      "phase_stop_report": {
+        "converged": true,
+        "termination": "gradient_tolerance",
+        "iterations": 2.0,
+        "iteration_cap": 100000.0,
+        "stop_rule": "Riemannian_gradient_norm",
+        "threshold": 1e-06,
+        "final_residual": 7.71283945287175e-09,
+        "history_for_this_stop_provided": false,
+        "nonnegative_norm": true,
+        "expression_on_reported_norm": true
+      },
+      "QT_solver_status_reported": "Solved",
+      "QT_bound_max_violation_reported": 0.0,
+      "QT_info_proves_physical_feasibility": false
+    },
+    {
+      "action": "phase_end",
+      "ordinal": 1328003,
+      "scheme": "AO",
+      "start_id": 1,
+      "history": {
+        "recorded_points": 2,
+        "recorded_negative_differences": [],
+        "all_recorded_differences_nonnegative": true
+      },
+      "source_trajectory_complete_proven": false,
+      "stop_check": {
+        "converged": true,
+        "termination": "gradient_tolerance",
+        "iterations": 1.0,
+        "iteration_cap": 100000.0,
+        "stop_rule": "Riemannian_gradient_norm",
+        "threshold": 1e-06,
+        "final_residual": 2.434097902932081e-07,
+        "history_count_matches_reported_iterations": true,
+        "saved_history_completeness_proven": false,
+        "comparison_mixed_tolerance_formula": "1e-12*max(1,abs(a),abs(b))",
+        "nonnegative_norm": true,
+        "recomputed_expression_triggered": true,
+        "recomputed_gradient_norm": 2.434097902932081e-07,
+        "gradient_matches_record": true,
+        "flag_agrees_with_recomputed_expression": true
+      }
+    },
+    {
+      "action": "AO_iteration",
+      "ordinal": 1328004,
+      "scheme": "AO",
+      "start_id": 1,
+      "history": {
+        "recorded_points": 5,
+        "recorded_negative_differences": [],
+        "all_recorded_differences_nonnegative": true
+      },
+      "source_trajectory_complete_proven": false,
+      "phase_stop_report": {
+        "converged": true,
+        "termination": "gradient_tolerance",
+        "iterations": 1.0,
+        "iteration_cap": 100000.0,
+        "stop_rule": "Riemannian_gradient_norm",
+        "threshold": 1e-06,
+        "final_residual": 2.434097902932081e-07,
+        "history_for_this_stop_provided": false,
+        "nonnegative_norm": true,
+        "expression_on_reported_norm": true
+      },
+      "QT_solver_status_reported": "Solved",
+      "QT_bound_max_violation_reported": 0.0,
+      "QT_info_proves_physical_feasibility": false
+    },
+    {
+      "action": "execute_final",
+      "ordinal": 1328005,
+      "scheme": "AO",
+      "start_id": 1,
+      "history": {
+        "recorded_points": 5,
+        "recorded_negative_differences": [],
+        "all_recorded_differences_nonnegative": true
+      },
+      "source_trajectory_complete_proven": false,
+      "final_status_report": {
+        "reported_converged": true,
+        "reported_algorithm_success": true,
+        "reported_termination": "all_original_stop_rules_reached",
+        "blocks_interpreted_as_independent_scientific_pass": false,
+        "blocks": [
+          {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 16.0,
+            "iteration_cap": 100000.0,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 2.7677779283778753e-07,
+            "history_for_this_stop_provided": false,
+            "nonnegative_norm": true,
+            "expression_on_reported_norm": true
+          },
+          {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 6.0,
+            "iteration_cap": 100000.0,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 4.104078176199701e-09,
+            "history_for_this_stop_provided": false,
+            "nonnegative_norm": true,
+            "expression_on_reported_norm": true
+          },
+          {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 2.0,
+            "iteration_cap": 100000.0,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 7.71283945287175e-09,
+            "history_for_this_stop_provided": false,
+            "nonnegative_norm": true,
+            "expression_on_reported_norm": true
+          },
+          {
+            "converged": true,
+            "termination": "gradient_tolerance",
+            "iterations": 1.0,
+            "iteration_cap": 100000.0,
+            "stop_rule": "Riemannian_gradient_norm",
+            "threshold": 1e-06,
+            "final_residual": 2.434097902932081e-07,
+            "history_for_this_stop_provided": false,
+            "nonnegative_norm": true,
+            "expression_on_reported_norm": true
+          },
+          {
+            "converged": true,
+            "termination": "relative_improvement",
+            "iterations": 4.0,
+            "iteration_cap": 200.0,
+            "stop_rule": "signed_relative_objective_increase",
+            "threshold": 0.0001,
+            "final_residual": 4.109229119450792e-05,
+            "history_for_this_stop_provided": false,
+            "negative_reported_residual": false,
+            "expression_on_reported_residual": true
+          }
+        ]
+      }
+    }
+  ],
+  "source_historical_content_authenticated": false,
+  "source_whole_event_atomicity_proven": false,
+  "complete_optimization_trajectory_proven": false,
+  "mathematical_convergence_proved": false,
+  "physical_feasibility_proved": false,
+  "full_paper_pass": false
+}

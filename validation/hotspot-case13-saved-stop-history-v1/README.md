@@ -10,7 +10,8 @@ typed fields distinguish NoRIS, TwoStage, and the two AO starts.
 The child exited naturally with return code zero. It read 100,146 bytes of
 indexed fields; the public compressed stream is 12,501 bytes. The guard's
 peak accounted output was 143,503 bytes; its polling is not a hard filesystem
-quota. The sanitized `receipt.json` omits local paths and process identities.
+quota. `child-summary.json` retains the original small child summary, and the
+sanitized `receipt.json` omits local paths and process identities.
 The original guard and run artifacts remain separate from this public copy.
 
 These are recorded fields, not a proof that every relevant iteration, stopping
