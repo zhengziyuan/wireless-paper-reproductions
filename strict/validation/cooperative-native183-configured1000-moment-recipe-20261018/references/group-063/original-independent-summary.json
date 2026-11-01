@@ -1,0 +1,65 @@
+{
+  "scope": "Exact configured1000-draw native channel-moment stream; no optimized-design performance MC",
+  "count": 1000,
+  "links_per_draw": 2,
+  "sample_moment_values": 4000,
+  "dimensions": {
+    "J": 1,
+    "U": 2,
+    "N": 48,
+    "M": 25
+  },
+  "input_signature": "823ccc37dc0d54a3dc22aaaa0b95870e2ffd6d62a73852208e6400b8527f4a8c",
+  "checks": {
+    "all12000_reported_sample_moments_match_physical_received_signal": true,
+    "all_raw_operands_consumed": true,
+    "empirical_second_and_fourth_moments_match_native": true,
+    "independent_finite_Rician_expected_moments_MP80_MP100_pass": true,
+    "original_reported_MC_error_metrics_reproduced": true
+  },
+  "all_independent_checks_pass": true,
+  "maximum_sample_second_error": 5.684341886080802e-14,
+  "maximum_sample_fourth_error": 1.4551915228366852e-11,
+  "second_moment_max_relative_error": 0.007791290072091062,
+  "fourth_moment_max_relative_error": 0.012977513441686548,
+  "MP_expected_moments": {
+    "80": {
+      "second": [
+        [
+          "54.669298058570228951615744123745775892450254387002027185765951917235416696690721",
+          "103.2347282935534359681991691259023923796802370866793866277660183450393439663377"
+        ]
+      ],
+      "fourth": [
+        [
+          "3142.1638851689447210078278192568878077637278080328206007085614522848707380816611",
+          "11172.42571538046850909952016983333773656023924170985323870316254203811508084033"
+        ]
+      ]
+    },
+    "100": {
+      "second": [
+        [
+          "54.66929805857022895161574412374577589245025438700202718576595191723541669669072070929668682700234283",
+          "103.2347282935534359681991691259023923796802370866793866277660183450393439663376973695537844225649228"
+        ]
+      ],
+      "fourth": [
+        [
+          "3142.163885168944721007827819256887807763727808032820600708561452284870738081661093532280978777541082",
+          "11172.42571538046850909952016983333773656023924170985323870316254203811508084033013401797178983766338"
+        ]
+      ]
+    }
+  },
+  "maximum_MP80_MP100_expected_moment_difference": "1.340179717898376633800000000000040594137281607714302480235635663954757021106547464416530824622829301e-76",
+  "same_exact_input_cases": [],
+  "different_inputs_not_replayed": [],
+  "source_result_sha256": "50ec7f71122454c216f5a87ffe62863b62f81e055b7a121a0a8163697189df43",
+  "raw_primitive_payload_sha256": "77cf06b2ee87e6532c986e4dddc80f31dfdd649709b5ae9845df276067a3db8d",
+  "native_replay_index_sha256": "c8fbcde5a0c2504f9bb6ddec48aad0aac9f147b05d09378150196f09c181bf13",
+  "independent_reference_sha256": "fa3ab6b598e14901757d80128715eb2eafad160c893d5671e9fe6eccd9b36a0a",
+  "original_historical_callback_buffers_recovered": false,
+  "new_optimization_or_changed_MC_count": false,
+  "full183_or_original_reference_pass": false
+}

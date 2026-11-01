@@ -1,0 +1,253 @@
+{
+  "arithmetic": "math.fsum; sample standard deviation uses n-1, divided by sqrt(n)",
+  "case_checks_reported": {
+    "convergence_pass": true,
+    "physical_constraint_pass": true,
+    "qt_sdr_bound_pass": true,
+    "solver_primal_pass": true
+  },
+  "closed_checks_reported": {
+    "convergence_pass": true,
+    "physical_constraint_pass": true,
+    "qt_sdr_bound_pass": true,
+    "solver_primal_pass": true
+  },
+  "full_paper_pass": false,
+  "historical_source_authenticated": false,
+  "independent_draws_proven": false,
+  "physical_feasibility_proven": false,
+  "recorded_stop_flags_independently_proven": false,
+  "schema": "CASE13_RECORDED_MC_ARITHMETIC_AUDIT_V1",
+  "schemes": {
+    "AO": {
+      "all_required_start_records_present_and_executed": true,
+      "all_start_status_fields_present": true,
+      "ensemble_executed_start_ids": [
+        0.0,
+        1.0
+      ],
+      "ensemble_required_start_ids": [
+        0.0,
+        1.0
+      ],
+      "ensemble_selected_start_id": [
+        0.0
+      ],
+      "mean_difference": 0.0,
+      "no_recorded_start_failures": true,
+      "recomputed_mean": 10.570596972343877,
+      "recomputed_sample_standard_error": 0.002275591701168829,
+      "recorded_all_required_starts_executed": true,
+      "recorded_all_required_starts_pass": true,
+      "recorded_count": 1000.0,
+      "recorded_count_matches_vector": true,
+      "recorded_ensemble_checks": {
+        "convergence_pass": true,
+        "physical_constraint_pass": true,
+        "qt_sdr_bound_pass": true,
+        "solver_primal_pass": true
+      },
+      "recorded_ensemble_executed_agrees_with_start_reports": true,
+      "recorded_ensemble_pass_agrees_with_start_reports": true,
+      "recorded_mean": 10.570596972343877,
+      "recorded_required_start_ids_match_case_u1": true,
+      "recorded_standard_error": 0.0022755917011688296,
+      "recorded_start_ids_match_ensemble": true,
+      "recorded_starts": [
+        {
+          "checks_reported": {
+            "convergence_pass": true,
+            "physical_constraint_pass": true,
+            "qt_sdr_bound_pass": true,
+            "solver_primal_pass": true
+          },
+          "exception_present": false,
+          "executed": true,
+          "start_id": 0.0,
+          "status_reported": {
+            "algorithm_success": true,
+            "converged": true,
+            "termination": "all_original_stop_rules_reached"
+          }
+        },
+        {
+          "checks_reported": {
+            "convergence_pass": true,
+            "physical_constraint_pass": true,
+            "qt_sdr_bound_pass": true,
+            "solver_primal_pass": true
+          },
+          "exception_present": false,
+          "executed": true,
+          "start_id": 1.0,
+          "status_reported": {
+            "algorithm_success": true,
+            "converged": true,
+            "termination": "all_original_stop_rules_reached"
+          }
+        }
+      ],
+      "sample_max": 10.760430190819966,
+      "sample_min": 10.299291452513051,
+      "sample_source_in_projection": "schemes.AO.independent_MC.hu_rate_samples",
+      "saved_budget_is_1000": true,
+      "saved_sample_count": 1000,
+      "selected_id_belongs_to_recorded_starts": true,
+      "standard_error_difference": -4.336808689942018e-19
+    },
+    "NoRIS": {
+      "all_required_start_records_present_and_executed": true,
+      "all_start_status_fields_present": true,
+      "ensemble_executed_start_ids": [
+        0.0,
+        1.0
+      ],
+      "ensemble_required_start_ids": [
+        0.0,
+        1.0
+      ],
+      "ensemble_selected_start_id": [
+        1.0
+      ],
+      "mean_difference": 8.881784197001252e-16,
+      "no_recorded_start_failures": true,
+      "recomputed_mean": 4.731317681185383,
+      "recomputed_sample_standard_error": 0.003299196996970837,
+      "recorded_all_required_starts_executed": true,
+      "recorded_all_required_starts_pass": true,
+      "recorded_count": 1000.0,
+      "recorded_count_matches_vector": true,
+      "recorded_ensemble_checks": {
+        "convergence_pass": true,
+        "physical_constraint_pass": true,
+        "qt_sdr_bound_pass": true,
+        "solver_primal_pass": true
+      },
+      "recorded_ensemble_executed_agrees_with_start_reports": true,
+      "recorded_ensemble_pass_agrees_with_start_reports": true,
+      "recorded_mean": 4.7313176811853825,
+      "recorded_required_start_ids_match_case_u1": true,
+      "recorded_standard_error": 0.003299196996970837,
+      "recorded_start_ids_match_ensemble": true,
+      "recorded_starts": [
+        {
+          "checks_reported": {
+            "convergence_pass": true,
+            "physical_constraint_pass": true,
+            "qt_sdr_bound_pass": true,
+            "solver_primal_pass": true
+          },
+          "exception_present": false,
+          "executed": true,
+          "start_id": 0.0,
+          "status_reported": {
+            "algorithm_success": true,
+            "converged": true,
+            "termination": "all_original_stop_rules_reached"
+          }
+        },
+        {
+          "checks_reported": {
+            "convergence_pass": true,
+            "physical_constraint_pass": true,
+            "qt_sdr_bound_pass": true,
+            "solver_primal_pass": true
+          },
+          "exception_present": false,
+          "executed": true,
+          "start_id": 1.0,
+          "status_reported": {
+            "algorithm_success": true,
+            "converged": true,
+            "termination": "all_original_stop_rules_reached"
+          }
+        }
+      ],
+      "sample_max": 5.03757307824205,
+      "sample_min": 4.325482014600334,
+      "sample_source_in_projection": "schemes.NoRIS.independent_MC.hu_rate_samples",
+      "saved_budget_is_1000": true,
+      "saved_sample_count": 1000,
+      "selected_id_belongs_to_recorded_starts": true,
+      "standard_error_difference": 0.0
+    },
+    "TwoStage": {
+      "all_required_start_records_present_and_executed": true,
+      "all_start_status_fields_present": true,
+      "ensemble_executed_start_ids": [
+        0.0,
+        1.0
+      ],
+      "ensemble_required_start_ids": [
+        0.0,
+        1.0
+      ],
+      "ensemble_selected_start_id": [
+        0.0
+      ],
+      "mean_difference": -1.7763568394002505e-15,
+      "no_recorded_start_failures": true,
+      "recomputed_mean": 10.570597459522535,
+      "recomputed_sample_standard_error": 0.0022755096768288926,
+      "recorded_all_required_starts_executed": true,
+      "recorded_all_required_starts_pass": true,
+      "recorded_count": 1000.0,
+      "recorded_count_matches_vector": true,
+      "recorded_ensemble_checks": {
+        "convergence_pass": true,
+        "physical_constraint_pass": true,
+        "qt_sdr_bound_pass": true,
+        "solver_primal_pass": true
+      },
+      "recorded_ensemble_executed_agrees_with_start_reports": true,
+      "recorded_ensemble_pass_agrees_with_start_reports": true,
+      "recorded_mean": 10.570597459522537,
+      "recorded_required_start_ids_match_case_u1": true,
+      "recorded_standard_error": 0.0022755096768288926,
+      "recorded_start_ids_match_ensemble": true,
+      "recorded_starts": [
+        {
+          "checks_reported": {
+            "convergence_pass": true,
+            "physical_constraint_pass": true,
+            "qt_sdr_bound_pass": true,
+            "solver_primal_pass": true
+          },
+          "exception_present": false,
+          "executed": true,
+          "start_id": 0.0,
+          "status_reported": {
+            "algorithm_success": true,
+            "converged": true,
+            "termination": "all_original_stop_rules_reached"
+          }
+        },
+        {
+          "checks_reported": {
+            "convergence_pass": true,
+            "physical_constraint_pass": true,
+            "qt_sdr_bound_pass": true,
+            "solver_primal_pass": true
+          },
+          "exception_present": false,
+          "executed": true,
+          "start_id": 1.0,
+          "status_reported": {
+            "algorithm_success": true,
+            "converged": true,
+            "termination": "all_original_stop_rules_reached"
+          }
+        }
+      ],
+      "sample_max": 10.760424952248744,
+      "sample_min": 10.299299071790282,
+      "sample_source_in_projection": "schemes.TwoStage.independent_MC.hu_rate_samples",
+      "saved_budget_is_1000": true,
+      "saved_sample_count": 1000,
+      "selected_id_belongs_to_recorded_starts": true,
+      "standard_error_difference": 0.0
+    }
+  },
+  "selection_optimality_independently_proven": false,
+  "whole_event_atomic_snapshot_verified": false
+}

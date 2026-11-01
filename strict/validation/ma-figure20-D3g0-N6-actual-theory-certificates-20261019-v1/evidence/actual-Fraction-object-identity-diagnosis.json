@@ -1,0 +1,147 @@
+{
+  "rows": [
+    {
+      "mode": "MRT",
+      "groups": {
+        "grid": {
+          "expected": "5b0c42bce43138374215380ba85f8136ce273ea394292308affbdfe28e2df238",
+          "actual": "5b0c42bce43138374215380ba85f8136ce273ea394292308affbdfe28e2df238",
+          "same": true,
+          "type": "ndarray",
+          "actual_after_fresh_fraction_leaves": "5b0c42bce43138374215380ba85f8136ce273ea394292308affbdfe28e2df238",
+          "fresh_matches": true
+        },
+        "compatible": {
+          "expected": "571f4daaeb9c6d10d724b2eadc23f753d3537023f7d7593bdb3d10f5fc91092c",
+          "actual": "571f4daaeb9c6d10d724b2eadc23f753d3537023f7d7593bdb3d10f5fc91092c",
+          "same": true,
+          "type": "list",
+          "actual_after_fresh_fraction_leaves": "571f4daaeb9c6d10d724b2eadc23f753d3537023f7d7593bdb3d10f5fc91092c",
+          "fresh_matches": true
+        },
+        "terms": {
+          "expected": "42990cdebd87ec1b55a109a827f214e91cab2cabcf2456d8a1a470d8e9caa74a",
+          "actual": "16b3d0add02d690fee13c2246379140f6bfdbac6c7a1fb2d98cbdff3c8de7f2d",
+          "same": false,
+          "type": "dict",
+          "actual_after_fresh_fraction_leaves": "42990cdebd87ec1b55a109a827f214e91cab2cabcf2456d8a1a470d8e9caa74a",
+          "fresh_matches": true
+        },
+        "diagonal": {
+          "expected": "6c09635decb8153d3c12e3782a69fd2eb097426f912547d351a8647b27d5580a",
+          "actual": "6c09635decb8153d3c12e3782a69fd2eb097426f912547d351a8647b27d5580a",
+          "same": true,
+          "type": "NoneType",
+          "actual_after_fresh_fraction_leaves": "6c09635decb8153d3c12e3782a69fd2eb097426f912547d351a8647b27d5580a",
+          "fresh_matches": true
+        },
+        "base": {
+          "expected": "a48e15150f2fc83142a1f169e983c50fbc2eff911c8cd6a8c305015e63001a1c",
+          "actual": "a48e15150f2fc83142a1f169e983c50fbc2eff911c8cd6a8c305015e63001a1c",
+          "same": true,
+          "type": "list",
+          "actual_after_fresh_fraction_leaves": "a48e15150f2fc83142a1f169e983c50fbc2eff911c8cd6a8c305015e63001a1c",
+          "fresh_matches": true
+        },
+        "numerator": {
+          "expected": "dc7f1cdaa1f5402904aab4cad0b1faf6fabf3a7d9f97dc1fe3f4c433ce6a9a21",
+          "actual": "dc7f1cdaa1f5402904aab4cad0b1faf6fabf3a7d9f97dc1fe3f4c433ce6a9a21",
+          "same": true,
+          "type": "list",
+          "actual_after_fresh_fraction_leaves": "dc7f1cdaa1f5402904aab4cad0b1faf6fabf3a7d9f97dc1fe3f4c433ce6a9a21",
+          "fresh_matches": true
+        },
+        "coefficient": {
+          "expected": "477725ad6d97f2bdef487116c4dee8c000fb55b1f0ddfcdfd10b6f0dcd030e1a",
+          "actual": "477725ad6d97f2bdef487116c4dee8c000fb55b1f0ddfcdfd10b6f0dcd030e1a",
+          "same": true,
+          "type": "dict",
+          "actual_after_fresh_fraction_leaves": "477725ad6d97f2bdef487116c4dee8c000fb55b1f0ddfcdfd10b6f0dcd030e1a",
+          "fresh_matches": true
+        }
+      },
+      "grid_dtype": "float64",
+      "grid_shape": [
+        9,
+        2
+      ],
+      "grid_strides": [
+        16,
+        8
+      ],
+      "grid_C_contiguous": true,
+      "terms_fraction_occurrences": 360,
+      "terms_distinct_fraction_objects": 270
+    },
+    {
+      "mode": "ZF",
+      "groups": {
+        "grid": {
+          "expected": "5b0c42bce43138374215380ba85f8136ce273ea394292308affbdfe28e2df238",
+          "actual": "5b0c42bce43138374215380ba85f8136ce273ea394292308affbdfe28e2df238",
+          "same": true,
+          "type": "ndarray",
+          "actual_after_fresh_fraction_leaves": "5b0c42bce43138374215380ba85f8136ce273ea394292308affbdfe28e2df238",
+          "fresh_matches": true
+        },
+        "compatible": {
+          "expected": "571f4daaeb9c6d10d724b2eadc23f753d3537023f7d7593bdb3d10f5fc91092c",
+          "actual": "571f4daaeb9c6d10d724b2eadc23f753d3537023f7d7593bdb3d10f5fc91092c",
+          "same": true,
+          "type": "list",
+          "actual_after_fresh_fraction_leaves": "571f4daaeb9c6d10d724b2eadc23f753d3537023f7d7593bdb3d10f5fc91092c",
+          "fresh_matches": true
+        },
+        "terms": {
+          "expected": "779b105f5471e49b19d9724f1a89f9a66cd7b9998d4e1635db11c5f40e334cab",
+          "actual": "779b105f5471e49b19d9724f1a89f9a66cd7b9998d4e1635db11c5f40e334cab",
+          "same": true,
+          "type": "dict",
+          "actual_after_fresh_fraction_leaves": "779b105f5471e49b19d9724f1a89f9a66cd7b9998d4e1635db11c5f40e334cab",
+          "fresh_matches": true
+        },
+        "diagonal": {
+          "expected": "ca016fb2e99e83ae89d19cc471b819eb6186e8e15abf2fae7eb375469eeebb24",
+          "actual": "ca016fb2e99e83ae89d19cc471b819eb6186e8e15abf2fae7eb375469eeebb24",
+          "same": true,
+          "type": "list",
+          "actual_after_fresh_fraction_leaves": "ca016fb2e99e83ae89d19cc471b819eb6186e8e15abf2fae7eb375469eeebb24",
+          "fresh_matches": true
+        },
+        "base": {
+          "expected": "87c0a6dc04e6c27d0079153390ba3c309fd6fe73789ee7c6a6b52bbda0d5154d",
+          "actual": "87c0a6dc04e6c27d0079153390ba3c309fd6fe73789ee7c6a6b52bbda0d5154d",
+          "same": true,
+          "type": "list",
+          "actual_after_fresh_fraction_leaves": "87c0a6dc04e6c27d0079153390ba3c309fd6fe73789ee7c6a6b52bbda0d5154d",
+          "fresh_matches": true
+        },
+        "eta": {
+          "expected": "d8039651740894bc1ff95209beb6932b3f116f093a5eadb214cdfa17bf88cd59",
+          "actual": "d8039651740894bc1ff95209beb6932b3f116f093a5eadb214cdfa17bf88cd59",
+          "same": true,
+          "type": "list",
+          "actual_after_fresh_fraction_leaves": "d8039651740894bc1ff95209beb6932b3f116f093a5eadb214cdfa17bf88cd59",
+          "fresh_matches": true
+        }
+      },
+      "grid_dtype": "float64",
+      "grid_shape": [
+        9,
+        2
+      ],
+      "grid_strides": [
+        16,
+        8
+      ],
+      "grid_C_contiguous": true,
+      "terms_fraction_occurrences": 180,
+      "terms_distinct_fraction_objects": 180
+    }
+  ],
+  "NumPy_version": "2.5.3",
+  "certificate_reads": 0,
+  "objective_bound_search_MC_calls": 0,
+  "original_v1_failure_preserved": true,
+  "original_public_files_edited": false
+}

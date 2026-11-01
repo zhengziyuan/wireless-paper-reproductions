@@ -1,0 +1,107 @@
+{
+  "actual_controls": 14,
+  "all_expected_invalid_evidence_and_domain_failures_observed": true,
+  "exact_unit_circle_positive_control_pass": true,
+  "actual_complete_original_archive_SHA256": "055c7ade93f8d2457d21b5cdb90b11c5a1911169519e4c214109b7f92c69f84b",
+  "actual_original_cases": 183,
+  "actual_original_phase_endpoints": 8362,
+  "wrong_local_progress_guard_used_the_already_byte_verified_full_restoration": true,
+  "fresh_gradient_optimizer_or_RNG_calls": 0,
+  "actual_control_source_SHA256": {
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\cooperative-stable-replay\\test_phase183_evidence_controls.py": "37577cc90eb50630969cfbc46240267f73dfd90a670190419f1e42fe8beb8037",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\cooperative-stable-replay\\phase183_evidence.py": "2004c6975012f3b763dbf241492573653a2677594d22099a09e574fe1d857938",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\cooperative-stable-replay\\audit_phase183_unit_domains.py": "2bb700ba395190f2e4f03cf41fbacd41feb08eae694af9c3e6469fb6b14361d1"
+  },
+  "controls": [
+    {
+      "control": "reduced182-original-case-population",
+      "expected_rejection_observed": true,
+      "actual_exception_type": "ValueError",
+      "actual_reason": "Require the complete selected original Python183 scope"
+    },
+    {
+      "control": "substituted-original-ordinal",
+      "expected_rejection_observed": true,
+      "actual_exception_type": "ValueError",
+      "actual_reason": "Require the complete selected original Python183 scope"
+    },
+    {
+      "control": "wrong-language-epoch",
+      "expected_rejection_observed": true,
+      "actual_exception_type": "ValueError",
+      "actual_reason": "Require the complete selected original Python183 scope"
+    },
+    {
+      "control": "wrong-evidence-scope",
+      "expected_rejection_observed": true,
+      "actual_exception_type": "ValueError",
+      "actual_reason": "Require the complete selected original Python183 scope"
+    },
+    {
+      "control": "missing-first-original-archive-part",
+      "expected_rejection_observed": true,
+      "actual_exception_type": "FileNotFoundError",
+      "actual_reason": "[Errno 2] No such file or directory: 'E:\\\\ZiyuanZhengProject\\\\paper-reproduction-data\\\\resume-20261017\\\\cooperative-Python183-complete-phase-public-roundtrip-v1\\\\phase183-negative-controls-s6gihjau\\\\missing-first-original-archive-part\\\\selected-Python183-complete-phase-inputs-and-references.tar.gz.part000'"
+    },
+    {
+      "control": "changed-byte-in-original-archive-part",
+      "expected_rejection_observed": true,
+      "actual_exception_type": "ValueError",
+      "actual_reason": "Actual archive part differs"
+    },
+    {
+      "control": "truncated-whole-original-archive",
+      "expected_rejection_observed": true,
+      "actual_exception_type": "ValueError",
+      "actual_reason": "Whole archive differs"
+    },
+    {
+      "control": "archive-part-path-escape",
+      "expected_rejection_observed": true,
+      "actual_exception_type": "ValueError",
+      "actual_reason": "Unsafe or missing archive part"
+    },
+    {
+      "control": "different-progress-bytes-with-identical-JSON",
+      "expected_rejection_observed": true,
+      "actual_exception_type": "ValueError",
+      "actual_reason": "Local reuse requires the exact actual complete183 progress"
+    },
+    {
+      "control": "nonfinite-phase-NaN",
+      "expected_rejection_observed": true,
+      "actual_exception_type": "ValueError",
+      "actual_reason": "Every actual phase component must be finite"
+    },
+    {
+      "control": "nonfinite-phase-infinity",
+      "expected_rejection_observed": true,
+      "actual_exception_type": "ValueError",
+      "actual_reason": "Every actual phase component must be finite"
+    },
+    {
+      "control": "finite-phase-below-unit-circle",
+      "expected_domain_failure_observed": true,
+      "actual_errors": {
+        "80": "0.09999999999999997779553950749686919152736663818359375",
+        "100": "0.09999999999999997779553950749686919152736663818359375"
+      }
+    },
+    {
+      "control": "finite-phase-above-unit-circle",
+      "expected_domain_failure_observed": true,
+      "actual_errors": {
+        "80": "0.100000000000000088817841970012523233890533447265625",
+        "100": "0.100000000000000088817841970012523233890533447265625"
+      }
+    },
+    {
+      "control": "zero-phase",
+      "expected_domain_failure_observed": true,
+      "actual_errors": {
+        "80": "1.0",
+        "100": "1.0"
+      }
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "ACTUAL_ONCE_SINGLE_SAVED_P9_COST_NATIVE_AUTHOR_COMPARISON_CLOSED_V1",
+  "actual_finite_MATLAB_exit_code": 0,
+  "actual_marker": "ONE_SAVED_AUTHOR_VERSUS_EQ36_COST_EVALUATION_COMPLETE",
+  "entry": "local-source/af4bdb29708f/run_one_saved_author_TS_cost_and_final_Eq36_v1.m",
+  "entry_before_and_after_SHA256": "0ccc3c774f8550ea9c9344757e038642306b8f3293fe0f65d490bb08baefc992",
+  "cost_json": "local-source/b5a952fc0581/ACTUAL_ONE_SAVED_NATIVE_MR_S_AUTHOR_HINGE_VS_FINAL_EQ36_COST_V1.json",
+  "cost_json_SHA256": "7bd047e1516e523e0c23747e5c37af2292aa3af883bf8a4eb79617f01b7058ea",
+  "raw_actual_cost_result": "local-source/011dbed24b05/ACTUAL_ONE_SAVED_NATIVE_MR_S_AUTHOR_HINGE_VS_FINAL_EQ36_COST_V1.json.raw.mat",
+  "raw_actual_cost_result_SHA256": "f7a1ee17c42544b2483a2990bfa945bf753c20d1aee1adc622bf7ec63e2272ba",
+  "actual_original_native_endpoint_index": 14,
+  "actual_mu": 1,
+  "exact_saved_canonical_data_accepted": true,
+  "RNG_before_after_identical": true,
+  "actual_original_author_hinge_criterion": {
+    "codex_complex_transport": "matlab_complex_json_v1",
+    "class": "double",
+    "shape": [
+      1,
+      1
+    ],
+    "real": -0.3587836881342367,
+    "imag": -2.15545368248954e-21,
+    "real_ieee_hex": [
+      "bfd6f64fdbb7fce3"
+    ],
+    "imag_ieee_hex": [
+      "bba45b91354be787"
+    ]
+  },
+  "actual_current_final_Eq36_criterion": -0.35878368813423656,
+  "original_author_minus_current_same_components_hinge": {
+    "codex_complex_transport": "matlab_complex_json_v1",
+    "class": "double",
+    "shape": [
+      1,
+      1
+    ],
+    "real": -1.6653345369377348e-16,
+    "imag": -2.15545368248954e-21,
+    "real_ieee_hex": [
+      "bca8000000000000"
+    ],
+    "imag_ieee_hex": [
+      "bba45b91354be787"
+    ]
+  },
+  "current_criterion_minus_stored": 0,
+  "actual_GT_residual": 0.005435761451293356,
+  "hinge_full_difference_at_this_state": 0,
+  "interpretation": "At this actual infeasible-after-P9 state the GT residual is positive, so hinge and full-square penalties coincide. The original author and current complete criterion scalars agree to binary64 rounding. This single scalar agreement is not separate proof of every moment/gradient component and does not attribute the17percent performance gap.",
+  "actual_preP7_GT_leakage": 0.015435761451293356,
+  "original_small_imaginary_author_cost_retained": true,
+  "local_start_or_betaR10_or_original_reference_cause_not_proved": true,
+  "no_second_cost_state_or_optimizer_MC_MP_or_originalprefix_RNG_run": true,
+  "producer_native_closed_preflight": "local-source/92a8fe91093c/ACTUAL_CLOSED_NATIVE_PREFLIGHT_FOR_ONE_SAVED_MR_S_COST_V1.json",
+  "MATLAB_startup_stale_old_C_CVX_path_warnings_retained": "Observed stdout warnings about old C paths; restoredefaultpath preceded the source-bound pure cost functions; no path repair or C directory recreation was performed.",
+  "scope_not_global_or_fullpaper_PASS": true
+}

@@ -1,0 +1,48 @@
+{
+  "schema": "actual-first-Fig11-start1-17-Decimal60-scientific-gate-matrix-and-precision-scope-v1",
+  "primary_report_path": "origin:resume-20261017/MIS-Fig11-first-start17-Decimal60-ownstate-independent-v1/actual-scientific-readback-v1/ACTUAL_ONLY_FIRST_Fig11_START1_ALL17_TYPED_ENDPOINT_DECIMAL60_PHYSICS_LSE_BOTH_GRADIENT_CRITERIA_V1.json",
+  "primary_report_SHA256": "19cb97a5377bd6b9f73b9679696ea1fa63b803572e02ae589bef18034338fb3a",
+  "causal_report_path": "origin:resume-20261017/MIS-Fig11-first-start17-Decimal60-ownstate-independent-v1/actual-two-small-mu-causal-readback-v1/ACTUAL_TWO_SMALL_MU_USER_SCORE_ROUNDING_LSE_WEIGHT_AND_KKT_ERROR_CAUSAL_COMPARISON_V1.json",
+  "causal_report_SHA256": "bd55d7b87a75a1691e178e241bb8dd1b917a7996e15b507c900c7424dfc70911",
+  "endpoints": 17,
+  "domain_pass_count": 17,
+  "independent_implemented_projected_KKT1e_minus6_pass_count": 17,
+  "independent_printed_open_simplex_gradient_below_selected1e_minus6_count": 0,
+  "printed_rowmean_norm_range": [
+    23.467267108279692,
+    23.467267292073526
+  ],
+  "projected_KKT_norm_range": [
+    5.367409534115203e-07,
+    9.976719366170244e-07
+  ],
+  "unchanged_Fig8_norm_agreement5e_minus13_pass_count": 12,
+  "unchanged_Fig8_norm_agreement_failed_stages": [
+    11,
+    12,
+    13,
+    14,
+    16
+  ],
+  "printed_rowmean_agreement5e_minus13_pass_count": 16,
+  "printed_rowmean_agreement_failed_stages": [
+    16
+  ],
+  "LSE_objective_agreement_pass_count": 17,
+  "maximum_projected_KKT_scalar_agreement_error": 4.556562027440167e-12,
+  "maximum_printed_rowmean_scalar_agreement_error": 9.023892744153272e-13,
+  "maximum_LSE_objective_error": 1.4210854715202004e-14,
+  "final_binary_score_absolute_error": 0.0,
+  "final_binary_score_comparison_pass": true,
+  "original_Fig8_comparison_false_not_relaxed": true,
+  "precision_scope": "Full Decimal60 sums, complex products, LSE exp/log, radial/angular phase gradient identity and exact-input simplex projection at every supplied saved endpoint. Source-defined LoS coefficients reconstructed binary64 (not separately captured C). Algorithm 1e-6 threshold and all source budgets are explicitly implementation-selected, not author-reported. Printed rowmean and closed-simplex KKT remain separate.",
+  "reuse_entry": {
+    "physical_kernel": "origin:resume-20261017/MIS-Fig11-first-start17-Decimal60-ownstate-independent-v1/independent_physical_Fig11_exact_dimensions_v1.py",
+    "API": "physical(config, complex_coefficient_real_imag_dict, zero_based_indices, serialized_state, actual_mu)",
+    "preserved_formula_source": "tools/mis-native-replay/independent_physical.py SHA54e91b92540aa6bc3716636c139ffb56e21d4a2bc0dccb078351377f9742800b",
+    "same_point_other_starts": "Kernel supports actual64/36/2/29 states at their own actualmu; new closed identity/bindings required. Do not invoke the fixed first-start adapter on another identity.",
+    "other_fig11_points": "Admit their actual geometry and dimensions explicitly in a new adapter; mathematical body is dimension-generic and unchanged. No batch audit, new observer or follower prepared here."
+  },
+  "optimizer_MC_RNG_and_additional_raw_endpoint_reads_in_this_matrix": 0,
+  "fullfigure_originalreference_duallanguage_or_paper_PASS": false
+}

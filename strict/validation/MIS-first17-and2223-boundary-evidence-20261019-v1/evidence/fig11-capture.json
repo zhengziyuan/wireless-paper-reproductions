@@ -1,0 +1,1306 @@
+{
+  "schema": "actual-single-first-Fig11-start-capture-completeness-readback-v2",
+  "observed_UTC": "2026-10-19T12:56:07.112995+00:00",
+  "scope": "Only actual first MIS start1 / point0 / 17 actual mu RCG inputs and returns",
+  "reader_v1_integer_float_mu_metadata_comparison_failure_retained": true,
+  "mu_comparison": "binary64 hexadecimal value; integer JSON source metadata not changed",
+  "new_optimizer_calls": 0,
+  "new_objective_gradient_model_calls": 0,
+  "new_RNG_MC_MP_calls": 0,
+  "other_start_tapes_or_results_read": 0,
+  "scientific_gradient_KKT_feasibility_or_reference_PASS": false,
+  "global_campaign_natural_terminal_or_source_interval_closed": false,
+  "checks": {
+    "one_real_joint_closed_first_start": true,
+    "compressed_tape_exact_closed_SHA256_and_size_before_unpickle": true,
+    "original_start_gzip_exact_closed_SHA256": true,
+    "exactly36_records_header17_input_return_terminal": true,
+    "header_original_point_start_settings_and_source_binding": true,
+    "terminal_observer_exact_joint_closure": true,
+    "all17_actual_original_mu_halving_values_exact": true,
+    "complete_4000_inner_and_1e6_reconstruction_controls_not_shortened": true,
+    "actual_history_17_mu": true,
+    "mu01_unique_call_mu_and_original_options_exact": true,
+    "mu01_input_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu01_return_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu01_actual_return_stop_and_history_length_exact_original_saved": true,
+    "mu02_unique_call_mu_and_original_options_exact": true,
+    "mu02_input_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu02_return_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu02_actual_return_stop_and_history_length_exact_original_saved": true,
+    "mu02_actual_input_is_prior_actual_return_all_Fbits": true,
+    "mu03_unique_call_mu_and_original_options_exact": true,
+    "mu03_input_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu03_return_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu03_actual_return_stop_and_history_length_exact_original_saved": true,
+    "mu03_actual_input_is_prior_actual_return_all_Fbits": true,
+    "mu04_unique_call_mu_and_original_options_exact": true,
+    "mu04_input_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu04_return_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu04_actual_return_stop_and_history_length_exact_original_saved": true,
+    "mu04_actual_input_is_prior_actual_return_all_Fbits": true,
+    "mu05_unique_call_mu_and_original_options_exact": true,
+    "mu05_input_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu05_return_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu05_actual_return_stop_and_history_length_exact_original_saved": true,
+    "mu05_actual_input_is_prior_actual_return_all_Fbits": true,
+    "mu06_unique_call_mu_and_original_options_exact": true,
+    "mu06_input_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu06_return_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu06_actual_return_stop_and_history_length_exact_original_saved": true,
+    "mu06_actual_input_is_prior_actual_return_all_Fbits": true,
+    "mu07_unique_call_mu_and_original_options_exact": true,
+    "mu07_input_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu07_return_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu07_actual_return_stop_and_history_length_exact_original_saved": true,
+    "mu07_actual_input_is_prior_actual_return_all_Fbits": true,
+    "mu08_unique_call_mu_and_original_options_exact": true,
+    "mu08_input_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu08_return_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu08_actual_return_stop_and_history_length_exact_original_saved": true,
+    "mu08_actual_input_is_prior_actual_return_all_Fbits": true,
+    "mu09_unique_call_mu_and_original_options_exact": true,
+    "mu09_input_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu09_return_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu09_actual_return_stop_and_history_length_exact_original_saved": true,
+    "mu09_actual_input_is_prior_actual_return_all_Fbits": true,
+    "mu10_unique_call_mu_and_original_options_exact": true,
+    "mu10_input_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu10_return_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu10_actual_return_stop_and_history_length_exact_original_saved": true,
+    "mu10_actual_input_is_prior_actual_return_all_Fbits": true,
+    "mu11_unique_call_mu_and_original_options_exact": true,
+    "mu11_input_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu11_return_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu11_actual_return_stop_and_history_length_exact_original_saved": true,
+    "mu11_actual_input_is_prior_actual_return_all_Fbits": true,
+    "mu12_unique_call_mu_and_original_options_exact": true,
+    "mu12_input_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu12_return_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu12_actual_return_stop_and_history_length_exact_original_saved": true,
+    "mu12_actual_input_is_prior_actual_return_all_Fbits": true,
+    "mu13_unique_call_mu_and_original_options_exact": true,
+    "mu13_input_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu13_return_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu13_actual_return_stop_and_history_length_exact_original_saved": true,
+    "mu13_actual_input_is_prior_actual_return_all_Fbits": true,
+    "mu14_unique_call_mu_and_original_options_exact": true,
+    "mu14_input_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu14_return_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu14_actual_return_stop_and_history_length_exact_original_saved": true,
+    "mu14_actual_input_is_prior_actual_return_all_Fbits": true,
+    "mu15_unique_call_mu_and_original_options_exact": true,
+    "mu15_input_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu15_return_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu15_actual_return_stop_and_history_length_exact_original_saved": true,
+    "mu15_actual_input_is_prior_actual_return_all_Fbits": true,
+    "mu16_unique_call_mu_and_original_options_exact": true,
+    "mu16_input_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu16_return_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu16_actual_return_stop_and_history_length_exact_original_saved": true,
+    "mu16_actual_input_is_prior_actual_return_all_Fbits": true,
+    "mu17_unique_call_mu_and_original_options_exact": true,
+    "mu17_input_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu17_return_all_three_typed_arrays_and_Fbits_identity": true,
+    "mu17_actual_return_stop_and_history_length_exact_original_saved": true,
+    "mu17_actual_input_is_prior_actual_return_all_Fbits": true,
+    "one_named_engine_matches_frozen_plan_pin": true,
+    "last_actual_typed_return_exact_original_saved_final_state_with_signed_zero": true,
+    "original_summary_and_metrics_score_exact_joint_closed": true,
+    "actual_observer_17_inputs_17_returns_zero_errors_zero_original_exceptions": true
+  },
+  "failures": [],
+  "immutable_inputs": {
+    "observation": {
+      "path": "origin:resume-20261017/MIS-communications-Fig11-full48-passive-endpoints-prepared-v1/ACTUAL_ONCE_FIRST_FULL48_FIG11_OWNER_PROGRESS_AND_FIRST_START_STATUS_V1.json",
+      "SHA256": "0f34a2f47fc8bfcec918449db96ceb2283570ff39d0f6b8299a932af3c6e85a0"
+    },
+    "frozen_plan": {
+      "path": "origin:resume-20261017/MIS-communications-Fig11-full48-passive-endpoints-prepared-v1/PREPARED_FULL_FIG11_ORIGINAL48_PASSIVE_ENDPOINTS_SERIAL_PLAN_V2.json",
+      "SHA256": "b02636b883cdf82b3682431182a84ab04aaada75e448f7a5170f0c6a3bfa97d8"
+    },
+    "first_joint_closed_receipt": {
+      "path": "origin:resume-20261017/MIS-comm-F11-py-full-v1/actual-RCG-endpoints/point-0000-MIS-0001.closed.json",
+      "SHA256": "586288edc4d38b5f11b1cda46ceecd53bc136bffa9c15ecb36f17fde0239333d",
+      "exact_body_reused_from_once_observation": true
+    }
+  },
+  "actual_tape": {
+    "path": "origin:resume-20261017/MIS-comm-F11-py-full-v1/actual-RCG-endpoints/point-0000-MIS-0001.attempt-54608-445399000000000.pickle.gz",
+    "SHA256": "13dec758b9be88e5c359905141a330acd3e2c4449ae2dce99c2a32b019ca5c9b",
+    "bytes": 17455,
+    "pickle_records": 36,
+    "format": "trusted-local-gzip-sequential-pickle-protocol5-actual-RCG-endpoints-v1",
+    "actual_records": 36,
+    "bytes_verified_before_trusted_local_unpickle": true
+  },
+  "actual_original_start": {
+    "path": "origin:resume-20261017/MIS-comm-F11-py-full-v1/starts/point-0000-MIS-0001.json.gz",
+    "SHA256": "7565c8c706eee177470effe10a10a1383329f15c8900db9e60ebfa335fcc6290",
+    "compressed_bytes": 24793
+  },
+  "actual17_mu_rows": [
+    {
+      "call": 1,
+      "mu": 100.0,
+      "mu_binary64_hex": "0x1.9000000000000p+6",
+      "input_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "56369be31a33b5c2fe8fdcdd177d1db106d836b134b1b9ab69014865a6c22855"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "629801ed1adde71eae285238ead4d2d4633acd12741130b23a6d77f1a2c3f92a"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "de2ea17f9ff4c5e03a1d15abf15fff949d2605533b28323cdd21f1aff7270c35"
+        }
+      },
+      "return_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "878e42e92ebb6a94915c8fb17fdbd05a08229948ce89304cdf1415b729d7a4d5"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "4c0bcaf42efe9630832298cbdd0d1c5acb0378cae9897ac126614d87db728998"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "actual_inner_history_length": 122,
+      "actual_original_stop": {
+        "reason": "gradient_tolerance",
+        "objective": 38.77325316675059,
+        "gradient_norm": 23.467267108279696,
+        "projected_kkt_norm": 9.976719367472093e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 2,
+      "mu": 50.0,
+      "mu_binary64_hex": "0x1.9000000000000p+5",
+      "input_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "878e42e92ebb6a94915c8fb17fdbd05a08229948ce89304cdf1415b729d7a4d5"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "4c0bcaf42efe9630832298cbdd0d1c5acb0378cae9897ac126614d87db728998"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "return_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "878e42e92ebb6a94915c8fb17fdbd05a08229948ce89304cdf1415b729d7a4d5"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "4c0bcaf42efe9630832298cbdd0d1c5acb0378cae9897ac126614d87db728998"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "actual_inner_history_length": 1,
+      "actual_original_stop": {
+        "reason": "gradient_tolerance",
+        "objective": 4.115894138753351,
+        "gradient_norm": 23.467267113491715,
+        "projected_kkt_norm": 9.950312724704497e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 3,
+      "mu": 25.0,
+      "mu_binary64_hex": "0x1.9000000000000p+4",
+      "input_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "878e42e92ebb6a94915c8fb17fdbd05a08229948ce89304cdf1415b729d7a4d5"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "4c0bcaf42efe9630832298cbdd0d1c5acb0378cae9897ac126614d87db728998"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "return_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ff9ca980b8f95a31057a3689dc5f72433b2688e211bdc5afea39aeb68b816b75"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "9923c7c23cce2c211261a98f63ec6c1822161b14a696d48cc6cc52a9d0c11031"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "actual_inner_history_length": 2,
+      "actual_original_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -13.212785375245975,
+        "gradient_norm": 23.467267127040124,
+        "projected_kkt_norm": 8.458749382735963e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 4,
+      "mu": 12.5,
+      "mu_binary64_hex": "0x1.9000000000000p+3",
+      "input_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ff9ca980b8f95a31057a3689dc5f72433b2688e211bdc5afea39aeb68b816b75"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "9923c7c23cce2c211261a98f63ec6c1822161b14a696d48cc6cc52a9d0c11031"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "return_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ff9ca980b8f95a31057a3689dc5f72433b2688e211bdc5afea39aeb68b816b75"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "9923c7c23cce2c211261a98f63ec6c1822161b14a696d48cc6cc52a9d0c11031"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "actual_inner_history_length": 1,
+      "actual_original_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -21.877125132245283,
+        "gradient_norm": 23.46726713758543,
+        "projected_kkt_norm": 8.505262689795971e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 5,
+      "mu": 6.25,
+      "mu_binary64_hex": "0x1.9000000000000p+2",
+      "input_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ff9ca980b8f95a31057a3689dc5f72433b2688e211bdc5afea39aeb68b816b75"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "9923c7c23cce2c211261a98f63ec6c1822161b14a696d48cc6cc52a9d0c11031"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "return_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ff9ca980b8f95a31057a3689dc5f72433b2688e211bdc5afea39aeb68b816b75"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "9923c7c23cce2c211261a98f63ec6c1822161b14a696d48cc6cc52a9d0c11031"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "actual_inner_history_length": 1,
+      "actual_original_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -26.209295010744924,
+        "gradient_norm": 23.467267158676087,
+        "projected_kkt_norm": 9.187821006111752e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 6,
+      "mu": 3.125,
+      "mu_binary64_hex": "0x1.9000000000000p+1",
+      "input_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ff9ca980b8f95a31057a3689dc5f72433b2688e211bdc5afea39aeb68b816b75"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "9923c7c23cce2c211261a98f63ec6c1822161b14a696d48cc6cc52a9d0c11031"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "return_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "d1302e7a1f57fa89cca66c4b54e05920c0241b6c36e3b0e3f39319bfb0b64daa"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "e4558d23705ba8e305e5cd159b740f9b02de06647860a0fd82e34fc0816fd9d1"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "actual_inner_history_length": 7,
+      "actual_original_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -28.37537994999615,
+        "gradient_norm": 23.467267144137146,
+        "projected_kkt_norm": 7.720296516956969e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 7,
+      "mu": 1.5625,
+      "mu_binary64_hex": "0x1.9000000000000p+0",
+      "input_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "d1302e7a1f57fa89cca66c4b54e05920c0241b6c36e3b0e3f39319bfb0b64daa"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "e4558d23705ba8e305e5cd159b740f9b02de06647860a0fd82e34fc0816fd9d1"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "return_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "66ed0f1e4f3d42ce907f553c0e19a65dd24f0d3c3e9108d397ea6ebd300b0bae"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "a07367b04d27969eeae0d35fa803ae602056f7eb8a97b796418600f5f7589b4f"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "actual_inner_history_length": 7,
+      "actual_original_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -29.458422419621677,
+        "gradient_norm": 23.467267206896583,
+        "projected_kkt_norm": 6.918444665065523e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 8,
+      "mu": 0.78125,
+      "mu_binary64_hex": "0x1.9000000000000p-1",
+      "input_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "66ed0f1e4f3d42ce907f553c0e19a65dd24f0d3c3e9108d397ea6ebd300b0bae"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "a07367b04d27969eeae0d35fa803ae602056f7eb8a97b796418600f5f7589b4f"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "return_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "66ed0f1e4f3d42ce907f553c0e19a65dd24f0d3c3e9108d397ea6ebd300b0bae"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "a07367b04d27969eeae0d35fa803ae602056f7eb8a97b796418600f5f7589b4f"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "actual_inner_history_length": 1,
+      "actual_original_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -29.999943654434134,
+        "gradient_norm": 23.46726719180826,
+        "projected_kkt_norm": 8.206586099501053e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 9,
+      "mu": 0.390625,
+      "mu_binary64_hex": "0x1.9000000000000p-2",
+      "input_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "66ed0f1e4f3d42ce907f553c0e19a65dd24f0d3c3e9108d397ea6ebd300b0bae"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "a07367b04d27969eeae0d35fa803ae602056f7eb8a97b796418600f5f7589b4f"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "return_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "f3d42841b11623b3a6494523a41e7d66921bf075b873618b46b5c4932372dc2e"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "4e5d51ea3caf1aa0aceaf7518f8e534f6fa5c0c3623fe2f019c834fb487c26ff"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "actual_inner_history_length": 3,
+      "actual_original_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -30.270704271840376,
+        "gradient_norm": 23.467267250295585,
+        "projected_kkt_norm": 5.558601207600331e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 10,
+      "mu": 0.1953125,
+      "mu_binary64_hex": "0x1.9000000000000p-3",
+      "input_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "f3d42841b11623b3a6494523a41e7d66921bf075b873618b46b5c4932372dc2e"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "4e5d51ea3caf1aa0aceaf7518f8e534f6fa5c0c3623fe2f019c834fb487c26ff"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "return_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "f3d42841b11623b3a6494523a41e7d66921bf075b873618b46b5c4932372dc2e"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "4e5d51ea3caf1aa0aceaf7518f8e534f6fa5c0c3623fe2f019c834fb487c26ff"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "actual_inner_history_length": 1,
+      "actual_original_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -30.40608458054349,
+        "gradient_norm": 23.467267279130983,
+        "projected_kkt_norm": 7.374957814303099e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 11,
+      "mu": 0.09765625,
+      "mu_binary64_hex": "0x1.9000000000000p-4",
+      "input_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "f3d42841b11623b3a6494523a41e7d66921bf075b873618b46b5c4932372dc2e"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "4e5d51ea3caf1aa0aceaf7518f8e534f6fa5c0c3623fe2f019c834fb487c26ff"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "return_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ed57cfec830a103b068f3dde167708458b1180506e6cb0e9f082a4a9362af801"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "6243facf8c47e43b21df15f79a9d9ddcfb88cffc87a691840602ac3f8b014ce7"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "actual_inner_history_length": 2,
+      "actual_original_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -30.473774734895056,
+        "gradient_norm": 23.467267210907394,
+        "projected_kkt_norm": 6.461745202239145e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 12,
+      "mu": 0.048828125,
+      "mu_binary64_hex": "0x1.9000000000000p-5",
+      "input_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ed57cfec830a103b068f3dde167708458b1180506e6cb0e9f082a4a9362af801"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "6243facf8c47e43b21df15f79a9d9ddcfb88cffc87a691840602ac3f8b014ce7"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "return_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ed57cfec830a103b068f3dde167708458b1180506e6cb0e9f082a4a9362af801"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "6243facf8c47e43b21df15f79a9d9ddcfb88cffc87a691840602ac3f8b014ce7"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "actual_inner_history_length": 1,
+      "actual_original_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -30.507619812070832,
+        "gradient_norm": 23.46726720003727,
+        "projected_kkt_norm": 7.308713975724734e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 13,
+      "mu": 0.0244140625,
+      "mu_binary64_hex": "0x1.9000000000000p-6",
+      "input_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ed57cfec830a103b068f3dde167708458b1180506e6cb0e9f082a4a9362af801"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "6243facf8c47e43b21df15f79a9d9ddcfb88cffc87a691840602ac3f8b014ce7"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "return_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ed57cfec830a103b068f3dde167708458b1180506e6cb0e9f082a4a9362af801"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "6243facf8c47e43b21df15f79a9d9ddcfb88cffc87a691840602ac3f8b014ce7"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "actual_inner_history_length": 1,
+      "actual_original_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -30.524542350658724,
+        "gradient_norm": 23.467267178297075,
+        "projected_kkt_norm": 9.375437290093203e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 14,
+      "mu": 0.01220703125,
+      "mu_binary64_hex": "0x1.9000000000000p-7",
+      "input_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ed57cfec830a103b068f3dde167708458b1180506e6cb0e9f082a4a9362af801"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "6243facf8c47e43b21df15f79a9d9ddcfb88cffc87a691840602ac3f8b014ce7"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "return_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ae9e2058d6dd53a4dcebb98169093216e6ad2d586bffb087e20469b8ae2425b6"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "cf8ed5b8b9042f691a5b550bd23f22ef8758ebeedc33700913c6bf29742f4881"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "actual_inner_history_length": 2,
+      "actual_original_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -30.533003619952648,
+        "gradient_norm": 23.467267292073466,
+        "projected_kkt_norm": 8.510880157924267e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 15,
+      "mu": 0.006103515625,
+      "mu_binary64_hex": "0x1.9000000000000p-8",
+      "input_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ae9e2058d6dd53a4dcebb98169093216e6ad2d586bffb087e20469b8ae2425b6"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "cf8ed5b8b9042f691a5b550bd23f22ef8758ebeedc33700913c6bf29742f4881"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "return_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ff28cd2777e7f6fc60d9eacfeafc7b7c7090d232261cd88e9d661ff6c496f8ff"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "f7122ade50f87d9eaa63dfa40d9a80b119a2babc768435d3d837b891e2fdafab"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "actual_inner_history_length": 2,
+      "actual_original_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -30.53723425459964,
+        "gradient_norm": 23.467267230875663,
+        "projected_kkt_norm": 5.474846869241809e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 16,
+      "mu": 0.0030517578125,
+      "mu_binary64_hex": "0x1.9000000000000p-9",
+      "input_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ff28cd2777e7f6fc60d9eacfeafc7b7c7090d232261cd88e9d661ff6c496f8ff"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "f7122ade50f87d9eaa63dfa40d9a80b119a2babc768435d3d837b891e2fdafab"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "return_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ff28cd2777e7f6fc60d9eacfeafc7b7c7090d232261cd88e9d661ff6c496f8ff"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "f7122ade50f87d9eaa63dfa40d9a80b119a2babc768435d3d837b891e2fdafab"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "actual_inner_history_length": 1,
+      "actual_original_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -30.539349571923125,
+        "gradient_norm": 23.467267240006542,
+        "projected_kkt_norm": 5.367410212327787e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 17,
+      "mu": 0.00152587890625,
+      "mu_binary64_hex": "0x1.9000000000000p-10",
+      "input_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ff28cd2777e7f6fc60d9eacfeafc7b7c7090d232261cd88e9d661ff6c496f8ff"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "f7122ade50f87d9eaa63dfa40d9a80b119a2babc768435d3d837b891e2fdafab"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "return_array_identities": {
+        "phi": {
+          "dtype": "<c16",
+          "shape": [
+            64
+          ],
+          "IEEE_F_order_SHA256": "ff28cd2777e7f6fc60d9eacfeafc7b7c7090d232261cd88e9d661ff6c496f8ff"
+        },
+        "theta": {
+          "dtype": "<c16",
+          "shape": [
+            36
+          ],
+          "IEEE_F_order_SHA256": "f7122ade50f87d9eaa63dfa40d9a80b119a2babc768435d3d837b891e2fdafab"
+        },
+        "X": {
+          "dtype": "<f8",
+          "shape": [
+            2,
+            29
+          ],
+          "IEEE_F_order_SHA256": "044f2e43cd3540ae7038bba289411c35c6a38ed954fda5b7c725ce74690a76b4"
+        }
+      },
+      "actual_inner_history_length": 1,
+      "actual_original_stop": {
+        "reason": "gradient_tolerance",
+        "objective": -30.54040723058487,
+        "gradient_norm": 23.467267258268315,
+        "projected_kkt_norm": 5.860920128399927e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    }
+  ],
+  "actual_original_reported_summary": {
+    "point_index": 0,
+    "baseline": "MIS",
+    "start": 1,
+    "score": 30.5414648891101,
+    "domain_feasible": true,
+    "solver_status": {
+      "final_inner_stationary": true,
+      "all_inner_tolerances_satisfied": true,
+      "final_inner_residual": 5.860920128399927e-07,
+      "final_inner_tolerance": 1e-06,
+      "outer_stopping_applicable": false,
+      "outer_stopping_met": true,
+      "continuation_complete": true,
+      "inner_iteration_cap_exits": 0,
+      "inner_failure_exits": 0,
+      "convergence_verified": true,
+      "final_inner_exit_reason": "gradient_tolerance"
+    },
+    "elapsed_seconds": 0.37705529999220744
+  },
+  "actual_original_metrics": {
+    "min_relaxed_snr": 30.5414648891101,
+    "min_binary_snr": 30.5414648891101,
+    "binary_schedule": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ]
+    ]
+  },
+  "actual_first_input_shapes": {
+    "phi": [
+      64
+    ],
+    "theta": [
+      36
+    ],
+    "X": [
+      2,
+      29
+    ]
+  },
+  "original_pure_serializer_source": {
+    "path": "origin:repository/strict/mis-communications/engine.py",
+    "SHA256": "eb90ca857df1cf3aed094c91c1ccee1461e571a96f15e42f7545768acaa1de77",
+    "source_AST_SHA256": "7f82752a94956812bd0701266ac75c78f7011b1d6722a52de782a86099f3e1e4",
+    "only_function_definition_loaded": true
+  },
+  "original_controls": {
+    "line_search_policy": "original_per_block_backtracking",
+    "non_descent_policy": "documented_non_descent_restart",
+    "initial_step": 1,
+    "armijo_constant": 0.0001,
+    "backtrack_factor": 0.5,
+    "max_backtracks": 60,
+    "max_iterations": 4000,
+    "gradient_tolerance": 1e-06
+  },
+  "budget_attribution": "6000/4000/1e-6 and mu schedule are disclosed reconstruction settings; no recovered paper numerical budget claim.",
+  "scope_limitations": [
+    "Only capture, typed-array IEEE identity, original stored stop flags and final-state serialization were checked.",
+    "No independent objective, gradient, KKT, domain feasibility, convergence or reference check was performed.",
+    "Campaign was running at the one observation; no campaign natural-terminal or entire-source-interval closure claim.",
+    "Producer-reported convergence is retained as reported metadata, not elevated to independent scientific PASS."
+  ],
+  "all_single_start_capture_readback_checks_pass": true
+}

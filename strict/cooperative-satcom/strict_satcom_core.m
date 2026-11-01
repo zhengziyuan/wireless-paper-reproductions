@@ -7,7 +7,8 @@ switch action
     case 'mr_evaluate', [varargout{1:nargout}]=mr_evaluate(varargin{:});
     case 'mr_qt_update', [varargout{1:nargout}]=mr_qt_update(varargin{:});
     case 'ap_evaluate', [varargout{1:nargout}]=ap_evaluate(varargin{:});
-    case 'ap_qt_update', [varargout{1:nargout}]=ap_qt_update(varargin{:});
+    case 'ap_qt_update', [varargout{1:nargout}]=strict_satcom_ap_qt_scaled(varargin{:});
+    case 'ap_qt_update_unscaled', [varargout{1:nargout}]=ap_qt_update(varargin{:});
     otherwise, error('Unknown strict component action');
 end
 end

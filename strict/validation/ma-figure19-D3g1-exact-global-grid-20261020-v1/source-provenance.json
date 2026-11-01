@@ -1,0 +1,184 @@
+{
+  "schema": "D3g1-four-frozen-models-original-closure-and-portable-projection-v1",
+  "original_actual_report_SHA256": "94176ad879bd8da66daecea189a5d357e1ca90fd8eccd2790a308602ab202294",
+  "original_actual_report_bytes": 33754,
+  "original_actual_reader_exit_code": 0,
+  "source_input_interval_closed": true,
+  "finite_file_count": 19,
+  "source_input_identities": {
+    "retained-validation-data/resume-20261017/MA19-D3g1-independent-all126-exact-global-grid-prepared-v1/audit_D3g1_all126_independent_exact_global_grid_v1.py": "7f4ec2c0741441d3c542fbcdf309d5b94f000f44adeb51784920a0550780f1d1",
+    "retained-validation-data/resume-20261017/MA19-D3g1-independent-all126-exact-global-grid-prepared-v1/README.md": "ea07c5af7a32cf75db84bc9866961a2a5f2f0ffc702031441e3e47f90e046880",
+    "retained-validation-data/resume-20261017/MA19-full-axis-shared-input-bank-v1/jobs/case-000-mc-001.json": "d9b8332fc39bd757688e3fb76a5857f2912c337a05020ff3b38ea8a471572c8e",
+    "retained-validation-data/resume-20261017/MA19-MA20-user-selected-statistical-target-next-route-v1/statistical-overlay-prepared-v2/actual-model-readset-v4/Fig19-statistical-execution-configuration.json": "03790ef0d42965a42e70a6188b05dc6f5318ab565aa402fcd5bd406551eec34a",
+    "repository/strict/two-timescale-ma/run.py": "32b5a7c87d4701847e2ecfcd5d3d4bdeb84fd5011edea18a7fc0b17c1d2fcbe8",
+    "retained-validation-data/resume-20261017/MA19-MA20-user-selected-statistical-target-next-route-v1/statistical-overlay-prepared-v2/actual-model-readset-v4/exact_sources/statistical_grid_exact.py": "02f4ee045f0d59fe128c03a99f644faca35066bd5d0c12f082fd8c3ddb2d47f0",
+    "retained-validation-data/resume-20261017/MA19-MA20-native-statistical-full2600-prepared-v1/PREPARED_NATIVE_FULL2600_STATISTICAL_MISSING_ONLY_SINGLE_PROCESS_PLAN_V1.json": "d2f61856d7383f10d53dc22a684de7098817aee493afa2870a407d4f925487da",
+    "retained-validation-data/resume-20261017/MA19-statistical-grid-original1000-actual-v1/case-000-mc-001/grid-MRT/binding.json": "db7555a0d7907304a4a40f6114f86fd1b03aa78c7a9f8f36429602e84a56bcea",
+    "retained-validation-data/resume-20261017/MA19-statistical-grid-original1000-actual-v1/case-000-mc-001/grid-MRT/checkpoint.json": "7f2a17319a66c761901a2065e7a4ede46a3989ee04bec2c2429f5b826a199f76",
+    "retained-validation-data/MA19-native-theory-D3-g1-MRT-actual-v2/native-frozen-primitive-inputs-once.mat": "c7a0fdea0d17eacfd2d5c7be375c42926b18b351a963c45508b3109a9facebf0",
+    "retained-validation-data/MA19-native-theory-D3-g1-MRT-actual-v2/binding.mat": "dbe88d592e248eaaeb5313e82c1b4a1d5ef49f294b797f60925945250cce866c",
+    "retained-validation-data/MA19-native-theory-D3-g1-MRT-actual-v2/bounded-frontier.mat": "640cd391c4b65c40c28250bccacb4674fbad9811dcdc14cfe8427fcbb0e11587",
+    "retained-validation-data/resume-20261017/MA19-statistical-grid-original1000-actual-v1/case-000-mc-001/grid-ZF/binding.json": "4a124b1b9ecad020d8236eee2c291fa8820638f18e9e5d73f1351fa14ca4b446",
+    "retained-validation-data/resume-20261017/MA19-statistical-grid-original1000-actual-v1/case-000-mc-001/grid-ZF/checkpoint.json": "a370ec6605a599882fd0370aa69461db735b3c7286544f9cedd9b6580221aa0c",
+    "retained-validation-data/MA19-native-theory-D3-g1-ZF-actual-v2/native-frozen-primitive-inputs-once.mat": "1722d9f8f94bbe3666855f7284c54599b51dca8e3622a20d1da93f70897bff4f",
+    "retained-validation-data/MA19-native-theory-D3-g1-ZF-actual-v2/binding.mat": "cbd38c7761eeb48a3590bb16ebe329af0106a21037890a7064a5957e892efb93",
+    "retained-validation-data/MA19-native-theory-D3-g1-ZF-actual-v2/bounded-frontier.mat": "9cba02e3378938c7b62a6304a31c72d6371c48761683a3c1de9eaa2a54d6b8ae",
+    "retained-validation-data/resume-20261017/MA19-MA20-native-exact-statistical-bounded-prepared-v1/ma_statistical_grid_model_native_v1.m": "bcaab1a0addc91400f1dd60b290d6cc6528557e456b275b91a4b87217f6fe1e8",
+    "retained-validation-data/resume-20261017/MA19-D3g1-independent-all126-exact-global-grid-prepared-v1/PREPARED_D3G1_ALL126_INDEPENDENT_EXACT_GLOBAL_GRID_PLAN_V1.json": "4aa112ffbad591352b05ded1fce3585482ce759a31ad7c6fc618efcb74262493"
+  },
+  "original_numeric_and_gate_rows_exactly_copied": true,
+  "public_primitive_export": {
+    "schema": "pure-data-four-hex-model-export-and-exact-independent-kernel-source-v1",
+    "original_actual_report_SHA256": "94176ad879bd8da66daecea189a5d357e1ca90fd8eccd2790a308602ab202294",
+    "original_report_bytes": 33754,
+    "original_actual_reader_exit_code": 0,
+    "source_and_input_interval_closed": true,
+    "model_export": [
+      {
+        "model": "python-MRT",
+        "binding": {
+          "original_typed_model_identity": {
+            "schema": "actual-exact-model-typed-operands-v1",
+            "mode": "MRT",
+            "N": 4,
+            "M": 3,
+            "D": 3,
+            "groups": {
+              "grid": {
+                "type": "ndarray",
+                "typed_SHA256": "a7b8ac7ae2450914f8a06914124247758ba2da711e2b59ed64e3d4079d386472"
+              },
+              "compatible": {
+                "type": "list",
+                "typed_SHA256": "571f4daaeb9c6d10d724b2eadc23f753d3537023f7d7593bdb3d10f5fc91092c"
+              },
+              "terms": {
+                "type": "dict",
+                "typed_SHA256": "cbda9df4535c0bfdb06ca3c5d911710b1345a565c2e5f83174d2aad62d8c94fe"
+              },
+              "diagonal": {
+                "type": "NoneType",
+                "typed_SHA256": "6c09635decb8153d3c12e3782a69fd2eb097426f912547d351a8647b27d5580a"
+              },
+              "base": {
+                "type": "list",
+                "typed_SHA256": "7cb24790d3c41534972eac95014d3466af9cfcb8c2a0d95ab6c9d1dd85371127"
+              },
+              "numerator": {
+                "type": "list",
+                "typed_SHA256": "e3aaa9ee3bc6007464f7a40fd0164989a7b67809dde60abbd77d8fa6013a1b48"
+              },
+              "coefficient": {
+                "type": "dict",
+                "typed_SHA256": "989f6c8e17559e28c1f7644e0e9a013285590c49e7c8458317a91fa17175047b"
+              }
+            },
+            "typed_serialization": "local trusted Python pickle5 digest; no unpickle input",
+            "SHA256": "b6be713ced454e854127c93c530f013925a45a8e54ea8091436c864150fbd589"
+          },
+          "data_export_typed_groups_match_actual_closed_report": true,
+          "original_model_scenario_evaluator_inverse_DFS_bound_or_MC_calls": 0
+        }
+      },
+      {
+        "model": "python-ZF",
+        "binding": {
+          "original_typed_model_identity": {
+            "schema": "actual-exact-model-typed-operands-v1",
+            "mode": "ZF",
+            "N": 4,
+            "M": 3,
+            "D": 3,
+            "groups": {
+              "grid": {
+                "type": "ndarray",
+                "typed_SHA256": "a7b8ac7ae2450914f8a06914124247758ba2da711e2b59ed64e3d4079d386472"
+              },
+              "compatible": {
+                "type": "list",
+                "typed_SHA256": "571f4daaeb9c6d10d724b2eadc23f753d3537023f7d7593bdb3d10f5fc91092c"
+              },
+              "terms": {
+                "type": "dict",
+                "typed_SHA256": "105c08d79922e90b96d488090a937db022e9492b609a593fac70706bec7b60f5"
+              },
+              "diagonal": {
+                "type": "list",
+                "typed_SHA256": "0b0a5edef70b89506f46eadec946aadefc40c519e0ca1c08787123a4c771ab4d"
+              },
+              "base": {
+                "type": "list",
+                "typed_SHA256": "2bf9afb4645b8b376ddb1f328f6793f58fb45df97bc0ea5f28b184d850dbabb5"
+              },
+              "eta": {
+                "type": "list",
+                "typed_SHA256": "87de43638a10938c0f0cf09e4c8af1f1306fd7f67570c533999653fd23ea13ad"
+              }
+            },
+            "typed_serialization": "local trusted Python pickle5 digest; no unpickle input",
+            "SHA256": "fde7a03e01ecb83b7acb6f0e87a5b3ef5fdf8e346399f4ddccd6c215ca4526aa"
+          },
+          "data_export_typed_groups_match_actual_closed_report": true,
+          "original_model_scenario_evaluator_inverse_DFS_bound_or_MC_calls": 0
+        }
+      },
+      {
+        "model": "native-MRT",
+        "binding": {
+          "original_primitive_MAT_SHA256": "c7a0fdea0d17eacfd2d5c7be375c42926b18b351a963c45508b3109a9facebf0",
+          "original_typed_primitive_SHA256": "853674fe9cd8c3186e42519898a37ecb017f758acbefeb18109dd494cc878f79",
+          "raw_complex_binary64_values_retained": true,
+          "sealed_primitive_file_identity_matches_actual_closed_report": true
+        }
+      },
+      {
+        "model": "native-ZF",
+        "binding": {
+          "original_primitive_MAT_SHA256": "1722d9f8f94bbe3666855f7284c54599b51dca8e3622a20d1da93f70897bff4f",
+          "original_typed_primitive_SHA256": "589281d354e643a848e8694a64eb0171e041738ef2e5a43d8b8bbaca15862f06",
+          "raw_complex_binary64_values_retained": true,
+          "sealed_primitive_file_identity_matches_actual_closed_report": true
+        }
+      }
+    ],
+    "public_independent_math_functions": [
+      "encode",
+      "digest",
+      "need",
+      "q",
+      "zadd",
+      "zmul",
+      "zconj",
+      "znorm",
+      "zsum",
+      "determinant",
+      "real_positive_det",
+      "minor",
+      "rational_record",
+      "rebuild_rational_constants",
+      "independent_product",
+      "enumerate_all126"
+    ],
+    "public_independent_math_whole_source_segments_exact": true,
+    "original_private_reader_SHA256": "7f4ec2c0741441d3c542fbcdf309d5b94f000f44adeb51784920a0550780f1d1",
+    "original_model_or_scenario_functions_called": 0,
+    "optimizer_calls": 0,
+    "MC_evaluations_or_draws": 0,
+    "scope": "Private export binding is source-bound metadata. Public verifier independently enumerates its supplied frozen operands."
+  },
+  "first_portable_use": "portable-first-use.json",
+  "publication_state": "prepared locally; not a claim of GitHub publication",
+  "projection": "Source path strings replaced with role-relative identifiers; duplicate equal after-map omitted. Exact numerical rows, rational strings, flags and digests retained.",
+  "dataset_scope": "Four frozen statistical operand models only; no MC bank, optimizer trajectory, or full2600 population.",
+  "actual_first_portable_use": {
+    "report": "portable-first-use.json",
+    "SHA256": "b9b7c3beacce57c36c94ea8ecf18c1ae8e8fdafd4b7eb6e7ffa19dc348511594",
+    "actual_exit_code": 0,
+    "complete_models": 4,
+    "enumerated_sets": 504,
+    "source_input_interval_closed": true,
+    "all_exact_products_winners_and_decision_digests_match": true,
+    "first_use_manifest_epoch_SHA256": "0e6de31b0585292b87cba9dfbc735f4f983b69c202991b1337ee8add38f7e83e",
+    "standard_library_only": true
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "MA6-three-coordinate-physical-and-gap-capsule-scope-final-v2",
+  "saved_inputs": {
+    "shared_prestates": 3,
+    "actual_source_captures": 6,
+    "new_source_coordinate_calls_per_capture": 1,
+    "fixtures": [
+      "case-006-mc-024 MRT coordinate6/antenna0",
+      "case-006-mc-027 ZF coordinate2/antenna2",
+      "case-008-mc-024 MRT coordinate7/antenna1"
+    ],
+    "indexing": "Fixture coordinates/antennas zero-based; native function indexing one-based."
+  },
+  "actual_results": {
+    "fixed_coeff_MP80_100_natural_exit": 0,
+    "six_lane_original_gap_primal_concavity_checks": true,
+    "physical_coeff_MP80_100_natural_exit": 0,
+    "six_lane_existing_tangent_value_1e_9_consistency": true,
+    "retained_fixed_MP_V2_host_exit": 1,
+    "physical_source_coeff_error_threshold_added": false,
+    "public_relative_replay_first_use": "Inspect mode actually completed once on original49-file public layout; numerical fixed-coeff/physical-coeff stages remain unexecuted in public layout.",
+    "public_inspect_actual": {
+      "natural_exit": 0,
+      "stderr_bytes": 0,
+      "tested_public_file_count": 49,
+      "manifest_enumerated_nonmanifest_file_count": 48,
+      "tested_manifest_SHA256": "d5473f07bdcccf8bb7be74aa793418eeb355071be0004084acf47b6df9438c79",
+      "tested_replay_source_SHA256": "287e345b86bc1be3ad6bf5927e90c9aa1050a8207f7ad5d9c9884bd2e420b897",
+      "original_held_identity_and_source_interval_closed": true,
+      "MP_solver_MC_or_trajectory_calls": 0
+    },
+    "public_numerical_stages_first_use": {
+      "fixed-coeff": "pending",
+      "physical-coeff": "pending"
+    },
+    "final_v2_metadata_only_not_reexecuted": true
+  },
+  "limits": {
+    "fixed_coeff": "Each lane meets its own original saved gap/primal tolerances; tiny positive exact-halfspace residuals are retained. No new1e-6 substitute and no fit.",
+    "physical": "Only existing1e-9 before-value and tangent/direct-gradient consistency checks are called passing. All g/q/a/G, curvature, preprocessing and eigenvalue errors remain diagnostics; no all-coefficients PASS claim.",
+    "precision": "Actual MP80/100 computations and their decimal outputs retained. High-precision numerical reference, not interval arithmetic.",
+    "paths": "Three old historical stepwise bit-equality flags remain false. That does not by itself establish a dual-language mathematical error or add a permanent numerical gate.",
+    "root_tie": "Candidate list order and8eps tie windows are diagnostics; source root methods differ. No new root or candidate generated.",
+    "reference": "Existing original-reference EPS differences remain unresolved; no original-reference/full900/full-paper PASS.",
+    "history": "New source captures do not recover historical internal operands/runtime. Their own historical endpoint equality is a finite observation, not recovery of all historical arithmetic.",
+    "not_included": "No old900 histories, NLoS/MC banks, large RAW archives, author PDF, binary executable, or127MB streams.",
+    "public_replay": "Only saved-data checks; does not rerun a coordinate optimizer, trajectory, MC/RNG, or original figure."
+  }
+}

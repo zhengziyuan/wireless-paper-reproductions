@@ -1,0 +1,383 @@
+{
+  "scope": "Two actual new full8 Python controls on the exact old failed056/065 inputs; complete phase/QT endpoint tapes",
+  "corrected_python_case_ordinals": [
+    56,
+    65
+  ],
+  "actual_cases": 2,
+  "final_schemes_per_case": 8,
+  "total_phase_endpoints": 91,
+  "total_complex_gradient_coordinates_per_precision": 8190,
+  "total_QT_candidates": 66,
+  "all_original_input_arrays_limits_and_configuration_unchanged": true,
+  "all_two_new_complete_original_stops_and_independent_MP80_MP100_pass": true,
+  "original183_old_false_flags_upgraded": false,
+  "raw_new_MC_or_historical_inner_trajectories_or_original_reference_or_full_paper_pass": false,
+  "records": [
+    {
+      "ordinal": 56,
+      "identity": {
+        "ordinal": 56,
+        "sweep": "subsurfaces_kL20",
+        "parameter": "M",
+        "value": 45
+      },
+      "full_reported_scene": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "K": 1,
+        "M": 45,
+        "leo_height_m": 550000,
+        "geo_height_m": 36000000,
+        "frequency_hz": 12000000000,
+        "noise_dbm": -94,
+        "power_w": 50,
+        "geo_power_w": 2000,
+        "interference_to_noise_db": -12.2,
+        "kappa_leo_db": 20,
+        "kappa_ground_db": 10,
+        "kappa_geo_db": 30,
+        "subsurface_elements": [
+          100,
+          100
+        ],
+        "element_size_m": [
+          0.01,
+          0.01
+        ],
+        "ris_lu_distance_m": 100,
+        "geo_longitude_deg": 100,
+        "lu_separation_deg": 2,
+        "satellite_separation_deg": 2.5
+      },
+      "configuration_sha256": "8041ea5a0bbf2fd82d22611dfd60ec4a31b7a4dac128c239cf96f10bca9fa634",
+      "actual_execution_language": "python",
+      "original_eleven_input_arrays_bitwise_equal": {
+        "d_mean": {
+          "shape": [
+            3,
+            2,
+            16
+          ],
+          "dtype": "<c16",
+          "old_and_new_bytes_sha256": "1a7da55cfdf688df04f1a641574643f022778f7aeb6f1919b0e4fb6b705d1376",
+          "bitwise_equal": true
+        },
+        "d_var": {
+          "shape": [
+            3,
+            2
+          ],
+          "dtype": "<f8",
+          "old_and_new_bytes_sha256": "f2b9fe658d463c8d977b0918800e0fb60ab30771e7b2487821afa08c8e85043f",
+          "bitwise_equal": true
+        },
+        "G_mean": {
+          "shape": [
+            3,
+            2,
+            16,
+            45
+          ],
+          "dtype": "<c16",
+          "old_and_new_bytes_sha256": "5de5fe015d38ad693a7d3266cd0ceb985c1b502b44173bbd0d16313edb3d4ee7",
+          "bitwise_equal": true
+        },
+        "G_var": {
+          "shape": [
+            3,
+            2
+          ],
+          "dtype": "<f8",
+          "old_and_new_bytes_sha256": "7ee873ce590bb3bc25ed988399bd93718f84fc5483513c88c1669d5021cb3676",
+          "bitwise_equal": true
+        },
+        "r_mean": {
+          "shape": [
+            2,
+            45
+          ],
+          "dtype": "<c16",
+          "old_and_new_bytes_sha256": "cd937bcc2775e28aac5b4fab7982091af702341fdcc61e5b277ded596e5f0e42",
+          "bitwise_equal": true
+        },
+        "r_var": {
+          "shape": [
+            2
+          ],
+          "dtype": "<f8",
+          "old_and_new_bytes_sha256": "7ea83a891aa09d9fef139c266bdf42136b56193870ac2dbfb2dfadaaebeddb52",
+          "bitwise_equal": true
+        },
+        "gt_second": {
+          "shape": [
+            3,
+            1,
+            16,
+            16
+          ],
+          "dtype": "<c16",
+          "old_and_new_bytes_sha256": "14005659ad1d4f5b0da57d4a0dc41f676cfc91db6d035f84c4082cd30565c5f4",
+          "bitwise_equal": true
+        },
+        "geo_d_mean": {
+          "shape": [
+            2
+          ],
+          "dtype": "<c16",
+          "old_and_new_bytes_sha256": "174fe9a5994f0e3a8e225e828c1bf92bd6ac58a8ec189b23a1e984c49f0b3eb2",
+          "bitwise_equal": true
+        },
+        "geo_d_var": {
+          "shape": [
+            2
+          ],
+          "dtype": "<f8",
+          "old_and_new_bytes_sha256": "42f762eab34382e3fa7902673c6a28f162b1610e42d06e83b6dbef5554640a75",
+          "bitwise_equal": true
+        },
+        "geo_G_mean": {
+          "shape": [
+            2,
+            45
+          ],
+          "dtype": "<c16",
+          "old_and_new_bytes_sha256": "3e6f275abdd38ea79e574452c6c02332cd1078711dc972093718b8626b5636e3",
+          "bitwise_equal": true
+        },
+        "geo_G_var": {
+          "shape": [
+            2
+          ],
+          "dtype": "<f8",
+          "old_and_new_bytes_sha256": "b99c942f61dd1779cc3602aeddacfb0d6baf5f073286cebd2233d9acd8cb860a",
+          "bitwise_equal": true
+        }
+      },
+      "original_limits_bitwise_equal": true,
+      "configured1000_moment_numerical_return_exactly_equal": true,
+      "raw_new_MC_draws_claimed": false,
+      "old_float_auditor_pass_retained": false,
+      "old_float_audit_sha256": "07933c9d29342f67a56e7476888b9da86dc2c42b938e0659fefa75b18887acdc",
+      "old_point_receipt_sha256": "19f69f63ea739595ee034df96ee607aa22bdcbcb0bbfdf860c7261c63baf3af9",
+      "old_result_sha256": "3d0e5602f9a4c9b74c275e42a25b902c237f447bef22d8b6d86af2145ddb9b6c",
+      "new_result_sha256": "ea2daab3794827fc6076b175861a8ac84c739e210a64aea3d420a12b0e0fee9a",
+      "new_saved_state_sha256": "0482c80d3a315b634d95bae3aca55185173b6d82b9f67113ec8b45d5b9fedf1b",
+      "all8_new_internal_physical_stop_primal_QT_checks_pass": true,
+      "new_complete_independent_MP80_MP100_pass": true,
+      "phase_endpoints": 46,
+      "complex_phase_coordinates_per_precision": 4140,
+      "QT_candidates": 31,
+      "maximum_phase_MP100_gradient_norm": 9.974691632933045e-07,
+      "physical_scalar_values_per_precision": 622,
+      "recorder_sha256": "5e7ab69bca7e38c2702d976faafe5d3f025a3e7a47dffdcc442496e5114ea258",
+      "audit_summary": {
+        "scope": "One actual cold complete original eight-scheme Python case, equivalent positive-Wick evaluation; independent saved states/phase/QT checks",
+        "actual_execution_language": "python",
+        "MATLAB_or_new_optimizer_called_by_this_audit": false,
+        "result_sha256": "a8829f1d1418fb5a1553b690518fbf86864df96caa93e14bcaee263c67bf8fcc",
+        "unchanged_original_python_result_sha256": "ea2daab3794827fc6076b175861a8ac84c739e210a64aea3d420a12b0e0fee9a",
+        "state_sha256": "0482c80d3a315b634d95bae3aca55185173b6d82b9f67113ec8b45d5b9fedf1b",
+        "auditor_sha256": "d2efb53b0c792946876c51ce489ab2daaea25f4aed343b73b5bb762e092ce1f7",
+        "shared_reader_scope_origin": "native saved-state reader implementations; input provenance remains Python",
+        "phase_endpoints": 46,
+        "complex_phase_coordinates_per_precision": 4140,
+        "QT_candidates": 31,
+        "checks": {
+          "original_python_internal_gates_pass": true,
+          "complete_saved_state_fields_pass": true,
+          "all_actual_phase_fields_and_original_stops_MP80_MP100_pass": true,
+          "all8_actual_physical_states_and_all_QT_MP80_MP100_pass": true
+        },
+        "all_one_case_checks_pass": true,
+        "independent_raw_Python_MC_or_full183_or_original_reference_or_paper_pass": false
+      },
+      "elapsed_actual_optimization_and_recording_seconds": 2245.058474199992,
+      "full183_original_reference_or_full_paper_pass": false
+    },
+    {
+      "ordinal": 65,
+      "identity": {
+        "ordinal": 65,
+        "sweep": "subsurfaces_kL0",
+        "parameter": "M",
+        "value": 45
+      },
+      "full_reported_scene": {
+        "J": 3,
+        "U": 2,
+        "N": 16,
+        "K": 1,
+        "M": 45,
+        "leo_height_m": 550000,
+        "geo_height_m": 36000000,
+        "frequency_hz": 12000000000,
+        "noise_dbm": -94,
+        "power_w": 50,
+        "geo_power_w": 2000,
+        "interference_to_noise_db": -12.2,
+        "kappa_leo_db": 0,
+        "kappa_ground_db": 10,
+        "kappa_geo_db": 30,
+        "subsurface_elements": [
+          100,
+          100
+        ],
+        "element_size_m": [
+          0.01,
+          0.01
+        ],
+        "ris_lu_distance_m": 100,
+        "geo_longitude_deg": 100,
+        "lu_separation_deg": 2,
+        "satellite_separation_deg": 2.5
+      },
+      "configuration_sha256": "8eb529c7559fb291e9a9486234a6323f5afbe65cc6ffbcef7a99628233d36731",
+      "actual_execution_language": "python",
+      "original_eleven_input_arrays_bitwise_equal": {
+        "d_mean": {
+          "shape": [
+            3,
+            2,
+            16
+          ],
+          "dtype": "<c16",
+          "old_and_new_bytes_sha256": "9fcf504f47a865920b373555b94d92e53add185316027e75ce2f037bace16fb0",
+          "bitwise_equal": true
+        },
+        "d_var": {
+          "shape": [
+            3,
+            2
+          ],
+          "dtype": "<f8",
+          "old_and_new_bytes_sha256": "a35dc26ec5a55d824ae660799d0724802c844b4c7bebd1c84ca23ac6e9484435",
+          "bitwise_equal": true
+        },
+        "G_mean": {
+          "shape": [
+            3,
+            2,
+            16,
+            45
+          ],
+          "dtype": "<c16",
+          "old_and_new_bytes_sha256": "ced961cc5c6a9d7bb0a1d6a8598254bab568a7e51ca8ea39cf97d8995efd2ec2",
+          "bitwise_equal": true
+        },
+        "G_var": {
+          "shape": [
+            3,
+            2
+          ],
+          "dtype": "<f8",
+          "old_and_new_bytes_sha256": "48be82c5c3715aef3c52ee44cd6f4a65cafbef5f67b25accc3d6c67669e49417",
+          "bitwise_equal": true
+        },
+        "r_mean": {
+          "shape": [
+            2,
+            45
+          ],
+          "dtype": "<c16",
+          "old_and_new_bytes_sha256": "cd937bcc2775e28aac5b4fab7982091af702341fdcc61e5b277ded596e5f0e42",
+          "bitwise_equal": true
+        },
+        "r_var": {
+          "shape": [
+            2
+          ],
+          "dtype": "<f8",
+          "old_and_new_bytes_sha256": "7ea83a891aa09d9fef139c266bdf42136b56193870ac2dbfb2dfadaaebeddb52",
+          "bitwise_equal": true
+        },
+        "gt_second": {
+          "shape": [
+            3,
+            1,
+            16,
+            16
+          ],
+          "dtype": "<c16",
+          "old_and_new_bytes_sha256": "5c6945fdf531b223bd90a6059b5f409a3692dff74741f9b3e5f2497fb0f3cf93",
+          "bitwise_equal": true
+        },
+        "geo_d_mean": {
+          "shape": [
+            2
+          ],
+          "dtype": "<c16",
+          "old_and_new_bytes_sha256": "174fe9a5994f0e3a8e225e828c1bf92bd6ac58a8ec189b23a1e984c49f0b3eb2",
+          "bitwise_equal": true
+        },
+        "geo_d_var": {
+          "shape": [
+            2
+          ],
+          "dtype": "<f8",
+          "old_and_new_bytes_sha256": "42f762eab34382e3fa7902673c6a28f162b1610e42d06e83b6dbef5554640a75",
+          "bitwise_equal": true
+        },
+        "geo_G_mean": {
+          "shape": [
+            2,
+            45
+          ],
+          "dtype": "<c16",
+          "old_and_new_bytes_sha256": "3e6f275abdd38ea79e574452c6c02332cd1078711dc972093718b8626b5636e3",
+          "bitwise_equal": true
+        },
+        "geo_G_var": {
+          "shape": [
+            2
+          ],
+          "dtype": "<f8",
+          "old_and_new_bytes_sha256": "b99c942f61dd1779cc3602aeddacfb0d6baf5f073286cebd2233d9acd8cb860a",
+          "bitwise_equal": true
+        }
+      },
+      "original_limits_bitwise_equal": true,
+      "configured1000_moment_numerical_return_exactly_equal": true,
+      "raw_new_MC_draws_claimed": false,
+      "old_float_auditor_pass_retained": false,
+      "old_float_audit_sha256": "0eb92634db56fbde687ed12dc477e4819e681e7809283321ce5a45302e01ada6",
+      "old_point_receipt_sha256": "1c0904c6f8eb9ddd8b09013f829730d57ec0f508e06d4edef35a01446cc08168",
+      "old_result_sha256": "b0377c30ee4d21e03b17aa1deea66f208b383f6bd719d3fefcb2d169cdf7144b",
+      "new_result_sha256": "7dbc83a96b8e7420cefd31efc2e43bd3299e439145c2a066f183bf9ab17cd876",
+      "new_saved_state_sha256": "e1466adc89c12b14be0a05571179675a998640ce4bb5daf3e286fbf710a0502d",
+      "all8_new_internal_physical_stop_primal_QT_checks_pass": true,
+      "new_complete_independent_MP80_MP100_pass": true,
+      "phase_endpoints": 45,
+      "complex_phase_coordinates_per_precision": 4050,
+      "QT_candidates": 35,
+      "maximum_phase_MP100_gradient_norm": 9.968653992046725e-07,
+      "physical_scalar_values_per_precision": 694,
+      "recorder_sha256": "5e7ab69bca7e38c2702d976faafe5d3f025a3e7a47dffdcc442496e5114ea258",
+      "audit_summary": {
+        "scope": "One actual cold complete original eight-scheme Python case, equivalent positive-Wick evaluation; independent saved states/phase/QT checks",
+        "actual_execution_language": "python",
+        "MATLAB_or_new_optimizer_called_by_this_audit": false,
+        "result_sha256": "4f7b5ad507611f518397fd04e2535647cc4cfc69e22d8e03d8d933f580f8781a",
+        "unchanged_original_python_result_sha256": "7dbc83a96b8e7420cefd31efc2e43bd3299e439145c2a066f183bf9ab17cd876",
+        "state_sha256": "e1466adc89c12b14be0a05571179675a998640ce4bb5daf3e286fbf710a0502d",
+        "auditor_sha256": "d2efb53b0c792946876c51ce489ab2daaea25f4aed343b73b5bb762e092ce1f7",
+        "shared_reader_scope_origin": "native saved-state reader implementations; input provenance remains Python",
+        "phase_endpoints": 45,
+        "complex_phase_coordinates_per_precision": 4050,
+        "QT_candidates": 35,
+        "checks": {
+          "original_python_internal_gates_pass": true,
+          "complete_saved_state_fields_pass": true,
+          "all_actual_phase_fields_and_original_stops_MP80_MP100_pass": true,
+          "all8_actual_physical_states_and_all_QT_MP80_MP100_pass": true
+        },
+        "all_one_case_checks_pass": true,
+        "independent_raw_Python_MC_or_full183_or_original_reference_or_paper_pass": false
+      },
+      "elapsed_actual_optimization_and_recording_seconds": 309.0882443000155,
+      "full183_original_reference_or_full_paper_pass": false
+    }
+  ],
+  "packager_sha256": "55cbdba6ff91bc638bcacb56eab1e06e89be5e3fe2fcbfa97945927340fad2ca"
+}

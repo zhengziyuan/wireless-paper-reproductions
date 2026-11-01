@@ -1,0 +1,67 @@
+{
+  "schema": "native36-new-analytic-vector-addendum-manifest-v1",
+  "files_excluding_this_manifest": {
+    ".gitattributes": {
+      "bytes": 8,
+      "SHA256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    "evidence/actual-comparison-MP80-MP100.json.gz": {
+      "bytes": 124709,
+      "SHA256": "c1d12106c905ff17a3c20f648c1988a695d0eeda1109434132ba083034c41c32"
+    },
+    "evidence/actual-native-probe-held-natural0.json.gz": {
+      "bytes": 2463,
+      "SHA256": "4f703b261f8bb43fde6574d664a488fcc123e0fe6eddea77b4aead0d0d4b29e7"
+    },
+    "evidence/actual-native36-probe-completion.json": {
+      "bytes": 460,
+      "SHA256": "3a83604de092583ff89525156e725bfb2d0d1af918b052a253fcad8f6c8aab85"
+    },
+    "evidence/actual-saved-comparison-first-use0.json": {
+      "bytes": 3177,
+      "SHA256": "bcf6f1b952c78067ae8c78983bcd5e3456bbb0410c4e67786052709b88b65599"
+    },
+    "evidence/actual-vector-closure-and-scope.json": {
+      "bytes": 4394,
+      "SHA256": "fb2ee9dc75f4f827f2017f730b0d84931d8d84f9f44bf7d6be75d6aacd1a5472"
+    },
+    "evidence/retained-host-failures.json": {
+      "bytes": 3331,
+      "SHA256": "4fad70973f5a284e2a254b6bb11347f2eaa0d0b24b359e7cb01686b04dca7e6b"
+    },
+    "README.md": {
+      "bytes": 4309,
+      "SHA256": "7d37d05c0b90aaa2c897a4635e1f64b874c7a8e5b25b072e4f4208c98b69464e"
+    },
+    "saved/actual-new-native36-analytic-vectors.mat": {
+      "bytes": 415034,
+      "SHA256": "06405b5b35aca27cb3809c388bddc5f3035e68c892c16b2740df5b86df22a860"
+    },
+    "scope-and-provenance.json": {
+      "bytes": 7346,
+      "SHA256": "c9343f086fa6cb82d49821058aa425eaf2d076620db63709c4529ab798573965"
+    },
+    "source-mapping/exact-host-V1-to-V2-inverse.json": {
+      "bytes": 1955,
+      "SHA256": "80ecff94165da8c0b9bc736938801ed170a837c9615aa96d75594615cf0acc3f"
+    },
+    "source-mapping/original-five-function-byte-extraction.json": {
+      "bytes": 1729,
+      "SHA256": "b5627f50f7ef15847a1c155aa513885196cea6bae932449881efd8ad4db4aade"
+    },
+    "sources/compare_only_saved_native_vectors_to_existing_MP_decimals_v1.py": {
+      "bytes": 7249,
+      "SHA256": "984789010278198a0f14ed5c2f2c31d5cb74368524151e2f7f8dd8802e9b7f3a"
+    },
+    "sources/probe_only_saved_native36_analytic_vectors_v1.m": {
+      "bytes": 7991,
+      "SHA256": "fb94aadc6a9b335a4b33977b8bca0675497a6706c39e684d4b51dfafbbc1050c"
+    },
+    "transport-preservation.json": {
+      "bytes": 3866,
+      "SHA256": "287941fffbaae17be15eae7e601d2c83668e4fe064e8e4fe1d922241848776aa"
+    }
+  },
+  "manifest_excludes_itself": true,
+  "new_portable_or_scientific_test_for_packaging": false
+}

@@ -1,0 +1,358 @@
+{
+  "scope": "Actual45 paired full ground-sweep cases, all720 final states and independent reference diagnostics",
+  "case_scope": "ground",
+  "exact_original_case_ordinals": [
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110
+  ],
+  "original_source_figures": [
+    8,
+    9,
+    10
+  ],
+  "languages": [
+    "python",
+    "matlab"
+  ],
+  "cases_per_language": 45,
+  "schemes_per_case": 8,
+  "total_final_states": 720,
+  "archive": {
+    "filename": "ground45-dual-final-states-and-curves.tar.gz",
+    "bytes": 6231258,
+    "sha256": "fe48f538a650ac834e5def0c10e6661b8223427cf1d27d6e3dedc7a3cce30bec",
+    "parts": [
+      {
+        "file": "ground45-dual-final-states-and-curves.tar.gz.part000",
+        "bytes": 524288,
+        "sha256": "1111e59e26a55f96a1b92fe1974451ae25f170634e1bd021bb493715dc682858"
+      },
+      {
+        "file": "ground45-dual-final-states-and-curves.tar.gz.part001",
+        "bytes": 524288,
+        "sha256": "9735c590dc3e8e8891952213d37d7a638311e0e74959da871aa081e00e2345ec"
+      },
+      {
+        "file": "ground45-dual-final-states-and-curves.tar.gz.part002",
+        "bytes": 524288,
+        "sha256": "c808053bece9ae2882a72c24c03abc230d09633ee6fbd8340b3ced67f5e6226f"
+      },
+      {
+        "file": "ground45-dual-final-states-and-curves.tar.gz.part003",
+        "bytes": 524288,
+        "sha256": "1857527a940fd766d8b33efd2e0d20295a861ba0e5a57119b86b6ee8691dbdda"
+      },
+      {
+        "file": "ground45-dual-final-states-and-curves.tar.gz.part004",
+        "bytes": 524288,
+        "sha256": "515f6aba7485c61b21cefd2f4b38ab3a79a1444d889120892978bdc6c60dc866"
+      },
+      {
+        "file": "ground45-dual-final-states-and-curves.tar.gz.part005",
+        "bytes": 524288,
+        "sha256": "dfdffb8e0440c4a7d71704a7ecd4ab171cdf2792a887d3a8369911a6caf36543"
+      },
+      {
+        "file": "ground45-dual-final-states-and-curves.tar.gz.part006",
+        "bytes": 524288,
+        "sha256": "991635c480ceb6b2f4d5904a5b854acfc91dd91585e66029bc5bd3ffbf79a686"
+      },
+      {
+        "file": "ground45-dual-final-states-and-curves.tar.gz.part007",
+        "bytes": 524288,
+        "sha256": "0b32e34bfb02444b7e2bd42b9ff89d0dfbc7a6c9ec2a0b589b1b7a4ffb67a127"
+      },
+      {
+        "file": "ground45-dual-final-states-and-curves.tar.gz.part008",
+        "bytes": 524288,
+        "sha256": "007fb3c7029671b160e9c3254773be9c6be6d6f62c9a39eba63951b838479cfa"
+      },
+      {
+        "file": "ground45-dual-final-states-and-curves.tar.gz.part009",
+        "bytes": 524288,
+        "sha256": "bf8d99a992726c41848f44691ed2c363102cbf42603f43dc1855c076744b1214"
+      },
+      {
+        "file": "ground45-dual-final-states-and-curves.tar.gz.part010",
+        "bytes": 524288,
+        "sha256": "17ea6c0e4bede181702f0672f4a1c87833c4150bc957fcfbb26962b41805ca9e"
+      },
+      {
+        "file": "ground45-dual-final-states-and-curves.tar.gz.part011",
+        "bytes": 464090,
+        "sha256": "b015caf5291cf87ccb23c9f9f2094c305130c5359341ada9e728c238bf0a2b62"
+      }
+    ]
+  },
+  "files": {
+    "actual-all9-plot-visual-QA.json": {
+      "bytes": 2716,
+      "sha256": "487d24eb87bf73984111f30e0801ba4ca9711f2249e1af3f01f61052447adaa8"
+    },
+    "actual-original-Python45-input-and-NoRIS-invariance.json": {
+      "bytes": 132459,
+      "sha256": "bdaf705b58a8806d0fb5b22c86cd118f753c60bfec8d8865d0e85b84cc210972"
+    },
+    "actual-original-three-source-plot-visual-admission.json": {
+      "bytes": 3338,
+      "sha256": "b1a64c65929d8c616c08c120fc89c32aae623ee32191f1d225f810aaa2935860"
+    },
+    "actual-preparation-controller-receipt.json": {
+      "bytes": 14623,
+      "sha256": "8b425571937173c69d82b002f6c1bbcd1178826266bcd73456f6f67910aa3cd8"
+    },
+    "actual-prior66-reader-compatibility-and-incomplete-state-rejection.json": {
+      "bytes": 1836,
+      "sha256": "50e659a9793e5194397e18765d306a438eae165db6b9d5925e71232f6ebfd543"
+    },
+    "build-receipt.json": {
+      "bytes": 3888,
+      "sha256": "5a104cfe9adf4e05eb48fca0aa2490c112aeb5a231d4cc3e5b634a31398429fb"
+    },
+    "dual-language-comparison.json": {
+      "bytes": 284264,
+      "sha256": "51d2385fa37fcc3eb1df39885362a81f4c1b23e3dd9f516f4c12d0446cd3a9e5"
+    },
+    "final-state-index.json": {
+      "bytes": 664140,
+      "sha256": "39e95fc484e3db02889632dbe7768cf23c2c907c5a8476a7be06c4f85320e8db"
+    },
+    "final-states.npz": {
+      "bytes": 4303943,
+      "sha256": "c15ff4e218ae35add7362447a017e7a33c205713c1009365ba9036c40b3adcfa"
+    },
+    "independent-all720-final-states-MP80-MP100.json": {
+      "bytes": 3789910,
+      "sha256": "dd9602574be6a49b16c26c94eb0c0394bcd2f4fe724f2edaab228f0c06e9775d"
+    },
+    "independent-NoRIS-input-bound-MP80-MP100.json": {
+      "bytes": 1163655,
+      "sha256": "a8d196f6a8a92f21ec91edf4a0dca3df7111a227d82276b33898dad5507fbc34"
+    },
+    "matlab/cooperative-satcom-figure-10.json": {
+      "bytes": 9310,
+      "sha256": "0f45de0f103e65eba4b98b71b7f15d1dfa32f9ced258800cd63729157c741c85"
+    },
+    "matlab/cooperative-satcom-figure-10.png": {
+      "bytes": 87580,
+      "sha256": "89cd9f796a36160530ac4d7458957a9c3d160e33f9cc9369bc67d6d2032cee76"
+    },
+    "matlab/cooperative-satcom-figure-10.svg": {
+      "bytes": 48162,
+      "sha256": "513ebf96f8ee7e2cdcffe4d04c5ac77e1da4448b20e9aa1b02c716300fe3db96"
+    },
+    "matlab/cooperative-satcom-figure-8.json": {
+      "bytes": 9297,
+      "sha256": "5f3f24ee88206870b55a97387c00698b62ec82079473d1164a9f0a4080b58ae1"
+    },
+    "matlab/cooperative-satcom-figure-8.png": {
+      "bytes": 99732,
+      "sha256": "115a282c8eba98dcf1e812a1e57c30c0c7d29be3efed84c231cba9ba32545909"
+    },
+    "matlab/cooperative-satcom-figure-8.svg": {
+      "bytes": 50393,
+      "sha256": "4ff82befee224b7c6d6790450e51895e0ee9104f0f1df42b3a4b74e15a333f16"
+    },
+    "matlab/cooperative-satcom-figure-9.json": {
+      "bytes": 9298,
+      "sha256": "3afdc912d9ef307aea1767090b58ad5e30993d79139853f1a1a55cccc2f8e0ac"
+    },
+    "matlab/cooperative-satcom-figure-9.png": {
+      "bytes": 89207,
+      "sha256": "3039ef35a1cdf1c0afcd9fd1d3373ca23fc5d2516acf4dee5b7fa14aa6017ecd"
+    },
+    "matlab/cooperative-satcom-figure-9.svg": {
+      "bytes": 48734,
+      "sha256": "81bb9b1eedc113db6236b54576f86c80d5c822d059df14500a2cc2449e944feb"
+    },
+    "matlab-curve-view.json": {
+      "bytes": 1863004,
+      "sha256": "d1615639c7a109a86bff6f3f26aea38fbfbfc781b7651f398293d6c155076889"
+    },
+    "python/cooperative-satcom-figure-10.json": {
+      "bytes": 9286,
+      "sha256": "c02e9161859d5ee24e4a6639aa936a32a597b2f212a62bebf07127d1ea4e5e18"
+    },
+    "python/cooperative-satcom-figure-10.png": {
+      "bytes": 87557,
+      "sha256": "076a23425ed24de297262fee58231ee5d380c0591a82ca29885e539679ae910b"
+    },
+    "python/cooperative-satcom-figure-10.svg": {
+      "bytes": 48162,
+      "sha256": "087b4668c453ba38e39f67414395d88cb416620dffb6067ed0ab59f3a2d0b100"
+    },
+    "python/cooperative-satcom-figure-8.json": {
+      "bytes": 9250,
+      "sha256": "9dc5246bae03d50a5fbdc448060a1fc95cb61d14f3d9952962b0f53d9852964f"
+    },
+    "python/cooperative-satcom-figure-8.png": {
+      "bytes": 99752,
+      "sha256": "2f3eb5aee56307c696fe82a6e5bdc25a8d805718daba50384d898d608917ab97"
+    },
+    "python/cooperative-satcom-figure-8.svg": {
+      "bytes": 50380,
+      "sha256": "06d88496ab42fb0c2ae9b7cf24e4feb959b14010ae56936175cd59e3de60f0d9"
+    },
+    "python/cooperative-satcom-figure-9.json": {
+      "bytes": 9276,
+      "sha256": "e8ef85753af80ae3ae194bb6fa88231bdc9adc447f78c01093114d154b91cd39"
+    },
+    "python/cooperative-satcom-figure-9.png": {
+      "bytes": 89139,
+      "sha256": "61c1d04f259338d581bb9a1162bd9833d6d4ac8b887660f1323c7356bee28b07"
+    },
+    "python/cooperative-satcom-figure-9.svg": {
+      "bytes": 48747,
+      "sha256": "02e4d07461649363811079ca62d190d4e4730f22e4bb32c78c7ed03aa5121999"
+    },
+    "python-curve-view.json": {
+      "bytes": 1883824,
+      "sha256": "ac59b9fedbf13bdb7cf4a29fc768d7eb9e204b2d64f72345451c100199c0027c"
+    },
+    "reference-comparison/matlab-figure-10-unfitted-comparison.json": {
+      "bytes": 10338,
+      "sha256": "42c181dcf098eeeb048a0203434866e0fc8cf469de1aef0979733245edd1dffa"
+    },
+    "reference-comparison/matlab-figure-8-unfitted-comparison.json": {
+      "bytes": 10357,
+      "sha256": "a2d7e75b31709f5cd1a8327bbea0eb050518d02a6e92c84871ae0d6f31f6d9e2"
+    },
+    "reference-comparison/matlab-figure-9-unfitted-comparison.json": {
+      "bytes": 10363,
+      "sha256": "e9be0648455c959580347ee8344104b9a01f625346f67c2fbc74abae0adafcca"
+    },
+    "reference-comparison/original-figure-10-vector-reference.json": {
+      "bytes": 17530,
+      "sha256": "5d1ef6f5d3ee27cce57600b227ff129ad7f7b26f1d297f94da31c83b1ddd5243"
+    },
+    "reference-comparison/original-figure-8-vector-reference.json": {
+      "bytes": 17522,
+      "sha256": "dbb0db9aabeadad811fa652c0ef7ac14c49f288129e5fe618a2bd28129458eb7"
+    },
+    "reference-comparison/original-figure-9-vector-reference.json": {
+      "bytes": 17549,
+      "sha256": "3023a5d6cd15f4e988fa2c889fabc8a5cc47c90d81d88173f9138596d943d111"
+    },
+    "reference-comparison/original-reference-summary.json": {
+      "bytes": 1917,
+      "sha256": "8d7c238efed5d2c20c2823784199c236c861582a4923f97fae6740eed040ae53"
+    },
+    "reference-comparison/python-figure-10-unfitted-comparison.json": {
+      "bytes": 10337,
+      "sha256": "52e806f33aa1fdb2da51fbb6175bc84f0017b36c05087cd571bd24bbef92ae6f"
+    },
+    "reference-comparison/python-figure-8-unfitted-comparison.json": {
+      "bytes": 10344,
+      "sha256": "8feabf2201c6cf3aee6dbe92415d07d923f7a4e29d57944efd71a70ed03498dc"
+    },
+    "reference-comparison/python-figure-9-unfitted-comparison.json": {
+      "bytes": 10303,
+      "sha256": "94e9704e4a54bc8a8cf344af56f2bc9a480249328a6c12d10054fb11781d175e"
+    },
+    "source-and-audit-bindings.json": {
+      "bytes": 1047273,
+      "sha256": "283d5c98a353848edab8e1b8893190c8d35595abc8c64d911f7afa1ca42f215c"
+    },
+    "source-comparison/ground-factor-source-vs-reconstructed-10.json": {
+      "bytes": 8360,
+      "sha256": "6f2ee2e2982128cddeb20041c2d3affeea5472d5bbce6be100b00cc0aa0d7c89"
+    },
+    "source-comparison/ground-factor-source-vs-reconstructed-10.png": {
+      "bytes": 149539,
+      "sha256": "9d1c9419516bda9456f18242a238ec24b6384f1010a747018e8129475771a71b"
+    },
+    "source-comparison/ground-factor-source-vs-reconstructed-10.svg": {
+      "bytes": 98418,
+      "sha256": "469a71b677f3e20746c4179d5ea9d802838195f52b36f8b0a943da8dc4072815"
+    },
+    "source-comparison/ground-factor-source-vs-reconstructed-8.json": {
+      "bytes": 8309,
+      "sha256": "f26100d2046ace89de4418241a7d11c9524004ca418a5b76adb76b5a4e690038"
+    },
+    "source-comparison/ground-factor-source-vs-reconstructed-8.png": {
+      "bytes": 157101,
+      "sha256": "e8ec6e927407df8d273f5384f5fa2d2c1c20233505950018a05679097d9c0e55"
+    },
+    "source-comparison/ground-factor-source-vs-reconstructed-8.svg": {
+      "bytes": 101228,
+      "sha256": "f7987aa63ac3c405629981e4b38ba3b5acf00bec3a02eeddd9e1253577a80dcc"
+    },
+    "source-comparison/ground-factor-source-vs-reconstructed-9.json": {
+      "bytes": 8339,
+      "sha256": "48ffcfb0cc84ffaf486e7fe7c1f5ee30edf4c521000aad2eef83e2be8ddf5893"
+    },
+    "source-comparison/ground-factor-source-vs-reconstructed-9.png": {
+      "bytes": 158526,
+      "sha256": "b4c169484ac84e68631e19d7bc3c351ae0cb1ea09ed49cb1ce5d2df36a9b721c"
+    },
+    "source-comparison/ground-factor-source-vs-reconstructed-9.svg": {
+      "bytes": 103284,
+      "sha256": "b96f7d9323e4890806a48d893c2604751847166b9a6faacf12ab27066bdaf758"
+    },
+    "source-comparison/render-receipt.json": {
+      "bytes": 29174,
+      "sha256": "6442879128062af0ff4495e2be9f840afa70057b041518d06436ee666c0cd7e0"
+    }
+  },
+  "packager_sha256": "dd84aeac0eb3f08736d0dc1e0bf240a8a2881d45304af3e75ae0484c9bbf8a6a",
+  "full_phase_QT_tapes_publicly_included": false,
+  "original_private_EPS_redistributed": false,
+  "original_curve_or_full_paper_pass": false,
+  "preview_files": {
+    "source-comparison-figure10.png": {
+      "bytes": 149539,
+      "sha256": "9d1c9419516bda9456f18242a238ec24b6384f1010a747018e8129475771a71b"
+    },
+    "source-comparison-figure8.png": {
+      "bytes": 157101,
+      "sha256": "e8ec6e927407df8d273f5384f5fa2d2c1c20233505950018a05679097d9c0e55"
+    },
+    "source-comparison-figure9.png": {
+      "bytes": 158526,
+      "sha256": "b4c169484ac84e68631e19d7bc3c351ae0cb1ea09ed49cb1ce5d2df36a9b721c"
+    }
+  }
+}

@@ -1,0 +1,737 @@
+{
+  "schema": "actual-passive-every-returned-inner-block-state-v1",
+  "rows": [
+    {
+      "method": "update_w",
+      "call": 1,
+      "fixed_iota": 5204734.607216854,
+      "arrays": {
+        "W": "update_w_001__W",
+        "theta": "update_w_001__theta",
+        "r": "update_w_001__r"
+      },
+      "actual_returned_flags": {
+        "converged": true,
+        "termination_reason": "relative_objective_tolerance",
+        "iterations": 3,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_theta",
+      "call": 1,
+      "fixed_iota": 5204734.607216854,
+      "arrays": {
+        "W": "update_theta_001__W",
+        "theta": "update_theta_001__theta",
+        "r": "update_theta_001__r"
+      },
+      "actual_returned_flags": {
+        "applicable": true,
+        "converged": true,
+        "termination_reason": "gradient_tolerance",
+        "iterations": 40,
+        "updates": 39,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_rotation",
+      "call": 1,
+      "fixed_iota": 5204734.607216854,
+      "arrays": {
+        "W": "update_rotation_001__W",
+        "theta": "update_rotation_001__theta",
+        "r": "update_rotation_001__r"
+      },
+      "actual_returned_flags": {
+        "converged": true,
+        "termination_reason": "projected_gradient_tolerance",
+        "iterations": 657,
+        "updates": 656,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_w",
+      "call": 2,
+      "fixed_iota": 60348785663.072914,
+      "arrays": {
+        "W": "update_w_002__W",
+        "theta": "update_w_002__theta",
+        "r": "update_w_002__r"
+      },
+      "actual_returned_flags": {
+        "converged": true,
+        "termination_reason": "relative_objective_tolerance",
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_theta",
+      "call": 2,
+      "fixed_iota": 60348785663.072914,
+      "arrays": {
+        "W": "update_theta_002__W",
+        "theta": "update_theta_002__theta",
+        "r": "update_theta_002__r"
+      },
+      "actual_returned_flags": {
+        "applicable": true,
+        "converged": true,
+        "termination_reason": "gradient_tolerance",
+        "iterations": 79,
+        "updates": 78,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_rotation",
+      "call": 2,
+      "fixed_iota": 60348785663.072914,
+      "arrays": {
+        "W": "update_rotation_002__W",
+        "theta": "update_rotation_002__theta",
+        "r": "update_rotation_002__r"
+      },
+      "actual_returned_flags": {
+        "converged": true,
+        "termination_reason": "projected_gradient_tolerance",
+        "iterations": 852,
+        "updates": 851,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_w",
+      "call": 3,
+      "fixed_iota": 565049142.3529963,
+      "arrays": {
+        "W": "update_w_003__W",
+        "theta": "update_w_003__theta",
+        "r": "update_w_003__r"
+      },
+      "actual_returned_flags": {
+        "converged": true,
+        "termination_reason": "relative_objective_tolerance",
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_theta",
+      "call": 3,
+      "fixed_iota": 565049142.3529963,
+      "arrays": {
+        "W": "update_theta_003__W",
+        "theta": "update_theta_003__theta",
+        "r": "update_theta_003__r"
+      },
+      "actual_returned_flags": {
+        "applicable": true,
+        "converged": true,
+        "termination_reason": "gradient_tolerance",
+        "iterations": 55,
+        "updates": 54,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_rotation",
+      "call": 3,
+      "fixed_iota": 565049142.3529963,
+      "arrays": {
+        "W": "update_rotation_003__W",
+        "theta": "update_rotation_003__theta",
+        "r": "update_rotation_003__r"
+      },
+      "actual_returned_flags": {
+        "converged": true,
+        "termination_reason": "projected_gradient_tolerance",
+        "iterations": 714,
+        "updates": 713,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_w",
+      "call": 4,
+      "fixed_iota": 134321818.1653588,
+      "arrays": {
+        "W": "update_w_004__W",
+        "theta": "update_w_004__theta",
+        "r": "update_w_004__r"
+      },
+      "actual_returned_flags": {
+        "converged": true,
+        "termination_reason": "relative_objective_tolerance",
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_theta",
+      "call": 4,
+      "fixed_iota": 134321818.1653588,
+      "arrays": {
+        "W": "update_theta_004__W",
+        "theta": "update_theta_004__theta",
+        "r": "update_theta_004__r"
+      },
+      "actual_returned_flags": {
+        "applicable": true,
+        "converged": true,
+        "termination_reason": "gradient_tolerance",
+        "iterations": 41,
+        "updates": 40,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_rotation",
+      "call": 4,
+      "fixed_iota": 134321818.1653588,
+      "arrays": {
+        "W": "update_rotation_004__W",
+        "theta": "update_rotation_004__theta",
+        "r": "update_rotation_004__r"
+      },
+      "actual_returned_flags": {
+        "converged": true,
+        "termination_reason": "projected_gradient_tolerance",
+        "iterations": 386,
+        "updates": 385,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_w",
+      "call": 5,
+      "fixed_iota": 171133665.46357894,
+      "arrays": {
+        "W": "update_w_005__W",
+        "theta": "update_w_005__theta",
+        "r": "update_w_005__r"
+      },
+      "actual_returned_flags": {
+        "converged": true,
+        "termination_reason": "relative_objective_tolerance",
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_theta",
+      "call": 5,
+      "fixed_iota": 171133665.46357894,
+      "arrays": {
+        "W": "update_theta_005__W",
+        "theta": "update_theta_005__theta",
+        "r": "update_theta_005__r"
+      },
+      "actual_returned_flags": {
+        "applicable": true,
+        "converged": true,
+        "termination_reason": "gradient_tolerance",
+        "iterations": 758,
+        "updates": 757,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_rotation",
+      "call": 5,
+      "fixed_iota": 171133665.46357894,
+      "arrays": {
+        "W": "update_rotation_005__W",
+        "theta": "update_rotation_005__theta",
+        "r": "update_rotation_005__r"
+      },
+      "actual_returned_flags": {
+        "converged": true,
+        "termination_reason": "projected_gradient_tolerance",
+        "iterations": 484,
+        "updates": 483,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_w",
+      "call": 6,
+      "fixed_iota": 211312455.7824182,
+      "arrays": {
+        "W": "update_w_006__W",
+        "theta": "update_w_006__theta",
+        "r": "update_w_006__r"
+      },
+      "actual_returned_flags": {
+        "converged": true,
+        "termination_reason": "relative_objective_tolerance",
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_theta",
+      "call": 6,
+      "fixed_iota": 211312455.7824182,
+      "arrays": {
+        "W": "update_theta_006__W",
+        "theta": "update_theta_006__theta",
+        "r": "update_theta_006__r"
+      },
+      "actual_returned_flags": {
+        "applicable": true,
+        "converged": true,
+        "termination_reason": "gradient_tolerance",
+        "iterations": 737,
+        "updates": 736,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_rotation",
+      "call": 6,
+      "fixed_iota": 211312455.7824182,
+      "arrays": {
+        "W": "update_rotation_006__W",
+        "theta": "update_rotation_006__theta",
+        "r": "update_rotation_006__r"
+      },
+      "actual_returned_flags": {
+        "converged": true,
+        "termination_reason": "projected_gradient_tolerance",
+        "iterations": 720,
+        "updates": 719,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_w",
+      "call": 7,
+      "fixed_iota": 1120738335.464674,
+      "arrays": {
+        "W": "update_w_007__W",
+        "theta": "update_w_007__theta",
+        "r": "update_w_007__r"
+      },
+      "actual_returned_flags": {
+        "converged": true,
+        "termination_reason": "relative_objective_tolerance",
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_theta",
+      "call": 7,
+      "fixed_iota": 1120738335.464674,
+      "arrays": {
+        "W": "update_theta_007__W",
+        "theta": "update_theta_007__theta",
+        "r": "update_theta_007__r"
+      },
+      "actual_returned_flags": {
+        "applicable": true,
+        "converged": true,
+        "termination_reason": "gradient_tolerance",
+        "iterations": 469,
+        "updates": 468,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_rotation",
+      "call": 7,
+      "fixed_iota": 1120738335.464674,
+      "arrays": {
+        "W": "update_rotation_007__W",
+        "theta": "update_rotation_007__theta",
+        "r": "update_rotation_007__r"
+      },
+      "actual_returned_flags": {
+        "converged": true,
+        "termination_reason": "projected_gradient_tolerance",
+        "iterations": 1268,
+        "updates": 1267,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_w",
+      "call": 8,
+      "fixed_iota": 193208809.93748212,
+      "arrays": {
+        "W": "update_w_008__W",
+        "theta": "update_w_008__theta",
+        "r": "update_w_008__r"
+      },
+      "actual_returned_flags": {
+        "converged": true,
+        "termination_reason": "relative_objective_tolerance",
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_theta",
+      "call": 8,
+      "fixed_iota": 193208809.93748212,
+      "arrays": {
+        "W": "update_theta_008__W",
+        "theta": "update_theta_008__theta",
+        "r": "update_theta_008__r"
+      },
+      "actual_returned_flags": {
+        "applicable": true,
+        "converged": true,
+        "termination_reason": "gradient_tolerance",
+        "iterations": 140,
+        "updates": 139,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_rotation",
+      "call": 8,
+      "fixed_iota": 193208809.93748212,
+      "arrays": {
+        "W": "update_rotation_008__W",
+        "theta": "update_rotation_008__theta",
+        "r": "update_rotation_008__r"
+      },
+      "actual_returned_flags": {
+        "converged": true,
+        "termination_reason": "projected_gradient_tolerance",
+        "iterations": 871,
+        "updates": 870,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_w",
+      "call": 9,
+      "fixed_iota": 114129029.09899133,
+      "arrays": {
+        "W": "update_w_009__W",
+        "theta": "update_w_009__theta",
+        "r": "update_w_009__r"
+      },
+      "actual_returned_flags": {
+        "converged": true,
+        "termination_reason": "relative_objective_tolerance",
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_theta",
+      "call": 9,
+      "fixed_iota": 114129029.09899133,
+      "arrays": {
+        "W": "update_theta_009__W",
+        "theta": "update_theta_009__theta",
+        "r": "update_theta_009__r"
+      },
+      "actual_returned_flags": {
+        "applicable": true,
+        "converged": true,
+        "termination_reason": "gradient_tolerance",
+        "iterations": 100,
+        "updates": 99,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_rotation",
+      "call": 9,
+      "fixed_iota": 114129029.09899133,
+      "arrays": {
+        "W": "update_rotation_009__W",
+        "theta": "update_rotation_009__theta",
+        "r": "update_rotation_009__r"
+      },
+      "actual_returned_flags": {
+        "converged": true,
+        "termination_reason": "projected_gradient_tolerance",
+        "iterations": 681,
+        "updates": 680,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_w",
+      "call": 10,
+      "fixed_iota": 76586172.05112056,
+      "arrays": {
+        "W": "update_w_010__W",
+        "theta": "update_w_010__theta",
+        "r": "update_w_010__r"
+      },
+      "actual_returned_flags": {
+        "converged": true,
+        "termination_reason": "relative_objective_tolerance",
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_theta",
+      "call": 10,
+      "fixed_iota": 76586172.05112056,
+      "arrays": {
+        "W": "update_theta_010__W",
+        "theta": "update_theta_010__theta",
+        "r": "update_theta_010__r"
+      },
+      "actual_returned_flags": {
+        "applicable": true,
+        "converged": true,
+        "termination_reason": "gradient_tolerance",
+        "iterations": 39,
+        "updates": 38,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_rotation",
+      "call": 10,
+      "fixed_iota": 76586172.05112056,
+      "arrays": {
+        "W": "update_rotation_010__W",
+        "theta": "update_rotation_010__theta",
+        "r": "update_rotation_010__r"
+      },
+      "actual_returned_flags": {
+        "converged": true,
+        "termination_reason": "projected_gradient_tolerance",
+        "iterations": 682,
+        "updates": 681,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_w",
+      "call": 11,
+      "fixed_iota": 67694253.4434611,
+      "arrays": {
+        "W": "update_w_011__W",
+        "theta": "update_w_011__theta",
+        "r": "update_w_011__r"
+      },
+      "actual_returned_flags": {
+        "converged": true,
+        "termination_reason": "relative_objective_tolerance",
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_theta",
+      "call": 11,
+      "fixed_iota": 67694253.4434611,
+      "arrays": {
+        "W": "update_theta_011__W",
+        "theta": "update_theta_011__theta",
+        "r": "update_theta_011__r"
+      },
+      "actual_returned_flags": {
+        "applicable": true,
+        "converged": true,
+        "termination_reason": "gradient_tolerance",
+        "iterations": 49,
+        "updates": 48,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_rotation",
+      "call": 11,
+      "fixed_iota": 67694253.4434611,
+      "arrays": {
+        "W": "update_rotation_011__W",
+        "theta": "update_rotation_011__theta",
+        "r": "update_rotation_011__r"
+      },
+      "actual_returned_flags": {
+        "converged": true,
+        "termination_reason": "projected_gradient_tolerance",
+        "iterations": 576,
+        "updates": 575,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_w",
+      "call": 12,
+      "fixed_iota": 65308372.18908767,
+      "arrays": {
+        "W": "update_w_012__W",
+        "theta": "update_w_012__theta",
+        "r": "update_w_012__r"
+      },
+      "actual_returned_flags": {
+        "converged": true,
+        "termination_reason": "relative_objective_tolerance",
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_theta",
+      "call": 12,
+      "fixed_iota": 65308372.18908767,
+      "arrays": {
+        "W": "update_theta_012__W",
+        "theta": "update_theta_012__theta",
+        "r": "update_theta_012__r"
+      },
+      "actual_returned_flags": {
+        "applicable": true,
+        "converged": true,
+        "termination_reason": "gradient_tolerance",
+        "iterations": 47,
+        "updates": 46,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    },
+    {
+      "method": "update_rotation",
+      "call": 12,
+      "fixed_iota": 65308372.18908767,
+      "arrays": {
+        "W": "update_rotation_012__W",
+        "theta": "update_rotation_012__theta",
+        "r": "update_rotation_012__r"
+      },
+      "actual_returned_flags": {
+        "converged": true,
+        "termination_reason": "projected_gradient_tolerance",
+        "iterations": 557,
+        "updates": 556,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "capped_unconverged": false
+      },
+      "original_result_tuple_object_preserved": true
+    }
+  ],
+  "counts": {
+    "update_w": 12,
+    "update_theta": 12,
+    "update_rotation": 12
+  },
+  "expected_completed_outer_blocks": 12,
+  "capture_errors": [],
+  "all_completed_blocks_have_three_saved_returned_states": true,
+  "arrays_file": "actual-returned-inner-block-states.npz",
+  "arrays_SHA256": "a042ada00209e5075b6203e7ab8b2fbc5c29ab9926e6ebc3005816861696d690",
+  "no_model_gradient_MC_RNG_or_extra_trial_calls": true,
+  "scientific_PASS": false
+}

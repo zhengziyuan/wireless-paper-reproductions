@@ -1,0 +1,50 @@
+{
+  "scope": "Retained original paired interference curves plus controlled first-stage divergence diagnosis",
+  "original_192_pairs_including_outlier_retained": true,
+  "actual_outlier": {
+    "ordinal": 47,
+    "scheme": "MR-TTS-TS",
+    "matlab": 4.439277462342028,
+    "python": 9.414204943956834,
+    "signed_linear_gap": -4.974927481614806,
+    "absolute_linear_gap": 4.974927481614806,
+    "relative_gap_to_python": 0.5284490311429125,
+    "signed_dB_gap": -3.264713585002441,
+    "same_state_field_tolerance_would_pass": false
+  },
+  "other_191_pairs_maximum_absolute_linear_gap": 0.0009138922704883257,
+  "other_191_pairs_maximum_absolute_dB_gap": 0.00143770000685545,
+  "actual_first_stage_initial_phi_bitwise_equal": true,
+  "actual_first_stage_fixed_p0_relative_norm_difference": 5.554841241071878e-05,
+  "actual_first_stage_fixed_p0_maximum_absolute_difference": 4.209810450038487e-06,
+  "own_original_endpoint_criteria_and_strict_gradient_stops_MP80_MP100_pass": true,
+  "same_context_higher_endpoint_objective_gap": {
+    "python": "9.57927542401819151933806566335745654190346597063133758661966912773998324813238790166202326184083822526413",
+    "matlab": "9.57897228628263326622833914789368321311907047301097071616113122957450995818333210703152391077536350958633"
+  },
+  "prospective_phase_controls": [
+    {
+      "fixed_power_from": "python",
+      "criterion": "13.9603068210755695767816779143372437643266969960093204446222437898085019761220494997935597565985400509167",
+      "gradient_norm": "0.000000720987991731567166362828701027356871347604509614501106904965610557647499433804327706951966206236764109491",
+      "maximum_gradient_error": "0.00000000000000173672310076122844093199499709660121287815727284484946489282152418271167088763566200661999941675770844037",
+      "fields_pass": true,
+      "original_strict_gradient_stop_pass": true
+    },
+    {
+      "fixed_power_from": "matlab",
+      "criterion": "4.38103784110001617019988957081775520529564424143908896183976639019980103875770404557029065101570643162992",
+      "gradient_norm": "0.000000998510864987574208184560885984511218641798524406942690333238631837314766959621223966056511944393699442222",
+      "maximum_gradient_error": "0.000000000000000338639431636377282865208225969056175144422443751040624697485376818291139797445260423537300117357815277487",
+      "fields_pass": true,
+      "original_strict_gradient_stop_pass": true
+    }
+  ],
+  "same_native_data_same_initial_phi_same_code_only_actual_fixed_p0_varied": true,
+  "fixed_power_perturbation_sufficient_for_observed_high_low_first_phase_outcome_under_common_implementation": true,
+  "full_case_reoptimized_to_replace_outlier": false,
+  "new_optimizer_phase_calls": 2,
+  "new_convex_solver_or_MC_calls": 0,
+  "global_optimality_unique_original_cause_or_optimized_solution_equality_claimed": false,
+  "evidence_scope": "Both actual endpoints are stationary under their own fixed contexts. A controlled common-code experiment reproduces the high/low first-phase pattern by changing p0 alone. This does not prove a unique explanation for every full-chain difference, classify Hessians, or establish global/local maxima."
+}

@@ -1,0 +1,214 @@
+{
+  "actual_negative_controls": 32,
+  "all_expected_invalid_controls_rejected": true,
+  "groups": {
+    "exact_geometry": {
+      "actual_negative_controls": 17,
+      "all_expected_invalid_support_geometry_precision_or_scope_controls_rejected": true,
+      "controls": [
+        {
+          "control": "wrong_joint_visible_ray_count",
+          "rejected": true,
+          "reason": "Joint ray support differs",
+          "SHA256": "824b1a881dc8ffcfccc6790e58e0f181facde4a0a0f8ad9392bbad5bb0833a69"
+        },
+        {
+          "control": "unsafe_full_shadow_neighborhood",
+          "rejected": true,
+          "reason": "The claimed full rotation neighborhood can cross a visibility boundary",
+          "SHA256": "9da88371d8d3ab268b9279e3afd4ab4f617d369baedb9e4dd021f1d7d829e792"
+        },
+        {
+          "control": "two_paths_misreported_as_dense_rank1_nonzero",
+          "rejected": true,
+          "reason": "The exact single-path nonzero claim is invalid",
+          "SHA256": "4b9716c7fbe9a20ffe88a75a0d534d72b5a5ded7af868018bd01453f0628fb3e"
+        },
+        {
+          "control": "wrong_center_to_center_first_LoS_label",
+          "rejected": true,
+          "reason": "The source-qualified first-LoS geometry label changed",
+          "SHA256": "490b95cbf1b2cb1d156b6d603cc46138f3a6526b65dd80fde0188c81cb387df8"
+        },
+        {
+          "control": "support_direction_sign_changed_preserving_norm",
+          "rejected": true,
+          "reason": "A complete binary direction coordinate differs from the actual input",
+          "SHA256": "73f881805f59140ed2b3c7ffc39174c5c9ebb345549a28c6f01ff68edcc0203e"
+        },
+        {
+          "control": "one_full_support_direction_coordinate_missing",
+          "rejected": true,
+          "reason": "A complete binary direction coordinate differs from the actual input",
+          "SHA256": "002667dc11e7a9d36640c6772956f6adb961eb0e9790d62fea015ae1432f7603"
+        },
+        {
+          "control": "positive_LoS_coordinate_error_replaced_by_zero",
+          "rejected": true,
+          "reason": "The exact first-LoS coordinate residual changed",
+          "SHA256": "ae529e63e62df57246f78be7fb32d1366a1272c92148ec3e63719e9b7978de0c"
+        },
+        {
+          "control": "wrong_full_original_input_fingerprint",
+          "rejected": true,
+          "reason": "An original immutable fingerprint changed",
+          "SHA256": "ac523f6f2e4051779c81e543808a8ffce4aecf7ba890b0bd36fed3642298f9ff"
+        },
+        {
+          "control": "skew_lines_misreported_as_zero_distance",
+          "rejected": true,
+          "reason": "The independent exact Gram distance disagrees with the cross-product certificate",
+          "SHA256": "766c74f6ab181ae253c7798845c5ff587b02b354a38f3260adb43a5567368775"
+        },
+        {
+          "control": "wrong_exact_Gram_determinant",
+          "rejected": true,
+          "reason": "The exact cross-product/Gram determinant identity differs",
+          "SHA256": "4af0bdd4d658946b2ccfddeb3338eeb17661def772927a3a95a1e4d902dc7ab0"
+        },
+        {
+          "control": "triple_sign_changed_preserving_its_square",
+          "rejected": true,
+          "reason": "A signed exact triple-product coordinate changed",
+          "SHA256": "fb48291203a2dbc802afd0f30caa4fdb5bf8275d9ef4875546422e0ff318c2e6"
+        },
+        {
+          "control": "one_first_user_direction_coordinate_missing",
+          "rejected": true,
+          "reason": "Both complete three-coordinate first-ray vectors are required",
+          "SHA256": "a01c63672abb164098a45d8b3726f59f749aae29e5a1c52631c7793381b72577"
+        },
+        {
+          "control": "first_user_direction_sign_changed_preserving_norm",
+          "rejected": true,
+          "reason": "The independent exact Gram distance disagrees with the cross-product certificate",
+          "SHA256": "f0c528aed9bfc94e2110dc09c43089086451aa76fddf79e1647184ac1629c9eb"
+        },
+        {
+          "control": "one_MP100_geometry_ordinate_changed",
+          "rejected": true,
+          "reason": "A complete arbitrary-precision line-distance ordinate differs from the exact Gram result",
+          "SHA256": "8c05898ee1a4a4e76d1c061686e0fff9d66c2aee915ce0eebb4c9f12b7ccb0ea"
+        },
+        {
+          "control": "complete_MP80_geometry_lane_missing",
+          "rejected": true,
+          "reason": "One complete MP precision lane is absent",
+          "SHA256": "51dd22efbfa01896e38a3e2770007e6695487fa822710f86a2a903a3961367f7"
+        },
+        {
+          "control": "wrong_disclosed_geometry_scale_decision",
+          "rejected": true,
+          "reason": "The disclosed diagnostic distance comparison changed",
+          "SHA256": "3624e39c3b2830f0d5b3d8b11a56cbf7feaa7feaec9dc5ba4de9f52c62d1ed79"
+        },
+        {
+          "control": "one_full_original_user_pair_missing",
+          "rejected": true,
+          "reason": "One original full user pair is missing"
+        }
+      ]
+    },
+    "NoRIS_fields": {
+      "actual_negative_controls": 9,
+      "all_expected_invalid_full_fields_saved_state_or_scope_controls_rejected": true,
+      "controls": [
+        {
+          "control": "one_complete_precision_lane_missing",
+          "rejected": true,
+          "reason": "Both complete original precision lanes are required",
+          "SHA256": "06e75e1a9ff7af1047823683345b53119df237b753b68f777fe7913dc0733b2c"
+        },
+        {
+          "control": "one_source_variant_missing",
+          "rejected": true,
+          "reason": "Both complete source model variants are required",
+          "SHA256": "bcec0d51c0e630e9633f7762731c483fcd0afff937c082f2252048d578a9c468"
+        },
+        {
+          "control": "signal_phase_changed_preserving_its_squared_norm",
+          "rejected": true,
+          "reason": "An actual full physical matrix coordinate differs from the sealed reference",
+          "SHA256": "f0e7835394d4b1e9710f0227531291841e556487162b897389c9e0dc083ab049"
+        },
+        {
+          "control": "RU_only_bridge_hidden_in_both_precision_lanes",
+          "rejected": true,
+          "reason": "An actual full physical matrix coordinate differs from the sealed reference",
+          "SHA256": "0115b254adaf7ee17c3cfa77915c084b066af282770de798ff0c39fc92c3b2b3"
+        },
+        {
+          "control": "one_full_RIS_outgoing_coordinate_row_missing",
+          "rejected": true,
+          "reason": "An original full real/imag matrix coordinate is missing",
+          "SHA256": "cf53eccffeb974e2e0e206f5415ab19f05ee72a0485db21cc1953282040dd4e0"
+        },
+        {
+          "control": "one_user_SINR_metric_ordinate_changed",
+          "rejected": true,
+          "reason": "A complete physical scalar/metric ordinate differs",
+          "SHA256": "05f99deb97221d57fd0993c496bb3d31902c94c358995ecaf204ee434721f699"
+        },
+        {
+          "control": "one_rescaled_NMSE_ordinate_changed",
+          "rejected": true,
+          "reason": "A complete physical scalar/metric ordinate differs",
+          "SHA256": "0f0522f6e866f66d8b6478096e4e1d3b5f78da4e5034e795c6dc10106e7c9928"
+        },
+        {
+          "control": "actual_saved_W_coordinate_changed",
+          "rejected": true,
+          "reason": "An actual original saved W/theta/rotation/iota coordinate changed"
+        },
+        {
+          "control": "same_state_diagnostic_relabeled_paper_error",
+          "rejected": true,
+          "reason": "A given-state diagnostic was inflated into an optimized result or paper-error claim"
+        }
+      ]
+    },
+    "transport": {
+      "actual_negative_controls": 6,
+      "all_expected_invalid_transport_or_complete_scope_controls_rejected": true,
+      "controls": [
+        {
+          "control": "one_complete_archive_part_byte_changed",
+          "rejected": true,
+          "reason": "An original public evidence part differs",
+          "actual_modified_manifest_SHA256": "f72c6ce0300625c9bded6630553ddbd2a2a5240c0dcae26144f120e99b9902b4"
+        },
+        {
+          "control": "one_complete_archive_part_omitted",
+          "rejected": true,
+          "reason": "[Errno 2] No such file or directory: 'E:\\\\ZiyuanZhengProject\\\\paper-reproduction-data\\\\resume-20261017\\\\ISAC-full-source-geometry-public-cold-replay-v1\\\\transport-controls\\\\one_complete_archive_part_omitted\\\\isac-source-geometry.tar.gz.part000'",
+          "actual_modified_manifest_SHA256": "f72c6ce0300625c9bded6630553ddbd2a2a5240c0dcae26144f120e99b9902b4"
+        },
+        {
+          "control": "original11200_scene_scope_reduced",
+          "rejected": true,
+          "reason": "Every original geometry/support/source-state scope is required",
+          "actual_modified_manifest_SHA256": "1ea7a1d81c55213112562000bf54d3b3cb95421c84dab3cc86353df64b6d26ee"
+        },
+        {
+          "control": "unsafe_payload_member_name",
+          "rejected": true,
+          "reason": "A safe complete original payload inventory is required",
+          "actual_modified_manifest_SHA256": "23d8de5939683130c6aed4a94c3cf8f2ad0053e07748ca6c6717ac906b1d8dd9"
+        },
+        {
+          "control": "one_complete_required_payload_missing",
+          "rejected": true,
+          "reason": "Unsafe, extra, substituted or duplicate source-geometry payload",
+          "actual_modified_manifest_SHA256": "161b59a7ed9c12136abeb518f148ad46a5d38dd2f62c5c14d691407300f560ac"
+        },
+        {
+          "control": "original_archive_part_order_substituted",
+          "rejected": true,
+          "reason": "A safe ordered complete archive part is required",
+          "actual_modified_manifest_SHA256": "99bc4d4f4403666c1144a45b6f0eef7e010b50c834ae942a519e89ffd69fc3e6"
+        }
+      ]
+    }
+  },
+  "original_optimizer_calls": 0
+}

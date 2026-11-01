@@ -1,0 +1,113 @@
+{
+  "schema": "actual-public-ISAC145-four-returned-six-retained-slots-firstuse-closure-v1",
+  "actual_public_replay_exit_code": 0,
+  "actual_root_tool_session": 85786,
+  "actual_exit_evidence": "Root explicitly observed the original single tool session naturally return0; no replay performed while packaging.",
+  "actual_source_report": "evidence/public-first-use-four-final-MP80-MP100.json.gz",
+  "actual_source_report_public_SHA256": "908d4d9db804da2be9c9a8f40fd42071ba8919867f96e5b56887745ef959cce0",
+  "original_local_firstuse_report_SHA256": "9d2719db3a1f5c8454495c43e952bbe62ff1981af8e8f509857d5779523cd399",
+  "path_metadata_only_projection": true,
+  "path_strings_projected": 0,
+  "typed_numeric_values_float64_bits_and_original_flags_unchanged": true,
+  "nonpath_strings_including_all_MP_decimal_values_unchanged": true,
+  "original_reader_provider_fixture_math_source_bytes_unchanged": true,
+  "source_input_interval_unchanged": true,
+  "all_actual_firstuse_scoped_flags": {
+    "complete": true,
+    "all4_returned_final_physical_fields_and_feasibility_pass": true,
+    "all4_returned_last_fixed_iota_gradient_components_and_precision_pass": true,
+    "all4_returned_fixed_iota_objectives_and_final_PGA_norm_reader_comparisons_pass": true,
+    "exact_saved_historical_phase_norm_and_original_stop_classification_comparisons_pass": true,
+    "source_input_interval_unchanged": true,
+    "scoped_saved_final_state_and_derivative_comparisons_pass": true
+  },
+  "actual_four_returned_state_names": [
+    "Fix-BS & Rot-RIS",
+    "Fix-BS & Fix-RIS",
+    "Rot-BS & No-RIS",
+    "Fix-BS & No-RIS"
+  ],
+  "six_original_outcome_slots": [
+    "Rot-BS & Rot-RIS",
+    "Rot-BS & Fix-RIS",
+    "Fix-BS & Rot-RIS",
+    "Fix-BS & Fix-RIS",
+    "Rot-BS & No-RIS",
+    "Fix-BS & No-RIS"
+  ],
+  "two_missing_failed_final_names": [
+    "Rot-BS & Rot-RIS",
+    "Rot-BS & Fix-RIS"
+  ],
+  "original_outcomes": {
+    "failed_no_final": 2,
+    "returned_capped_not_full_converged": 2,
+    "full_converged": 2
+  },
+  "original_checks": {
+    "Rot-BS & Rot-RIS": {
+      "status": "failed"
+    },
+    "Rot-BS & Fix-RIS": {
+      "status": "failed"
+    },
+    "Fix-BS & Rot-RIS": {
+      "status": "executed",
+      "converged": false,
+      "inner_all_converged": false,
+      "full_converged": false,
+      "power_feasible": true,
+      "unit_modulus_error": 2.220446049250313e-16,
+      "rotation_feasible": true
+    },
+    "Fix-BS & Fix-RIS": {
+      "status": "executed",
+      "converged": false,
+      "inner_all_converged": false,
+      "full_converged": false,
+      "power_feasible": true,
+      "unit_modulus_error": 2.220446049250313e-16,
+      "rotation_feasible": true
+    },
+    "Rot-BS & No-RIS": {
+      "status": "executed",
+      "converged": true,
+      "inner_all_converged": true,
+      "full_converged": true,
+      "power_feasible": true,
+      "unit_modulus_error": 0.0,
+      "rotation_feasible": true
+    },
+    "Fix-BS & No-RIS": {
+      "status": "executed",
+      "converged": true,
+      "inner_all_converged": true,
+      "full_converged": true,
+      "power_feasible": true,
+      "unit_modulus_error": 0.0,
+      "rotation_feasible": true
+    }
+  },
+  "maximum_derivative_and_fixed_objective_MP80_MP100_difference": "1.9853078745766998346011593188713947518024759834610907034380774452492301213168651981539195846124011280044e-58",
+  "original_historical_phase_boundary_scope": {
+    "missing_two_Rot_BS": "Original RCG Armijo failed; no returned W/theta/rotation or historical phase input is saved. No numerical state is invented.",
+    "Fix_BS_Fix_RIS": "Exact saved last phase endpoint because final rotation made0updates; retain actual RCG500-cap failure and compare its saved norm without upgrading convergence.",
+    "Fix_BS_Rot_RIS": "Actual post-rotation final state only. Last rotation made55updates; its historical pre-rotation phase input is not reconstructed.",
+    "No_RIS": "Physical final states and derivatives checked; RIS block not applicable.",
+    "actual_historical_phase_endpoint_names": {
+      "80": [
+        "Fix-BS & Fix-RIS"
+      ],
+      "100": [
+        "Fix-BS & Fix-RIS"
+      ]
+    }
+  },
+  "original_algorithm_stops_unchanged": true,
+  "new_optimizer_MC_RNG_or_production_QCQP_calls": 0,
+  "MP_reexecuted_during_this_packaging_update": false,
+  "all_six_final_states_available": false,
+  "original_all_six_algorithm_convergence_pass": false,
+  "complete_AO_QT_QCQP_trajectory_dual_reference_or_fullpaper_PASS": false,
+  "earlier_preparation_only_fields_in_preserved_provenance_or_replay_plan_are_historical": true
+}

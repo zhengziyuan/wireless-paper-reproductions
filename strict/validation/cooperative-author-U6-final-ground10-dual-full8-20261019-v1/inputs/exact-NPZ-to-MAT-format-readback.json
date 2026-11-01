@@ -1,0 +1,227 @@
+{
+  "input_npz": {
+    "path": "local-source/6ddeeb4dc375/channel-data-and-limits.npz",
+    "bytes": 107172,
+    "SHA256": "ca584f9bdf3eb551f8399026c82693c8072cb7c10e1e198baf29f8a7d5f93353"
+  },
+  "configuration": {
+    "path": "local-source/2f4c7faa4930/configuration-requires-saved-source-factory.json",
+    "bytes": 81283,
+    "SHA256": "1be0843c852d9fdafe00896e903472a2ad5596da26d3bd62573f2ca534e23acc"
+  },
+  "output_MAT": {
+    "path": "local-source/8429438954c5/canonical-native-U6-final-ground10-eleven-fields-and-limits.mat",
+    "bytes": 104707,
+    "SHA256": "9292bfee1e5b5f3c78c924f9cfa88bf5fc434ce1291ad3df14e41528dc021fcd"
+  },
+  "rows": [
+    {
+      "field": "d_mean",
+      "NPZ_dtype": "<c16",
+      "NPZ_shape": [
+        3,
+        6,
+        16
+      ],
+      "MAT_shape": [
+        3,
+        6,
+        16
+      ],
+      "all_dtype_shape_normalized_values_and_IEEE_bits_exact": true,
+      "column_major_raw_SHA256": "3db64b0bf78ebb21a9d8787ff803a22d7c47d3842a3ebe3b512fa27da00d5319"
+    },
+    {
+      "field": "d_var",
+      "NPZ_dtype": "<f8",
+      "NPZ_shape": [
+        3,
+        6
+      ],
+      "MAT_shape": [
+        3,
+        6
+      ],
+      "all_dtype_shape_normalized_values_and_IEEE_bits_exact": true,
+      "column_major_raw_SHA256": "336ee9d03bf94ae9f2595e077fce41017f177ffbe557484c2e68a0b1f7b95154"
+    },
+    {
+      "field": "G_mean",
+      "NPZ_dtype": "<c16",
+      "NPZ_shape": [
+        3,
+        6,
+        16,
+        25
+      ],
+      "MAT_shape": [
+        3,
+        6,
+        16,
+        25
+      ],
+      "all_dtype_shape_normalized_values_and_IEEE_bits_exact": true,
+      "column_major_raw_SHA256": "000cb68c94a2b250814dfb60505133df08912cd765480559a3c54c89efed67a6"
+    },
+    {
+      "field": "G_var",
+      "NPZ_dtype": "<f8",
+      "NPZ_shape": [
+        3,
+        6
+      ],
+      "MAT_shape": [
+        3,
+        6
+      ],
+      "all_dtype_shape_normalized_values_and_IEEE_bits_exact": true,
+      "column_major_raw_SHA256": "cc5326d3d39a300072c865d1fca8fae7f2bb89ef67ede5308566061b765fc1a4"
+    },
+    {
+      "field": "r_mean",
+      "NPZ_dtype": "<c16",
+      "NPZ_shape": [
+        6,
+        25
+      ],
+      "MAT_shape": [
+        6,
+        25
+      ],
+      "all_dtype_shape_normalized_values_and_IEEE_bits_exact": true,
+      "column_major_raw_SHA256": "526891b053f7b764f0dfefc76a617a56315ccd2808f718fd5664e6f253057e6e"
+    },
+    {
+      "field": "r_var",
+      "NPZ_dtype": "<f8",
+      "NPZ_shape": [
+        6
+      ],
+      "MAT_shape": [
+        6,
+        1
+      ],
+      "all_dtype_shape_normalized_values_and_IEEE_bits_exact": true,
+      "column_major_raw_SHA256": "4b92f2f4276c04d2633c0eb5a8f60d0cb871b39902f16605eefe4bcdeecb372a"
+    },
+    {
+      "field": "gt_second",
+      "NPZ_dtype": "<c16",
+      "NPZ_shape": [
+        3,
+        1,
+        16,
+        16
+      ],
+      "MAT_shape": [
+        3,
+        1,
+        16,
+        16
+      ],
+      "all_dtype_shape_normalized_values_and_IEEE_bits_exact": true,
+      "column_major_raw_SHA256": "4f1f9f2d327d26fa8ca10403cf76bf2133f5010045c69904de069c87bb8c1ae8"
+    },
+    {
+      "field": "geo_d_mean",
+      "NPZ_dtype": "<c16",
+      "NPZ_shape": [
+        6
+      ],
+      "MAT_shape": [
+        6,
+        1
+      ],
+      "all_dtype_shape_normalized_values_and_IEEE_bits_exact": true,
+      "column_major_raw_SHA256": "a6d8b57733ad7b27e04336886494011e1156bb42cdd5854adb8c019576be560c"
+    },
+    {
+      "field": "geo_d_var",
+      "NPZ_dtype": "<f8",
+      "NPZ_shape": [
+        6
+      ],
+      "MAT_shape": [
+        6,
+        1
+      ],
+      "all_dtype_shape_normalized_values_and_IEEE_bits_exact": true,
+      "column_major_raw_SHA256": "22022a70f4cd0bba5b8cae7c31256586861ba09bbba562143a7fcdb9aa2419ac"
+    },
+    {
+      "field": "geo_G_mean",
+      "NPZ_dtype": "<c16",
+      "NPZ_shape": [
+        6,
+        25
+      ],
+      "MAT_shape": [
+        6,
+        25
+      ],
+      "all_dtype_shape_normalized_values_and_IEEE_bits_exact": true,
+      "column_major_raw_SHA256": "2e9f596e38168db21c4cdc58c39616d7bece1c3865949fb5fe61ec2f77a84523"
+    },
+    {
+      "field": "geo_G_var",
+      "NPZ_dtype": "<f8",
+      "NPZ_shape": [
+        6
+      ],
+      "MAT_shape": [
+        6,
+        1
+      ],
+      "all_dtype_shape_normalized_values_and_IEEE_bits_exact": true,
+      "column_major_raw_SHA256": "b96afe4f4d151221857323dee61fdfc46df731f052c4a2968371bc6dd8d4ab82"
+    },
+    {
+      "field": "power_limit",
+      "NPZ_dtype": "<f8",
+      "NPZ_shape": [
+        3
+      ],
+      "MAT_shape": [
+        3,
+        1
+      ],
+      "all_dtype_shape_normalized_values_and_IEEE_bits_exact": true,
+      "column_major_raw_SHA256": "aaab74776643d398161c70938395faf8beffff27b28ee9d8e4233d92c914559b"
+    },
+    {
+      "field": "interference_limit",
+      "NPZ_dtype": "<f8",
+      "NPZ_shape": [
+        1
+      ],
+      "MAT_shape": [
+        1,
+        1
+      ],
+      "all_dtype_shape_normalized_values_and_IEEE_bits_exact": true,
+      "column_major_raw_SHA256": "c738dd99fada954a0be83cb94069e65973256ed5a199cd293841c789ad3b0910"
+    }
+  ],
+  "changed_vs_saved_working_beta1_fields": [
+    "r_mean",
+    "r_var"
+  ],
+  "other9channel_arrays_and2limits_unchanged": [
+    "d_mean",
+    "d_var",
+    "G_mean",
+    "G_var",
+    "gt_second",
+    "geo_d_mean",
+    "geo_d_var",
+    "geo_G_mean",
+    "geo_G_var",
+    "power_limit",
+    "interference_limit"
+  ],
+  "no_noise_gain_phase_geometry_or_scale_operation": true,
+  "new_optimizer_RNG_MC_or_sourceprefix_calls": 0,
+  "selected_ground_factor": 10,
+  "retained_original_working_source_ground_factor": 1,
+  "scientific_acceptance_PASS": false
+}

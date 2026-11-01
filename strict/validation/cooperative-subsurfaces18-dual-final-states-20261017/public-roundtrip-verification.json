@@ -1,0 +1,77 @@
+{
+  "scope": "Actual public M18 restore plus prior power/interference transport compatibility and failed-slot rejection controls",
+  "archive_sha256": "0d652bb08da89d24211f4dac9f9da5ebcd5b9d3bee7fb2b4d9753a1677111da0",
+  "actual_public_payloads_verified": 28,
+  "all288_final_MP_report_exact_restored_input_and_current_math_source_bindings_match": true,
+  "original_MP80_MP100_all288_final_state_report_pass": true,
+  "exact_same_math_not_repeated_after_byte_identical_restoration": true,
+  "complete_public_vector_reference_comparisons_replayed": true,
+  "positive_cohorts": {
+    "power": {
+      "cases_per_language": 24,
+      "actual_final_states": 384,
+      "all_payloads_byte_verified": 28,
+      "archive_sha256": "e308bd15f3000192f90a62f5b622c4e4ce3146f44b3a1ffd9a901e93288f8b0d",
+      "all_public_reference_comparisons_exactly_replayed": true,
+      "original_points_per_language": 192
+    },
+    "interference": {
+      "cases_per_language": 24,
+      "actual_final_states": 384,
+      "all_payloads_byte_verified": 38,
+      "archive_sha256": "0388bbebed1873d089280c0bdf462f26c0493ea3924ee1fa112f6ae9dd0a7513",
+      "all_public_reference_comparisons_exactly_replayed": true,
+      "original_points_per_language": 192
+    },
+    "subsurfaces": {
+      "cases_per_language": 18,
+      "actual_final_states": 288,
+      "all_payloads_byte_verified": 28,
+      "archive_sha256": "0d652bb08da89d24211f4dac9f9da5ebcd5b9d3bee7fb2b4d9753a1677111da0",
+      "all_public_reference_comparisons_exactly_replayed": true,
+      "original_points_per_language": 144
+    }
+  },
+  "negative_controls": [
+    {
+      "control": "one-byte-corrupt-archive-part",
+      "rejected": true,
+      "error_type": "ValueError",
+      "reason": "Archive part changed",
+      "output_created": false
+    },
+    {
+      "control": "wrong-original-cohort",
+      "rejected": true,
+      "error_type": "ValueError",
+      "reason": "Every original slot, both languages and all eight schemes are required",
+      "output_created": false
+    },
+    {
+      "control": "missing-Python-source-slot",
+      "rejected": true,
+      "error_type": "ValueError",
+      "reason": "Missing/duplicated original slot or scheme",
+      "output_created": false
+    },
+    {
+      "control": "duplicated-Python-source-slot",
+      "rejected": true,
+      "error_type": "ValueError",
+      "reason": "Missing/duplicated original slot or scheme",
+      "output_created": false
+    },
+    {
+      "control": "historical-failed056-without-explicit-repaired-epoch",
+      "rejected": true,
+      "reason": "M=45 slots require the explicit completed repaired-Python root",
+      "historical_failure_flags_modified": false
+    }
+  ],
+  "all_five_negative_controls_rejected_before_output": true,
+  "changed_python_sources_AST_parsed": 7,
+  "actual_new_optimizer_or_random_draw_calls": 0,
+  "historical_failure_receipts_modified": false,
+  "source_curve_or_full183_or_full_paper_pass": false,
+  "verifier_sha256": "9f46ab8e1fd86b405b3471ddfef0f094253d6f6bf9fa26d3c01f09500324fa3c"
+}

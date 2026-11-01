@@ -1,0 +1,92 @@
+{
+  "schema": "actual-native-U6-selected-final-ground10-four-saved-scientific-stages-closure-v1",
+  "scoped_saved_scientific_PASS": true,
+  "scope": {
+    "J": 3,
+    "U": 6,
+    "N": 16,
+    "M": 25,
+    "K": 1,
+    "power_W_each": 50,
+    "normalized_INR": 0.01,
+    "kappaN_dB": 20,
+    "kappaR_dB": 10,
+    "kappaG_dB": 30,
+    "original_working_source_linear_beta_R": 1,
+    "selected_linear_beta_R": 10,
+    "not_final_TableI_U2": true
+  },
+  "stage_receipts": {
+    "MC": {
+      "path": "local-source/1047a160ea86/MC-ACTUAL_STAGE_SCOPE_OUTCOME_V2.json",
+      "SHA256": "b8564785d60c7a0df9b8b41040ba3ca4e77a4dcb4c93f39db53dc58484e876fe"
+    },
+    "ownstate": {
+      "path": "local-source/e215ab827001/ownstate-ACTUAL_STAGE_SCOPE_OUTCOME_V2.json",
+      "SHA256": "c6c467b9d3820ff89b34198b37a6975eabc2d6182dc2f3184d9aa7b1b2e8c415"
+    },
+    "stops": {
+      "path": "local-source/bd7ffd4ae514/stops-ACTUAL_STAGE_SCOPE_OUTCOME_V2.json",
+      "SHA256": "597a2aab8e5277367f0464bc1cd06081d2db8834a4bbc3cd50f5334266cd91a0"
+    },
+    "initial": {
+      "path": "local-source/477f165c5321/initial-ACTUAL_STAGE_SCOPE_OUTCOME_V2.json",
+      "SHA256": "e6710f0460aabfe5393b562874fecfe1a2d8bf1b5b0c174c816d79dc8f67fd90"
+    }
+  },
+  "ownstate": {
+    "path": "local-source/66dcc5183adb/ACTUAL_NEW_FULL8_OWNSTATE_QT_PHASE_DIRECT_PREP7_INDEPENDENT_MP_CLOSURE_V1.json",
+    "SHA256": "8473cb156eabf670bdcd02be872032286ddc202d0e2dc63b1db0cad484a7a086"
+  },
+  "phase": {
+    "path": "local-source/33bd65f21439/summary.json",
+    "SHA256": "d900e495b94d93b304077ad5b672b51c1f8ca256cfb222611272f388cfabcd2f"
+  },
+  "MC": {
+    "path": "local-source/bf3ebaef3d5f/ACTUAL_NEW_ONLINE_POWER24_FULL1000_SAVED_OPERAND_INDEPENDENT_CLOSURE_V1.json",
+    "SHA256": "c59b21db0203ac0a61ddc1e92dba70da21891ec64d1afef71e55d315b878b6ba"
+  },
+  "initial": {
+    "path": "local-source/26bf00035675/initial-incumbent-MP.json",
+    "SHA256": "e77366817db686e38701698abcf71ef0e38d76e95e15c0df6f67efad0e8249cb"
+  },
+  "actual_final_states": 8,
+  "actual_QT_candidates": 56,
+  "actual_phase_endpoints": 53,
+  "complex_gradients_per_MP_lane": 7950,
+  "MP_precisions": [
+    80,
+    100
+  ],
+  "all_original_primal_bound_fields_gradient_norm_stop_and_precision_gates_pass": true,
+  "actual_TS_initial_incumbent_calls": 42,
+  "all_original_stops_mu_strict_PhiStar_and11input_bindings_pass": true,
+  "actual_direct_two_preP7_all5_channel_coefficients_original_fields_constraints_and_precision_pass": true,
+  "native_MC_population": {
+    "actual_original_draws": 1000,
+    "link_samples": 18000,
+    "second_fourth_scalar_values": 36000,
+    "same_as_Python_population_not_claimed": true,
+    "independently_audited_actual_native_stream": true,
+    "max_h_error": 6.938893903907228e-17,
+    "max_second_error": 4.440892098500626e-16,
+    "max_fourth_error": 1.1102230246251565e-15,
+    "empirical_second_relative_error": 0.004227998613892375,
+    "empirical_fourth_relative_error": 0.008286635420598506
+  },
+  "original_native_producer_natural_exit": 0,
+  "actual_four_auditor_natural_exit_codes": {
+    "MC": 0,
+    "ownstate": 0,
+    "stops": 0,
+    "initial": 0
+  },
+  "actual_auditor_sessions": {
+    "ownstate": 32830,
+    "initial": 65320
+  },
+  "all_source_and_input_intervals_closed": true,
+  "previous_working_beta1_science_PASS_not_inherited": true,
+  "new_optimizer_RNG_sampler_MCdraw_or_oldbank_replay_calls": 0,
+  "optimized_dual_solution_equality_original_reference_or_fullpaper_PASS": false
+}

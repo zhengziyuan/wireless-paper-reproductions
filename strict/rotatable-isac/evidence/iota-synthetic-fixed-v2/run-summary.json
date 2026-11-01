@@ -1,0 +1,31 @@
+{
+  "schema": "ISAC_IOTA_SYNTHETIC_EVIDENCE_SANITIZED_V1",
+  "scope": "synthetic fixed-state helper comparisons only",
+  "first_attempt": {
+    "outcome": "monitor_error",
+    "reason": "The monitor reported an unexpected top-level path. Subsequent inspection found MathWorks/MATLAB/R2025b/ddux outside the original allowlist; the exact triggering item was not recorded.",
+    "failure_retained": true,
+    "usable_matlab_result_recorded": false
+  },
+  "second_attempt": {
+    "matlab_process": "natural_exit",
+    "return_code": 0,
+    "guard_finished": true,
+    "matched_numeric_cases": 4,
+    "matched_expected_error_cases": 7,
+    "guard_monitored_peak_bytes": 558078,
+    "guard_is_hard_filesystem_quota": false
+  },
+  "second_attempt_source_sha256": {
+    "entry": "c41a30255f3cdf9202c26742d7339de9b6333efa272e5cc9a659d47835839afb",
+    "compare": "2e1a19568a8d5fe14551a7c3f5c128507fe3ca4fba27a4217999ad7dc1a03817",
+    "mathelper": "c24de3aa30feb7fff844f43dd65f9e81ff5ba242c796a06c6d624f565914e46e",
+    "pyhelper": "4abe51c432459e8bb0ddedacb129dec9dcaaabc14030373e170d8558bcb2509e",
+    "inventory": "58f72d05ec469e29be97e139ba4cdf88e4fee5ed8eff94289006b597745b5008"
+  },
+  "paper_parameters_or_states_used": false,
+  "authors_epsilon_established": false,
+  "historical_paper_source_authenticated": false,
+  "optimizer_or_paper_reproduction_pass": false,
+  "second_attempt_guard_sha256": "9aeba708453922675170c382e2692b669d24a1fb4498f1d49aab4ed669a9c42b"
+}

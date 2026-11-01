@@ -1,0 +1,494 @@
+{
+  "schema": "actual-remaining-five-only-case014-lane-source-closure-v1",
+  "source_before": {
+    "logical-source/0060/passive_remaining_block_states_v1.py": "e883b77543a92dde16a4f27ca681de1000354a6c24bef865c12202998b7a676e",
+    "logical-source/0056/run_python_case014_only_missing_four_stable_v1.py": "5652a69b640933baeb512a12f76932e85fd33336946fa9150225b0dc6361df72",
+    "logical-source/0061/run_native_case014_remaining_five_stable_v1.m": "e1df256a544d3149fd39753f8dfeca311a28a2a51d6e7e80ecbf98bc41354371",
+    "logical-source/0062/solve_original_factor_QP_array_v1.m": "7231d5b2a5001ae02618bf3b0e5b06ee7c4c07a262ba73219965c3c7f4849a97",
+    "logical-source/0063/stable_rotation_utility_increment_native_v1.m": "e1ad6ca56ced1010ab6ebd96499322bd0586b71cf3a8d4456335b6ca8f6040a1",
+    "logical-source/0015/equivalent_runtime_case014_v1.py": "ec332540a25a67e205257d907fbe0fce8450e903e896e5be03fbc31932120243",
+    "logical-source/0064/passive_first_failure_v1.py": "855bb184d28c9a760b21b5dcb0d880b89a81b7bbf5e526d965dbbf3cbc7544a1",
+    "logical-source/0065/passive_original_cap_prefix_v1.py": "6a4c294bfad0aa4b405fa97747e99765ea023575b42ffe4bcf2ec6bdae979e1b",
+    "logical-source/0066/passive_RCG_seed_trace_v1.py": "7692fc1ea636b90ac623bc8ed6975f090f88d22ff95ffb4f7eac9dd3d59333d3",
+    "logical-source/0016/stable_metrics.py": "e15ad67ffc92b0ea2b3cbbd5428ff8be30bc6630ab651188d15aa2f01bde8c29",
+    "logical-source/0017/stable_rotation_increment_v1.py": "07678a483b3f8c70bcaf06c91d2ad611b30594c1cb8f17199f63eaa63fb60c4c",
+    "logical-source/0018/structured_original_qcqp_candidate_v1.py": "1fa91846426407d7313f0ba452e2d81c60fa433c9513d8618f870414903f8881",
+    "logical-source/0067/core_original_case014_v1.py": "07f2eb9d9f5011dde45a8c947dd87db31d15b7e6e8ab233e9f43429c408f2fbb",
+    "logical-source/0019/core_structured_case014_v1.py": "4cb6fcaa62353196f6d70e3de9f6bdf8249d9c1c43e365880f83ff1dd3864404",
+    "logical-source/0068/run_single_remaining_scheme_case014_v1.py": "4975259410ca4852b910c3f40999ad61c302716cb285998e0e8acf24863b1471",
+    "logical-source/0020/original-config.json": "62d9450cd8ae67986a92c0cd7344f7788d75a3bfb8e89d11d54a59e501536460",
+    "logical-source/0021/original-scenario.json": "3b5e8fced9d90337bc574d660ea29c0a2b1b67aae8fc11950cdbbb28d609c302",
+    "logical-source/0069/EXACT_SOURCE_SELECTION_INVERSE_AND_UNCHANGED_PROVIDER_MATH_V1.json": "b6c241d8dc6631fb4e668b58d65330eb0e9af4212cb5ebaae5c8ea1bd866633a",
+    "logical-source/0070/SOURCE_BOUND_EXISTING_PYTHON_FIXBS_NORIS_BASELINE_REUSE_V1.json": "de8c70c53913255fd5d6b5526cd63d12d6e0d429930ee1818c3f3d5ad20f871e",
+    "logical-source/0071/EXACT_PRESERVED_FIVE_PACKET_TO_MINIMAL_READSET_HOST_DELTA_V1.json": "5bf0b50a062cbb10224a250f4aadb88f54a5a3801722421f232731fa3488ecc1"
+  },
+  "source_after": {
+    "logical-source/0060/passive_remaining_block_states_v1.py": "e883b77543a92dde16a4f27ca681de1000354a6c24bef865c12202998b7a676e",
+    "logical-source/0056/run_python_case014_only_missing_four_stable_v1.py": "5652a69b640933baeb512a12f76932e85fd33336946fa9150225b0dc6361df72",
+    "logical-source/0061/run_native_case014_remaining_five_stable_v1.m": "e1df256a544d3149fd39753f8dfeca311a28a2a51d6e7e80ecbf98bc41354371",
+    "logical-source/0062/solve_original_factor_QP_array_v1.m": "7231d5b2a5001ae02618bf3b0e5b06ee7c4c07a262ba73219965c3c7f4849a97",
+    "logical-source/0063/stable_rotation_utility_increment_native_v1.m": "e1ad6ca56ced1010ab6ebd96499322bd0586b71cf3a8d4456335b6ca8f6040a1",
+    "logical-source/0015/equivalent_runtime_case014_v1.py": "ec332540a25a67e205257d907fbe0fce8450e903e896e5be03fbc31932120243",
+    "logical-source/0064/passive_first_failure_v1.py": "855bb184d28c9a760b21b5dcb0d880b89a81b7bbf5e526d965dbbf3cbc7544a1",
+    "logical-source/0065/passive_original_cap_prefix_v1.py": "6a4c294bfad0aa4b405fa97747e99765ea023575b42ffe4bcf2ec6bdae979e1b",
+    "logical-source/0066/passive_RCG_seed_trace_v1.py": "7692fc1ea636b90ac623bc8ed6975f090f88d22ff95ffb4f7eac9dd3d59333d3",
+    "logical-source/0016/stable_metrics.py": "e15ad67ffc92b0ea2b3cbbd5428ff8be30bc6630ab651188d15aa2f01bde8c29",
+    "logical-source/0017/stable_rotation_increment_v1.py": "07678a483b3f8c70bcaf06c91d2ad611b30594c1cb8f17199f63eaa63fb60c4c",
+    "logical-source/0018/structured_original_qcqp_candidate_v1.py": "1fa91846426407d7313f0ba452e2d81c60fa433c9513d8618f870414903f8881",
+    "logical-source/0067/core_original_case014_v1.py": "07f2eb9d9f5011dde45a8c947dd87db31d15b7e6e8ab233e9f43429c408f2fbb",
+    "logical-source/0019/core_structured_case014_v1.py": "4cb6fcaa62353196f6d70e3de9f6bdf8249d9c1c43e365880f83ff1dd3864404",
+    "logical-source/0068/run_single_remaining_scheme_case014_v1.py": "4975259410ca4852b910c3f40999ad61c302716cb285998e0e8acf24863b1471",
+    "logical-source/0020/original-config.json": "62d9450cd8ae67986a92c0cd7344f7788d75a3bfb8e89d11d54a59e501536460",
+    "logical-source/0021/original-scenario.json": "3b5e8fced9d90337bc574d660ea29c0a2b1b67aae8fc11950cdbbb28d609c302",
+    "logical-source/0069/EXACT_SOURCE_SELECTION_INVERSE_AND_UNCHANGED_PROVIDER_MATH_V1.json": "b6c241d8dc6631fb4e668b58d65330eb0e9af4212cb5ebaae5c8ea1bd866633a",
+    "logical-source/0070/SOURCE_BOUND_EXISTING_PYTHON_FIXBS_NORIS_BASELINE_REUSE_V1.json": "de8c70c53913255fd5d6b5526cd63d12d6e0d429930ee1818c3f3d5ad20f871e",
+    "logical-source/0071/EXACT_PRESERVED_FIVE_PACKET_TO_MINIMAL_READSET_HOST_DELTA_V1.json": "5bf0b50a062cbb10224a250f4aadb88f54a5a3801722421f232731fa3488ecc1"
+  },
+  "source_and_input_interval_closed": true,
+  "source_errors": [],
+  "host_error": null,
+  "rows": [
+    {
+      "schema": "actual-one-of-five-case014-cold-stable-scheme-closure-v1",
+      "ordinal": 2,
+      "scheme": "Rot-BS & Fix-RIS",
+      "algorithm_full_stop": true,
+      "actual_entry_exit": 0,
+      "strict_own_RCG": true,
+      "strict_own_PGA": true,
+      "host_errors": [],
+      "result_saved": true,
+      "no_MC_RNG_or_first_scheme_call": true,
+      "independent_physics_and_final_joint_pending": true,
+      "no_automatic_retry": true
+    },
+    {
+      "schema": "actual-one-of-five-case014-cold-stable-scheme-closure-v1",
+      "ordinal": 3,
+      "scheme": "Fix-BS & Rot-RIS",
+      "algorithm_full_stop": false,
+      "actual_entry_exit": 2,
+      "strict_own_RCG": false,
+      "strict_own_PGA": true,
+      "host_errors": [],
+      "result_saved": true,
+      "no_MC_RNG_or_first_scheme_call": true,
+      "independent_physics_and_final_joint_pending": true,
+      "no_automatic_retry": true
+    },
+    {
+      "schema": "actual-one-of-five-case014-cold-stable-scheme-closure-v1",
+      "ordinal": 4,
+      "scheme": "Fix-BS & Fix-RIS",
+      "algorithm_full_stop": true,
+      "actual_entry_exit": 0,
+      "strict_own_RCG": true,
+      "strict_own_PGA": true,
+      "host_errors": [],
+      "result_saved": true,
+      "no_MC_RNG_or_first_scheme_call": true,
+      "independent_physics_and_final_joint_pending": true,
+      "no_automatic_retry": true
+    },
+    {
+      "schema": "actual-one-of-five-case014-cold-stable-scheme-closure-v1",
+      "ordinal": 5,
+      "scheme": "Rot-BS & No-RIS",
+      "algorithm_full_stop": false,
+      "actual_entry_exit": 2,
+      "strict_own_RCG": null,
+      "strict_own_PGA": false,
+      "host_errors": [],
+      "result_saved": true,
+      "no_MC_RNG_or_first_scheme_call": true,
+      "independent_physics_and_final_joint_pending": true,
+      "no_automatic_retry": true
+    }
+  ],
+  "effective_entry_exit_code": 2,
+  "first_completed_scheme_repeated": false,
+  "new_channel_MC_RNG_calls": 0,
+  "algorithm_stops_not_independent_physics_or_final_joint_PASS": true,
+  "old_python_baseline_reuse": {
+    "schema": "actual-source-bound-Python-old-FixBS-NoRIS-only-baseline-reuse-v1",
+    "lane": "python",
+    "scheme_ordinal": 6,
+    "scheme": "Fix-BS & No-RIS",
+    "reuse_as_original_verified_baseline": true,
+    "new_stable_provider_trajectory_executed": false,
+    "closed_report": {
+      "path": "logical-source/0076/actual-original-raw-return-independent-audit.json",
+      "SHA256": "03a6d3c3a9d2730e65e5c697e5d0e838aa89618b1b9815012ed94a01170801a4"
+    },
+    "original_result_source_identity": {
+      "logical-source/0083/case-000-mc-014-python.json": "3ebc43f8bfee290263d3eaa4ed139b640278ed25bab9afa29891bc91770b9340"
+    },
+    "original_job": {
+      "path": "logical-source/0084/case-000-mc-014.json",
+      "SHA256": "1854197e30970f2014a6412c4bc89fe279c7f7e569457047b8fca0c2d0a30a0e"
+    },
+    "target_scene": {
+      "path": "logical-source/0085/original-scenario.json",
+      "SHA256": "3b5e8fced9d90337bc574d660ea29c0a2b1b67aae8fc11950cdbbb28d609c302"
+    },
+    "all_scene_keys_equal_except": [
+      "RCG_solver",
+      "PGA_solver"
+    ],
+    "all_other_values_types_floathex_and_dict_order_equal": true,
+    "nonmatching_controls": {
+      "RCG_solver": {
+        "old": {
+          "maximum_iterations": 500,
+          "gradient_tolerance": 1e-06,
+          "initial_step": 1.0,
+          "armijo": 0.0001,
+          "backtrack_factor": 0.5,
+          "maximum_backtracks": 80,
+          "mode": "documented_non_ascent_restart"
+        },
+        "current": {
+          "maximum_iterations": 5000,
+          "gradient_tolerance": 1e-06,
+          "initial_step": 1.0,
+          "armijo": 0.0001,
+          "backtrack_factor": 0.5,
+          "maximum_backtracks": 80,
+          "mode": "documented_non_ascent_restart"
+        }
+      },
+      "PGA_solver": {
+        "old": {
+          "maximum_iterations": 500,
+          "gradient_tolerance": 1e-06,
+          "relative_tolerance": 1e-08,
+          "initial_step": 0.01,
+          "minimum_step": 1e-10,
+          "maximum_step": 1,
+          "armijo": 0.0001,
+          "backtrack_factor": 0.5,
+          "maximum_backtracks": 80,
+          "BB_interpretation": "ascent_sign_correction"
+        },
+        "current": {
+          "maximum_iterations": 5000,
+          "gradient_tolerance": 1e-06,
+          "relative_tolerance": 1e-10,
+          "initial_step": 0.01,
+          "minimum_step": 1e-10,
+          "maximum_step": 1,
+          "armijo": 0.0001,
+          "backtrack_factor": 0.5,
+          "maximum_backtracks": 80,
+          "BB_interpretation": "ascent_sign_correction"
+        }
+      }
+    },
+    "effective_control_projection_equal": true,
+    "why_removed_controls_do_not_execute_for_this_scheme": [
+      "Original tuple has with_RIS=false; all RCG calls absent, not replaced.",
+      "Both BS and RIS rotation half-widths are exactly zero; original PGA zeros all six fixed-coordinate projected components before its first stop test.",
+      "The zero norm satisfies unchanged1e-6 on the first of at least500 allowed iterations; no line-search, relative-step stop or subsequent PGA iteration is reached.",
+      "Thus RCG maximum_iterations and PGA maximum_iterations/relative_tolerance are unused in this original fixed-angle NoRIS trajectory. All other controls and physical inputs match."
+    ],
+    "old_original_stop_population": {
+      "AO_iterations": 3,
+      "AO_budget": 500,
+      "original_AO_stop": true,
+      "original_full_stop": true,
+      "final_AO_relative_improvement": 2.6564018772831226e-07,
+      "original_AO_tolerance": 1e-05,
+      "blocks": {
+        "W": {
+          "blocks": 3,
+          "original_stops": 3,
+          "caps": 0,
+          "final_gradient_above_tolerance": 0,
+          "relative_step_stop_with_final_gradient_above_tolerance": 0
+        },
+        "RIS": {
+          "blocks": 3,
+          "original_stops": 3,
+          "caps": 0,
+          "final_gradient_above_tolerance": 0,
+          "relative_step_stop_with_final_gradient_above_tolerance": 0
+        },
+        "rotation": {
+          "blocks": 3,
+          "original_stops": 3,
+          "caps": 0,
+          "final_gradient_above_tolerance": 0,
+          "relative_step_stop_with_final_gradient_above_tolerance": 0
+        }
+      },
+      "failed_scheme_tape_recovered": false
+    },
+    "old_independent_physics80": {
+      "fields": {
+        "utility": {
+          "components": 1,
+          "maximum_absolute_error": "0.00000000000079728753310167330044712782111768757660420181723989222767104754981696638001634747386201995438460561658146",
+          "checks_pass": true,
+          "expected": [
+            "3.54266370349627409378779145091113243341240282023589579818276010777232895245018303361998365252613798004562"
+          ]
+        },
+        "rate": {
+          "components": 1,
+          "maximum_absolute_error": "0.000000000000799808196897659519185511491341653177088901159950374598898389691021064794299650788441703119214062302303195",
+          "checks_pass": true,
+          "expected": [
+            "13.5422494496918530657808518907302420455002354952604110988400496254011016103089789352057003492115582968808"
+          ]
+        },
+        "nmse": {
+          "components": 1,
+          "maximum_absolute_error": "0.00000000000000016324853762860935060447648894929442346993427104823712273421412041005227228919606843280345442669397255357",
+          "checks_pass": true,
+          "expected": [
+            "0.999958574619557897199306043981910961208783267502451530065728951762877265785879589947727710803931567196546"
+          ]
+        },
+        "iota": {
+          "components": 1,
+          "maximum_absolute_error": "0.000000000000150734319649691093052017685905552738041329927286708784259110813693593633283173571061423293115261001302498",
+          "checks_pass": true,
+          "expected": [
+            "886.087944107276220407459586804401790511610969447261958670072713291215740889186306406366716826428938576707"
+          ]
+        },
+        "sinr": {
+          "components": 2,
+          "maximum_absolute_error": "0.00000000660838141669949346862090657599384272160396092146423504194531636910743164114754771366788581041133121709298",
+          "checks_pass": true,
+          "expected": [
+            "0.0",
+            "11928.5288864612448449329895729414437906896311572783960390785357649580546836308925683588524522863321141896"
+          ]
+        },
+        "pattern": {
+          "components": 66,
+          "maximum_absolute_error": "0.0000000000000018163151917145839614494211724358612106999407484874658185719352156918676675218571685063383928336583630415",
+          "checks_pass": true,
+          "expected": [
+            "0.0",
+            "0.0",
+            "0.0",
+            "0.132793875050565952258077688697610877359894298009273248664945804822860929190075655698945608348972604785778",
+            "1.34707159842129600116511749619300925890216045607342278519138378594825686046801062155102796080581420655121",
+            "3.98386875750210062383442443694622274627061175260617262414250415433461341819720257034257552716654228571598",
+            "0.0",
+            "0.0",
+            "0.0",
+            "0.155339504567603851374065681820357350298078382153625398027864460829812452121389691851516312748680462816096",
+            "1.53942727812716475703536175361140141475502303764290622644508224094155474451522189969527864362784246940036",
+            "4.42623924974060849012600828826154597834420710382996069994074848746581857193521569186766752185716850633839",
+            "0.0",
+            "0.0",
+            "0.0",
+            "0.0399385030886357535390715776425944427501774612712596887859658921906787376285336842126992443657258767409372",
+            "0.516420586148966913646657050586086012763696532216489149641846671092474794756315518487047725446098199344985",
+            "2.02874088651020181063565948416643275898932341547773590776649715399655646298887812973573463827783099284387",
+            "0.0",
+            "0.0",
+            "0.0",
+            "0.00139480062170137063745262170984227394680988376106999319176353648818097552764325655225151921220012969505182",
+            "0.0303077054666236342585679576919948186752642945658317729782924440813616405062248945832953796749638765828279",
+            "0.258884346975275932678775799069245245116120419634554309137213499454087560900181434246798244421149791942565",
+            "0.0",
+            "0.0",
+            "0.0",
+            "0.0568445873203182481128829592979276020547001978156543482116786165477882966614809260491227490994404388600777",
+            "0.351539027544905423383070446126894745371469284651299811881396542965020007093163819454827292255966144112425",
+            "0.278366133096140419129052495067094194381109364715820139826127247884937414001854969327670628571672704030798",
+            "0.0",
+            "0.0",
+            "0.0",
+            "0.125305934816113985158670955002070403877628887110941289859605787542219859894149619007098794773590585761439",
+            "0.799471902815800348873725665653371441690523140622368866419788749261495525628233384005428516663694222419427",
+            "0.835722047826973111790174493963109490872242945875464872683994643258442756180621472713801080636091399778247",
+            "0.0",
+            "0.0",
+            "0.0",
+            "0.00597702197134194628637770312648437478977085293743652465459233458609265388837832174713347260426345915753243",
+            "0.0574168416743834526344168964330765668491512296168001154395693197847811155886580700310001440287059416663974",
+            "0.0817463057835337559677363281383528021677611761655968535486334037482252615124350866706815132854855872542446",
+            "0.0",
+            "0.0",
+            "0.0",
+            "0.000546733749484482647379083533181225037270623399567422207916534230598985630813569924258480425096345702026522",
+            "0.00197254576857762379893818217256703989730520658839943582863398902586992198474876121581307672071046513318342",
+            "0.00676719084204516239153136265794210383160297269441760573751942217197090966712600436809291963279222443531368",
+            "0.0",
+            "0.0",
+            "0.0",
+            "0.0150855522084749464031409800341148540080479471115241779306619076136265406570461919984903082306486287495949",
+            "0.030252962121760642562586488237932392882546665298461584334171611925138246269417265068637296988653597331999",
+            "0.0587337976811580595964636015962325158589730992450337668401187704359008613309352810258614702708897689172128",
+            "0.0",
+            "0.0",
+            "0.0",
+            "0.0159962187052258272582213975728426060939232472038084617076441844965563183493414821708416813276643010323785",
+            "0.245426807981358492618787011485545778577093429389143585483173821657255193076134445135586806079638036030065",
+            "1.25428202756721792354510908438744908042633045471267598542457299926735203614353217884455173069003887912297",
+            "0.0",
+            "0.0",
+            "0.0",
+            "0.132793875050565912187645480128787593535995649687712231092855422982272698471685156161162874642091627829396",
+            "1.34707159842129563394581323066571362688014856220194525432200266926735630427453691219424044319261071827532",
+            "3.98386875750209976002513021836265921878271619613267834497413708354240294900082785425043035710724725242169"
+          ]
+        }
+      },
+      "feasibility": {
+        "power": true,
+        "unit_modulus": true,
+        "rotation": true
+      },
+      "transmit_power": "0.39810717055349727517718291363043634054441113907161826800699841496768366724823273675195790834103755376365",
+      "unit_modulus_error": "0.0",
+      "physical_and_feasibility_pass": true
+    },
+    "old_independent_physics100": {
+      "fields": {
+        "utility": {
+          "components": 1,
+          "maximum_absolute_error": "0.000000000000797287533101673300447127821117687576604201817239892227671047549816957328169343870725220245985124636463427",
+          "checks_pass": true,
+          "expected": [
+            "3.54266370349627409378779145091113243341240282023589579818276010777232895245018304267183065612927477975401"
+          ]
+        },
+        "rate": {
+          "components": 1,
+          "maximum_absolute_error": "0.00000000000079980819689765951918551149134165317708890115995037459889838969102105418651746232303934898317665881356896",
+          "checks_pass": true,
+          "expected": [
+            "13.5422494496918530657808518907302420455002354952604110988400496254011016103089789458134825376769606510168"
+          ]
+        },
+        "nmse": {
+          "components": 1,
+          "maximum_absolute_error": "0.000000000000000163248537628609350604476488949294423469934271048237122734214120409685834811845231412870861684939504865791",
+          "checks_pass": true,
+          "expected": [
+            "0.999958574619557897199306043981910961208783267502451530065728951762877265785879590314165188154768587129138"
+          ]
+        },
+        "iota": {
+          "components": 1,
+          "maximum_absolute_error": "0.000000000000150734319649691093052017685905552738041329927286708784259110813688703132282419515532869302331311780413021",
+          "checks_pass": true,
+          "expected": [
+            "886.087944107276220407459586804401790511610969447261958670072713291215740889186311296867717580484467130698"
+          ]
+        },
+        "sinr": {
+          "components": 2,
+          "maximum_absolute_error": "0.00000000660838141669949346862090657599384272160396092146423504194531636910744662390273373251517969810319557269163",
+          "checks_pass": true,
+          "expected": [
+            "0.0",
+            "11928.5288864612448449329895729414437906896311572783960390785357649580546836308925533760972662674848203019"
+          ]
+        },
+        "pattern": {
+          "components": 66,
+          "maximum_absolute_error": "0.00000000000000181631519171458396144942117243586121069994074848746581857193521569761036416920467283276645616251859628667",
+          "checks_pass": true,
+          "expected": [
+            "0.0",
+            "0.0",
+            "0.0",
+            "0.132793875050565952258077688697610877359894298009273248664945804822860929190075655695763408351411333460513",
+            "1.34707159842129600116511749619300925890216045607342278519138378594825686046801062321457656386682022237549",
+            "3.98386875750210062383442443694622274627061175260617262414250415433461341819720258306624706032141824879089",
+            "0.0",
+            "0.0",
+            "0.0",
+            "0.155339504567603851374065681820357350298078382153625398027864460829812452121389691501427074596214661913841",
+            "1.53942727812716475703536175361140141475502303764290622644508224094155474451522190183805057079743012679108",
+            "4.42623924974060849012600828826154597834420710382996069994074848746581857193521569761036416920467283276646",
+            "0.0",
+            "0.0",
+            "0.0",
+            "0.0399385030886357535390715776425944427501774612712596887859658921906787376285336843155367254377068233211795",
+            "0.516420586148966913646657050586086012763696532216489149641846671092474794756315520705204741454914443172158",
+            "2.02874088651020181063565948416643275898932341547773590776649715399655646298887813612343755853737643228921",
+            "0.0",
+            "0.0",
+            "0.0",
+            "0.0013948006217013706374526217098422739468098837610699931917635364881809755276432565557791804756413037937272",
+            "0.0303077054666236342585679576919948186752642945658317729782924440813616405062248943780380856113769444464483",
+            "0.25888434697527593267877579906924524511612041963455430913721349945408756090018143293129491353482402526193",
+            "0.0",
+            "0.0",
+            "0.0",
+            "0.0568445873203182481128829592979276020547001978156543482116786165477882966614809260872890457773561046816439",
+            "0.351539027544905423383070446126894745371469284651299811881396542965020007093163820646283908387781407090835",
+            "0.278366133096140419129052495067094194381109364715820139826127247884937414001854969578495733468688766428054",
+            "0.0",
+            "0.0",
+            "0.0",
+            "0.125305934816113985158670955002070403877628887110941289859605787542219859894149619104740807046037225159178",
+            "0.799471902815800348873725665653371441690523140622368866419788749261495525628233389368293189029337625551314",
+            "0.835722047826973111790174493963109490872242945875464872683994643258442756180621472280040863741914059317766",
+            "0.0",
+            "0.0",
+            "0.0",
+            "0.00597702197134194628637770312648437478977085293743652465459233458609265388837832171880941137648439190931291",
+            "0.0574168416743834526344168964330765668491512296168001154395693197847811155886580700726498814055589007728346",
+            "0.0817463057835337559677363281383528021677611761655968535486334037482252615124350865486522937647030750075136",
+            "0.0",
+            "0.0",
+            "0.0",
+            "0.000546733749484482647379083533181225037270623399567422207916534230598985630813569934281415146279181030731496",
+            "0.00197254576857762379893818217256703989730520658839943582863398902586992198474876127665699331413556519097304",
+            "0.00676719084204516239153136265794210383160297269441760573751942217197090966712600430108086307634632745354036",
+            "0.0",
+            "0.0",
+            "0.0",
+            "0.0150855522084749464031409800341148540080479471115241779306619076136265406570461919957454499882137598070108",
+            "0.0302529621217606425625864882379323928825466652984615843341716119251382462694172651757580364969281604837146",
+            "0.0587337976811580595964636015962325158589730992450337668401187704359008613309352804391951728573632568845616",
+            "0.0",
+            "0.0",
+            "0.0",
+            "0.0159962187052258272582213975728426060939232472038084617076441844965563183493414820580802727769489719635114",
+            "0.245426807981358492618787011485545778577093429389143585483173821657255193076134445856734802378511431599799",
+            "1.25428202756721792354510908438744908042633045471267598542457299926735203614353218305979489261949965845203",
+            "0.0",
+            "0.0",
+            "0.0",
+            "0.132793875050565912187645480128787593535995649687712231092855422982272698471685156158140637248431202326273",
+            "1.34707159842129563394581323066571362688014856220194525432200266926735630427453691758571981929005028263629",
+            "3.98386875750209976002513021836265921878271619613267834497413708354240294900082786329488064191526659233256"
+          ]
+        }
+      },
+      "feasibility": {
+        "power": true,
+        "unit_modulus": true,
+        "rotation": true
+      },
+      "transmit_power": "0.398107170553497275177182913630436340544411139071618268006998414967683667248232737279067805502563714984651",
+      "unit_modulus_error": "0.0",
+      "physical_and_feasibility_pass": true
+    },
+    "old_scalar_original_stop_consistency_pass": true,
+    "no_inheritance_of_current_structured_provider_status_or_joint_KKT": true,
+    "native_baseline": {
+      "same_input_closed_native_ordinal6_proof_available_in_current_named_readset": false,
+      "known_native_closed_actual_result_scope": "Only first RotBS/RotRIS, resultSHA5eefe6b6.../MATbb9d3690...; fixed15 is not a full baseline.",
+      "python_PASS_does_not_admit_native_baseline": true,
+      "therefore_native_missing_ordinals": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "no_new_model_MP_MC_RNG_or_optimization": true
+  }
+}

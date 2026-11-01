@@ -1,0 +1,268 @@
+{
+  "schema": "ACTUAL_CAP5000_FIRST_SCHEME_DELIVERED_SCOPE_AND_GATE_SEPARATION_V1",
+  "actual_elapsed_seconds": 269.0920934000169,
+  "actual_same_held_natural_exit": 0,
+  "source_and_input_interval_closed": true,
+  "actual_algorithm_OR_stops": {
+    "status": "executed",
+    "converged": true,
+    "inner_all_converged": true,
+    "full_converged": true,
+    "power_feasible": true,
+    "unit_modulus_error": 2.220446049250313e-16,
+    "rotation_feasible": true
+  },
+  "counts": {
+    "W": {
+      "blocks": 12,
+      "iterations": 14,
+      "all_recorded_stop_criteria_pass": true,
+      "no_budget_exhaustion": true
+    },
+    "RIS": {
+      "blocks": 12,
+      "iterations": 2358,
+      "all_recorded_stop_criteria_pass": true,
+      "no_budget_exhaustion": true
+    },
+    "rotation": {
+      "blocks": 12,
+      "iterations": 7119,
+      "all_recorded_stop_criteria_pass": true,
+      "no_budget_exhaustion": true
+    }
+  },
+  "strict_PGA_stationarity": {
+    "projected_gradient_stops_at_AO": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "relative_step_stops_above1e_minus6_at_AO": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "their_final_recorded_PG_norms": [
+      1.2622148951054313e-06,
+      1.5948605155028278e-06,
+      1.973754395974983e-06,
+      2.12835571516429e-06,
+      1.8887376618022642e-06,
+      2.02486350958196e-06,
+      2.08628598022225e-06
+    ],
+    "their_relative_steps": [
+      9.491835709115425e-09,
+      9.448616666623326e-09,
+      9.622240743421275e-09,
+      9.777057960390945e-09,
+      9.041471162869407e-09,
+      9.135598843547009e-09,
+      9.416136490913415e-09
+    ],
+    "all12_negativeBB_or_minclip_count_zero": true,
+    "all_PGA_gradient_stationarity_PASS": false,
+    "printed_OR_stop_PASS_does_not_imply_stationarity": true
+  },
+  "new_final_MP80_MP100": {
+    "actual_auditor_exit_code": 0,
+    "all6_fields_and_power_unit_rotation_constraints_PASS": true,
+    "source_and_saved_input_interval_closed": true,
+    "full_MP80_MP100_field_crossprecision_pass": true,
+    "actual_schemes": 1,
+    "scalar_records": 36,
+    "saved_adjacent_objective_differences": 9467,
+    "all_with_original_monotonic_tolerance": true,
+    "old_MP_PASS_not_inherited": true,
+    "intermediate_KKT_or_stationarity_not_checked_by_final_physics": true
+  },
+  "all10_previous_firstcap_prefix_checks_reused_not_recomputed": true,
+  "previous_prefix_epoch": "Earlier growing-seed RCG/PGA-cap500 first-scheme run; not a claim of all-trajectory equality after the first capped block.",
+  "selected_RCG_seed_policy": "Begin each RCG block at1; every subsequent trial seed is2 times the actual previously accepted alpha; all original PR/transport/retraction/non-ascent restart/Armijo rules remain.",
+  "numeric_policy_provenance": "RCG seed policy and numerical caps/thresholds are disclosed reconstruction choices, not author-provided numerical settings.",
+  "only_RCG_PGA_caps500_to5000": true,
+  "remaining_AO_W_caps_and_all_gradient_relative_Armijo_thresholds_unchanged": true,
+  "printed_OR_stop_is_not_strict_KKT_certificate": true,
+  "this_run_all12_PGA_negative_BB_or_minclip_counts_zero": true,
+  "earlier_constant_seed_tiny_minclip_cause_not_inherited_as_cause_of_these7_ORstops": true,
+  "other5_scheme_calls": 0,
+  "native_matching_whole_trace_executed": false,
+  "original100_channel_campaign_executed_by_this_run": false,
+  "full_trajectory_internal_state_or_KKT_certificates_not_available": true,
+  "only_final_physics_verified_independently": true,
+  "previous390_and217_second_failures_retained": true,
+  "original_reference_or_full_paper_PASS": false,
+  "original_numeric_tokens_and_MP_strings_unchanged": true,
+  "whole_byte_source_and_input_files": [
+    {
+      "path": "equivalent_runtime_case014_v1.py",
+      "SHA256": "781d7ad5f01df8d460c6a4eb905dd7f6cdd0026752465d0d26e6345901e5fc12",
+      "whole_bytes_identical_actual_executed_source": true
+    },
+    {
+      "path": "passive_first_failure_v1.py",
+      "SHA256": "855bb184d28c9a760b21b5dcb0d880b89a81b7bbf5e526d965dbbf3cbc7544a1",
+      "whole_bytes_identical_actual_executed_source": true
+    },
+    {
+      "path": "stable_metrics.py",
+      "SHA256": "e15ad67ffc92b0ea2b3cbbd5428ff8be30bc6630ab651188d15aa2f01bde8c29",
+      "whole_bytes_identical_actual_executed_source": true
+    },
+    {
+      "path": "structured_original_qcqp_candidate_v1.py",
+      "SHA256": "1fa91846426407d7313f0ba452e2d81c60fa433c9513d8618f870414903f8881",
+      "whole_bytes_identical_actual_executed_source": true
+    },
+    {
+      "path": "sources/core_original_case014_v1.py",
+      "SHA256": "07f2eb9d9f5011dde45a8c947dd87db31d15b7e6e8ab233e9f43429c408f2fbb",
+      "whole_bytes_identical_actual_executed_source": true
+    },
+    {
+      "path": "sources/core_structured_case014_v1.py",
+      "SHA256": "4df631cc7ad55005461781cee4b666c66c98f8d9b7135944f693d499d0db4522",
+      "whole_bytes_identical_actual_executed_source": true
+    },
+    {
+      "path": "sources/run_selected_first_scheme_case014_v1.py",
+      "SHA256": "7339b40b3efa519bf9f44fee3127451e30e0d3c255bcff01680362a10abde145",
+      "whole_bytes_identical_actual_executed_source": true
+    },
+    {
+      "path": "passive_RCG_seed_trace_v1.py",
+      "SHA256": "7692fc1ea636b90ac623bc8ed6975f090f88d22ff95ffb4f7eac9dd3d59333d3",
+      "whole_bytes_identical_actual_executed_source": true
+    },
+    {
+      "path": "run_case014_RCG_growth_cap5000_first_scheme_v1.py",
+      "SHA256": "0aa1ade6badbd0a7c33c09daec25e6ecc716ca38c37ac143912216711c659a4a",
+      "whole_bytes_identical_actual_executed_source": true
+    },
+    {
+      "path": "passive_original_cap_prefix_v1.py",
+      "SHA256": "6a4c294bfad0aa4b405fa97747e99765ea023575b42ffe4bcf2ec6bdae979e1b",
+      "whole_bytes_identical_actual_executed_source": true
+    },
+    {
+      "path": "original-config.json",
+      "SHA256": "ddd2ca9e29de71f8786285feca037faa6a6565d256b47f267f582aeff512f6a9",
+      "whole_bytes_identical_actual_input_or_saved_fixture": true
+    },
+    {
+      "path": "original-scenario.json",
+      "SHA256": "a5f2678f6bbbec7a691937bdb92ea97f69c53207b496ade2f4c68a45dffb06df",
+      "whole_bytes_identical_actual_input_or_saved_fixture": true
+    },
+    {
+      "path": "one-actual-final-state-and-original-checks.json",
+      "SHA256": "ce9633f4e8e68c263e4466613f90861064f5197021bafc5648c9b6d9a35804be",
+      "whole_bytes_identical_actual_input_or_saved_fixture": true
+    },
+    {
+      "path": "all-saved-block-scalar-records-and-monotonicity.json.gz",
+      "SHA256": "68f1235d31ef892044eb6f9eba13d57adfe38a241ecf223bf79db020e557fc81",
+      "whole_bytes_identical_actual_input_or_saved_fixture": true
+    }
+  ],
+  "projected_JSON_original_and_public_identities": [
+    {
+      "original_name": "ACTUAL_CAP5000_RETURN_AND_FIRST500_PREFIX_SAVED_SUMMARY_V1.json",
+      "original_SHA256": "f4ae2c6156ef025c9f1d98b295dcd1b85c42f4f0b2aa8a66537ef5aadf1c9531",
+      "public_name": "ACTUAL_CAP5000_RETURN_AND_FIRST500_PREFIX_SAVED_SUMMARY_V1.json",
+      "public_SHA256": "3eef90f2995ec894a69ea2c3ea682e0001b8a5b82d67723255e185a859e8485b",
+      "metadata_paths_only_projected": true,
+      "numeric_JSON_token_bytes_types_float64_bits_and_MP_strings_unchanged": true
+    },
+    {
+      "original_name": "ACTUAL_CAP5000_STOPS_PREFIX_NEW_FINAL_MP_AND_NATIVE_MINIMAL_ROUTE_CLOSURE_V1.json",
+      "original_SHA256": "ba896548a70e70e9548838a40f8d8dab4da9aafc455011ef6398fa2755d28f39",
+      "public_name": "ACTUAL_CAP5000_STOPS_PREFIX_NEW_FINAL_MP_AND_NATIVE_MINIMAL_ROUTE_CLOSURE_V1.json",
+      "public_SHA256": "6acbb7e6decd967b5a2792d72835b433d2efc78b3a880ea882293ad02360a966",
+      "metadata_paths_only_projected": true,
+      "numeric_JSON_token_bytes_types_float64_bits_and_MP_strings_unchanged": true
+    },
+    {
+      "original_name": "ACTUAL_ISAC014_CAP5000_FINAL_MP80_MP100_PHYSICS_AND_SCALAR_CLOSURE_V1.json",
+      "original_SHA256": "87069fb3112c9182fa79bb7ccbbe53c9c3fdde5979deb8a1763c6e0a3d009de4",
+      "public_name": "ACTUAL_ISAC014_CAP5000_FINAL_MP80_MP100_PHYSICS_AND_SCALAR_CLOSURE_V1.json",
+      "public_SHA256": "613a7f5df4bf88d2e9ee50cc213ce0f1798f0e7f13781e5bd5227c2b26d6d05e",
+      "metadata_paths_only_projected": true,
+      "numeric_JSON_token_bytes_types_float64_bits_and_MP_strings_unchanged": true
+    },
+    {
+      "original_name": "ISAC014-RCG-growth-cap5000-actual-owned-process.json",
+      "original_SHA256": "9c0493ccbb217a489656fa4e4730a47525d7cdbd9bee076f3ed8fdeac4ede378",
+      "public_name": "ISAC014-RCG-growth-cap5000-actual-owned-process.json",
+      "public_SHA256": "96e5e88f519abe0f2575196b1e151ab0e086dbc006fbf2d829c8cad5d7d5b085",
+      "metadata_paths_only_projected": true,
+      "numeric_JSON_token_bytes_types_float64_bits_and_MP_strings_unchanged": true
+    },
+    {
+      "original_name": "actual-source-input-and-result-closure.json",
+      "original_SHA256": "3c31944cbdc29e73d6dc0cf3b5b0ed6d0250e0a21e84ee8086ffacbd2f38c173",
+      "public_name": "actual-source-input-and-result-closure.json",
+      "public_SHA256": "3c31944cbdc29e73d6dc0cf3b5b0ed6d0250e0a21e84ee8086ffacbd2f38c173",
+      "metadata_paths_only_projected": true,
+      "numeric_JSON_token_bytes_types_float64_bits_and_MP_strings_unchanged": true
+    },
+    {
+      "original_name": "passive-first-PGA-original500-boundary.json",
+      "original_SHA256": "3158a33b23ef50a7f3d2e161bda51129d6eaa69406271a4f8bf2c634717ce7ab",
+      "public_name": "passive-first-PGA-original500-boundary.json",
+      "public_SHA256": "3158a33b23ef50a7f3d2e161bda51129d6eaa69406271a4f8bf2c634717ce7ab",
+      "metadata_paths_only_projected": true,
+      "numeric_JSON_token_bytes_types_float64_bits_and_MP_strings_unchanged": true
+    },
+    {
+      "original_name": "passive-first-failure-and-methods.json",
+      "original_SHA256": "2d937dac285696335e936fdbd281f207db81914cd65e30fbc1862228d3f9c7a6",
+      "public_name": "passive-first-failure-and-methods.json",
+      "public_SHA256": "2d937dac285696335e936fdbd281f207db81914cd65e30fbc1862228d3f9c7a6",
+      "metadata_paths_only_projected": true,
+      "numeric_JSON_token_bytes_types_float64_bits_and_MP_strings_unchanged": true
+    },
+    {
+      "original_name": "SOURCE_MANIFEST_V1.json",
+      "original_SHA256": "58d145a103cad98b66c52bdd1462311fa6c09331313e5382d486b758a896d814",
+      "public_name": "SOURCE_MANIFEST_V1.json",
+      "public_SHA256": "bab091a9937cbda745cffcfcd55b3c1a211878d54bb5a0fcf851f51e59f71ccb",
+      "metadata_paths_only_projected": true,
+      "numeric_JSON_token_bytes_types_float64_bits_and_MP_strings_unchanged": true
+    },
+    {
+      "original_name": "EXACT_CAP_ONLY_CONFIGURATION_DIFF_AND_FROZEN_MATH_SOURCE_REUSE_V1.json",
+      "original_SHA256": "1754c116efe6cd9f6aaa565c134db763bb86f11dd74297072d5df81bc1ac7fdc",
+      "public_name": "EXACT_CAP_ONLY_CONFIGURATION_DIFF_AND_FROZEN_MATH_SOURCE_REUSE_V1.json",
+      "public_SHA256": "8849939dae6084222ddc581a7a55186ae32085596dcd116838dea431180061a0",
+      "metadata_paths_only_projected": true,
+      "numeric_JSON_token_bytes_types_float64_bits_and_MP_strings_unchanged": true
+    },
+    {
+      "original_name": "full-result.json",
+      "original_SHA256": "9f0db3c5e83cdd0d29cd3087587aa2d44c8fa2adfbcceb2daa1df7bed0061135",
+      "public_name": "actual-cap5000-first-scheme-complete-return.json.gz",
+      "public_SHA256": "ae9c0683270ddefa459ef4e93fa63fcace1e3bcc8f9079863363d6473740bb4c",
+      "metadata_paths_only_projected": true,
+      "numeric_JSON_token_bytes_types_float64_bits_and_MP_strings_unchanged": true
+    },
+    {
+      "original_name": "passive-RCG-actual-seeds-and-accepted-steps.json",
+      "original_SHA256": "7fa8a93d7bbb4ed64b6a6cfd02f29489acad80fbb88668f63a3d6926578d0d65",
+      "public_name": "passive-RCG-actual-seeds-and-accepted-steps.json.gz",
+      "public_SHA256": "8553374d012cdd11c56c4341f8749ca47f813dae513360ad048bfd41f8d3a394",
+      "metadata_paths_only_projected": true,
+      "numeric_JSON_token_bytes_types_float64_bits_and_MP_strings_unchanged": true
+    }
+  ],
+  "source_files_are_the_actual_executed_code_not_a_new_runner": true,
+  "package_optional_execution_not_repeated": true,
+  "new_optimizer_MC_RNG_MP_or_scenario_generation_calls_by_packaging": 0
+}

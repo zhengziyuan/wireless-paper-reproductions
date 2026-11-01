@@ -1,0 +1,79 @@
+{
+  "schema": "PORTABLE_THREE_STATE_SOURCE_AND_NUMERICAL_PROJECTION_PROVENANCE_V1",
+  "created_UTC": "2026-10-19T04:21:16.629040+00:00",
+  "exact_runtime_and_input_copies": [
+    {
+      "path": "sources/python/core_explicit_interference_candidate_v1.py",
+      "bytes": 17081,
+      "SHA256": "d9e7e4cbb1bcefb7aab4a28e1b32bfe2088228e42f5819857c8be62b680bed0e",
+      "source_copy": "Exact bytes of actually executed candidate source or saved fixed-state input"
+    },
+    {
+      "path": "sources/python/exact_candidate_passive_QT_prefix.py",
+      "bytes": 1642,
+      "SHA256": "62a953a8af22e1d5588bad95a5488fc401487a34981650d342afd59f525cf208",
+      "source_copy": "Exact bytes of actually executed candidate source or saved fixed-state input"
+    },
+    {
+      "path": "sources/matlab/run_native_three_state_candidate_v1.m",
+      "bytes": 27393,
+      "SHA256": "5571063f6093d2f8ab38dbc817ccc64209ade6d8cabe3e6127d5d72305b614d4",
+      "source_copy": "Exact bytes of actually executed candidate source or saved fixed-state input"
+    },
+    {
+      "path": "data/exact-three-saved-state-inputs.mat",
+      "bytes": 4936,
+      "SHA256": "e7d2a3760e10349b8f70c3045d0c8084bfe2997b4939b51a79c8442154b9e704",
+      "source_copy": "Exact bytes of actually executed candidate source or saved fixed-state input"
+    },
+    {
+      "path": "data/scenario-149.json",
+      "bytes": 14833,
+      "SHA256": "cb2cb0b05a879e73e11189f79cdb5c4074dc594acc604ce3816d4e3ac57eed22",
+      "source_copy": "Exact bytes of actually executed candidate source or saved fixed-state input"
+    },
+    {
+      "path": "data/scenario-159.json",
+      "bytes": 14837,
+      "SHA256": "eb00188adf97ee6f9243a5b2272246634bb0758b44b92b133f8a0f9e26faa729",
+      "source_copy": "Exact bytes of actually executed candidate source or saved fixed-state input"
+    }
+  ],
+  "original_Python_source_SHA256": "07f2eb9d9f5011dde45a8c947dd87db31d15b7e6e8ab233e9f43429c408f2fbb",
+  "original_native_source_SHA256": "181d8f02d990fb59a72765b19ff1c92491336ae3c3d056cc016692edf0129d23",
+  "Python_five_change_whole_source_inverse_proof_SHA256": "4433265b42be94df9e624b87ae33ffd4025e68f69af9796c18adb94765e1cc17",
+  "native_four_change_whole_source_inverse_proof_SHA256": "18a5f99fa6d9248741ddbf86d389745e4b32f2eca0cfb383aa6157af8d7f93d3",
+  "numeric_projection": {
+    "only_three_exact_terminal_inputs": true,
+    "MP_reference_numbers_and_original_bounds_preserved": true,
+    "actual_native_original_and_candidate_vectors_preserved": true,
+    "recorded_Python_fields_QT_and_derivative_error_records_preserved": true,
+    "removed_private_paths_process_identifiers_and_large_case_RAW": true
+  },
+  "no_optimizer_MC_capture_or_new_MP_in_preparation": true,
+  "portable_first_use_pending": false,
+  "actual_portable_first_use": {
+    "path": "results/actual-portable-first-use.json",
+    "SHA256": "343fd044632ad79d8c0fbd3b11b154d3ef8ba9ca2e94ff718858d5025b9fd5ca",
+    "natural_exit_code": 1,
+    "physical_derivatives_changed_QT_passed": true,
+    "expanded_all_coefficients_gate_passed": false,
+    "Python_fixed_state_evaluation": true,
+    "existing_native_MAT_only": true,
+    "new_optimizer_MC_MP_calls": 0,
+    "fresh_public_native_MATLAB_batch_pending": false,
+    "executed_manifest_SHA256": "4787312fcd496a6dd3a46f94c2ce20a7c8da76d5386760d7827461529239dcf7",
+    "metadata_added_after_natural_close_runtime_and_data_unchanged": true
+  },
+  "actual_public_relative_native_first_use": {
+    "path": "results/actual-public-relative-native-first-use.json",
+    "SHA256": "94cb2a71981159906182312191d9817434077b3dd3312e058f1e8ed0bdeddb70",
+    "MATLAB_natural_exit_code": 0,
+    "checker_natural_exit_code": 1,
+    "physical_derivatives_changed_QT_passed": true,
+    "expanded_gate_passed": false,
+    "source_and_same_three_input_bytes_unchanged": true,
+    "new_optimizer_MC_MP_Python_audit_calls": 0,
+    "native_public_layout_first_use_pending": false
+  }
+}

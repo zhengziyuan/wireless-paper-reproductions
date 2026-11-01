@@ -1,0 +1,141 @@
+{
+  "schema": "portable-actual145-four-returned-final-MP-with-six-retained-slots-plan-v1",
+  "status": "PREPARED_NOT_EXECUTED",
+  "fixture": "four-final-state-fixture.json",
+  "scenario": "original-scenario.json",
+  "config": "original-config.json",
+  "runtime_root": "runtime/tools",
+  "tools_root": "runtime/tools",
+  "source_and_input_pins": {
+    "original-config.json": "dd52f8b124cc1ec77ba71cf180048f6da665bb3809161dde6c922982c4eeec89",
+    "original-scenario.json": "e5d47af3400b9d81045d05b3b47c9b0c2501453ba1dea76486c0a20603995adf",
+    "audit_actual_145_four_returned_finals_keep_six_slots_MP80_MP100_v1.py": "86ae60f0cd0d1883aaefbb1fa15f8c6c585d7782477810c022846259a34114cd",
+    "runtime/tools/equivalent_runtime.py": "6605b501e0a21efb03496ad47d70774e12d174768afd355e2a843285b4f12c2d",
+    "runtime/tools/stable_metrics.py": "e15ad67ffc92b0ea2b3cbbd5428ff8be30bc6630ab651188d15aa2f01bde8c29",
+    "runtime/tools/audit_cold_control.py": "70eb0f2795ece136d3ddf69fa3600d9d241452b35991bad66d744a22b7accdd8",
+    "runtime/tools/audit_stable_derivatives.py": "bd02ce41fadb77ac57dc2f81d43cd4043042c1d58681ffd782eb058941af51b6",
+    "runtime/tools/mp_physical_reference.py": "d14050078d636ca33bd78fb2206406735a22589eeb0aa14b0f28c3d443d893bc",
+    "runtime/tools/audit_failure.py": "b05a3c958a79719339c61575ae69d65dd4432f47e6b3323e7bdd5977fc588e8b",
+    "strict/rotatable-isac/core.py": "07f2eb9d9f5011dde45a8c947dd87db31d15b7e6e8ab233e9f43429c408f2fbb",
+    "strict/rotatable-isac/run.py": "29584a2dc08dbd36d2613fdc44394658a1c3ed1caecbcd42b11010fe42da6111",
+    "strict/rotatable-isac/figures.py": "80109f69d5491125be9d734d6adb76bc154f9fb31465024530b6aea48177a057",
+    "strict/rotatable-isac/isac_metadata.py": "fe51c21a4340c7a901ad2c3bbce6a323cdcc38950c5ccbed4f9bc2fbbc6497f3",
+    "four-final-state-fixture.json": "8533740e3b4986238b50cb679d61e6f2ebd8be39574a112ed1f8fde638336c76",
+    "evidence/execution-closure.json": "2152546177c201eaff5391b44b9e281fcc623bf6c5617b975eb6af41974986bd",
+    "evidence/six-scheme-outcomes-and-budgets.json": "b33fd924101695bb8252d9749f458209d05d6da7403ead22ba77eef4dbd2bbdf",
+    "evidence/four-final-MP80-MP100.json.gz": "54bef7e562d1eb9e7b73e642d0f05aca0d2d5926f2dc53d3f63cfd93a1d6017c"
+  },
+  "actual_source_result": {
+    "artifact": "NOT_INCLUDED_full-result.json",
+    "SHA256": "e4904048aa934fe4521312072ae443b284b31e067f3ed0404e92eea60280828b",
+    "bytes": 127306222
+  },
+  "actual_closed_entry_status": {
+    "effective_exit_code": 0,
+    "expected_six_slots": 6,
+    "complete_returned_states": 4,
+    "original_full_converged": 2,
+    "original_failed_slots": [
+      "Rot-BS & Rot-RIS",
+      "Rot-BS & Fix-RIS"
+    ],
+    "original_executed_but_not_full_converged": [
+      "Fix-BS & Rot-RIS",
+      "Fix-BS & Fix-RIS"
+    ],
+    "source_interval_pins": 14,
+    "source_interval": true
+  },
+  "reused_oracles": {
+    "six_final_physics": "audit_cold_control.audit_states -> physical -> mp_physical_reference.field_parts; loop actual6 regardless legacy all_five output label",
+    "all_final_gradients": "audit_stable_derivatives.reference; independent analytic W/RIS and full-physics rotation central difference1e-20",
+    "fixed_iota_explicit_interference": "audit_failure.FixedObjective with full MP fields, explicit sum over streams other than desired",
+    "production_comparison": "Actual145 tools/equivalent_runtime.py::load_core().evaluate only; no optimizer, no case159 structured-QCQP provider."
+  },
+  "objective_and_constraint_contract": {
+    "objective": "sum_u log2(1+S_u/I_u) - rho*||p-iota*pd||^2/(iota^2*||pd||^2)",
+    "I": "noise_u + sum_{s!=u}|f_u^H w_s|^2, explicitly self excluded; never reconstructed by total-signal subtraction",
+    "final_metrics_iota": "stored final optimal-iota state, compared with independent p^T p/(p^T pd)",
+    "derivative_iota": "actual last_AO_fixed_iota, held fixed within all derivative comparisons; not final metric iota",
+    "angles": "6 Euler angles in radians; exact frozenrun widths use perBS/perRIS override or original binary64pi/2 fallback, fixed-array coordinates have width0",
+    "W_power": "sum abs(W)^2 <= actual scene power+original verification1e-7; report signed residual, not fabricated QP KKT",
+    "theta": "original actual theta kept, unitmodulus1e-12 reader check; no projection/normalization repair",
+    "No_RIS": "zero original BS-RIS bridge gains per frozen run; no new scene or RNG",
+    "Fix_RIS": "fix RIS orientation angles, reflectiontheta remains optimized"
+  },
+  "tolerances": {
+    "physical_absolute": "original scenario verification_tolerance1e-7",
+    "SINR_and_iota_relative": "existing helper reader addition1e-10",
+    "unitmodulus_and_rotation_bound_reader": "1e-12",
+    "gradient_component_and_PGA_norm_reader": "existing fixedstate reader absolute1e-5; not claimed author stop",
+    "MP80_MP100_precision_bound": "1e-35",
+    "unchanged_RCGlower_and_PGA_gradient_stop": "scenario1e-6, reported separately; no new stop substitutes for original failure"
+  },
+  "historical_phase_boundary": {
+    "Fix_BS_Fix_RIS": {
+      "last_rotation_updates": 0,
+      "exact_saved_phase_endpoint_available": true,
+      "actual_saved_phase_norm": 0.0004752704283343819,
+      "actual_RCG_cap": 500,
+      "original_converged": false
+    },
+    "Fix_BS_Rot_RIS": {
+      "last_rotation_updates": 55,
+      "exact_saved_phase_endpoint_available": false,
+      "actual_saved_historical_phase_norm": 0.003016350225283453,
+      "actual_RCG_cap": 500,
+      "original_converged": false
+    },
+    "missing_Rot_BS_slots": "No returned endpoint; no state or failed-line-search operands reconstructed."
+  },
+  "unproved_by_this_action": [
+    "The two actual RCG-failed Rot-BS scheme states/line-search operands, which are not in this returned result.",
+    "All historical QT auxiliaries/QP inputs/KKT and intermediate trajectory acceptance.",
+    "Full six-scheme convergence: actual2failed+2executed-not-full+2NoRIS-full retained.",
+    "Dual language/original reference/fullpaper."
+  ],
+  "version_scope": "Local source_contract maps title-matched revised weightedNMSE HTML; publisher-final version-to-equation check remains pending and is not upgraded. Current Abstract MSE-constraint version is not silently substituted.",
+  "output": "public-first-saved-MP-replay-output",
+  "entry_SHA256": "86ae60f0cd0d1883aaefbb1fa15f8c6c585d7782477810c022846259a34114cd",
+  "syntax_AST_pass": true,
+  "candidate_imports_MP_optimization_or_tests_executed": 0,
+  "entry": "audit_actual_145_four_returned_finals_keep_six_slots_MP80_MP100_v1.py",
+  "expected_six_names": [
+    "Rot-BS & Rot-RIS",
+    "Rot-BS & Fix-RIS",
+    "Fix-BS & Rot-RIS",
+    "Fix-BS & Fix-RIS",
+    "Rot-BS & No-RIS",
+    "Fix-BS & No-RIS"
+  ],
+  "missing_final_state_names": [
+    "Rot-BS & Rot-RIS",
+    "Rot-BS & Fix-RIS"
+  ],
+  "original_not_full_converged": [
+    "Rot-BS & Rot-RIS",
+    "Rot-BS & Fix-RIS",
+    "Fix-BS & Rot-RIS",
+    "Fix-BS & Fix-RIS"
+  ],
+  "scope": "Original physical and derivative oracles unchanged; actual provider is original145 equivalent_runtime.py, not case159 structured-QCQP runtime.",
+  "retained_limits": [
+    "Host0 is actual run_equivalent return even with caught failed scheme slots.",
+    "Only four actual returned states are numerically auditable; two failed Rot-BS slots have no final W/theta/rotation.",
+    "Both returned RIS methods reached AO500 and every RIS block500; only two NoRIS original full_converged flags are true.",
+    "Fixed-state physics/derivatives do not verify missing failed RCG trials, old QT/QCQP KKT or all intermediate trajectory."
+  ],
+  "command": [
+    "python",
+    "-B",
+    "audit_actual_145_four_returned_finals_keep_six_slots_MP80_MP100_v1.py",
+    "--plan",
+    "saved-four-MP-replay-plan.json",
+    "--output-dir",
+    "NEW_EMPTY_OUTPUT_DIRECTORY",
+    "--execute"
+  ],
+  "relative_path_contract": "Run from this package directory; exact provider, mathematical oracles and inputs are included at relative paths.",
+  "portable_MP_reexecuted": false,
+  "historical_actual_MP_plan_SHA256": "d766f8133f07cb7b32fda4ec168a4fe684ae95bf0afe6a770780a4405c2bf874"
+}

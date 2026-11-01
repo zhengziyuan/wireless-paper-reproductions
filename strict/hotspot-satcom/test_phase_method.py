@@ -9,7 +9,11 @@ def run():
     direct=cn((2,3));cascade=.1*cn((2,3,3));nhu=cn((1,3));phi=np.exp(1j*np.array([.2,.3,.4]))
     manual=phi.copy()
     for _ in range(2):
-        value,g=criterion_gradient(direct,cascade,nhu,manual);alpha=1.;slope=np.vdot(g,g).real
+        value,g=criterion_gradient(direct,cascade,nhu,manual);slope=np.vdot(g,g).real
+        # Both shipped engines use the disclosed unit-speed seed. A fixed
+        # alpha=1 tests a different unreported line-search control and cannot
+        # serve as the two-step oracle for their fresh-gradient RGD identity.
+        alpha=1./np.sqrt(slope)
         for _ in range(50):
             trial=manual+alpha*g;trial/=abs(trial);newvalue,_=criterion_gradient(direct,cascade,nhu,trial)
             if newvalue-value>=1e-4*alpha*slope:break

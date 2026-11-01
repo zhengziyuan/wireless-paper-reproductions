@@ -1,0 +1,403 @@
+{
+  "scope": "all18_native_all243_saved_initial_final_states_and_stored_stop_fields",
+  "cases_checked": 18,
+  "starts_checked": 243,
+  "selected_designs": 54,
+  "stored_stop_records_checked": 641,
+  "failed_starts": 22,
+  "case_error_count": 0,
+  "maximum_independent_physical_metric_error": 4.2264218791387975e-09,
+  "all_endpoint_and_stored_stop_checks_passed": false,
+  "independent_implemented_model_moments_and_powers": true,
+  "phase_gradient_scope": "cross-language Python formula check, not independent high-precision full-trajectory replay",
+  "historical_inner_trajectories_independently_replayed": false,
+  "all54000_MC_samples_replayed": false,
+  "original_source_geometry_pattern_and_reference_certified": false,
+  "full_reproduction_pass": false,
+  "gradient_sources": {
+    "statistical.py": "5cc0ea66d6f21ce2749952dbae1c4a605d15c1df6ca6e030537fb003a9955e9b",
+    "core.py": "5269cd3d86b109994335be7c94b0506211f08136a8e684df84f10e0afa69b322",
+    "termination.py": "f9e2c143f00c32abd0dfcf424f8f4e371e57ff04792d932aac3be26e6bffb90f"
+  },
+  "selected": [
+    {
+      "U": 1,
+      "beta_db": 0,
+      "scheme": "NoRIS",
+      "start_id": 0,
+      "reported_statistical_rate": 3.610045534038617
+    },
+    {
+      "U": 1,
+      "beta_db": 0,
+      "scheme": "TwoStage",
+      "start_id": 0,
+      "reported_statistical_rate": 8.375656261866277
+    },
+    {
+      "U": 1,
+      "beta_db": 0,
+      "scheme": "AO",
+      "start_id": 1,
+      "reported_statistical_rate": 8.375649939829353
+    },
+    {
+      "U": 2,
+      "beta_db": 0,
+      "scheme": "NoRIS",
+      "start_id": 2,
+      "reported_statistical_rate": 4.07605794780032
+    },
+    {
+      "U": 2,
+      "beta_db": 0,
+      "scheme": "TwoStage",
+      "start_id": 2,
+      "reported_statistical_rate": 5.349570188518814
+    },
+    {
+      "U": 2,
+      "beta_db": 0,
+      "scheme": "AO",
+      "start_id": 2,
+      "reported_statistical_rate": 9.222082949697553
+    },
+    {
+      "U": 3,
+      "beta_db": 0,
+      "scheme": "NoRIS",
+      "start_id": 3,
+      "reported_statistical_rate": 4.420662410408484
+    },
+    {
+      "U": 3,
+      "beta_db": 0,
+      "scheme": "TwoStage",
+      "start_id": 1,
+      "reported_statistical_rate": 9.557043098725869
+    },
+    {
+      "U": 3,
+      "beta_db": 0,
+      "scheme": "AO",
+      "start_id": 3,
+      "reported_statistical_rate": 9.851000220940515
+    },
+    {
+      "U": 4,
+      "beta_db": 0,
+      "scheme": "NoRIS",
+      "start_id": 4,
+      "reported_statistical_rate": 4.705379123473345
+    },
+    {
+      "U": 4,
+      "beta_db": 0,
+      "scheme": "TwoStage",
+      "start_id": 4,
+      "reported_statistical_rate": 9.819321756276334
+    },
+    {
+      "U": 4,
+      "beta_db": 0,
+      "scheme": "AO",
+      "start_id": 1,
+      "reported_statistical_rate": 10.335648783725704
+    },
+    {
+      "U": 5,
+      "beta_db": 0,
+      "scheme": "NoRIS",
+      "start_id": 1,
+      "reported_statistical_rate": 4.7091583630832
+    },
+    {
+      "U": 5,
+      "beta_db": 0,
+      "scheme": "TwoStage",
+      "start_id": 0,
+      "reported_statistical_rate": 9.767852406591347
+    },
+    {
+      "U": 5,
+      "beta_db": 0,
+      "scheme": "AO",
+      "start_id": 1,
+      "reported_statistical_rate": 10.33962702487921
+    },
+    {
+      "U": 6,
+      "beta_db": 0,
+      "scheme": "NoRIS",
+      "start_id": 1,
+      "reported_statistical_rate": 4.712928968615465
+    },
+    {
+      "U": 6,
+      "beta_db": 0,
+      "scheme": "TwoStage",
+      "start_id": 1,
+      "reported_statistical_rate": 5.249448648144705
+    },
+    {
+      "U": 6,
+      "beta_db": 0,
+      "scheme": "AO",
+      "start_id": 1,
+      "reported_statistical_rate": 10.34359628140172
+    },
+    {
+      "U": 1,
+      "beta_db": 10,
+      "scheme": "NoRIS",
+      "start_id": 0,
+      "reported_statistical_rate": 4.416633217044148
+    },
+    {
+      "U": 1,
+      "beta_db": 10,
+      "scheme": "TwoStage",
+      "start_id": 0,
+      "reported_statistical_rate": 9.899378938037207
+    },
+    {
+      "U": 1,
+      "beta_db": 10,
+      "scheme": "AO",
+      "start_id": 1,
+      "reported_statistical_rate": 9.899356614718522
+    },
+    {
+      "U": 2,
+      "beta_db": 10,
+      "scheme": "NoRIS",
+      "start_id": 2,
+      "reported_statistical_rate": 4.762578580521476
+    },
+    {
+      "U": 2,
+      "beta_db": 10,
+      "scheme": "TwoStage",
+      "start_id": 2,
+      "reported_statistical_rate": 6.965607609075885
+    },
+    {
+      "U": 2,
+      "beta_db": 10,
+      "scheme": "AO",
+      "start_id": 0,
+      "reported_statistical_rate": 10.419291717224734
+    },
+    {
+      "U": 3,
+      "beta_db": 10,
+      "scheme": "NoRIS",
+      "start_id": 3,
+      "reported_statistical_rate": 5.033915264453876
+    },
+    {
+      "U": 3,
+      "beta_db": 10,
+      "scheme": "TwoStage",
+      "start_id": 1,
+      "reported_statistical_rate": 10.548857102975097
+    },
+    {
+      "U": 3,
+      "beta_db": 10,
+      "scheme": "AO",
+      "start_id": 3,
+      "reported_statistical_rate": 10.843936473013766
+    },
+    {
+      "U": 4,
+      "beta_db": 10,
+      "scheme": "NoRIS",
+      "start_id": 3,
+      "reported_statistical_rate": 5.262969241378426
+    },
+    {
+      "U": 4,
+      "beta_db": 10,
+      "scheme": "TwoStage",
+      "start_id": 4,
+      "reported_statistical_rate": 10.684706128429365
+    },
+    {
+      "U": 4,
+      "beta_db": 10,
+      "scheme": "AO",
+      "start_id": 1,
+      "reported_statistical_rate": 11.182254940826928
+    },
+    {
+      "U": 5,
+      "beta_db": 10,
+      "scheme": "NoRIS",
+      "start_id": 1,
+      "reported_statistical_rate": 5.266865699075501
+    },
+    {
+      "U": 5,
+      "beta_db": 10,
+      "scheme": "TwoStage",
+      "start_id": 0,
+      "reported_statistical_rate": 10.729611708430163
+    },
+    {
+      "U": 5,
+      "beta_db": 10,
+      "scheme": "AO",
+      "start_id": 1,
+      "reported_statistical_rate": 11.186268325516592
+    },
+    {
+      "U": 6,
+      "beta_db": 10,
+      "scheme": "NoRIS",
+      "start_id": 1,
+      "reported_statistical_rate": 5.270754618926058
+    },
+    {
+      "U": 6,
+      "beta_db": 10,
+      "scheme": "TwoStage",
+      "start_id": 1,
+      "reported_statistical_rate": 7.979228168630044
+    },
+    {
+      "U": 6,
+      "beta_db": 10,
+      "scheme": "AO",
+      "start_id": 1,
+      "reported_statistical_rate": 11.190273831778581
+    },
+    {
+      "U": 1,
+      "beta_db": 20,
+      "scheme": "NoRIS",
+      "start_id": 0,
+      "reported_statistical_rate": 4.73676691939597
+    },
+    {
+      "U": 1,
+      "beta_db": 20,
+      "scheme": "TwoStage",
+      "start_id": 0,
+      "reported_statistical_rate": 10.568003155045348
+    },
+    {
+      "U": 1,
+      "beta_db": 20,
+      "scheme": "AO",
+      "start_id": 0,
+      "reported_statistical_rate": 10.56800246049656
+    },
+    {
+      "U": 2,
+      "beta_db": 20,
+      "scheme": "NoRIS",
+      "start_id": 2,
+      "reported_statistical_rate": 4.980609520303517
+    },
+    {
+      "U": 2,
+      "beta_db": 20,
+      "scheme": "TwoStage",
+      "start_id": 2,
+      "reported_statistical_rate": 7.42123530826062
+    },
+    {
+      "U": 2,
+      "beta_db": 20,
+      "scheme": "AO",
+      "start_id": 0,
+      "reported_statistical_rate": 10.845773126834201
+    },
+    {
+      "U": 3,
+      "beta_db": 20,
+      "scheme": "NoRIS",
+      "start_id": 3,
+      "reported_statistical_rate": 5.179421204595579
+    },
+    {
+      "U": 3,
+      "beta_db": 20,
+      "scheme": "TwoStage",
+      "start_id": 1,
+      "reported_statistical_rate": 10.799653115734218
+    },
+    {
+      "U": 3,
+      "beta_db": 20,
+      "scheme": "AO",
+      "start_id": 3,
+      "reported_statistical_rate": 11.094369442901364
+    },
+    {
+      "U": 4,
+      "beta_db": 20,
+      "scheme": "NoRIS",
+      "start_id": 4,
+      "reported_statistical_rate": 5.351729376892089
+    },
+    {
+      "U": 4,
+      "beta_db": 20,
+      "scheme": "TwoStage",
+      "start_id": 4,
+      "reported_statistical_rate": 10.808101364610065
+    },
+    {
+      "U": 4,
+      "beta_db": 20,
+      "scheme": "AO",
+      "start_id": 1,
+      "reported_statistical_rate": 11.30378878261979
+    },
+    {
+      "U": 5,
+      "beta_db": 20,
+      "scheme": "NoRIS",
+      "start_id": 1,
+      "reported_statistical_rate": 5.355643605014225
+    },
+    {
+      "U": 5,
+      "beta_db": 20,
+      "scheme": "TwoStage",
+      "start_id": 0,
+      "reported_statistical_rate": 10.860489986095292
+    },
+    {
+      "U": 5,
+      "beta_db": 20,
+      "scheme": "AO",
+      "start_id": 1,
+      "reported_statistical_rate": 11.307807193568129
+    },
+    {
+      "U": 6,
+      "beta_db": 20,
+      "scheme": "NoRIS",
+      "start_id": 1,
+      "reported_statistical_rate": 5.359550535056885
+    },
+    {
+      "U": 6,
+      "beta_db": 20,
+      "scheme": "TwoStage",
+      "start_id": 1,
+      "reported_statistical_rate": 8.183199541610307
+    },
+    {
+      "U": 6,
+      "beta_db": 20,
+      "scheme": "AO",
+      "start_id": 1,
+      "reported_statistical_rate": 11.311817969519076
+    }
+  ],
+  "elapsed_seconds": 3.524601699988125
+}

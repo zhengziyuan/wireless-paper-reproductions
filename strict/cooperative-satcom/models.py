@@ -111,7 +111,7 @@ def ap_phase_value_gradient_reference(data,phi,W):
     return sinr,1j*phi*gtheta
 
 
-def mr_phase_value_gradient(data,phi,p,mu,limit,tts=False):
+def mr_phase_value_gradient_subtractive(data,phi,p,mu,limit,tts=False):
     """Exact all-coordinate derivative contraction of the original moments.
 
     The independent scalar-coordinate implementation above is retained as a
@@ -185,3 +185,10 @@ def sample_effective(data,phi,rng):
             d=data['d_mean'][j,u]+np.sqrt(data['d_var'][j,u])*cn((N,))
             out[j,u]=d+G@(phi[u]*r)
     return out
+
+
+def mr_phase_value_gradient(data,phi,p,mu,limit,tts=False):
+    """Same exact model; evaluate own variance and its derivative without cancellation."""
+    from positive_wick import evaluate_mr
+    result=evaluate_mr(data,phi,p,mu,limit,tts)
+    return result["criterion"],result["gradient"]

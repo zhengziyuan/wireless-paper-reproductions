@@ -1,0 +1,23 @@
+{
+  "scope": "New full M4/N36/K2/A66 fixed-W phase solve warm-started at actual failed point, PR history starts empty as in original solver",
+  "source_binding": {
+    "strict/rotatable-isac/core.py": "07f2eb9d9f5011dde45a8c947dd87db31d15b7e6e8ab233e9f43429c408f2fbb",
+    "strict/rotatable-isac/run.py": "29584a2dc08dbd36d2613fdc44394658a1c3ed1caecbcd42b11010fe42da6111",
+    "strict/rotatable-isac/isac_metadata.py": "fe51c21a4340c7a901ad2c3bbce6a323cdcc38950c5ccbed4f9bc2fbbc6497f3",
+    "tools/isac-line-search-replay/equivalent_runtime.py": "6605b501e0a21efb03496ad47d70774e12d174768afd355e2a843285b4f12c2d",
+    "tools/isac-line-search-replay/stable_metrics.py": "e15ad67ffc92b0ea2b3cbbd5428ff8be30bc6630ab651188d15aa2f01bde8c29"
+  },
+  "probe_source_sha256": "cf444fa1c21ee70a3733de17eaae39e80b3d69b99e26b9ffc3dd6e6428c42279",
+  "captured_array_sha256": "de7aa50290c3351f4bcdd783471c7849e47f5c234c01070954221c75455e460b",
+  "original_unreported_safety_cap": 500,
+  "selected_unreported_safety_cap": 100000,
+  "original_stopping_tolerance": 1e-06,
+  "all_other_input_and_Armijo_controls_unchanged": true,
+  "previous_original_PR_history_continued": false,
+  "failure": null,
+  "original_phase_stop_reached": true,
+  "final_normalized_gradient": 8.857509404194675e-07,
+  "iterations": 960,
+  "elapsed_seconds": 5.243022500013467,
+  "independent_MP_or_full_cold_case_or_original_reference_or_paper_pass": false
+}

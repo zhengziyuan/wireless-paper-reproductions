@@ -1,0 +1,24 @@
+{
+  "scope": "All91 saved fullsize endpoint criteria and8190 complex gradients versus retained MP80; no new optimizer",
+  "language": "MATLAB",
+  "fixture_sha256": "c3af78a684a1db9828976349559e44764530491ea5a8df5909274c40e1dec9ea",
+  "references_sha256": "9e7fd41d99dac2ed0a27f30cef22380dd4b8673c0effee9fb8d9f870f1124922",
+  "evaluator_sha256": "69b79aa924100d134d61908a33082d6ae25d0cc04e8cb7df1004da1157172ede",
+  "native_output_sha256": "422464144c3847296580c0668ef31fcb168cee2c1342201e3adbb937c90b75d9",
+  "stages": 91,
+  "gradient_coordinates": 8190,
+  "all_endpoint_checks_pass": true,
+  "maximum_gradient_absolute_error": 5.838949277770129e-11,
+  "maximum_criterion_absolute_error": 2.5318802778186603e-13,
+  "maximum_gradient_norm": 9.988172295099943e-07,
+  "tolerance_or_original_stopping_rule_changed": false,
+  "new_optimization_or_new_MC_or_new_MP_reference": false,
+  "complete183_optimization_or_original_reference_pass": false,
+  "detailed_report": {
+    "file": "actual-native91-audit.json.gz",
+    "gzip_sha256": "9f6dc3afc28c84f1b2dccee90fb5950e54e476901304cb548c4c7f4472c504e0",
+    "uncompressed_sha256": "9269f593d881dfe3963867060bbdf3d2cd8fd38670c8ea56bd0e9bf119ab7f15",
+    "uncompressed_bytes": 3255064,
+    "stage_records": 91
+  }
+}

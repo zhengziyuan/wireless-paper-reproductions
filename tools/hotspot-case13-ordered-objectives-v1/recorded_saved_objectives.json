@@ -1,0 +1,109 @@
+{
+  "schema": "case13_ordered_saved_objectives_v1",
+  "source": "q_rate_projection.json",
+  "method": "log1p(saved hotspot SINR) / log(2), binary64",
+  "records": [
+    {
+      "start_id": 0,
+      "ordinal": 1327666,
+      "saved_sinr": 534.2937463090927,
+      "saved_rate": 9.064186987913228,
+      "recomputed_rate": 9.064186987913228,
+      "recomputed_minus_saved": 0.0
+    },
+    {
+      "start_id": 0,
+      "ordinal": 1327713,
+      "saved_sinr": 1513.6926953333768,
+      "saved_rate": 10.564809410446644,
+      "recomputed_rate": 10.564809410446646,
+      "recomputed_minus_saved": 1.7763568394002505e-15
+    },
+    {
+      "start_id": 0,
+      "ordinal": 1327755,
+      "saved_sinr": 1516.597650415114,
+      "saved_rate": 10.567573634907161,
+      "recomputed_rate": 10.567573634907161,
+      "recomputed_minus_saved": 0.0
+    },
+    {
+      "start_id": 0,
+      "ordinal": 1327778,
+      "saved_sinr": 1517.0488801688182,
+      "saved_rate": 10.56800252998846,
+      "recomputed_rate": 10.56800252998846,
+      "recomputed_minus_saved": 0.0
+    },
+    {
+      "start_id": 1,
+      "ordinal": 1327876,
+      "saved_sinr": 550.0804041680027,
+      "saved_rate": 9.106119017158754,
+      "recomputed_rate": 9.106119017158756,
+      "recomputed_minus_saved": 1.7763568394002505e-15
+    },
+    {
+      "start_id": 1,
+      "ordinal": 1327926,
+      "saved_sinr": 1513.607243462295,
+      "saved_rate": 10.564728018050271,
+      "recomputed_rate": 10.564728018050271,
+      "recomputed_minus_saved": 0.0
+    },
+    {
+      "start_id": 1,
+      "ordinal": 1327964,
+      "saved_sinr": 1516.5916076417898,
+      "saved_rate": 10.567567890369759,
+      "recomputed_rate": 10.567567890369759,
+      "recomputed_minus_saved": 0.0
+    },
+    {
+      "start_id": 1,
+      "ordinal": 1328004,
+      "saved_sinr": 1517.0484655458301,
+      "saved_rate": 10.568002135946728,
+      "recomputed_rate": 10.568002135946728,
+      "recomputed_minus_saved": 0.0
+    }
+  ],
+  "saved_event_sequences": [
+    {
+      "start_id": 0,
+      "ordinals": [
+        1327666,
+        1327713,
+        1327755,
+        1327778
+      ],
+      "adjacent_recomputed_differences": [
+        1.500622422533418,
+        0.0027642244605150523,
+        0.0004288950812991743
+      ],
+      "all_strictly_increasing": true
+    },
+    {
+      "start_id": 1,
+      "ordinals": [
+        1327876,
+        1327926,
+        1327964,
+        1328004
+      ],
+      "adjacent_recomputed_differences": [
+        1.4586090008915154,
+        0.0028398723194875686,
+        0.00043424557696880584
+      ],
+      "all_strictly_increasing": true
+    }
+  ],
+  "max_abs_rate_difference": 1.7763568394002505e-15,
+  "limitations": [
+    "Only stored SINR and rate fields are compared; no channel or optimizer is recomputed.",
+    "Ordinal ordering does not prove intermediate iterations were saved.",
+    "Historical input authentication, atomic source snapshot, physical feasibility, convergence and reference agreement are not established."
+  ]
+}

@@ -1,0 +1,325 @@
+{
+  "schema": "ACTUAL_CASE159_FIX_RIS_ORIENTATION_SCOPE_AND_LAST_INNER_RECORDED_FAILURE_DIAGNOSIS_V1",
+  "observed_UTC": "2026-10-19T07:15:54.614685+00:00",
+  "prior_actual_review": {
+    "path": "retained-evidence/ACTUAL_CLOSED_SIX_SCHEME_THIN_OUTCOMES_NO_REPLAY_REVIEW_V1.json",
+    "SHA256": "bbe131ddbdb7bb9de8ead7bfe5a4523809322ca39129c3711feeced5600c3afd"
+  },
+  "source_semantics": {
+    "frozen_run_source": {
+      "path": "retained-evidence/run_original_case159_v1.py",
+      "SHA256": "29584a2dc08dbd36d2613fdc44394658a1c3ed1caecbcd42b11010fe42da6111"
+    },
+    "frozen_structured_core": {
+      "path": "retained-evidence/core_structured_case159_v1.py",
+      "SHA256": "a0284f77a1704a35bbba000db0ccf5c59687d4a3dbc524aff8458367537888c1"
+    },
+    "run_scenario_flags": [
+      [
+        "Rot-BS & Rot-RIS",
+        true,
+        true,
+        true
+      ],
+      [
+        "Rot-BS & Fix-RIS",
+        true,
+        false,
+        true
+      ],
+      [
+        "Fix-BS & Rot-RIS",
+        false,
+        true,
+        true
+      ],
+      [
+        "Fix-BS & Fix-RIS",
+        false,
+        false,
+        true
+      ],
+      [
+        "Rot-BS & No-RIS",
+        true,
+        false,
+        false
+      ],
+      [
+        "Fix-BS & No-RIS",
+        false,
+        false,
+        false
+      ]
+    ],
+    "Fix_RIS_means_in_this_frozen_implementation": "RIS three orientation coordinates have zero lower/upper width, while its unit-modulus reflection phases theta remain optimized because with_ris=True. It does not disable the surface or fix theta.",
+    "anchors": {
+      "run.py:109-118": "bs/ris flags multiply the separate BS/RIS three-angle rotation bounds; with_ris is separate",
+      "core.py:233": "if with_ris: theta,ht=update_theta(...)",
+      "core.py:234": "rotation update follows phase update",
+      "core.py:241-242": "inner_all requires every W/RIS/rotation record from every AO block to be converged; full_converged=outer and inner_all"
+    },
+    "controller_or_method_count_bug_supported": false,
+    "paper_text_semantics_reaudited_here": false
+  },
+  "two_false_schemes": [
+    {
+      "scheme": "Rot-BS & Rot-RIS",
+      "checks": {
+        "status": "executed",
+        "converged": true,
+        "inner_all_converged": false,
+        "full_converged": false,
+        "power_feasible": true,
+        "unit_modulus_error": 2.220446049250313e-16,
+        "rotation_feasible": true
+      },
+      "outer_summary": {
+        "utility": {
+          "count": 73,
+          "first": -5.329177610195935,
+          "last": 19.72941531337069
+        },
+        "converged": true,
+        "inner_all_converged": false,
+        "full_converged": false,
+        "iterations": 72,
+        "iteration_budget": 500,
+        "budget_exhausted": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 2.0915027115320242e-07,
+        "relative_tolerance": 1e-05
+      },
+      "final_AO_block_one_based": 72,
+      "last_AO_fixed_inner_iota": 10041012487.526325,
+      "actual_last_inner_blocks": {
+        "W": {
+          "objective": {
+            "count": 2,
+            "first": 19.72941118695899,
+            "last": 19.729411190460723
+          },
+          "QCQP": {
+            "count": 1,
+            "first": {
+              "nu": 2.3728716769255698e-09,
+              "bisection_steps": 40,
+              "stationarity_residual": 3.1680303253932744e-07,
+              "power": 0.6309569467114143
+            },
+            "last": {
+              "nu": 2.3728716769255698e-09,
+              "bisection_steps": 40,
+              "stationarity_residual": 3.1680303253932744e-07,
+              "power": 0.6309569467114143
+            }
+          },
+          "converged": true,
+          "termination_reason": "relative_objective_tolerance",
+          "iterations": 1,
+          "iteration_budget": 10000,
+          "budget_exhausted": false,
+          "capped_unconverged": false,
+          "relative_objective_improvement": 1.7748792421257535e-10,
+          "relative_step": 0.034151042432708785,
+          "relative_tolerance": 1e-06
+        },
+        "RIS": {
+          "objective": {
+            "count": 500,
+            "first": 19.729411190460723,
+            "last": 19.729415305164864
+          },
+          "PR_coefficients": {
+            "count": 500,
+            "first": 0.0,
+            "last": -1.0152912587195608e-05
+          },
+          "mode": "documented_non_ascent_restart",
+          "final_objective": 19.72941531336913,
+          "applicable": true,
+          "converged": false,
+          "termination_reason": "maximum_iterations_without_criterion_stop",
+          "iterations": 500,
+          "updates": 500,
+          "iteration_budget": 500,
+          "budget_exhausted": true,
+          "capped_unconverged": true,
+          "last_checked_normalized_gradient_norm": 1.5096345545515515e-05,
+          "final_normalized_gradient_norm": 1.5096192266911762e-05,
+          "gradient_tolerance": 1e-06
+        },
+        "rotation": {
+          "objective": {
+            "count": 1,
+            "first": 19.72941531336913,
+            "last": 19.72941531336913
+          },
+          "steps": {
+            "count": 0,
+            "first": null,
+            "last": null
+          },
+          "final_objective": 19.72941531336913,
+          "converged": true,
+          "termination_reason": "projected_gradient_tolerance",
+          "iterations": 1,
+          "updates": 0,
+          "iteration_budget": 500,
+          "budget_exhausted": false,
+          "capped_unconverged": false,
+          "last_checked_projected_gradient_norm": 4.124704298690821e-07,
+          "final_projected_gradient_norm": 4.124704298690821e-07,
+          "gradient_tolerance": 1e-06,
+          "relative_step": null,
+          "relative_tolerance": 1e-08
+        }
+      },
+      "current_last_all_inner_converged": false,
+      "current_last_inner_converged_by_block": {
+        "W": true,
+        "RIS": false,
+        "rotation": true
+      },
+      "false_is_only_historical_inner_failure": false,
+      "final_RIS_gradient_above_original_tolerance": true,
+      "recorded_last_phase_gradient_state_scope": "Final rotation block made zero updates and returned at its first gradient check; by frozen source, saved final W/theta/r plus last_AO_fixed_inner_iota are the exact final phase-gradient operands. Final metric recomputes a different iota, so that distinction remains.",
+      "last_phase_exact_operands_available_from_saved_final_state_and_fixed_iota": true
+    },
+    {
+      "scheme": "Rot-BS & Fix-RIS",
+      "checks": {
+        "status": "executed",
+        "converged": true,
+        "inner_all_converged": false,
+        "full_converged": false,
+        "power_feasible": true,
+        "unit_modulus_error": 2.220446049250313e-16,
+        "rotation_feasible": true
+      },
+      "outer_summary": {
+        "utility": {
+          "count": 22,
+          "first": -5.329177610195935,
+          "last": 17.031699798825205
+        },
+        "converged": true,
+        "inner_all_converged": false,
+        "full_converged": false,
+        "iterations": 21,
+        "iteration_budget": 500,
+        "budget_exhausted": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 9.42506188783382e-06,
+        "relative_tolerance": 1e-05
+      },
+      "final_AO_block_one_based": 21,
+      "last_AO_fixed_inner_iota": 334936014.6383498,
+      "actual_last_inner_blocks": {
+        "W": {
+          "objective": {
+            "count": 2,
+            "first": 17.031539275513488,
+            "last": 17.031539325372187
+          },
+          "QCQP": {
+            "count": 1,
+            "first": {
+              "nu": 0.0,
+              "bisection_steps": 0,
+              "stationarity_residual": 3.5973653040505883e-08,
+              "power": 0.5406486384811591
+            },
+            "last": {
+              "nu": 0.0,
+              "bisection_steps": 0,
+              "stationarity_residual": 3.5973653040505883e-08,
+              "power": 0.5406486384811591
+            }
+          },
+          "converged": true,
+          "termination_reason": "relative_objective_tolerance",
+          "iterations": 1,
+          "iteration_budget": 10000,
+          "budget_exhausted": false,
+          "capped_unconverged": false,
+          "relative_objective_improvement": 2.9274334924524744e-09,
+          "relative_step": 0.04681112539734385,
+          "relative_tolerance": 1e-06
+        },
+        "RIS": {
+          "objective": {
+            "count": 500,
+            "first": 17.031539325372187,
+            "last": 17.03154102165478
+          },
+          "PR_coefficients": {
+            "count": 500,
+            "first": 0.0,
+            "last": -4.7247708209327856e-05
+          },
+          "mode": "documented_non_ascent_restart",
+          "final_objective": 17.031541024974487,
+          "applicable": true,
+          "converged": false,
+          "termination_reason": "maximum_iterations_without_criterion_stop",
+          "iterations": 500,
+          "updates": 500,
+          "iteration_budget": 500,
+          "budget_exhausted": true,
+          "capped_unconverged": true,
+          "last_checked_normalized_gradient_norm": 9.603160750127213e-06,
+          "final_normalized_gradient_norm": 9.602707000029619e-06,
+          "gradient_tolerance": 1e-06
+        },
+        "rotation": {
+          "objective": {
+            "count": 4,
+            "first": 17.031541024974487,
+            "last": 17.03169979856595
+          },
+          "steps": {
+            "count": 3,
+            "first": 0.01,
+            "last": 0.10178290973921957
+          },
+          "final_objective": 17.03169979856595,
+          "converged": true,
+          "termination_reason": "projected_gradient_tolerance",
+          "iterations": 4,
+          "updates": 3,
+          "iteration_budget": 500,
+          "budget_exhausted": false,
+          "capped_unconverged": false,
+          "last_checked_projected_gradient_norm": 2.358083814296775e-10,
+          "final_projected_gradient_norm": 2.358083814296775e-10,
+          "gradient_tolerance": 1e-06,
+          "relative_step": 1.525873076142253e-07,
+          "relative_tolerance": 1e-08
+        }
+      },
+      "current_last_all_inner_converged": false,
+      "current_last_inner_converged_by_block": {
+        "W": true,
+        "RIS": false,
+        "rotation": true
+      },
+      "false_is_only_historical_inner_failure": false,
+      "final_RIS_gradient_above_original_tolerance": true,
+      "recorded_last_phase_gradient_state_scope": "Final rotation block made three updates after phase; saved final W/theta/r are post-rotation and cannot be relabeled as the exact operands of the recorded last phase norm. The pre-rotation r is not explicitly stored by this result schema.",
+      "last_phase_exact_operands_available_from_saved_final_state_and_fixed_iota": false
+    }
+  ],
+  "diagnosis": "Both final RIS inner blocks still exceed the recorded original 1e-6 gradient stop at the unchanged 500-step cap. The false flags are not merely caused by earlier historical failures. W and rotation in each final AO block did converge under their original recorded criteria; earlier W/rotation caps remain relevant to the all-history gate.",
+  "next_finite_mathematical_check": {
+    "priority": "Create compact saved final-state fixtures only, then use existing audit_stable_derivatives.py::reference(w,theta,r,c,iota) at MP80/100; verify current-state stable physical gradients independently before changing any budget or stop.",
+    "Rot_BS_Rot_RIS_exact_recorded_phase_boundary": "This final rotation block performed zero updates, so the saved final W/theta/r with last_AO_fixed_inner_iota=10041012487.526325 exactly recover the reported final phase-gradient operands by source. They permit a direct fixed-state check of the recorded 1.5096192266911762e-5 norm versus 1e-6, with no optimization.",
+    "Rot_BS_Fix_RIS_scope_limit": "Three final rotation updates changed r after the phase block. The saved final state permits independent final-state stationarity checking with explicitly chosen iota, but does not reproduce the recorded pre-rotation phase boundary. Do not treat that different state as verification of the 9.602707000029619e-6 recorded norm.",
+    "if_exact_historical_second_phase_norm_is_needed": "Prepare only the minimal passive pre/post-final-phase rotation/state capture using the existing algorithm and exact input; no automatic prefix rerun or budget increase is authorized by this diagnosis.",
+    "existing_formula_entry": "retained-evidence/audit_stable_derivatives.py::reference(w,theta,r,c,iota)",
+    "existing_CLI_input_caveat": "The --capture CLI expects the original failure-capture schema; use a small explicit saved-state adapter to the existing reference function rather than relabeling these final states as an original failure capture."
+  },
+  "no_new_MP_physics_optimizer_MC_RNG_or_budget_change": true,
+  "outer_pass_does_not_imply_scientific_completion": true,
+  "independent_physics_dual_reference_or_fullpaper_PASS": false
+}

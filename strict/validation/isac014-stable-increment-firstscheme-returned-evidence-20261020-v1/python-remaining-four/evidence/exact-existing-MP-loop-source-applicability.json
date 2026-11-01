@@ -1,0 +1,68 @@
+{
+  "schema": "only-new-Python-saved-schemes-original80fe-MP-source-map-v1",
+  "original": {
+    "path": "logical-source/0086/audit_only_closed_new_returned_states_v1.py",
+    "SHA256": "80fe571c8b729f35c7d0c03cf4c64c307b649d5b935025fcefd8685f96beb0ec"
+  },
+  "whole_original_copy": "logical-source/0009/original_executed_80fe_reader.py.source",
+  "exact_functions": [
+    {
+      "function": "clean",
+      "SHA256": "97938fc788f5247ec770518680cf658a953d6fe66b4b026bd2ee96ef7bbe5e1e",
+      "loaded_from_original_wholebyte_file": true
+    },
+    {
+      "function": "reprmp",
+      "SHA256": "4037d276b6e657adcbf8a2fe2bb76d79589508513c5a77b5a79491f8397161b3",
+      "loaded_from_original_wholebyte_file": true
+    },
+    {
+      "function": "flat",
+      "SHA256": "3f7ba67238703fe77bbbf21845251701f7ee1315997f1a20e3cea06860ae7f68",
+      "loaded_from_original_wholebyte_file": true
+    },
+    {
+      "function": "W_diagnostics",
+      "SHA256": "cf33853016b34cdfdb13f005c87f84ee6da717f9e44a5e343dc4b08680756561",
+      "loaded_from_original_wholebyte_file": true
+    },
+    {
+      "function": "ref_functions",
+      "SHA256": "f99bd0f8f8431ce77cb979c482a5ed1869e532f742d4b47d3d8178325a9455bb",
+      "loaded_from_original_wholebyte_file": true
+    }
+  ],
+  "original_loop_byte_count": 7227,
+  "original_loop_SHA256": "b53e7b03952f4d92c6eaf0533470c993cfb130890b12ce2ab6679b4cab62a498",
+  "derived_loop_SHA256": "ee7075715efca0c3c69c8a9d742e9b9c94d7917e39acad1e5b6a1bdbc3c4f95e",
+  "exact_inverse_replacements": [
+    [
+      "    lanes={};nums={};width=np.r_[np.ones(3)*scene.get('rotation_bs_half_width',scene.get('rotation_half_width',np.pi/2)),np.ones(3)*scene.get('rotation_ris_half_width',scene.get('rotation_half_width',np.pi/2))]",
+      "    lanes={};nums={}"
+    ],
+    [
+      "float(st['iota'])==blocks[x['call']-1]['iota']",
+      "float(st['iota']).hex()==float(x['fixed_iota']).hex()"
+    ],
+    [
+      "recorded=blocks[x['call']-1]['rotation']['final_projected_gradient_norm']",
+      "recorded=x['flags']['final_projected_gradient_norm']"
+    ],
+    [
+      "recorded=blocks[x['call']-1]['RIS']['final_normalized_gradient_norm']",
+      "recorded=x['flags']['final_normalized_gradient_norm']"
+    ],
+    [
+      "                    for kind,got,expected in zip(('W','RCG','PGA'),x['all_gradients'],refs):\n                        wanted=",
+      "                    for kind,got,expected in zip(('W','RCG','PGA'),x['all_gradients'],refs):\n                        if kind=='RCG' and not with_ris:continue\n                        wanted="
+    ]
+  ],
+  "entire_original_loop_restored_exactly": true,
+  "formula_or_precision_or_threshold_edits": 0,
+  "changes_are_only": [
+    "Width is supplied from the exact selected original scheme flags; fixed angles are not free stationarity components.",
+    "Actual per-return fixediota/norm flags replace hard-coded firstscheme full-history lookup, preserving failed-scheme partial actual returns.",
+    "NoRIS final RCG is not applicable and is omitted, not fabricated as a returned RCG state or assigned PASS."
+  ],
+  "source_preparation_imported_numerical_modules_or_executed_MP": false
+}

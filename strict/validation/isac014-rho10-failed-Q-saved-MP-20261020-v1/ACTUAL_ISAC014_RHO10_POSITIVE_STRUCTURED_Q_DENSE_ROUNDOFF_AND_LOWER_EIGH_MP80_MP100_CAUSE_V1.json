@@ -1,0 +1,256 @@
+{
+  "schema": "ACTUAL_ISAC014_RHO10_FAILED_Q_SAVED_OPERAND_MP80_MP100_DIAGNOSIS_V1",
+  "source_before": {
+    "source-57d28c9fdb04/diagnose_saved_actual_Q_MP80_MP100_v1.py": "c498ee7abd57208d7555820482a93e71c1415c3d3b3accf944553785603d3d80",
+    "source-af7f67c9885d/actual-failed-Q-operands.npz": "635f106c9c5b5ec02a21117d532325cbd66bbddf6d4caf2016faf0c6c9b901e4",
+    "source-e4b14834e245/actual-failed-Q-capture-or-nonreproduction.json": "d9313309f45ad68b585605529e39061805102402b611ceead9535c96f7b5ab1b",
+    "source-d461f3c39920/original-scenario.json": "1854197e30970f2014a6412c4bc89fe279c7f7e569457047b8fca0c2d0a30a0e",
+    "source-64003c565cca/actual-owned-ISAC014-single-diagnostic.json": "7872dcb9d9e57ba190a05cf7c0bfe4ba9098bd1c26e42546378190dab6ee1c6e"
+  },
+  "source_after": {
+    "source-57d28c9fdb04/diagnose_saved_actual_Q_MP80_MP100_v1.py": "c498ee7abd57208d7555820482a93e71c1415c3d3b3accf944553785603d3d80",
+    "source-af7f67c9885d/actual-failed-Q-operands.npz": "635f106c9c5b5ec02a21117d532325cbd66bbddf6d4caf2016faf0c6c9b901e4",
+    "source-e4b14834e245/actual-failed-Q-capture-or-nonreproduction.json": "d9313309f45ad68b585605529e39061805102402b611ceead9535c96f7b5ab1b",
+    "source-d461f3c39920/original-scenario.json": "1854197e30970f2014a6412c4bc89fe279c7f7e569457047b8fca0c2d0a30a0e",
+    "source-64003c565cca/actual-owned-ISAC014-single-diagnostic.json": "7872dcb9d9e57ba190a05cf7c0bfe4ba9098bd1c26e42546378190dab6ee1c6e"
+  },
+  "source_interval_closed": true,
+  "actual_held_terminal": {
+    "owner": {
+      "PID": 46568,
+      "creation_FILETIME": 134369060365253802,
+      "associated_with_any_Windows_job": true
+    },
+    "child": {
+      "PID": 41044,
+      "creation_FILETIME": 134369060382498939,
+      "associated_with_any_Windows_job": true
+    },
+    "exit_code": 0,
+    "exact_original_handle_birth_and_exit_match": true,
+    "all_watched_source_and_job_bytes_unchanged": true
+  },
+  "actual_failure": {
+    "rho": 10,
+    "AO_iteration_zero_based": 1,
+    "W_block_call": 2,
+    "W_iteration_zero_based": 0,
+    "minimum_numpy_eigh_eigenvalue": -1.2490609605987506e-07,
+    "original_failure_retained": true,
+    "current_nu_was_not_assigned": true,
+    "full_six_or_case_success": false
+  },
+  "array_transport": {
+    "NPZ_SHA256": "635f106c9c5b5ec02a21117d532325cbd66bbddf6d4caf2016faf0c6c9b901e4",
+    "all_finite": true,
+    "q_p_addends_bitwise_reconstruct": true,
+    "sensing_shift_lost_in_every_diagonal": true,
+    "actual_full_Q_bytes_equal_communication_Q_bytes": true,
+    "diagonal_ULP_rows": [
+      {
+        "index_zero_based": 0,
+        "Q_diagonal_real": 546069637.665406,
+        "diagonal_spacing": 1.1920928955078125e-07,
+        "alpha_over_diagonal_spacing": 0.028567087127111913,
+        "actual_Q_equals_communication_at_diagonal": true
+      },
+      {
+        "index_zero_based": 1,
+        "Q_diagonal_real": 543723358.2757852,
+        "diagonal_spacing": 1.1920928955078125e-07,
+        "alpha_over_diagonal_spacing": 0.028567087127111913,
+        "actual_Q_equals_communication_at_diagonal": true
+      },
+      {
+        "index_zero_based": 2,
+        "Q_diagonal_real": 546511093.414577,
+        "diagonal_spacing": 1.1920928955078125e-07,
+        "alpha_over_diagonal_spacing": 0.028567087127111913,
+        "actual_Q_equals_communication_at_diagonal": true
+      },
+      {
+        "index_zero_based": 3,
+        "Q_diagonal_real": 543946941.3531412,
+        "diagonal_spacing": 1.1920928955078125e-07,
+        "alpha_over_diagonal_spacing": 0.028567087127111913,
+        "actual_Q_equals_communication_at_diagonal": true
+      }
+    ]
+  },
+  "MP_lanes": [
+    {
+      "decimal_precision": 80,
+      "all_values_from_actual_saved_binary64_operands": true,
+      "alpha_saved": "0.0000000034054621609582796928560774306219208207302528990112477913498878479",
+      "alpha_original_expression_from_saved_lip_den_MP": "0.0000000034054621609582792733684707646907958298131332572427119306615320302",
+      "original_real_arithmetic_structured_eigenvalues": [
+        "0.0000000034054621609582792733684707646907958298131332572427119306615320282",
+        "0.0000000034054621609582792733684707646907958298131332572427119306615320293",
+        "0.0000000034054621609582792733684707646907958298131332572427119306615320305",
+        "2180251030.7089093872708854487067097181499433043165582030820881021"
+      ],
+      "positive_weight_frozen_structured_eigenvalues": [
+        "0.0000000034054621609582796928560774306219208207302528990112477913498878465",
+        "0.0000000034054621609582796928560774306219208207302528990112477913498878468",
+        "0.0000000034054621609582796928560774306219208207302528990112477913498878482",
+        "2180251030.7089094750597458632295207749006535835568074847876333539"
+      ],
+      "actual_lower_triangle_Hermitian_eigenvalues": [
+        "-0.00000013947675674828202108648867217767982213973050702331788584171684627",
+        "0.000000045771457080512249702112181327826035129606698884341282380516635586",
+        "0.00000013358171066805770515707000435566783204011430006846616840653941628",
+        "2180251030.7089093524804615583058162273064864941859549700095080705"
+      ],
+      "actual_fullQ_Hermitian_part_eigenvalues": [
+        "-0.00000006093731971650583319249187622964697427362354788874947313407653621",
+        "0.000000022224422220987085334591828117014767833956123147399071907017011107",
+        "0.000000081392784972032513179544248209488934974923676943490500281486480922",
+        "2180251030.7089093496769850820799846783557999031432714647437477979"
+      ],
+      "non_Hermitian_fullQ_Frobenius": "0.00000032384768595371643878669086801102996143864770775348543400405897898",
+      "dense_fullQ_minus_original_structured_Frobenius": "0.00000026030114757074312204933249434657036246066409267764132149933800309",
+      "effective_lowerQ_minus_original_structured_Frobenius": "0.0000002599807422609356937512719350273223429338171709951162569703802367",
+      "exact_structured_condition_number": "640221775389040919.35539316554622151181520908805731386973665798152",
+      "actual_eigh_lower_eigenpair_residual_Frobenius": "0.00000070560223723659020231369906355781617006763806438170264742016442888",
+      "actual_eigh_fullQ_eigenpair_residual_Frobenius": "0.0000007565120184290011985037356464499494361241392533174611474646039002",
+      "relative_lower_eigenpair_residual": "0.00000000000000032363348407965820278676478944624559032710228521435161808111741857",
+      "active_communication_columns_zero_based": [
+        1
+      ],
+      "P_communication_nullspace_Frobenius": "0.000000069397162992523429699591481870789563616424759255884099380223083929",
+      "P_sensing_nullspace_Frobenius": "0.0000000010145641163135840683745630161801700769989640022033604771881311801",
+      "actual_fullP_nullspace_Frobenius": "0.00000006939716299252342969959149059487495457286004969281424230804001166",
+      "communication_null_roundoff_over_sensing_null": "68.400963405524168286420656675792202529434425489467712288612203558",
+      "fullP_null_over_alpha_unconstrained_component_norm": "20.378192360532768857246114677639468329731263456934096230005973915",
+      "exact_formula_communication_P_in_range_Fc": true,
+      "actual_interference_and_QT_mu_comparison": [
+        {
+          "user_zero_based": 0,
+          "saved_subtraction": "35.40115308737936317129424423910677433013916015625",
+          "same_saved_y_self_excluded_MP": "35.401153087379369245098281380475789607927124355621670520246521138",
+          "subtraction_minus_self_excluded": "-0.0000000000000060738040371413690152777879641993716705202465211379706079801392432",
+          "relative_subtraction_error": "-0.00000000000000017157079663901401810505197072886035826813028209871971862688366745",
+          "saved_mu": "0.0",
+          "same_saved_y_direct_mu": "0.0",
+          "mu_relative_error": null
+        },
+        {
+          "user_zero_based": 1,
+          "saved_subtraction": "0.0009999999892897903919219970703125",
+          "same_saved_y_self_excluded_MP": "0.0010000000000000091175627085147469828041294178279105962567396730707",
+          "subtraction_minus_self_excluded": "-0.000000000010710218725640711444434482804129417827910596256739673070706282629",
+          "relative_subtraction_error": "-0.000000010710218725640613793343629866932911211818376744047615042817302098",
+          "saved_mu": "453444391.540218830108642578125",
+          "same_saved_y_direct_mu": "453444386.68373023562497043358719279755080139266638427572171729368",
+          "mu_relative_error": "0.00000001071021879882921677989264818497335226949612410060168870392460131"
+        }
+      ],
+      "verdict": {
+        "original_factored_positive_Q_is_PD": true,
+        "frozen_positive_weights_factored_Q_is_PD": true,
+        "actual_eigh_lower_matrix_is_indefinite": true,
+        "actual_fullQ_Hermitian_part_is_indefinite": true,
+        "eigh_error_does_not_create_all_negative_curvature": true,
+        "communication_subtraction_finite_positive": true
+      }
+    },
+    {
+      "decimal_precision": 100,
+      "all_values_from_actual_saved_binary64_operands": true,
+      "alpha_saved": "0.0000000034054621609582796928560774306219208207302528990112477913498878479",
+      "alpha_original_expression_from_saved_lip_den_MP": "0.0000000034054621609582792733684707646907958298131332572427119306615320302",
+      "original_real_arithmetic_structured_eigenvalues": [
+        "0.0000000034054621609582792733684707646907958298131332572427119306615320302",
+        "0.0000000034054621609582792733684707646907958298131332572427119306615320302",
+        "0.0000000034054621609582792733684707646907958298131332572427119306615320302",
+        "2180251030.7089093872708854487067097181499433043165582030820881021"
+      ],
+      "positive_weight_frozen_structured_eigenvalues": [
+        "0.0000000034054621609582796928560774306219208207302528990112477913498878479",
+        "0.0000000034054621609582796928560774306219208207302528990112477913498878479",
+        "0.0000000034054621609582796928560774306219208207302528990112477913498878479",
+        "2180251030.7089094750597458632295207749006535835568074847876333539"
+      ],
+      "actual_lower_triangle_Hermitian_eigenvalues": [
+        "-0.00000013947675674828202108648867217767982213973050702331788584171684627",
+        "0.000000045771457080512249702112181327826035129606698884341282380516635584",
+        "0.00000013358171066805770515707000435566783204011430006846616840653941628",
+        "2180251030.7089093524804615583058162273064864941859549700095080705"
+      ],
+      "actual_fullQ_Hermitian_part_eigenvalues": [
+        "-0.000000060937319716505833192491876229646974273623547888749473134076536211",
+        "0.00000002222442222098708533459182811701476783395612314739907190701701111",
+        "0.000000081392784972032513179544248209488934974923676943490500281486480924",
+        "2180251030.7089093496769850820799846783557999031432714647437477979"
+      ],
+      "non_Hermitian_fullQ_Frobenius": "0.00000032384768595371643878669086801102996143864770775348543400405897898",
+      "dense_fullQ_minus_original_structured_Frobenius": "0.00000026030114757074312204933249434657036246066409267764132149933800309",
+      "effective_lowerQ_minus_original_structured_Frobenius": "0.0000002599807422609356937512719350273223429338171709951162569703802367",
+      "exact_structured_condition_number": "640221775389040919.35539316554622151181520908805731386973665798115",
+      "actual_eigh_lower_eigenpair_residual_Frobenius": "0.00000070560223723659020231369906355781617006763806438170264742016442888",
+      "actual_eigh_fullQ_eigenpair_residual_Frobenius": "0.0000007565120184290011985037356464499494361241392533174611474646039002",
+      "relative_lower_eigenpair_residual": "0.00000000000000032363348407965820278676478944624559032710228521435161808111741857",
+      "active_communication_columns_zero_based": [
+        1
+      ],
+      "P_communication_nullspace_Frobenius": "0.000000069397162992523429699591481870789563616424759255884099380223083929",
+      "P_sensing_nullspace_Frobenius": "0.0000000010145641163135840683745630161801700769989640022033604771881311801",
+      "actual_fullP_nullspace_Frobenius": "0.00000006939716299252342969959149059487495457286004969281424230804001166",
+      "communication_null_roundoff_over_sensing_null": "68.400963405524168286420656675792202529434425489467712288612203558",
+      "fullP_null_over_alpha_unconstrained_component_norm": "20.378192360532768857246114677639468329731263456934096230005973915",
+      "exact_formula_communication_P_in_range_Fc": true,
+      "actual_interference_and_QT_mu_comparison": [
+        {
+          "user_zero_based": 0,
+          "saved_subtraction": "35.40115308737936317129424423910677433013916015625",
+          "same_saved_y_self_excluded_MP": "35.401153087379369245098281380475789607927124355621670520246521138",
+          "subtraction_minus_self_excluded": "-0.0000000000000060738040371413690152777879641993716705202465211379706079801392432",
+          "relative_subtraction_error": "-0.00000000000000017157079663901401810505197072886035826813028209871971862688366745",
+          "saved_mu": "0.0",
+          "same_saved_y_direct_mu": "0.0",
+          "mu_relative_error": null
+        },
+        {
+          "user_zero_based": 1,
+          "saved_subtraction": "0.0009999999892897903919219970703125",
+          "same_saved_y_self_excluded_MP": "0.0010000000000000091175627085147469828041294178279105962567396730707",
+          "subtraction_minus_self_excluded": "-0.000000000010710218725640711444434482804129417827910596256739673070706282629",
+          "relative_subtraction_error": "-0.000000010710218725640613793343629866932911211818376744047615042817302098",
+          "saved_mu": "453444391.540218830108642578125",
+          "same_saved_y_direct_mu": "453444386.68373023562497043358719279755080139266638427572171729368",
+          "mu_relative_error": "0.00000001071021879882921677989264818497335226949612410060168870392460131"
+        }
+      ],
+      "verdict": {
+        "original_factored_positive_Q_is_PD": true,
+        "frozen_positive_weights_factored_Q_is_PD": true,
+        "actual_eigh_lower_matrix_is_indefinite": true,
+        "actual_fullQ_Hermitian_part_is_indefinite": true,
+        "eigh_error_does_not_create_all_negative_curvature": true,
+        "communication_subtraction_finite_positive": true
+      }
+    }
+  ],
+  "MP80_MP100_classifications_agree": true,
+  "supported_cause": "A positive rho10 sensing shift is smaller than every dense Gram diagonal ULP and is lost. Rank-one positive communication Gram rounding creates a non-Hermitian full array and a genuinely indefinite effective lower-triangle Hermitian matrix. The original eigh guard rejects that stored matrix before any current QCQP multiplier is assigned. It is not a rho0 theoretical singularity.",
+  "communication_cancellation_scope": "The saved total-minus-signal has a separately quantified positive relative error; weights remain nonnegative. It does not explain negative curvature of the exact positive structured Q. No SINR or convergence gate is upgraded.",
+  "mathematically_equivalent_remedy": {
+    "Q": "Retain Q = alpha I + Fc diag((1+mu)|eta|^2/ln2) Fc^H as a positive structured representation; retain alpha separately rather than add it to huge dense diagonal entries.",
+    "P": "Retain communication P as Fc times its original coefficient matrix plus the original sensing P separately; avoid cancellation-induced nullspace components from a separately rounded dense dominant P.",
+    "solve": "Use a factored/low-rank or guarded higher-precision solution of the unchanged (Q+nu I)W=P and original power-dual equation, with original tolerance/budget. Diagnose at fixed saved inputs before any whole-trajectory claim.",
+    "not_supported": "No eigenvalue clipping, diagonal jitter, pseudo-inverse fallback, replacement objective, changed tolerance, or claim that symmetrizing alone recovers lost alpha.",
+    "implementation_or_full_trajectory_executed": false
+  },
+  "scope": {
+    "saved_mathematics_only": true,
+    "optimizer_calls": 0,
+    "RNG_calls": 0,
+    "MC_calls": 0,
+    "new_channels": 0,
+    "full_KKT_solve_or_multiplier_recovery": false,
+    "original_algorithm_convergence_PASS": false,
+    "reference_PASS": false,
+    "full_paper_PASS": false
+  },
+  "elapsed_seconds": 0.07584880001377314
+}

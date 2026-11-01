@@ -20,10 +20,25 @@ def fingerprint(config_bytes,job_bytes):
     return hashlib.sha256(b"strict-v1\0"+config_bytes+b"\0"+job_bytes).hexdigest()
 
 
-def implemented_complete(result,expected_fingerprint,job,config):
-    """Reusable numerical receipt for implemented equations, not original-figure closure."""
+def _saved_nonnegative_mean_valid(metric, count):
+    """Check saved mean/sample consistency; not scientific acceptance."""
+    rates=metric.get('sample_sum_rates'); mean=metric.get('mean_sum_rate')
+    if (type(count) is not int or count<=0 or not isinstance(rates,list) or len(rates)!=count
+        or type(mean) not in (int,float) or not math.isfinite(mean) or mean<0
+        or not all(type(x) in (int,float) and math.isfinite(x) and x>=0 for x in rates)):
+        return False
+    try: observed=math.fsum(rates)/count
+    except OverflowError:return False
+    if not math.isfinite(observed):return False
+    nu=(count+4)*(2**-53)
+    if nu>=1:return False
+    return abs(observed-mean)<=(2*nu/(1-nu))*max(observed,mean)
+
+
+def _implemented_complete(result,expected_fingerprint,job,config,expected_implementation):
+    """Check a numerical receipt against an explicitly selected source version."""
     if result.get("input_fingerprint")!=expected_fingerprint or result.get("status")=="failed":return False
-    if result.get("implementation_fingerprint")!=implementation_fingerprint():return False
+    if result.get("implementation_fingerprint")!=expected_implementation:return False
     checks=result.get("checks",{})
     required=["mrt_converged","zf_converged","mrt_nominal_design_spacing_feasible","zf_nominal_design_spacing_feasible","mrt_nominal_design_box_feasible","zf_nominal_design_box_feasible"]
     if not all(checks.get(k) is True for k in required):return False
@@ -42,13 +57,14 @@ def implemented_complete(result,expected_fingerprint,job,config):
     schemes=result.get("metrics",{}).get("schemes",{})
     for name in ["MA-MRT","MA-ZF","FPA-MRT","FPA-ZF","FPA-OPT"]:
         s=schemes.get(name,{})
-        rates=s.get("sample_sum_rates",[])
-        if len(rates)!=config["nlos_realizations_per_geometry"] or s.get("nonconverged_samples",0)!=0 or not all(math.isfinite(x) for x in rates):return False
+        if not _saved_nonnegative_mean_valid(s,config["nlos_realizations_per_geometry"]):return False
+        # FPA solves an optimization for each sample; MA convergence is
+        # established above by its own long-timescale AO flags instead.
+        if name.startswith("FPA-") and (type(s.get("nonconverged_samples")) is not int or s["nonconverged_samples"]!=0):return False
     if job.get("correlated",False):
         extension=result.get("metrics",{}).get("correlated_extension",{})
         for name in ["MA-MRT_MC","MA-ZF_MC"]:
-            rates=extension.get(name,{}).get("sample_sum_rates",[])
-            if len(rates)!=config["nlos_realizations_per_geometry"] or not all(math.isfinite(x) for x in rates):return False
+            if not _saved_nonnegative_mean_valid(extension.get(name,{}),config["nlos_realizations_per_geometry"]):return False
     figure=job.get("figure")
     mode="mrt" if figure in [3,13,15] else ("zf" if figure in [4,14,16] else None)
     if mode is not None:
@@ -68,6 +84,11 @@ def implemented_complete(result,expected_fingerprint,job,config):
     return True
 
 
+def implemented_complete(result,expected_fingerprint,job,config):
+    """Numerical receipt against the current source; not original-figure closure."""
+    return _implemented_complete(result,expected_fingerprint,job,config,implementation_fingerprint())
+
+
 def original_scope_available(job):
     # Section V and Figs.13/15 describe model evaluation, not a new optimizer.
     # Alg.1's iid trajectory with valid Eq.68/69 evaluations is a supported
@@ -77,8 +98,12 @@ def original_scope_available(job):
 
 
 def complete(result,expected_fingerprint,job,config):
-    """Original-figure receipt; a runnable correlated MC subset is insufficient."""
-    return original_scope_available(job) and implemented_complete(result,expected_fingerprint,job,config)
+    """Fail closed until independent figure-level acceptance is implemented.
+
+    A single result cannot prove full scenarios, MATLAB agreement, original
+    reference agreement and the other figure-level requirements.
+    """
+    return False
 
 
 def reusable(path,expected_fingerprint,job,config):

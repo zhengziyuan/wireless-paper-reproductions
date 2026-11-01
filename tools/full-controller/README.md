@@ -1,7 +1,6 @@
-# Full-paper command controller — source-only review candidate
+# Full-paper command controller
 
-This small directory can be placed at `tools/full-controller/` in the repository
-after ROOT review. It does not modify any existing `strict/` source. By default
+This directory invokes the repository's existing strict scientific entries. By default
 it only reads metadata and prints a plan; it does not create a numerical bank or
 launch Python scientific code or MATLAB.
 
@@ -54,27 +53,29 @@ In particular:
   historical state/curve recovery remain false. Reported AO20/AO100 budget
   endpoints are not promoted to stationarity.
 
-## Known current interface blockers
+## Repaired interfaces and remaining scientific gates
 
-The plan has four blocked tasks under the current reviewed sources:
-
-1. MATLAB parameter table1 for each satellite paper: `execute_table` explicitly
-   supports only Python stdlib source/config metadata replay. No MATLAB
-   simulation is substituted, and the table's unverified external pattern rows
-   and publisher equivalence remain unverified.
-2. Sensing MATLAB15/16: the unchanged `ris_baselines` return in
-   `mis_sensing_strict_engine.m`868–881 omits `target_start_banks`. The unchanged
-   strict renderer's `mis_population_evidence.py` requires every original
-   target's full6000 summaries. This is a known transport/evidence interface
-   gap, not an assertion that the algorithm did not compute those starts.
-   The command is retained but not launched as a complete-render route until
-   the interface is repaired separately.
+The 17 October repair removes the four previously hardcoded interface blocks.
+Both RIS baseline implementations now return every target's complete start
+bank, without changing the optimizer, initialization, quantization or budgets.
+An actual native MATLAB parameter replay is available for both satellite
+tables; it independently checks 36 row mappings and 34 numeric rows. The two
+external-pattern reference rows and final-publisher equivalence remain
+unverified. See [the bounded execution checkpoint](../../strict/validation/runtime-resumption-20261017/README.md).
 
 Other full commands can still fail from solver/cap/unknown parameter or
 dependency issues. Runnable means the current CLI exists, **not** a guarantee
 of convergence, source-curve closeness, native independent validation, or
 completion within a practical runtime. Current pre-existing banks/receipts are
 never used as automatic task success or silently skipped.
+
+For a local migrated checkout, activate `tools/local-runtime/activate.ps1`
+before execution. It keeps temporary files, preferences and plots under the
+data directory and selects the existing external CVX installation through
+`WIRELESS_REPRO_CVX_ROOT`; solver binaries are not included in this repository.
+The [missing-job recovery entry](../resume-campaign/README.md) reuses existing
+full banks while retaining failed outcomes. It does not launch a second full
+campaign over already saved jobs.
 
 ## Native host adapter
 

@@ -1,0 +1,56 @@
+{
+  "scope": "saved6000 assembly, actual deterministic nine-panel fields, and real V2 display/visual review",
+  "original_cases": 6000,
+  "saved_combined_true": 5280,
+  "saved_combined_false": 720,
+  "selected_original_start": 3072,
+  "selected_saved_combined_certificate": false,
+  "all_actual_outer_histories": 30,
+  "derived_hold_contributions": 0,
+  "original_assembly_budget": {
+    "starts": 6000,
+    "outer_iterations": 30,
+    "inner_iteration_cap": 4000
+  },
+  "actual_assembly_independent35_check_receipt_SHA256": "889cba87c5cccdddf53e0e597d55a21c1478781ab8fd3ef88979597a879b86dd",
+  "actual_output_and_visual_review_SHA256": "f02bc893fd2c886ad183c83ec16d408f7483f9a19945102360544f1c1a2d0728",
+  "actual_field_grid": {
+    "panels": 9,
+    "elevation_points": 91,
+    "azimuth_points": 361
+  },
+  "fullgrid_JSON_not_distributed_bytes": 22701671,
+  "normalization": {
+    "reference_echo_db": -73.88,
+    "inverse_power_reference_unit_used": "inverse_watt",
+    "noise_domain_used": "raw_per_PRI",
+    "effective_gain_used": 1,
+    "power_dbm": 30,
+    "raw_PRI_clarification": "provisional",
+    "inverse_power_reference_unit_verified": false,
+    "effective_processing_gain_verified": false,
+    "factor100_or20dB_adjustment_applied": false
+  },
+  "source_grid_selection_and_residual_norm_are_disclosed_reconstruction_rules": true,
+  "same_state_field_consistency_is_not_a_complete_dual_language_gate": true,
+  "public_host_first_actual_use_pending": false,
+  "population_bank_or6000_means_recomputed_by_public_host": false,
+  "original_reference_gate": false,
+  "dual_language_figure_gate": false,
+  "all6000_original_combined_convergence_pass": false,
+  "whole_paper_or_all_six_PASS": false,
+  "actual_portable_first_use": {
+    "evidence": {
+      "relative_path": "evidence/portable-first-use-and-exact-output-comparison.json",
+      "SHA256": "1e234480c5ac5cb399b45104b49f229f7c5ebf612e609ee66e6d5d17f8cf04a7",
+      "bytes": 6908
+    },
+    "mode": "all",
+    "natural_returncode": 0,
+    "all9_full_grid_numeric_samples_exact_equal": true,
+    "all11_PNG_pixels_exact_equal_to_visually_reviewed_originals": true,
+    "all6_Fig5_Fig6_formats_present": true,
+    "source_and_saved_inputs_unchanged": true,
+    "new_optimizer_RNG_MC_MP_or_reference_fit": false
+  }
+}

@@ -1,0 +1,2428 @@
+{
+  "schema": "actual-one-original2223-versus-new-passive-prefix-nonreproduction-first-divergence-v1",
+  "new_actual_result_path": "origin:resume-20261017/MIS2223-native-first-curve-failure-prefix-actual-v1/actual-no-failure-returned-original-result.json",
+  "new_actual_result_SHA256": "62cddcf74678993139d66e4c17d20245fcf35d4b181d857c2dce91f78a7f0dcb",
+  "old_exact66_reference_path": "origin:resume-20261017/MIS2223-native-failure-prefix-prepared-v1/EXACT_SAVED2223_OUTER1_ALL66_INNER_SCALAR_RECORDS_FOR_NEW_CAPTURE_COMPARISON_V1.json",
+  "old_exact66_reference_SHA256": "3add4d2023961662c196fc0ebbd1dbca806ad6eaad7ae3cde7ec9961b4080ff1",
+  "original_source_payload_SHA256": "2d25490b721fcac58def636035f4fa63b5eb12f199a8666cb100d98990de1121",
+  "new_settings_match_original_case_file": true,
+  "new_configuration_matches_original_saved": true,
+  "new_original_start_dispatcher": 1,
+  "new_all30_outer_records": 30,
+  "new_first_outer_stop": {
+    "reason": "gradient_tolerance",
+    "objective": -47.199284056010896,
+    "gradient_norm": 15.508699753863977,
+    "projected_kkt_norm": 0.0006878518849276914,
+    "stationarity_measure": "projected_simplex_KKT",
+    "solver_branch": "corrected_paper_product_raw_PR_with_curvature_line_search"
+  },
+  "new_first_outer_inner_records": 2689,
+  "old_first_outer_stop": {
+    "reason": "corrected_curve_search_exhausted",
+    "objective": -0.23548426820552334,
+    "gradient_norm": 0.09767041195480501,
+    "projected_kkt_norm": 0.07674046446744565,
+    "stationarity_measure": "projected_simplex_KKT",
+    "solver_branch": "corrected_paper_product_raw_PR_with_curvature_line_search"
+  },
+  "old_first_outer_inner_records": 66,
+  "compared_common_original_first66_records": 66,
+  "all_compared_exact": false,
+  "first_nonidentical_iteration": 33,
+  "per_iteration_exact_differences": [
+    {
+      "iteration": 0,
+      "exact": true,
+      "differences": []
+    },
+    {
+      "iteration": 1,
+      "exact": true,
+      "differences": []
+    },
+    {
+      "iteration": 2,
+      "exact": true,
+      "differences": []
+    },
+    {
+      "iteration": 3,
+      "exact": true,
+      "differences": []
+    },
+    {
+      "iteration": 4,
+      "exact": true,
+      "differences": []
+    },
+    {
+      "iteration": 5,
+      "exact": true,
+      "differences": []
+    },
+    {
+      "iteration": 6,
+      "exact": true,
+      "differences": []
+    },
+    {
+      "iteration": 7,
+      "exact": true,
+      "differences": []
+    },
+    {
+      "iteration": 8,
+      "exact": true,
+      "differences": []
+    },
+    {
+      "iteration": 9,
+      "exact": true,
+      "differences": []
+    },
+    {
+      "iteration": 10,
+      "exact": true,
+      "differences": []
+    },
+    {
+      "iteration": 11,
+      "exact": true,
+      "differences": []
+    },
+    {
+      "iteration": 12,
+      "exact": true,
+      "differences": []
+    },
+    {
+      "iteration": 13,
+      "exact": true,
+      "differences": []
+    },
+    {
+      "iteration": 14,
+      "exact": true,
+      "differences": []
+    },
+    {
+      "iteration": 15,
+      "exact": true,
+      "differences": []
+    },
+    {
+      "iteration": 16,
+      "exact": true,
+      "differences": []
+    },
+    {
+      "iteration": 17,
+      "exact": true,
+      "differences": []
+    },
+    {
+      "iteration": 18,
+      "exact": true,
+      "differences": []
+    },
+    {
+      "iteration": 19,
+      "exact": true,
+      "differences": []
+    },
+    {
+      "iteration": 20,
+      "exact": true,
+      "differences": []
+    },
+    {
+      "iteration": 21,
+      "exact": true,
+      "differences": []
+    },
+    {
+      "iteration": 22,
+      "exact": true,
+      "differences": []
+    },
+    {
+      "iteration": 23,
+      "exact": true,
+      "differences": []
+    },
+    {
+      "iteration": 24,
+      "exact": true,
+      "differences": []
+    },
+    {
+      "iteration": 25,
+      "exact": true,
+      "differences": []
+    },
+    {
+      "iteration": 26,
+      "exact": true,
+      "differences": []
+    },
+    {
+      "iteration": 27,
+      "exact": true,
+      "differences": []
+    },
+    {
+      "iteration": 28,
+      "exact": true,
+      "differences": []
+    },
+    {
+      "iteration": 29,
+      "exact": true,
+      "differences": []
+    },
+    {
+      "iteration": 30,
+      "exact": true,
+      "differences": []
+    },
+    {
+      "iteration": 31,
+      "exact": true,
+      "differences": []
+    },
+    {
+      "iteration": 32,
+      "exact": true,
+      "differences": []
+    },
+    {
+      "iteration": 33,
+      "exact": false,
+      "differences": [
+        {
+          "path": "inner[33].objective",
+          "new": -0.16536947498486543,
+          "old": -0.1653694749848654,
+          "new_minus_old": -2.7755575615628914e-17
+        },
+        {
+          "path": "inner[33].projected_kkt_norm",
+          "new": 0.054959752855489645,
+          "old": 0.05495975285548965,
+          "new_minus_old": -6.938893903907228e-18
+        },
+        {
+          "path": "inner[33].raw_pr_slope",
+          "new": -0.0038438182685742997,
+          "old": -0.0038438182685742992,
+          "new_minus_old": -4.336808689942018e-19
+        },
+        {
+          "path": "inner[33].corrected_line_search.armijo_bound",
+          "new": -3.8438182685742997e-07,
+          "old": -3.843818268574299e-07,
+          "new_minus_old": -5.293955920339377e-23
+        },
+        {
+          "path": "inner[33].corrected_line_search.initial_curve_slope",
+          "new": -0.0038438182685742997,
+          "old": -0.0038438182685742992,
+          "new_minus_old": -4.336808689942018e-19
+        },
+        {
+          "path": "inner[33].corrected_line_search.accepted_curve_slope",
+          "new": -7.727669521915984e-05,
+          "old": -7.72766952191607e-05,
+          "new_minus_old": 8.673617379884035e-19
+        },
+        {
+          "path": "inner[33].corrected_line_search.curvature_ratio",
+          "new": 0.0201041490048962,
+          "old": 0.02010414900489643,
+          "new_minus_old": -2.2898349882893854e-16
+        }
+      ]
+    },
+    {
+      "iteration": 34,
+      "exact": false,
+      "differences": [
+        {
+          "path": "inner[34].gradient_norm",
+          "new": 0.16276737883667686,
+          "old": 0.16276737883667688,
+          "new_minus_old": -2.7755575615628914e-17
+        },
+        {
+          "path": "inner[34].projected_kkt_norm",
+          "new": 0.15626825355471705,
+          "old": 0.15626825355471707,
+          "new_minus_old": -2.7755575615628914e-17
+        },
+        {
+          "path": "inner[34].corrected_line_search.accepted_curve_slope",
+          "new": -4.722005807994249e-07,
+          "old": -4.72200580831951e-07,
+          "new_minus_old": 3.252606517456513e-17
+        },
+        {
+          "path": "inner[34].corrected_line_search.curvature_ratio",
+          "new": 1.8922426427068792e-05,
+          "old": 1.8922426428372203e-05,
+          "new_minus_old": -1.3034109111031283e-15
+        }
+      ]
+    },
+    {
+      "iteration": 35,
+      "exact": false,
+      "differences": [
+        {
+          "path": "inner[35].gradient_norm",
+          "new": 0.06804124260303725,
+          "old": 0.06804124260303718,
+          "new_minus_old": 6.938893903907228e-17
+        },
+        {
+          "path": "inner[35].projected_kkt_norm",
+          "new": 0.056471782232482406,
+          "old": 0.056471782232482316,
+          "new_minus_old": 9.020562075079397e-17
+        },
+        {
+          "path": "inner[35].raw_pr_slope",
+          "new": -0.0038133824890945727,
+          "old": -0.0036716155738963315,
+          "new_minus_old": -0.00014176691519824118
+        },
+        {
+          "path": "inner[35].tangent_cone_gradient_norm",
+          "new": 0.06175259095045788,
+          "old": 0.06059385755913162,
+          "new_minus_old": 0.0011587333913262651
+        },
+        {
+          "path": "inner[35].corrected_line_search.objective_increment",
+          "new": -0.001579197992099407,
+          "old": -0.0015791979920994348,
+          "new_minus_old": 2.7755575615628914e-17
+        },
+        {
+          "path": "inner[35].corrected_line_search.armijo_bound",
+          "new": -3.813382489094573e-07,
+          "old": -3.671615573896332e-07,
+          "new_minus_old": -1.4176691519824119e-08
+        },
+        {
+          "path": "inner[35].corrected_line_search.initial_curve_slope",
+          "new": -0.0038133824890945727,
+          "old": -0.0036716155738963315,
+          "new_minus_old": -0.00014176691519824118
+        },
+        {
+          "path": "inner[35].corrected_line_search.accepted_curve_slope",
+          "new": 2.3184539234375346e-05,
+          "old": 2.3184539234297717e-05,
+          "new_minus_old": 7.762887554996212e-17
+        },
+        {
+          "path": "inner[35].corrected_line_search.curvature_ratio",
+          "new": 0.0060797833159086405,
+          "old": 0.0063145334166055415,
+          "new_minus_old": -0.00023475010069690105
+        }
+      ]
+    },
+    {
+      "iteration": 36,
+      "exact": false,
+      "differences": [
+        {
+          "path": "inner[36].objective",
+          "new": -0.17002110118904365,
+          "old": -0.17002110118904368,
+          "new_minus_old": 2.7755575615628914e-17
+        },
+        {
+          "path": "inner[36].gradient_norm",
+          "new": 0.16947888717099555,
+          "old": 0.1694788871709935,
+          "new_minus_old": 2.0539125955565396e-15
+        },
+        {
+          "path": "inner[36].projected_kkt_norm",
+          "new": 0.16283627021500643,
+          "old": 0.16283627021500433,
+          "new_minus_old": 2.1094237467877974e-15
+        },
+        {
+          "path": "inner[36].raw_pr_slope",
+          "new": -0.02733014685585062,
+          "old": -0.027330146855849936,
+          "new_minus_old": -6.83481049534862e-16
+        },
+        {
+          "path": "inner[36].tangent_cone_gradient_norm",
+          "new": 0.16531831978292855,
+          "old": 0.16531831978292647,
+          "new_minus_old": 2.0816681711721685e-15
+        },
+        {
+          "path": "inner[36].corrected_step_size",
+          "new": 0.12448907921051194,
+          "old": 0.1244890792105125,
+          "new_minus_old": -5.551115123125783e-16
+        },
+        {
+          "path": "inner[36].corrected_line_search.objective_increment",
+          "new": -0.0016538459827910267,
+          "old": -0.001653845982790992,
+          "new_minus_old": -3.469446951953614e-17
+        },
+        {
+          "path": "inner[36].corrected_line_search.armijo_bound",
+          "new": -3.4023048167729117e-07,
+          "old": -3.402304816772842e-07,
+          "new_minus_old": -6.988021814847978e-21
+        },
+        {
+          "path": "inner[36].corrected_line_search.initial_curve_slope",
+          "new": -0.02733014685585062,
+          "old": -0.027330146855849936,
+          "new_minus_old": -6.83481049534862e-16
+        },
+        {
+          "path": "inner[36].corrected_line_search.accepted_curve_slope",
+          "new": -5.536661628305524e-07,
+          "old": -5.536661628405271e-07,
+          "new_minus_old": 9.974659986866641e-18
+        },
+        {
+          "path": "inner[36].corrected_line_search.curvature_ratio",
+          "new": 2.0258440825466254e-05,
+          "old": 2.025844082583173e-05,
+          "new_minus_old": -3.654777760812855e-16
+        }
+      ]
+    },
+    {
+      "iteration": 37,
+      "exact": false,
+      "differences": [
+        {
+          "path": "inner[37].gradient_norm",
+          "new": 0.06965399816585087,
+          "old": 0.06965399816585092,
+          "new_minus_old": -5.551115123125783e-17
+        },
+        {
+          "path": "inner[37].projected_kkt_norm",
+          "new": 0.05769485415063325,
+          "old": 0.05769485415063334,
+          "new_minus_old": -9.020562075079397e-17
+        },
+        {
+          "path": "inner[37].raw_pr_slope",
+          "new": -0.004033570725193204,
+          "old": -0.003933253937505747,
+          "new_minus_old": -0.0001003167876874574
+        },
+        {
+          "path": "inner[37].tangent_cone_gradient_norm",
+          "new": 0.06351039855955247,
+          "old": 0.06271565942813442,
+          "new_minus_old": 0.0007947391314180458
+        },
+        {
+          "path": "inner[37].corrected_line_search.objective_increment",
+          "new": -0.0016774960679138938,
+          "old": -0.0016774960679138695,
+          "new_minus_old": -2.42861286636753e-17
+        },
+        {
+          "path": "inner[37].corrected_line_search.armijo_bound",
+          "new": -4.0335707251932045e-07,
+          "old": -3.933253937505747e-07,
+          "new_minus_old": -1.0031678768745758e-08
+        },
+        {
+          "path": "inner[37].corrected_line_search.initial_curve_slope",
+          "new": -0.004033570725193204,
+          "old": -0.003933253937505747,
+          "new_minus_old": -0.0001003167876874574
+        },
+        {
+          "path": "inner[37].corrected_line_search.accepted_curve_slope",
+          "new": 3.6643755596749497e-06,
+          "old": 3.664375559735665e-06,
+          "new_minus_old": -6.071532165918825e-17
+        },
+        {
+          "path": "inner[37].corrected_line_search.curvature_ratio",
+          "new": 0.0009084693958104403,
+          "old": 0.0009316397105190239,
+          "new_minus_old": -2.3170314708583612e-05
+        }
+      ]
+    },
+    {
+      "iteration": 38,
+      "exact": false,
+      "differences": [
+        {
+          "path": "inner[38].objective",
+          "new": -0.17335244323974858,
+          "old": -0.17335244323974855,
+          "new_minus_old": -2.7755575615628914e-17
+        },
+        {
+          "path": "inner[38].gradient_norm",
+          "new": 0.172645678501993,
+          "old": 0.17264567850199422,
+          "new_minus_old": -1.2212453270876722e-15
+        },
+        {
+          "path": "inner[38].projected_kkt_norm",
+          "new": 0.16575962367404007,
+          "old": 0.1657596236740413,
+          "new_minus_old": -1.2212453270876722e-15
+        },
+        {
+          "path": "inner[38].raw_pr_slope",
+          "new": -0.028148119215437167,
+          "old": -0.0281671568319668,
+          "new_minus_old": 1.903761652963243e-05
+        },
+        {
+          "path": "inner[38].tangent_cone_gradient_norm",
+          "new": 0.16777401233634834,
+          "old": 0.16783073863856643,
+          "new_minus_old": -5.672630221809083e-05
+        },
+        {
+          "path": "inner[38].corrected_step_size",
+          "new": 0.1245640975496139,
+          "old": 0.12456409615931967,
+          "new_minus_old": 1.3902942269661267e-09
+        },
+        {
+          "path": "inner[38].corrected_line_search.objective_increment",
+          "new": -0.0017136202527274838,
+          "old": -0.0017136202527266615,
+          "new_minus_old": -8.222589276130066e-16
+        },
+        {
+          "path": "inner[38].corrected_line_search.armijo_bound",
+          "new": -3.5062450677898765e-07,
+          "old": -3.508616432151751e-07,
+          "new_minus_old": 2.371364361874457e-10
+        },
+        {
+          "path": "inner[38].corrected_line_search.initial_curve_slope",
+          "new": -0.028148119215437167,
+          "old": -0.0281671568319668,
+          "new_minus_old": 1.903761652963243e-05
+        },
+        {
+          "path": "inner[38].corrected_line_search.accepted_curve_slope",
+          "new": -6.07200622780666e-07,
+          "old": -6.075077360716274e-07,
+          "new_minus_old": 3.0711329096141937e-10
+        },
+        {
+          "path": "inner[38].corrected_line_search.curvature_ratio",
+          "new": 2.1571623245352083e-05,
+          "old": 2.1567946658434807e-05,
+          "new_minus_old": 3.6765869172765897e-09
+        }
+      ]
+    },
+    {
+      "iteration": 39,
+      "exact": false,
+      "differences": [
+        {
+          "path": "inner[39].objective",
+          "new": -0.17506606349247605,
+          "old": -0.17506606349247522,
+          "new_minus_old": -8.326672684688674e-16
+        },
+        {
+          "path": "inner[39].gradient_norm",
+          "new": 0.07137050119641299,
+          "old": 0.07137050069584673,
+          "new_minus_old": 5.005662551127443e-10
+        },
+        {
+          "path": "inner[39].projected_kkt_norm",
+          "new": 0.05917467154032659,
+          "old": 0.05917467087559436,
+          "new_minus_old": 6.647322275954437e-10
+        },
+        {
+          "path": "inner[39].raw_pr_slope",
+          "new": -0.0042811864110439074,
+          "old": -0.0038598228908951512,
+          "new_minus_old": -0.0004213635201487562
+        },
+        {
+          "path": "inner[39].tangent_cone_gradient_norm",
+          "new": 0.06543077571788299,
+          "old": 0.06212747291573311,
+          "new_minus_old": 0.0033033028021498753
+        },
+        {
+          "path": "inner[39].corrected_line_search.objective_increment",
+          "new": -0.0017626074739188792,
+          "old": -0.0017626077492472192,
+          "new_minus_old": 2.7532833998811235e-10
+        },
+        {
+          "path": "inner[39].corrected_line_search.armijo_bound",
+          "new": -4.2811864110439077e-07,
+          "old": -3.8598228908951514e-07,
+          "new_minus_old": -4.2136352014875626e-08
+        },
+        {
+          "path": "inner[39].corrected_line_search.initial_curve_slope",
+          "new": -0.0042811864110439074,
+          "old": -0.0038598228908951512,
+          "new_minus_old": -0.0004213635201487562
+        },
+        {
+          "path": "inner[39].corrected_line_search.accepted_curve_slope",
+          "new": 2.037286881405049e-05,
+          "old": 2.0372239726910036e-05,
+          "new_minus_old": 6.29087140453094e-10
+        },
+        {
+          "path": "inner[39].corrected_line_search.curvature_ratio",
+          "new": 0.004758696972758738,
+          "old": 0.005278024485259583,
+          "new_minus_old": -0.0005193275125008447
+        }
+      ]
+    },
+    {
+      "iteration": 40,
+      "exact": false,
+      "differences": [
+        {
+          "path": "inner[40].objective",
+          "new": -0.17682867096639487,
+          "old": -0.17682867124172252,
+          "new_minus_old": 2.753276495681689e-10
+        },
+        {
+          "path": "inner[40].gradient_norm",
+          "new": 0.17701796734189718,
+          "old": 0.1770179527994419,
+          "new_minus_old": 1.4542455267774201e-08
+        },
+        {
+          "path": "inner[40].projected_kkt_norm",
+          "new": 0.16987200564866323,
+          "old": 0.1698719907297156,
+          "new_minus_old": 1.4918947632835966e-08
+        },
+        {
+          "path": "inner[40].raw_pr_slope",
+          "new": -0.02888137502572731,
+          "old": -0.030038086656820163,
+          "new_minus_old": 0.0011567116310928528
+        },
+        {
+          "path": "inner[40].tangent_cone_gradient_norm",
+          "new": 0.16994521183524797,
+          "old": 0.17331499259100513,
+          "new_minus_old": -0.003369780755757168
+        },
+        {
+          "path": "inner[40].corrected_step_size",
+          "new": 0.1245010566685015,
+          "old": 0.12450098607345847,
+          "new_minus_old": 7.059504303352782e-08
+        },
+        {
+          "path": "inner[40].corrected_line_search.objective_increment",
+          "new": -0.0017980344785972525,
+          "old": -0.0017980342030436934,
+          "new_minus_old": -2.755535591369984e-10
+        },
+        {
+          "path": "inner[40].corrected_line_search.armijo_bound",
+          "new": -3.59576170874232e-07,
+          "old": -3.739771408534106e-07,
+          "new_minus_old": 1.4400969979178601e-08
+        },
+        {
+          "path": "inner[40].corrected_line_search.initial_curve_slope",
+          "new": -0.02888137502572731,
+          "old": -0.030038086656820163,
+          "new_minus_old": 0.0011567116310928528
+        },
+        {
+          "path": "inner[40].corrected_line_search.accepted_curve_slope",
+          "new": -6.579181712133668e-07,
+          "old": -6.749415526171101e-07,
+          "new_minus_old": 1.702338140374335e-08
+        },
+        {
+          "path": "inner[40].corrected_line_search.curvature_ratio",
+          "new": 2.2780015516134474e-05,
+          "old": 2.2469525450412278e-05,
+          "new_minus_old": 3.104900657221969e-07
+        }
+      ]
+    },
+    {
+      "iteration": 41,
+      "exact": false,
+      "differences": [
+        {
+          "path": "inner[41].objective",
+          "new": -0.17862670544499218,
+          "old": -0.1786267054447661,
+          "new_minus_old": -2.260691633892975e-13
+        },
+        {
+          "path": "inner[41].gradient_norm",
+          "new": 0.07313991956750221,
+          "old": 0.07313989318880694,
+          "new_minus_old": 2.637869526977976e-08
+        },
+        {
+          "path": "inner[41].projected_kkt_norm",
+          "new": 0.06052431154348679,
+          "old": 0.06052427635570709,
+          "new_minus_old": 3.518777969696574e-08
+        },
+        {
+          "path": "inner[41].raw_pr_slope",
+          "new": -0.004452290093369408,
+          "old": -0.004038800914532274,
+          "new_minus_old": -0.00041348917883713386
+        },
+        {
+          "path": "inner[41].tangent_cone_gradient_norm",
+          "new": 0.06672548308831798,
+          "old": 0.06355156107077366,
+          "new_minus_old": 0.003173922017544323
+        },
+        {
+          "path": "inner[41].corrected_line_search.objective_increment",
+          "new": -0.0018520198388441537,
+          "old": -0.0018520347615484864,
+          "new_minus_old": 1.4922704332648307e-08
+        },
+        {
+          "path": "inner[41].corrected_line_search.armijo_bound",
+          "new": -4.452290093369408e-07,
+          "old": -4.038800914532274e-07,
+          "new_minus_old": -4.1348917883713363e-08
+        },
+        {
+          "path": "inner[41].corrected_line_search.initial_curve_slope",
+          "new": -0.004452290093369408,
+          "old": -0.004038800914532274,
+          "new_minus_old": -0.00041348917883713386
+        },
+        {
+          "path": "inner[41].corrected_line_search.accepted_curve_slope",
+          "new": -6.23149738892409e-06,
+          "old": -6.265569885120954e-06,
+          "new_minus_old": 3.407249619686442e-08
+        },
+        {
+          "path": "inner[41].corrected_line_search.curvature_ratio",
+          "new": 0.0013996162105888775,
+          "old": 0.0015513440790251376,
+          "new_minus_old": -0.00015172786843626013
+        }
+      ]
+    },
+    {
+      "iteration": 42,
+      "exact": false,
+      "differences": [
+        {
+          "path": "inner[42].objective",
+          "new": -0.18047872528383635,
+          "old": -0.18047874020631463,
+          "new_minus_old": 1.4922478280832152e-08
+        },
+        {
+          "path": "inner[42].gradient_norm",
+          "new": 0.18097584886274232,
+          "old": 0.1809750773155601,
+          "new_minus_old": 7.715471822267173e-07
+        },
+        {
+          "path": "inner[42].projected_kkt_norm",
+          "new": 0.17328666294519443,
+          "old": 0.1732858704085798,
+          "new_minus_old": 7.925366146410706e-07
+        },
+        {
+          "path": "inner[42].raw_pr_slope",
+          "new": -0.030960748526095143,
+          "old": -0.030973432219869347,
+          "new_minus_old": 1.2683693774204197e-05
+        },
+        {
+          "path": "inner[42].tangent_cone_gradient_norm",
+          "new": 0.17595666661452514,
+          "old": 0.17599270501889944,
+          "new_minus_old": -3.603840437430006e-05
+        },
+        {
+          "path": "inner[42].corrected_step_size",
+          "new": 0.12455872925450912,
+          "old": 0.12455887404650015,
+          "new_minus_old": -1.4479199103578644e-07
+        },
+        {
+          "path": "inner[42].corrected_line_search.objective_increment",
+          "new": -0.0018780742663110674,
+          "old": -0.0018780593361797382,
+          "new_minus_old": -1.4930131329166096e-08
+        },
+        {
+          "path": "inner[42].corrected_line_search.armijo_bound",
+          "new": -3.856431493178827e-07,
+          "old": -3.858015842662516e-07,
+          "new_minus_old": 1.5843494836885212e-10
+        },
+        {
+          "path": "inner[42].corrected_line_search.initial_curve_slope",
+          "new": -0.030960748526095143,
+          "old": -0.030973432219869347,
+          "new_minus_old": 1.2683693774204197e-05
+        },
+        {
+          "path": "inner[42].corrected_line_search.accepted_curve_slope",
+          "new": -7.48157896958597e-07,
+          "old": -7.482727399418104e-07,
+          "new_minus_old": 1.1484298321345898e-10
+        },
+        {
+          "path": "inner[42].corrected_line_search.curvature_ratio",
+          "new": 2.416472251399268e-05,
+          "old": 2.4158534792982876e-05,
+          "new_minus_old": 6.18772100980427e-09
+        }
+      ]
+    },
+    {
+      "iteration": 43,
+      "exact": false,
+      "differences": [
+        {
+          "path": "inner[43].objective",
+          "new": -0.18235679955014744,
+          "old": -0.1823567995424944,
+          "new_minus_old": -7.65304486449736e-12
+        },
+        {
+          "path": "inner[43].gradient_norm",
+          "new": 0.07503564439241771,
+          "old": 0.07503567143772448,
+          "new_minus_old": -2.704530677188899e-08
+        },
+        {
+          "path": "inner[43].projected_kkt_norm",
+          "new": 0.06136970323875963,
+          "old": 0.06136973986296509,
+          "new_minus_old": -3.6624205460022985e-08
+        },
+        {
+          "path": "inner[43].raw_pr_slope",
+          "new": -0.004022722539447137,
+          "old": -0.004925311570220605,
+          "new_minus_old": 0.0009025890307734676
+        },
+        {
+          "path": "inner[43].tangent_cone_gradient_norm",
+          "new": 0.0634249362589127,
+          "old": 0.07018056404889181,
+          "new_minus_old": -0.00675562778997911
+        },
+        {
+          "path": "inner[43].corrected_line_search.objective_increment",
+          "new": -0.0018641534285939523,
+          "old": -0.0018641376621268517,
+          "new_minus_old": -1.576646710063634e-08
+        },
+        {
+          "path": "inner[43].corrected_line_search.armijo_bound",
+          "new": -4.022722539447138e-07,
+          "old": -4.925311570220605e-07,
+          "new_minus_old": 9.025890307734677e-08
+        },
+        {
+          "path": "inner[43].corrected_line_search.initial_curve_slope",
+          "new": -0.004022722539447137,
+          "old": -0.004925311570220605,
+          "new_minus_old": 0.0009025890307734676
+        },
+        {
+          "path": "inner[43].corrected_line_search.accepted_curve_slope",
+          "new": 0.00015792759798195907,
+          "old": 0.0001579636070254218,
+          "new_minus_old": -3.6009043462726514e-08
+        },
+        {
+          "path": "inner[43].corrected_line_search.curvature_ratio",
+          "new": 0.03925888410978099,
+          "old": 0.032071799879727525,
+          "new_minus_old": 0.007187084230053466
+        }
+      ]
+    },
+    {
+      "iteration": 44,
+      "exact": false,
+      "differences": [
+        {
+          "path": "inner[44].objective",
+          "new": -0.1842209529787414,
+          "old": -0.18422093720462118,
+          "new_minus_old": -1.5774120204481434e-08
+        },
+        {
+          "path": "inner[44].gradient_norm",
+          "new": 0.18650717955231655,
+          "old": 0.18650797093373994,
+          "new_minus_old": -7.913814233928562e-07
+        },
+        {
+          "path": "inner[44].projected_kkt_norm",
+          "new": 0.17808768598158073,
+          "old": 0.17808850058764,
+          "new_minus_old": -8.146060592739701e-07
+        },
+        {
+          "path": "inner[44].raw_pr_slope",
+          "new": -0.032843643609681825,
+          "old": -0.032156346447022,
+          "new_minus_old": -0.0006872971626598265
+        },
+        {
+          "path": "inner[44].tangent_cone_gradient_norm",
+          "new": 0.1812281534687197,
+          "old": 0.17932190732596506,
+          "new_minus_old": 0.0019062461427546418
+        },
+        {
+          "path": "inner[44].corrected_step_size",
+          "new": 0.12388252278009487,
+          "old": 0.12388239747282623,
+          "new_minus_old": 1.25307268644681e-07
+        },
+        {
+          "path": "inner[44].corrected_line_search.objective_increment",
+          "new": -0.001974053851072917,
+          "old": -0.001974069638905354,
+          "new_minus_old": 1.5787832437219596e-08
+        },
+        {
+          "path": "inner[44].corrected_line_search.armijo_bound",
+          "new": -4.0687534276577257e-07,
+          "old": -3.9836052918238826e-07,
+          "new_minus_old": -8.514813583384311e-09
+        },
+        {
+          "path": "inner[44].corrected_line_search.initial_curve_slope",
+          "new": -0.032843643609681825,
+          "old": -0.032156346447022,
+          "new_minus_old": -0.0006872971626598265
+        },
+        {
+          "path": "inner[44].corrected_line_search.accepted_curve_slope",
+          "new": -8.038049478364256e-07,
+          "old": -8.005856828212712e-07,
+          "new_minus_old": -3.2192650151544044e-09
+        },
+        {
+          "path": "inner[44].corrected_line_search.curvature_ratio",
+          "new": 2.4473683778479307e-05,
+          "old": 2.4896661818849557e-05,
+          "new_minus_old": -4.2297804037024994e-07
+        }
+      ]
+    },
+    {
+      "iteration": 45,
+      "exact": false,
+      "differences": [
+        {
+          "path": "inner[45].objective",
+          "new": -0.1861950068298142,
+          "old": -0.18619500684352658,
+          "new_minus_old": 1.3712364577145308e-11
+        },
+        {
+          "path": "inner[45].gradient_norm",
+          "new": 0.07672919743482584,
+          "old": 0.0767291767037472,
+          "new_minus_old": 2.0731078645419565e-08
+        },
+        {
+          "path": "inner[45].projected_kkt_norm",
+          "new": 0.06151878492962565,
+          "old": 0.06151875593082968,
+          "new_minus_old": 2.8998795968682156e-08
+        },
+        {
+          "path": "inner[45].raw_pr_slope",
+          "new": -0.004930406559350233,
+          "old": -0.004611760556415559,
+          "new_minus_old": -0.0003186460029346739
+        },
+        {
+          "path": "inner[45].tangent_cone_gradient_norm",
+          "new": 0.07021685381267259,
+          "old": 0.06790994445893443,
+          "new_minus_old": 0.0023069093537381596
+        },
+        {
+          "path": "inner[45].corrected_line_search.objective_increment",
+          "new": -0.0019246647218536354,
+          "old": -0.0019246772395576234,
+          "new_minus_old": 1.2517703987940942e-08
+        },
+        {
+          "path": "inner[45].corrected_line_search.armijo_bound",
+          "new": -4.930406559350233e-07,
+          "old": -4.611760556415559e-07,
+          "new_minus_old": -3.186460029346741e-08
+        },
+        {
+          "path": "inner[45].corrected_line_search.initial_curve_slope",
+          "new": -0.004930406559350233,
+          "old": -0.004611760556415559,
+          "new_minus_old": -0.0003186460029346739
+        },
+        {
+          "path": "inner[45].corrected_line_search.accepted_curve_slope",
+          "new": -2.98283604480698e-05,
+          "old": -2.985691984563714e-05,
+          "new_minus_old": 2.8559397567337608e-08
+        },
+        {
+          "path": "inner[45].corrected_line_search.curvature_ratio",
+          "new": 0.006049878461138672,
+          "old": 0.0064740828324450364,
+          "new_minus_old": -0.0004242043713063642
+        }
+      ]
+    },
+    {
+      "iteration": 46,
+      "exact": false,
+      "differences": [
+        {
+          "path": "inner[46].objective",
+          "new": -0.18811967155166792,
+          "old": -0.18811968408308416,
+          "new_minus_old": 1.2531416238026338e-08
+        },
+        {
+          "path": "inner[46].gradient_norm",
+          "new": 0.185177153715217,
+          "old": 0.18517651976428248,
+          "new_minus_old": 6.339509345254513e-07
+        },
+        {
+          "path": "inner[46].projected_kkt_norm",
+          "new": 0.17633236237308436,
+          "old": 0.1763317087611535,
+          "new_minus_old": 6.536119308564459e-07
+        },
+        {
+          "path": "inner[46].raw_pr_slope",
+          "new": -0.031360534130016056,
+          "old": -0.03244415685740176,
+          "new_minus_old": 0.0010836227273857066
+        },
+        {
+          "path": "inner[46].tangent_cone_gradient_norm",
+          "new": 0.17708905705891612,
+          "old": 0.18012261617409892,
+          "new_minus_old": -0.003033559115182799
+        },
+        {
+          "path": "inner[46].corrected_step_size",
+          "new": 0.1245420500925161,
+          "old": 0.12454215525037651,
+          "new_minus_old": -1.0515786041942476e-07
+        },
+        {
+          "path": "inner[46].corrected_line_search.objective_increment",
+          "new": -0.0019377447551355322,
+          "old": -0.0019377322392539892,
+          "new_minus_old": -1.2515881542968232e-08
+        },
+        {
+          "path": "inner[46].corrected_line_search.armijo_bound",
+          "new": -3.9057052125485206e-07,
+          "old": -4.0406652203020983e-07,
+          "new_minus_old": 1.3496000775357764e-08
+        },
+        {
+          "path": "inner[46].corrected_line_search.initial_curve_slope",
+          "new": -0.031360534130016056,
+          "old": -0.03244415685740176,
+          "new_minus_old": 0.0010836227273857066
+        },
+        {
+          "path": "inner[46].corrected_line_search.accepted_curve_slope",
+          "new": -8.251042987114654e-07,
+          "old": -8.284478483682259e-07,
+          "new_minus_old": 3.3435496567604805e-09
+        },
+        {
+          "path": "inner[46].corrected_line_search.curvature_ratio",
+          "new": 2.6310275688886776e-05,
+          "old": 2.5534577828895714e-05,
+          "new_minus_old": 7.756978599910624e-07
+        }
+      ]
+    },
+    {
+      "iteration": 47,
+      "exact": false,
+      "differences": [
+        {
+          "path": "inner[47].objective",
+          "new": -0.19005741630680345,
+          "old": -0.19005741632233822,
+          "new_minus_old": 1.5534767916491887e-11
+        },
+        {
+          "path": "inner[47].gradient_norm",
+          "new": 0.07870319206044872,
+          "old": 0.07870320880025541,
+          "new_minus_old": -1.6739806693588655e-08
+        },
+        {
+          "path": "inner[47].projected_kkt_norm",
+          "new": 0.0632001528305796,
+          "old": 0.06320017621959324,
+          "new_minus_old": -2.3389013642516332e-08
+        },
+        {
+          "path": "inner[47].raw_pr_slope",
+          "new": -0.0050198241249130564,
+          "old": -0.004342529400773003,
+          "new_minus_old": -0.0006772947241400536
+        },
+        {
+          "path": "inner[47].tangent_cone_gradient_norm",
+          "new": 0.07085071717994855,
+          "old": 0.06589787098816625,
+          "new_minus_old": 0.004952846191782295
+        },
+        {
+          "path": "inner[47].corrected_line_search.objective_increment",
+          "new": -0.001998290113923256,
+          "old": -0.00199827974804374,
+          "new_minus_old": -1.036587951586121e-08
+        },
+        {
+          "path": "inner[47].corrected_line_search.armijo_bound",
+          "new": -5.019824124913056e-07,
+          "old": -4.342529400773003e-07,
+          "new_minus_old": -6.772947241400533e-08
+        },
+        {
+          "path": "inner[47].corrected_line_search.initial_curve_slope",
+          "new": -0.0050198241249130564,
+          "old": -0.004342529400773003,
+          "new_minus_old": -0.0006772947241400536
+        },
+        {
+          "path": "inner[47].corrected_line_search.accepted_curve_slope",
+          "new": 7.061638784398253e-05,
+          "old": 7.064006576548883e-05,
+          "new_minus_old": -2.3677921506294608e-08
+        },
+        {
+          "path": "inner[47].corrected_line_search.curvature_ratio",
+          "new": 0.014067502383901868,
+          "old": 0.016267032239992287,
+          "new_minus_old": -0.0021995298560904195
+        }
+      ]
+    },
+    {
+      "iteration": 48,
+      "exact": false,
+      "differences": [
+        {
+          "path": "inner[48].objective",
+          "new": -0.19205570642072675,
+          "old": -0.19205569607038198,
+          "new_minus_old": -1.0350344775700293e-08
+        },
+        {
+          "path": "inner[48].gradient_norm",
+          "new": 0.19110461238819834,
+          "old": 0.19110512171748534,
+          "new_minus_old": -5.093292869962074e-07
+        },
+        {
+          "path": "inner[48].projected_kkt_norm",
+          "new": 0.18191402362377682,
+          "old": 0.18191454887043207,
+          "new_minus_old": -5.252466552529977e-07
+        },
+        {
+          "path": "inner[48].raw_pr_slope",
+          "new": -0.03343971857661934,
+          "old": -0.03427807552394488,
+          "new_minus_old": 0.0008383569473255359
+        },
+        {
+          "path": "inner[48].tangent_cone_gradient_norm",
+          "new": 0.18286530172949525,
+          "old": 0.18514339179118675,
+          "new_minus_old": -0.0022780900616914956
+        },
+        {
+          "path": "inner[48].corrected_step_size",
+          "new": 0.12412672240702045,
+          "old": 0.12412664670018163,
+          "new_minus_old": 7.570683882573981e-08
+        },
+        {
+          "path": "inner[48].corrected_line_search.objective_increment",
+          "new": -0.0020540508061663194,
+          "old": -0.002054061183770578,
+          "new_minus_old": 1.0377604258565709e-08
+        },
+        {
+          "path": "inner[48].corrected_line_search.armijo_bound",
+          "new": -4.1507626651289146e-07,
+          "old": -4.2548225701228495e-07,
+          "new_minus_old": 1.0405990499393484e-08
+        },
+        {
+          "path": "inner[48].corrected_line_search.initial_curve_slope",
+          "new": -0.03343971857661934,
+          "old": -0.03427807552394488,
+          "new_minus_old": 0.0008383569473255359
+        },
+        {
+          "path": "inner[48].corrected_line_search.accepted_curve_slope",
+          "new": -9.062659227674838e-07,
+          "old": -9.025538378545916e-07,
+          "new_minus_old": -3.712084912892155e-09
+        },
+        {
+          "path": "inner[48].corrected_line_search.curvature_ratio",
+          "new": 2.7101481751139323e-05,
+          "old": 2.6330353266889635e-05,
+          "new_minus_old": 7.711284842496881e-07
+        }
+      ]
+    },
+    {
+      "iteration": 49,
+      "exact": false,
+      "differences": [
+        {
+          "path": "inner[49].objective",
+          "new": -0.19410975722689305,
+          "old": -0.19410975725415247,
+          "new_minus_old": 2.725941694592393e-11
+        },
+        {
+          "path": "inner[49].gradient_norm",
+          "new": 0.08061169781549746,
+          "old": 0.08061168647474062,
+          "new_minus_old": 1.1340756833622123e-08
+        },
+        {
+          "path": "inner[49].projected_kkt_norm",
+          "new": 0.06446295431010585,
+          "old": 0.0644629382903338,
+          "new_minus_old": 1.601977205056837e-08
+        },
+        {
+          "path": "inner[49].raw_pr_slope",
+          "new": -0.004566044270277712,
+          "old": -0.004712178685808783,
+          "new_minus_old": 0.00014613441553107138
+        },
+        {
+          "path": "inner[49].tangent_cone_gradient_norm",
+          "new": 0.06757251120298631,
+          "old": 0.06864531073430132,
+          "new_minus_old": -0.0010727995313150052
+        },
+        {
+          "path": "inner[49].corrected_line_search.objective_increment",
+          "new": -0.0021312948126694167,
+          "old": -0.0021313020643486426,
+          "new_minus_old": 7.2516792258559e-09
+        },
+        {
+          "path": "inner[49].corrected_line_search.armijo_bound",
+          "new": -4.566044270277712e-07,
+          "old": -4.712178685808783e-07,
+          "new_minus_old": 1.46134415531071e-08
+        },
+        {
+          "path": "inner[49].corrected_line_search.initial_curve_slope",
+          "new": -0.004566044270277712,
+          "old": -0.004712178685808783,
+          "new_minus_old": 0.00014613441553107138
+        },
+        {
+          "path": "inner[49].corrected_line_search.accepted_curve_slope",
+          "new": -0.00011909567414285747,
+          "old": -0.00011911221748533551,
+          "new_minus_old": 1.6543342478032852e-08
+        },
+        {
+          "path": "inner[49].corrected_line_search.curvature_ratio",
+          "new": 0.02608289957197764,
+          "old": 0.025277525626108865,
+          "new_minus_old": 0.0008053739458687738
+        }
+      ]
+    },
+    {
+      "iteration": 50,
+      "exact": false,
+      "differences": [
+        {
+          "path": "inner[50].objective",
+          "new": -0.19624105203956246,
+          "old": -0.19624105931850105,
+          "new_minus_old": 7.27893859076012e-09
+        },
+        {
+          "path": "inner[50].gradient_norm",
+          "new": 0.19296573482453494,
+          "old": 0.19296538157609303,
+          "new_minus_old": 3.5324844191442217e-07
+        },
+        {
+          "path": "inner[50].projected_kkt_norm",
+          "new": 0.18349573735358607,
+          "old": 0.18349537287492287,
+          "new_minus_old": 3.6447866319511135e-07
+        },
+        {
+          "path": "inner[50].raw_pr_slope",
+          "new": -0.0348767212503106,
+          "old": -0.03516246462188475,
+          "new_minus_old": 0.0002857433715741514
+        },
+        {
+          "path": "inner[50].tangent_cone_gradient_norm",
+          "new": 0.18675310238470097,
+          "old": 0.18751657159271218,
+          "new_minus_old": -0.0007634692080112082
+        },
+        {
+          "path": "inner[50].corrected_step_size",
+          "new": 0.1247539292509854,
+          "old": 0.12475401009258688,
+          "new_minus_old": -8.08416014824731e-08
+        },
+        {
+          "path": "inner[50].corrected_line_search.objective_increment",
+          "new": -0.002100503163568676,
+          "old": -0.0021004959146142393,
+          "new_minus_old": -7.2489544367115855e-09
+        },
+        {
+          "path": "inner[50].corrected_line_search.armijo_bound",
+          "new": -4.3510080153675876e-07,
+          "old": -4.3866584663188395e-07,
+          "new_minus_old": 3.565045095125185e-09
+        },
+        {
+          "path": "inner[50].corrected_line_search.initial_curve_slope",
+          "new": -0.0348767212503106,
+          "old": -0.03516246462188475,
+          "new_minus_old": 0.0002857433715741514
+        },
+        {
+          "path": "inner[50].corrected_line_search.accepted_curve_slope",
+          "new": -9.922630700657381e-07,
+          "old": -9.879952617263682e-07,
+          "new_minus_old": -4.267808339369905e-09
+        },
+        {
+          "path": "inner[50].corrected_line_search.curvature_ratio",
+          "new": 2.8450583497922743e-05,
+          "old": 2.809800940720891e-05,
+          "new_minus_old": 3.5257409071383326e-07
+        }
+      ]
+    },
+    {
+      "iteration": 51,
+      "exact": false,
+      "differences": [
+        {
+          "path": "inner[51].objective",
+          "new": -0.1983415552031311,
+          "old": -0.19834155523311542,
+          "new_minus_old": 2.99843205819883e-11
+        },
+        {
+          "path": "inner[51].gradient_norm",
+          "new": 0.0828721435204321,
+          "old": 0.0828721619406,
+          "new_minus_old": -1.8420167904875662e-08
+        },
+        {
+          "path": "inner[51].projected_kkt_norm",
+          "new": 0.06660903582522261,
+          "old": 0.06660906161807084,
+          "new_minus_old": -2.5792848232231158e-08
+        },
+        {
+          "path": "inner[51].raw_pr_slope",
+          "new": -0.005292886168121021,
+          "old": -0.0046278668017547455,
+          "new_minus_old": -0.0006650193663662752
+        },
+        {
+          "path": "inner[51].tangent_cone_gradient_norm",
+          "new": 0.07275222448915923,
+          "old": 0.06802842642421435,
+          "new_minus_old": 0.004723798064944884
+        },
+        {
+          "path": "inner[51].corrected_line_search.objective_increment",
+          "new": -0.002179395042578809,
+          "old": -0.0021793829917641054,
+          "new_minus_old": -1.2050814703762347e-08
+        },
+        {
+          "path": "inner[51].corrected_line_search.armijo_bound",
+          "new": -5.292886168121021e-07,
+          "old": -4.627866801754746e-07,
+          "new_minus_old": -6.650193663662753e-08
+        },
+        {
+          "path": "inner[51].corrected_line_search.initial_curve_slope",
+          "new": -0.005292886168121021,
+          "old": -0.0046278668017547455,
+          "new_minus_old": -0.0006650193663662752
+        },
+        {
+          "path": "inner[51].corrected_line_search.accepted_curve_slope",
+          "new": 6.432459364602312e-05,
+          "old": 6.435208827163235e-05,
+          "new_minus_old": -2.749462560923399e-08
+        },
+        {
+          "path": "inner[51].corrected_line_search.curvature_ratio",
+          "new": 0.012153027970533211,
+          "old": 0.01390534581661512,
+          "new_minus_old": -0.0017523178460819092
+        }
+      ]
+    },
+    {
+      "iteration": 52,
+      "exact": false,
+      "differences": [
+        {
+          "path": "inner[52].objective",
+          "new": -0.20052095024570998,
+          "old": -0.20052093822487943,
+          "new_minus_old": -1.202083055318326e-08
+        },
+        {
+          "path": "inner[52].gradient_norm",
+          "new": 0.20276285014894663,
+          "old": 0.20276340918867022,
+          "new_minus_old": -5.590397235966105e-07
+        },
+        {
+          "path": "inner[52].projected_kkt_norm",
+          "new": 0.1929661665686226,
+          "old": 0.19296674284914161,
+          "new_minus_old": -5.762805190268061e-07
+        },
+        {
+          "path": "inner[52].raw_pr_slope",
+          "new": -0.038231305337010406,
+          "old": -0.03875602540548685,
+          "new_minus_old": 0.0005247200684764461
+        },
+        {
+          "path": "inner[52].tangent_cone_gradient_norm",
+          "new": 0.1955282724748787,
+          "old": 0.19686550080064016,
+          "new_minus_old": -0.0013372283257614692
+        },
+        {
+          "path": "inner[52].corrected_step_size",
+          "new": 0.12394537856538773,
+          "old": 0.1239496390962181,
+          "new_minus_old": -4.2605308303717004e-06
+        },
+        {
+          "path": "inner[52].corrected_line_search.objective_increment",
+          "new": -0.002315820314400037,
+          "old": -0.002315832486511585,
+          "new_minus_old": 1.2172111547859021e-08
+        },
+        {
+          "path": "inner[52].corrected_line_search.armijo_bound",
+          "new": -4.738593613044683e-07,
+          "old": -4.803795361813956e-07,
+          "new_minus_old": 6.520174876927259e-09
+        },
+        {
+          "path": "inner[52].corrected_line_search.initial_curve_slope",
+          "new": -0.038231305337010406,
+          "old": -0.03875602540548685,
+          "new_minus_old": 0.0005247200684764461
+        },
+        {
+          "path": "inner[52].corrected_line_search.accepted_curve_slope",
+          "new": -2.3988747700424105e-05,
+          "old": -2.2677988310981258e-05,
+          "new_minus_old": -1.3107593894428476e-06
+        },
+        {
+          "path": "inner[52].corrected_line_search.curvature_ratio",
+          "new": 0.0006274634749967961,
+          "old": 0.0005851474209161459,
+          "new_minus_old": 4.2316054080650256e-05
+        }
+      ]
+    },
+    {
+      "iteration": 53,
+      "exact": false,
+      "differences": [
+        {
+          "path": "inner[53].objective",
+          "new": -0.2028367705601099,
+          "old": -0.20283677071139106,
+          "new_minus_old": 1.5128115427032185e-10
+        },
+        {
+          "path": "inner[53].gradient_norm",
+          "new": 0.0849548261740148,
+          "old": 0.08495651113743552,
+          "new_minus_old": -1.6849634207199982e-06
+        },
+        {
+          "path": "inner[53].projected_kkt_norm",
+          "new": 0.06779758810883,
+          "old": 0.06779997956135328,
+          "new_minus_old": -2.3914525232732187e-06
+        },
+        {
+          "path": "inner[53].raw_pr_slope",
+          "new": -0.004926035416980097,
+          "old": -0.00512766420939281,
+          "new_minus_old": 0.00020162879241271327
+        },
+        {
+          "path": "inner[53].tangent_cone_gradient_norm",
+          "new": 0.07018572089093406,
+          "old": 0.07160771054427596,
+          "new_minus_old": -0.0014219896533419069
+        },
+        {
+          "path": "inner[53].corrected_line_search.objective_increment",
+          "new": -0.002328146561955853,
+          "old": -0.0023270076203583123,
+          "new_minus_old": -1.1389415975407435e-06
+        },
+        {
+          "path": "inner[53].corrected_line_search.armijo_bound",
+          "new": -4.926035416980097e-07,
+          "old": -5.12766420939281e-07,
+          "new_minus_old": 2.0162879241271357e-08
+        },
+        {
+          "path": "inner[53].corrected_line_search.initial_curve_slope",
+          "new": -0.004926035416980097,
+          "old": -0.00512766420939281,
+          "new_minus_old": 0.00020162879241271327
+        },
+        {
+          "path": "inner[53].corrected_line_search.accepted_curve_slope",
+          "new": -6.763382294286673e-05,
+          "old": -6.503677465786659e-05,
+          "new_minus_old": -2.597048285000146e-06
+        },
+        {
+          "path": "inner[53].corrected_line_search.curvature_ratio",
+          "new": 0.013729869401614983,
+          "old": 0.012683508904255625,
+          "new_minus_old": 0.0010463604973593582
+        }
+      ]
+    },
+    {
+      "iteration": 54,
+      "exact": false,
+      "differences": [
+        {
+          "path": "inner[54].objective",
+          "new": -0.2051649171220658,
+          "old": -0.2051637783317493,
+          "new_minus_old": -1.1387903164905566e-06
+        },
+        {
+          "path": "inner[54].gradient_norm",
+          "new": 0.2043812297656856,
+          "old": 0.20443368497054695,
+          "new_minus_old": -5.245520486135691e-05
+        },
+        {
+          "path": "inner[54].projected_kkt_norm",
+          "new": 0.19422722623343522,
+          "old": 0.19428134298131253,
+          "new_minus_old": -5.411674787730858e-05
+        },
+        {
+          "path": "inner[54].raw_pr_slope",
+          "new": -0.03944761339957999,
+          "old": -0.03929430089126508,
+          "new_minus_old": -0.00015331250831490673
+        },
+        {
+          "path": "inner[54].tangent_cone_gradient_norm",
+          "new": 0.19861423262087738,
+          "old": 0.19822790139449362,
+          "new_minus_old": 0.0003863312263837626
+        },
+        {
+          "path": "inner[54].corrected_step_size",
+          "new": 0.12438859828739368,
+          "old": 0.1243796404917963,
+          "new_minus_old": 8.957795597383522e-06
+        },
+        {
+          "path": "inner[54].corrected_line_search.objective_increment",
+          "new": -0.002346511294367387,
+          "old": -0.0023476503690317736,
+          "new_minus_old": 1.1390746643864802e-06
+        },
+        {
+          "path": "inner[54].corrected_line_search.armijo_bound",
+          "new": -4.906833336556764e-07,
+          "old": -4.887411018232022e-07,
+          "new_minus_old": -1.9422318324741674e-09
+        },
+        {
+          "path": "inner[54].corrected_line_search.initial_curve_slope",
+          "new": -0.03944761339957999,
+          "old": -0.03929430089126508,
+          "new_minus_old": -0.00015331250831490673
+        },
+        {
+          "path": "inner[54].corrected_line_search.accepted_curve_slope",
+          "new": -1.1681454035929878e-06,
+          "old": -1.1756142588017701e-06,
+          "new_minus_old": 7.468855208782321e-09
+        },
+        {
+          "path": "inner[54].corrected_line_search.curvature_ratio",
+          "new": 2.961257482830192e-05,
+          "old": 2.9918187425065072e-05,
+          "new_minus_old": -3.0561259676315343e-07
+        }
+      ]
+    },
+    {
+      "iteration": 55,
+      "exact": false,
+      "differences": [
+        {
+          "path": "inner[55].objective",
+          "new": -0.20751142841643322,
+          "old": -0.2075114287007811,
+          "new_minus_old": 2.843478785763409e-10
+        },
+        {
+          "path": "inner[55].gradient_norm",
+          "new": 0.08728830609225122,
+          "old": 0.08728652334770896,
+          "new_minus_old": 1.782744542253023e-06
+        },
+        {
+          "path": "inner[55].projected_kkt_norm",
+          "new": 0.06989189709948483,
+          "old": 0.06988937589510193,
+          "new_minus_old": 2.521204382904818e-06
+        },
+        {
+          "path": "inner[55].raw_pr_slope",
+          "new": -0.005017629843917367,
+          "old": -0.006086234102162968,
+          "new_minus_old": 0.0010686042582456002
+        },
+        {
+          "path": "inner[55].tangent_cone_gradient_norm",
+          "new": 0.07083523024538967,
+          "old": 0.0780143198532357,
+          "new_minus_old": -0.007179089607846037
+        },
+        {
+          "path": "inner[55].corrected_line_search.objective_increment",
+          "new": -0.002436717207557299,
+          "old": -0.0024379551895139066,
+          "new_minus_old": 1.237981956607459e-06
+        },
+        {
+          "path": "inner[55].corrected_line_search.armijo_bound",
+          "new": -5.017629843917366e-07,
+          "old": -6.086234102162967e-07,
+          "new_minus_old": 1.068604258245601e-07
+        },
+        {
+          "path": "inner[55].corrected_line_search.initial_curve_slope",
+          "new": -0.0050176298439173666,
+          "old": -0.006086234102162967,
+          "new_minus_old": 0.0010686042582456002
+        },
+        {
+          "path": "inner[55].corrected_line_search.accepted_curve_slope",
+          "new": -4.758822116785778e-06,
+          "old": -7.582331375482511e-06,
+          "new_minus_old": 2.8235092586967325e-06
+        },
+        {
+          "path": "inner[55].corrected_line_search.curvature_ratio",
+          "new": 0.000948420322904981,
+          "old": 0.0012458165834909063,
+          "new_minus_old": -0.00029739626058592524
+        }
+      ]
+    },
+    {
+      "iteration": 56,
+      "exact": false,
+      "differences": [
+        {
+          "path": "inner[56].objective",
+          "new": -0.20994814562399056,
+          "old": -0.20994938389029494,
+          "new_minus_old": 1.238266304381952e-06
+        },
+        {
+          "path": "inner[56].gradient_norm",
+          "new": 0.2118675288595772,
+          "old": 0.21181245447855113,
+          "new_minus_old": 5.5074381026060104e-05
+        },
+        {
+          "path": "inner[56].projected_kkt_norm",
+          "new": 0.20148599063435763,
+          "old": 0.2014292391071975,
+          "new_minus_old": 5.675152716011489e-05
+        },
+        {
+          "path": "inner[56].raw_pr_slope",
+          "new": -0.04119325148619374,
+          "old": -0.04145524105990546,
+          "new_minus_old": 0.00026198957371172116
+        },
+        {
+          "path": "inner[56].tangent_cone_gradient_norm",
+          "new": 0.20296120685045638,
+          "old": 0.203605601739995,
+          "new_minus_old": -0.0006443948895386298
+        },
+        {
+          "path": "inner[56].corrected_step_size",
+          "new": 0.12410022409846505,
+          "old": 0.12410914592696204,
+          "new_minus_old": -8.921828496988304e-06
+        },
+        {
+          "path": "inner[56].corrected_line_search.objective_increment",
+          "new": -0.0025202346867941455,
+          "old": -0.0025189954528197812,
+          "new_minus_old": -1.23923397436429e-06
+        },
+        {
+          "path": "inner[56].corrected_line_search.armijo_bound",
+          "new": -5.112091740781071e-07,
+          "old": -5.144974562141195e-07,
+          "new_minus_old": 3.288282136012408e-09
+        },
+        {
+          "path": "inner[56].corrected_line_search.initial_curve_slope",
+          "new": -0.04119325148619374,
+          "old": -0.04145524105990546,
+          "new_minus_old": 0.00026198957371172116
+        },
+        {
+          "path": "inner[56].corrected_line_search.accepted_curve_slope",
+          "new": -1.3253884367679311e-06,
+          "old": -1.3109019651050616e-06,
+          "new_minus_old": -1.4486471662869538e-08
+        },
+        {
+          "path": "inner[56].corrected_line_search.curvature_ratio",
+          "new": 3.2174892462959526e-05,
+          "old": 3.162210450569386e-05,
+          "new_minus_old": 5.527879572656628e-07
+        }
+      ]
+    },
+    {
+      "iteration": 57,
+      "exact": false,
+      "differences": [
+        {
+          "path": "inner[57].objective",
+          "new": -0.2124683803107847,
+          "old": -0.21246837934311474,
+          "new_minus_old": -9.676699441740766e-10
+        },
+        {
+          "path": "inner[57].gradient_norm",
+          "new": 0.0896429564480433,
+          "old": 0.0896447931929063,
+          "new_minus_old": -1.8367448629957872e-06
+        },
+        {
+          "path": "inner[57].projected_kkt_norm",
+          "new": 0.07195081720784563,
+          "old": 0.07195341345863482,
+          "new_minus_old": -2.59625078918857e-06
+        },
+        {
+          "path": "inner[57].raw_pr_slope",
+          "new": -0.0069053200479362664,
+          "old": -0.005891050781122586,
+          "new_minus_old": -0.0010142692668136805
+        },
+        {
+          "path": "inner[57].tangent_cone_gradient_norm",
+          "new": 0.08309825538443191,
+          "old": 0.07675318091859507,
+          "new_minus_old": 0.006345074465836847
+        },
+        {
+          "path": "inner[57].corrected_line_search.objective_increment",
+          "new": -0.0026200799880443174,
+          "old": -0.0026187667907568053,
+          "new_minus_old": -1.3131972875120301e-06
+        },
+        {
+          "path": "inner[57].corrected_line_search.armijo_bound",
+          "new": -6.905320047936267e-07,
+          "old": -5.891050781122587e-07,
+          "new_minus_old": -1.0142692668136807e-07
+        },
+        {
+          "path": "inner[57].corrected_line_search.initial_curve_slope",
+          "new": -0.0069053200479362664,
+          "old": -0.005891050781122586,
+          "new_minus_old": -0.0010142692668136805
+        },
+        {
+          "path": "inner[57].corrected_line_search.accepted_curve_slope",
+          "new": -8.113306455756822e-05,
+          "old": -7.813851917707129e-05,
+          "new_minus_old": -2.994545380496927e-06
+        },
+        {
+          "path": "inner[57].corrected_line_search.curvature_ratio",
+          "new": 0.011749356147774172,
+          "old": 0.013263935769737395,
+          "new_minus_old": -0.0015145796219632225
+        }
+      ]
+    },
+    {
+      "iteration": 58,
+      "exact": false,
+      "differences": [
+        {
+          "path": "inner[58].objective",
+          "new": -0.21508846029882897,
+          "old": -0.2150871461338716,
+          "new_minus_old": -1.3141649573833458e-06
+        },
+        {
+          "path": "inner[58].gradient_norm",
+          "new": 0.21691663867418623,
+          "old": 0.21697374030687186,
+          "new_minus_old": -5.7101632685629955e-05
+        },
+        {
+          "path": "inner[58].projected_kkt_norm",
+          "new": 0.20615153151394158,
+          "old": 0.20621038471710393,
+          "new_minus_old": -5.885320316234566e-05
+        },
+        {
+          "path": "inner[58].raw_pr_slope",
+          "new": -0.04289754940972167,
+          "old": -0.043040556167409275,
+          "new_minus_old": 0.00014300675768760124
+        },
+        {
+          "path": "inner[58].tangent_cone_gradient_norm",
+          "new": 0.20711723590691739,
+          "old": 0.20746218008930994,
+          "new_minus_old": -0.0003449441823925592
+        },
+        {
+          "path": "inner[58].corrected_step_size",
+          "new": 0.12418463468783676,
+          "old": 0.12417556292320817,
+          "new_minus_old": 9.071764628595935e-06
+        },
+        {
+          "path": "inner[58].corrected_line_search.objective_increment",
+          "new": -0.0026403568190929115,
+          "old": -0.002641670799625323,
+          "new_minus_old": 1.313980532411524e-06
+        },
+        {
+          "path": "inner[58].corrected_line_search.armijo_bound",
+          "new": -5.327216502449714e-07,
+          "old": -5.344585290616006e-07,
+          "new_minus_old": 1.7368788166291944e-09
+        },
+        {
+          "path": "inner[58].corrected_line_search.initial_curve_slope",
+          "new": -0.04289754940972167,
+          "old": -0.043040556167409275,
+          "new_minus_old": 0.00014300675768760124
+        },
+        {
+          "path": "inner[58].corrected_line_search.accepted_curve_slope",
+          "new": -1.4236191934842088e-06,
+          "old": -1.415991802376608e-06,
+          "new_minus_old": -7.6273911076008e-09
+        },
+        {
+          "path": "inner[58].corrected_line_search.curvature_ratio",
+          "new": 3.318649230721745e-05,
+          "old": 3.289901266305687e-05,
+          "new_minus_old": 2.8747964416058353e-07
+        }
+      ]
+    },
+    {
+      "iteration": 59,
+      "exact": false,
+      "differences": [
+        {
+          "path": "inner[59].objective",
+          "new": -0.21772881711792186,
+          "old": -0.21772881693349688,
+          "new_minus_old": -1.8442497529136404e-10
+        },
+        {
+          "path": "inner[59].gradient_norm",
+          "new": 0.09216280200781876,
+          "old": 0.09216090036227871,
+          "new_minus_old": 1.9016455400505672e-06
+        },
+        {
+          "path": "inner[59].projected_kkt_norm",
+          "new": 0.07400907776763473,
+          "old": 0.0740063836659977,
+          "new_minus_old": 2.6941016370296555e-06
+        },
+        {
+          "path": "inner[59].raw_pr_slope",
+          "new": -0.005966866165096599,
+          "old": -0.0064427416681375966,
+          "new_minus_old": 0.0004758755030409975
+        },
+        {
+          "path": "inner[59].tangent_cone_gradient_norm",
+          "new": 0.07724549284648652,
+          "old": 0.08026669090063197,
+          "new_minus_old": -0.0030211980541454547
+        },
+        {
+          "path": "inner[59].corrected_line_search.objective_increment",
+          "new": -0.0027453593357681,
+          "old": -0.0027467612531085588,
+          "new_minus_old": 1.401917340458636e-06
+        },
+        {
+          "path": "inner[59].corrected_line_search.armijo_bound",
+          "new": -5.966866165096599e-07,
+          "old": -6.442741668137597e-07,
+          "new_minus_old": 4.758755030409978e-08
+        },
+        {
+          "path": "inner[59].corrected_line_search.initial_curve_slope",
+          "new": -0.005966866165096599,
+          "old": -0.0064427416681375966,
+          "new_minus_old": 0.0004758755030409975
+        },
+        {
+          "path": "inner[59].corrected_line_search.accepted_curve_slope",
+          "new": -3.3128169562502384e-05,
+          "old": -3.632474370850788e-05,
+          "new_minus_old": 3.196574146005493e-06
+        },
+        {
+          "path": "inner[59].corrected_line_search.curvature_ratio",
+          "new": 0.005552021554679208,
+          "old": 0.005638087879287618,
+          "new_minus_old": -8.606632460841056e-05
+        }
+      ]
+    },
+    {
+      "iteration": 60,
+      "exact": false,
+      "differences": [
+        {
+          "path": "inner[60].objective",
+          "new": -0.22047417645369005,
+          "old": -0.22047557818660546,
+          "new_minus_old": 1.4017329154070168e-06
+        },
+        {
+          "path": "inner[60].gradient_norm",
+          "new": 0.22418690042249567,
+          "old": 0.22412782828779687,
+          "new_minus_old": 5.9072134698801015e-05
+        },
+        {
+          "path": "inner[60].projected_kkt_norm",
+          "new": 0.21315480814570006,
+          "old": 0.21309396635416508,
+          "new_minus_old": 6.084179153498237e-05
+        },
+        {
+          "path": "inner[60].raw_pr_slope",
+          "new": -0.046946197740036506,
+          "old": -0.04729190760547036,
+          "new_minus_old": 0.0003457098654338561
+        },
+        {
+          "path": "inner[60].tangent_cone_gradient_norm",
+          "new": 0.21667071269563984,
+          "old": 0.21746702647866034,
+          "new_minus_old": -0.0007963137830205025
+        },
+        {
+          "path": "inner[60].corrected_step_size",
+          "new": 0.12402986762413776,
+          "old": 0.12403900147886142,
+          "new_minus_old": -9.13385472366135e-06
+        },
+        {
+          "path": "inner[60].corrected_line_search.objective_increment",
+          "new": -0.0028180323144774005,
+          "old": -0.002816629059773701,
+          "new_minus_old": -1.403254703699619e-06
+        },
+        {
+          "path": "inner[60].corrected_line_search.armijo_bound",
+          "new": -5.822730691153323e-07,
+          "old": -5.866040997413117e-07,
+          "new_minus_old": 4.331030625979388e-09
+        },
+        {
+          "path": "inner[60].corrected_line_search.initial_curve_slope",
+          "new": -0.046946197740036506,
+          "old": -0.04729190760547036,
+          "new_minus_old": 0.0003457098654338561
+        },
+        {
+          "path": "inner[60].corrected_line_search.accepted_curve_slope",
+          "new": -1.4107576890923235e-06,
+          "old": -1.3738794063192922e-06,
+          "new_minus_old": -3.687828277303129e-08
+        },
+        {
+          "path": "inner[60].corrected_line_search.curvature_ratio",
+          "new": 3.0050520745138124e-05,
+          "old": 2.9051046487293155e-05,
+          "new_minus_old": 9.994742578449692e-07
+        }
+      ]
+    },
+    {
+      "iteration": 61,
+      "exact": false,
+      "differences": [
+        {
+          "path": "inner[61].objective",
+          "new": -0.22329220876816747,
+          "old": -0.22329220724637916,
+          "new_minus_old": -1.5217883064799764e-09
+        },
+        {
+          "path": "inner[61].gradient_norm",
+          "new": 0.0947861304682442,
+          "old": 0.09478813362845592,
+          "new_minus_old": -2.0031602117193126e-06
+        },
+        {
+          "path": "inner[61].projected_kkt_norm",
+          "new": 0.07628656678171969,
+          "old": 0.07628940320118659,
+          "new_minus_old": -2.8364194668978326e-06
+        },
+        {
+          "path": "inner[61].raw_pr_slope",
+          "new": -0.00695306659770079,
+          "old": -0.006433700521971588,
+          "new_minus_old": -0.0005193660757292018
+        },
+        {
+          "path": "inner[61].tangent_cone_gradient_norm",
+          "new": 0.08338505020506248,
+          "old": 0.08021035171330188,
+          "new_minus_old": 0.003174698491760608
+        },
+        {
+          "path": "inner[61].corrected_line_search.objective_increment",
+          "new": -0.0029341564028181506,
+          "old": -0.002932633648845887,
+          "new_minus_old": -1.5227539722634242e-06
+        },
+        {
+          "path": "inner[61].corrected_line_search.armijo_bound",
+          "new": -6.95306659770079e-07,
+          "old": -6.433700521971588e-07,
+          "new_minus_old": -5.193660757292017e-08
+        },
+        {
+          "path": "inner[61].corrected_line_search.initial_curve_slope",
+          "new": -0.00695306659770079,
+          "old": -0.006433700521971588,
+          "new_minus_old": -0.0005193660757292018
+        },
+        {
+          "path": "inner[61].corrected_line_search.accepted_curve_slope",
+          "new": -7.062106834818897e-05,
+          "old": -6.714965985818357e-05,
+          "new_minus_old": -3.4714084900053926e-06
+        },
+        {
+          "path": "inner[61].corrected_line_search.curvature_ratio",
+          "new": 0.010156823231283536,
+          "old": 0.01043717525067607,
+          "new_minus_old": -0.0002803520193925338
+        }
+      ]
+    },
+    {
+      "iteration": 62,
+      "exact": false,
+      "differences": [
+        {
+          "path": "inner[62].objective",
+          "new": -0.2262263651709856,
+          "old": -0.22622484089522504,
+          "new_minus_old": -1.5242757605560264e-06
+        },
+        {
+          "path": "inner[62].gradient_norm",
+          "new": 0.23064920176293602,
+          "old": 0.23071161533331963,
+          "new_minus_old": -6.241357038361262e-05
+        },
+        {
+          "path": "inner[62].projected_kkt_norm",
+          "new": 0.21929310744963976,
+          "old": 0.21935736634909522,
+          "new_minus_old": -6.425889945546603e-05
+        },
+        {
+          "path": "inner[62].raw_pr_slope",
+          "new": -0.05004571110308961,
+          "old": -0.05003347708050315,
+          "new_minus_old": -1.2234022586460336e-05
+        },
+        {
+          "path": "inner[62].tangent_cone_gradient_norm",
+          "new": 0.223708987533111,
+          "old": 0.22368164225189147,
+          "new_minus_old": 2.7345281219531836e-05
+        },
+        {
+          "path": "inner[62].corrected_step_size",
+          "new": 0.1240345086890965,
+          "old": 0.12402517397164295,
+          "new_minus_old": 9.33471745355463e-06
+        },
+        {
+          "path": "inner[62].corrected_line_search.objective_increment",
+          "new": -0.002982800511864954,
+          "old": -0.0029843243832787386,
+          "new_minus_old": 1.5238714137846832e-06
+        },
+        {
+          "path": "inner[62].corrected_line_search.armijo_bound",
+          "new": -6.207395188668182e-07,
+          "old": -6.205410699315614e-07,
+          "new_minus_old": -1.984489352568253e-10
+        },
+        {
+          "path": "inner[62].corrected_line_search.initial_curve_slope",
+          "new": -0.05004571110308961,
+          "old": -0.05003347708050315,
+          "new_minus_old": -1.2234022586460336e-05
+        },
+        {
+          "path": "inner[62].corrected_line_search.accepted_curve_slope",
+          "new": -1.3931666487682764e-06,
+          "old": -1.3976690268705655e-06,
+          "new_minus_old": 4.50237810228904e-09
+        },
+        {
+          "path": "inner[62].corrected_line_search.curvature_ratio",
+          "new": 2.783788296860204e-05,
+          "old": 2.7934677108723342e-05,
+          "new_minus_old": -9.679414012130189e-08
+        }
+      ]
+    },
+    {
+      "iteration": 63,
+      "exact": false,
+      "differences": [
+        {
+          "path": "inner[63].objective",
+          "new": -0.2292091656828505,
+          "old": -0.22920916527850382,
+          "new_minus_old": -4.0434666725985835e-10
+        },
+        {
+          "path": "inner[63].gradient_norm",
+          "new": 0.09759043472715746,
+          "old": 0.09758833788890162,
+          "new_minus_old": 2.0968382558467225e-06
+        },
+        {
+          "path": "inner[63].projected_kkt_norm",
+          "new": 0.0787343441855683,
+          "old": 0.07873138044495644,
+          "new_minus_old": 2.9637406118582232e-06
+        },
+        {
+          "path": "inner[63].raw_pr_slope",
+          "new": -0.006468737227110857,
+          "old": -0.006606580174007646,
+          "new_minus_old": 0.00013784294689678928
+        },
+        {
+          "path": "inner[63].tangent_cone_gradient_norm",
+          "new": 0.08042846030548426,
+          "old": 0.08128087212873424,
+          "new_minus_old": -0.0008524118232499794
+        },
+        {
+          "path": "inner[63].corrected_line_search.objective_increment",
+          "new": -0.0031087594686385923,
+          "old": -0.003110402034084782,
+          "new_minus_old": 1.6425654461894867e-06
+        },
+        {
+          "path": "inner[63].corrected_line_search.armijo_bound",
+          "new": -6.468737227110857e-07,
+          "old": -6.606580174007646e-07,
+          "new_minus_old": 1.3784294689678863e-08
+        },
+        {
+          "path": "inner[63].corrected_line_search.initial_curve_slope",
+          "new": -0.006468737227110857,
+          "old": -0.006606580174007646,
+          "new_minus_old": 0.00013784294689678928
+        },
+        {
+          "path": "inner[63].corrected_line_search.accepted_curve_slope",
+          "new": -4.2992148628143156e-05,
+          "old": -4.6736253771603904e-05,
+          "new_minus_old": 3.744105143460748e-06
+        },
+        {
+          "path": "inner[63].corrected_line_search.curvature_ratio",
+          "new": 0.006646142379684329,
+          "old": 0.007074197624283582,
+          "new_minus_old": -0.0004280552445992533
+        }
+      ]
+    },
+    {
+      "iteration": 64,
+      "exact": false,
+      "differences": [
+        {
+          "path": "inner[64].objective",
+          "new": -0.23231792515148908,
+          "old": -0.23231956731258857,
+          "new_minus_old": 1.6421610994910019e-06
+        },
+        {
+          "path": "inner[64].gradient_norm",
+          "new": 0.23868463457371122,
+          "old": 0.23861948244573083,
+          "new_minus_old": 6.515212798038905e-05
+        },
+        {
+          "path": "inner[64].projected_kkt_norm",
+          "new": 0.22700786729644368,
+          "old": 0.22694086364613894,
+          "new_minus_old": 6.700365030473665e-05
+        },
+        {
+          "path": "inner[64].raw_pr_slope",
+          "new": -0.05299709249819653,
+          "old": -0.05334644271462145,
+          "new_minus_old": 0.00034935021642492486
+        },
+        {
+          "path": "inner[64].tangent_cone_gradient_norm",
+          "new": 0.23021097388742467,
+          "old": 0.23096848857500332,
+          "new_minus_old": -0.0007575146875786476
+        },
+        {
+          "path": "inner[64].corrected_step_size",
+          "new": 0.11213998589552245,
+          "old": 0.1127552417868858,
+          "new_minus_old": -0.0006152558913633532
+        },
+        {
+          "path": "inner[64].corrected_line_search.objective_increment",
+          "new": -0.003163448323368165,
+          "old": -0.003164700892934795,
+          "new_minus_old": 1.2525695666301684e-06
+        },
+        {
+          "path": "inner[64].corrected_line_search.armijo_bound",
+          "new": -5.943093205251457e-07,
+          "old": -6.015091046757395e-07,
+          "new_minus_old": 7.199784150593745e-09
+        },
+        {
+          "path": "inner[64].corrected_line_search.initial_curve_slope",
+          "new": -0.05299709249819653,
+          "old": -0.05334644271462145,
+          "new_minus_old": 0.00034935021642492486
+        },
+        {
+          "path": "inner[64].corrected_line_search.accepted_curve_slope",
+          "new": -0.0048787558048863835,
+          "old": -0.004623493651085662,
+          "new_minus_old": -0.0002552621538007213
+        },
+        {
+          "path": "inner[64].corrected_line_search.curvature_ratio",
+          "new": 0.09205704643235675,
+          "old": 0.08666920258993076,
+          "new_minus_old": 0.005387843842425993
+        }
+      ]
+    },
+    {
+      "iteration": 65,
+      "exact": false,
+      "differences": [
+        {
+          "path": "inner[65].objective",
+          "new": -0.23548137347485731,
+          "old": -0.23548426820552334,
+          "new_minus_old": 2.8947306660309646e-06
+        },
+        {
+          "path": "inner[65].gradient_norm",
+          "new": 0.09765063306142173,
+          "old": 0.09767041195480501,
+          "new_minus_old": -1.9778893383282092e-05
+        },
+        {
+          "path": "inner[65].projected_kkt_norm",
+          "new": 0.07666040875994903,
+          "old": 0.07674046446744565,
+          "new_minus_old": -8.00557074966124e-05
+        },
+        {
+          "path": "inner[65].raw_pr_slope",
+          "new": -0.007234675496035786,
+          "old": -0.006221548617402096,
+          "new_minus_old": -0.0010131268786336897
+        },
+        {
+          "path": "inner[65].corrected_restart_reasons",
+          "reason": "length/type",
+          "new": [
+            "simplex_active_face_changed"
+          ],
+          "old": [
+            "simplex_active_face_changed",
+            "curve_search_exhausted"
+          ]
+        },
+        {
+          "path": "inner[65].tangent_cone_gradient_norm",
+          "new": 0.08505689564071678,
+          "old": 0.07887679390924872,
+          "new_minus_old": 0.00618010173146806
+        },
+        {
+          "path": "inner[65].corrected_step_size",
+          "new": 134.4,
+          "old": 120.6584111539656,
+          "new_minus_old": 13.741588846034404
+        },
+        {
+          "path": "inner[65].corrected_line_search",
+          "reason": "keys/type"
+        }
+      ]
+    }
+  ],
+  "new_original_final_solver_status": {
+    "final_inner_stationary": true,
+    "all_inner_tolerances_satisfied": true,
+    "final_inner_residual": 1.1670064663744268e-06,
+    "final_inner_tolerance": 1.2589254117941667e-06,
+    "outer_stopping_applicable": true,
+    "outer_stopping_met": true,
+    "outer_early_stopping_met": false,
+    "prescribed_outer_budget_execution_complete": true,
+    "outer_termination_valid": true,
+    "original_problem_kkt_certificate": {
+      "scope": "original_P2.1_SINR_relaxed_constrained_projected_KKT_not_global_optimality",
+      "stationarity_norm": 1.1670064663744268e-06,
+      "stationarity_tolerance": 1.2589254117941667e-06,
+      "maximum_positive_primal_residual": 0,
+      "maximum_negative_dual_residual": 0,
+      "maximum_absolute_complementarity": 1.5901994846929132e-09,
+      "feasibility_tolerance": 1e-06,
+      "maximum_phase_modulus_error": 1.1102230246251565e-16,
+      "maximum_simplex_storage_error": 0,
+      "original_problem_kkt_verified": true
+    },
+    "original_problem_kkt_verified": true,
+    "continuation_complete": true,
+    "inner_iteration_cap_exits": 0,
+    "inner_failure_exits": 0,
+    "convergence_verified": true,
+    "final_inner_exit_reason": "gradient_tolerance"
+  },
+  "only_actual_new_saved_result_read": true,
+  "first_declared_failure_not_reproduced_retained": true,
+  "original2223_false_and_global720_false_unchanged": true,
+  "new_MP_optimizer_RNG_or_MATLAB_calls": 0,
+  "initial_phase_X_arrays_not_retained_by_original_payload": true,
+  "JIT_BLAS_floating_environment_cause_not_yet_proved": true
+}

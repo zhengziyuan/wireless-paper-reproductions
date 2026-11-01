@@ -1,0 +1,203 @@
+{
+  "actual_negative_controls": 27,
+  "all_expected_invalid_controls_rejected": true,
+  "groups": {
+    "records_source_and_grids": {
+      "actual_negative_controls": 14,
+      "all_expected_complete_record_source_and_grid_controls_rejected": true,
+      "groups": {
+        "full_table": [
+          {
+            "control": "last_of1000_native_job_parameters_changed",
+            "rejected": true,
+            "reason": "A complete actual native MAT/job parameter binding differs at 999"
+          },
+          {
+            "control": "last_of1000_native_rows_removed",
+            "rejected": true,
+            "reason": "All actual saved MAT rows and job descriptors are required"
+          },
+          {
+            "control": "last_of1000_native_generated_rate_ordinates_changed",
+            "rejected": true,
+            "reason": "A complete native-generated CSV/table ordinate differs"
+          },
+          {
+            "control": "original20_CSV_substituted_as_complete1000_export",
+            "rejected": true,
+            "reason": "The full native-generated1000 CSV export is required"
+          },
+          {
+            "control": "one_complete_native_binary64_table_ordinate_omitted",
+            "rejected": true,
+            "reason": "One full1000-row table column is missing"
+          }
+        ],
+        "source_cohort": [
+          {
+            "control": "asv1000_total_matches_but_whole_scenario_differs",
+            "rejected": true,
+            "reason": "A full scenario/seed/power/array/rotation task label differs, despite any equal total count"
+          },
+          {
+            "control": "m20_matching_parameter_subset_substituted_for1000",
+            "rejected": true,
+            "reason": "The complete actual saved1000 task cohort is required"
+          },
+          {
+            "control": "one_slot_duplicated_and_one_omitted_with_count1000",
+            "rejected": true,
+            "reason": "A full scenario/seed/power/array/rotation task label differs, despite any equal total count"
+          },
+          {
+            "control": "non_numeric_source_call_is_not_executed",
+            "rejected": true,
+            "reason": "Only explicit saved numeric arithmetic is allowed"
+          }
+        ],
+        "complete_grids": [
+          {
+            "control": "last_full_rate_grid_ordinate_changed_one_ULP",
+            "rejected": true,
+            "reason": "One full saved rate column differs from the duplicate-column observation"
+          },
+          {
+            "control": "last_full_MSE_grid_ordinate_changed_one_ULP",
+            "rejected": true,
+            "reason": "One full saved MSE column differs from the duplicate-column observation"
+          },
+          {
+            "control": "one_actual_nominal_exponent_label_changed",
+            "rejected": true,
+            "reason": "The nominal five exponent labels changed"
+          },
+          {
+            "control": "one_complete_original_grid_row_removed",
+            "rejected": true,
+            "reason": "The complete saved 20 by 5 grid is required"
+          },
+          {
+            "control": "all_zero_original_power_row_deleted",
+            "rejected": true,
+            "reason": "Every original10-by6 power record and original power label is required"
+          }
+        ]
+      }
+    },
+    "physical_fields": {
+      "actual_negative_controls": 7,
+      "all_expected_complete_physical_field_and_primitive_controls_rejected": true,
+      "controls": [
+        {
+          "control": "one_complete_saved_h_all_coordinate_altered",
+          "rejected": true,
+          "reason": "An actual saved field ordinate differs: all_original_user_h",
+          "actual_fixture_change": {
+            "before": "(-0.042150524654396455-0.29303769254467754j)",
+            "after": "(-0.041150524654396455-0.29303769254467754j)",
+            "original_numpy_dtype": "object"
+          }
+        },
+        {
+          "control": "one_complete_saved_BB_coordinate_altered",
+          "rejected": true,
+          "reason": "An actual saved field ordinate differs: all_original_BB",
+          "actual_fixture_change": {
+            "before": "0j",
+            "after": "(0.001+0j)",
+            "original_numpy_dtype": "uint8"
+          }
+        },
+        {
+          "control": "one_complete_saved_Ccov_coordinate_altered",
+          "rejected": true,
+          "reason": "An actual saved field ordinate differs: all_original_transmit_covariance",
+          "actual_fixture_change": {
+            "before": "(0.0032601954979883064+0j)",
+            "after": "(0.0042601954979883064+0j)",
+            "original_numpy_dtype": "complex128"
+          }
+        },
+        {
+          "control": "one_complete_saved_Pgrid_coordinate_altered",
+          "rejected": true,
+          "reason": "An actual saved scalar differs: Pgrid",
+          "actual_fixture_change": {
+            "before": "(0.008934953376805523+0j)",
+            "after": "(0.009934953376805524+0j)",
+            "original_numpy_dtype": "float64"
+          }
+        },
+        {
+          "control": "one_complete_saved_SINR_coordinate_altered",
+          "rejected": true,
+          "reason": "An actual saved scalar differs: SINR",
+          "actual_fixture_change": {
+            "before": "(0.33359820087570885+0j)",
+            "after": "(0.33459820087570885+0j)",
+            "original_numpy_dtype": "float64"
+          }
+        },
+        {
+          "control": "complete_saved_user_outgoing_field_omitted",
+          "rejected": true,
+          "reason": "'g_all'",
+          "actual_fixture_change": {
+            "omitted": "g_all"
+          }
+        },
+        {
+          "control": "last_actual_original_RB_primitive_replaced",
+          "rejected": true,
+          "reason": "A complete actual saved MAT numeric variable/coordinate differs",
+          "actual_fixture_change": {
+            "before": "-0x1.5571daeb058f5p-1",
+            "after": "0x1.0000000000000p-3"
+          }
+        }
+      ]
+    },
+    "transport_and_source_scope": {
+      "actual_negative_controls": 6,
+      "all_expected_complete_transport_and_scope_controls_rejected": true,
+      "controls": [
+        {
+          "control": "one_archive_part_byte_changed",
+          "rejected": true,
+          "reason": "A preserved complete record part differs",
+          "actual_modified_manifest_SHA256": "9221beb895538138b2095d394be17622845fceebf53d172b1a93253e4a267e21"
+        },
+        {
+          "control": "one_complete_archive_part_omitted",
+          "rejected": true,
+          "reason": "[Errno 2] No such file or directory: 'E:\\\\ZiyuanZhengProject\\\\paper-reproduction-data\\\\resume-20261017\\\\ISAC-preserved49-public-complete-record-and-MP-field-cold-replay-v1\\\\transport-controls\\\\one_complete_archive_part_omitted\\\\isac-legacy-records.tar.gz.part000'",
+          "actual_modified_manifest_SHA256": "9221beb895538138b2095d394be17622845fceebf53d172b1a93253e4a267e21"
+        },
+        {
+          "control": "original1000_native_table_scope_reduced",
+          "rejected": true,
+          "reason": "Every complete original saved record scope is required",
+          "actual_modified_manifest_SHA256": "d00ccb33ea07352d8ecc06557d30abb817daab7c94947200fb4c1f8a50ee95c5"
+        },
+        {
+          "control": "unsafe_payload_member_name",
+          "rejected": true,
+          "reason": "The complete safe preserved-source payload inventory is required",
+          "actual_modified_manifest_SHA256": "b94471611c1b21765a3c481ef812ebeccd35a49fa97fa256991a77d64224fd24"
+        },
+        {
+          "control": "one_complete_required_payload_omitted",
+          "rejected": true,
+          "reason": "The complete safe preserved-source payload inventory is required",
+          "actual_modified_manifest_SHA256": "845929cc83ef11ebe1ba68f97dd4e563e43827b84d511a73eb380514c200a258"
+        },
+        {
+          "control": "legacy_records_mislabeled_as_full_paper_pass",
+          "rejected": true,
+          "reason": "The preserved evidence was relabeled as fresh original reproduction or final-paper conformance",
+          "actual_modified_manifest_SHA256": "bd65f8af56d2a36a9365aa049cbb8fbb3b5f14ec3bcf2d575a7b13f489e852e2"
+        }
+      ]
+    }
+  }
+}

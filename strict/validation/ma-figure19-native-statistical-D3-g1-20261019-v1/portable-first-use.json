@@ -1,0 +1,252 @@
+{
+  "schema": "actual-once-native-portable-saved-firstuse-v1",
+  "actual_tool_exit_code": 0,
+  "raw_actual_report_source_SHA256": "1fea501857505341ae32ddba3f69eeebdd278244cbaa5eee25e9499fbba8340e",
+  "raw_original_handle_journal_SHA256": "aa3c995281bd04ca1f45b142341b253a299eafd244b1f6242f261a7a1d05f3a7",
+  "actual_saved_report": {
+    "complete": true,
+    "rows": {
+      "MRT": {
+        "native_maximum_sample_error": 3.552713678800501e-14,
+        "native_maximum_power_error": 7.771561172376096e-16,
+        "native_mean_error": 5.329070518200751e-15,
+        "fixed_point_statistical_error": 4.618527782440651e-14,
+        "typed_numeric_payload_shape_and_bytes_pass": true,
+        "original_native_typed_digest_recomputed": false,
+        "same_winner_indices": true,
+        "winner_positions_bits_equal": true,
+        "dual_maximum_sample_error": 3.552713678800501e-14,
+        "dual_maximum_power_error": 7.771561172376096e-16,
+        "dual_mean_error": 5.329070518200751e-15,
+        "passed": true
+      },
+      "ZF": {
+        "native_maximum_sample_error": 7.105427357601002e-15,
+        "native_maximum_power_error": 5.551115123125783e-16,
+        "native_mean_error": 3.552713678800501e-15,
+        "fixed_point_statistical_error": 1.2079226507921703e-13,
+        "typed_numeric_payload_shape_and_bytes_pass": true,
+        "original_native_typed_digest_recomputed": false,
+        "same_winner_indices": true,
+        "winner_positions_bits_equal": true,
+        "dual_maximum_sample_error": 7.105427357601002e-15,
+        "dual_maximum_power_error": 6.661338147750939e-16,
+        "dual_mean_error": 3.552713678800501e-15,
+        "passed": true
+      }
+    },
+    "source_input_interval_unchanged": true,
+    "all_scoped_saved_checks_pass": true,
+    "precision": "Existing independent binary64 physical functions; not MP or interval",
+    "new_search_optimizer_RNG_or_samples": 0,
+    "full_search_trajectory_or_exact_cross_language_model_identity": false,
+    "independent_complete_prune_certificate_replayed": false,
+    "full_axes_original_reference_or_paper_PASS": false,
+    "source_before": {
+      "capsule:native-results-and-typed-basis.json.gz": {
+        "SHA256": "1375a7e85ff82dc45d4d622885d179f7393877824010244256f5f32da0345fcb",
+        "bytes": 43476
+      },
+      "capsule:read_native_saved_supplement_v2.py": {
+        "SHA256": "eb65a03ae9458d0fb582f6f7210ffb0fdfc5c5f4f280154a76f79f382ad3600c",
+        "bytes": 8078
+      },
+      "capsule:README.md": {
+        "SHA256": "b579bff34896cc4492abc625efa8c1dee2953c8514b37202df182af5d3201660",
+        "bytes": 5931
+      },
+      "capsule:sources/native/evaluate_only_closed_native_statistical_winner_original1000_v1.m": {
+        "SHA256": "746ac157f5fc9064ac135339c65e16cc2e642ab0dc3c18c8479870f692468d23",
+        "bytes": 10176
+      },
+      "capsule:sources/native/ma_exact_complex_v1.m": {
+        "SHA256": "04915bf66eac21ff5381217680639ffc8206738688cd636ac50c92fa632a078d",
+        "bytes": 1679
+      },
+      "capsule:sources/native/ma_native_grid_io_v1.m": {
+        "SHA256": "5d3facb1de276b619b264fdfe3d3ce8fbaea34b25545d4430ee4150e2b7c0003",
+        "bytes": 7465
+      },
+      "capsule:sources/native/ma_rat_v1.m": {
+        "SHA256": "b4ab50e455005c2c0c69412b6113e6500f832a91fe9d73a1245f911aaaf4d78f",
+        "bytes": 5035
+      },
+      "capsule:sources/native/ma_statistical_bounded_DFS_native_v1.m": {
+        "SHA256": "74a53e2f941fd23920535d14f9338191a13dcfcc8c61be31a4e151ba01e1dd83",
+        "bytes": 5299
+      },
+      "capsule:sources/native/ma_statistical_grid_model_native_v1.m": {
+        "SHA256": "bcaab1a0addc91400f1dd60b290d6cc6528557e456b275b91a4b87217f6fe1e8",
+        "bytes": 4790
+      },
+      "capsule:sources/native/ma_statistical_value_bound_native_v1.m": {
+        "SHA256": "c85ac2a335383002dee06981fdc02e90d2669b6b5a9e9778d334e41dc0d825ea",
+        "bytes": 3953
+      },
+      "capsule:sources/native/ma_theory_native_original_bridge_v1.m": {
+        "SHA256": "6de70f1169dd8b3a7ade7d789a560c669d8778521ab9b58bd85be565d29854e9",
+        "bytes": 2866
+      },
+      "capsule:sources/native/run_one_native_theory_bounded_case_v1.m": {
+        "SHA256": "4d58b825bd53fb24c9292a18a986600ad2d8e2e3e00d4916f18fcc9c339381c9",
+        "bytes": 4901
+      },
+      "dependency:selected-case-and-evidence.json.gz": {
+        "SHA256": "09b8c681ad40ffb0021c49746f656ba1fca65cc080845e06a67e0912c6374182",
+        "bytes": 504647
+      },
+      "dependency:sources/independent_saved_physics.py": {
+        "SHA256": "9db2b29a4d2235122feb3438c2a47ffe8fdebfce738b6bf3779c4d0a7cc2b81d",
+        "bytes": 2255
+      }
+    },
+    "source_after": {
+      "capsule:native-results-and-typed-basis.json.gz": {
+        "SHA256": "1375a7e85ff82dc45d4d622885d179f7393877824010244256f5f32da0345fcb",
+        "bytes": 43476
+      },
+      "capsule:read_native_saved_supplement_v2.py": {
+        "SHA256": "eb65a03ae9458d0fb582f6f7210ffb0fdfc5c5f4f280154a76f79f382ad3600c",
+        "bytes": 8078
+      },
+      "capsule:README.md": {
+        "SHA256": "b579bff34896cc4492abc625efa8c1dee2953c8514b37202df182af5d3201660",
+        "bytes": 5931
+      },
+      "capsule:sources/native/evaluate_only_closed_native_statistical_winner_original1000_v1.m": {
+        "SHA256": "746ac157f5fc9064ac135339c65e16cc2e642ab0dc3c18c8479870f692468d23",
+        "bytes": 10176
+      },
+      "capsule:sources/native/ma_exact_complex_v1.m": {
+        "SHA256": "04915bf66eac21ff5381217680639ffc8206738688cd636ac50c92fa632a078d",
+        "bytes": 1679
+      },
+      "capsule:sources/native/ma_native_grid_io_v1.m": {
+        "SHA256": "5d3facb1de276b619b264fdfe3d3ce8fbaea34b25545d4430ee4150e2b7c0003",
+        "bytes": 7465
+      },
+      "capsule:sources/native/ma_rat_v1.m": {
+        "SHA256": "b4ab50e455005c2c0c69412b6113e6500f832a91fe9d73a1245f911aaaf4d78f",
+        "bytes": 5035
+      },
+      "capsule:sources/native/ma_statistical_bounded_DFS_native_v1.m": {
+        "SHA256": "74a53e2f941fd23920535d14f9338191a13dcfcc8c61be31a4e151ba01e1dd83",
+        "bytes": 5299
+      },
+      "capsule:sources/native/ma_statistical_grid_model_native_v1.m": {
+        "SHA256": "bcaab1a0addc91400f1dd60b290d6cc6528557e456b275b91a4b87217f6fe1e8",
+        "bytes": 4790
+      },
+      "capsule:sources/native/ma_statistical_value_bound_native_v1.m": {
+        "SHA256": "c85ac2a335383002dee06981fdc02e90d2669b6b5a9e9778d334e41dc0d825ea",
+        "bytes": 3953
+      },
+      "capsule:sources/native/ma_theory_native_original_bridge_v1.m": {
+        "SHA256": "6de70f1169dd8b3a7ade7d789a560c669d8778521ab9b58bd85be565d29854e9",
+        "bytes": 2866
+      },
+      "capsule:sources/native/run_one_native_theory_bounded_case_v1.m": {
+        "SHA256": "4d58b825bd53fb24c9292a18a986600ad2d8e2e3e00d4916f18fcc9c339381c9",
+        "bytes": 4901
+      },
+      "dependency:selected-case-and-evidence.json.gz": {
+        "SHA256": "09b8c681ad40ffb0021c49746f656ba1fca65cc080845e06a67e0912c6374182",
+        "bytes": 504647
+      },
+      "dependency:sources/independent_saved_physics.py": {
+        "SHA256": "9db2b29a4d2235122feb3438c2a47ffe8fdebfce738b6bf3779c4d0a7cc2b81d",
+        "bytes": 2255
+      }
+    }
+  },
+  "actual_original_handle_lifecycle": {
+    "scientific_role": "one finite public portable saved-data first use only; zero optimizer/search/RNG/new samples",
+    "command": [
+      "local-evidence:python.exe",
+      "-X",
+      "utf8",
+      "-B",
+      "capsule:read_native_saved_supplement_v2.py",
+      "--python-capsule",
+      "dependency:.",
+      "--output-dir",
+      "local-evidence:actual-readback",
+      "--execute"
+    ],
+    "cwd": "local-evidence:actual-public-portable-first-use-v1",
+    "owner": {
+      "PID": 19008,
+      "creation_FILETIME": 134368995952314220,
+      "associated_with_any_Windows_job": true
+    },
+    "child": {
+      "PID": 31840,
+      "creation_FILETIME": 134368995955618740,
+      "associated_with_any_Windows_job": true
+    },
+    "actual_child_terminal_observation": {
+      "PID": 31840,
+      "creation_FILETIME": 134368995955618740,
+      "associated_with_any_Windows_job": true,
+      "actual_OS_exit_code": 0,
+      "exact_original_Popen_handle_used": true
+    },
+    "actual_child_terminal_exit_code": 0,
+    "effective_host_exit_code": 0,
+    "natural_wait_completed": true,
+    "initial_child_birth_observed": true,
+    "exact_original_handle_birth_and_exit_match": true,
+    "all_watched_source_and_job_bytes_unchanged": true,
+    "host_errors": [],
+    "source_before": {
+      "capsule:MANIFEST.json": "824c5617da2e6fded9416a8e436e6ec3103e5d6a69b21b00be0a50dc070bc243",
+      "capsule:native-results-and-typed-basis.json.gz": "1375a7e85ff82dc45d4d622885d179f7393877824010244256f5f32da0345fcb",
+      "capsule:read_native_saved_supplement_v2.py": "eb65a03ae9458d0fb582f6f7210ffb0fdfc5c5f4f280154a76f79f382ad3600c",
+      "capsule:README.md": "b579bff34896cc4492abc625efa8c1dee2953c8514b37202df182af5d3201660",
+      "capsule:sources/native/evaluate_only_closed_native_statistical_winner_original1000_v1.m": "746ac157f5fc9064ac135339c65e16cc2e642ab0dc3c18c8479870f692468d23",
+      "capsule:sources/native/ma_exact_complex_v1.m": "04915bf66eac21ff5381217680639ffc8206738688cd636ac50c92fa632a078d",
+      "capsule:sources/native/ma_native_grid_io_v1.m": "5d3facb1de276b619b264fdfe3d3ce8fbaea34b25545d4430ee4150e2b7c0003",
+      "capsule:sources/native/ma_rat_v1.m": "b4ab50e455005c2c0c69412b6113e6500f832a91fe9d73a1245f911aaaf4d78f",
+      "capsule:sources/native/ma_statistical_bounded_DFS_native_v1.m": "74a53e2f941fd23920535d14f9338191a13dcfcc8c61be31a4e151ba01e1dd83",
+      "capsule:sources/native/ma_statistical_grid_model_native_v1.m": "bcaab1a0addc91400f1dd60b290d6cc6528557e456b275b91a4b87217f6fe1e8",
+      "capsule:sources/native/ma_statistical_value_bound_native_v1.m": "c85ac2a335383002dee06981fdc02e90d2669b6b5a9e9778d334e41dc0d825ea",
+      "capsule:sources/native/ma_theory_native_original_bridge_v1.m": "6de70f1169dd8b3a7ade7d789a560c669d8778521ab9b58bd85be565d29854e9",
+      "capsule:sources/native/run_one_native_theory_bounded_case_v1.m": "4d58b825bd53fb24c9292a18a986600ad2d8e2e3e00d4916f18fcc9c339381c9",
+      "local-evidence:FINAL_NATIVE_D3_G1_SAVED_EVIDENCE_SUPPLEMENT_FINITE_PUBLICATION_PLAN_V2.json": "e2437a05c3298fe17d8bb6fb980a619601433285206949ef41e320b9b8790e42",
+      "local-evidence:run_once_authorized_public_portable_saved_reader_v1.py": "8ebf9bae993716b23682c51fa66803d4dff4476a7211393d56814ea16081a829",
+      "local-evidence:run_one_serial_missing23_lane_v2.py": "8aa766976c7d773b63ea0699e90d42374cfdb98b2ba119e7498eb06171234c8b",
+      "local-evidence:durable_owned_author_U6_full_eight_worker_v1.py": "7294cd64cb78504490c7d3b569d29161f2031fa33835b90d845aa6fb36191ecf",
+      "dependency:selected-case-and-evidence.json.gz": "09b8c681ad40ffb0021c49746f656ba1fca65cc080845e06a67e0912c6374182",
+      "dependency:sources/independent_saved_physics.py": "9db2b29a4d2235122feb3438c2a47ffe8fdebfce738b6bf3779c4d0a7cc2b81d"
+    },
+    "source_after": {
+      "capsule:MANIFEST.json": "824c5617da2e6fded9416a8e436e6ec3103e5d6a69b21b00be0a50dc070bc243",
+      "capsule:native-results-and-typed-basis.json.gz": "1375a7e85ff82dc45d4d622885d179f7393877824010244256f5f32da0345fcb",
+      "capsule:read_native_saved_supplement_v2.py": "eb65a03ae9458d0fb582f6f7210ffb0fdfc5c5f4f280154a76f79f382ad3600c",
+      "capsule:README.md": "b579bff34896cc4492abc625efa8c1dee2953c8514b37202df182af5d3201660",
+      "capsule:sources/native/evaluate_only_closed_native_statistical_winner_original1000_v1.m": "746ac157f5fc9064ac135339c65e16cc2e642ab0dc3c18c8479870f692468d23",
+      "capsule:sources/native/ma_exact_complex_v1.m": "04915bf66eac21ff5381217680639ffc8206738688cd636ac50c92fa632a078d",
+      "capsule:sources/native/ma_native_grid_io_v1.m": "5d3facb1de276b619b264fdfe3d3ce8fbaea34b25545d4430ee4150e2b7c0003",
+      "capsule:sources/native/ma_rat_v1.m": "b4ab50e455005c2c0c69412b6113e6500f832a91fe9d73a1245f911aaaf4d78f",
+      "capsule:sources/native/ma_statistical_bounded_DFS_native_v1.m": "74a53e2f941fd23920535d14f9338191a13dcfcc8c61be31a4e151ba01e1dd83",
+      "capsule:sources/native/ma_statistical_grid_model_native_v1.m": "bcaab1a0addc91400f1dd60b290d6cc6528557e456b275b91a4b87217f6fe1e8",
+      "capsule:sources/native/ma_statistical_value_bound_native_v1.m": "c85ac2a335383002dee06981fdc02e90d2669b6b5a9e9778d334e41dc0d825ea",
+      "capsule:sources/native/ma_theory_native_original_bridge_v1.m": "6de70f1169dd8b3a7ade7d789a560c669d8778521ab9b58bd85be565d29854e9",
+      "capsule:sources/native/run_one_native_theory_bounded_case_v1.m": "4d58b825bd53fb24c9292a18a986600ad2d8e2e3e00d4916f18fcc9c339381c9",
+      "local-evidence:FINAL_NATIVE_D3_G1_SAVED_EVIDENCE_SUPPLEMENT_FINITE_PUBLICATION_PLAN_V2.json": "e2437a05c3298fe17d8bb6fb980a619601433285206949ef41e320b9b8790e42",
+      "local-evidence:run_once_authorized_public_portable_saved_reader_v1.py": "8ebf9bae993716b23682c51fa66803d4dff4476a7211393d56814ea16081a829",
+      "local-evidence:run_one_serial_missing23_lane_v2.py": "8aa766976c7d773b63ea0699e90d42374cfdb98b2ba119e7498eb06171234c8b",
+      "local-evidence:durable_owned_author_U6_full_eight_worker_v1.py": "7294cd64cb78504490c7d3b569d29161f2031fa33835b90d845aa6fb36191ecf",
+      "dependency:selected-case-and-evidence.json.gz": "09b8c681ad40ffb0021c49746f656ba1fca65cc080845e06a67e0912c6374182",
+      "dependency:sources/independent_saved_physics.py": "9db2b29a4d2235122feb3438c2a47ffe8fdebfce738b6bf3779c4d0a7cc2b81d"
+    }
+  },
+  "metadata_only_path_projection": true,
+  "no_new_search_optimizer_RNG_or_samples": true,
+  "initial_prepared13_fixture_flags_are_historical_superseded_here": true,
+  "actual_firstuse_fixed_point_MRT_error": 4.618527782440651e-14,
+  "original_private_saved_reader_fixed_point_MRT_error": 5.329070518200751e-14,
+  "all_scalar_errors_bit_identical_to_original_private_reader_claimed": false,
+  "both_actual_errors_within_unchanged_design_tolerance": true,
+  "complete_theoretical_model_trajectory_axes_original_reference_or_paper_PASS": false
+}

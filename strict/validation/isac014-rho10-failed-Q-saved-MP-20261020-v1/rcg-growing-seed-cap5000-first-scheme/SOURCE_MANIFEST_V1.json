@@ -1,0 +1,32 @@
+{
+  "schema": "case014-growth-source-cap5000-configuration-only-manifest-v1",
+  "source_SHA256": {
+    "equivalent_runtime_case014_v1.py": "781d7ad5f01df8d460c6a4eb905dd7f6cdd0026752465d0d26e6345901e5fc12",
+    "passive_first_failure_v1.py": "855bb184d28c9a760b21b5dcb0d880b89a81b7bbf5e526d965dbbf3cbc7544a1",
+    "stable_metrics.py": "e15ad67ffc92b0ea2b3cbbd5428ff8be30bc6630ab651188d15aa2f01bde8c29",
+    "structured_original_qcqp_candidate_v1.py": "1fa91846426407d7313f0ba452e2d81c60fa433c9513d8618f870414903f8881",
+    "sources/core_original_case014_v1.py": "07f2eb9d9f5011dde45a8c947dd87db31d15b7e6e8ab233e9f43429c408f2fbb",
+    "sources/core_structured_case014_v1.py": "4df631cc7ad55005461781cee4b666c66c98f8d9b7135944f693d499d0db4522",
+    "sources/run_selected_first_scheme_case014_v1.py": "7339b40b3efa519bf9f44fee3127451e30e0d3c255bcff01680362a10abde145",
+    "passive_RCG_seed_trace_v1.py": "7692fc1ea636b90ac623bc8ed6975f090f88d22ff95ffb4f7eac9dd3d59333d3",
+    "run_case014_RCG_growth_cap5000_first_scheme_v1.py": "0aa1ade6badbd0a7c33c09daec25e6ecc716ca38c37ac143912216711c659a4a",
+    "passive_original_cap_prefix_v1.py": "6a4c294bfad0aa4b405fa97747e99765ea023575b42ffe4bcf2ec6bdae979e1b"
+  },
+  "inputs": {
+    "config": {
+      "path": "source-9800c3b8ce26/config-RCG-PGA-cap5000.json",
+      "SHA256": "ddd2ca9e29de71f8786285feca037faa6a6565d256b47f267f582aeff512f6a9",
+      "bytes": 5167
+    },
+    "scenario": {
+      "path": "source-29a455a9b12f/case014-scenario-RCG-PGA-cap5000.json",
+      "SHA256": "a5f2678f6bbbec7a691937bdb92ea97f69c53207b496ade2f4c68a45dffb06df",
+      "bytes": 22737
+    }
+  },
+  "source_derivation": {
+    "path": "source-4f081f91cd94/EXACT_CAP_ONLY_CONFIGURATION_DIFF_AND_FROZEN_MATH_SOURCE_REUSE_V1.json",
+    "SHA256": "1754c116efe6cd9f6aaa565c134db763bb86f11dd74297072d5df81bc1ac7fdc"
+  },
+  "old_failures_retained": true
+}

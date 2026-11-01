@@ -1,0 +1,145 @@
+{
+  "schema": "six-actual-captures-stored-once-portable-map-v1",
+  "capture_aggregate": "evidence/six-capture-closure.json.gz",
+  "points": [
+    {
+      "key": "case-006-mc-024-mrt",
+      "case": "case-006-mc-024",
+      "mode": "MRT",
+      "fixture": {
+        "path": "inputs/case-006-mc-024-mrt/fixture.json.gz",
+        "gzip": true,
+        "uncompressed_SHA256": "5887b35795195d7bd12394a40d304a9e87c5d10686d8e4c3007d6d5a7c11cd89"
+      },
+      "lanes": {
+        "python": {
+          "report": {
+            "path": "inputs/case-006-mc-024-mrt/python/source-observations.json.gz",
+            "gzip": true,
+            "uncompressed_SHA256": "26b4252fcf5c76358e84afd243617f4f2b1ecda5d5846c1f3917dee541214e86"
+          },
+          "journal": {
+            "path": "inputs/case-006-mc-024-mrt/python/original-held-journal.json.gz",
+            "gzip": true,
+            "uncompressed_SHA256": "46ad64224fe45b165633022942ecaa11b1891d5e35076a7a0e7facf90d4ea34c"
+          },
+          "numeric": {
+            "path": "inputs/case-006-mc-024-mrt/python/capture.npz",
+            "gzip": false,
+            "uncompressed_SHA256": "348cfad7ce0d299c43288ab3da05f016735662f7aa2ea38088efb354e7e5bdcb"
+          }
+        },
+        "native": {
+          "report": {
+            "path": "inputs/case-006-mc-024-mrt/native/source-observations.json.gz",
+            "gzip": true,
+            "uncompressed_SHA256": "7eb488d6124b7331f327eed708f71c5c52c16fae5e69156feadf2f5987754fb3"
+          },
+          "journal": {
+            "path": "inputs/case-006-mc-024-mrt/native/original-held-journal.json.gz",
+            "gzip": true,
+            "uncompressed_SHA256": "0dc44b9619fa19a73f053cc10a6c3573ba156f7955f124d6dc1f07ec0f83569a"
+          },
+          "numeric": {
+            "path": "inputs/case-006-mc-024-mrt/native/capture.mat.gz",
+            "gzip": true,
+            "uncompressed_SHA256": "56435c4502da446ce38a2222332fe2856894c51fa622070a3f5fd4bad993749a"
+          }
+        }
+      }
+    },
+    {
+      "key": "case-006-mc-027-zf",
+      "case": "case-006-mc-027",
+      "mode": "ZF",
+      "fixture": {
+        "path": "inputs/case-006-mc-027-zf/fixture.json.gz",
+        "gzip": true,
+        "uncompressed_SHA256": "83af2c6b6bb98409dbbf2789dd2d50081c5d5095cd453bc67c54568eeefb304e"
+      },
+      "lanes": {
+        "python": {
+          "report": {
+            "path": "inputs/case-006-mc-027-zf/python/source-observations.json.gz",
+            "gzip": true,
+            "uncompressed_SHA256": "fe8cf047420c63a8823551f77f12fb7180e44ead671d929c3eeb83b1a0fe6cb6"
+          },
+          "journal": {
+            "path": "inputs/case-006-mc-027-zf/python/original-held-journal.json.gz",
+            "gzip": true,
+            "uncompressed_SHA256": "64ee48645e1772d9603e7fc3dfa57478e7e95c6c8cd8a0c037a7141d2ff51c30"
+          },
+          "numeric": {
+            "path": "inputs/case-006-mc-027-zf/python/capture.npz",
+            "gzip": false,
+            "uncompressed_SHA256": "76b1c0049d617ccd3b552d5a1908f920041510e31377ad7b20c6a5ad22882041"
+          }
+        },
+        "native": {
+          "report": {
+            "path": "inputs/case-006-mc-027-zf/native/source-observations.json.gz",
+            "gzip": true,
+            "uncompressed_SHA256": "5bf088b324635fe67ad76c821bbfab3466a1886edc09c177db9cb6c4d7445e3b"
+          },
+          "journal": {
+            "path": "inputs/case-006-mc-027-zf/native/original-held-journal.json.gz",
+            "gzip": true,
+            "uncompressed_SHA256": "64dff653d272c951910a06e386874d0a49c587a498778d0213091757a63c2e63"
+          },
+          "numeric": {
+            "path": "inputs/case-006-mc-027-zf/native/capture.mat.gz",
+            "gzip": true,
+            "uncompressed_SHA256": "2c3b7383b69bef696f2238ec51c5ce859bb663765e602d138fcb2abf6c29e456"
+          }
+        }
+      }
+    },
+    {
+      "key": "case-008-mc-024-mrt",
+      "case": "case-008-mc-024",
+      "mode": "MRT",
+      "fixture": {
+        "path": "inputs/case-008-mc-024-mrt/fixture.json.gz",
+        "gzip": true,
+        "uncompressed_SHA256": "6688d46919e7d60b41cf282e5519b5faa77d9cf0db747ecea3f5637f82974219"
+      },
+      "lanes": {
+        "python": {
+          "report": {
+            "path": "inputs/case-008-mc-024-mrt/python/source-observations.json.gz",
+            "gzip": true,
+            "uncompressed_SHA256": "6deebedc36746de9dcd59163a01d5b57cda0d67506c36f0a4ecda0603e097e91"
+          },
+          "journal": {
+            "path": "inputs/case-008-mc-024-mrt/python/original-held-journal.json.gz",
+            "gzip": true,
+            "uncompressed_SHA256": "6d6adc58914edef5f9f03fe3a3e1a4afc4b3fae9307527f81aac276365c65699"
+          },
+          "numeric": {
+            "path": "inputs/case-008-mc-024-mrt/python/capture.npz",
+            "gzip": false,
+            "uncompressed_SHA256": "dfc68e25431d06ef840fc9905c17a516a18061bb75f77754d1e4c6f485e520c9"
+          }
+        },
+        "native": {
+          "report": {
+            "path": "inputs/case-008-mc-024-mrt/native/source-observations.json.gz",
+            "gzip": true,
+            "uncompressed_SHA256": "0391b26a4f51f75238d82537281a339b64bf66982af45f454cae229c4b247911"
+          },
+          "journal": {
+            "path": "inputs/case-008-mc-024-mrt/native/original-held-journal.json.gz",
+            "gzip": true,
+            "uncompressed_SHA256": "93dcf4c1aa09a79464dfd3c3300448f4652678ba97540098bfbb9ad0ec00e286"
+          },
+          "numeric": {
+            "path": "inputs/case-008-mc-024-mrt/native/capture.mat.gz",
+            "gzip": true,
+            "uncompressed_SHA256": "77e564d91836e2ecd3d6120316d52b3d458da802fbe2068be3ba7b3d21a6cad6"
+          }
+        }
+      }
+    }
+  ],
+  "binding_scope": "Source hashes identify original files. Public hashes identify metadata-only projections. Portable host changes only IO path bindings; original lifecycle statements retain their original epoch."
+}

@@ -1,0 +1,320 @@
+{
+  "schema": "CASE13_RECORDED_GATE_CONSERVATIVE_V1",
+  "case_gate": null,
+  "case_status_present_in_projection": false,
+  "limits_independently_authenticated": false,
+  "complete_history_capture_attested": false,
+  "ao_phase_histories_associated_from_separate_events": 8,
+  "phase_event_associations": [
+    {
+      "scheme": "TwoStage",
+      "start_id": 0,
+      "phase_ordinal": 1327318,
+      "final_ordinal": 1327398,
+      "history_points": 19,
+      "complete_typed_stop_match_finite_binary64_bitwise": true
+    },
+    {
+      "scheme": "TwoStage",
+      "start_id": 1,
+      "phase_ordinal": 1327488,
+      "final_ordinal": 1327568,
+      "history_points": 19,
+      "complete_typed_stop_match_finite_binary64_bitwise": true
+    },
+    {
+      "scheme": "AO",
+      "start_id": 0,
+      "phase_ordinal": 1327665,
+      "final_ordinal": 1327779,
+      "history_points": 17,
+      "complete_typed_stop_match_finite_binary64_bitwise": true
+    },
+    {
+      "scheme": "AO",
+      "start_id": 0,
+      "phase_ordinal": 1327712,
+      "final_ordinal": 1327779,
+      "history_points": 5,
+      "complete_typed_stop_match_finite_binary64_bitwise": true
+    },
+    {
+      "scheme": "AO",
+      "start_id": 0,
+      "phase_ordinal": 1327754,
+      "final_ordinal": 1327779,
+      "history_points": 3,
+      "complete_typed_stop_match_finite_binary64_bitwise": true
+    },
+    {
+      "scheme": "AO",
+      "start_id": 0,
+      "phase_ordinal": 1327777,
+      "final_ordinal": 1327779,
+      "history_points": 1,
+      "complete_typed_stop_match_finite_binary64_bitwise": true
+    },
+    {
+      "scheme": "AO",
+      "start_id": 1,
+      "phase_ordinal": 1327875,
+      "final_ordinal": 1328005,
+      "history_points": 17,
+      "complete_typed_stop_match_finite_binary64_bitwise": true
+    },
+    {
+      "scheme": "AO",
+      "start_id": 1,
+      "phase_ordinal": 1327925,
+      "final_ordinal": 1328005,
+      "history_points": 7,
+      "complete_typed_stop_match_finite_binary64_bitwise": true
+    },
+    {
+      "scheme": "AO",
+      "start_id": 1,
+      "phase_ordinal": 1327963,
+      "final_ordinal": 1328005,
+      "history_points": 3,
+      "complete_typed_stop_match_finite_binary64_bitwise": true
+    },
+    {
+      "scheme": "AO",
+      "start_id": 1,
+      "phase_ordinal": 1328003,
+      "final_ordinal": 1328005,
+      "history_points": 2,
+      "complete_typed_stop_match_finite_binary64_bitwise": true
+    }
+  ],
+  "schemes": [
+    {
+      "scheme": "NoRIS",
+      "recorded_gate": null,
+      "reason": "conditional_start_aggregation",
+      "starts": [
+        {
+          "scheme": "NoRIS",
+          "start_id": 0,
+          "original_convergence_check": true,
+          "original_status_converged": true,
+          "recorded_gate": null,
+          "blocks": [
+            {
+              "name": "QT",
+              "recorded_gate": null,
+              "reason": "declared_limits_missing",
+              "original_converged": true,
+              "negative_steps": 0,
+              "history_count": 4,
+              "capture_complete_asserted": false
+            }
+          ],
+          "reason": "conditional_block_aggregation"
+        },
+        {
+          "scheme": "NoRIS",
+          "start_id": 1,
+          "original_convergence_check": true,
+          "original_status_converged": true,
+          "recorded_gate": null,
+          "blocks": [
+            {
+              "name": "QT",
+              "recorded_gate": null,
+              "reason": "declared_limits_missing",
+              "original_converged": true,
+              "negative_steps": 0,
+              "history_count": 4,
+              "capture_complete_asserted": false
+            }
+          ],
+          "reason": "conditional_block_aggregation"
+        }
+      ]
+    },
+    {
+      "scheme": "TwoStage",
+      "recorded_gate": null,
+      "reason": "conditional_start_aggregation",
+      "starts": [
+        {
+          "scheme": "TwoStage",
+          "start_id": 0,
+          "original_convergence_check": true,
+          "original_status_converged": true,
+          "recorded_gate": null,
+          "blocks": [
+            {
+              "name": "phase",
+              "recorded_gate": null,
+              "reason": "declared_limits_missing",
+              "original_converged": true,
+              "negative_steps": 0,
+              "history_count": 19,
+              "capture_complete_asserted": false
+            },
+            {
+              "name": "QT",
+              "recorded_gate": null,
+              "reason": "declared_limits_missing",
+              "original_converged": true,
+              "negative_steps": 0,
+              "history_count": 5,
+              "capture_complete_asserted": false
+            }
+          ],
+          "reason": "conditional_block_aggregation"
+        },
+        {
+          "scheme": "TwoStage",
+          "start_id": 1,
+          "original_convergence_check": true,
+          "original_status_converged": true,
+          "recorded_gate": null,
+          "blocks": [
+            {
+              "name": "phase",
+              "recorded_gate": null,
+              "reason": "declared_limits_missing",
+              "original_converged": true,
+              "negative_steps": 0,
+              "history_count": 19,
+              "capture_complete_asserted": false
+            },
+            {
+              "name": "QT",
+              "recorded_gate": null,
+              "reason": "declared_limits_missing",
+              "original_converged": true,
+              "negative_steps": 0,
+              "history_count": 5,
+              "capture_complete_asserted": false
+            }
+          ],
+          "reason": "conditional_block_aggregation"
+        }
+      ]
+    },
+    {
+      "scheme": "AO",
+      "recorded_gate": null,
+      "reason": "conditional_start_aggregation",
+      "starts": [
+        {
+          "scheme": "AO",
+          "start_id": 0,
+          "original_convergence_check": true,
+          "original_status_converged": true,
+          "recorded_gate": null,
+          "blocks": [
+            {
+              "name": "AO_outer",
+              "recorded_gate": null,
+              "reason": "declared_limits_missing",
+              "original_converged": true,
+              "negative_steps": 0,
+              "history_count": 5,
+              "capture_complete_asserted": false
+            },
+            {
+              "name": "AO_phase_1",
+              "recorded_gate": null,
+              "reason": "declared_limits_missing",
+              "original_converged": true,
+              "negative_steps": 0,
+              "history_count": 17,
+              "capture_complete_asserted": false
+            },
+            {
+              "name": "AO_phase_2",
+              "recorded_gate": null,
+              "reason": "declared_limits_missing",
+              "original_converged": true,
+              "negative_steps": 0,
+              "history_count": 5,
+              "capture_complete_asserted": false
+            },
+            {
+              "name": "AO_phase_3",
+              "recorded_gate": null,
+              "reason": "declared_limits_missing",
+              "original_converged": true,
+              "negative_steps": 0,
+              "history_count": 3,
+              "capture_complete_asserted": false
+            },
+            {
+              "name": "AO_phase_4",
+              "recorded_gate": null,
+              "reason": "declared_limits_missing",
+              "original_converged": true,
+              "negative_steps": 0,
+              "history_count": 1,
+              "capture_complete_asserted": false
+            }
+          ],
+          "reason": "conditional_block_aggregation"
+        },
+        {
+          "scheme": "AO",
+          "start_id": 1,
+          "original_convergence_check": true,
+          "original_status_converged": true,
+          "recorded_gate": null,
+          "blocks": [
+            {
+              "name": "AO_outer",
+              "recorded_gate": null,
+              "reason": "declared_limits_missing",
+              "original_converged": true,
+              "negative_steps": 0,
+              "history_count": 5,
+              "capture_complete_asserted": false
+            },
+            {
+              "name": "AO_phase_1",
+              "recorded_gate": null,
+              "reason": "declared_limits_missing",
+              "original_converged": true,
+              "negative_steps": 0,
+              "history_count": 17,
+              "capture_complete_asserted": false
+            },
+            {
+              "name": "AO_phase_2",
+              "recorded_gate": null,
+              "reason": "declared_limits_missing",
+              "original_converged": true,
+              "negative_steps": 0,
+              "history_count": 7,
+              "capture_complete_asserted": false
+            },
+            {
+              "name": "AO_phase_3",
+              "recorded_gate": null,
+              "reason": "declared_limits_missing",
+              "original_converged": true,
+              "negative_steps": 0,
+              "history_count": 3,
+              "capture_complete_asserted": false
+            },
+            {
+              "name": "AO_phase_4",
+              "recorded_gate": null,
+              "reason": "declared_limits_missing",
+              "original_converged": true,
+              "negative_steps": 0,
+              "history_count": 2,
+              "capture_complete_asserted": false
+            }
+          ],
+          "reason": "conditional_block_aggregation"
+        }
+      ]
+    }
+  ],
+  "historical_source_authenticated": false,
+  "whole_event_atomic_snapshot_verified": false,
+  "scientific_or_paper_pass": false
+}

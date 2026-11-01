@@ -1,0 +1,94 @@
+{
+  "schema": "closed-native-remaining-five-source-and-prior-public-dependency-map-v1",
+  "parent_public_commit": "45dfa416d31031ed65cd0f8b7a955f28f1256eea",
+  "parent_manifest": {
+    "relative_path": "../native-returned-states/MANIFEST.json",
+    "SHA256": "50d8b0f6b49236ce6d70f0980f3ed01c4d10bbfe1f00fdd1d2c310c96bf68cdd"
+  },
+  "shared_published_dependency_files": {
+    "../native-returned-states/sources/executed-MP/audit_only_closed_native_new36_and_final_existing_MP_v1.py": {
+      "bytes": 15377,
+      "SHA256": "ebf213cdc6028261988ef35faeaf32e52c14a7b296f3e11c4161a212e9acec23"
+    },
+    "../native-returned-states/sources/executed-MP/native_saved_state_schema_v1.py": {
+      "bytes": 14392,
+      "SHA256": "5781cf9b30392e222e1ffee5a7e219b9a9537d5b691dae75015ee3e504bc77af"
+    },
+    "../native-returned-states/sources/executed-native/solve_original_factor_QP_array_v1.m": {
+      "bytes": 2270,
+      "SHA256": "7231d5b2a5001ae02618bf3b0e5b06ee7c4c07a262ba73219965c3c7f4849a97"
+    },
+    "../native-returned-states/sources/executed-native/stable_rotation_utility_increment_native_v1.m": {
+      "bytes": 4824,
+      "SHA256": "e1ad6ca56ced1010ab6ebd96499322bd0586b71cf3a8d4456335b6ca8f6040a1"
+    },
+    "../native-returned-states/sources/independent-reference/audit_cold_control.py": {
+      "bytes": 14075,
+      "SHA256": "70eb0f2795ece136d3ddf69fa3600d9d241452b35991bad66d744a22b7accdd8"
+    },
+    "../native-returned-states/sources/independent-reference/audit_failure.py": {
+      "bytes": 12544,
+      "SHA256": "b05a3c958a79719339c61575ae69d65dd4432f47e6b3323e7bdd5977fc588e8b"
+    },
+    "../native-returned-states/sources/independent-reference/audit_stable_derivatives.py": {
+      "bytes": 4953,
+      "SHA256": "bd02ce41fadb77ac57dc2f81d43cd4043042c1d58681ffd782eb058941af51b6"
+    },
+    "../native-returned-states/sources/independent-reference/mp_physical_reference.py": {
+      "bytes": 3918,
+      "SHA256": "d14050078d636ca33bd78fb2206406735a22589eeb0aa14b0f28c3d443d893bc"
+    },
+    "../native-returned-states/sources/independent-reference/stable_metrics.py": {
+      "bytes": 2383,
+      "SHA256": "e15ad67ffc92b0ea2b3cbbd5428ff8be30bc6630ab651188d15aa2f01bde8c29"
+    }
+  },
+  "new_executed_MP_sources": {
+    "audit_only_closed_native_remaining_five_saved_MP_v1.py": "a514c96e2adc0e53af897ec535611d390cb324614d519900e94f910af0bc33bf",
+    "existing_native_MP_math_for_one_remaining_scheme_v1.py": "d6fa1a3e9397c594faf686c715bc909f82514aee5f461104902fa016761675aa",
+    "native_remaining_saved_binding_v1.py": "4d214a53c9037f995734c06e3a3d0a8082580f8da4e3324b14cdcdef45092061"
+  },
+  "all_actual_reader_source_pins": {
+    "source-bdb67b34a900/audit_only_closed_native_new36_and_final_existing_MP_v1.py": "ebf213cdc6028261988ef35faeaf32e52c14a7b296f3e11c4161a212e9acec23",
+    "source-e5b14dfebaa9/native_saved_state_schema_v1.py": "5781cf9b30392e222e1ffee5a7e219b9a9537d5b691dae75015ee3e504bc77af",
+    "source-4ad0f59893ed/audit_only_closed_new_returned_states_v1.py": "80fe571c8b729f35c7d0c03cf4c64c307b649d5b935025fcefd8685f96beb0ec",
+    "source-77302eb50ca4/equivalent_runtime_case014_v1.py": "ec332540a25a67e205257d907fbe0fce8450e903e896e5be03fbc31932120243",
+    "source-4fddc55f7fac/passive_first_failure_v1.py": "855bb184d28c9a760b21b5dcb0d880b89a81b7bbf5e526d965dbbf3cbc7544a1",
+    "source-1299b0d989c1/stable_metrics.py": "e15ad67ffc92b0ea2b3cbbd5428ff8be30bc6630ab651188d15aa2f01bde8c29",
+    "source-bc8357fb792e/structured_original_qcqp_candidate_v1.py": "1fa91846426407d7313f0ba452e2d81c60fa433c9513d8618f870414903f8881",
+    "source-7aa1f60b648e/core_original_case014_v1.py": "07f2eb9d9f5011dde45a8c947dd87db31d15b7e6e8ab233e9f43429c408f2fbb",
+    "source-6a1216cb3919/core_structured_case014_v1.py": "4cb6fcaa62353196f6d70e3de9f6bdf8249d9c1c43e365880f83ff1dd3864404",
+    "source-0821f96b22c0/run_selected_first_scheme_case014_v1.py": "7339b40b3efa519bf9f44fee3127451e30e0d3c255bcff01680362a10abde145",
+    "source-16868be18dee/passive_RCG_seed_trace_v1.py": "7692fc1ea636b90ac623bc8ed6975f090f88d22ff95ffb4f7eac9dd3d59333d3",
+    "source-d853821ba6e5/passive_original_cap_prefix_v1.py": "6a4c294bfad0aa4b405fa97747e99765ea023575b42ffe4bcf2ec6bdae979e1b",
+    "source-13e048365cea/run_case014_stable_increment_growth_cap5000_rel1e10_first_scheme_v2.py": "3d9c7f2a3cf47cab165fbb3af6a9200d8826641fc947db724a583500b851b6f7",
+    "source-c08191b340e9/stable_rotation_increment_v1.py": "07678a483b3f8c70bcaf06c91d2ad611b30594c1cb8f17199f63eaa63fb60c4c",
+    "source-e1f5ff27156a/passive_returned_inner_block_states_v1.py": "8688a231b32dce900930997206bac4500e1f4945f4d03fdc430b3a5328b65e94",
+    "source-53f1894967cc/mp_physical_reference.py": "d14050078d636ca33bd78fb2206406735a22589eeb0aa14b0f28c3d443d893bc",
+    "source-5136e96cf5e0/audit_cold_control.py": "70eb0f2795ece136d3ddf69fa3600d9d241452b35991bad66d744a22b7accdd8",
+    "source-8fcf45aae8c4/audit_failure.py": "b05a3c958a79719339c61575ae69d65dd4432f47e6b3323e7bdd5977fc588e8b",
+    "source-d579914661f5/audit_stable_derivatives.py": "bd02ce41fadb77ac57dc2f81d43cd4043042c1d58681ffd782eb058941af51b6",
+    "source-8817270ab979/stable_metrics.py": "e15ad67ffc92b0ea2b3cbbd5428ff8be30bc6630ab651188d15aa2f01bde8c29",
+    "source-208093cfa8d4/EXACT_SCHEME_BINDING_HOST_DELTA_AND_WHOLE_EBF_INVERSE_V1.json": "7695c371856eaf039104b24057181ff6e19a2ee3d3d2246b0a714bef60ec965c",
+    "source-ce2f2afa99f7/PREPARED_CASE014_PYTHON4_NATIVE5_EXACT_OLD_BASELINE_REUSE_PLAN_V1.json": "7ec7675ff76acc8942150ac2661dcd83e1ddbaf39fa4c455a1512db72ff283df",
+    "source-d43e2828410e/ROOT_AUTHORIZED_ONCE_CASE014_MINIMAL_NATIVE_LANE_JOB_V1.json": "5e515a42d655fbb0a37ba74650d9f2fceb78418ce288133a1d0c77c6420b7ed2",
+    "source-3282a9e17274/ACTUAL_EXACTLY_TWO_MISSING_LANES_OWNED_START_SOURCE_AND_OS_BIRTH_V1.json": "b70888818d6a22583274852602bc71c12e8022917eed6553355250235fe45f81",
+    "source-df72f1508b02/original-config.json": "62d9450cd8ae67986a92c0cd7344f7788d75a3bfb8e89d11d54a59e501536460",
+    "source-57e5a3af2cf8/original-scenario.json": "3b5e8fced9d90337bc574d660ea29c0a2b1b67aae8fc11950cdbbb28d609c302",
+    "source-98d5294c022b/native_remaining_saved_binding_v1.py": "4d214a53c9037f995734c06e3a3d0a8082580f8da4e3324b14cdcdef45092061",
+    "source-ba1326c518db/existing_native_MP_math_for_one_remaining_scheme_v1.py": "d6fa1a3e9397c594faf686c715bc909f82514aee5f461104902fa016761675aa",
+    "source-7772c3612de3/audit_only_closed_native_remaining_five_saved_MP_v1.py": "a514c96e2adc0e53af897ec535611d390cb324614d519900e94f910af0bc33bf",
+    "source-069de82f2518/PREPARED_NATIVE_REMAINING_FIVE_SAVED_MP80_MP100_CONSUMER_PLAN_V1.json": "7cf6a4b2c67954744f2afd0a8770764740022f29d2689095dc774b9f8bbf4c53",
+    "source-c1eec9a250f4/ACTUAL_NATIVE_REMAINING_FIVE_SAVED_MP_SCOPE_CLOSURE_V1.json": "2e0990fe682674bc8693ebe70fb5552d6207d4872633a9c3795eccd7ec7159ef",
+    "source-451eef5d3f70/native-remaining-five-saved-MP-actual-owned-process.json": "5c67220b83586971c62a3eded9ae18220b0f918f840405d656d0f9a90773032a",
+    "source-bfe4c263776d/EXACT_SINGLETON_CONTAINER_HOST_FIX_AND_COMPLETED_ORD2_3_REPORT_REUSE_MAPPING_V2.json": "562fabd74338ec5109ad052598ca970efa0522f8412336ec74a4e9135aea31f8",
+    "source-ddafca76dcd9/ACTUAL_NATIVE_ONE_REMAINING_SCHEME_AND_FINAL_EXISTING_MP80_MP100_V1.json": "945c2093ec66a05d552659ae47274fa98d02a3e1eca639692e2b76a8de94e819",
+    "source-e2eba73adeea/ACTUAL_NATIVE_ONE_REMAINING_SCHEME_AND_FINAL_EXISTING_MP80_MP100_V1.json": "e2fecd8b2ef25a0fd6e290e03bde2de4d6acbdfee0651cf2143a2e5da270f53c"
+  },
+  "original_current_aggregate_SHA256": "149a8fc0af2415f7a77046d59f54cc57a144274989ade24cbbb2212a46774f76",
+  "original_current_held_compact_SHA256": "e430ea3c80d093099b34a1e31b92045d33527d9a2922aa200490f53b73f7fb0f",
+  "original_prior_failure_compact_SHA256": "d60b1619d42470cdca747b8922d8fdf5c960333d297d11bb4946dc9c17d0368b",
+  "per_scheme_math_unchanged_from_V1_SHA256": "d6fa1a3e9397c594faf686c715bc909f82514aee5f461104902fa016761675aa",
+  "whole_source_host_inverse_independently_reconstructed_during_format_packaging": true,
+  "portable_new_MP_replay_executed": false
+}

@@ -1,0 +1,94 @@
+{
+  "schema": "COOPERATIVE_CORRECTED_FIG12_SAVED192_PUBLIC_MANIFEST_V1",
+  "manifest_self_excluded": true,
+  "files": [
+    {
+      "relative_path": ".gitattributes",
+      "SHA256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+      "bytes": 8,
+      "role": "evidence_or_documentation"
+    },
+    {
+      "relative_path": "README.md",
+      "SHA256": "fe27318dcf4ed80d1e27aa39622c04e92a6720dde4c432f5fac99b0a5a7cff9f",
+      "bytes": 5787,
+      "role": "evidence_or_documentation"
+    },
+    {
+      "relative_path": "data/all192-dual-language-source-bound-sumrates-and-unfitted-source-gaps.json",
+      "SHA256": "54c39080d24a3f4908bdb73df271757dc271b4a000802f02187f8ab3c25e4953",
+      "bytes": 519362,
+      "role": "saved_numeric_input"
+    },
+    {
+      "relative_path": "data/published-Fig12-all8-curves-all96-original-vector-reference-values-v1.json",
+      "SHA256": "7caeb9fe6ce7476443b126bc05d83bd1a3acb379e31895a5c29e68b919b8e135",
+      "bytes": 9819,
+      "role": "saved_numeric_input"
+    },
+    {
+      "relative_path": "data/summary.json",
+      "SHA256": "e344d70a42ff09afdd206a3a55861ffababe29f3592cb779b9897145c1c0be9e",
+      "bytes": 1108,
+      "role": "saved_numeric_input"
+    },
+    {
+      "relative_path": "evidence/actual-complete192-and-visual-review.json",
+      "SHA256": "7c9dc68ec1eb4d61adbeb76a5a5c8a7964eca6733eba8fff0a59cdf20180ba73",
+      "bytes": 3008,
+      "role": "evidence_or_documentation"
+    },
+    {
+      "relative_path": "evidence/actual-portable-Fig12-first-use.json",
+      "SHA256": "87a38281d0d6d8d3b4f2a63f9131670bd66de11167f7d1224d89921cded340a2",
+      "bytes": 1347,
+      "role": "evidence_or_documentation"
+    },
+    {
+      "relative_path": "evidence/dual-language-saved-rate-comparison.json",
+      "SHA256": "87f1a94b48b3ad905a683825431410a6091c492dc6a4b1f32505dce268bbcc7f",
+      "bytes": 911,
+      "role": "evidence_or_documentation"
+    },
+    {
+      "relative_path": "evidence/source-projection-and-portable-scope.json",
+      "SHA256": "bfceb6b4b71af8c1a16f5ced5958f2853be56106964d116d3f7e8110a28e933b",
+      "bytes": 2799,
+      "role": "evidence_or_documentation"
+    },
+    {
+      "relative_path": "figures/Fig12-all192-derived-and-all96-published-unfitted-diagnostic.png",
+      "SHA256": "b38f71822de81fafd2c4ca9d15264fdba4e50256992d9bd97b668ac5907db225",
+      "bytes": 359887,
+      "role": "actual_figure"
+    },
+    {
+      "relative_path": "figures/Fig12-all192-derived-and-all96-published-unfitted-diagnostic.svg",
+      "SHA256": "50fd362d23e83bf5d09b6ff09ac5a5cc8f7697393ef7d597ba7e8bbf32252d1b",
+      "bytes": 92138,
+      "role": "actual_figure"
+    },
+    {
+      "relative_path": "sources/render_cooperative_final_Fig12_all192_unfitted_diagnostic_v1.py",
+      "SHA256": "cf9207ff8e6d71a6310f7d0236c1aa3b489156713c74a1c88353d40422a0cde5",
+      "bytes": 6113,
+      "role": "runtime_source"
+    },
+    {
+      "relative_path": "sources/render_packaged_Fig12.py",
+      "SHA256": "95768e3d5c1a460cdc3b629e435fb518f98c1f2a2d44451a5eec639c7a3318c0",
+      "bytes": 5131,
+      "role": "runtime_source"
+    }
+  ],
+  "actual_current_derived_points": 192,
+  "original_vector_points": 96,
+  "new_portable_host_first_use_pending": false,
+  "original_reference_dual_optimized_equality_wholepaper_PASS": false,
+  "actual_portable_first_use_evidence": {
+    "relative_path": "evidence/actual-portable-Fig12-first-use.json",
+    "SHA256": "87a38281d0d6d8d3b4f2a63f9131670bd66de11167f7d1224d89921cded340a2",
+    "bytes": 1347
+  },
+  "manifest_at_actual_first_execution_SHA256": "d3dfe90f248bfc46e6350fe92c2b65ec33837891cf588222108f920e13046f7a"
+}

@@ -1,0 +1,228 @@
+{
+  "observed_local": "2026-10-18T02:53:03.021778+08:00",
+  "scope": "original-ISAC11200-initial-support-23900-first-LoS-and-four-NoRIS-source-variants-v1",
+  "actual_complete_original_scene_primitive_rows": 11200,
+  "actual_complete_original_user_first_ray_pairs": 23900,
+  "actual_full_primitive_coordinate_observations": 322600,
+  "actual_saved_NoRIS_states": 4,
+  "actual_complete_NoRIS_field_coordinates_per_precision": {
+    "80": 61056,
+    "100": 61056
+  },
+  "every_complete_primitive_geometry_and_fresh_NoRIS_field_replay_pass": true,
+  "actual_negative_controls": 32,
+  "all_expected_invalid_support_geometry_fields_source_scope_and_transport_controls_rejected": true,
+  "geometry": {
+    "actual_complete_original_scene_primitive_rows": 11200,
+    "actual_complete_original_first_user_pair_rows": 23900,
+    "actual_complete_BR_RB_direction_coordinates": 134400,
+    "actual_complete_complex_ray_gain_real_coordinates": 44800,
+    "actual_complete_first_user_direction_coordinates": 143400,
+    "actual_all_primitive_real_coordinate_observations": 322600,
+    "actual_exact_initial_visible_path_counts": {
+      "0": 6279,
+      "1": 4542,
+      "2": 379
+    },
+    "actual_distinct_bridge_input_groups": 1100,
+    "actual_distinct_exact_first_user_Gram_solves": 3700,
+    "every_exact_first_user_Gram_and_cross_product_distance_and_MP_ordinate_comparison_pass": true,
+    "every_original_zero_bridge_shadow_neighborhood_bound_pass": true,
+    "all_original_scope_and_alias_multiplicities_retained": true,
+    "literal_first_LoS_geometry_conformance_pass": false,
+    "actual_fresh_full_original_optimizer_scenario_files_read": 0,
+    "actual_fresh_initial_H_G_B_channel_matrix_contractions": 0,
+    "actual_fresh_original_optimizer_or_native_MC_stream_calls": 0,
+    "public_given_primitive_replay_and_previous_local_full_source_binding_are_distinct": true,
+    "full_paper_performance_dual_language_or_original_reference_pass": false,
+    "source_metadata": {
+      "qualified_manuscript_version_and_all17_asset_metadata_pass": true,
+      "actual_fresh_author_source_or_publisher_full_text_reads": 0,
+      "final_publisher_equivalence_pass": false
+    }
+  },
+  "NoRIS": {
+    "actual_original_saved_NoRIS_states": 4,
+    "actual_source_variants": 2,
+    "actual_fresh_independent_variant_precision_field_sets": 16,
+    "actual_complete_physical_matrices_per_precision": 48,
+    "actual_full_field_coordinates_per_precision": {
+      "80": 61056,
+      "100": 61056
+    },
+    "actual_full_physical_scalar_values_per_precision": {
+      "80": 616,
+      "100": 616
+    },
+    "all_full_field_coordinates_and_metric_values_match_sealed_reference_within1e_minus40": true,
+    "all_fresh_MP80_MP100_full_field_coordinates_agree_within1e_minus40": true,
+    "actual_user_received_signals_SINR_and_rate_exact_between_variants": true,
+    "actual_original_scenarios_restored_and_read": 2,
+    "actual_complete_original_optimizer_result_histories_read": 0,
+    "actual_fresh_original_optimizers_initializers_samplers_or_native_MC_streams": 0,
+    "given_model_source_variant_diagnostic_is_not_a_new_optimized_performance_result": true,
+    "fresh_complete_matrix_report": "all-four-original-NoRIS-states-fresh-MP80-MP100-fields.json.gz",
+    "fresh_complete_matrix_report_SHA256": "b6b5f7b6e9610b56f619eacc365dfd54ac0cf537a3ede8c748c63e2f963dd0f8",
+    "cases": [
+      {
+        "label": "b0-original-scene000",
+        "scheme": "Rot-BS & No-RIS",
+        "full_field_coordinates_per_precision": {
+          "80": 15264,
+          "100": 15264
+        },
+        "physical_scalar_values_per_precision": {
+          "80": 154,
+          "100": 154
+        },
+        "maximum_actual_coordinate_error": "0.0",
+        "public_RU_only_has_nonzero_RIS_sensing_cascade": false,
+        "all_user_received_signals_SINR_and_rate_exact_between_variants": true,
+        "maximum_actual_sensing_pattern_difference": "0.0",
+        "fixed_saved_iota_utility_difference": "0.0",
+        "fresh_analytic_iota_utility_difference": "0.0"
+      },
+      {
+        "label": "b0-original-scene000",
+        "scheme": "Fix-BS & No-RIS",
+        "full_field_coordinates_per_precision": {
+          "80": 15264,
+          "100": 15264
+        },
+        "physical_scalar_values_per_precision": {
+          "80": 154,
+          "100": 154
+        },
+        "maximum_actual_coordinate_error": "0.0",
+        "public_RU_only_has_nonzero_RIS_sensing_cascade": false,
+        "all_user_received_signals_SINR_and_rate_exact_between_variants": true,
+        "maximum_actual_sensing_pattern_difference": "0.0",
+        "fixed_saved_iota_utility_difference": "0.0",
+        "fresh_analytic_iota_utility_difference": "0.0"
+      },
+      {
+        "label": "b2-original-scene001",
+        "scheme": "Rot-BS & No-RIS",
+        "full_field_coordinates_per_precision": {
+          "80": 15264,
+          "100": 15264
+        },
+        "physical_scalar_values_per_precision": {
+          "80": 154,
+          "100": 154
+        },
+        "maximum_actual_coordinate_error": "0.0",
+        "public_RU_only_has_nonzero_RIS_sensing_cascade": true,
+        "all_user_received_signals_SINR_and_rate_exact_between_variants": true,
+        "maximum_actual_sensing_pattern_difference": "8147.27387212279672288898173775923814815686496648640683254488682489301169827817701389394784637223541267419",
+        "fixed_saved_iota_utility_difference": "-0.741480937946788132655177970433482752677003050680121959680518651521742444944818976611754045247019043",
+        "fresh_analytic_iota_utility_difference": "0.00163753195726298197453620763774647384217129833430313077620333865661890929901627253539771142034376"
+      },
+      {
+        "label": "b2-original-scene001",
+        "scheme": "Fix-BS & No-RIS",
+        "full_field_coordinates_per_precision": {
+          "80": 15264,
+          "100": 15264
+        },
+        "physical_scalar_values_per_precision": {
+          "80": 154,
+          "100": 154
+        },
+        "maximum_actual_coordinate_error": "0.0",
+        "public_RU_only_has_nonzero_RIS_sensing_cascade": true,
+        "all_user_received_signals_SINR_and_rate_exact_between_variants": true,
+        "maximum_actual_sensing_pattern_difference": "2810.670527499143080135003343876338933811240379945011047642182927982141824616097448524420471423572744795",
+        "fixed_saved_iota_utility_difference": "-2526.155093317991959778571415221613774314909330500820841502222579290517871518356131388994456593703558156",
+        "fresh_analytic_iota_utility_difference": "-0.00505557612727159578293623519958054641968680174410348294726712393544345082234680085970069612606683"
+      }
+    ],
+    "original_author_curve_agreement_dual_language_paper_error_or_full_paper_pass": false
+  },
+  "actual_control_counts": {
+    "exact_geometry": 17,
+    "NoRIS_fields": 9,
+    "transport": 6
+  },
+  "actual_fresh_original_optimizers_initializers_samplers_or_native_MC_streams": 0,
+  "actual_fresh_full_optimizer_scenario_files_read": 2,
+  "actual_fresh_full_optimizer_result_histories_read": 0,
+  "actual_fresh_author_or_publisher_full_source_documents_read": 0,
+  "literal_first_LoS_geometry_conformance_pass": false,
+  "author_hidden_input_recovery_original_reference_performance_dual_language_or_full_six_paper_pass": false,
+  "source_before": {
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\isac-source-geometry-audit\\evidence.py": "b5da49b127f4e015da65f2d2f6783b6d764a1db00e1496803498ef2a64161dff",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\isac-source-geometry-audit\\exact_geometry.py": "f94f94c7831943f9d7587f182ff0d668aaec1cf150d2d7f33b8c2c6a54b7a1a8",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\isac-source-geometry-audit\\physical_states.py": "c0c6dba03efd5f30150c9b86f615eb9dd3378fb73e23585d6bbc5e54791efdd9",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\isac-source-geometry-audit\\geometry_replay.py": "1c15b3d652190e72ca8cc33df9018eaaaec3ce20ca82a2f0772488a1457bd43b",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\isac-source-geometry-audit\\NoRIS_replay.py": "1a6238e262a588ff616ab493cfcc49e9a36a385e3a9209e91a01c004dde039d3",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\isac-source-geometry-audit\\replay_full_evidence.py": "fc09eb792f35379e58fa64610a3404ec376d900e0bb69dee2e8242c5956a00f1",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\isac-line-search-replay\\mp_physical_reference.py": "d14050078d636ca33bd78fb2206406735a22589eeb0aa14b0f28c3d443d893bc",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\archive-manifest.json": "f72c6ce0300625c9bded6630553ddbd2a2a5240c0dcae26144f120e99b9902b4",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part000": "6afa60c3edfd93d28b7b9fc179b1aac0379bdcb805af837b8c90f2e56d18a4c7",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part001": "52cc60d1286acab9e5de25c4b25749bab628ea2ad9864b13a4d112465c7cbac5",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part002": "5e193082e225c60a61f00cea94fa7472ca74ed5c8c965ed558e2a9ae0854580c",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part003": "6b507567d33f1226d383890cd2b4617adaccfe2b94da58940aabd63fce8a4ba0",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part004": "e4b40f3c6860981b21e3bec8efeb48ab45af6143791485d997a4155bdfb5db58",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part005": "2515120d15f4ef7da0b642ab880ddb9296be78ae4ac6c2c6e65f6312a0d11902",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part006": "225549d7fe6b776fb0204382cdc73c5c821fc07c63a8427dcda90324ae9de4b8",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part007": "f9c52e17002641d357755fc438a31e569b5733596c45512d9a8036618c195fbc",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part008": "0dfdbc8c524b831caccf2272af10c384088c2e2b3abf77f99292811303a603f8",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part009": "c4d1866e0204ceb2eed670a42060466b3d29d4b2b6dae1b4df0ed72871afed8c",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part010": "75e6787c5ab0bedb33dd605f3679c90838e1b6c2e9babea8c6885f8cab05409c",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part011": "b1b4d22635e39c2bcd3ccbe6c1100b81c14531b3c1ed066d31140a7ade916ac6",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part012": "02d2aa8c8684ac00c0659512a6615cc137e50ce3fa3b4f85b500d0ab915491a7",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part013": "e836c2eb06d6cb02c81451bd7f60939c2bf2ba687d2b4e91ae3c72a3ea100a15",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part014": "87247fbb603877e7737594b6d46a79800403feda9edbaf992fc67937898946d9",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part015": "57fd9e576fae5dbe4acb0e78d884df9a8c9c43d7b37d5b405d647b28c6beef4f",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part016": "409babdf9f2147b3693047b057b838dca08a670f6303ed2e3bdeb04be69b3267",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part017": "01ac97edb957a886d7ed25b3ab18a3ac3829ceb570d8881314702e0d206775ee",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part018": "33b21ff1096b36bed1925c731db8690ae23b657fab5adb35dcea3a0350d95cbc",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part019": "6a76d119d3e0bd9f4f849c77edf63a86e1bce5277d7bb855eb6e3670fd0055b8",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part020": "28f93b52139212777e392a0a69750f2d2bab1e832c46539668be6e242a086a03",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part021": "9c91d3f40ac630b065f1fe3b64705fd3e6327443624df8cfcfcbe7099d68fb96",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part022": "39e6a480b436fe6527dd106f94fb0bf59063b64e9896492470d744450d1ac979",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part023": "af69f2826385b49955deb5d24a2b7da1d3bf53fbc2af73748c32f94b212b52b1",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part024": "528b1afab57fb233b07b9a492dd1cc04ccce2de25b3fdaa238f84cb834342109",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part025": "903a2f77ccd36a7ebe2d1869bbb0623c443f93f1145d90f2a1db34486e22634b",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part026": "fb17cf6223b8ff8eec427dd575444b9ef842e70dbd9977b9c3a1c745dd2e027e"
+  },
+  "source_after": {
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\isac-source-geometry-audit\\evidence.py": "b5da49b127f4e015da65f2d2f6783b6d764a1db00e1496803498ef2a64161dff",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\isac-source-geometry-audit\\exact_geometry.py": "f94f94c7831943f9d7587f182ff0d668aaec1cf150d2d7f33b8c2c6a54b7a1a8",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\isac-source-geometry-audit\\physical_states.py": "c0c6dba03efd5f30150c9b86f615eb9dd3378fb73e23585d6bbc5e54791efdd9",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\isac-source-geometry-audit\\geometry_replay.py": "1c15b3d652190e72ca8cc33df9018eaaaec3ce20ca82a2f0772488a1457bd43b",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\isac-source-geometry-audit\\NoRIS_replay.py": "1a6238e262a588ff616ab493cfcc49e9a36a385e3a9209e91a01c004dde039d3",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\isac-source-geometry-audit\\replay_full_evidence.py": "fc09eb792f35379e58fa64610a3404ec376d900e0bb69dee2e8242c5956a00f1",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\isac-line-search-replay\\mp_physical_reference.py": "d14050078d636ca33bd78fb2206406735a22589eeb0aa14b0f28c3d443d893bc",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\archive-manifest.json": "f72c6ce0300625c9bded6630553ddbd2a2a5240c0dcae26144f120e99b9902b4",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part000": "6afa60c3edfd93d28b7b9fc179b1aac0379bdcb805af837b8c90f2e56d18a4c7",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part001": "52cc60d1286acab9e5de25c4b25749bab628ea2ad9864b13a4d112465c7cbac5",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part002": "5e193082e225c60a61f00cea94fa7472ca74ed5c8c965ed558e2a9ae0854580c",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part003": "6b507567d33f1226d383890cd2b4617adaccfe2b94da58940aabd63fce8a4ba0",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part004": "e4b40f3c6860981b21e3bec8efeb48ab45af6143791485d997a4155bdfb5db58",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part005": "2515120d15f4ef7da0b642ab880ddb9296be78ae4ac6c2c6e65f6312a0d11902",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part006": "225549d7fe6b776fb0204382cdc73c5c821fc07c63a8427dcda90324ae9de4b8",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part007": "f9c52e17002641d357755fc438a31e569b5733596c45512d9a8036618c195fbc",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part008": "0dfdbc8c524b831caccf2272af10c384088c2e2b3abf77f99292811303a603f8",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part009": "c4d1866e0204ceb2eed670a42060466b3d29d4b2b6dae1b4df0ed72871afed8c",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part010": "75e6787c5ab0bedb33dd605f3679c90838e1b6c2e9babea8c6885f8cab05409c",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part011": "b1b4d22635e39c2bcd3ccbe6c1100b81c14531b3c1ed066d31140a7ade916ac6",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part012": "02d2aa8c8684ac00c0659512a6615cc137e50ce3fa3b4f85b500d0ab915491a7",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part013": "e836c2eb06d6cb02c81451bd7f60939c2bf2ba687d2b4e91ae3c72a3ea100a15",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part014": "87247fbb603877e7737594b6d46a79800403feda9edbaf992fc67937898946d9",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part015": "57fd9e576fae5dbe4acb0e78d884df9a8c9c43d7b37d5b405d647b28c6beef4f",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part016": "409babdf9f2147b3693047b057b838dca08a670f6303ed2e3bdeb04be69b3267",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part017": "01ac97edb957a886d7ed25b3ab18a3ac3829ceb570d8881314702e0d206775ee",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part018": "33b21ff1096b36bed1925c731db8690ae23b657fab5adb35dcea3a0350d95cbc",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part019": "6a76d119d3e0bd9f4f849c77edf63a86e1bce5277d7bb855eb6e3670fd0055b8",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part020": "28f93b52139212777e392a0a69750f2d2bab1e832c46539668be6e242a086a03",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part021": "9c91d3f40ac630b065f1fe3b64705fd3e6327443624df8cfcfcbe7099d68fb96",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part022": "39e6a480b436fe6527dd106f94fb0bf59063b64e9896492470d744450d1ac979",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part023": "af69f2826385b49955deb5d24a2b7da1d3bf53fbc2af73748c32f94b212b52b1",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part024": "528b1afab57fb233b07b9a492dd1cc04ccce2de25b3fdaa238f84cb834342109",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part025": "903a2f77ccd36a7ebe2d1869bbb0623c443f93f1145d90f2a1db34486e22634b",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\strict\\validation\\isac-full11200-source-geometry-20261018\\isac-source-geometry.tar.gz.part026": "fb17cf6223b8ff8eec427dd575444b9ef842e70dbd9977b9c3a1c745dd2e027e"
+  },
+  "elapsed_seconds": 18.80856340000173
+}

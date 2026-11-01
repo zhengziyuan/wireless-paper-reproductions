@@ -1,0 +1,46 @@
+{
+  "schema": "native24-U6-scalar-actual-source-and-metadata-provenance-v1",
+  "original_unprojected_actual_report": {
+    "logical_path": "closed-assembly/ACTUAL_NATIVE24_FIG4_FIG5_UNFITTED_REFERENCE_REUSED_SCIENCE_AND_SAVED_PYTHON192_V1.json",
+    "SHA256": "59f27838ccf3b129348a74ebfcdc85f45f2035e1c2dc35483f470443da7822b7",
+    "bytes": 644097
+  },
+  "public_comparison_report": {
+    "path": "ACTUAL_NATIVE24_FIG4_FIG5_UNFITTED_REFERENCE_REUSED_SCIENCE_AND_SAVED_PYTHON192_V1.json.gz",
+    "decompressed_SHA256": "8faff767d40b35b9d74a3f8b1067e7313863c8ec633f8b78474df23d0c3226fc",
+    "decompressed_bytes": 602625,
+    "metadata_path_projection_only": true,
+    "all_numeric_types_arrays_and_binary64_bits_preserved": true,
+    "gzip_decompression_exact_bytes": true
+  },
+  "original_V1_receipt_SHA256": "6394bedf9e63a3b8f6c1383c07a42ff46142221bf0763f10b0de49cfa33c256a",
+  "original_V2_receipt_SHA256": "07917edb78363d972d14320ea51e0d3bccc751dd657e48e90453aeaabfbc5a88",
+  "source_dependency_pins": {
+    "source-0206f947d964/collect_closed_U6_Fig4_Fig5_unfitted_reference_v1.py": "bc4e31f95f195fa349fc3473dbd2ee16a290753dc990e4dfaf3cbc10625125b9",
+    "source-72c96a81b364/prepare_minimal_portable_packet_v1.py": "c8911299fadd27d25c77eab5b8a67bc420bb4d38c76b194c42d1850c2e2129bd",
+    "source-1889a54e8a4f/root_shared_controller_snapshot_v1.py": "5d8f67462f99fe145a07a0ade4a8e9ce970c2150bdeca439963e18281cdbd4b5",
+    "source-ed4e0817e3e9/collect_only_closed_native24_and_saved_Python192_v2.py": "59f58a090e482d77205e5cd3c278cc49c9478af6bd3a471c6fb16a48a39cf9da"
+  },
+  "actual_assembler_source_included": {
+    "path": "sources/collect_only_closed_native24_and_saved_Python192_v2.py",
+    "SHA256": "59f58a090e482d77205e5cd3c278cc49c9478af6bd3a471c6fb16a48a39cf9da",
+    "whole_bytes_unchanged": true,
+    "purpose": "Executed source provenance; its private closed-receipt dependency layout is not a self-contained public replay interface."
+  },
+  "metadata_projection": {
+    "helper_SHA256": "c8911299fadd27d25c77eab5b8a67bc420bb4d38c76b194c42d1850c2e2129bd",
+    "only_absolute_path_keys_or_strings_replaced": true,
+    "path_alias_scheme": "source-<first12 sha256 of original path>/<basename>",
+    "all_numeric_types_binary64_bits_and_string_types_checked": true
+  },
+  "CSV": {
+    "path": "Native24_Fig4_Fig5_192_unfitted_EPS_and_saved_Python_ordinates.csv",
+    "whole_bytes_from_actual_assembly": true,
+    "all_saved_float64_columns_roundtripped_by_actual_assembler": true
+  },
+  "existing_Python24": {
+    "bytes": 561256,
+    "SHA256": "b531c8d60d6a3a203d23fcb393fb6487cae5b61b42aae3f49a88a438025f7b72"
+  },
+  "no_full_RAW_or_MC_tapes_or_original_paper_included": true
+}

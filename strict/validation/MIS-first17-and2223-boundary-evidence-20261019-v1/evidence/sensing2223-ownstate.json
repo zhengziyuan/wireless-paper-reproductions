@@ -1,0 +1,131 @@
+{
+  "schema": "actual-only-new-native2223-returned-final-independent-ownstate-physics-feasibility-KKT-v1",
+  "passed": true,
+  "checks": {
+    "actual_new_original_held_child_natural0": true,
+    "actual_original_producer_source_interval": true,
+    "actual_scope_source_interval": true,
+    "actual_no_failure_return_scope": true,
+    "actual_config_and_settings_exact": true,
+    "actual_original_budget_retained": true,
+    "exact_scope_selected_settings_identity": true,
+    "independent_saved_physical_fields_match": true,
+    "independent_saved_KKT_residual_fields_match": true,
+    "independent_saved_KKT_boolean_reconfirmed": true,
+    "new_ownstate_original_problem_KKT_verified": true,
+    "recorded30_inner_stop_flags_match": true,
+    "independent_selected_source_and_saved_input_interval": true
+  },
+  "independent_numerical_error": null,
+  "source_before": {
+    "origin:resume-20261017/MIS2223-new-returned-ownstate-independent-reviewed-v1/audit_only_actual_new2223_returned_ownstate_v1.py": "d659d8199a5df24dfa41c57af2511883de7f16ae518183e17c7ca8f751b4fc3c",
+    "origin:resume-20261017/MIS2223-native-first-curve-failure-prefix-actual-v1/actual-no-failure-returned-original-result.json": "62cddcf74678993139d66e4c17d20245fcf35d4b181d857c2dce91f78a7f0dcb",
+    "origin:resume-20261017/MIS2223-native-first-curve-failure-prefix-actual-v1/ACTUAL_ONE2223_ORIGINAL_BUDGET_FIRST_FAILURE_PREFIX_SOURCE_AND_OBSERVER_SCOPE_V1.json": "ab3449588cf85fb4f3d850f40ccf550ef8eb8bbeed40a204058efd3527a08e63",
+    "origin:resume-20261017/MIS-sensing-native-original6000-v5-recorded-v1/inputs/start-2223-settings.json": "9153386bc1d44aec1cb8ba5b0e6b664d8f5d5b1dc243cf5016a3c584f78ab9a6",
+    "origin:resume-20261017/MIS2223-native-failure-prefix-prepared-v1/MIS2223-native-first-original-curve-failure-prefix-v1-job-actual-owned-process.json": "feda3e5676bac73307529171875b67875e8af699273385e055d10564ce3c38a4",
+    "origin:repository/tools/sensing-saved-replay/audit_population.py": "1c39fa1aff6e6740eb8087012c7cf1e0da37f6a033ac6ee64ab1d4f6ef17c643"
+  },
+  "source_after": {
+    "origin:resume-20261017/MIS2223-new-returned-ownstate-independent-reviewed-v1/audit_only_actual_new2223_returned_ownstate_v1.py": "d659d8199a5df24dfa41c57af2511883de7f16ae518183e17c7ca8f751b4fc3c",
+    "origin:resume-20261017/MIS2223-native-first-curve-failure-prefix-actual-v1/actual-no-failure-returned-original-result.json": "62cddcf74678993139d66e4c17d20245fcf35d4b181d857c2dce91f78a7f0dcb",
+    "origin:resume-20261017/MIS2223-native-first-curve-failure-prefix-actual-v1/ACTUAL_ONE2223_ORIGINAL_BUDGET_FIRST_FAILURE_PREFIX_SOURCE_AND_OBSERVER_SCOPE_V1.json": "ab3449588cf85fb4f3d850f40ccf550ef8eb8bbeed40a204058efd3527a08e63",
+    "origin:resume-20261017/MIS-sensing-native-original6000-v5-recorded-v1/inputs/start-2223-settings.json": "9153386bc1d44aec1cb8ba5b0e6b664d8f5d5b1dc243cf5016a3c584f78ab9a6",
+    "origin:resume-20261017/MIS2223-native-failure-prefix-prepared-v1/MIS2223-native-first-original-curve-failure-prefix-v1-job-actual-owned-process.json": "feda3e5676bac73307529171875b67875e8af699273385e055d10564ce3c38a4",
+    "origin:repository/tools/sensing-saved-replay/audit_population.py": "1c39fa1aff6e6740eb8087012c7cf1e0da37f6a033ac6ee64ab1d4f6ef17c643"
+  },
+  "actual_original_held_child": {
+    "PID": 34924,
+    "creation_FILETIME": 134368873655861660,
+    "associated_with_any_Windows_job": true
+  },
+  "actual_child_exit_code": 0,
+  "original_producer_effective_host_exit": 0,
+  "actual_schema_projection": {
+    "original_new_result": "origin:resume-20261017/MIS2223-native-first-curve-failure-prefix-actual-v1/actual-no-failure-returned-original-result.json",
+    "only_projection": "state/metrics copied by reference; actual solver_status nested under summary for existing physical API",
+    "no_old_receipt_or_producer_hash_invented": true
+  },
+  "independent_numerical_result": {
+    "metrics": {
+      "eta": 47.14281197344873,
+      "min_relaxed_metric": 47.1428119805848,
+      "min_binary_metric": 47.1428119805848,
+      "maximum_constraint": -7.136073065794335e-09
+    },
+    "certificate": {
+      "stationarity_norm": 1.1670064710217553e-06,
+      "stationarity_tolerance": 1.2589254117941667e-06,
+      "maximum_positive_primal_residual": 0.0,
+      "maximum_negative_dual_residual": 0.0,
+      "maximum_absolute_complementarity": 1.5901985504997493e-09,
+      "feasibility_tolerance": 1e-06,
+      "maximum_phase_modulus_error": 2.220446049250313e-16,
+      "maximum_simplex_storage_error": 0.0,
+      "original_problem_kkt_verified": true
+    },
+    "saved_physical_fields_match": true,
+    "saved_KKT_residual_fields_match": true,
+    "saved_KKT_boolean_reconfirmed": true,
+    "maximum_physical_field_error": 3.552713678800501e-14,
+    "stationarity_norm_error": 4.6473284273066025e-15
+  },
+  "physical_response_MP80_MP100_maximum_difference": "9.76624743015492520061150543346443796008279728852202770827942668099171922803497442734560692004473583836697e-80",
+  "precision_scope": {
+    "steering": "Complete9x400 physical array reconstructed atMP80 andMP100; precision gate1e-40, then converted to complex128",
+    "physical_and_original_Lagrangian_derivatives": "Existing independent explicit-self-excluded NumPy binary64 contractions; not full-MP derivatives",
+    "simplex_projection": "Exact-binary stored X and computed gradient imported into Decimal60 Euclidean probability simplex projection",
+    "original_saved_field_tolerance": "1e-9+1e-10*absolute independent field",
+    "all_gradient_coordinates_full_MP80_MP100": false
+  },
+  "actual_saved_scope": {
+    "original_case_label": 2223,
+    "raw_native_dispatcher_start": 1,
+    "new_result_start_field": 1,
+    "outer_rows": 30,
+    "observer_curve_calls": 3113,
+    "observer_successful_curve_calls": 3113,
+    "recorded_inner_cap_exits": 0,
+    "recorded_inner_failure_exits": 0,
+    "producer_original_solver_status": {
+      "final_inner_stationary": true,
+      "all_inner_tolerances_satisfied": true,
+      "final_inner_residual": 1.1670064663744268e-06,
+      "final_inner_tolerance": 1.2589254117941667e-06,
+      "outer_stopping_applicable": true,
+      "outer_stopping_met": true,
+      "outer_early_stopping_met": false,
+      "prescribed_outer_budget_execution_complete": true,
+      "outer_termination_valid": true,
+      "original_problem_kkt_certificate": {
+        "scope": "original_P2.1_SINR_relaxed_constrained_projected_KKT_not_global_optimality",
+        "stationarity_norm": 1.1670064663744268e-06,
+        "stationarity_tolerance": 1.2589254117941667e-06,
+        "maximum_positive_primal_residual": 0,
+        "maximum_negative_dual_residual": 0,
+        "maximum_absolute_complementarity": 1.5901994846929132e-09,
+        "feasibility_tolerance": 1e-06,
+        "maximum_phase_modulus_error": 1.1102230246251565e-16,
+        "maximum_simplex_storage_error": 0,
+        "original_problem_kkt_verified": true
+      },
+      "original_problem_kkt_verified": true,
+      "continuation_complete": true,
+      "inner_iteration_cap_exits": 0,
+      "inner_failure_exits": 0,
+      "convergence_verified": true,
+      "final_inner_exit_reason": "gradient_tolerance"
+    }
+  },
+  "normalization": {
+    "reference_echo_unit": "inverse_watt",
+    "reference_echo_noise_domain": "raw_per_PRI",
+    "effective_reference_gain_factor": 1,
+    "no_fitted_gain_noise_or_unit_conversion": true
+  },
+  "old_case2223_failure_and_global720_failures_retained": true,
+  "old_failure_reclassified_as_pass": false,
+  "earliest_old_new_trajectory_divergence_not_audited_here": true,
+  "independent_each_outer_state_or_all_inner_iterates_not_checked": true,
+  "new_optimization_MC_RNG_or_old6000_replay_calls": 0,
+  "original_reference_dual_or_all6000_or_fullpaper_PASS": false
+}

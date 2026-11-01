@@ -1,0 +1,291 @@
+{
+  "schema": "actual-original-W2-exact-replay-before-QP-causal-conclusion-v1",
+  "actual_input_and_results": {
+    "operands": {
+      "path": "local-origin/W2-replay-run\\actual-original-W2-replay-and-passive-QCQP-operands.npz",
+      "SHA256": "0c5bc4e282da5e59129898f8012b3838009e0f14587f38cdd94fd4a9385f8ad5",
+      "bytes": 35664
+    },
+    "replay": {
+      "path": "local-origin/W2-replay-run\\ACTUAL_ORIGINAL_W2_ONE_UPDATE_SOURCE_REPLAY_AND_PASSIVE_QCQP_CLOSURE_V1.json",
+      "SHA256": "596d1b0c148ecbaeb582ab16f2a1f60c94e2c19ba262f229d0bd649474779192",
+      "bytes": 8426
+    },
+    "before_QP_MP": {
+      "path": "local-origin/before-QP-MP-run\\ACTUAL_W2_BEFORE_ONLY_AND_FIXED_QP_THREE_LAYER_MP80_MP100_V1.json",
+      "SHA256": "a0e6f14c54f621146b124dfad09f661c897bbe2f41bb885cf7dd952ba474f2fa",
+      "bytes": 46313
+    },
+    "finite_readback": {
+      "path": "local-origin/W2-replay-run\\ACTUAL_W2_FINITE_PASSIVE_COEFFICIENT_READBACK_AND_PENDING_MP_V1.json",
+      "SHA256": "56eb0f28a1d6ead03e26dc2f22ffdf81b7b5d14ae878b4fa5803f49d40f85ec9",
+      "bytes": 8079
+    },
+    "probe_terminal": {
+      "path": "local-origin/W2-source\\actual-held-W2-probe-v1\\original-W2-probe-actual-owned-process.json",
+      "SHA256": "17f44cce46fb92bab6dc0ed5bb64be634fa510eaed69f2b0a55c0f785c141a3d",
+      "bytes": 13810
+    },
+    "MP_terminal": {
+      "path": "local-origin/data\\rt\\ISAC014-W2-QP-MP-held-v2\\W2-before-QP-MP-actual-owned-process.json",
+      "SHA256": "36cc16b52e9dc8ead91988acee134249a5d6a46eb48ead1c16f519329f9aad7b",
+      "bytes": 13920
+    },
+    "reused_own_W_and_final_joint_scope": {
+      "path": "prior-public-evidence/returned-blocks\\ACTUAL_NEW_STABLE_36BLOCK_MP_AND_OWN_W_VS_FINAL_JOINT_SCOPE_V1.json",
+      "SHA256": "f101ea8d5115871d612765fe49f3a592f8d11e79c01d13a3fe63f6aaa8d619c2",
+      "bytes": 16672
+    }
+  },
+  "same_path_evidence": {
+    "same_original_W2_path_pass": true,
+    "actual_update_w_calls": 1,
+    "actual_structured_QP_calls": 1,
+    "actual_original_evaluate_calls": 2,
+    "actual_original_transmit_call_count": 2,
+    "complete_returned_W_IEEE_bits_match_history": true,
+    "complete_returned_status_and_all_numeric_IEEE_bits_match_history": true,
+    "source_and_input_interval_closed": true
+  },
+  "actual_original_W2_status": {
+    "objective": [
+      18.763668891224427,
+      18.763668897607776
+    ],
+    "QCQP": [
+      {
+        "nu": 0.0,
+        "bisection_steps": 0,
+        "stationarity_residual": 2.1950781140709273e-07,
+        "power": 0.39166181231512937
+      }
+    ],
+    "converged": true,
+    "termination_reason": "relative_objective_tolerance",
+    "iterations": 1,
+    "iteration_budget": 10000,
+    "budget_exhausted": false,
+    "capped_unconverged": false,
+    "relative_objective_improvement": 3.401972715214167e-10,
+    "relative_step": 0.12978891263425377,
+    "relative_tolerance": 1e-06
+  },
+  "actual_fixed_iota": 60348785663.072914,
+  "actual_power_and_finiteness": {
+    "all80_arrays_finite": true,
+    "power": {
+      "value": 0.39166181231512937,
+      "dtype": "float64",
+      "shape": []
+    },
+    "cap": 0.3981071705534972,
+    "transmit0": {
+      "value": 0.39166181231512937,
+      "dtype": "float64",
+      "shape": []
+    },
+    "nu": {
+      "value": 0.0,
+      "dtype": "float64",
+      "shape": []
+    },
+    "no_NaN_comparison_false_branch": true
+  },
+  "three_layer_MP100": {
+    "layer1_captured_rounded_auxiliary_original_formula": {
+      "alpha": "0.00000000317152399700893900614442149618212224493520577002691252923696368155163978098772858083232181925868585668142",
+      "beta": "0.000000000000000000000686440560662464630949001639054494048539857714499221044928123396150552441731789396154262411893058262778391",
+      "ln2_convention": "Original mathematical ln2; actual factor preprocessing is separate layer2",
+      "QP": {
+        "original_QP_KKT_residual_Fro_norm": "0.00000109805048848014759060469656980922396677602604943052102579858769056598562692202082583524207008052815889392",
+        "relative_QP_residual_by_QW_P_scale": "0.000000000000000214152631003886113630352106133361702354033400344187879980350921641288533548554346473911491204292092457107",
+        "QP_objective_gain": "0.00000000318681821494056121811307392096159271308798637033944633171023195376149738937561259949586426216202365695207",
+        "Q_Fro_norm": "2182408971.11825107645916246688156122157342584784577065332342107650804747136040084206986299377203228545117",
+        "P_Fro_norm": "1197895406.01997710706750357598627650713750331087177072228700501076281959324557103162236165341546202652612",
+        "no_new_QP_solve": true
+      },
+      "old_contact_vs_fullphysical_gradient_Fro_norm": "0.000000612610478143861531658582484575548440224512586802187878248864050289909062039471142717393731833049407045329"
+    },
+    "layer2_actual_factor_and_SVD": {
+      "actual_alpha": "0.00000000317152399700893874544469744521102416712210469995625317096710205078125",
+      "actual_beta": "0.000000000000000000000686440560662464668546980777235828438827952812208221562768786609687321487172084744088351726531982421875",
+      "actual_diagonal": [
+        "2182408971.118251323699951171875",
+        "0.00000000317152399700893874544469744521102416712210469995625317096710205078125",
+        "0.00000000317152399700893874544469744521102416712210469995625317096710205078125",
+        "0.00000000317152399700893874544469744521102416712210469995625317096710205078125"
+      ],
+      "actual_diagonal_ratio": "688126267742725308.522642476316499596586823935972740076522797291981993381245378854709139653636320104250175",
+      "ratio_scope": "Ratio of recorded positive diagonal, not a certified original-Q eigenspectrum",
+      "actual_factor_QP": {
+        "original_QP_KKT_residual_Fro_norm": "0.000000818088834443863208609324357981968167189068004988092527388296219819962578855808153875683885461822319338163",
+        "relative_QP_residual_by_QW_P_scale": "0.000000000000000159551749331263470603518707040393323757965256558429935571772777573467895791079435697012774108521225441484",
+        "QP_objective_gain": "0.00000000318681855516721076483076400301236879411314053084907078213585615209994760433483432289408433412632301196578",
+        "Q_Fro_norm": "2182408971.1182509304495047534723391774635347069321866251707705070454138856648476109591000163887054254961",
+        "P_Fro_norm": "1197895406.01997717689282560127265243957660908899389634731332458652136192079831861839565093156723857372336",
+        "no_new_QP_solve": true
+      },
+      "actual_basis_QP": {
+        "original_QP_KKT_residual_Fro_norm": "0.000000700916456334578997314154182200092127928226390096517276722805099075944646121182817925495500379946930943068",
+        "relative_QP_residual_by_QW_P_scale": "0.000000000000000136699637050144883251155634461295858656293109943159307018426953398011794740629181436959473643954893310072",
+        "QP_objective_gain": "0.00000000318681869129509630626203955491382368652965589447634305671614515798524868127039147625330629184980573800744",
+        "Q_Fro_norm": "2182408971.11825204896125308972300566431448318954355385468254409792243680685955441520941721265121339510948",
+        "P_Fro_norm": "1197895406.01997784186654376237125251575846025099692803557759430254618535037664056406712249248386438511282",
+        "no_new_QP_solve": true
+      },
+      "Q_factor_minus_layer1_Fro_norm": "0.000000161416371238869970123268560481220729963475842551540210467992819010658542071078868861129584897653783820949",
+      "P_factor_minus_layer1_Fro_norm": "0.0000000805090511975962653728030301217783098636606243142226777777061319317986813306343401719901576281551763053252",
+      "Q_basis_minus_factor_Fro_norm": "0.00000122495973239131066825732734549525146607032095701074372095603947817480311535247921592532210233374017596165",
+      "P_basis_minus_factor_Fro_norm": "0.000000693181916826018463280304286981980280927080963895804788995739076182814930554437281751085572494786561761828",
+      "U_unitarity_defect_Fro_norm": "0.000000000000000453363413509855239083721511885400908286981967598322649061018998999465272257968353286240303733605081703186",
+      "factor_SVD_reconstruction_error_Fro_norm": "0.0000000000244995161050879151461037655276174675458716115028087499342276084896506039011366434358996410192712912374487",
+      "actual_legacy_dense_QP_residual_Fro_norm": "0.000000169912119251682809396935313839678511328736436062473319741220780330994454619605092182255774464122822243439"
+    },
+    "layer3_original_physical_theoretical_auxiliaries": {
+      "physical_theory_QP": {
+        "original_QP_KKT_residual_Fro_norm": "0.000000487721063054744264119421541823329534260004343562696361592592954965754259789733685723689467668764120182023",
+        "relative_QP_residual_by_QW_P_scale": "0.000000000000000095120169741698326991443964681486443780039345575398379158629792452604193474937052830688011622699278158921",
+        "QP_objective_gain": "0.00000000318681895271561890297330330241725628560291032228513202064069283762236304550050587037546496272557050593467",
+        "Q_Fro_norm": "2182408971.11823668196802613032798282978881885535390030129993924670808326170609650358009512779998845650655",
+        "P_Fro_norm": "1197895406.01996938632201015122844743592404344470211613374155588044058635155458321796173224607995488161591",
+        "no_new_QP_solve": true
+      },
+      "same_frozen_binary64_field_theory_QP": {
+        "original_QP_KKT_residual_Fro_norm": "0.000000486406015976050649194685955181744372606003679107190566931846236228217639034123353122999719516387378255528",
+        "relative_QP_residual_by_QW_P_scale": "0.0000000000000000948636962964866696582434468929068729246245187872814974628933585485230603938705397817092221929502220371036",
+        "QP_objective_gain": "0.00000000318681895271560389759913315717727970017599419275429951872100035226996107481288130128712644292853226818486",
+        "Q_Fro_norm": "2182408971.11824983197778137113900745078971382879705491864407833410852171847136600186288453516191786846078",
+        "P_Fro_norm": "1197895406.01997673028199706912720618138183979908550832315891329127527361017027496871275518690680672518519",
+        "no_new_QP_solve": true
+      },
+      "theoretical_mu": [
+        "0.0",
+        "455750465.212618879576724814722635734660575434564152480561827297464451809943486201666706378542548440914348"
+      ],
+      "physical_theory_contact_defect_Fro_norm": "4.20324616241709480903550019922914407139500672747958092313698230669489512577836783243155895253509029352774e-92",
+      "same_frozen_field_contact_defect_Fro_norm": "1.02552926178339212352426603035154492054622435477237937627846815556945052939444491955251138353422437108636e-92",
+      "Ga_captured_minus_physical_theory_Fro_norm": "0.541784675070222984288487945971980154928626291040423824314989483511388112845252782453888628405394694524671",
+      "alpha_physical_theory": "0.00000000317152399700962290248286943369640116186400285812774577720402986411076174215674558959061031794050500835956",
+      "physical_vs_frozen_before_gradient_Fro_norm": "0.00000000000000134566504458375008727139238561368483008982324661666625681700499821165463123724504682182397851255478328743"
+    }
+  },
+  "before_physical_scalars": {
+    "utility": "18.763668891224414770451963744267332453947220220328928491401033033406411456078935694717720271581944280991",
+    "rate": "28.7636688911774372475817010400499603762420197806828262233209677579250556042705746135667275749525271859408",
+    "nmse": "0.999999999995302247712973729578262792229479956035389773191993472451864414819163891884900730337058290500693",
+    "W_gradient_Fro_norm": "5.25681463633323758697454486353102692183098598593757490368316999393779746457042214436932220011047919069296",
+    "actual_binary64_before_utility_error": "0.000000000000011945328318648830545048494186029671071508598966966593588543921064305282279728418055719009027841875074349"
+  },
+  "reused_after_W2_MP": {
+    "source": "Existing actual W2 row; no new after geometry/objective/gradient evaluation",
+    "existing_projected_residual": "0.28004976848876997377278651290563650836249414475860564234930847248280931789928398761046356883840737313791",
+    "scalar_true_gain_reference_based_interval": [
+      "0.00000000638334764221215108966564436398511959130161947234718544699490794696997847316617355773152904238765811256536",
+      "0.00000000638337416949615910064044714444124074929052354485074848619226914087215013739838589910458239563039757118479"
+    ],
+    "interval_scope": "after64 +/- existing MP absolute error, minus new before. Reference-based bound, not signed recovery or interval arithmetic."
+  },
+  "actual_nu0_residual_decomposition": {
+    "identity": "Gafter-2nuWnew = (Gafter-Gbefore)+R_QP+2Q_DeltaW+contact_defect",
+    "after_original_gradient_residual_Fro_norm": "5.25680385316654834566433475009638587829031578917288438182943294546043276250458046184972207689395699292762",
+    "gradient_change_Fro_norm": "0.0106418989486985060426849363757790752327671663406823819430300203764063283496526717095242773425611267966327",
+    "captured_aux_QP_residual_Fro_norm": "0.00000109805048848014759060469656980922396677602604943052102579858769056598562692202082583524207008052815889392",
+    "two_Q_DeltaW_Fro_norm": "5.25681512063440283030962404570890024551534767728130487337804754868348230639433991010933654518095916808178",
+    "contact_defect_Fro_norm": "0.000000612610478143861531658582484575548440224512586802187878248864050289909062039471142717393731833049407045329",
+    "identity_closure_Fro_norm": "9.26149796395313161838716979208914448073281232244404246540631076914348534786215527346077103996721216649985e-93"
+  },
+  "actual_saved_displacement_and_direction": {
+    "absolute_DeltaW_norm": "0.0818912676586805758953277278921435912456838388943038578532876839415991410030032948849514874182148116691751",
+    "original_physical_before_gradient_directional_derivative": "0.00000000637363848845707128174594336606000153691039606665756401895423477872777438962955375755786964420884856478204",
+    "captured_aux_QT_MM_quadratic_curvature": "0.00000000318681953598888543093034358901334867377688363681935675432638077583690625843777518207815485332524953399999",
+    "per_recorded_U_column_energy": [
+      "0.00000000000000000145048465560055287215594657265628646806939287625993641417692862569474080103903851594766713541535418411152",
+      "0.00175910326129718424128205851405823412972716326834222891780501020868778229555353048272413548621874950987639",
+      "0.00250928704567001263673682769784798533651977859175260833584167234086123364494789523315053937709773387253551",
+      "0.00243778941177846500934117461860704896449184423236695707828172838038344133802038430317811224835278407988578"
+    ],
+    "positive_singular_columns": [
+      0
+    ],
+    "exact_zero_singular_columns": [
+      1,
+      2,
+      3
+    ],
+    "strong_communication_column_energy": "0.00000000000000000145048465560055287215594657265628646806939287625993641417692862569474080103903851594766713541535418411152",
+    "exact_zero_singular_subspace_energy": "0.00670617971874566188736006083051326843073878609246179433192841092993245727852181001905278711166926746228372",
+    "strong_energy_fraction": "0.000000000000000216290752176837621520210440960628132902428436578415192359269496214813692472968643704026422302745809049367",
+    "zero_energy_fraction": "0.999999999999999796722397633431803455607579530683820981310217991921013492127118799249671656107410664065803",
+    "U_coordinate_energy_closure_defect": "0.0000000000000000000872685213346277934761139453907391066427685639753907233093633790807921976656654620102884055584168409285179",
+    "scope": "Exact-input saved-state MP diagnostic using actual numerical U; no rank cutoff, projection repair or new W step."
+  },
+  "previous_ray_estimated_multiplier_is_a_different_quantity": {
+    "previous_W2": {
+      "block": 2,
+      "power_ball_multiplier_ray_estimate": "3.68352234609715141709337985714362436559884101896346922321671774729696016310866903451486003152401398097247",
+      "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "2.525309705692708535082583671008612774229872002883672889465751128084146507199140525712876030555238546053",
+      "unit_gradient_step_projected_power_ball_residual": "0.28004976848876997377278651290563650836249414475860564234930847248280931789928398761046356883840737313791",
+      "complementarity_lambda_power_slack": "0.0237416210996293277867824388801169490525314038543045674713234604391078704283572843996335292820679650094701",
+      "actual_W_stop": "relative_objective_tolerance"
+    },
+    "current_actual_QP_nu": 0.0,
+    "actual_nu0_original_gradient_residual": "5.25680385316654834566433475009638587829031578917288438182943294546043276250458046184972207689395699292762",
+    "interpretation": "The previous ray estimate is not the actual QCQP multiplier and has nonzero complementarity. Its residual must not replace the current nu=0 raw original gradient residual."
+  },
+  "crossprecision": {
+    "MP80_MP100_maximum_absolute_difference": "3.57247114220908834855762626431385108596163903379818260160447223788017707947772072928081370086692927290387e-64",
+    "existing_bound": "1e-35",
+    "pass_": true,
+    "scope": "Precision consistency only; 1e-35 is not a W-KKT or scientific acceptance threshold."
+  },
+  "supported_causal_conclusion": [
+    "This actual W2 returns after one original QCQP because the original objective-relative OR stopping branch is satisfied, while its relative W displacement is large and the original physical gradient remains far from stationarity.",
+    "The positive actual QT diagonal is extremely anisotropic at this high-SINR input. Almost all saved displacement energy lies in columns whose communication singular value is exactly zero; the strong communication column barely moves.",
+    "The original physical objective gain is genuinely small, not merely a binary64 false improvement. Captured-QP relative backward residual and contact defects are too small to explain the remaining raw original gradient; the residual decomposition identifies the large QT-curvature displacement term.",
+    "The symbolic relative-objective OR stopping form is printed in Algorithm 1. Its 1e-6 numerical tolerance and 10000 budget here are disclosed reconstruction controls, not reported author numerical values.",
+    "This one-case evidence does not establish a paper formula error or failure of all author experiments. It does not prove a unique correction or justify new stopping thresholds."
+  ],
+  "paper_source_anchors": {
+    "source_basename": "bare_jrnl.tex",
+    "source_SHA256": "aa71da008c68caa605ec3ed17520fcb81796561f315667eeb2f7dddf1487d2d2",
+    "anchors": {
+      "sensing_MM_lip": "430-444",
+      "QT_auxiliary_updates": "492-510",
+      "QP_Q_P": "547-553",
+      "QCQP_KKT": "565-577",
+      "limit_point_claim": "595",
+      "Algorithm1_relative_objective_OR_relative_Wstep_OR_cap": "603-610"
+    },
+    "source_not_redistributed": true
+  },
+  "gate_matrix": {
+    "original_replay_W_and_status_IEEE_exact": true,
+    "probe_and_MP_natural0_source_closed": true,
+    "before_physics_and_crossprecision_verified": true,
+    "reused_after_physics_and_gradient_formula_verified": true,
+    "original_relative_stop_consistent": true,
+    "power_feasible": true,
+    "QCQP_backward_residuals_measured_not_new_stationarity_gate": true,
+    "original_W_stationarity_PASS": false,
+    "final_joint_RCG_PGA_stationarity_PASS": false,
+    "full_six_schemes_PASS": false,
+    "original_reference_PASS": false,
+    "full_paper_PASS": false
+  },
+  "minimum_next_delivery_and_scope": [
+    "Publish this original-algorithm counterexample together with the already closed full first-scheme evidence; preserve all prior failures and reconstructed-control provenance.",
+    "Numerical output, physical-field correctness, feasibility, actual block stopping consistency, independent derivative formulas, and any future dual-language comparisons remain separate reportable gates for subsequent whole-case/full-six work.",
+    "Do not label an actual OR stop, a fixed-QP backward error, per-block RCG/PGA thresholds, or physical feasibility as W or joint stationarity. Do not assign original-reference/full-six/full-paper PASS.",
+    "Any later change to W stopping or acceleration requires a separately disclosed experiment and authorization. No new W10000 run, solver step, threshold, or acceleration is prepared or executed here."
+  ],
+  "new_numerical_calls_by_this_compact_readback_and_packet_assembly": 0,
+  "after_physics_or_gradient_recomputed": false,
+  "original_failed_and_prepared_V1_outcomes_retained": true,
+  "V1_MP_host_path_issue_was_caught_before_execution_not_a_runtime_failure": true,
+  "public_parent": {
+    "commit": "0da55e1dbf896c6731886f4543e2292a2a407266",
+    "tree": "636af7bf1561a0a33f3ff89153d6f56f56556199",
+    "branch": "codex/resume-six-paper-reproductions-20261017",
+    "root": "strict/validation/isac014-stable-increment-firstscheme-returned-evidence-20261020-v1"
+  }
+}

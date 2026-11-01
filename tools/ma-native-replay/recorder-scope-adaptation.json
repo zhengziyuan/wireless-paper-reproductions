@@ -1,0 +1,71 @@
+{
+  "original_source": "E:/ZiyuanZhengProject/academic-homepage/work/ma-figure05-native-bound-entry-prepare-v2/run_owned_native_figure05_full900_v2.m",
+  "original_sha256": "324e50463e65eefb395b6e080e582e207958441144a114f95776223271b4a675",
+  "new_recorder_sha256": "99fdda61f0dfd123ead2441b6e444ed360deb9d4938b3e1978b8499b9b20f90a",
+  "declared_edits": [
+    {
+      "offset": 17,
+      "old": "run_owned_native_figure05_full900_v2",
+      "new": "run_owned_native_MA6_900"
+    },
+    {
+      "offset": 94,
+      "old": "% PREPARED ONLY. Root must approve a single owned native execution explicitly.",
+      "new": "% Current user full-six-paper goal: one missing-language original full900 bank."
+    },
+    {
+      "offset": 543,
+      "old": "PREPARE_ONLY_owned_native_full900_record_only_entry_v2",
+      "new": "CURRENT_GOAL_owned_native_MA6_full900_record_only_v1"
+    },
+    {
+      "offset": 664,
+      "old": "frozen_independent_route_path",
+      "new": "selected_input_binding_path"
+    },
+    {
+      "offset": 695,
+      "old": "frozen_independent_route_sha256",
+      "new": "selected_input_binding_sha256"
+    },
+    {
+      "offset": 1396,
+      "old": "frozen_independent_route_sha256",
+      "new": "selected_input_binding_sha256"
+    },
+    {
+      "offset": 727,
+      "old": "Frozen independent route changed.",
+      "new": "Exact selected original900 input binding changed."
+    },
+    {
+      "offset": 885,
+      "old": "folder=canonical(freshOutputFolder);here=canonical(here);\nassert(~isfolder(folder)&&~isfile(folder)&&startsWith(lower(folder),[lower(here),filesep]),'Strict NEW recorder-folder descendant required.');",
+      "new": "folder=canonical(freshOutputFolder);allowed=canonical(p.allowed_output_parent);\nassert(~isfolder(folder)&&~isfile(folder)&&strcmpi(canonical(fileparts(folder)),allowed),'Strict NEW declared data-folder child required.');"
+    },
+    {
+      "offset": 1303,
+      "old": "ACTUAL_owned_native_full900_record_only_observation_v2",
+      "new": "ACTUAL_owned_native_MA6_full900_record_only_v1"
+    },
+    {
+      "offset": 8257,
+      "old": "meta.kappa==100&&meta.A==2&&meta.figure==5",
+      "new": "meta.kappa==6&&meta.A==2&&meta.figure==6"
+    },
+    {
+      "offset": 8335,
+      "old": "Original Figure5 metadata changed.",
+      "new": "Original Figure6 metadata changed."
+    },
+    {
+      "offset": 1969,
+      "old": "r.actual_native_output_root=folder;",
+      "new": "r.actual_native_PID=feature('getpid');r.actual_native_output_root=folder;"
+    }
+  ],
+  "whole_original_BYTE_inverse": true,
+  "numerical_entry_call_and_all_numerical_source_files_unchanged": true,
+  "previous_Fig5_approval_or_execution_claimed": false,
+  "current_goal_execution_authorized": true
+}

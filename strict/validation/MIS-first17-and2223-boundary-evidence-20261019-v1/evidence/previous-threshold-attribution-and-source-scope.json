@@ -1,0 +1,276 @@
+{
+  "schema": "MIS-Fig8-printed-threshold-attribution-and-boundary-witness-analysis-v1",
+  "created": "2026-10-18T21:50:53.105049+08:00",
+  "passed": true,
+  "exact_author_supplied_R2_source": {
+    "path": "origin:private-source/bare_jrnl.tex",
+    "sha256": "6e27fb9fd2ba0decc9d7bcfc54bcb73612553f91f6df923ab502e7d561058cb0"
+  },
+  "publisher_final_PDF_equivalence_not_newly_verified": true,
+  "source_locators": {
+    "Algorithm1_label": 609,
+    "Algorithm1_printed_stop": 619,
+    "strictly_positive_schedule_domain": "396-400",
+    "schedule_rowmean_projection": "523-533",
+    "main_text_schedule_retraction_and_projection_reference": "592-600",
+    "commented_only_simplex_projection_formula": 1029,
+    "comment_block": "1024-1030"
+  },
+  "source_rendering_scope": {
+    "main_text_projection": "The main text defines Pi_R_X retraction and refers to algorithm [33]; it does not print the clipping formula there.",
+    "commented_simplex_appendix_not_rendered": true,
+    "commented_source_is_supplemental_only_not_published_Appendix_evidence": true,
+    "boundary_clipping_is_verified_in_actual_implementation_and_actual_saved_witnesses": true
+  },
+  "exact_printed_threshold_wording": "is above the threshold",
+  "Algorithm1_printed_threshold_epsilon_symbol_present": false,
+  "Algorithm1_printed_threshold_numeric_value_given": false,
+  "attribution_correction": "1e-6 is the disclosed independent implementation threshold; the original Algorithm1 supplies an unnamed threshold with no numerical value. The retained115200 failures are failures against the implemented1e-6 comparison of the printed-form norm, not against a paper-specified1e-6 value.",
+  "repository_evidence": {
+    "README_path": "origin:repository/strict/mis-communications/README.md",
+    "README_inferred_parameter_line": 11,
+    "README_independent_KKT_safeguard_line": 57,
+    "README_exact_stop_meaning_line": 59,
+    "source_map_path": "origin:repository/strict/mis-communications/source_map.json",
+    "source_map_Algorithm1_and_independent_guard_lines": "39-43"
+  },
+  "actual_executed_native_source": "origin:resume-20261017/MIS-communications-Fig8-native12000-after-interruption-v2/source/mis_communications_fig8_full_recording_v1.m",
+  "native_line_locators": {
+    "rowmean_projection": 187,
+    "gradient_norm": 189,
+    "KKT_mapping": 190,
+    "simplex_clipping": 192,
+    "guarded_stop_choice": "262-264",
+    "reported_stop_labels": "291-292"
+  },
+  "mathematical_distinction": {
+    "printed_form": "sqrt(||g_phi||^2 + ||g_theta||^2 + ||E_X - rowmean(E_X)||_F^2)",
+    "implemented_guarded_form": "sqrt(||g_phi||^2 + ||g_theta||^2 + ||X-Proj_closed_simplex(X-g_X)||_F^2)",
+    "same_threshold_value_does_not_make_the_two_residuals_equivalent": true,
+    "boundary_normal_component_can_be_nonzero_when_feasible_simplex_gradient_mapping_is_zero": true,
+    "SMS_U1_schedule_has_no_tangent_schedule_degree_of_freedom": true
+  },
+  "actual_complete_population_distribution": {
+    "starts": 12000,
+    "endpoints": 230400,
+    "MIS_starts": 6000,
+    "MIS_all115200_printed_form_at_implementation_threshold_fail": true,
+    "SMS_starts": 6000,
+    "SMS_all115200_printed_form_at_implementation_threshold_pass": true,
+    "all230400_implemented_KKT_at_implementation_threshold_pass": true,
+    "already_completed_counts_by_scheme": {
+      "MIS": {
+        "endpoints": 115200,
+        "native_implemented_KKT_pass": 115200,
+        "reference_implemented_KKT_pass": 115200,
+        "native_printed_norm_pass": 0,
+        "reference_printed_norm_pass": 0,
+        "native_printed_norm_failed": 115200,
+        "reference_printed_norm_failed": 115200,
+        "native_reference_gradient_fields_agree": 115200,
+        "printed_gate_boolean_disagreement": 0
+      },
+      "SMS": {
+        "endpoints": 115200,
+        "native_implemented_KKT_pass": 115200,
+        "reference_implemented_KKT_pass": 115200,
+        "native_printed_norm_pass": 115200,
+        "reference_printed_norm_pass": 115200,
+        "native_printed_norm_failed": 0,
+        "reference_printed_norm_failed": 0,
+        "native_reference_gradient_fields_agree": 115200,
+        "printed_gate_boolean_disagreement": 0
+      }
+    },
+    "already_completed_four_numeric_ranges": {
+      "MIS": {
+        "native_printed_rowmean_gradient_norm": {
+          "actual_complete_endpoints": 115200,
+          "minimum": 0.02825668165570128,
+          "maximum": 0.06228908696649579,
+          "mean": 0.04606516721308477,
+          "below_or_equal_same_unreported_implementation1e_minus6": 0,
+          "above_same_unreported_implementation1e_minus6": 115200
+        },
+        "independent_printed_rowmean_gradient_norm": {
+          "actual_complete_endpoints": 115200,
+          "minimum": 0.02825668165570128,
+          "maximum": 0.062289086966496,
+          "mean": 0.04606516721308477,
+          "below_or_equal_same_unreported_implementation1e_minus6": 0,
+          "above_same_unreported_implementation1e_minus6": 115200
+        },
+        "native_projected_KKT_norm": {
+          "actual_complete_endpoints": 115200,
+          "minimum": 9.27106119635607e-09,
+          "maximum": 9.999982803421887e-07,
+          "mean": 9.640920758552995e-07,
+          "below_or_equal_same_unreported_implementation1e_minus6": 115200,
+          "above_same_unreported_implementation1e_minus6": 0
+        },
+        "independent_projected_KKT_norm": {
+          "actual_complete_endpoints": 115200,
+          "minimum": 9.271061289882961e-09,
+          "maximum": 9.999982803383412e-07,
+          "mean": 9.64092075854977e-07,
+          "below_or_equal_same_unreported_implementation1e_minus6": 115200,
+          "above_same_unreported_implementation1e_minus6": 0
+        }
+      },
+      "SMS": {
+        "native_printed_rowmean_gradient_norm": {
+          "actual_complete_endpoints": 115200,
+          "minimum": 9.586172398718338e-07,
+          "maximum": 9.999996603753046e-07,
+          "mean": 9.8371770673776e-07,
+          "below_or_equal_same_unreported_implementation1e_minus6": 115200,
+          "above_same_unreported_implementation1e_minus6": 0
+        },
+        "independent_printed_rowmean_gradient_norm": {
+          "actual_complete_endpoints": 115200,
+          "minimum": 9.586172398708032e-07,
+          "maximum": 9.999996603739259e-07,
+          "mean": 9.83717706737813e-07,
+          "below_or_equal_same_unreported_implementation1e_minus6": 115200,
+          "above_same_unreported_implementation1e_minus6": 0
+        },
+        "native_projected_KKT_norm": {
+          "actual_complete_endpoints": 115200,
+          "minimum": 9.586172398718338e-07,
+          "maximum": 9.999996603753046e-07,
+          "mean": 9.8371770673776e-07,
+          "below_or_equal_same_unreported_implementation1e_minus6": 115200,
+          "above_same_unreported_implementation1e_minus6": 0
+        },
+        "independent_projected_KKT_norm": {
+          "actual_complete_endpoints": 115200,
+          "minimum": 9.586172398708032e-07,
+          "maximum": 9.999996603739259e-07,
+          "mean": 9.83717706737813e-07,
+          "below_or_equal_same_unreported_implementation1e_minus6": 115200,
+          "above_same_unreported_implementation1e_minus6": 0
+        }
+      }
+    }
+  },
+  "existing_complete_scalar_census": {
+    "path": "origin:resume-20261017/MIS-Fig8-all12000-all230400-portable-full-gradient-scalar-replay-v1.json",
+    "sha256": "3c0a2cb5888ef07aff89c9579018c43058df09140d764d2fa91e678188f012c9"
+  },
+  "existing_complete_numeric_ranges": {
+    "path": "origin:resume-20261017/MIS-Fig8-full12000-all230400-actual-gradient-ranges-and-threshold-scope-v1.json",
+    "sha256": "8b6de62580161434822bbc9267fc574a88e3bc26dbbc0bbca992a275923c0823"
+  },
+  "full230400_scalar_stream_not_reread": true,
+  "population_evidence_role": "Already completed full scalar census and ranges; no repeated full population scan",
+  "latest_completed_cold_summary": {
+    "path": "origin:resume-20261017/MIS-Fig8-full12000-complete-portable-fresh-Decimal60-cold-replay-v2/summary.json",
+    "sha256": "327b8e71b814b41067320287a1f25b2ac70ece2086e99a7027f059244c9ede7e"
+  },
+  "latest_cold_to_prior_physical_dictionary_equal_endpoints": 230400,
+  "latest_cold_failed_comparison_total": 115200,
+  "minimal_actual_fresh_witnesses": [
+    {
+      "scheme": "MIS",
+      "start": 1,
+      "mu": 100,
+      "archive": "origin:resume-20261017/MIS-Fig8-full12000-complete-portable-fresh-Decimal60-cold-replay-v2/cases/case-MIS-start-000001.tar.gz",
+      "members_read": [
+        "complete-native-numeric-view.json",
+        "fresh-complete-Decimal60-reference.json",
+        "actual-native-and-fresh-all-gradient-field-comparison.json"
+      ],
+      "actual_relaxed_X": [
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "exact_zero_X_entries": 12,
+      "strict_positive_open_simplex_domain": false,
+      "saved_native_printed_norm": 0.03144780882875244,
+      "fresh_printed_rowmean_norm": 0.03144780882875244,
+      "fresh_projected_KKT_norm": 9.940221920933038e-07,
+      "phase_block_norm": 9.940159641354124e-07,
+      "movable_phase_block_norm": 3.518723905543055e-09,
+      "simplex_gradient_mapping_norm": 0.0,
+      "saved_stop_reason": "gradient_tolerance",
+      "saved_stationarity_measure": "projected_simplex_KKT",
+      "physical_same_as_prior_reference": true,
+      "no_physical_or_optimizer_reexecution": true
+    },
+    {
+      "scheme": "SMS",
+      "start": 1,
+      "mu": 100,
+      "archive": "origin:resume-20261017/MIS-Fig8-full12000-complete-portable-fresh-Decimal60-cold-replay-v2/cases/case-SMS-start-000001.tar.gz",
+      "members_read": [
+        "complete-native-numeric-view.json",
+        "fresh-complete-Decimal60-reference.json",
+        "actual-native-and-fresh-all-gradient-field-comparison.json"
+      ],
+      "actual_relaxed_X": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "exact_zero_X_entries": 0,
+      "strict_positive_open_simplex_domain": true,
+      "saved_native_printed_norm": 9.913839594309306e-07,
+      "fresh_printed_rowmean_norm": 9.913839594327382e-07,
+      "fresh_projected_KKT_norm": 9.913839594327382e-07,
+      "phase_block_norm": 9.913839594327382e-07,
+      "movable_phase_block_norm": 0.0,
+      "simplex_gradient_mapping_norm": 0.0,
+      "saved_stop_reason": "gradient_tolerance",
+      "saved_stationarity_measure": "projected_simplex_KKT",
+      "physical_same_as_prior_reference": true,
+      "no_physical_or_optimizer_reexecution": true
+    }
+  ],
+  "next_actions": {
+    "immediately_fixable": "Correct checkpoint/user-facing threshold attribution; retain both residuals, explicit guarded-KKT stop labels, and all failed printed-form comparisons.",
+    "not_a_numeric_precision_or_language_fix": "Fresh Decimal60 agrees with the actual stored endpoint physics and residuals; no evidence here supports changing precision or epsilon to reclassify outcomes.",
+    "theory_or_source_choice_required": "The source strictly-positive scheduling manifold and the implementation boundary-reaching Euclidean simplex projection need an explicit consistent stopping/domain interpretation. The clipping appendix is commented source only. Any algorithmic repair needs separate source-qualified evidence; these saved guarded endpoints must not be relabelled as printed-form stationary.",
+    "irreducible_source_requirements": [
+      "Authors actual numerical RCG tolerance/iteration cap and initialization settings",
+      "Intended treatment of boundary schedules and corresponding stationarity measure",
+      "Actual authors full simulation inputs/runtime/original-output archive for original figure agreement",
+      "Publisher-final-version comparison if claims are to refer specifically to that version"
+    ]
+  },
+  "original_paper_numerical_results_wrong_or_paper_error_proven": false,
+  "all_original_printed_stationarity_or_original_figure_or_dual_language_or_full_paper_PASS": false,
+  "old_native_RAW_bank_reads_or_rehashes": 0,
+  "new_optimizer_MC_physical_reference_RNG_or_full_replay_calls": 0,
+  "repository_or_original_sources_edited": false
+}

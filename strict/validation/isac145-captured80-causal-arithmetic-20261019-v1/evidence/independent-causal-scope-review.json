@@ -1,0 +1,264 @@
+{
+  "schema": "INDEPENDENT_ISAC145_CAPTURED80_SAME_OPERAND_DECISION_AND_NEXT_TRAJECTORY_SCOPE_REVIEW_V1",
+  "created_UTC": "2026-10-19T04:45:17.557228+00:00",
+  "actual_two_auditor_exit_codes": {
+    "all80-trials": 0,
+    "all-gradients": 0
+  },
+  "source_input_unchanged": true,
+  "rows": [
+    {
+      "model": "full_original_physics",
+      "precision": 80,
+      "original_subtractive_accepts_count": 0,
+      "MP_accepts_count": 23,
+      "MP_accepted_zero_based_indices": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34
+      ],
+      "MP_accepted_ranges": [
+        [
+          12,
+          34
+        ]
+      ],
+      "stable_accepts_count": 68,
+      "stable_accept_ranges": [
+        [
+          12,
+          79
+        ]
+      ],
+      "stable_first_accepted_zero_based_index": 12,
+      "stable_first_alpha": 0.000244140625,
+      "MP_accepts_stable_first": true,
+      "stable_falseaccept_count": 45,
+      "stable_falseaccept_ranges": [
+        [
+          35,
+          79
+        ]
+      ],
+      "stable_false_rejects_ranges": [],
+      "normalized_gradient": "0.000185328323935957113833021643456723947429085818469611330577440139862689014053962394383270391701309417653218",
+      "passes_original_gradient_stop": false,
+      "first_delta_MP": "0.000000000105263050699115138660804881586504721420135644541980880201976139387212268324461326284614111095451682019072",
+      "first_required_increment_MP": "0.0000000000000301874411964341138203603770393129093824439225324095712692944922176297183579219041656855702368067798091467"
+    },
+    {
+      "model": "full_original_physics",
+      "precision": 100,
+      "original_subtractive_accepts_count": 0,
+      "MP_accepts_count": 23,
+      "MP_accepted_zero_based_indices": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34
+      ],
+      "MP_accepted_ranges": [
+        [
+          12,
+          34
+        ]
+      ],
+      "stable_accepts_count": 68,
+      "stable_accept_ranges": [
+        [
+          12,
+          79
+        ]
+      ],
+      "stable_first_accepted_zero_based_index": 12,
+      "stable_first_alpha": 0.000244140625,
+      "MP_accepts_stable_first": true,
+      "stable_falseaccept_count": 45,
+      "stable_falseaccept_ranges": [
+        [
+          35,
+          79
+        ]
+      ],
+      "stable_false_rejects_ranges": [],
+      "normalized_gradient": "0.000185328323935957113833021643456723947429085818469611330577440139862689013736048742435354940526149333457056",
+      "passes_original_gradient_stop": false,
+      "first_delta_MP": "0.00000000010526305069911513866080488158650472142013564454198088020197613938721228684843229171685372791797382023422",
+      "first_required_increment_MP": "0.0000000000000301874411964341138203603770393129093824439225324095712692944922176297183579219041656855702368067798091467"
+    },
+    {
+      "model": "frozen_original_binary64_fields",
+      "precision": 80,
+      "original_subtractive_accepts_count": 0,
+      "MP_accepts_count": 23,
+      "MP_accepted_zero_based_indices": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34
+      ],
+      "MP_accepted_ranges": [
+        [
+          12,
+          34
+        ]
+      ],
+      "stable_accepts_count": 68,
+      "stable_accept_ranges": [
+        [
+          12,
+          79
+        ]
+      ],
+      "stable_first_accepted_zero_based_index": 12,
+      "stable_first_alpha": 0.000244140625,
+      "MP_accepts_stable_first": true,
+      "stable_falseaccept_count": 45,
+      "stable_falseaccept_ranges": [
+        [
+          35,
+          79
+        ]
+      ],
+      "stable_false_rejects_ranges": [],
+      "normalized_gradient": "0.00018532835742904233490416284083473070894015717924753232935756918106404259597698207407876105705919113756267",
+      "passes_original_gradient_stop": false,
+      "first_delta_MP": "0.000000000105263105254749736969288314462712094574791029465222040524923521873625672314175766348461782114369697398659",
+      "first_required_increment_MP": "0.0000000000000301874411964341138203603770393129093824439225324095712692944922176297183579219041656855702368067798091467"
+    },
+    {
+      "model": "frozen_original_binary64_fields",
+      "precision": 100,
+      "original_subtractive_accepts_count": 0,
+      "MP_accepts_count": 23,
+      "MP_accepted_zero_based_indices": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34
+      ],
+      "MP_accepted_ranges": [
+        [
+          12,
+          34
+        ]
+      ],
+      "stable_accepts_count": 68,
+      "stable_accept_ranges": [
+        [
+          12,
+          79
+        ]
+      ],
+      "stable_first_accepted_zero_based_index": 12,
+      "stable_first_alpha": 0.000244140625,
+      "MP_accepts_stable_first": true,
+      "stable_falseaccept_count": 45,
+      "stable_falseaccept_ranges": [
+        [
+          35,
+          79
+        ]
+      ],
+      "stable_false_rejects_ranges": [],
+      "normalized_gradient": "0.000185328357429042334904162840834730708940157179247532329357569181064042595976981884664893267315623125899229",
+      "passes_original_gradient_stop": false,
+      "first_delta_MP": "0.000000000105263105254749736969288314462712094574791029465222040524923521873625689522945832600787631082681065021432",
+      "first_required_increment_MP": "0.0000000000000301874411964341138203603770393129093824439225324095712692944922176297183579219041656855702368067798091467"
+    }
+  ],
+  "conclusions": {
+    "original80_all_rejected": true,
+    "all_four_MP_lanes_accept_same23": true,
+    "stable_first_index12_MP_accepted_in_all4": true,
+    "stable_all80_decisions_correct": false,
+    "tail_falseaccepts_not_executed_if_first12_selected": true,
+    "original_gradient_stop_satisfied": false,
+    "all_fixed_state_stable_derivative_component_comparisons_pass": true,
+    "cannot_infer_complete_new_gradient_direction_or_trajectory_from_old_stored_direction": true,
+    "full_convergence_reference_dual_or_paper_PASS": false
+  },
+  "finite_causal_scope": "Both full physical MP and the exact frozen binary64-channel MP agree on accepting the first stable accepted stored trial. This supports a subtractive-metric numerical rejection at this recorded state. Later stable floating decisions include false accepts; the whole80 sequence is not certified.",
+  "no_optimizer_MP_or_array_replay_executed_by_this_review": true,
+  "frozen18_file_public_package_untouched": true,
+  "original_private_review_id": "INDEPENDENT_CAPTURED80_DECISION_CAUSAL_SCOPE_AND_PREPARED_NEXT_ORIGINAL_BUDGET_TRAJECTORY_V1.json",
+  "original_private_review_SHA256": "5df92138b552151810d952959df440f0ed0809398a14823782f6091dc49e79c2",
+  "publication_projection": "Omit private source paths and next-trajectory command metadata; all actual causal rows and conclusions retained"
+}

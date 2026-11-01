@@ -1,0 +1,158 @@
+{
+  "scope": "Exact configured1000-draw native channel-moment stream; no optimized-design performance MC",
+  "count": 1000,
+  "links_per_draw": 6,
+  "sample_moment_values": 12000,
+  "dimensions": {
+    "J": 3,
+    "U": 2,
+    "N": 16,
+    "M": 25
+  },
+  "input_signature": "f9f130c0b739420edd252556e409672f4f962cce91b451a87a7b2f96ccdbf128",
+  "checks": {
+    "all12000_reported_sample_moments_match_physical_received_signal": true,
+    "all_raw_operands_consumed": true,
+    "empirical_second_and_fourth_moments_match_native": true,
+    "independent_finite_Rician_expected_moments_MP80_MP100_pass": true,
+    "original_reported_MC_error_metrics_reproduced": true
+  },
+  "all_independent_checks_pass": true,
+  "maximum_sample_second_error": 3.410605131648481e-13,
+  "maximum_sample_fourth_error": 4.0745362639427185e-10,
+  "second_moment_max_relative_error": 0.0065819779468800545,
+  "fourth_moment_max_relative_error": 0.01745301271533327,
+  "MP_expected_moments": {
+    "80": {
+      "second": [
+        [
+          "15.18302313377856819608602213338951496509153897640867008085175585607932798645884",
+          "20.728915438493983679640508093120997828044012642197236434622679716523137977517903"
+        ],
+        [
+          "559.69944512036204005670365409865994691750585321723602591992599180895302791735088",
+          "5.983376218929856915966121015398711792146857615878135153882394779279105480777892"
+        ],
+        [
+          "18.441740289247542415657902258966668386735697356483013519873780933173539428628055",
+          "9.433592867638741414727132975008849227151342039706806734470224542792398598589983"
+        ]
+      ],
+      "fourth": [
+        [
+          "273.13079872320891562310126454827560808987001435738880229937863934068669113117193",
+          "470.1383606060392839926284326828467568574997693346541628151530683558379995258565"
+        ],
+        [
+          "315397.99853731723536023845443618706100213002177033842683917786338760908710856828",
+          "51.90879787039632833958098384478666079617645507543861475787623032975342675886151"
+        ],
+        [
+          "392.45035578023131911877577731531574625171684502841503456915392640902108358790396",
+          "120.1629061560900794395490859516854213750260434951258014251329290448374165626038"
+        ]
+      ]
+    },
+    "100": {
+      "second": [
+        [
+          "15.18302313377856819608602213338951496509153897640867008085175585607932798645884032935200218938395644",
+          "20.72891543849398367964050809312099782804401264219723643462267971652313797751790312217407118963516302"
+        ],
+        [
+          "559.6994451203620400567036540986599469175058532172360259199259918089530279173508783591145664748174621",
+          "5.983376218929856915966121015398711792146857615878135153882394779279105480777891965934557367180217663"
+        ],
+        [
+          "18.44174028924754241565790225896666838673569735648301351987378093317353942862805500329816711107521323",
+          "9.433592867638741414727132975008849227151342039706806734470224542792398598589983036448857938756229386"
+        ]
+      ],
+      "fourth": [
+        [
+          "273.1307987232089156231012645482756080898700143573888022993786393406866911311719336799358981870978987",
+          "470.138360606039283992628432682846756857499769334654162815153068355837999525856499684776853602403884"
+        ],
+        [
+          "315397.9985373172353602384544361870610021300217703384268391778633876090871085682846369899002835931754",
+          "51.90879787039632833958098384478666079617645507543861475787623032975342675886150964864163750512237084"
+        ],
+        [
+          "392.4503557802313191187757773153157462517168450284150345691539264090210835879039554627660003350734926",
+          "120.1629061560900794395490859516854213750260434951258014251329290448374165626038038334944640201829109"
+        ]
+      ]
+    }
+  },
+  "maximum_MP80_MP100_expected_moment_difference": "4.636989900283593175400000000000206993761291403317270182467154787959973636670344752887812258231415135e-75",
+  "same_exact_input_cases": [
+    {
+      "case": "case-000-matlab.json",
+      "unchanged_exact_input_and_seed": true,
+      "reported_MC_metrics_pass": true,
+      "result_sha256": "cd1727991714bf139bf5d4b378e12bc9c9a99fcb800641a79f008a652cda6354"
+    },
+    {
+      "case": "case-001-matlab.json",
+      "unchanged_exact_input_and_seed": true,
+      "reported_MC_metrics_pass": true,
+      "result_sha256": "ac6062dd1310faea757f85bba13ac19476522294a56cc34ac22a6adb1d846aa9"
+    },
+    {
+      "case": "case-002-matlab.json",
+      "unchanged_exact_input_and_seed": true,
+      "reported_MC_metrics_pass": true,
+      "result_sha256": "721b9f7e63b40bfda6652d8b627f1775c047c6ed10d67656a42bc9cfb6d29096"
+    },
+    {
+      "case": "case-003-matlab.json",
+      "unchanged_exact_input_and_seed": true,
+      "reported_MC_metrics_pass": true,
+      "result_sha256": "a343b0b8d15876ac5626014c2f688f80860c0be7a89185991021ed0fc41b16d1"
+    },
+    {
+      "case": "case-004-matlab.json",
+      "unchanged_exact_input_and_seed": true,
+      "reported_MC_metrics_pass": true,
+      "result_sha256": "ee6af33536d887891a63c9a196c8a811e723a9dcccd44a295051c333c2ec5c72"
+    },
+    {
+      "case": "case-005-matlab.json",
+      "unchanged_exact_input_and_seed": true,
+      "reported_MC_metrics_pass": true,
+      "result_sha256": "69d2dc33025c9ef6fa3a3405d1f80d800b879d0be75f65e5d966ad44f0d7850d"
+    },
+    {
+      "case": "case-006-matlab.json",
+      "unchanged_exact_input_and_seed": true,
+      "reported_MC_metrics_pass": true,
+      "result_sha256": "235a47f9317e6aed3e3b2931492e47c606e47293c516f5caf61a6e215ff1bc65"
+    },
+    {
+      "case": "case-007-matlab.json",
+      "unchanged_exact_input_and_seed": true,
+      "reported_MC_metrics_pass": true,
+      "result_sha256": "8fd61dae6f2f43e424a04328a3b081382ac40f3e0ad35b74e0b4b49b9f17d17e"
+    },
+    {
+      "case": "case-008-matlab.json",
+      "unchanged_exact_input_and_seed": true,
+      "reported_MC_metrics_pass": true,
+      "result_sha256": "9b7de55a1529fa2ce23cc0fd5533cc30aca0511560619469a0addf54d2ee7f76"
+    },
+    {
+      "case": "case-009-matlab.json",
+      "unchanged_exact_input_and_seed": true,
+      "reported_MC_metrics_pass": true,
+      "result_sha256": "f19388faf10960af0cbdcc41bf889cd78b9a4e6268ebe416ddb352a6c7ce39f2"
+    }
+  ],
+  "different_inputs_not_replayed": [],
+  "source_result_sha256": "cd1727991714bf139bf5d4b378e12bc9c9a99fcb800641a79f008a652cda6354",
+  "raw_primitive_payload_sha256": "1b12ac9d28223d652bdd753607cdb2488c7fcf9e12f4d0d33b6d0961fd39d8f1",
+  "native_replay_index_sha256": "3c71e5c17923adc8de798c2608ceb78ec1fd2910810b1ef3fcefb721da7d2ce9",
+  "independent_reference_sha256": "fa3ab6b598e14901757d80128715eb2eafad160c893d5671e9fe6eccd9b36a0a",
+  "original_historical_callback_buffers_recovered": false,
+  "new_optimization_or_changed_MC_count": false,
+  "full183_or_original_reference_pass": false
+}

@@ -1,0 +1,50 @@
+{
+  "U": 2,
+  "beta_db": 0,
+  "selected_design_evaluations": 3000,
+  "schemes": [
+    {
+      "scheme": "NoRIS",
+      "draws": 1000,
+      "passed": true,
+      "errors": {
+        "maximum_sample_error": 3.907985046680551e-14,
+        "mean_error": 4.440892098500626e-16,
+        "standard_error_error": 6.938893903907228e-18,
+        "ratio_of_empirical_powers_rate_error": 8.881784197001252e-16
+      },
+      "replayed_mean": 3.71924888313082,
+      "replayed_standard_error": 0.03450831728908843,
+      "replayed_ratio_of_empirical_expected_powers_sum_rate": 4.050705631401725
+    },
+    {
+      "scheme": "TwoStage",
+      "draws": 1000,
+      "passed": true,
+      "errors": {
+        "maximum_sample_error": 6.927791673660977e-14,
+        "mean_error": 8.881784197001252e-16,
+        "standard_error_error": 4.163336342344337e-17,
+        "ratio_of_empirical_powers_rate_error": 2.6645352591003757e-15
+      },
+      "replayed_mean": 4.907796700373674,
+      "replayed_standard_error": 0.04006411921161249,
+      "replayed_ratio_of_empirical_expected_powers_sum_rate": 5.334463073143821
+    },
+    {
+      "scheme": "AO",
+      "draws": 1000,
+      "passed": true,
+      "errors": {
+        "maximum_sample_error": 1.0391687510491465e-12,
+        "mean_error": 0.0,
+        "standard_error_error": 8.326672684688674e-17,
+        "ratio_of_empirical_powers_rate_error": 1.2612133559741778e-13
+      },
+      "replayed_mean": 9.19331963335572,
+      "replayed_standard_error": 0.010593770531722033,
+      "replayed_ratio_of_empirical_expected_powers_sum_rate": 9.213003905096999
+    }
+  ],
+  "passed": true
+}

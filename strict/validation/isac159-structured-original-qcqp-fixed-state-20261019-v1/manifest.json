@@ -1,0 +1,126 @@
+{
+  "schema": "PORTABLE_ONE_FIXED_QCQP_CANDIDATE_MANIFEST_V1",
+  "manifest_excludes_itself": true,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 8,
+      "SHA256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
+      "path": "check_fixed_subproblem.py",
+      "bytes": 6979,
+      "SHA256": "5ad0cc5da7d3b4b53783668790b9036127f6cba33a8c77dcf98eb9a4b5d3cf03"
+    },
+    {
+      "path": "data/actual-failed-Q-operands.npz",
+      "bytes": 30678,
+      "SHA256": "85c6151950d8c226a03ba1387301c8a64e8eb773fa46769bd764a9acc8062a1b"
+    },
+    {
+      "path": "data/capture-metadata.json",
+      "bytes": 4053,
+      "SHA256": "97b23b864d5be8afce63fe02a891d7abd7dcf45ed127709e99eefd3caab9ceb0"
+    },
+    {
+      "path": "data/exact-captured-fixed-subproblem.mat",
+      "bytes": 2256,
+      "SHA256": "f4c4d087dcba032fcd5cad70c5203b20e05f145f4acf106bb6787a28dbf799f5"
+    },
+    {
+      "path": "data/scenario.json",
+      "bytes": 14837,
+      "SHA256": "eb00188adf97ee6f9243a5b2272246634bb0758b44b92b133f8a0f9e26faa729"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6336,
+      "SHA256": "aeb002260197d3f0ad002e0df9ef741f7655d93a3039bae32b7bc3eeed337012"
+    },
+    {
+      "path": "references/original-structure-MP100-reference.json.gz",
+      "bytes": 142396,
+      "SHA256": "b0c4699e991c188ccdf762376ef71415ecd83520ea3141b0fe210f7a6b61953d"
+    },
+    {
+      "path": "references/original-structure-MP80-reference.json.gz",
+      "bytes": 118393,
+      "SHA256": "50b76246efe86c7cd690cc505e53092fd8ecf9a2794aaae608b1433d055d2f65"
+    },
+    {
+      "path": "results/actual-independent-comparison.json",
+      "bytes": 110773,
+      "SHA256": "723c6ef5ea0c1731a1fd26e56567639732cdadbb3d3dfa4124096f5c45aa7a74"
+    },
+    {
+      "path": "results/actual-matlab-fixed-qcqp.mat",
+      "bytes": 2291,
+      "SHA256": "0db495b1f7d59bfd5d7f69e52057cbd13da7d2151201c085b05634686f816e66"
+    },
+    {
+      "path": "results/actual-process-closure.json",
+      "bytes": 1910,
+      "SHA256": "5b9f36cf1e54402233d5f950cc1a3886be786725c0db03b1778b3211ca054b0f"
+    },
+    {
+      "path": "results/actual-python-fixed-qcqp.mat",
+      "bytes": 5960,
+      "SHA256": "0b56bda9df8768f92cf2b7a0d7a9e253da2339af439f02d6876184ace7d6a0ee"
+    },
+    {
+      "path": "results/independent-reference-provenance.json",
+      "bytes": 1608,
+      "SHA256": "1543178fdd1989dd33f7ae91e7e4eaac67f3049d6ae813e6df25187cd93bc1f6"
+    },
+    {
+      "path": "results/negative-evidence-and-boundaries.json",
+      "bytes": 3241,
+      "SHA256": "68ee8c084b162519fb7b21de8cc9a5b9503db93deed249135cbfcb711b36d9bb"
+    },
+    {
+      "path": "results/portable-first-use-closure.json",
+      "bytes": 3714,
+      "SHA256": "77bd31e2e94b8e96711563b092a840cd767214b0f9de1ba528c77aa6f3a0a91d"
+    },
+    {
+      "path": "results/portable-fresh-native-fixed-qcqp.mat",
+      "bytes": 2291,
+      "SHA256": "524413ae94310d67fd530a945b747a1c607686199f2638d39065b185780ac838"
+    },
+    {
+      "path": "results/portable-native-first-use-check.json",
+      "bytes": 13557,
+      "SHA256": "f214a3e7bb5c1fa4b29f239bd4046e5776c5e022fc2687d3b331567fbe575831"
+    },
+    {
+      "path": "results/portable-python-first-use-check.json",
+      "bytes": 13343,
+      "SHA256": "7ea2963ad6e2d01863992dd31bb900dc0baf2803bdadde0af845ee2486c24ab5"
+    },
+    {
+      "path": "source-provenance.json",
+      "bytes": 3791,
+      "SHA256": "2b2c5c3893b40ebb37a539609e368c0523a5a2dc5f9a7e9a3666f8e2759f2286"
+    },
+    {
+      "path": "sources/comparison_helpers.py",
+      "bytes": 1459,
+      "SHA256": "1cb5d8e4ccbfe6641b1bba14efebbe8a12b9692e6ea0d70444463ac765e6fe89"
+    },
+    {
+      "path": "sources/historical_original_core.py",
+      "bytes": 16714,
+      "SHA256": "07f2eb9d9f5011dde45a8c947dd87db31d15b7e6e8ab233e9f43429c408f2fbb"
+    },
+    {
+      "path": "sources/solve_fixed_original_qcqp_matlab_v1.m",
+      "bytes": 2555,
+      "SHA256": "f8183e36aa874bc832b50dcbf3696e28d8bfa3ea4b09bd908b0db9d44cbb44e5"
+    },
+    {
+      "path": "sources/structured_original_qcqp_candidate_v1.py",
+      "bytes": 3221,
+      "SHA256": "1fa91846426407d7313f0ba452e2d81c60fa433c9513d8618f870414903f8881"
+    }
+  ]
+}

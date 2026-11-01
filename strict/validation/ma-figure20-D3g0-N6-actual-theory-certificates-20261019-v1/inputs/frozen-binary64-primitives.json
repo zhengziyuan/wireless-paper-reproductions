@@ -1,0 +1,623 @@
+{
+  "schema": "deterministic-original-Fig20-N6M5-D3-g0-binary64-theory-primitives-v1",
+  "source_job_SHA256": "56bae9f5ea12ba15a90af436eb7bf6a7135aaef1e7d744d01c409dd1a36bfe0e",
+  "source_geometry_controls": {
+    "figure": 20,
+    "point": 3,
+    "realization": 0,
+    "N": 6,
+    "M": 5,
+    "brute_force_D": 3,
+    "kappa": 100,
+    "power": 1.0,
+    "region_lower": [
+      -1.6,
+      -1.6
+    ],
+    "region_upper": [
+      1.6,
+      2.4
+    ],
+    "geometry": {
+      "distances_m": [
+        67.92563574181092,
+        54.73923452449969,
+        67.58657688642096,
+        65.3513182379694,
+        64.18727423268086
+      ],
+      "elevation": [
+        0.85325694061161,
+        0.5324808034921782,
+        -0.4695804579732752,
+        0.39588186142753634,
+        -1.2119724129135507
+      ],
+      "azimuth": [
+        1.1661873180858202,
+        0.15048528900016733,
+        -1.4376981081771685,
+        1.1570683545773104,
+        0.47259829860144054
+      ]
+    }
+  },
+  "historical_actual_optimizer_input_not_claimed": true,
+  "models": [
+    {
+      "grid": {
+        "shape": [
+          9,
+          2
+        ],
+        "dtype": "float64",
+        "column_major": true,
+        "real_hex": [
+          "-0x1.999999999999ap+0",
+          "-0x1.999999999999ap+0",
+          "-0x1.999999999999ap+0",
+          "0x0.0p+0",
+          "0x0.0p+0",
+          "0x0.0p+0",
+          "0x1.999999999999ap+0",
+          "0x1.999999999999ap+0",
+          "0x1.999999999999ap+0",
+          "-0x1.999999999999ap+0",
+          "0x1.9999999999998p-2",
+          "0x1.3333333333333p+1",
+          "-0x1.999999999999ap+0",
+          "0x1.9999999999998p-2",
+          "0x1.3333333333333p+1",
+          "-0x1.999999999999ap+0",
+          "0x1.9999999999998p-2",
+          "0x1.3333333333333p+1"
+        ],
+        "imag_hex": null
+      },
+      "beta": {
+        "shape": [
+          5
+        ],
+        "dtype": "float64",
+        "column_major": true,
+        "real_hex": [
+          "0x1.97d3953ace754p-31",
+          "0x1.752acb1da8a50p-30",
+          "0x1.9d94bbc0279c5p-31",
+          "0x1.c66b934d47a01p-31",
+          "0x1.dddf944a92a48p-31"
+        ],
+        "imag_hex": null
+      },
+      "rician": {
+        "shape": [
+          5
+        ],
+        "dtype": "float64",
+        "column_major": true,
+        "real_hex": [
+          "0x1.9000000000000p+6",
+          "0x1.9000000000000p+6",
+          "0x1.9000000000000p+6",
+          "0x1.9000000000000p+6",
+          "0x1.9000000000000p+6"
+        ],
+        "imag_hex": null
+      },
+      "noise": {
+        "shape": [
+          5
+        ],
+        "dtype": "float64",
+        "column_major": true,
+        "real_hex": [
+          "0x1.5fd7fe1796495p-37",
+          "0x1.5fd7fe1796495p-37",
+          "0x1.5fd7fe1796495p-37",
+          "0x1.5fd7fe1796495p-37",
+          "0x1.5fd7fe1796495p-37"
+        ],
+        "imag_hex": null
+      },
+      "power": {
+        "binary64_hex": "0x1.0000000000000p+0"
+      },
+      "directions": {
+        "shape": [
+          5,
+          2
+        ],
+        "dtype": "float64",
+        "column_major": true,
+        "real_hex": [
+          "0x1.3579512bcecf0p-1",
+          "0x1.088602fb681cep-3",
+          "-0x1.c48abf5c5e4ccp-1",
+          "0x1.b08b0ccfe6d3cp-1",
+          "0x1.4761d1e492cc9p-3",
+          "0x1.81c10b8ec3a91p-1",
+          "0x1.03ed9d98241d7p-1",
+          "-0x1.cf5f5b5d1d96cp-2",
+          "0x1.8ae07df5d4aaap-2",
+          "-0x1.df64165efc54ap-1"
+        ],
+        "imag_hex": null
+      },
+      "wavelength": {
+        "binary64_hex": "0x1.0000000000000p+0"
+      },
+      "minimum_distance": {
+        "binary64_hex": "0x1.0000000000000p-1"
+      },
+      "region_lower": {
+        "shape": [
+          2
+        ],
+        "dtype": "float64",
+        "column_major": true,
+        "real_hex": [
+          "-0x1.999999999999ap+0",
+          "-0x1.999999999999ap+0"
+        ],
+        "imag_hex": null
+      },
+      "region_upper": {
+        "shape": [
+          2
+        ],
+        "dtype": "float64",
+        "column_major": true,
+        "real_hex": [
+          "0x1.999999999999ap+0",
+          "0x1.3333333333333p+1"
+        ],
+        "imag_hex": null
+      },
+      "mode": "MRT",
+      "N": 6,
+      "D": 3,
+      "pair_phasors": {
+        "shape": [
+          9,
+          10
+        ],
+        "dtype": "complex128",
+        "column_major": true,
+        "real_hex": [
+          "0x1.235c530115cdep-1",
+          "-0x1.0c7db5f67cbeep-1",
+          "0x1.e9b6decd06ea9p-2",
+          "-0x1.90ff0fcf2ee71p-1",
+          "0x1.a1679fa623363p-1",
+          "-0x1.b0a000b7e6617p-1",
+          "-0x1.57f73b110004dp-1",
+          "0x1.433fac13ce2d6p-1",
+          "-0x1.2d9c8c0345f1cp-1",
+          "-0x1.7dbe8a07292d1p-2",
+          "0x1.9c2c5f779f34ap-1",
+          "-0x1.fe4e38bcd3205p-1",
+          "0x1.ce95f102da38ep-1",
+          "-0x1.fcdd230e17c7cp-1",
+          "0x1.931441c8d2c08p-1",
+          "-0x1.e8b2a2e1d033cp-1",
+          "0x1.4f61deede3edap-1",
+          "-0x1.476173d07bf11p-3",
+          "0x1.248214c385194p-2",
+          "-0x1.f5de8c590614bp-1",
+          "-0x1.bce41e96fb3dbp-4",
+          "-0x1.b2e2b141520cdp-1",
+          "0x1.34634700405f2p-1",
+          "0x1.7b3003f1f84fcp-1",
+          "0x1.f8b13553d0fb0p-1",
+          "0x1.42241ab6caac0p-4",
+          "-0x1.fff707b1c5008p-1",
+          "-0x1.b89056689bb80p-1",
+          "0x1.f35b1598f38b5p-1",
+          "-0x1.1d327a6b385f8p-1",
+          "-0x1.2675a20a3691ep-2",
+          "-0x1.cbc029e0d5702p-2",
+          "0x1.e1544c57f2449p-1",
+          "0x1.ff6437b0c948dp-1",
+          "-0x1.84c51a0f2c569p-1",
+          "0x1.ad28306539f14p-4",
+          "0x1.1a0bccb470b55p-1",
+          "0x1.53ddc244eaa62p-4",
+          "-0x1.9efd43df6640fp-2",
+          "-0x1.f2be76abaaf55p-1",
+          "-0x1.7e1473977d156p-1",
+          "-0x1.577dd10320632p-2",
+          "0x1.b96c37af445dep-1",
+          "0x1.ffc13678436cbp-1",
+          "0x1.c8a0375b4f968p-1",
+          "0x1.e6b327da0432bp-1",
+          "0x1.61c4cd2b40cd5p-2",
+          "-0x1.d996e4a128726p-1",
+          "0x1.592b72abecbe2p-2",
+          "0x1.e819b9c809e83p-1",
+          "-0x1.10d0b02d41744p-2",
+          "-0x1.13356e238637bp-1",
+          "0x1.a53ff84879f6ap-1",
+          "0x1.326e5d550a8c1p-1",
+          "-0x1.21a618174eb64p-4",
+          "-0x1.6625d71c722b2p-1",
+          "-0x1.fdd3d56bbe928p-1",
+          "-0x1.7b2f9bee2fcf0p-2",
+          "-0x1.c45909475810ap-1",
+          "-0x1.f40eea0ac4e81p-1",
+          "-0x1.4512701a6da02p-1",
+          "-0x1.f7d25739da5b1p-1",
+          "-0x1.bb0e739620d71p-1",
+          "0x1.90c5d50f00aeep-1",
+          "-0x1.d0240c0443f86p-1",
+          "0x1.c1b522e096e74p-6",
+          "-0x1.151806ef19e1ep-1",
+          "-0x1.0554d02afda30p-1",
+          "0x1.fea8abe977194p-1",
+          "-0x1.c803c0a9ccb50p-1",
+          "0x1.9c0a97e53d140p-1",
+          "0x1.5f02784e86497p-3",
+          "0x1.964ba8f49c2b0p-1",
+          "0x1.4ee8b85bd4406p-1",
+          "0x1.f36039a6158b0p-2",
+          "0x1.34a513fda32e2p-3",
+          "0x1.63d0e43b166f9p-2",
+          "0x1.0f4e3e1f89693p-1",
+          "-0x1.e0ac91f5d73c3p-1",
+          "-0x1.fa66b3fb0d237p-1",
+          "-0x1.ff35a30515a64p-1",
+          "0x1.f0915048d0c16p-3",
+          "-0x1.d3175fbdb6da2p-1",
+          "0x1.c5acc48ca4bc1p-1",
+          "0x1.7fdc7538cf777p-1",
+          "-0x1.f7a7e03b02b66p-1",
+          "0x1.de60275ed964fp-2",
+          "0x1.fc4b2ad5ede71p-1",
+          "-0x1.6ab6a19e5ee7ep-1",
+          "-0x1.dcc867e7ba660p-4"
+        ],
+        "imag_hex": [
+          "-0x1.a503a42a1cb97p-1",
+          "0x1.b3f46b15e4ff8p-1",
+          "-0x1.c1a77e905ed1ap-1",
+          "-0x1.3e5948fcde9edp-1",
+          "0x1.2882288cd6bc1p-1",
+          "-0x1.11d2f3b02af21p-1",
+          "0x1.7b4056b9badb6p-1",
+          "-0x1.8d0e97e490d39p-1",
+          "0x1.9dbb7e5b96ddep-1",
+          "-0x1.db1764f879d5ep-1",
+          "0x1.2fbd15b2adb1bp-1",
+          "-0x1.4cf633764d2cap-4",
+          "0x1.b6e6960a4342cp-2",
+          "0x1.c4a9a29cbfbc3p-4",
+          "-0x1.3bb51db89e570p-1",
+          "0x1.31685d8aba14bp-2",
+          "-0x1.82dcd66d3f908p-1",
+          "0x1.f96a8144beba6p-1",
+          "-0x1.eaaaa8b74daf3p-1",
+          "-0x1.95632308a1e2dp-3",
+          "0x1.fcf88cafc4da1p-1",
+          "0x1.0e3832368d48ap-1",
+          "0x1.98b4da0149f69p-1",
+          "-0x1.580939aac6504p-1",
+          "0x1.58c8c786ef857p-3",
+          "-0x1.fe6a002ed9caap-1",
+          "0x1.7f5a09440ffbdp-7",
+          "-0x1.04dbf47b827e8p-1",
+          "-0x1.c455173c71319p-3",
+          "0x1.a936ab9c1f117p-1",
+          "0x1.ea5fefee72604p-1",
+          "-0x1.c97ea024bf191p-1",
+          "0x1.5d17456eab8f5p-2",
+          "0x1.8f484bcb390b4p-5",
+          "0x1.4d2b66f9845d0p-1",
+          "-0x1.fd2e94072641ep-1",
+          "-0x1.ab4f68de3ade3p-1",
+          "-0x1.fe3c036e6bf48p-1",
+          "-0x1.d4120a732b063p-1",
+          "0x1.cf019990a8736p-3",
+          "0x1.54d22d7e1b0e0p-1",
+          "0x1.e255da59d2525p-1",
+          "0x1.036732ce2eafap-1",
+          "0x1.fb10a205cc396p-6",
+          "-0x1.cf314be9ccf90p-2",
+          "-0x1.3de9e794ca85bp-2",
+          "0x1.e079848b4f6c9p-1",
+          "0x1.8523466639794p-2",
+          "-0x1.e209270da9e64p-1",
+          "0x1.35347165dc43dp-2",
+          "0x1.ed7ea14b941fbp-1",
+          "-0x1.afbed8307d07fp-1",
+          "-0x1.2305130b512a6p-1",
+          "0x1.9a2cf034bb5e4p-1",
+          "-0x1.feb7de6c546c0p-1",
+          "-0x1.6de35e4637925p-1",
+          "-0x1.78ee2d1405780p-4",
+          "-0x1.db9a71e7048c7p-1",
+          "-0x1.dfb079b2be725p-2",
+          "0x1.b7bd98cc64e30p-3",
+          "-0x1.8b90ce231f8bap-1",
+          "-0x1.6c96649c7294bp-3",
+          "0x1.009a4f112c537p-1",
+          "0x1.3ea151f94782cp-1",
+          "0x1.b048a3ce3e629p-2",
+          "-0x1.ffce9dd008dc3p-1",
+          "0x1.ae89bc519ce68p-1",
+          "-0x1.b848b0859d394p-1",
+          "-0x1.2845945495f80p-4",
+          "-0x1.d198454cfb46fp-2",
+          "-0x1.2feae71eaa191p-1",
+          "0x1.f86c8785b9078p-1",
+          "-0x1.378ea8d7a5231p-1",
+          "-0x1.8345bca7842cdp-1",
+          "-0x1.befd674d0c866p-1",
+          "0x1.fa26fcf09918ap-1",
+          "0x1.e018bade02f1bp-1",
+          "0x1.b23571aac7d84p-1",
+          "-0x1.60aef7e32481fp-2",
+          "-0x1.2e0ac9f8587e1p-3",
+          "0x1.c709d55b6ad0fp-5",
+          "-0x1.f0b8d7b9c101fp-1",
+          "0x1.a3610e7e78bf7p-2",
+          "0x1.daa6596a6df1ep-2",
+          "-0x1.52d04365c5381p-1",
+          "-0x1.703c79adb0a9cp-3",
+          "0x1.c4b20adf22430p-1",
+          "-0x1.ebf5115d3852cp-4",
+          "-0x1.695cd8a0cb583p-1",
+          "0x1.fc84fed8756eap-1"
+        ]
+      }
+    },
+    {
+      "grid": {
+        "shape": [
+          9,
+          2
+        ],
+        "dtype": "float64",
+        "column_major": true,
+        "real_hex": [
+          "-0x1.999999999999ap+0",
+          "-0x1.999999999999ap+0",
+          "-0x1.999999999999ap+0",
+          "0x0.0p+0",
+          "0x0.0p+0",
+          "0x0.0p+0",
+          "0x1.999999999999ap+0",
+          "0x1.999999999999ap+0",
+          "0x1.999999999999ap+0",
+          "-0x1.999999999999ap+0",
+          "0x1.9999999999998p-2",
+          "0x1.3333333333333p+1",
+          "-0x1.999999999999ap+0",
+          "0x1.9999999999998p-2",
+          "0x1.3333333333333p+1",
+          "-0x1.999999999999ap+0",
+          "0x1.9999999999998p-2",
+          "0x1.3333333333333p+1"
+        ],
+        "imag_hex": null
+      },
+      "beta": {
+        "shape": [
+          5
+        ],
+        "dtype": "float64",
+        "column_major": true,
+        "real_hex": [
+          "0x1.97d3953ace754p-31",
+          "0x1.752acb1da8a50p-30",
+          "0x1.9d94bbc0279c5p-31",
+          "0x1.c66b934d47a01p-31",
+          "0x1.dddf944a92a48p-31"
+        ],
+        "imag_hex": null
+      },
+      "rician": {
+        "shape": [
+          5
+        ],
+        "dtype": "float64",
+        "column_major": true,
+        "real_hex": [
+          "0x1.9000000000000p+6",
+          "0x1.9000000000000p+6",
+          "0x1.9000000000000p+6",
+          "0x1.9000000000000p+6",
+          "0x1.9000000000000p+6"
+        ],
+        "imag_hex": null
+      },
+      "noise": {
+        "shape": [
+          5
+        ],
+        "dtype": "float64",
+        "column_major": true,
+        "real_hex": [
+          "0x1.5fd7fe1796495p-37",
+          "0x1.5fd7fe1796495p-37",
+          "0x1.5fd7fe1796495p-37",
+          "0x1.5fd7fe1796495p-37",
+          "0x1.5fd7fe1796495p-37"
+        ],
+        "imag_hex": null
+      },
+      "power": {
+        "binary64_hex": "0x1.0000000000000p+0"
+      },
+      "directions": {
+        "shape": [
+          5,
+          2
+        ],
+        "dtype": "float64",
+        "column_major": true,
+        "real_hex": [
+          "0x1.3579512bcecf0p-1",
+          "0x1.088602fb681cep-3",
+          "-0x1.c48abf5c5e4ccp-1",
+          "0x1.b08b0ccfe6d3cp-1",
+          "0x1.4761d1e492cc9p-3",
+          "0x1.81c10b8ec3a91p-1",
+          "0x1.03ed9d98241d7p-1",
+          "-0x1.cf5f5b5d1d96cp-2",
+          "0x1.8ae07df5d4aaap-2",
+          "-0x1.df64165efc54ap-1"
+        ],
+        "imag_hex": null
+      },
+      "wavelength": {
+        "binary64_hex": "0x1.0000000000000p+0"
+      },
+      "minimum_distance": {
+        "binary64_hex": "0x1.0000000000000p-1"
+      },
+      "region_lower": {
+        "shape": [
+          2
+        ],
+        "dtype": "float64",
+        "column_major": true,
+        "real_hex": [
+          "-0x1.999999999999ap+0",
+          "-0x1.999999999999ap+0"
+        ],
+        "imag_hex": null
+      },
+      "region_upper": {
+        "shape": [
+          2
+        ],
+        "dtype": "float64",
+        "column_major": true,
+        "real_hex": [
+          "0x1.999999999999ap+0",
+          "0x1.3333333333333p+1"
+        ],
+        "imag_hex": null
+      },
+      "mode": "ZF",
+      "N": 6,
+      "D": 3,
+      "LOS_phasors": {
+        "shape": [
+          9,
+          5
+        ],
+        "dtype": "complex128",
+        "column_major": true,
+        "real_hex": [
+          "0x1.dea9b5426cf5fp-2",
+          "-0x1.0296f70cafc0ep-1",
+          "0x1.155e66184e6f1p-1",
+          "0x1.1ab5e8f36027cp-2",
+          "-0x1.44ce9898d1846p-2",
+          "0x1.6e4d30dd7769ep-2",
+          "0x1.2ae62d8c2f305p-4",
+          "-0x1.da6ff4f6bf5dbp-4",
+          "0x1.448c544cd02e5p-3",
+          "0x1.fc61845ba1551p-1",
+          "0x1.ffdea7b9495f8p-1",
+          "0x1.fe9ab10cf1b0cp-1",
+          "0x1.868890226a6d2p-2",
+          "0x1.2998d007b9320p-2",
+          "0x1.93cae5f4b9be6p-3",
+          "-0x1.93572e7d6353dp-1",
+          "-0x1.afd3804239258p-1",
+          "-0x1.c84d0af7a8a0dp-1",
+          "0x1.4ac4f7d1fec7dp-1",
+          "0x1.afd8e84fb0526p-4",
+          "-0x1.e2ef181685412p-2",
+          "-0x1.4cd54abc69af0p-3",
+          "0x1.ae23a96c4631dp-2",
+          "0x1.b70154fa06aaap-1",
+          "-0x1.77ead5deff0dbp-2",
+          "-0x1.a71b19b6c1c2ep-1",
+          "-0x1.ffffdf12c924bp-1",
+          "0x1.f6204116e0a8dp-1",
+          "0x1.4c011d4376db7p-2",
+          "-0x1.c9f109f9defa8p-1",
+          "-0x1.7bc83be86785dp-1",
+          "0x1.21c83ed0d56e8p-1",
+          "0x1.c8e9b11208d7ap-1",
+          "-0x1.8918e0a2c94f0p-4",
+          "-0x1.ffa4885b709c2p-1",
+          "-0x1.5c2ec39c92ad6p-3",
+          "0x1.8aa9841b69076p-5",
+          "-0x1.5dcdd447280a6p-1",
+          "-0x1.ffea0e0d3f989p-1",
+          "-0x1.fff6a0da11662p-1",
+          "-0x1.68f467d987617p-1",
+          "0x1.25df623515aa6p-6",
+          "0x1.8dbd628548773p-6",
+          "0x1.77f54061f93c4p-1",
+          "0x1.ff3fb53b6cb83p-1"
+        ],
+        "imag_hex": [
+          "-0x1.c49e9a7257a16p-1",
+          "0x1.b9e6541c146d5p-1",
+          "-0x1.ae5c69a45d75bp-1",
+          "-0x1.ec19aba81bdb4p-1",
+          "0x1.e58f83c6065e4p-1",
+          "-0x1.de1f013429115p-1",
+          "-0x1.fea28c0da9f19p-1",
+          "0x1.fc8dc5217b35dp-1",
+          "-0x1.f987bb07ad341p-1",
+          "-0x1.e6264935a2837p-4",
+          "-0x1.718b5c48d88f9p-6",
+          "0x1.2e3c4702b4c8cp-4",
+          "0x1.d94d5863e4192p-1",
+          "0x1.e9e6a9ccb5270p-1",
+          "0x1.f5f31da784a60p-1",
+          "0x1.3b5f98e2a5d37p-1",
+          "0x1.1315039192417p-1",
+          "0x1.d078b46e04abap-2",
+          "0x1.86d063be58749p-1",
+          "0x1.fd257ac2f16f2p-1",
+          "0x1.c37bdfcd9dddfp-1",
+          "-0x1.f93183382c547p-1",
+          "-0x1.d0a37c6e76e2fp-1",
+          "-0x1.077949885528fp-1",
+          "0x1.dc4065ba6a365p-1",
+          "0x1.2050977599872p-1",
+          "0x1.6f3e300306e59p-10",
+          "0x1.904507aeaff9bp-3",
+          "-0x1.e457946141f1dp-1",
+          "-0x1.c9f7a5daba2a2p-2",
+          "0x1.5761297812247p-1",
+          "0x1.a61a2a1ed8eebp-1",
+          "-0x1.ce0f1d84ccf83p-2",
+          "-0x1.fda2fd2643027p-1",
+          "-0x1.31fd71c078103p-5",
+          "0x1.f88bdfb22aac1p-1",
+          "0x1.ff67cdd25efadp-1",
+          "0x1.75df8813e47f2p-1",
+          "0x1.2bcca1dcf29e2p-6",
+          "0x1.87d77fff41b81p-7",
+          "-0x1.6b1e90e73e248p-1",
+          "-0x1.ffeae9ff3ce2ep-1",
+          "-0x1.ffd95f3bfd765p-1",
+          "-0x1.5b8ff4bd5bb19p-1",
+          "0x1.bb944fc9b31c2p-5"
+        ]
+      },
+      "binary64_sqrt_scale": {
+        "shape": [
+          5
+        ],
+        "dtype": "float64",
+        "column_major": true,
+        "real_hex": [
+          "0x1.fd7583bc82e29p-1",
+          "0x1.fd7583bc82e29p-1",
+          "0x1.fd7583bc82e29p-1",
+          "0x1.fd7583bc82e29p-1",
+          "0x1.fd7583bc82e29p-1"
+        ],
+        "imag_hex": null
+      }
+    }
+  ]
+}

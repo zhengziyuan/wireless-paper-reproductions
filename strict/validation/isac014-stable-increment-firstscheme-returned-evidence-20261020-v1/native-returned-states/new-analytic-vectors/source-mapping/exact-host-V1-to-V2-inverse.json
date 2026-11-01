@@ -1,0 +1,39 @@
+{
+  "schema": "preserved-real-preload-native1-and-new-only-endian-api-host-v2-preparation-v1",
+  "V1_directory": "local-origin/native-vector-host-v1",
+  "V1_plan_SHA256": "5a6061072a8cf29d9dc83d0beaa99580e5f2d96a62b9ae7e439c71f3452a07e8",
+  "actual_V1_held_journal": "local-origin/native-vector-host-v1\\actual-held-v1\\native36-new-analytic-probe-actual-owned-process.json",
+  "actual_V1_journal_SHA256": "8acfe385aa2b91a5743e15a338f1d9b76121eaa296b63768861fc4772fe866fd",
+  "actual_exit": 1,
+  "actual_native_child": {
+    "PID": 54684,
+    "creation_FILETIME": 134369210627915120,
+    "associated_with_any_Windows_job": true
+  },
+  "actual_owner": {
+    "PID": 25780,
+    "creation_FILETIME": 134369210623759072,
+    "associated_with_any_Windows_job": true
+  },
+  "actual_sameheld_sourceclosed": true,
+  "exact_error": "MATLAB computer: unknown command option, probe line4 computer('endian')",
+  "error_before_loadMAT_or_evaluate": true,
+  "actual_new_native_derivative_calls_reached": 0,
+  "saved_decimal_comparison_reached": false,
+  "V1_probe_original_SHA256": "aec42b3d24b4c2c9a82bc5dcd9914dc84f8d8dacd2d4184e365f48fb145a9580",
+  "V2_probe_SHA256": "fb94aadc6a9b335a4b33977b8bca0675497a6706c39e684d4b51dfafbbc1050c",
+  "exact_probe_inverse_replace": [
+    "[~,~,nativeEndian]=computer;assert(strcmp(nativeEndian,'L'),'Explicit little-endian binary64 transport required');",
+    "assert(strcmp(computer('endian'),'L'),'Explicit little-endian binary64 transport required');"
+  ],
+  "V1_owner_SHA256": "074a00c331e239f25f3cf11b358cab310d226760114ea55e54ea73e334d8e8cb",
+  "V2_owner_SHA256": "355cae9e89a163fe140d6da08cc11ec5d468dce59ec2b24aeb70b8e5108baaa3",
+  "exact_owner_inverse_replace": [
+    "terminal.get('child')",
+    "terminal.get('actual_child')"
+  ],
+  "five_original_native_functions_suffix_unchanged": true,
+  "saved_comparison_source_wholebyte_unchanged": true,
+  "new_optimizer_MC_MP_RNG_or_trial_calls": 0,
+  "V2_not_started": true
+}

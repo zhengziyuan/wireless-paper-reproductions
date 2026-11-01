@@ -1,0 +1,30 @@
+{
+  "schema": "CLOSED_INDEPENDENT_MP_REFERENCE_PROVENANCE_PROJECTION_V1",
+  "reference_receipt_SHA256": "26641d9b149ae23b90b9008c90e914debb8e396e35d8dfada4c7334002b9fbd2",
+  "actual_CLI_exit_receipt_SHA256": "27b2a9da54099e52b55904ee184446e4533df19ed3d496b278a86baa403caa49",
+  "references": [
+    {
+      "path": "references/original-structure-MP80-reference.json.gz",
+      "compressed_SHA256": "50b76246efe86c7cd690cc505e53092fd8ecf9a2794aaae608b1433d055d2f65",
+      "uncompressed_original_bytes": 381352,
+      "uncompressed_original_SHA256": "bedeeec3f498769a2df7074df4b220822c6cd1518be8bf0fa1e8efcfb3c9bc14",
+      "lossless_original_byte_identity": true
+    },
+    {
+      "path": "references/original-structure-MP100-reference.json.gz",
+      "compressed_SHA256": "b0c4699e991c188ccdf762376ef71415ecd83520ea3141b0fe210f7a6b61953d",
+      "uncompressed_original_bytes": 435099,
+      "uncompressed_original_SHA256": "ad4be491acdbbaa8f9e16f88667afa0376b5eeb400663f303d70f2e19b22a2b1",
+      "lossless_original_byte_identity": true
+    }
+  ],
+  "source_and_inputs_closed": true,
+  "actual_MP80_MP100_natural_exit": 0,
+  "MP_reference_recomputed_in_publication": false,
+  "original_formula_A": "Same captured fc/fs/mu/eta/lip/Ga/den promoted exactly",
+  "full_physical_B": "Independent original physical fields and auxiliaries at identical captured W/theta/r/iota",
+  "serialized_MP140_readback_stationarity_A": "1.0646875e-94",
+  "serialized_MP140_readback_stationarity_B": "9.9359669e-95",
+  "exact_W_A_B_difference_max": "7.16674826765e-15",
+  "source_stored_bad_Q_not_theoretical_reference": true
+}

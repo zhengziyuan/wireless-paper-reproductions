@@ -867,14 +867,15 @@ out=struct('scope','full_front_hemisphere_independent_samples','resolution_deg',
 end
 function out=ris_baselines(model,settings,checkpointprefix)
 if nargin<3,checkpointprefix='';end
-continuous=zeros(1,model.targets);onebit=continuous;twobit=continuous;converged=true;
+continuous=zeros(1,model.targets);onebit=continuous;twobit=continuous;converged=true;target_start_banks=cell(1,model.targets);
 for k=1:model.targets
 order=[k,setdiff(1:model.targets,k)];cfg=model.config;cfg.ms2=[0,0];cfg.number_of_targets=1;cfg.azimuth_deg=cfg.azimuth_deg(order);cfg.elevation_deg=cfg.elevation_deg(order);cfg.echo_beta_squared=model.beta(order);
 ris=build_model(cfg);if isempty(checkpointprefix),cp='';else,cp=[checkpointprefix,sprintf('-ris-target-%d.json',k-1)];end
 run=optimize(ris,settings,"sinr",100000+k-1,cp);
+target_start_banks{k}=run;
 if isempty(run.best_feasible),out=struct('available',false,'reason','At least one RIS target has no feasible run');return;end
 converged=converged&&run.overall_full_success;raw=run.best_feasible.state.phi;phi=raw.real+1i*raw.imag;z=struct('phi',phi,'theta',zeros(0,1),'X',1,'eta',0);g=metric(ris,z,"sinr");continuous(k)=g(1);
 for bits=1:2,step=2*pi/(2^bits);z.phi=exp(1i*step*floor(angle(phi)/step+.5));g=metric(ris,z,"sinr");if bits==1,onebit(k)=g(1);else,twobit(k)=g(1);end,end
 end
-out=struct('available',true,'optimization_convergence_verified',converged,'continuous',continuous,'one_bit',onebit,'two_bit',twobit);
+out=struct('available',true,'optimization_convergence_verified',converged,'continuous',continuous,'one_bit',onebit,'two_bit',twobit,'target_start_banks',{target_start_banks});
 end

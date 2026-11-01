@@ -1,0 +1,393 @@
+{
+  "figures": [
+    {
+      "figure": 2,
+      "sweep": "power_kL20",
+      "ordinals": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "curves_to_replace": [
+        "MR-S-TS",
+        "MR-TTS-TS"
+      ],
+      "six_unaffected_curves": "reuse exactly"
+    },
+    {
+      "figure": 3,
+      "sweep": "power_kL0",
+      "ordinals": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "curves_to_replace": [
+        "MR-S-TS",
+        "MR-TTS-TS"
+      ],
+      "six_unaffected_curves": "reuse exactly"
+    },
+    {
+      "figure": 4,
+      "sweep": "interference_kL20",
+      "ordinals": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "curves_to_replace": [
+        "MR-S-TS",
+        "MR-TTS-TS"
+      ],
+      "six_unaffected_curves": "reuse exactly"
+    },
+    {
+      "figure": 5,
+      "sweep": "interference_kL0",
+      "ordinals": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "curves_to_replace": [
+        "MR-S-TS",
+        "MR-TTS-TS"
+      ],
+      "six_unaffected_curves": "reuse exactly"
+    },
+    {
+      "figure": 6,
+      "sweep": "subsurfaces_kL20",
+      "ordinals": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56
+      ],
+      "curves_to_replace": [
+        "MR-S-TS",
+        "MR-TTS-TS"
+      ],
+      "six_unaffected_curves": "reuse exactly"
+    },
+    {
+      "figure": 7,
+      "sweep": "subsurfaces_kL0",
+      "ordinals": [
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65
+      ],
+      "curves_to_replace": [
+        "MR-S-TS",
+        "MR-TTS-TS"
+      ],
+      "six_unaffected_curves": "reuse exactly"
+    },
+    {
+      "figure": 8,
+      "sweep": "ground_kL0",
+      "ordinals": [
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80
+      ],
+      "curves_to_replace": [
+        "MR-S-TS",
+        "MR-TTS-TS"
+      ],
+      "six_unaffected_curves": "reuse exactly"
+    },
+    {
+      "figure": 9,
+      "sweep": "ground_kL10",
+      "ordinals": [
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95
+      ],
+      "curves_to_replace": [
+        "MR-S-TS",
+        "MR-TTS-TS"
+      ],
+      "six_unaffected_curves": "reuse exactly"
+    },
+    {
+      "figure": 10,
+      "sweep": "ground_kL20",
+      "ordinals": [
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110
+      ],
+      "curves_to_replace": [
+        "MR-S-TS",
+        "MR-TTS-TS"
+      ],
+      "six_unaffected_curves": "reuse exactly"
+    },
+    {
+      "figure": 11,
+      "ordinals": [
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182
+      ],
+      "curves_to_replace": [
+        "six MR-TTS-TS curves x12 points"
+      ],
+      "directly_reused": [
+        "six AP-AO curves x12 points"
+      ],
+      "curve_mapping": [
+        [
+          "M_AP_kL20",
+          "multi_vs_single_multi_kL20",
+          "AP-AO"
+        ],
+        [
+          "M_MR_TTS_TS_kL20",
+          "multi_vs_single_multi_kL20",
+          "MR-TTS-TS"
+        ],
+        [
+          "S_AP_kL20_offset1.25",
+          "multi_vs_single_single_1.25_kL20",
+          "AP-AO"
+        ],
+        [
+          "S_MR_TTS_TS_kL20_offset1.25",
+          "multi_vs_single_single_1.25_kL20",
+          "MR-TTS-TS"
+        ],
+        [
+          "S_AP_kL20_offset2.5",
+          "multi_vs_single_single_2.5_kL20",
+          "AP-AO"
+        ],
+        [
+          "S_MR_TTS_TS_kL20_offset2.5",
+          "multi_vs_single_single_2.5_kL20",
+          "MR-TTS-TS"
+        ],
+        [
+          "M_AP_kL0",
+          "multi_vs_single_multi_kL0",
+          "AP-AO"
+        ],
+        [
+          "M_MR_TTS_TS_kL0",
+          "multi_vs_single_multi_kL0",
+          "MR-TTS-TS"
+        ],
+        [
+          "S_AP_kL0_offset1.25",
+          "multi_vs_single_single_1.25_kL0",
+          "AP-AO"
+        ],
+        [
+          "S_MR_TTS_TS_kL0_offset1.25",
+          "multi_vs_single_single_1.25_kL0",
+          "MR-TTS-TS"
+        ],
+        [
+          "S_AP_kL0_offset2.5",
+          "multi_vs_single_single_2.5_kL0",
+          "AP-AO"
+        ],
+        [
+          "S_MR_TTS_TS_kL0_offset2.5",
+          "multi_vs_single_single_2.5_kL0",
+          "MR-TTS-TS"
+        ]
+      ]
+    }
+  ],
+  "Fig1": "system diagram, no numerical TS output",
+  "TableI": "simulation parameters, no result ordinates or TS dependence",
+  "Fig12": "corrected192 already separately published, not rebuilt here",
+  "Fig13": "Separate original native C timing run, untouched by this package; no completion is claimed here.",
+  "no_additional_author_parameter_needed_for_this_saved_bank_TS_refresh": true,
+  "unresolved": [
+    {
+      "scope": "Fig2/3",
+      "item": "Known executable scene correction: Section VII makes Table I defaults conditional on later overrides. Final p291 states both Rician factors20dB for Fig2 and0dB for Fig3. Current saved power24 bank uses terrestrial10dB. These plots retain that real bank as diagnostic output;24 distinct full8-method, dual-language scenarios at terrestrial20/0dB remain required. This is not an indefinitely missing author parameter.",
+      "source_anchors": {
+        "PDF_page12_printed290": "Section VII opening: Table I applies unless stated otherwise",
+        "PDF_page13_printed291": "Fig2/3 captions fix satellite20/0dB; subsequent Second/However sentences put both factors20/0dB",
+        "minor_source_wording_issue": "Opening 0dB and20dB respectively ordering conflicts with captions, but later explicit paired-factor sentences and captions provide the executable interpretation."
+      },
+      "future_missing_scenarios": 24,
+      "full_eight_schemes_must_be_recomputed_because_input_changes": true,
+      "new_optimization_started": false
+    },
+    {
+      "scope": "Fig4/5/11",
+      "item": "Printed W versus executed normalized I/N convention; exact dimensional conversion is known, historical author executable convention is not."
+    },
+    {
+      "scope": "all historical-reference claims",
+      "item": "Exact unreported author geometry/gain/seed/solver and stopping/cap controls remain unrecovered; computed curves and existing original configured budgets are preserved without fitting."
+    }
+  ],
+  "public_legacy_entries": [
+    "tools/cooperative-stable-replay/build_power_curve_views.py",
+    "tools/cooperative-stable-replay/build_multi_single_curve_views.py"
+  ],
+  "legacy_full_state_binders_not_called_because_they_reopen_MAT_NPZ_and_moment_inputs": true,
+  "actual_new_lightweight_entry": "render_saved_figures_v1.py (public JSON only; assembly not rerun)",
+  "reference_or_full_paper_PASS": false
+}

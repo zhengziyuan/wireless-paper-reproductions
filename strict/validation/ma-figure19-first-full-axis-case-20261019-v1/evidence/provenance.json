@@ -1,0 +1,125 @@
+{
+  "schema": "one-closed-MA19-public-data-and-exact-math-projection-v1",
+  "selected_case": "case-000-mc-000",
+  "figure": 19,
+  "N": 4,
+  "M": 3,
+  "D": 3,
+  "kappa_linear": 100,
+  "original_selected_result_SHA256": "28767b51b659c79dcdc2b00da6458b9ffe424ad353b1d7caa169b073ae19fc35",
+  "original_typed_result_not_included_SHA256": "a4197fe54043f945242e43a3e6a2f3bf5ed364dd7e47aef50f30f4419dc7bb5d",
+  "original_closed_receipt_SHA256": "3d9e762f6b9afe3500ff60d7589a214e0ad536d592439ef52931afc00cfe2afe",
+  "original_independent_report_SHA256": "05f47f76798948a7913c24abd48f35ad97ab323f9d058fde122aca6e2aed73b9",
+  "original_local_reader_SHA256": "1368e20f39243a8df4ca2db1a03e130d62011510a6c0c1bad0d465b55001b456",
+  "original_independent_reference_repository_path": "strict/validation/two-timescale-ma-corrected-zf/audit_full200_matlab_v1.py",
+  "original_independent_reference_SHA256": "29c42f0a8920d179fd32f81aa47931119b2f890ef3ed4e7ae63be9a4c562707d",
+  "exact_reference_excerpts": {
+    "rates_batch": {
+      "source_start_line": 93,
+      "source_end_line": 96,
+      "exact_definition_UTF8_SHA256": "d187526ad35a6846a54d2e195090de09a4f786244698ff76f9058823be417cd0"
+    },
+    "geometry_functions": {
+      "source_start_line": 165,
+      "source_end_line": 190,
+      "exact_definition_UTF8_SHA256": "17eb5b2f0517c66d7215c4c86c1859dcbeb2a5af8f77808de40478d47b595ecd"
+    },
+    "ma_rates": {
+      "source_start_line": 193,
+      "source_end_line": 200,
+      "exact_definition_UTF8_SHA256": "4db990b55d6c99b3b302caae2f08b2ba9680d6701b510788231730da28aed68c"
+    }
+  },
+  "exact_four_state_math_block_UTF8_SHA256": "0115713f97b05f23f6fa338f2384d9daa3fe13ce913eefa96a484cbaa159f27c",
+  "exact_four_state_math_block_unchanged": true,
+  "original_result_job_config_bank_plan_manifest_and_final_checkpoint_decompressed_bytes_unchanged": true,
+  "compressed_original_assets": {
+    "fixtures/bank/run_config.json.gz": {
+      "original_bytes": 5605,
+      "original_SHA256": "a2d775c024214b4d4f4704b26e9f7d477a1f5c72a361a63afc78874b7b262094",
+      "gzip_bytes": 2146,
+      "gzip_SHA256": "9ea8a64af410b182ed2043ec8a7c98032b545cbb419fe52563d6c03f0e1b0c10"
+    },
+    "fixtures/bank/plan.json.gz": {
+      "original_bytes": 5409,
+      "original_SHA256": "8bbeff843828d4b9038e3d73a8ffb12aba8cdeea1180f5ea77e434da12ba45d4",
+      "gzip_bytes": 617,
+      "gzip_SHA256": "e206a6af1127b4991a95f7ad56c61b469f0872d0e023eab72be9ef45d89b641d"
+    },
+    "fixtures/bank/manifest.json.gz": {
+      "original_bytes": 325529,
+      "original_SHA256": "844dcb7013521accda9305a2735973fada83ac87d693b36aae9ac87582d8a06d",
+      "gzip_bytes": 74745,
+      "gzip_SHA256": "bd3e85fd41c15ade5c2884c7cfde5315ac6cf6196d11be693982e0addec07da2"
+    },
+    "fixtures/bank/jobs/case-000-mc-000.json.gz": {
+      "original_bytes": 494950,
+      "original_SHA256": "8b06102799e38afb405b4ee96c8da8705b26108be9842aedd1031c6ed3de31de",
+      "gzip_bytes": 225992,
+      "gzip_SHA256": "6149575873a137e390e3164aebf1002a6e939c6a58c11845ea1b93bae76932f5"
+    },
+    "fixtures/case-000-mc-000/case-000-mc-000-python.json.gz": {
+      "original_bytes": 1345822,
+      "original_SHA256": "28767b51b659c79dcdc2b00da6458b9ffe424ad353b1d7caa169b073ae19fc35",
+      "gzip_bytes": 228388,
+      "gzip_SHA256": "b40d6cd0dc03cd8fb647c9da18d9e6e9e6b0bf58c1a7312f3055ef49cb91e115"
+    },
+    "fixtures/case-000-mc-000/grid-MRT/checkpoint.json.gz": {
+      "original_bytes": 350,
+      "original_SHA256": "fe9b50f98dc7b039c8904a93f0b83026e8163c3407d622d43d69b73a19d05c8d",
+      "gzip_bytes": 269,
+      "gzip_SHA256": "5ca8c2516790ed3ccac6470db4db6c2c1841c524624012859e6cd5b44857b087"
+    },
+    "fixtures/case-000-mc-000/grid-ZF/checkpoint.json.gz": {
+      "original_bytes": 349,
+      "original_SHA256": "95f1bf4d44b9433461ea7fc92667932d06f1688287819683d38ad4c5cb09c7a9",
+      "gzip_bytes": 268,
+      "gzip_SHA256": "add163b3c6185ce12de6eeae0207132c8780795c801277c1127ed65de195d85c"
+    }
+  },
+  "projected_original_report_all_numbers_types_order_and_checks_unchanged": true,
+  "projected_original_report_changes": "Only absolute path strings and path dictionary keys become repository/archive-relative provenance labels.",
+  "public_closed_receipt_changes": "Path strings/keys projected; result path is included gzip JSON; typed pickle explicitly not included. Every numeric/digest/original flag remains unchanged.",
+  "original_source_pins": {
+    "repository/strict/two-timescale-ma/brute_force.py": "3f946a57a78fcc3af4fb5557713df8233134bf606ed9815bd6d7de7f927a99d6",
+    "repository/strict/two-timescale-ma/configs/figure19-full-axis-ao10000-fixed-mc-protocol-v2.json": "a2d775c024214b4d4f4704b26e9f7d477a1f5c72a361a63afc78874b7b262094",
+    "repository/strict/two-timescale-ma/configs/figure20-full-axis-ao10000-fixed-mc-protocol-v2.json": "18e756769a4069be4ef714301b37353407247ffcdb9fdcd4d03b3686b7a82452",
+    "repository/strict/two-timescale-ma/coordinate_exact.py": "360f92b22c866a2290bd81cf295fbb759d50ee6729e85877670eabf534b2a3a8",
+    "repository/strict/two-timescale-ma/core.py": "f2b68eaf0a88392947a19dd4d332b2c442f28d1b99f250e02643a99fdbd09d24",
+    "repository/strict/two-timescale-ma/figures.py": "02ee1d5e1d2e13e937ee0f39298756d85aeef75392f8112ab88eaa4c72bbcd38",
+    "repository/strict/two-timescale-ma/ma_metadata.py": "a597168948d81d8a93c4ba8bf3fd28402d067c4b2aa1183005dfa4c6ba05023d",
+    "repository/strict/two-timescale-ma/run.py": "32b5a7c87d4701847e2ecfcd5d3d4bdeb84fd5011edea18a7fc0b17c1d2fcbe8",
+    "archive/MA19-MA20-missing-only-ordered-prefix-prepared-v1/durable_original_grid_host_v3.py": "963cf5cc3e835c21e7c811c8865523cad6ecf6054eb209a72b3b2a0d04666b04",
+    "archive/MA19-MA20-missing-only-ordered-prefix-prepared-v1/run_missing_only_MA19_MA20_original_ordered_MC_v3.py": "fbd755910467800ff347d980a2d7924f995b062b90c98e30960ff5936af066e2"
+  },
+  "bank_manifest_is_original_declaration_not_reverification_of_all1600_jobs": true,
+  "public_fixture_contains_jobs": 1,
+  "public_fixture_draws": 1000,
+  "historical_author_search_objective_recovered": false,
+  "complete_fig19_or_fig20_verified": false,
+  "native_dual_reference_or_fullpaper_PASS": false,
+  "independent_FPA_optimizer_QT_KKT_power_verification": false,
+  "source_campaign_running_at_this_case_evidence_epoch": true,
+  "runtime_requirements": [
+    "Python 3.10+",
+    "NumPy"
+  ],
+  "first_portable_use_pending": false,
+  "first_portable_use_evidence": "evidence/portable-first-use.json",
+  "mathematical_block_text_normalization": "CRLF source text is normalized to LF by Python text input. All mathematical statements are preserved verbatim after this newline-only normalization; exact UTF-8 block digest is recorded.",
+  "actual_case_original_function_calls_fresh": 3006,
+  "actual_case_original_function_calls_reused": 0,
+  "actual_case_original_ordered_candidate_evaluations_total": 6048,
+  "actual_case_elapsed_seconds": 834.7865948000108,
+  "single_case_elapsed_not_extrapolated_to_full_axis_ETA": true,
+  "retained_historical_configured_fixed_MC_benchmark": true,
+  "subsequent_user_authorized_protocol_choice": {
+    "search_objective": "theoretical_rate",
+    "full_axes_retained": true,
+    "final_performance_draws": 1000,
+    "reason": "User requested the option with lower computation and storage cost.",
+    "implementation_or_execution_of_subsequent_protocol_claimed_by_this_packet": false,
+    "original_author_search_criterion_recovered": false,
+    "original_fixed_MC_input_result_and_math_unmodified": true
+  }
+}

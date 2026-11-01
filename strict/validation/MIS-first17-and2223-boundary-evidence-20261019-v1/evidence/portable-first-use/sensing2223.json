@@ -1,0 +1,36 @@
+{
+  "schema": "portable-only-new2223-saved-final-physical-KKT-replay-v1",
+  "independent_numerical_result": {
+    "metrics": {
+      "eta": 47.14281197344873,
+      "min_relaxed_metric": 47.1428119805848,
+      "min_binary_metric": 47.1428119805848,
+      "maximum_constraint": -7.136073065794335e-09
+    },
+    "certificate": {
+      "stationarity_norm": 1.1670064710217553e-06,
+      "stationarity_tolerance": 1.2589254117941667e-06,
+      "maximum_positive_primal_residual": 0.0,
+      "maximum_negative_dual_residual": 0.0,
+      "maximum_absolute_complementarity": 1.5901985504997493e-09,
+      "feasibility_tolerance": 1e-06,
+      "maximum_phase_modulus_error": 2.220446049250313e-16,
+      "maximum_simplex_storage_error": 0.0,
+      "original_problem_kkt_verified": true
+    },
+    "saved_physical_fields_match": true,
+    "saved_KKT_residual_fields_match": true,
+    "saved_KKT_boolean_reconfirmed": true,
+    "maximum_physical_field_error": 3.552713678800501e-14,
+    "stationarity_norm_error": 4.6473284273066025e-15
+  },
+  "physical_response_MP80_MP100_maximum_difference": "9.76624743015492520061150543346443796008279728852202770827942668099171922803497442734560692004473583836697e-80",
+  "passed": true,
+  "precision_scope": "MP80/100 steering then binary64 field/Lagrangian contractions and Decimal60 simplex; not all-gradient MP.",
+  "historical_producer_13checks_are_archived_not_reexecuted_here": true,
+  "old2223_failure_and_global720_false_retained": true,
+  "old_failed_state_not_recovered_or_reclassified": true,
+  "all_trajectory_reference_dual_or_fullpaper_PASS": false,
+  "optimizer_initialization_MC_or_RNG_calls": 0,
+  "public_reader_first_true_use_is_a_new_replay_not_an_archived_execution": true
+}

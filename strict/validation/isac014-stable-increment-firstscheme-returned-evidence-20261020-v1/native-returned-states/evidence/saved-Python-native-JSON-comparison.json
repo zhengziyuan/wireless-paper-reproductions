@@ -1,0 +1,1096 @@
+{
+  "schema": "actual-saved-JSON-only-native-and-python-firstscheme-stops-utility-comparison-v1",
+  "input_paths": {
+    "native_result": "local-origin/data\\ISAC014-native-stable-PGA-full-actual-v1\\full-result.json",
+    "python_result": "local-origin/data\\resume-20261017\\ISAC014-stable-PGA-increment-growth-cap5000-rel1e10-first-scheme-actual-v2\\full-result.json",
+    "native_cfg": "local-origin/native-firstscheme-preparation\\original-config.json",
+    "python_cfg": "local-origin/data\\resume-20261017\\ISAC014-stable-PGA-increment-growth-cap5000-rel1e10-first-scheme-actual-v2\\original-config.json"
+  },
+  "input_before": {
+    "native_result": "5eefe6b6bb3f346161491b8cd812bc79c73a8df6de16e454199a45ccdfc2bc2d",
+    "python_result": "eeafd5eeb305ae6c3c51e1cebe9a4f7e4fc0ef2bdbc266d183e21faea7c11f74",
+    "native_cfg": "62d9450cd8ae67986a92c0cd7344f7788d75a3bfb8e89d11d54a59e501536460",
+    "python_cfg": "62d9450cd8ae67986a92c0cd7344f7788d75a3bfb8e89d11d54a59e501536460"
+  },
+  "input_after": {
+    "native_result": "5eefe6b6bb3f346161491b8cd812bc79c73a8df6de16e454199a45ccdfc2bc2d",
+    "python_result": "eeafd5eeb305ae6c3c51e1cebe9a4f7e4fc0ef2bdbc266d183e21faea7c11f74",
+    "native_cfg": "62d9450cd8ae67986a92c0cd7344f7788d75a3bfb8e89d11d54a59e501536460",
+    "python_cfg": "62d9450cd8ae67986a92c0cd7344f7788d75a3bfb8e89d11d54a59e501536460"
+  },
+  "saved_JSON_input_interval_closed": true,
+  "all_current_configuration_bytes_equal": true,
+  "native_scheme_names": [
+    "Rot-BS & Rot-RIS"
+  ],
+  "native_AO_iterations": 12,
+  "python_AO_iterations": 12,
+  "native_original_AO_relative_improvement": 5.7616876426162665e-06,
+  "python_original_AO_relative_improvement": 5.756358938687541e-06,
+  "AO_saved_utility_rows": [
+    {
+      "index": 0,
+      "native_saved_utility": -9.903933853954719,
+      "python_saved_utility": -9.90393385395472,
+      "native_minus_python": 1.7763568394002505e-15,
+      "same_actual_state_not_asserted": true
+    },
+    {
+      "index": 1,
+      "native_saved_utility": 18.763668891230644,
+      "python_saved_utility": 18.763668891224427,
+      "native_minus_python": 6.217248937900877e-12,
+      "same_actual_state_not_asserted": true
+    },
+    {
+      "index": 2,
+      "native_saved_utility": 18.972687387472597,
+      "python_saved_utility": 18.9726884064128,
+      "native_minus_python": -1.0189402033233819e-06,
+      "same_actual_state_not_asserted": true
+    },
+    {
+      "index": 3,
+      "native_saved_utility": 19.030077982929832,
+      "python_saved_utility": 19.030081904390045,
+      "native_minus_python": -3.921460212552574e-06,
+      "same_actual_state_not_asserted": true
+    },
+    {
+      "index": 4,
+      "native_saved_utility": 19.113735207894596,
+      "python_saved_utility": 19.113741534502278,
+      "native_minus_python": -6.326607682183294e-06,
+      "same_actual_state_not_asserted": true
+    },
+    {
+      "index": 5,
+      "native_saved_utility": 19.177780996693684,
+      "python_saved_utility": 19.177784392421913,
+      "native_minus_python": -3.395728228383632e-06,
+      "same_actual_state_not_asserted": true
+    },
+    {
+      "index": 6,
+      "native_saved_utility": 19.233691372036972,
+      "python_saved_utility": 19.233702740422146,
+      "native_minus_python": -1.1368385173682327e-05,
+      "same_actual_state_not_asserted": true
+    },
+    {
+      "index": 7,
+      "native_saved_utility": 19.295046959601777,
+      "python_saved_utility": 19.295050502445616,
+      "native_minus_python": -3.5428438387441474e-06,
+      "same_actual_state_not_asserted": true
+    },
+    {
+      "index": 8,
+      "native_saved_utility": 19.315727622206083,
+      "python_saved_utility": 19.31572863700211,
+      "native_minus_python": -1.0147960267659073e-06,
+      "same_actual_state_not_asserted": true
+    },
+    {
+      "index": 9,
+      "native_saved_utility": 19.32281733690823,
+      "python_saved_utility": 19.322818313948034,
+      "native_minus_python": -9.770398037289851e-07,
+      "same_actual_state_not_asserted": true
+    },
+    {
+      "index": 10,
+      "native_saved_utility": 19.32478552654765,
+      "python_saved_utility": 19.32478531729405,
+      "native_minus_python": 2.0925359933698928e-07,
+      "same_actual_state_not_asserted": true
+    },
+    {
+      "index": 11,
+      "native_saved_utility": 19.325220505096922,
+      "python_saved_utility": 19.325220008679967,
+      "native_minus_python": 4.964169555421449e-07,
+      "same_actual_state_not_asserted": true
+    },
+    {
+      "index": 12,
+      "native_saved_utility": 19.325331850981097,
+      "python_saved_utility": 19.325331251582906,
+      "native_minus_python": 5.993981915253244e-07,
+      "same_actual_state_not_asserted": true
+    }
+  ],
+  "original_saved_block_rows": [
+    {
+      "AO_iteration": 1,
+      "block": "W",
+      "native_original_saved": {
+        "iterations": 3,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 5.169039359409498e-14,
+        "relative_step": 5.715514002142818e-07
+      },
+      "python_original_saved": {
+        "iterations": 3,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 5.1496068806146983e-14,
+        "relative_step": 5.715514078146389e-07
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 1,
+      "block": "RIS",
+      "native_original_saved": {
+        "iterations": 40,
+        "updates": 39,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "gradient_tolerance",
+        "final_normalized_gradient_norm": 4.680769574149286e-07
+      },
+      "python_original_saved": {
+        "iterations": 40,
+        "updates": 39,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "gradient_tolerance",
+        "final_normalized_gradient_norm": 4.6807707411792797e-07
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 1,
+      "block": "rotation",
+      "native_original_saved": {
+        "iterations": 653,
+        "updates": 652,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "projected_gradient_tolerance",
+        "relative_step": 6.334060020402666e-08,
+        "final_projected_gradient_norm": 9.485876079993644e-07
+      },
+      "python_original_saved": {
+        "iterations": 657,
+        "updates": 656,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "projected_gradient_tolerance",
+        "relative_step": 6.63737163950227e-08,
+        "final_projected_gradient_norm": 9.94767178425089e-07
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 2,
+      "block": "W",
+      "native_original_saved": {
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 3.4019689284123887e-10,
+        "relative_step": 0.12978893598336616
+      },
+      "python_original_saved": {
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 3.401972715214167e-10,
+        "relative_step": 0.12978891263425377
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 2,
+      "block": "RIS",
+      "native_original_saved": {
+        "iterations": 63,
+        "updates": 62,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "gradient_tolerance",
+        "final_normalized_gradient_norm": 8.747151012007117e-07
+      },
+      "python_original_saved": {
+        "iterations": 79,
+        "updates": 78,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "gradient_tolerance",
+        "final_normalized_gradient_norm": 7.951875883036747e-07
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 2,
+      "block": "rotation",
+      "native_original_saved": {
+        "iterations": 810,
+        "updates": 809,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "projected_gradient_tolerance",
+        "relative_step": 3.209118195667672e-08,
+        "final_projected_gradient_norm": 9.810591449788112e-07
+      },
+      "python_original_saved": {
+        "iterations": 852,
+        "updates": 851,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "projected_gradient_tolerance",
+        "relative_step": 3.7261686988529264e-08,
+        "final_projected_gradient_norm": 9.891794634023037e-07
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 3,
+      "block": "W",
+      "native_original_saved": {
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 2.963614612519167e-10,
+        "relative_step": 0.003655390109645717
+      },
+      "python_original_saved": {
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 2.9636125808153813e-10,
+        "relative_step": 0.0036553107471448726
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 3,
+      "block": "RIS",
+      "native_original_saved": {
+        "iterations": 85,
+        "updates": 84,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "gradient_tolerance",
+        "final_normalized_gradient_norm": 7.372361101748119e-07
+      },
+      "python_original_saved": {
+        "iterations": 55,
+        "updates": 54,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "gradient_tolerance",
+        "final_normalized_gradient_norm": 7.433125130396379e-07
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 3,
+      "block": "rotation",
+      "native_original_saved": {
+        "iterations": 463,
+        "updates": 462,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "projected_gradient_tolerance",
+        "relative_step": 2.0447884309263923e-08,
+        "final_projected_gradient_norm": 9.751964902980044e-07
+      },
+      "python_original_saved": {
+        "iterations": 714,
+        "updates": 713,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "projected_gradient_tolerance",
+        "relative_step": 2.840285081899087e-08,
+        "final_projected_gradient_norm": 9.912218625449522e-07
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 4,
+      "block": "W",
+      "native_original_saved": {
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 2.853879656170097e-10,
+        "relative_step": 0.0009865085549875417
+      },
+      "python_original_saved": {
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 2.853808126127278e-10,
+        "relative_step": 0.000986092877035711
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 4,
+      "block": "RIS",
+      "native_original_saved": {
+        "iterations": 56,
+        "updates": 55,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "gradient_tolerance",
+        "final_normalized_gradient_norm": 7.931205827940413e-07
+      },
+      "python_original_saved": {
+        "iterations": 41,
+        "updates": 40,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "gradient_tolerance",
+        "final_normalized_gradient_norm": 6.085694347398953e-07
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 4,
+      "block": "rotation",
+      "native_original_saved": {
+        "iterations": 431,
+        "updates": 430,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "projected_gradient_tolerance",
+        "relative_step": 1.6857653873088465e-08,
+        "final_projected_gradient_norm": 9.762622188067909e-07
+      },
+      "python_original_saved": {
+        "iterations": 386,
+        "updates": 385,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "projected_gradient_tolerance",
+        "relative_step": 1.365316410587719e-08,
+        "final_projected_gradient_norm": 9.712088717925569e-07
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 5,
+      "block": "W",
+      "native_original_saved": {
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 2.706017974821614e-10,
+        "relative_step": 0.0015516616181718993
+      },
+      "python_original_saved": {
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 2.706000350635131e-10,
+        "relative_step": 0.0015516995288958693
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 5,
+      "block": "RIS",
+      "native_original_saved": {
+        "iterations": 749,
+        "updates": 748,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "gradient_tolerance",
+        "final_normalized_gradient_norm": 9.985004867234158e-07
+      },
+      "python_original_saved": {
+        "iterations": 758,
+        "updates": 757,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "gradient_tolerance",
+        "final_normalized_gradient_norm": 9.985428987084285e-07
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 5,
+      "block": "rotation",
+      "native_original_saved": {
+        "iterations": 468,
+        "updates": 467,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "projected_gradient_tolerance",
+        "relative_step": 1.212638128872024e-08,
+        "final_projected_gradient_norm": 9.83503380599233e-07
+      },
+      "python_original_saved": {
+        "iterations": 484,
+        "updates": 483,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "projected_gradient_tolerance",
+        "relative_step": 1.0803452352456462e-08,
+        "final_projected_gradient_norm": 9.932569614258434e-07
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 6,
+      "block": "W",
+      "native_original_saved": {
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 2.644665965493837e-10,
+        "relative_step": 0.0029955867960250325
+      },
+      "python_original_saved": {
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 2.644661792183781e-10,
+        "relative_step": 0.002995948337086229
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 6,
+      "block": "RIS",
+      "native_original_saved": {
+        "iterations": 727,
+        "updates": 726,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "gradient_tolerance",
+        "final_normalized_gradient_norm": 9.413078697356419e-07
+      },
+      "python_original_saved": {
+        "iterations": 737,
+        "updates": 736,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "gradient_tolerance",
+        "final_normalized_gradient_norm": 9.243862381593438e-07
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 6,
+      "block": "rotation",
+      "native_original_saved": {
+        "iterations": 728,
+        "updates": 727,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "projected_gradient_tolerance",
+        "relative_step": 7.99227116655367e-09,
+        "final_projected_gradient_norm": 9.9418864618337e-07
+      },
+      "python_original_saved": {
+        "iterations": 720,
+        "updates": 719,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "projected_gradient_tolerance",
+        "relative_step": 2.893077699699283e-08,
+        "final_projected_gradient_norm": 9.83551548163993e-07
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 7,
+      "block": "W",
+      "native_original_saved": {
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 2.569973535112954e-10,
+        "relative_step": 0.018125779121509374
+      },
+      "python_original_saved": {
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 2.569960933313236e-10,
+        "relative_step": 0.0181094370091264
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 7,
+      "block": "RIS",
+      "native_original_saved": {
+        "iterations": 755,
+        "updates": 754,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "gradient_tolerance",
+        "final_normalized_gradient_norm": 9.868218763061888e-07
+      },
+      "python_original_saved": {
+        "iterations": 469,
+        "updates": 468,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "gradient_tolerance",
+        "final_normalized_gradient_norm": 9.9789564658141e-07
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 7,
+      "block": "rotation",
+      "native_original_saved": {
+        "iterations": 1297,
+        "updates": 1296,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "projected_gradient_tolerance",
+        "relative_step": 6.090997048803953e-09,
+        "final_projected_gradient_norm": 9.8080755762351e-07
+      },
+      "python_original_saved": {
+        "iterations": 1268,
+        "updates": 1267,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "projected_gradient_tolerance",
+        "relative_step": 6.215948648400749e-09,
+        "final_projected_gradient_norm": 9.81315731922289e-07
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 8,
+      "block": "W",
+      "native_original_saved": {
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 2.527281490957837e-10,
+        "relative_step": 0.004174034648584946
+      },
+      "python_original_saved": {
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 2.527269979374368e-10,
+        "relative_step": 0.00417395982456161
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 8,
+      "block": "RIS",
+      "native_original_saved": {
+        "iterations": 149,
+        "updates": 148,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "gradient_tolerance",
+        "final_normalized_gradient_norm": 8.411675016621209e-07
+      },
+      "python_original_saved": {
+        "iterations": 140,
+        "updates": 139,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "gradient_tolerance",
+        "final_normalized_gradient_norm": 9.913029422525884e-07
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 8,
+      "block": "rotation",
+      "native_original_saved": {
+        "iterations": 895,
+        "updates": 894,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "projected_gradient_tolerance",
+        "relative_step": 5.321465351979001e-09,
+        "final_projected_gradient_norm": 9.947988508856677e-07
+      },
+      "python_original_saved": {
+        "iterations": 871,
+        "updates": 870,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "projected_gradient_tolerance",
+        "relative_step": 5.278066698773342e-09,
+        "final_projected_gradient_norm": 9.728607351807653e-07
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 9,
+      "block": "W",
+      "native_original_saved": {
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 2.4738867528080016e-10,
+        "relative_step": 0.0022880543645176256
+      },
+      "python_original_saved": {
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 2.473897658548822e-10,
+        "relative_step": 0.0022879908274571173
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 9,
+      "block": "RIS",
+      "native_original_saved": {
+        "iterations": 35,
+        "updates": 34,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "gradient_tolerance",
+        "final_normalized_gradient_norm": 7.584635135117701e-07
+      },
+      "python_original_saved": {
+        "iterations": 100,
+        "updates": 99,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "gradient_tolerance",
+        "final_normalized_gradient_norm": 9.627624186096034e-07
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 9,
+      "block": "rotation",
+      "native_original_saved": {
+        "iterations": 713,
+        "updates": 712,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "projected_gradient_tolerance",
+        "relative_step": 2.2132291813816834e-08,
+        "final_projected_gradient_norm": 9.948677859874241e-07
+      },
+      "python_original_saved": {
+        "iterations": 681,
+        "updates": 680,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "projected_gradient_tolerance",
+        "relative_step": 6.688381310249198e-09,
+        "final_projected_gradient_norm": 9.721381171545696e-07
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 10,
+      "block": "W",
+      "native_original_saved": {
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 2.4525557750557715e-10,
+        "relative_step": 0.0014736385020179628
+      },
+      "python_original_saved": {
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 2.452566682707683e-10,
+        "relative_step": 0.001473310103421854
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 10,
+      "block": "RIS",
+      "native_original_saved": {
+        "iterations": 34,
+        "updates": 33,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "gradient_tolerance",
+        "final_normalized_gradient_norm": 9.773372341656315e-07
+      },
+      "python_original_saved": {
+        "iterations": 39,
+        "updates": 38,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "gradient_tolerance",
+        "final_normalized_gradient_norm": 7.090476593161389e-07
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 10,
+      "block": "rotation",
+      "native_original_saved": {
+        "iterations": 637,
+        "updates": 636,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "projected_gradient_tolerance",
+        "relative_step": 5.758943051968744e-09,
+        "final_projected_gradient_norm": 9.950565630812284e-07
+      },
+      "python_original_saved": {
+        "iterations": 682,
+        "updates": 681,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "projected_gradient_tolerance",
+        "relative_step": 5.314138951722173e-09,
+        "final_projected_gradient_norm": 9.771819990429121e-07
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 11,
+      "block": "W",
+      "native_original_saved": {
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 2.442896936633417e-10,
+        "relative_step": 0.0012655394673929624
+      },
+      "python_original_saved": {
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 2.442904316779162e-10,
+        "relative_step": 0.0012655049618865528
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 11,
+      "block": "RIS",
+      "native_original_saved": {
+        "iterations": 62,
+        "updates": 61,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "gradient_tolerance",
+        "final_normalized_gradient_norm": 9.600950238929688e-07
+      },
+      "python_original_saved": {
+        "iterations": 49,
+        "updates": 48,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "gradient_tolerance",
+        "final_normalized_gradient_norm": 6.794347245763492e-07
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 11,
+      "block": "rotation",
+      "native_original_saved": {
+        "iterations": 517,
+        "updates": 516,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "projected_gradient_tolerance",
+        "relative_step": 4.645482186547997e-09,
+        "final_projected_gradient_norm": 9.976627252261764e-07
+      },
+      "python_original_saved": {
+        "iterations": 576,
+        "updates": 575,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "projected_gradient_tolerance",
+        "relative_step": 4.527554645963296e-09,
+        "final_projected_gradient_norm": 9.95346440605948e-07
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 12,
+      "block": "W",
+      "native_original_saved": {
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 2.439161510401356e-10,
+        "relative_step": 0.0012036704053703595
+      },
+      "python_original_saved": {
+        "iterations": 1,
+        "iteration_budget": 10000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "relative_objective_tolerance",
+        "relative_objective_improvement": 2.4391670882033917e-10,
+        "relative_step": 0.001203677619604043
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 12,
+      "block": "RIS",
+      "native_original_saved": {
+        "iterations": 44,
+        "updates": 43,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "gradient_tolerance",
+        "final_normalized_gradient_norm": 8.150002969800392e-07
+      },
+      "python_original_saved": {
+        "iterations": 47,
+        "updates": 46,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "gradient_tolerance",
+        "final_normalized_gradient_norm": 6.554586989118875e-07
+      },
+      "different_trajectories_not_same_operands": true
+    },
+    {
+      "AO_iteration": 12,
+      "block": "rotation",
+      "native_original_saved": {
+        "iterations": 540,
+        "updates": 539,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "projected_gradient_tolerance",
+        "relative_step": 4.957677726786729e-09,
+        "final_projected_gradient_norm": 9.924858742444432e-07
+      },
+      "python_original_saved": {
+        "iterations": 557,
+        "updates": 556,
+        "iteration_budget": 5000,
+        "budget_exhausted": false,
+        "converged": true,
+        "capped_unconverged": false,
+        "termination_reason": "projected_gradient_tolerance",
+        "relative_step": 4.545641246357706e-09,
+        "final_projected_gradient_norm": 9.991388980710406e-07
+      },
+      "different_trajectories_not_same_operands": true
+    }
+  ],
+  "final_saved_metrics": {
+    "utility": {
+      "native": 19.325331850981097,
+      "python": 19.325331251582906,
+      "native_minus_python": 5.993981915253244e-07
+    },
+    "rate": {
+      "native": 29.32532040416,
+      "python": 29.32531980417826,
+      "native_minus_python": 5.999817389579221e-07
+    },
+    "nmse": {
+      "native": 0.9999988553178902,
+      "python": 0.9999988552595355,
+      "native_minus_python": 5.835476546423024e-11
+    },
+    "iota": {
+      "native": 64316725.65278947,
+      "python": 64315097.33728898,
+      "native_minus_python": 1628.3155004903674
+    }
+  },
+  "original_checks_not_independent_scientific_PASS": {
+    "native": {
+      "status": "executed",
+      "converged": true,
+      "inner_all_converged": true,
+      "full_converged": true,
+      "power_feasible": true,
+      "unit_modulus_error": 2.220446049250313e-16,
+      "rotation_feasible": true
+    },
+    "python": {
+      "status": "executed",
+      "converged": true,
+      "inner_all_converged": true,
+      "full_converged": true,
+      "power_feasible": true,
+      "unit_modulus_error": 2.220446049250313e-16,
+      "rotation_feasible": true
+    }
+  },
+  "known_existing_Python_final_joint_stationarity_pass": false,
+  "native_independent_MP_and_final_joint_stationarity_pending": true,
+  "saved_utility_agreement_not_same_state_physics_or_optimized_equality": true,
+  "same_state_optimized_equality_reference_or_fullpaper_PASS": false,
+  "new_objective_gradient_MP_optimizer_MC_RNG_or_trajectory_calls": 0
+}

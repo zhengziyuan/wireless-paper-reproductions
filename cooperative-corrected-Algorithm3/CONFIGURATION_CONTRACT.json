@@ -1,0 +1,46 @@
+{
+  "kind": "documentation_only_not_an_executable_configuration",
+  "required_external_configuration": "Complete original schema and explicit settings, source/input bound at execution",
+  "selected_historical_case_configuration_SHA256": "0bac4efeba390b8b99fe80f31ae80c6eb6561100741b744a21ee5b314ce85971",
+  "values": {
+    "monte_carlo_realizations": 1000,
+    "qt_max_iterations": 200,
+    "ao_max_iterations": 200,
+    "rmo_max_iterations": 100000,
+    "relative_tolerance": 0.0001,
+    "gradient_tolerance": 1e-06,
+    "solver_objective_tolerance": 1e-05,
+    "solver_primal_relative_tolerance": 1e-05,
+    "qt_bound_tolerance": 1e-05,
+    "smoothing_initial": 1,
+    "smoothing_final": 0.001,
+    "smoothing_max_repeats": 50,
+    "smoothing_progress_tolerance": 1e-08,
+    "solver": "CLARABEL",
+    "solver_options": {}
+  },
+  "values_origin": "Disclosed reconstruction controls from immutable case088; not claimed recovered author solver/seed/budgets",
+  "same_input_numerical_attempt_predicates_and_precision_unchanged": true,
+  "no_shrinking_of_QT_AO_RMO_or_moment_budgets": true,
+  "saved_only_MC1000_means_explicit_existing_moment_recipe_reuse_not_new_draws": true,
+  "runnable_complete_example": {
+    "path": "examples/Fig13-A-full-configuration.json",
+    "SHA256": "0bac4efeba390b8b99fe80f31ae80c6eb6561100741b744a21ee5b314ce85971",
+    "origin": "Actual historical full A input, verified by existing selected-configuration import/input IO proof",
+    "first_new_portable_numerical_use_pending": true,
+    "author_unreported_controls_remain_reconstructed": true
+  },
+  "actual_Python_C_reconstruction": {
+    "power_W": 50,
+    "central_latitude_deg": 0,
+    "satellite_UPA_shape": [
+      6,
+      8
+    ],
+    "configuration_SHA256": "c680d4d50de42647fb8eaf782e9c737b2991d705e947f2f0369e788a2b51ce3a",
+    "Fig12_single_satellite_fairness_is_separate": {
+      "power_W": 150,
+      "latitude_deg": 1.25
+    }
+  }
+}

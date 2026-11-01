@@ -1,0 +1,91 @@
+{
+  "scope": "One actual previously failed full-size AP QT input; no reduced system or new nonconvex figure",
+  "input_sha256": "b59b5869dcf271169996ac07700b8e2e4baed8fcd5f6e4ef58abbce4b1baec47",
+  "native_output_sha256": "c3df04d2db131676bfd4c5bcd6a3667a87aaf39c0626c73884acfa3c311554b6",
+  "independent_Python_core_sha256": "fdbe81b3d19e1c1aa62a015969017f24accdcdb6e7a709a65540576b49f0abf2",
+  "native_AP_provider_sha256": "beea3adedcee6d582043bb62853fca5454939d11305a60331f2e2ae40db12aaa",
+  "dimensions": {
+    "satellites": 3,
+    "feeds_per_satellite": 16,
+    "users": 2,
+    "ground_terminals": 1
+  },
+  "MP_digits": 80,
+  "old_native_solver_failure_retained": true,
+  "native_solver_status": "Solved",
+  "native_reported_primal_relative_violation": 0.0,
+  "original_before_minimum_sinr": 1.3781448098611555,
+  "native_after_minimum_sinr": 14.874265809309973,
+  "native_surrogate_minimum_sinr": 13.055821713756504,
+  "independent_Python_surrogate_minimum_sinr": 13.055821710511841,
+  "absolute_independent_optimum_difference": 3.2446632047822277e-09,
+  "physical_field_comparisons": [
+    {
+      "field": "sinr",
+      "index": 0,
+      "absolute_error": "1.03791893360980831361635189937e-13",
+      "allowance": "0.00000000248742658093099750355028981429",
+      "passed": true
+    },
+    {
+      "field": "sinr",
+      "index": 1,
+      "absolute_error": "5.77581404169478655079185567673e-15",
+      "allowance": "0.00000000401619306858240325310210524475",
+      "passed": true
+    },
+    {
+      "field": "denominator",
+      "index": 0,
+      "absolute_error": "9.15275824786458886712831767958e-15",
+      "allowance": "0.00000000113437200599304510284575408017",
+      "passed": true
+    },
+    {
+      "field": "denominator",
+      "index": 1,
+      "absolute_error": "2.60223774592340438487813324408e-16",
+      "allowance": "0.00000000134513885431066371632402484214",
+      "passed": true
+    },
+    {
+      "field": "satellite_power",
+      "index": 0,
+      "absolute_error": "1.03180087054930213036628059357e-17",
+      "allowance": "0.00000000101332314174747454834073019511",
+      "passed": true
+    },
+    {
+      "field": "satellite_power",
+      "index": 1,
+      "absolute_error": "2.53798044182639421941325994882e-63",
+      "allowance": "0.00000000100000000000000006228159145778",
+      "passed": true
+    },
+    {
+      "field": "satellite_power",
+      "index": 2,
+      "absolute_error": "6.09269184352142302271739077626e-17",
+      "allowance": "0.00000000109999999999999708443441335039",
+      "passed": true
+    },
+    {
+      "field": "gt_interference",
+      "index": 0,
+      "absolute_error": "4.81265839955906466504735398996e-19",
+      "allowance": "0.00000000100602559586073468388328651009",
+      "passed": true
+    }
+  ],
+  "checks": {
+    "all_native_metrics_match_independent_MP80": true,
+    "native_original_physical_constraints_pass": true,
+    "python_original_physical_constraints_pass": true,
+    "native_original_QT_bound_pass": true,
+    "native_original_minimum_sinr_nondecrease": true,
+    "independent_original_Python_same_QT_optimum_agrees": true
+  },
+  "all_checks_pass": true,
+  "original_model_or_QT_problem_or_gate_changed": false,
+  "complete_nonconvex_case_or_full183_pass": false
+}

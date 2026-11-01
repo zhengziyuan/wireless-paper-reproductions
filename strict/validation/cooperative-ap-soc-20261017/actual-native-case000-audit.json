@@ -1,0 +1,752 @@
+{
+  "scope": "One complete actual saved native original case; all8 states and all saved phase/QT endpoints",
+  "result_sha256": "cd1727991714bf139bf5d4b378e12bc9c9a99fcb800641a79f008a652cda6354",
+  "state_sha256": "8af292783a96bf5466b54fbc13ed5251135318ad3b6d614a939f4bce83795152",
+  "dimensions": {
+    "J": 3,
+    "U": 2,
+    "N": 16,
+    "M": 25
+  },
+  "final_states": [
+    {
+      "scheme": "AP-NoRIS",
+      "comparisons": {
+        "sinr": {
+          "passed": true,
+          "maximum_error": 5.551115123125783e-17
+        },
+        "denominator": {
+          "passed": true,
+          "maximum_error": 0.0
+        },
+        "satellite_power": {
+          "passed": true,
+          "maximum_error": 6.938893903907228e-18
+        },
+        "gt_interference": {
+          "passed": true,
+          "maximum_error": 6.938893903907228e-18
+        }
+      },
+      "physical_constraints_pass": true,
+      "phase_domain_pass": true,
+      "passed": true
+    },
+    {
+      "scheme": "AP-AO",
+      "comparisons": {
+        "sinr": {
+          "passed": true,
+          "maximum_error": 0.0
+        },
+        "denominator": {
+          "passed": true,
+          "maximum_error": 0.0
+        },
+        "satellite_power": {
+          "passed": true,
+          "maximum_error": 1.1102230246251565e-16
+        },
+        "gt_interference": {
+          "passed": true,
+          "maximum_error": 6.938893903907228e-18
+        }
+      },
+      "physical_constraints_pass": true,
+      "phase_domain_pass": true,
+      "passed": true
+    },
+    {
+      "scheme": "MR-S-NoRIS",
+      "comparisons": {
+        "sinr": {
+          "passed": true,
+          "maximum_error": 1.1102230246251565e-16
+        },
+        "denominator": {
+          "passed": true,
+          "maximum_error": 2.220446049250313e-16
+        },
+        "satellite_power": {
+          "passed": true,
+          "maximum_error": 2.7755575615628914e-17
+        },
+        "gt_interference": {
+          "passed": true,
+          "maximum_error": 6.938893903907228e-18
+        }
+      },
+      "physical_constraints_pass": true,
+      "phase_domain_pass": true,
+      "passed": true
+    },
+    {
+      "scheme": "MR-S-PA",
+      "comparisons": {
+        "sinr": {
+          "passed": true,
+          "maximum_error": 2.3092638912203256e-14
+        },
+        "denominator": {
+          "passed": true,
+          "maximum_error": 1.4210854715202004e-14
+        },
+        "satellite_power": {
+          "passed": true,
+          "maximum_error": 2.7755575615628914e-17
+        },
+        "gt_interference": {
+          "passed": true,
+          "maximum_error": 6.938893903907228e-18
+        }
+      },
+      "physical_constraints_pass": true,
+      "phase_domain_pass": true,
+      "passed": true
+    },
+    {
+      "scheme": "MR-S-TS",
+      "comparisons": {
+        "sinr": {
+          "passed": true,
+          "maximum_error": 3.9968028886505635e-15
+        },
+        "denominator": {
+          "passed": true,
+          "maximum_error": 3.9968028886505635e-15
+        },
+        "satellite_power": {
+          "passed": true,
+          "maximum_error": 2.7755575615628914e-17
+        },
+        "gt_interference": {
+          "passed": true,
+          "maximum_error": 0.0
+        }
+      },
+      "physical_constraints_pass": true,
+      "phase_domain_pass": true,
+      "passed": true
+    },
+    {
+      "scheme": "MR-TTS-NoRIS",
+      "comparisons": {
+        "sinr": {
+          "passed": true,
+          "maximum_error": 5.551115123125783e-17
+        },
+        "denominator": {
+          "passed": true,
+          "maximum_error": 2.220446049250313e-16
+        },
+        "satellite_power": {
+          "passed": true,
+          "maximum_error": 1.925929944387236e-34
+        },
+        "gt_interference": {
+          "passed": true,
+          "maximum_error": 6.938893903907228e-18
+        }
+      },
+      "physical_constraints_pass": true,
+      "phase_domain_pass": true,
+      "passed": true
+    },
+    {
+      "scheme": "MR-TTS-PA",
+      "comparisons": {
+        "sinr": {
+          "passed": true,
+          "maximum_error": 3.019806626980426e-14
+        },
+        "denominator": {
+          "passed": true,
+          "maximum_error": 1.3322676295501878e-14
+        },
+        "satellite_power": {
+          "passed": true,
+          "maximum_error": 1.3877787807814457e-17
+        },
+        "gt_interference": {
+          "passed": true,
+          "maximum_error": 6.938893903907228e-18
+        }
+      },
+      "physical_constraints_pass": true,
+      "phase_domain_pass": true,
+      "passed": true
+    },
+    {
+      "scheme": "MR-TTS-TS",
+      "comparisons": {
+        "sinr": {
+          "passed": true,
+          "maximum_error": 6.217248937900877e-15
+        },
+        "denominator": {
+          "passed": true,
+          "maximum_error": 4.884981308350689e-15
+        },
+        "satellite_power": {
+          "passed": true,
+          "maximum_error": 7.703719777548943e-34
+        },
+        "gt_interference": {
+          "passed": true,
+          "maximum_error": 6.938893903907228e-18
+        }
+      },
+      "physical_constraints_pass": true,
+      "phase_domain_pass": true,
+      "passed": true
+    }
+  ],
+  "phase_endpoints": [
+    {
+      "index": 0,
+      "gradient_error": 2.070575438873536e-15,
+      "criterion_error": 1.0658141036401503e-14,
+      "gradient_norm": 8.44104157455602e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 1,
+      "gradient_error": 1.470316213804733e-14,
+      "criterion_error": 7.105427357601002e-15,
+      "gradient_norm": 7.237169737337313e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 2,
+      "gradient_error": 1.0947746200237648e-14,
+      "criterion_error": 4.263256414560601e-14,
+      "gradient_norm": 6.991838959415462e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 3,
+      "gradient_error": 1.3847466188405426e-14,
+      "criterion_error": 2.4868995751603507e-14,
+      "gradient_norm": 8.816348683636665e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 4,
+      "gradient_error": 1.5892394381915017e-14,
+      "criterion_error": 2.4868995751603507e-14,
+      "gradient_norm": 4.779432917921379e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 5,
+      "gradient_error": 2.017371113681243e-14,
+      "criterion_error": 1.7763568394002505e-14,
+      "gradient_norm": 9.922356906488462e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 6,
+      "gradient_error": 1.7597007284140454e-14,
+      "criterion_error": 0.0,
+      "gradient_norm": 6.530904879314231e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 7,
+      "gradient_error": 4.4408920891202023e-16,
+      "criterion_error": 4.440892098500626e-16,
+      "gradient_norm": 8.517543510182479e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 8,
+      "gradient_error": 4.4408920891202023e-16,
+      "criterion_error": 4.440892098500626e-16,
+      "gradient_norm": 8.517543510182479e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 9,
+      "gradient_error": 3.989863992293411e-16,
+      "criterion_error": 1.7763568394002505e-15,
+      "gradient_norm": 9.925260242889905e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 10,
+      "gradient_error": 3.989863992293411e-16,
+      "criterion_error": 1.7763568394002505e-15,
+      "gradient_norm": 9.925260242889905e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 11,
+      "gradient_error": 2.810252009696094e-16,
+      "criterion_error": 8.881784197001252e-16,
+      "gradient_norm": 8.940307437697101e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 12,
+      "gradient_error": 2.810252009696094e-16,
+      "criterion_error": 8.881784197001252e-16,
+      "gradient_norm": 8.940307437697101e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 13,
+      "gradient_error": 5.898059849463227e-16,
+      "criterion_error": 1.7763568394002505e-15,
+      "gradient_norm": 9.770727867610624e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 14,
+      "gradient_error": 5.898059849463227e-16,
+      "criterion_error": 1.7763568394002505e-15,
+      "gradient_norm": 9.770727867610624e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 15,
+      "gradient_error": 1.9047263773031943e-14,
+      "criterion_error": 4.440892098500626e-15,
+      "gradient_norm": 9.920743194610558e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 16,
+      "gradient_error": 1.9047263773031943e-14,
+      "criterion_error": 4.440892098500626e-15,
+      "gradient_norm": 9.920743194610558e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 17,
+      "gradient_error": 1.2882056523796858e-14,
+      "criterion_error": 8.881784197001252e-16,
+      "gradient_norm": 8.247953567638968e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 18,
+      "gradient_error": 1.2882056523796858e-14,
+      "criterion_error": 8.881784197001252e-16,
+      "gradient_norm": 8.247953567638968e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 19,
+      "gradient_error": 7.804867862606818e-14,
+      "criterion_error": 1.7763568394002505e-15,
+      "gradient_norm": 9.059225199393156e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 20,
+      "gradient_error": 7.804867862606818e-14,
+      "criterion_error": 1.7763568394002505e-15,
+      "gradient_norm": 9.059225199393156e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 21,
+      "gradient_error": 3.6082248840671383e-16,
+      "criterion_error": 8.881784197001252e-16,
+      "gradient_norm": 9.787796748725598e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 22,
+      "gradient_error": 3.6082248840671383e-16,
+      "criterion_error": 8.881784197001252e-16,
+      "gradient_norm": 9.787796748725598e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 23,
+      "gradient_error": 1.0408687800978633e-13,
+      "criterion_error": 1.7763568394002505e-15,
+      "gradient_norm": 9.987900076967337e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 24,
+      "gradient_error": 1.0408687800978633e-13,
+      "criterion_error": 1.7763568394002505e-15,
+      "gradient_norm": 9.987900076967337e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 25,
+      "gradient_error": 6.259576190656244e-13,
+      "criterion_error": 0.0,
+      "gradient_norm": 8.816823951685446e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 26,
+      "gradient_error": 6.259576190656244e-13,
+      "criterion_error": 0.0,
+      "gradient_norm": 8.816823951685446e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 27,
+      "gradient_error": 4.440892096629568e-16,
+      "criterion_error": 1.7763568394002505e-15,
+      "gradient_norm": 9.92386322386585e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 28,
+      "gradient_error": 4.440892096629568e-16,
+      "criterion_error": 1.7763568394002505e-15,
+      "gradient_norm": 9.92386322386585e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 29,
+      "gradient_error": 8.326672677230284e-16,
+      "criterion_error": 1.7763568394002505e-15,
+      "gradient_norm": 9.963405178400555e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 30,
+      "gradient_error": 8.326672677230284e-16,
+      "criterion_error": 1.7763568394002505e-15,
+      "gradient_norm": 9.963405178400555e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 31,
+      "gradient_error": 1.3947176749358758e-15,
+      "criterion_error": 0.0,
+      "gradient_norm": 9.906457543118312e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 32,
+      "gradient_error": 1.3947176749358758e-15,
+      "criterion_error": 0.0,
+      "gradient_norm": 9.906457543118312e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 33,
+      "gradient_error": 2.7131075164726172e-15,
+      "criterion_error": 8.881784197001252e-16,
+      "gradient_norm": 9.88697927956792e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 34,
+      "gradient_error": 2.7131075164726172e-15,
+      "criterion_error": 8.881784197001252e-16,
+      "gradient_norm": 9.88697927956792e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 35,
+      "gradient_error": 5.773159728050279e-15,
+      "criterion_error": 0.0,
+      "gradient_norm": 9.844973579044799e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 36,
+      "gradient_error": 5.773159728050279e-15,
+      "criterion_error": 0.0,
+      "gradient_norm": 9.844973579044799e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 37,
+      "gradient_error": 1.1386724895887598e-14,
+      "criterion_error": 8.881784197001252e-16,
+      "gradient_norm": 9.806228888762242e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 38,
+      "gradient_error": 1.1386724895887598e-14,
+      "criterion_error": 8.881784197001252e-16,
+      "gradient_norm": 9.806228888762242e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 39,
+      "gradient_error": 2.9143353874084304e-16,
+      "criterion_error": 0.0,
+      "gradient_norm": 9.636493708984933e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 40,
+      "gradient_error": 2.9143353874084304e-16,
+      "criterion_error": 0.0,
+      "gradient_norm": 9.636493708984933e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 41,
+      "gradient_error": 4.58383331292339e-14,
+      "criterion_error": 8.881784197001252e-16,
+      "gradient_norm": 9.984210885141961e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 42,
+      "gradient_error": 4.58383331292339e-14,
+      "criterion_error": 8.881784197001252e-16,
+      "gradient_norm": 9.984210885141961e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 43,
+      "gradient_error": 2.77555756906103e-16,
+      "criterion_error": 0.0,
+      "gradient_norm": 9.978588274370087e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 44,
+      "gradient_error": 2.77555756906103e-16,
+      "criterion_error": 0.0,
+      "gradient_norm": 9.978588274370087e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 45,
+      "gradient_error": 1.816879979800002e-13,
+      "criterion_error": 1.7763568394002505e-15,
+      "gradient_norm": 9.653346992547474e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    },
+    {
+      "index": 46,
+      "gradient_error": 1.816879979800002e-13,
+      "criterion_error": 1.7763568394002505e-15,
+      "gradient_norm": 9.653346992547474e-07,
+      "strict_original_stop_pass": true,
+      "passed": true
+    }
+  ],
+  "QT_candidates": [
+    {
+      "index": 0,
+      "kind": "ap_qt_update",
+      "reported_candidate_physics_consistent": true
+    },
+    {
+      "index": 1,
+      "kind": "ap_qt_update",
+      "reported_candidate_physics_consistent": true
+    },
+    {
+      "index": 2,
+      "kind": "ap_qt_update",
+      "reported_candidate_physics_consistent": true
+    },
+    {
+      "index": 3,
+      "kind": "ap_qt_update",
+      "reported_candidate_physics_consistent": true
+    },
+    {
+      "index": 4,
+      "kind": "ap_qt_update",
+      "reported_candidate_physics_consistent": true
+    },
+    {
+      "index": 5,
+      "kind": "ap_qt_update",
+      "reported_candidate_physics_consistent": true
+    },
+    {
+      "index": 6,
+      "kind": "ap_qt_update",
+      "reported_candidate_physics_consistent": true
+    },
+    {
+      "index": 7,
+      "kind": "ap_qt_update",
+      "reported_candidate_physics_consistent": true
+    },
+    {
+      "index": 8,
+      "kind": "ap_qt_update",
+      "reported_candidate_physics_consistent": true
+    },
+    {
+      "index": 9,
+      "kind": "mr_qt_update",
+      "reported_candidate_physics_consistent": true
+    },
+    {
+      "index": 10,
+      "kind": "mr_qt_update",
+      "reported_candidate_physics_consistent": true
+    },
+    {
+      "index": 11,
+      "kind": "mr_qt_update",
+      "reported_candidate_physics_consistent": true
+    },
+    {
+      "index": 12,
+      "kind": "mr_qt_update",
+      "reported_candidate_physics_consistent": true
+    },
+    {
+      "index": 13,
+      "kind": "mr_qt_update",
+      "reported_candidate_physics_consistent": true
+    },
+    {
+      "index": 14,
+      "kind": "mr_qt_update",
+      "reported_candidate_physics_consistent": true
+    },
+    {
+      "index": 15,
+      "kind": "mr_qt_update",
+      "reported_candidate_physics_consistent": true
+    },
+    {
+      "index": 16,
+      "kind": "mr_qt_update",
+      "reported_candidate_physics_consistent": true
+    },
+    {
+      "index": 17,
+      "kind": "mr_qt_update",
+      "reported_candidate_physics_consistent": true
+    },
+    {
+      "index": 18,
+      "kind": "mr_qt_update",
+      "reported_candidate_physics_consistent": true
+    },
+    {
+      "index": 19,
+      "kind": "mr_qt_update",
+      "reported_candidate_physics_consistent": true
+    },
+    {
+      "index": 20,
+      "kind": "mr_qt_update",
+      "reported_candidate_physics_consistent": true
+    },
+    {
+      "index": 21,
+      "kind": "mr_qt_update",
+      "reported_candidate_physics_consistent": true
+    },
+    {
+      "index": 22,
+      "kind": "mr_qt_update",
+      "reported_candidate_physics_consistent": true
+    },
+    {
+      "index": 23,
+      "kind": "mr_qt_update",
+      "reported_candidate_physics_consistent": true
+    },
+    {
+      "index": 24,
+      "kind": "mr_qt_update",
+      "reported_candidate_physics_consistent": true
+    },
+    {
+      "index": 25,
+      "kind": "mr_qt_update",
+      "reported_candidate_physics_consistent": true
+    },
+    {
+      "index": 26,
+      "kind": "mr_qt_update",
+      "reported_candidate_physics_consistent": true
+    },
+    {
+      "index": 27,
+      "kind": "mr_qt_update",
+      "reported_candidate_physics_consistent": true
+    },
+    {
+      "index": 28,
+      "kind": "mr_qt_update",
+      "reported_candidate_physics_consistent": true
+    },
+    {
+      "index": 29,
+      "kind": "mr_qt_update",
+      "reported_candidate_physics_consistent": true
+    },
+    {
+      "index": 30,
+      "kind": "mr_qt_update",
+      "reported_candidate_physics_consistent": true
+    }
+  ],
+  "checks": {
+    "producer_original_gates_pass": true,
+    "complete_saved_populations": true,
+    "all8_independent_physical_states_pass": true,
+    "all_actual_phase_endpoints_and_original_stops_pass": true,
+    "all_saved_QT_candidate_physics_match": true,
+    "original1000_moment_draw_count": true,
+    "original_configuration_and_all_numerical_outputs_unchanged_by_recording": true
+  },
+  "all_finite_precision_checks_pass": true,
+  "independent_full_MC_draw_replay_or_MP80_for_new_phase_contexts": false,
+  "full183_or_original_reference_pass": false
+}

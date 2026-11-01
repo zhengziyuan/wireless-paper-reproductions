@@ -1,0 +1,65 @@
+{
+  "scope": "original_full_dimension_analytic_derivative_contraction_component_audit_NOT_full_reproduction",
+  "dimensions": {
+    "J": 3,
+    "U": 2,
+    "N": 16,
+    "M": 25,
+    "K": 1
+  },
+  "cases": [
+    {
+      "kappa_leo_db": 0,
+      "checks": [
+        {
+          "scheme": "MR-S",
+          "value_error": 0.0,
+          "gradient_relative_error": 3.8332335417084355e-20,
+          "finite_difference_relative_error_all50": 1.2382558628627749e-12
+        },
+        {
+          "scheme": "MR-TTS",
+          "value_error": 0.0,
+          "gradient_relative_error": 3.946555478945572e-19,
+          "finite_difference_relative_error_all50": 1.7220241481678486e-12
+        },
+        {
+          "scheme": "AP",
+          "value_error": 1.0164395367051604e-20,
+          "gradient_relative_error": 3.5936564453516584e-21,
+          "finite_difference_relative_error_all50": 1.0678887414378602e-15
+        }
+      ],
+      "passed": true
+    },
+    {
+      "kappa_leo_db": 20,
+      "checks": [
+        {
+          "scheme": "MR-S",
+          "value_error": 0.0,
+          "gradient_relative_error": 3.030437198788175e-20,
+          "finite_difference_relative_error_all50": 1.4794406476802135e-12
+        },
+        {
+          "scheme": "MR-TTS",
+          "value_error": 0.0,
+          "gradient_relative_error": 3.543312047858525e-19,
+          "finite_difference_relative_error_all50": 1.6373622098260683e-12
+        },
+        {
+          "scheme": "AP",
+          "value_error": 1.6940658945086007e-21,
+          "gradient_relative_error": 4.5614120180372746e-21,
+          "finite_difference_relative_error_all50": 2.136988739990294e-15
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "all_passed": true,
+  "full_reproduction_pass": false,
+  "elapsed_seconds": 2.7339835000166204,
+  "executed_source_sha256": "45298c4f9037663cc33f67533f0727fc36f14a70c208927816375efca32b29f3",
+  "fixture_sha256": "a698a4b8d8b342f6d4b59c19a59ea1c75a3162d9f11260894854e22bda0e2124"
+}

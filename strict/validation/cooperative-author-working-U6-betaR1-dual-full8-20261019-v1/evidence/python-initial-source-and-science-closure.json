@@ -1,0 +1,247 @@
+{
+  "schema": "actual-new-U6-trusted-raw-recording-existing-saved-stage-source-and-outcome-v1",
+  "stage": "initial",
+  "original_stage_entry": "local-source/ea702a8a34f5/audit_new_power24_TS_initial_incumbent_source_dataflow_MP_v1.py",
+  "original_stage_SHA256": "aaabcd13eaf4ab146df93b88e5a11cf10dc86158e6ddd6992feb721d9d73ba63",
+  "exact_host_source_edits": [],
+  "exact_whole_original_stage_source_inverse": true,
+  "frozen_science_formulas_thresholds_precision_and_population_loops_unchanged": true,
+  "raw_loader_binding": {
+    "schema": "actual-trusted-owned-U6-new-recording-loader-original-dict-and-array-bits-v1",
+    "admission": {
+      "path": "local-source/80b369cfeaad/ROOT_ACTUAL_NEW_U6_CLOSED_RECORDING_SAVED_SCIENCE_ADMISSION_V1.json",
+      "SHA256": "0cc05906413f47aee68c0f4b4c38f33308009b4cd772ad8efed0fe5473d4c506",
+      "bytes": 2655
+    },
+    "closed_metadata": {
+      "capture_plan": {
+        "path": "local-source/b32fa10ff1bf/PREPARED_NEW_OPTIMIZATION_U6_FULL8_RECORDING_RECAPTURE_WITH_EXACT_OLD1000_REUSE_PLAN_V2.json",
+        "SHA256": "4dab9b41d8e7853bc024910ce1da5f98b54d90802cd0544f9ed853fdba3c7975",
+        "bytes": 29546
+      },
+      "recorded_result": {
+        "path": "local-source/3a6687d285e2/case-python-recorded.json",
+        "SHA256": "f853f72bd17320722c35b71bd2289fa9801924ab0a7a82cc559211af005eaf18",
+        "bytes": 403263
+      },
+      "producer_journal": {
+        "path": "local-source/612a569132ce/cooperative-author-U6-missing-recording-recapture-v1-job-actual-owned-process.json",
+        "SHA256": "793fdf01ad2b6f356b38ecbf708ba85f4f390bd0d2d0978a3e46c025e895f4cc",
+        "bytes": 25934
+      },
+      "recapture_outcome": {
+        "path": "local-source/b368019392cf/ACTUAL_NEW_OPTIMIZATION_RECAPTURE_U6_FULL8_WITH_EXACT_OLD_MC_REUSE_OUTCOME_V1.json",
+        "SHA256": "f36c33cab7aeb3a51509b3b26502849ae82c56898ddba73638c41c1cee12519c",
+        "bytes": 22751
+      },
+      "transport_outcome": {
+        "path": "local-source/a0cb1c1f49d6/actual-python-recording.mat.transport-outcome.json",
+        "SHA256": "4d9a5cc918043ff6a4d1af34c2df70ebfe3fb5c70803a1614b6fd1a863c1838c",
+        "bytes": 610
+      }
+    },
+    "MAT": {
+      "path": "local-source/426d87c8d6c1/actual-python-recording.mat",
+      "bytes": 6765599,
+      "SHA256": "60aecb7aac223b3b0c45a4d96c03f3924200a445a425265c97ae265c2f4ac739"
+    },
+    "authoritative_raw": {
+      "path": "local-source/eba65bf06733/actual-python-recording.mat.full-unaltered-recording-before-MAT.pickle",
+      "bytes": 9976064,
+      "SHA256": "2bc0a333ba7c7d4b44db868990b9cfaa5bf69ee94d5a3989c0c0c7209d2ac22f"
+    },
+    "reversible_MAT_codebook": {
+      "path": "local-source/b6a28060a6d1/actual-python-recording.mat.reversible-field-and-None-codec.json",
+      "SHA256": "bc033137bd8f6c1dd481cdaaaefa0923d0282e65d983e18cde50db0e7a3bbfc6",
+      "bytes": 567
+    },
+    "actual_original_canonical_array_rows": [
+      {
+        "field": "d_mean",
+        "dtype": "<c16",
+        "shape": [
+          3,
+          6,
+          16
+        ],
+        "column_major_raw_SHA256": "3db64b0bf78ebb21a9d8787ff803a22d7c47d3842a3ebe3b512fa27da00d5319",
+        "actual_original_bits_exact": true
+      },
+      {
+        "field": "d_var",
+        "dtype": "<f8",
+        "shape": [
+          3,
+          6
+        ],
+        "column_major_raw_SHA256": "336ee9d03bf94ae9f2595e077fce41017f177ffbe557484c2e68a0b1f7b95154",
+        "actual_original_bits_exact": true
+      },
+      {
+        "field": "G_mean",
+        "dtype": "<c16",
+        "shape": [
+          3,
+          6,
+          16,
+          25
+        ],
+        "column_major_raw_SHA256": "000cb68c94a2b250814dfb60505133df08912cd765480559a3c54c89efed67a6",
+        "actual_original_bits_exact": true
+      },
+      {
+        "field": "G_var",
+        "dtype": "<f8",
+        "shape": [
+          3,
+          6
+        ],
+        "column_major_raw_SHA256": "cc5326d3d39a300072c865d1fca8fae7f2bb89ef67ede5308566061b765fc1a4",
+        "actual_original_bits_exact": true
+      },
+      {
+        "field": "r_mean",
+        "dtype": "<c16",
+        "shape": [
+          6,
+          25
+        ],
+        "column_major_raw_SHA256": "3aeb70e1ead0c9387a01ab309fd1b7db4a354b2c70c7c64a38592bc90f96af36",
+        "actual_original_bits_exact": true
+      },
+      {
+        "field": "r_var",
+        "dtype": "<f8",
+        "shape": [
+          6
+        ],
+        "column_major_raw_SHA256": "bd32d2208be9cb5a25987206a93585f987a6b8a2b29108ecfcd343fb03159be1",
+        "actual_original_bits_exact": true
+      },
+      {
+        "field": "gt_second",
+        "dtype": "<c16",
+        "shape": [
+          3,
+          1,
+          16,
+          16
+        ],
+        "column_major_raw_SHA256": "4f1f9f2d327d26fa8ca10403cf76bf2133f5010045c69904de069c87bb8c1ae8",
+        "actual_original_bits_exact": true
+      },
+      {
+        "field": "geo_d_mean",
+        "dtype": "<c16",
+        "shape": [
+          6
+        ],
+        "column_major_raw_SHA256": "a6d8b57733ad7b27e04336886494011e1156bb42cdd5854adb8c019576be560c",
+        "actual_original_bits_exact": true
+      },
+      {
+        "field": "geo_d_var",
+        "dtype": "<f8",
+        "shape": [
+          6
+        ],
+        "column_major_raw_SHA256": "22022a70f4cd0bba5b8cae7c31256586861ba09bbba562143a7fcdb9aa2419ac",
+        "actual_original_bits_exact": true
+      },
+      {
+        "field": "geo_G_mean",
+        "dtype": "<c16",
+        "shape": [
+          6,
+          25
+        ],
+        "column_major_raw_SHA256": "2e9f596e38168db21c4cdc58c39616d7bece1c3865949fb5fe61ec2f77a84523",
+        "actual_original_bits_exact": true
+      },
+      {
+        "field": "geo_G_var",
+        "dtype": "<f8",
+        "shape": [
+          6
+        ],
+        "column_major_raw_SHA256": "b96afe4f4d151221857323dee61fdfc46df731f052c4a2968371bc6dd8d4ab82",
+        "actual_original_bits_exact": true
+      },
+      {
+        "field": "power_limit",
+        "dtype": "<f8",
+        "shape": [
+          3
+        ],
+        "column_major_raw_SHA256": "aaab74776643d398161c70938395faf8beffff27b28ee9d8e4233d92c914559b",
+        "actual_original_bits_exact": true
+      },
+      {
+        "field": "interference_limit",
+        "dtype": "<f8",
+        "shape": [
+          1
+        ],
+        "column_major_raw_SHA256": "c738dd99fada954a0be83cb94069e65973256ed5a199cd293841c789ad3b0910",
+        "actual_original_bits_exact": true
+      }
+    ],
+    "actual_original_long_keys_and_None_configuration_preserved": true,
+    "numerical_input_source": "Root-admitted trusted raw original dict; encoded MAT numerical values are not consumed or converted.",
+    "actual_producer_child_exit_code": 0,
+    "original_effective_host_exit_code": 0,
+    "original_host_errors": [],
+    "first_original_export_failure_not_overwritten": true,
+    "saved_MC_audit": {
+      "path": "local-source/8853bffa3a69/ACTUAL_NEW_ONLINE_POWER24_FULL1000_SAVED_OPERAND_INDEPENDENT_CLOSURE_V1.json",
+      "SHA256": "cd7747fb5005d22a8c57506d217833f46d2ce50ffe99b696fca9e24bb5de0d1e",
+      "bytes": 14401
+    },
+    "saved_MC_completion": {
+      "path": "local-source/2eb96fcf4927/actual-moment-tape-complete.json",
+      "SHA256": "7b0680bcee415558c447621c8775b42891894f74edc758360ebb033709e409da",
+      "bytes": 3709
+    },
+    "actual_new_MC_reuse": {
+      "path": "local-source/0f9489666ee9/ACTUAL_EXACT_SAVED_1000_RETURN_REUSED_NO_NEW_RNG_V1.json",
+      "SHA256": "07161247cd8bd6617cee9d0a0c291c75babe7fe3e256a0c5dfc6301e1fcf5757",
+      "bytes": 1879
+    },
+    "original_saved_MC_count": 1000,
+    "new_MC_draws": 0,
+    "new_optimizer_calls": 0,
+    "new_MP_or_moment_audits": 0,
+    "original_reference_dual_or_fullpaper_PASS": false
+  },
+  "recorded_result_SHA256": "f853f72bd17320722c35b71bd2289fa9801924ab0a7a82cc559211af005eaf18",
+  "authoritative_raw_SHA256": "2bc0a333ba7c7d4b44db868990b9cfaa5bf69ee94d5a3989c0c0c7209d2ac22f",
+  "produced_projection_SHA256": "380980a807425d31e9b638364a4a916e35aa36e41495220a9b0a6a9402680f57",
+  "source_before": {
+    "local-source/664ef7a14443/PREPARED_TRUSTED_RAW_U6_THREE_MISSING_SCIENTIFIC_STAGES_PLAN_V1.json": "ea6441d6d4b1fc8687274896d47e8551c66b9a03b437cc237b00c0cba9e09449",
+    "local-source/fb073f1bb153/run_admitted_U6_raw_recording_saved_stage_v1.py": "decdf9bf99a416bc3e232255a139c0e70f0f7f1469fa5d535d271122cf291723",
+    "local-source/21673314259b/trusted_local_recording_loader_v1.py": "debc8d6defed28a8438ec67e7dc9fdae9ead6feef96bb9eca012f93caa0af915",
+    "local-source/ea702a8a34f5/audit_new_power24_TS_initial_incumbent_source_dataflow_MP_v1.py": "aaabcd13eaf4ab146df93b88e5a11cf10dc86158e6ddd6992feb721d9d73ba63",
+    "local-source/80b369cfeaad/ROOT_ACTUAL_NEW_U6_CLOSED_RECORDING_SAVED_SCIENCE_ADMISSION_V1.json": "0cc05906413f47aee68c0f4b4c38f33308009b4cd772ad8efed0fe5473d4c506",
+    "local-source/3a6687d285e2/case-python-recorded.json": "f853f72bd17320722c35b71bd2289fa9801924ab0a7a82cc559211af005eaf18"
+  },
+  "source_after": {
+    "local-source/664ef7a14443/PREPARED_TRUSTED_RAW_U6_THREE_MISSING_SCIENTIFIC_STAGES_PLAN_V1.json": "ea6441d6d4b1fc8687274896d47e8551c66b9a03b437cc237b00c0cba9e09449",
+    "local-source/fb073f1bb153/run_admitted_U6_raw_recording_saved_stage_v1.py": "decdf9bf99a416bc3e232255a139c0e70f0f7f1469fa5d535d271122cf291723",
+    "local-source/21673314259b/trusted_local_recording_loader_v1.py": "debc8d6defed28a8438ec67e7dc9fdae9ead6feef96bb9eca012f93caa0af915",
+    "local-source/ea702a8a34f5/audit_new_power24_TS_initial_incumbent_source_dataflow_MP_v1.py": "aaabcd13eaf4ab146df93b88e5a11cf10dc86158e6ddd6992feb721d9d73ba63",
+    "local-source/80b369cfeaad/ROOT_ACTUAL_NEW_U6_CLOSED_RECORDING_SAVED_SCIENCE_ADMISSION_V1.json": "0cc05906413f47aee68c0f4b4c38f33308009b4cd772ad8efed0fe5473d4c506",
+    "local-source/3a6687d285e2/case-python-recorded.json": "f853f72bd17320722c35b71bd2289fa9801924ab0a7a82cc559211af005eaf18"
+  },
+  "source_read_errors": [],
+  "source_interval_pass": true,
+  "required_scientific_flags": {
+    "all_actual_TS_initial_incumbents_independent_MP80_MP100_and_saved_h0_fields_pass": true
+  },
+  "actual_saved_stage_pass": true,
+  "actual_error_retained": null,
+  "new_optimizer_MC_sampler_RNG_draws": 0,
+  "old_MC_independent_audit_rerun": false,
+  "initial_lost_recording_not_recovered": true,
+  "new_recapture_epoch_not_original_trajectory": true,
+  "original_reference_dual_or_fullpaper_PASS": false
+}

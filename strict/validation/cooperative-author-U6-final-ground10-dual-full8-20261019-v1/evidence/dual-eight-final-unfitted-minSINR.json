@@ -1,0 +1,312 @@
+{
+  "schema": "actual-selected-final-ground10-U6-Python-native-eight-optimized-return-unfitted-comparison-v1",
+  "Python_result": {
+    "path": "local-source/3225575218fc/actual-result.json",
+    "SHA256": "e211bcbbae4f5c227ba7b0c1df2ed902d70b92eea6785ead3d7a7cceb06c69b4"
+  },
+  "native_result": {
+    "path": "local-source/ec5980124744/actual-native-complete-timed-result.json",
+    "SHA256": "d440ddf0b5f4473e37824cf23981b14bd2b14b3a597951adbbab28218de308a4"
+  },
+  "Python_producer_outcome": {
+    "path": "local-source/2cd3ff22d692/ACTUAL_CANONICAL_NATIVE_U6_FULL8_PYTHON_VARIANT_OUTCOME_V1.json",
+    "SHA256": "942e8bf6f6ce509e787df8459e1ac44f935367ba0f19d82a0ec72e7fe8e66892"
+  },
+  "native_saved_science_closure": {
+    "path": "local-source/e6e54fa66dbc/ACTUAL_NATIVE_U6_FINAL_GROUND10_ALL8_56QT_53PHASE_7950GRAD_FRESH_MC1000_FOUR_SAVED_CLOSURE_V1.json",
+    "SHA256": "186ecdb900c38aba721c63d73d2a50aad5bc5df2ef75dd73d7fd10678b5939ea"
+  },
+  "identical_complete_original_configuration": true,
+  "original_full_JSON_SHA256": "1be0843c852d9fdafe00896e903472a2ad5596da26d3bd62573f2ca534e23acc",
+  "identical_canonical_11field_input_source_NPZ_SHA256": "ca584f9bdf3eb551f8399026c82693c8072cb7c10e1e198baf29f8a7d5f93353",
+  "scope": {
+    "U": 6,
+    "J": 3,
+    "N": 16,
+    "M": 25,
+    "K": 1,
+    "power_W_each": 50,
+    "normalized_INR": 0.01,
+    "kappaN_dB": 20,
+    "kappaR_dB": 10,
+    "source_beta_R1_retained": true,
+    "selected_beta_R": 10
+  },
+  "rows": [
+    {
+      "scheme": "AP-NoRIS",
+      "python_minSINR_linear": 0.5218798316552461,
+      "native_minSINR_linear": 0.5218798275103679,
+      "signed_native_minus_python": -4.144878218426129e-09,
+      "absolute_difference": 4.144878218426129e-09,
+      "relative_to_Python": 7.942208085106144e-09,
+      "minSINR_binary64_bits_identical": false,
+      "python_all6_SINR_linear": [
+        0.5229236290578847,
+        0.5219406538188578,
+        0.5218798316552461,
+        0.5218810375744231,
+        0.5229236291701577,
+        0.5219406548473768
+      ],
+      "native_all6_SINR_linear": [
+        0.5229223732725933,
+        0.5219391305784563,
+        0.5218798275103679,
+        0.5218798276265215,
+        0.5229223732722028,
+        0.5219391305779641
+      ],
+      "userwise_native_minus_python": [
+        -1.2557852914207857e-06,
+        -1.5232404014797751e-06,
+        -4.144878218426129e-09,
+        -1.2099479015370562e-06,
+        -1.2558979548549232e-06,
+        -1.5242694126893497e-06
+      ]
+    },
+    {
+      "scheme": "AP-AO",
+      "python_minSINR_linear": 1.1618122923812115,
+      "native_minSINR_linear": 1.1618090127312821,
+      "signed_native_minus_python": -3.279649929410766e-06,
+      "absolute_difference": 3.279649929410766e-06,
+      "relative_to_Python": 2.8228741862327052e-06,
+      "minSINR_binary64_bits_identical": false,
+      "python_all6_SINR_linear": [
+        1.1618122923812115,
+        1.16181236754003,
+        1.161821970038908,
+        1.1644882344499061,
+        1.1618126418146044,
+        1.161813015221091
+      ],
+      "native_all6_SINR_linear": [
+        1.161809012986662,
+        1.1618090127312821,
+        1.1618218918585628,
+        1.1645151669735014,
+        1.1618090134163663,
+        1.1618090200670927
+      ],
+      "userwise_native_minus_python": [
+        -3.2793945494713483e-06,
+        -3.3548087479129407e-06,
+        -7.818034530870932e-08,
+        2.6932523595313285e-05,
+        -3.628398238086916e-06,
+        -3.995153998292977e-06
+      ]
+    },
+    {
+      "scheme": "MR-S-NoRIS",
+      "python_minSINR_linear": 0.503806991747981,
+      "native_minSINR_linear": 0.5038070144780132,
+      "signed_native_minus_python": 2.2730032189777205e-08,
+      "absolute_difference": 2.2730032189777205e-08,
+      "relative_to_Python": 4.5116547729745345e-08,
+      "minSINR_binary64_bits_identical": false,
+      "python_all6_SINR_linear": [
+        0.5038074850648108,
+        0.5038070886746089,
+        0.503806991747981,
+        0.5038070741214449,
+        0.5038074858235925,
+        0.5038070886766927
+      ],
+      "native_all6_SINR_linear": [
+        0.5038074791041918,
+        0.5038070145313163,
+        0.5038070144780132,
+        0.5038070147677634,
+        0.5038074791042264,
+        0.5038070145313004
+      ],
+      "userwise_native_minus_python": [
+        -5.96061899837963e-09,
+        -7.41432926165686e-08,
+        2.2730032189777205e-08,
+        -5.935368152520937e-08,
+        -6.71936606355672e-09,
+        -7.414539227035277e-08
+      ]
+    },
+    {
+      "scheme": "MR-S-PA",
+      "python_minSINR_linear": 1.0955924857435873,
+      "native_minSINR_linear": 1.0955913827353871,
+      "signed_native_minus_python": -1.1030082001095565e-06,
+      "absolute_difference": 1.1030082001095565e-06,
+      "relative_to_Python": 1.0067686794702103e-06,
+      "minSINR_binary64_bits_identical": false,
+      "python_all6_SINR_linear": [
+        1.0955966484925608,
+        1.095592696787947,
+        1.0956104918546963,
+        1.095594931840456,
+        1.0955960685785093,
+        1.0955924857435873
+      ],
+      "native_all6_SINR_linear": [
+        1.0955913835870092,
+        1.0955913827353871,
+        1.0956106290122913,
+        1.0955921643453899,
+        1.0955913835538382,
+        1.0955913840273357
+      ],
+      "userwise_native_minus_python": [
+        -5.264905551527477e-06,
+        -1.3140525598753783e-06,
+        1.371575950592785e-07,
+        -2.7674950662248676e-06,
+        -4.6850246711027665e-06,
+        -1.1017162515614132e-06
+      ]
+    },
+    {
+      "scheme": "MR-S-TS",
+      "python_minSINR_linear": 1.0892032523567774,
+      "native_minSINR_linear": 1.0892013814224135,
+      "signed_native_minus_python": -1.8709343638789733e-06,
+      "absolute_difference": 1.8709343638789733e-06,
+      "relative_to_Python": 1.7177091234631509e-06,
+      "minSINR_binary64_bits_identical": false,
+      "python_all6_SINR_linear": [
+        1.0892051630856714,
+        1.0892032523567774,
+        1.0892183814319005,
+        1.0892044457755417,
+        1.0892055032535268,
+        1.0892033317496295
+      ],
+      "native_all6_SINR_linear": [
+        1.0892013818253798,
+        1.0892013821550148,
+        1.0892172224108292,
+        1.0892014050958934,
+        1.0892013818190849,
+        1.0892013814224135
+      ],
+      "userwise_native_minus_python": [
+        -3.781260291546573e-06,
+        -1.870201762566026e-06,
+        -1.1590210713396942e-06,
+        -3.0406796482917997e-06,
+        -4.121434441950456e-06,
+        -1.9503272159493434e-06
+      ]
+    },
+    {
+      "scheme": "MR-TTS-NoRIS",
+      "python_minSINR_linear": 0.5112737992070915,
+      "native_minSINR_linear": 0.5112738858606146,
+      "signed_native_minus_python": 8.665352313474983e-08,
+      "absolute_difference": 8.665352313474983e-08,
+      "relative_to_Python": 1.6948555405955942e-07,
+      "minSINR_binary64_bits_identical": false,
+      "python_all6_SINR_linear": [
+        0.5112749335183305,
+        0.5112741609243465,
+        0.5112737992070915,
+        0.5112743990234552,
+        0.5112749191649157,
+        0.5112741609413324
+      ],
+      "native_all6_SINR_linear": [
+        0.5112749386648175,
+        0.5112738858965425,
+        0.5112738858606146,
+        0.5112738860510161,
+        0.5112749386648278,
+        0.5112738858965412
+      ],
+      "userwise_native_minus_python": [
+        5.146487014329182e-09,
+        -2.750278039753695e-07,
+        8.665352313474983e-08,
+        -5.129724390817714e-07,
+        1.9499912018439147e-08,
+        -2.750447911648024e-07
+      ]
+    },
+    {
+      "scheme": "MR-TTS-PA",
+      "python_minSINR_linear": 1.1025369855413933,
+      "native_minSINR_linear": 1.1025364038634544,
+      "signed_native_minus_python": -5.816779389267168e-07,
+      "absolute_difference": 5.816779389267168e-07,
+      "relative_to_Python": 5.275813388165729e-07,
+      "minSINR_binary64_bits_identical": false,
+      "python_all6_SINR_linear": [
+        1.102539804620952,
+        1.102537202818607,
+        1.1025416081507757,
+        1.1025387030645715,
+        1.102539127379429,
+        1.1025369855413933
+      ],
+      "native_all6_SINR_linear": [
+        1.1025364039932848,
+        1.1025364038634544,
+        1.1025419823883984,
+        1.1025364505708826,
+        1.102536403976471,
+        1.1025364039659618
+      ],
+      "userwise_native_minus_python": [
+        -3.400627667238254e-06,
+        -7.989551524811844e-07,
+        3.742376226689714e-07,
+        -2.2524936889034564e-06,
+        -2.723402958038079e-06,
+        -5.81575431590764e-07
+      ]
+    },
+    {
+      "scheme": "MR-TTS-TS",
+      "python_minSINR_linear": 1.0955532684471876,
+      "native_minSINR_linear": 1.0955566727506598,
+      "signed_native_minus_python": 3.404303472231973e-06,
+      "absolute_difference": 3.404303472231973e-06,
+      "relative_to_Python": 3.10738288158015e-06,
+      "minSINR_binary64_bits_identical": false,
+      "python_all6_SINR_linear": [
+        1.0955540831319985,
+        1.0955532684471876,
+        1.0955711553295981,
+        1.095553816749296,
+        1.095554305685543,
+        1.095553328418622
+      ],
+      "native_all6_SINR_linear": [
+        1.095556673257221,
+        1.0955566736926832,
+        1.09557487025073,
+        1.095556678644265,
+        1.0955566732492283,
+        1.0955566727506598
+      ],
+      "userwise_native_minus_python": [
+        2.590125222523554e-06,
+        3.405245495580189e-06,
+        3.714921131825477e-06,
+        2.8618949690084605e-06,
+        2.367563685323759e-06,
+        3.3443320377468666e-06
+      ]
+    }
+  ],
+  "maximum_absolute_minSINR_difference": 3.404303472231973e-06,
+  "maximum_absolute_gap_scheme": "MR-TTS-TS",
+  "maximum_relative_minSINR_difference": 3.10738288158015e-06,
+  "operations": "Only min over the six stored final linear SINRs and direct signed/absolute/relative subtraction; no evaluation, phase alignment, permutation, rounding, scaling or tolerance fit.",
+  "native_and_Python_actual1000_populations_independent": true,
+  "not_optimized_performance_MC_average": true,
+  "observed_optimized_differences_cause_established": false,
+  "same_local_optimum_claimed": false,
+  "same_state_cross_language_physics_not_established_by_this_comparison": true,
+  "final_TableI_U2_geometry_not_recovered": true,
+  "original_reference_or_fullpaper_PASS": false
+}

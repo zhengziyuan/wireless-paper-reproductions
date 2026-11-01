@@ -1,0 +1,87 @@
+{
+  "schema": "SOURCE_AND_EXACT_ORIGINAL_CASE159_INPUT_MANIFEST_V1",
+  "source_SHA256": {
+    "run_case159_equivalent_fullsix_v1.py": "e726bd4235a468293726a5d5f0357de254ed699ba7b4b8756ddc9c84fbda9740",
+    "equivalent_runtime_case159_v1.py": "bea6fb21ab73291f0ab58d5ee92645a08ee768bccb8036602ae0a34f60f752ba",
+    "passive_first_failure_v1.py": "855bb184d28c9a760b21b5dcb0d880b89a81b7bbf5e526d965dbbf3cbc7544a1",
+    "stable_metrics.py": "e15ad67ffc92b0ea2b3cbbd5428ff8be30bc6630ab651188d15aa2f01bde8c29",
+    "structured_original_qcqp_candidate_v1.py": "1fa91846426407d7313f0ba452e2d81c60fa433c9513d8618f870414903f8881",
+    "sources/core_original_case159_v1.py": "07f2eb9d9f5011dde45a8c947dd87db31d15b7e6e8ab233e9f43429c408f2fbb",
+    "sources/core_structured_case159_v1.py": "a0284f77a1704a35bbba000db0ccf5c59687d4a3dbc524aff8458367537888c1",
+    "sources/run_original_case159_v1.py": "29584a2dc08dbd36d2613fdc44394658a1c3ed1caecbcd42b11010fe42da6111"
+  },
+  "inputs": {
+    "config": {
+      "path": "original-config.json",
+      "SHA256": "dd52f8b124cc1ec77ba71cf180048f6da665bb3809161dde6c922982c4eeec89"
+    },
+    "scenario": {
+      "path": "original-scenario.json",
+      "SHA256": "eb00188adf97ee6f9243a5b2272246634bb0758b44b92b133f8a0f9e26faa729"
+    }
+  },
+  "original_scenario_identity": "Original500 case-001-mc-059 / catalog case159; captured original-scenario byte-copy, not regenerated",
+  "all28_config_members": [
+    "mode",
+    "seed",
+    "channel_realizations",
+    "wavelength",
+    "bs_center",
+    "ris_center",
+    "bs_shape",
+    "ris_shape",
+    "paths_per_link",
+    "path_gain_variance_each",
+    "noise_power",
+    "initial_angles",
+    "maximum_gain_rule",
+    "rho",
+    "sensing_azimuth_points",
+    "sensing_elevation_points",
+    "desired_sectors_degrees",
+    "initial_sensing_amplitude",
+    "initial_pseudoinverse_tolerance",
+    "iota_denominator_epsilon",
+    "verification_tolerance",
+    "AO_solver",
+    "W_solver",
+    "RCG_solver",
+    "PGA_solver",
+    "sweeps",
+    "rotation_legend_pairs",
+    "parameter_provenance"
+  ],
+  "original_controls": {
+    "AO_solver": {
+      "maximum_iterations": 500,
+      "relative_tolerance": 1e-05
+    },
+    "W_solver": {
+      "maximum_iterations": 10000,
+      "relative_tolerance": 1e-06,
+      "bisection_tolerance": 1e-12
+    },
+    "RCG_solver": {
+      "maximum_iterations": 500,
+      "gradient_tolerance": 1e-06,
+      "initial_step": 1.0,
+      "armijo": 0.0001,
+      "backtrack_factor": 0.5,
+      "maximum_backtracks": 80,
+      "mode": "documented_non_ascent_restart"
+    },
+    "PGA_solver": {
+      "maximum_iterations": 500,
+      "gradient_tolerance": 1e-06,
+      "relative_tolerance": 1e-08,
+      "initial_step": 0.01,
+      "minimum_step": 1e-10,
+      "maximum_step": 1,
+      "armijo": 0.0001,
+      "backtrack_factor": 0.5,
+      "maximum_backtracks": 80,
+      "BB_interpretation": "ascent_sign_correction"
+    }
+  },
+  "no_modified_original_config_or_live_source": true
+}

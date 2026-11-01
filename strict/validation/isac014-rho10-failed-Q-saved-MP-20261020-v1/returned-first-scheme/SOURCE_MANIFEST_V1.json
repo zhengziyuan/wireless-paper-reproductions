@@ -1,0 +1,182 @@
+{
+  "schema": "case014-original-first-scheme-frozen-two-arithmetic-source-manifest-v1",
+  "source_SHA256": {
+    "equivalent_runtime_case014_v1.py": "781d7ad5f01df8d460c6a4eb905dd7f6cdd0026752465d0d26e6345901e5fc12",
+    "passive_first_failure_v1.py": "855bb184d28c9a760b21b5dcb0d880b89a81b7bbf5e526d965dbbf3cbc7544a1",
+    "run_case014_equivalent_first_scheme_v1.py": "facff577ed4c74c94a76e7d274e7f03e782d07b9f96477829ab1c0c4add68637",
+    "stable_metrics.py": "e15ad67ffc92b0ea2b3cbbd5428ff8be30bc6630ab651188d15aa2f01bde8c29",
+    "structured_original_qcqp_candidate_v1.py": "1fa91846426407d7313f0ba452e2d81c60fa433c9513d8618f870414903f8881",
+    "sources/core_original_case014_v1.py": "07f2eb9d9f5011dde45a8c947dd87db31d15b7e6e8ab233e9f43429c408f2fbb",
+    "sources/core_structured_case014_v1.py": "a0284f77a1704a35bbba000db0ccf5c59687d4a3dbc524aff8458367537888c1",
+    "sources/run_selected_first_scheme_case014_v1.py": "7339b40b3efa519bf9f44fee3127451e30e0d3c255bcff01680362a10abde145"
+  },
+  "inputs": {
+    "config": {
+      "path": "source-3aa08d8edc66/run_config.json",
+      "SHA256": "dd52f8b124cc1ec77ba71cf180048f6da665bb3809161dde6c922982c4eeec89",
+      "bytes": 4166
+    },
+    "scenario": {
+      "path": "source-41edc31fc5ab/case-000-mc-014.json",
+      "SHA256": "1854197e30970f2014a6412c4bc89fe279c7f7e569457047b8fca0c2d0a30a0e",
+      "bytes": 14834
+    }
+  },
+  "source_reuse": {
+    "exact_sources": [
+      {
+        "original": {
+          "path": "source-53aaf7d87b46/stable_metrics.py",
+          "SHA256": "e15ad67ffc92b0ea2b3cbbd5428ff8be30bc6630ab651188d15aa2f01bde8c29",
+          "bytes": 2383
+        },
+        "derived": {
+          "path": "source-6d76300d708a/stable_metrics.py",
+          "SHA256": "e15ad67ffc92b0ea2b3cbbd5428ff8be30bc6630ab651188d15aa2f01bde8c29",
+          "bytes": 2383
+        },
+        "exact_whole_bytes": true
+      },
+      {
+        "original": {
+          "path": "source-27f4040c13df/structured_original_qcqp_candidate_v1.py",
+          "SHA256": "1fa91846426407d7313f0ba452e2d81c60fa433c9513d8618f870414903f8881",
+          "bytes": 3221
+        },
+        "derived": {
+          "path": "source-3d24b375195b/structured_original_qcqp_candidate_v1.py",
+          "SHA256": "1fa91846426407d7313f0ba452e2d81c60fa433c9513d8618f870414903f8881",
+          "bytes": 3221
+        },
+        "exact_whole_bytes": true
+      },
+      {
+        "original": {
+          "path": "source-d69368866338/passive_first_failure_v1.py",
+          "SHA256": "855bb184d28c9a760b21b5dcb0d880b89a81b7bbf5e526d965dbbf3cbc7544a1",
+          "bytes": 4455
+        },
+        "derived": {
+          "path": "source-430fd2e41e83/passive_first_failure_v1.py",
+          "SHA256": "855bb184d28c9a760b21b5dcb0d880b89a81b7bbf5e526d965dbbf3cbc7544a1",
+          "bytes": 4455
+        },
+        "exact_whole_bytes": true
+      },
+      {
+        "original": {
+          "path": "source-259861ec2bb3/core_original_case159_v1.py",
+          "SHA256": "07f2eb9d9f5011dde45a8c947dd87db31d15b7e6e8ab233e9f43429c408f2fbb",
+          "bytes": 16714
+        },
+        "derived": {
+          "path": "source-0163b11dafe1/core_original_case014_v1.py",
+          "SHA256": "07f2eb9d9f5011dde45a8c947dd87db31d15b7e6e8ab233e9f43429c408f2fbb",
+          "bytes": 16714
+        },
+        "exact_whole_bytes": true
+      },
+      {
+        "original": {
+          "path": "source-fce66dfbdd5d/core_structured_case159_v1.py",
+          "SHA256": "a0284f77a1704a35bbba000db0ccf5c59687d4a3dbc524aff8458367537888c1",
+          "bytes": 16566
+        },
+        "derived": {
+          "path": "source-80543365a0fb/core_structured_case014_v1.py",
+          "SHA256": "a0284f77a1704a35bbba000db0ccf5c59687d4a3dbc524aff8458367537888c1",
+          "bytes": 16566
+        },
+        "exact_whole_bytes": true
+      }
+    ],
+    "runtime_original": {
+      "path": "source-fb9d31a68d9e/equivalent_runtime_case159_v1.py",
+      "SHA256": "bea6fb21ab73291f0ab58d5ee92645a08ee768bccb8036602ae0a34f60f752ba",
+      "bytes": 2595
+    },
+    "runtime_derived": {
+      "path": "source-3fa7f818814c/equivalent_runtime_case014_v1.py",
+      "SHA256": "781d7ad5f01df8d460c6a4eb905dd7f6cdd0026752465d0d26e6345901e5fc12",
+      "bytes": 2595
+    },
+    "runtime_only_case_label_and_source_path_change": true,
+    "selected_run_original": {
+      "path": "source-e7135cc659f2/run_original_case159_v1.py",
+      "SHA256": "29584a2dc08dbd36d2613fdc44394658a1c3ed1caecbcd42b11010fe42da6111",
+      "bytes": 9451
+    },
+    "selected_run_derived": {
+      "path": "source-1553366ab281/run_selected_first_scheme_case014_v1.py",
+      "SHA256": "7339b40b3efa519bf9f44fee3127451e30e0d3c255bcff01680362a10abde145",
+      "bytes": 9238
+    },
+    "original_six_scheme_list": "[(\"Rot-BS & Rot-RIS\",True,True,True),(\"Rot-BS & Fix-RIS\",True,False,True),\n            (\"Fix-BS & Rot-RIS\",False,True,True),(\"Fix-BS & Fix-RIS\",False,False,True),\n            (\"Rot-BS & No-RIS\",True,False,False),(\"Fix-BS & No-RIS\",False,False,False)]",
+    "actual_one_scheme_list": "[(\"Rot-BS & Rot-RIS\",True,True,True)]",
+    "whole_original_run_recovered_by_single_list_inverse": true,
+    "cold_entry_original": {
+      "path": "source-66177950cd3b/run_case159_equivalent_fullsix_v1.py",
+      "SHA256": "e726bd4235a468293726a5d5f0357de254ed699ba7b4b8756ddc9c84fbda9740",
+      "bytes": 7077
+    },
+    "cold_entry_derived": {
+      "path": "source-10fddcfd7fd3/run_case014_equivalent_first_scheme_v1.py",
+      "SHA256": "facff577ed4c74c94a76e7d274e7f03e782d07b9f96477829ab1c0c4add68637",
+      "bytes": 7258
+    },
+    "cold_entry_whole_original_inverse": true,
+    "cold_entry_host_changes": [
+      {
+        "old": "case159",
+        "new": "case014"
+      },
+      {
+        "old": "CASE159",
+        "new": "CASE014"
+      },
+      {
+        "old": "Prepared cold original case014 full six; no budget/stop/initialization changes.",
+        "new": "Prepared cold original case014 first Rot-BS/Rot-RIS scheme; original budgets and stops."
+      },
+      {
+        "old": "HERE/'sources/run_original_case014_v1.py'",
+        "new": "HERE/'sources/run_selected_first_scheme_case014_v1.py'"
+      },
+      {
+        "old": "len(checks)==6 and all(",
+        "new": "list(checks)==['Rot-BS & Rot-RIS'] and len(checks)==1 and all("
+      },
+      {
+        "old": "Cold original case014 full six; explicit self-excluded I plus positive-alpha A/G structured original QCQP arithmetic variant",
+        "new": "Cold original case014 first Rot-BS & Rot-RIS only; explicit self-excluded I plus positive-alpha A/G structured original QCQP arithmetic variant"
+      },
+      {
+        "old": "existing_six_scheme_checks_all_satisfied",
+        "new": "existing_selected_scheme_checks_all_satisfied"
+      },
+      {
+        "old": "complete_six_scheme_result_saved",
+        "new": "complete_selected_scheme_result_saved"
+      },
+      {
+        "old": "ACTUAL_CASE014_COLD_FULLSIX_STRUCTURED_ARITHMETIC_EXECUTION_CLOSURE_V1",
+        "new": "ACTUAL_CASE014_COLD_FIRST_SCHEME_STRUCTURED_ARITHMETIC_EXECUTION_CLOSURE_V1"
+      },
+      {
+        "old": "result.update(scope=",
+        "new": "result['mode']='only_original_first_RotBS_RotRIS_cold_arithmetic_variant'\n        result.update(scope="
+      }
+    ]
+  },
+  "numerical_derivation": {
+    "path": "source-82fdddd7448f/PREPARED_EXACT_TWO_ARITHMETIC_REPLACEMENTS_AND_PASSIVE_METADATA_SOURCE_INVERSE_V1.json",
+    "SHA256": "43a1530b9638df43bb868d3c8602eb9c0790132ce1350c02e9399e9436c42ba9",
+    "bytes": 5319
+  },
+  "exact_case014_fixed_dual_MP_validation": {
+    "path": "source-28ecddd8065a/ACTUAL_SINGLE014_DUAL_FIXED_FACTOR_QP_ORIGINAL_FORMULA_MP80_MP100_VALIDATION_V1.json",
+    "SHA256": "bb9cfea31aaace2f2965d2a24872c91a6c771d5bfa717c8d5d8f10d7054a24c7",
+    "bytes": 23560
+  },
+  "no_scientific_execution_in_preparation": true
+}

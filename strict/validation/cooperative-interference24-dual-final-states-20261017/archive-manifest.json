@@ -1,0 +1,222 @@
+{
+  "scope": "Actual24 paired full interference-sweep cases, all384 final states and independent reference diagnostics",
+  "case_scope": "interference",
+  "exact_original_case_ordinals": [
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47
+  ],
+  "languages": [
+    "python",
+    "matlab"
+  ],
+  "cases_per_language": 24,
+  "schemes_per_case": 8,
+  "total_final_states": 384,
+  "archive": {
+    "filename": "interference24-dual-final-states-and-curves.tar.gz",
+    "bytes": 1855308,
+    "sha256": "0388bbebed1873d089280c0bdf462f26c0493ea3924ee1fa112f6ae9dd0a7513",
+    "parts": [
+      {
+        "file": "interference24-dual-final-states-and-curves.tar.gz.part000",
+        "bytes": 524288,
+        "sha256": "86e7a0751a5185692ebf6a907465ad59a906045ceb8cc9911c9bb8cdda2686e9"
+      },
+      {
+        "file": "interference24-dual-final-states-and-curves.tar.gz.part001",
+        "bytes": 524288,
+        "sha256": "3118686114bff3b76676452522fba42edeeb58ea3b45f6898444cfc25aa9e01c"
+      },
+      {
+        "file": "interference24-dual-final-states-and-curves.tar.gz.part002",
+        "bytes": 524288,
+        "sha256": "36add25971ea5d87b0f992de3cbe67e5a2ae20ecb506879aa14b31be8d308e23"
+      },
+      {
+        "file": "interference24-dual-final-states-and-curves.tar.gz.part003",
+        "bytes": 282444,
+        "sha256": "69ebf344e2f45a3e45727ce858292caf3481ad54d5de9093c1872b77bd522761"
+      }
+    ]
+  },
+  "files": {
+    "build-receipt.json": {
+      "bytes": 2844,
+      "sha256": "3dd0d82ad67a89d8328d38025bfaf2f90fedd0a180960834e34961044af872da"
+    },
+    "case047-phase-difference-summary.json": {
+      "bytes": 3213,
+      "sha256": "b1c8b9f61d24e0f488c5c34e467c7dece11b0732ecbf9bb37f3c8ac44b5d2177"
+    },
+    "case047-phase-witness/first-TTS-stage-actual-inputs-and-phases.mat": {
+      "bytes": 75878,
+      "sha256": "b7eed24d1396baa8d9efb067467cc11d0c955b515bc1f887253a828a556958e5"
+    },
+    "case047-phase-witness/independent-cross-evaluation-MP80-MP100.json": {
+      "bytes": 191743,
+      "sha256": "0879b4afbe8370bcc06f9a6a0c45b1c4713a72db62202dfafc9147728646d236"
+    },
+    "case047-phase-witness/witness-index.json": {
+      "bytes": 1889,
+      "sha256": "fd50cdb6f2e7b28be02c78ac2643e9319aeb3e7dbde2d48abe3859e3538ffba0"
+    },
+    "case047-same-native-data-phase-controls/execution-start.json": {
+      "bytes": 6734,
+      "sha256": "3fe5be9de64a9ff396a47bdf49b4e2fe57b56b1a5a15c06be81aaf286f5a30b0"
+    },
+    "case047-same-native-data-phase-controls/execution-summary.json": {
+      "bytes": 7348,
+      "sha256": "2cc8831fb9ce65764b5fb27cf09b9346af1118fd7689cdc5cf9be6eb8dab8252"
+    },
+    "case047-same-native-data-phase-controls/fixed-power-matlab-actual-phase.mat": {
+      "bytes": 57530,
+      "sha256": "166fed2703ced475fc1b49978ae4eec4b6b60283ca94620104a8995a13687e8d"
+    },
+    "case047-same-native-data-phase-controls/fixed-power-python-actual-phase.mat": {
+      "bytes": 43629,
+      "sha256": "4644f12d326fd251bc773d2a30e83cce3d5cac66438a223c4210f15af73d6dde"
+    },
+    "case047-same-native-data-phase-controls/independent-controls-MP80-MP100.json": {
+      "bytes": 4150,
+      "sha256": "61a1b3ee4d086aea0d2674175a2b2705cc5aa900f85691a5f2109e970939792a"
+    },
+    "case047-stage-comparison.json": {
+      "bytes": 77168,
+      "sha256": "0d7ece76a10b700159fab30ba8ffd6cd6b0e97044abdb62d30225b19c6987dd0"
+    },
+    "dual-language-comparison.json": {
+      "bytes": 152025,
+      "sha256": "d98c8794581f00559c6f1bf807657cfadd93dd7b04f8ed855a5d10302c4ef4bc"
+    },
+    "final-state-index.json": {
+      "bytes": 319291,
+      "sha256": "5ffac951fd98cf0175721efc9850f15aa30577d53e24f9fab07a180b5a1e9021"
+    },
+    "final-states.npz": {
+      "bytes": 689808,
+      "sha256": "29b0793c9c23bcbf54fb329e9948a172f4300d1ed341f83fb0384443edecb4cc"
+    },
+    "independent-all384-final-states-MP80-MP100.json": {
+      "bytes": 2023556,
+      "sha256": "f533a2251f14c28bc2a8effdab17afbd04aa2c7220f8090c4957fd4479f258f8"
+    },
+    "independent-NoRIS-input-bound-MP80-MP100.json": {
+      "bytes": 136105,
+      "sha256": "96f1cdf4e81c23ead21d30f64656a7683db9e0585af849166ba3aeb91cbb4883"
+    },
+    "matlab/cooperative-satcom-figure-4.json": {
+      "bytes": 8220,
+      "sha256": "c1ed276d6ca033806a8add2cb6880287300a00f022246d67af641a333649625a"
+    },
+    "matlab/cooperative-satcom-figure-4.png": {
+      "bytes": 86423,
+      "sha256": "c0c9eac56f919099608c3d98cc5b3c0043ce1f015d296e2788b9cf35f1232ab5"
+    },
+    "matlab/cooperative-satcom-figure-4.svg": {
+      "bytes": 50315,
+      "sha256": "80d14d726ac935002fc2eb0d1680e24bee666cea7b8bf5fc61a41886dea704f7"
+    },
+    "matlab/cooperative-satcom-figure-5.json": {
+      "bytes": 8213,
+      "sha256": "ea6d16df1aef953c47ec31e6353ae4cbd1b4a32ee661a6904f05e22229f81097"
+    },
+    "matlab/cooperative-satcom-figure-5.png": {
+      "bytes": 91243,
+      "sha256": "06a7a79c686999e093f7d2d8b8a6e15391d3800183bbeb19000a7c058013e177"
+    },
+    "matlab/cooperative-satcom-figure-5.svg": {
+      "bytes": 48812,
+      "sha256": "1cbd69830c0df2994fcab21e6ef4ed91063557e6fdc33aa7c8049144874dfa00"
+    },
+    "matlab-curve-view.json": {
+      "bytes": 976953,
+      "sha256": "71dd3798f838d439ec305691c68f19fcc68d8c9ed5f85b9586545cb527c3ae48"
+    },
+    "python/cooperative-satcom-figure-4.json": {
+      "bytes": 8212,
+      "sha256": "429973abd96accffa634dd7b175aff4fa887b928dbab306dacf914358583b2a2"
+    },
+    "python/cooperative-satcom-figure-4.png": {
+      "bytes": 86513,
+      "sha256": "10e7ea0d40b9468ba3b26f7e01c8a97125f9b63b5d5ecc1d55efca227f57da1d"
+    },
+    "python/cooperative-satcom-figure-4.svg": {
+      "bytes": 50319,
+      "sha256": "d2ff9283e5cfa59fd1dca361d038925b6d17f9fbb85756cbacfee436ebcdb289"
+    },
+    "python/cooperative-satcom-figure-5.json": {
+      "bytes": 8218,
+      "sha256": "935906400bb11478a43a4c3a7da3ad90f686620c23d7c14dc1f0d4a9ac08e2a8"
+    },
+    "python/cooperative-satcom-figure-5.png": {
+      "bytes": 94229,
+      "sha256": "370e7d2fd63d600f3a7f5784f5a00b90dd95d9c57471562ae4a3852d68cc2093"
+    },
+    "python/cooperative-satcom-figure-5.svg": {
+      "bytes": 48812,
+      "sha256": "1b70dadcb789bacc273fa5a80d9e453703923ec8a4e97c43418353cf9598a1ab"
+    },
+    "python-curve-view.json": {
+      "bytes": 989568,
+      "sha256": "21b5d3588878d81ac75f55baed2536d222c1b4c79787afce1e14cffadc123a69"
+    },
+    "reference-comparison/matlab-figure-4-unfitted-comparison.json": {
+      "bytes": 9087,
+      "sha256": "e7e5506a3b1d9b331c4e46c6009f12ff4321b8bfbcefebd781781265139a8959"
+    },
+    "reference-comparison/matlab-figure-5-unfitted-comparison.json": {
+      "bytes": 8283,
+      "sha256": "5ecc45c9d0af371477b16085a4f847f78e236ad8015825038ffe19818edbb850"
+    },
+    "reference-comparison/original-figure-4-vector-reference.json": {
+      "bytes": 14960,
+      "sha256": "56a63d3f54ad64d8c433a0d2cc065bf9aade0de80684570a1336ef08410971e7"
+    },
+    "reference-comparison/original-figure-5-vector-reference.json": {
+      "bytes": 13975,
+      "sha256": "ab9470a99fc2a50eb5f9e92941e926df29df3759c12e725b18d698392e58f1fa"
+    },
+    "reference-comparison/original-reference-summary.json": {
+      "bytes": 1535,
+      "sha256": "45d7a83b2ba167a24fbaad010470d3a5223c2c0cc0f799f8b7f04c2735f915a0"
+    },
+    "reference-comparison/python-figure-4-unfitted-comparison.json": {
+      "bytes": 9084,
+      "sha256": "93dfed64b6f62a5b92377ee4b0827d6b93bea44e7f4893ecd13ce8882a141fd6"
+    },
+    "reference-comparison/python-figure-5-unfitted-comparison.json": {
+      "bytes": 8283,
+      "sha256": "27cfd1f32571d34ddfdcd7b42f2bd2dea87d2b390505b76a3a7eebd6a726895f"
+    },
+    "source-and-audit-bindings.json": {
+      "bytes": 544677,
+      "sha256": "41bbe163f96f99d6a90a2aeb139ca6635fc2e09c1a70a5b4b1333c1a692ab4fd"
+    }
+  },
+  "packager_sha256": "4ea96ab40866382ef1814c2bcbbe3f3422cd8504f3c28488c5a166911a2a2959",
+  "full_phase_QT_tapes_publicly_included": false,
+  "original_private_EPS_redistributed": false,
+  "original_curve_or_full_paper_pass": false
+}

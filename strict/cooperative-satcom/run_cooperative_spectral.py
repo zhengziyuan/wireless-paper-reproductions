@@ -14,7 +14,7 @@ from receipts import save
 
 def actual_hashes():
     root=Path(__file__).parent
-    names=('core.py','models.py','increments.py','algorithms.py','spectral_rmo.py','termination.py','scenario.py','run.py','receipts.py','run_cooperative_spectral.py','spectral_config.json')
+    names=('core.py','models.py','positive_wick.py','increments.py','algorithms.py','spectral_rmo.py','termination.py','scenario.py','run.py','receipts.py','run_cooperative_spectral.py','spectral_config.json')
     return {p:hashlib.sha256((root/p).read_bytes()).hexdigest() for p in names}
 
 

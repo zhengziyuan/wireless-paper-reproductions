@@ -1,0 +1,50 @@
+{
+  "schema": "two-retained-real-host-failures-with-successful-later-stages-v1",
+  "V1_actual_preload_native1": {
+    "original_journal_SHA256": "8acfe385aa2b91a5743e15a338f1d9b76121eaa296b63768861fc4772fe866fd",
+    "owner": {
+      "PID": 25780,
+      "creation_FILETIME": 134369210623759072,
+      "associated_with_any_Windows_job": true
+    },
+    "child": {
+      "PID": 54684,
+      "creation_FILETIME": 134369210627915120,
+      "associated_with_any_Windows_job": true
+    },
+    "actual_child_terminal_exit_code": 1,
+    "natural_wait_completed": true,
+    "exact_original_handle_birth_and_exit_match": true,
+    "all_watched_source_and_job_bytes_unchanged": true,
+    "host_errors": [],
+    "error": "MATLAB computer rejected the unsupported endian command option at driver line4, before load/evaluate.",
+    "new_derivative_calls_reached": 0,
+    "saved_decimal_comparison_reached": false
+  },
+  "V2_actual_native0_then_owner_compare_import1": {
+    "owner": {
+      "PID": 2924,
+      "creation_FILETIME": 134369212889424813,
+      "associated_with_any_Windows_job": true
+    },
+    "actual_native_child": {
+      "PID": 29196,
+      "creation_FILETIME": 134369212894330105,
+      "associated_with_any_Windows_job": true
+    },
+    "native_held_journal": "local-origin/native-vector-host-v2\\actual-held-v2\\native36-new-analytic-probe-actual-owned-process.json",
+    "native_held_journal_SHA256": "4b77e2ba5a3b291e3a880860655bd90bd5a932181e09c88cb42830eb2fee48a1",
+    "native_actual_child_exit": 0,
+    "comparison_and_owner_return_code": 1,
+    "retained_error": {
+      "type": "ModuleNotFoundError",
+      "message": "No module named 'scipy'",
+      "traceback": "Traceback (most recent call last):\n  File \"local-origin/native-vector-host-v2\\run_one_native36_probe_existing_held_then_saved_decimal_comparison_v1.py\", line 46, in main\n    compare=load('only_existing_saved_decimal_comparison',job['comparison_entry']);code=compare.run(plan,journal)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"local-origin/native-vector-host-v2\\run_one_native36_probe_existing_held_then_saved_decimal_comparison_v1.py\", line 17, in load\n    spec=importlib.util.spec_from_file_location(name,path);m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);return m\n                                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap_external>\", line 999, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"sources/compare_only_saved_native_vectors_to_existing_MP_decimals_v1.py\", line 7, in <module>\n    from scipy.io import loadmat\nModuleNotFoundError: No module named 'scipy'\n"
+    },
+    "no_retry": true,
+    "historical_memory_not_recovered": true,
+    "new_MP_optimizer_update_MC_RNG_or_trial_calls": 0
+  },
+  "V2_owner_pipeline_original_SHA256": "9344890c5ba09ed20c0c2a88d2df5e6c0be5583bcc1ea782f849791b015e99c4",
+  "later_comparison_only_environment_repair": "The exact same saved-decimal comparison function then ran separately once with existing SciPy dependency paths; no native probe or MP reference was repeated. Its actual exit0/source interval is in actual-saved-comparison-first-use0.json."
+}

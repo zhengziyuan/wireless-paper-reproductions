@@ -17,7 +17,7 @@ import numpy as np
 from corrected_zf_position import evaluator_fingerprint,position_evidence_complete
 from evaluate_correlated_zf import evaluate
 from execute_bank import atomic_json,execute
-from figures import cases,make_job
+from figures import cases,make_job,write_or_verify
 from ma_metadata import bank_complete,implemented_complete,implementation_fingerprint
 from render_figures import terminal_hold_mean
 
@@ -140,6 +140,10 @@ def render_panels(data,output):
 
 
 def derive(bank,output):
+    # This older adapter replaces existing readiness and result files.
+    # Leave numerical code below intact until non-overwriting recovery and
+    # an independently reviewed storage guard are implemented.
+    raise RuntimeError("Corrected figure derivation disabled pending storage guard and non-overwriting recovery")
     output=Path(output);output.mkdir(parents=True,exist_ok=True)
     receipt,config,case_list,records=verify_source(bank);atomic_json(output/"source-readiness.json",receipt)
     if not receipt["full_source_execution_verified"]:
@@ -179,10 +183,11 @@ if __name__=="__main__":
         if (args.bank/"manifest.json").exists():raise ValueError("Use a fresh bank name; never overwrite existing input/evidence")
         subprocess.run([sys.executable,str(Path(__file__).with_name("figures.py")),"--figure",str(args.figure),"--config",str(args.config),
                         "--output-dir",str(args.bank),"--prepare"],check=True)
-        atomic_json(args.bank/"corrected-plan.json",{"paper_id":"two-timescale-ma","figure":args.figure,"scope":"corrected_source_not_historical_recovery",
+        plan={"paper_id":"two-timescale-ma","figure":args.figure,"scope":"corrected_source_not_historical_recovery",
             "unchanged_original_iid_Algorithm2":True,"exact_original_models":["iid","Eq68_correlated"],"expected_source_jobs":300,
             "geometries_per_kappa":100,"nlos_per_geometry":1000,"Monte_Carlo_count_provenance":COUNT_PROVENANCE,
-            "exact_Jensen_integral_not_printed_Eq75":True,"historical_figure_recovery_claimed":False,"executed":False})
+            "exact_Jensen_integral_not_printed_Eq75":True,"historical_figure_recovery_claimed":False,"executed":False}
+        write_or_verify(args.bank/"corrected-plan.json",(json.dumps(plan,indent=2,allow_nan=False)+"\n").encode(),windows_text_newlines=True)
     if args.execute:
         if not 1<=args.workers<=4:raise ValueError("Resource-bounded1..4 workers required")
         execute(args.bank,args.workers)

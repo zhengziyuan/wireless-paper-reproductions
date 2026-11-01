@@ -285,7 +285,10 @@ def execute(specification, language, output, matlab, source_result=None, workers
 def run_matlab(expression,matlab):
     executable=matlab or shutil.which("matlab")
     if not executable:raise ValueError("MATLAB executable unavailable; specify --matlab. No Python-for-MATLAB substitute.")
-    run([executable,"-batch",f"maxNumCompThreads(1);addpath(genpath({matlab_literal(HERE)}));{expression}exit(0,'force');"])
+    cvx = os.environ.get('WIRELESS_REPRO_CVX_ROOT')
+    bootstrap = (f"restoredefaultpath;addpath({matlab_literal(cvx)});cvx_startup(true);"
+                 f"addpath(fullfile({matlab_literal(cvx)},'functions','vec_'));" if cvx else "")
+    run([executable,"-batch",f"maxNumCompThreads(1);{bootstrap}addpath(genpath({matlab_literal(HERE)}));{expression}exit(0,'force');"])
 
 
 def main():
@@ -311,7 +314,7 @@ def main():
         print(json.dumps(specification, indent=2))
         if args.execute:
             destination = args.output_dir or HERE / "outputs" / args.paper / f"table{args.table}-parameter-audit"
-            print(execute_table(specification, args.language, destination.resolve()))
+            print(execute_table(specification, args.language, destination.resolve(), args.matlab))
         return
     specification = plan(args.paper, args.figure,args.settings)
     print(json.dumps(specification, indent=2))

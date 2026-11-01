@@ -1,0 +1,87 @@
+{
+  "schema": "ACTUAL_RELATIVE_PORTABLE_FIXED_QCQP_DUAL_FIRST_USE_V1",
+  "created_UTC": "2026-10-19T05:58:08.244895+00:00",
+  "lanes": [
+    {
+      "lane": "python",
+      "steps": [
+        {
+          "actual_child": {
+            "PID": 59632,
+            "creation_FILETIME": 134368628928711755
+          },
+          "actual_child_terminal": {
+            "PID": 59632,
+            "creation_FILETIME": 134368628928711755,
+            "actual_OS_exit_code": 0,
+            "exact_original_Popen_handle_used": true
+          },
+          "actual_natural_exit_code": 0,
+          "natural_wait_completed": true,
+          "exact_original_handle_birth_and_exit_match": true,
+          "validated_source_selected_input_and_job_interval_pass": true,
+          "metadata_errors": [],
+          "role": "actual-relative-python-fixed-solve-check",
+          "original_held_handle_receipt_SHA256": "ba350454087d8f434f9fcf5b81f4f22e574c28437d776bacc124f66e7b3d3f12"
+        }
+      ],
+      "source_input_interval_pass": true,
+      "numeric_report": "results/portable-python-first-use-check.json",
+      "numeric_report_SHA256": "7ea2963ad6e2d01863992dd31bb900dc0baf2803bdadde0af845ee2486c24ab5",
+      "actual_first_use_closure_SHA256": "f4215401855d2c3b88f0e444ebf211500f3e39740eeb6c9a79646eb2fa39cf08"
+    },
+    {
+      "lane": "native",
+      "steps": [
+        {
+          "actual_child": {
+            "PID": 22532,
+            "creation_FILETIME": 134368628928700960
+          },
+          "actual_child_terminal": {
+            "PID": 22532,
+            "creation_FILETIME": 134368628928700960,
+            "actual_OS_exit_code": 0,
+            "exact_original_Popen_handle_used": true
+          },
+          "actual_natural_exit_code": 0,
+          "natural_wait_completed": true,
+          "exact_original_handle_birth_and_exit_match": true,
+          "validated_source_selected_input_and_job_interval_pass": true,
+          "metadata_errors": [],
+          "role": "actual-relative-native-fixed-solve",
+          "original_held_handle_receipt_SHA256": "914e309441f70fdfb1c929836aaa1dafc100e6fc96a862be909a5069cbe5e773"
+        },
+        {
+          "actual_child": {
+            "PID": 20376,
+            "creation_FILETIME": 134368629341743387
+          },
+          "actual_child_terminal": {
+            "PID": 20376,
+            "creation_FILETIME": 134368629341743387,
+            "actual_OS_exit_code": 0,
+            "exact_original_Popen_handle_used": true
+          },
+          "actual_natural_exit_code": 0,
+          "natural_wait_completed": true,
+          "exact_original_handle_birth_and_exit_match": true,
+          "validated_source_selected_input_and_job_interval_pass": true,
+          "metadata_errors": [],
+          "role": "actual-relative-native-numeric-check",
+          "original_held_handle_receipt_SHA256": "27b98e63f051dcb3d2f61975ff9ffafa902d34d4acade1d67032147060f4fa6f"
+        }
+      ],
+      "source_input_interval_pass": true,
+      "numeric_report": "results/portable-native-first-use-check.json",
+      "numeric_report_SHA256": "f214a3e7bb5c1fa4b29f239bd4046e5776c5e022fc2687d3b331567fbe575831",
+      "actual_first_use_closure_SHA256": "9b2f05aefcf812ddd19c55593a8bbfa9d60a39cd85da8d29ae522ca5a23936ed"
+    }
+  ],
+  "exact_pre_first_use_plan_SHA256": "f4bfdbec907ea185355a1d4677a38ce2ca0284969f90ef1e7a45bf1b0cd2182d",
+  "original_pre_first_use_manifest_SHA256": "2fa1773fd5699eba33d80f692ac4b0c7ce76b412e1bfa0d41978d6e0f518afd1",
+  "all_three_actual_processes_natural0_and_source_closed": true,
+  "fresh_fixed_Python_and_native_numerics_pass": true,
+  "new_MP_reference_trajectory_or_MC_count": 0,
+  "full_trajectory_or_original_reference_or_paper_PASS": false
+}

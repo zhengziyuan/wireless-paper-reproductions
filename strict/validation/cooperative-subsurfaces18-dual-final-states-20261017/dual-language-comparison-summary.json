@@ -1,0 +1,12 @@
+{
+  "scope": "All18 paired physical inputs and144 independently optimized minimum-SINR pairs",
+  "same_configuration_every_original_slot": true,
+  "original_slots": 18,
+  "input_arrays_per_pair": 11,
+  "maximum_absolute_linear_SINR_gap": 0.0013155360265564298,
+  "maximum_relative_SINR_gap": 0.0002634702712672299,
+  "maximum_absolute_dB_SINR_gap": 0.001144086139843351,
+  "number_passing_same_state_field_tolerance": 9,
+  "optimized_solution_equality_or_reference_agreement_certified": false,
+  "note": "Same-state evaluation tolerance is reported diagnostically, not relaxed into an independently optimized solution-equivalence claim. MATLAB and Python convex backends and phase paths differ."
+}

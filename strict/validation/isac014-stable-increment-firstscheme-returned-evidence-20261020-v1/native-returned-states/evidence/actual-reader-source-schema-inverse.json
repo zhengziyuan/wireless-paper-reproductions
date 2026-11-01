@@ -1,0 +1,85 @@
+{
+  "schema": "native-schema-host-only-whole-existing-reader-inverse-v1",
+  "old_reader": "local-origin/data\\resume-20261017\\ISAC014-stable-increment-returned-blocks-independent-MP80-MP100-v1\\audit_only_closed_new_returned_states_v1.py",
+  "old_SHA256": "80fe571c8b729f35c7d0c03cf4c64c307b649d5b935025fcefd8685f96beb0ec",
+  "new_reader": "local-origin/native-saved-MP-preparation\\audit_only_closed_native_new36_and_final_existing_MP_v1.py",
+  "new_SHA256": "ebf213cdc6028261988ef35faeaf32e52c14a7b296f3e11c4161a212e9acec23",
+  "whole_original_bytes_reconstructed": true,
+  "replacements": [
+    {
+      "before": "import numpy as np\n",
+      "after": "import numpy as np\nfrom native_saved_state_schema_v1 import load_native,admitted_main,PLAN_PATH\n",
+      "occurrences": 1
+    },
+    {
+      "before": "A=R/'ISAC014-stable-PGA-increment-growth-cap5000-rel1e10-first-scheme-actual-v2'",
+      "after": "A=R.parent/'ISAC014-native-stable-PGA-full-actual-v1'",
+      "occurrences": 1
+    },
+    {
+      "before": "H=R/'ISAC014-stable-PGA-increment-full-first-scheme-held-once-v2'",
+      "after": "H=R/'ISAC014-native-stable-PGA-full-first-scheme-prepared-v1'",
+      "occurrences": 1
+    },
+    {
+      "before": "OUT=Path(__file__).parent",
+      "after": "OUT=None\nNATIVE_PLAN=None\nNATIVE_ADMISSION_PATH=None",
+      "occurrences": 1
+    },
+    {
+      "before": "    started=time.perf_counter();out=OUT/'ACTUAL_NEW_STABLE_INCREMENT_RETURNED_BLOCKS_MP80_MP100_PHYSICS_AND_BLOCK_GRADIENTS_V1.json';assert not out.exists()\n    jp=H/'actual-held-v1/ISAC014-stable-increment-firstscheme-actual-owned-process.json';sp=A/'actual-returned-inner-block-states.json';ap=A/'actual-returned-inner-block-states.npz';rp=A/'full-result.json';cp=A/'actual-source-input-and-result-closure.json';sc=A/'original-scenario.json'\n    j=json.loads(jp.read_bytes());closure=json.loads(cp.read_bytes());sm=json.loads(sp.read_bytes());result=json.loads(rp.read_bytes());scene=json.loads(sc.read_bytes())\n    assert j['natural_wait_completed']and j['exact_original_handle_birth_and_exit_match']and j['all_watched_source_and_job_bytes_unchanged']and not j['host_errors']\n    assert closure['source_and_input_interval_unchanged']and not closure['host_errors']and closure['complete_selected_scheme_result_saved']\n    assert sm['all_completed_blocks_have_three_saved_returned_states']and not sm['capture_errors']and sha(ap)==sm['arrays_SHA256']\n    assert list(result['history'])==['Rot-BS & Rot-RIS']and result['original_controls']=={k:scene[k]for k in ('W_solver','RCG_solver','PGA_solver','AO_solver')}\n    blocks=result['history']['Rot-BS & Rot-RIS']['blocks'];assert len(sm['rows'])==len(blocks)*3 and all(v==len(blocks)for v in sm['counts'].values())\n    assert all(row['method']==('update_w','update_theta','update_rotation')[i%3]and row['call']==i//3+1 and row['fixed_iota']==blocks[i//3]['iota']for i,row in enumerate(sm['rows']))\n    manifest=json.loads((D/'SOURCE_MANIFEST_V1.json').read_bytes());files=[Path(__file__),jp,sp,ap,rp,cp,sc,A/'original-config.json',D/'SOURCE_MANIFEST_V1.json']+[D/n for n in manifest['source_SHA256']]+[T/n for n in ('mp_physical_reference.py','audit_cold_control.py','audit_failure.py','audit_stable_derivatives.py')]\n    before={str(p):sha(p)for p in files};assert all(sha(D/n)==v for n,v in manifest['source_SHA256'].items())\n    sys.path.insert(0,str(D));from equivalent_runtime_case014_v1 import load_core\n    model=load_core(None);fullref,partialref=ref_functions();scalar_rows,populations=stopping_rows(result,scene)\n    with np.load(ap,allow_pickle=False)as z:arrays={k:z[k].copy()for k in z.files}\n    assert all(v.dtype.kind in 'fc'and np.all(np.isfinite(v))for v in arrays.values())\n",
+      "after": "    started=time.perf_counter();out=OUT/'ACTUAL_NATIVE_NEW36_AND_FINAL_EXISTING_MP80_MP100_PHYSICS_AND_GRADIENTS_V1.json';assert not out.exists()\n    native=load_native(NATIVE_PLAN,OUT);j=native['j'];sm=native['sm'];result=native['result'];scene=native['scene'];arrays=native['arrays']\n    blocks=result['history']['Rot-BS & Rot-RIS']['blocks']\n    files=[Path(p)for p in NATIVE_PLAN['source_and_input_pins']]+[PLAN_PATH,NATIVE_ADMISSION_PATH]\n    before={str(p):sha(p)for p in files}\n    assert all(before[p]==digest for p,digest in NATIVE_PLAN['source_and_input_pins'].items())\n    sys.path.insert(0,str(D));from equivalent_runtime_case014_v1 import load_core\n    model=load_core(None);fullref,partialref=ref_functions();scalar_rows,populations=stopping_rows(result,scene)\n    assert all(v.dtype.kind in 'fc'and np.all(np.isfinite(v))for v in arrays.values())\n",
+      "occurrences": 1
+    },
+    {
+      "before": "    final=result['metrics']['Rot-BS & Rot-RIS'];fw=np.asarray(final['w_re'])+1j*np.asarray(final['w_im']);ft=np.asarray(final['theta_re'])+1j*np.asarray(final['theta_im']);fr=np.asarray(final['rotation']);_,fg=model.evaluate(fw,ft,fr,scene,float(final['iota']),True)",
+      "after": "    final=result['metrics']['Rot-BS & Rot-RIS'];fw=native['final_arrays']['W'];ft=native['final_arrays']['theta'];fr=native['final_arrays']['r'];_,fg=model.evaluate(fw,ft,fr,scene,float(final['iota']),True)",
+      "occurrences": 1
+    },
+    {
+      "before": "    put(out,report);print(json.dumps(",
+      "after": "    report.update(schema='actual-only-native-new36-and-final-common-formula-MP80-MP100-v1',\n        actual_native_MAT_input_schema_receipt='ACTUAL_NATIVE_MAT_TYPED_STATE_SCHEMA_AND_INPUT_BINDING_V1.json',\n        actual_native_MAT_SHA256=NATIVE_PLAN['source_and_input_pins'][NATIVE_PLAN['actual_inputs']['MAT']],\n        actual_native_result_SHA256=NATIVE_PLAN['source_and_input_pins'][NATIVE_PLAN['actual_inputs']['result']],\n        independent_native_state_values_not_inherited_from_Python_PASS=True,\n        binary64_formula_comparator_scope='Frozen common Python arithmetic provider on each actual native state; native per-coordinate analytic vectors were not captured. Stored native RCG/PGA norms are separately reported alongside newly computed MP norms.',\n        native_returned_block_input_not_final_joint_stationarity=True,\n        actual_final_complex_components_from_raw_MAT_not_recombined_JSON=True)\n    put(out,report);print(json.dumps(",
+      "occurrences": 1
+    },
+    {
+      "before": "if __name__=='__main__':run()",
+      "after": "if __name__=='__main__':admitted_main(globals(),run)",
+      "occurrences": 1
+    }
+  ],
+  "independent_precision_loop_source_bytes_equal": true,
+  "precision_loop_bytes": 7227,
+  "precision_loop_SHA256": "b53e7b03952f4d92c6eaf0533470c993cfb130890b12ce2ab6679b4cab62a498",
+  "whole_unchanged_functions": {
+    "sha": {
+      "whole_function_source_bytes_equal": true,
+      "SHA256": "452dca73f0c03024f1b37c1334a1d3066a7fe36748642a70b164d5c2c9bfcc47"
+    },
+    "put": {
+      "whole_function_source_bytes_equal": true,
+      "SHA256": "216dd71f731ea5633e9570b65859cd4c1f8b65d65ab6aaf86435cd0ebe201eac"
+    },
+    "clean": {
+      "whole_function_source_bytes_equal": true,
+      "SHA256": "97938fc788f5247ec770518680cf658a953d6fe66b4b026bd2ee96ef7bbe5e1e"
+    },
+    "reprmp": {
+      "whole_function_source_bytes_equal": true,
+      "SHA256": "4037d276b6e657adcbf8a2fe2bb76d79589508513c5a77b5a79491f8397161b3"
+    },
+    "flat": {
+      "whole_function_source_bytes_equal": true,
+      "SHA256": "3f7ba67238703fe77bbbf21845251701f7ee1315997f1a20e3cea06860ae7f68"
+    },
+    "W_diagnostics": {
+      "whole_function_source_bytes_equal": true,
+      "SHA256": "cf33853016b34cdfdb13f005c87f84ee6da717f9e44a5e343dc4b08680756561"
+    },
+    "ref_functions": {
+      "whole_function_source_bytes_equal": true,
+      "SHA256": "f99bd0f8f8431ce77cb979c482a5ed1869e532f742d4b47d3d8178325a9455bb"
+    }
+  },
+  "no_MP_model_optimizer_or_loader_execution_during_prepare": true,
+  "syntax_only_compile": true
+}

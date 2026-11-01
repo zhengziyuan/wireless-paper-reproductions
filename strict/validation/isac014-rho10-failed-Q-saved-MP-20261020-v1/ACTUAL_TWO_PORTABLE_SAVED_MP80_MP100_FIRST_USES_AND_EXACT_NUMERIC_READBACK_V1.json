@@ -1,0 +1,65 @@
+{
+  "schema": "ACTUAL_ISAC014_TWO_PORTABLE_SAVED_ONLY_MP80_MP100_FIRST_USES_AND_EXACT_NUMERIC_READBACK_V1",
+  "actual_first_uses": [
+    {
+      "reader": "diagnose_saved_actual_Q_MP80_MP100_v1.py",
+      "actual_execution": "One completed exec_command process; no timeout, restart or retry",
+      "actual_process_exit_code": 0,
+      "actual_output_report_SHA256": "ecb51b8d2ef91a7034cb765bfdcd5c35a1af803a963f41e876094c8b448992dc",
+      "original_actual_report_SHA256": "f4450338f55a833d5e71077f3cad9395b79095c013e4d7826e2dc70ddde8c1e8",
+      "all_report_fields_except_elapsed_and_local_source_metadata_exact": true,
+      "all_original_MP_decimal_strings_and_float64_bits_exact": true,
+      "source_interval_closed": true,
+      "source_before": {
+        "source-dc6ae69ebd0e/diagnose_saved_actual_Q_MP80_MP100_v1.py": "fd6fd6bcf99ec86badc63bd2a0125c44b8205909dcd6ea30ec18b63edbf682af",
+        "source-aa25adae8738/actual-failed-Q-operands.npz": "635f106c9c5b5ec02a21117d532325cbd66bbddf6d4caf2016faf0c6c9b901e4",
+        "source-228d893da0bf/actual-failed-Q-capture-or-nonreproduction.json": "8a898f44812ee8d57f0f9bee977852544ac78a46aa50eb934adbd62a98bdd93e",
+        "source-746a3fa59600/original-scenario.json": "15ff8c8ce1321d024b8b6fdc8e5ca735a3211a1bc44b0ae003e7c66c777b19bf",
+        "source-a5f0c9888917/actual-held-terminal-and-source-closure.json": "2c95ad3081c838ea7ef97f1ad222b55729f89ae6b20eaee72573495e44215fad"
+      },
+      "source_after": {
+        "source-dc6ae69ebd0e/diagnose_saved_actual_Q_MP80_MP100_v1.py": "fd6fd6bcf99ec86badc63bd2a0125c44b8205909dcd6ea30ec18b63edbf682af",
+        "source-aa25adae8738/actual-failed-Q-operands.npz": "635f106c9c5b5ec02a21117d532325cbd66bbddf6d4caf2016faf0c6c9b901e4",
+        "source-228d893da0bf/actual-failed-Q-capture-or-nonreproduction.json": "8a898f44812ee8d57f0f9bee977852544ac78a46aa50eb934adbd62a98bdd93e",
+        "source-746a3fa59600/original-scenario.json": "15ff8c8ce1321d024b8b6fdc8e5ca735a3211a1bc44b0ae003e7c66c777b19bf",
+        "source-a5f0c9888917/actual-held-terminal-and-source-closure.json": "2c95ad3081c838ea7ef97f1ad222b55729f89ae6b20eaee72573495e44215fad"
+      }
+    },
+    {
+      "reader": "solve_only_saved_rank1_QCQP_MP80_MP100_v1.py",
+      "actual_execution": "One completed exec_command process; no timeout, restart or retry",
+      "actual_process_exit_code": 0,
+      "actual_output_report_SHA256": "8d238b584aac383731735b93aa1f6db210c65432e99716bad4692aef6a8c0b54",
+      "original_actual_report_SHA256": "155c6afc50f36601f1e5195bd17d3d1ebdb4f59727cf1b351db3d9204415009e",
+      "all_report_fields_except_elapsed_and_local_source_metadata_exact": true,
+      "all_original_MP_decimal_strings_and_float64_bits_exact": true,
+      "source_interval_closed": true,
+      "source_before": {
+        "source-4128b8ac9346/solve_only_saved_rank1_QCQP_MP80_MP100_v1.py": "dd0a9ce171c563842a162064b24e840de5191ca26f05e268f7ca4145c259bc5a",
+        "source-dc6ae69ebd0e/diagnose_saved_actual_Q_MP80_MP100_v1.py": "fd6fd6bcf99ec86badc63bd2a0125c44b8205909dcd6ea30ec18b63edbf682af",
+        "source-aa25adae8738/actual-failed-Q-operands.npz": "635f106c9c5b5ec02a21117d532325cbd66bbddf6d4caf2016faf0c6c9b901e4",
+        "source-746a3fa59600/original-scenario.json": "15ff8c8ce1321d024b8b6fdc8e5ca735a3211a1bc44b0ae003e7c66c777b19bf",
+        "source-228d893da0bf/actual-failed-Q-capture-or-nonreproduction.json": "8a898f44812ee8d57f0f9bee977852544ac78a46aa50eb934adbd62a98bdd93e",
+        "source-a5f0c9888917/actual-held-terminal-and-source-closure.json": "2c95ad3081c838ea7ef97f1ad222b55729f89ae6b20eaee72573495e44215fad"
+      },
+      "source_after": {
+        "source-4128b8ac9346/solve_only_saved_rank1_QCQP_MP80_MP100_v1.py": "dd0a9ce171c563842a162064b24e840de5191ca26f05e268f7ca4145c259bc5a",
+        "source-dc6ae69ebd0e/diagnose_saved_actual_Q_MP80_MP100_v1.py": "fd6fd6bcf99ec86badc63bd2a0125c44b8205909dcd6ea30ec18b63edbf682af",
+        "source-aa25adae8738/actual-failed-Q-operands.npz": "635f106c9c5b5ec02a21117d532325cbd66bbddf6d4caf2016faf0c6c9b901e4",
+        "source-746a3fa59600/original-scenario.json": "15ff8c8ce1321d024b8b6fdc8e5ca735a3211a1bc44b0ae003e7c66c777b19bf",
+        "source-228d893da0bf/actual-failed-Q-capture-or-nonreproduction.json": "8a898f44812ee8d57f0f9bee977852544ac78a46aa50eb934adbd62a98bdd93e",
+        "source-a5f0c9888917/actual-held-terminal-and-source-closure.json": "2c95ad3081c838ea7ef97f1ad222b55729f89ae6b20eaee72573495e44215fad"
+      }
+    }
+  ],
+  "all_two_process_exit_codes_zero": true,
+  "all_source_intervals_closed": true,
+  "all_nonmetadata_results_exactly_reproduce_two_original_actual_reports": true,
+  "original_operand_NPZ_whole_bytes_unchanged": true,
+  "source_routing_tested_from_current_directory_outside_packet": true,
+  "no_private_core_or_document_or_E_path_dependency": true,
+  "new_optimization_search_MC_RNG_or_new_channel_calls": 0,
+  "code_arithmetic_failure_not_paper_formula_error": true,
+  "candidate_or_correction_trajectory_tested": false,
+  "full_case_or_paper_or_reference_PASS": false
+}

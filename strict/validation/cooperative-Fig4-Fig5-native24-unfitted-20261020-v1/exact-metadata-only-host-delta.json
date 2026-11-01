@@ -1,0 +1,20 @@
+{
+  "schema": "exact-one-host-line-native24-reused-first-input-scope-inverse-v1",
+  "original_source": "source-67b4a062b838/collect_only_closed_native24_and_saved_Python192_v1.py",
+  "original_SHA256": "bb864fdd025896fd1e67dcdce99214f236510289ed62a302b78d315c51e7ea33",
+  "new_source": "source-ed4e0817e3e9/collect_only_closed_native24_and_saved_Python192_v2.py",
+  "new_SHA256": "59f58a090e482d77205e5cd3c278cc49c9478af6bd3a471c6fb16a48a39cf9da",
+  "old_utf8_fragment": "specs={x['point_id']:x for x in construction['points']};need(set(specs)==set(producers),'All generated missing native points and no extra point')",
+  "new_utf8_fragment": "all_specs={x['point_id']:x for x in construction['points']};need(len(construction['points'])==len(all_specs)==24 and 'kN20-INR001' not in producers and set(all_specs)==set(producers)|{'kN20-INR001'},'Exactly23 new generated native points plus the fixed separately verified reused first point');specs={k:v for k,v in all_specs.items()if k!='kN20-INR001'}",
+  "whole_source_inverse_exact_bytes": true,
+  "unchanged_math_closure_values_reference_guards": true,
+  "original_V1_actual_exit": 1,
+  "original_V1_source_interval_closed": true,
+  "original_V1_assembly_output_created": false,
+  "actual_new_V2_execution": false,
+  "no_new_math_tests_or_science_calls": true,
+  "plan": "source-949bc6944132/PREPARED_NATIVE24_CLOSED_SCALAR_EPS_AND_EXISTING_PYTHON192_ASSEMBLY_PLAN_V2.json",
+  "plan_SHA256": "ec798326d46fc686acd6792c53db481112afdfb16069b30a6df744b736bc527c",
+  "command": "source-bf33e2b275d8/EXACT_FUTURE_ONCE_SAVED_ONLY_NATIVE24_SCALAR_ASSEMBLY_COMMAND_V2.json",
+  "command_SHA256": "8296041523024738ceae2f68793ca1dc3e60941b9c7e945a9b6229b7b9357a69"
+}

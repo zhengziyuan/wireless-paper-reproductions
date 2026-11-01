@@ -1,0 +1,137 @@
+{
+  "scope": "One actual complete Python/native case; not the full900 population",
+  "case": "case-000-mc-000",
+  "all4_Python_saved_math_stages_and_public_replay_pass": true,
+  "all4_native_saved_math_stages_and_public_replay_pass": true,
+  "actual_original_native_four_source_bytes_match": true,
+  "old_source_roots_retained_new_verifier_runtime_separate": true,
+  "actual_native_sample_comparisons": {
+    "MA-MRT": {
+      "sample_count": 1000,
+      "maximum_saved_independent_sample_error": 2.220446049250313e-15,
+      "stored_mean_error": 4.440892098500626e-16,
+      "physical_power_comparison_pass": true,
+      "reference_origin": "independent physics at actual native optimized position",
+      "historical_FPA_W_or_step_KKT_recovered": false
+    },
+    "MA-ZF": {
+      "sample_count": 1000,
+      "maximum_saved_independent_sample_error": 2.6645352591003757e-15,
+      "stored_mean_error": 8.881784197001252e-16,
+      "physical_power_comparison_pass": true,
+      "reference_origin": "independent physics at actual native optimized position",
+      "historical_FPA_W_or_step_KKT_recovered": false
+    },
+    "FPA-MRT": {
+      "sample_count": 1000,
+      "maximum_saved_independent_sample_error": 1.5543122344752192e-13,
+      "stored_mean_error": 0.0,
+      "physical_power_comparison_pass": true,
+      "reference_origin": "exact same job/config and independent fixed-array evaluator; reuse closed full1000 scalar/batched reference",
+      "historical_FPA_W_or_step_KKT_recovered": false
+    },
+    "FPA-ZF": {
+      "sample_count": 1000,
+      "maximum_saved_independent_sample_error": 3.8413716652030416e-14,
+      "stored_mean_error": 0.0,
+      "physical_power_comparison_pass": true,
+      "reference_origin": "exact same job/config and independent fixed-array evaluator; reuse closed full1000 scalar/batched reference",
+      "historical_FPA_W_or_step_KKT_recovered": false
+    },
+    "FPA-OPT": {
+      "sample_count": 1000,
+      "maximum_saved_independent_sample_error": 1.2452261444195756e-12,
+      "stored_mean_error": 0.0,
+      "physical_power_comparison_pass": true,
+      "reference_origin": "exact same job/config and independent fixed-array evaluator; reuse closed full1000 scalar/batched reference",
+      "historical_FPA_W_or_step_KKT_recovered": false
+    }
+  },
+  "native_ordered_state_counts": {
+    "mrt": {
+      "positions": 271,
+      "coordinates": 270
+    },
+    "zf": {
+      "positions": 409,
+      "coordinates": 408
+    }
+  },
+  "dual_own_state_comparison": {
+    "input_difference": false,
+    "metric_evaluator_difference_above_independent_validation_gates": false,
+    "solver_state_or_trajectory_difference": false,
+    "histories": {
+      "mrt": {
+        "python_position_count": 46,
+        "matlab_position_count": 46,
+        "same_length": true,
+        "shared_prefix_position_max_abs_difference": 7.771561172376096e-16,
+        "shared_prefix_objective_max_abs_difference": 1.7763568394002505e-15,
+        "first_shared_prefix_position_or_objective_difference_above_fixed_comparison_gate": null,
+        "terminal_position_max_abs_difference": 3.408731630294426e-16,
+        "terminal_design_objective_difference_python_minus_matlab": 8.881784197001252e-16,
+        "same_path_within_fixed_comparison_gates": true,
+        "terminal_state_bitwise_equal": false,
+        "solver_enumeration_and_null_serialization_not_bitwise_equal_required": true
+      },
+      "zf": {
+        "python_position_count": 69,
+        "matlab_position_count": 69,
+        "same_length": true,
+        "shared_prefix_position_max_abs_difference": 4.363176486776865e-14,
+        "shared_prefix_objective_max_abs_difference": 4.218847493575595e-15,
+        "first_shared_prefix_position_or_objective_difference_above_fixed_comparison_gate": null,
+        "terminal_position_max_abs_difference": 3.957945082788683e-14,
+        "terminal_design_objective_difference_python_minus_matlab": -4.218847493575595e-15,
+        "same_path_within_fixed_comparison_gates": true,
+        "terminal_state_bitwise_equal": false,
+        "solver_enumeration_and_null_serialization_not_bitwise_equal_required": true
+      }
+    },
+    "schemes": {
+      "MA-MRT": {
+        "saved_sample_rate_difference_max_abs": 2.6645352591003757e-15,
+        "independent_same_evaluator_at_own_states_sample_difference_max_abs": 2.6645352591003757e-15,
+        "independent_mean_difference_python_minus_matlab": 0.0,
+        "evaluator_residual_after_own_state_difference_max_abs": 2.220446049250313e-15,
+        "same_terminal_samples_within_fixed_sample_comparison_gate": true
+      },
+      "MA-ZF": {
+        "saved_sample_rate_difference_max_abs": 3.0042635046356736e-13,
+        "independent_same_evaluator_at_own_states_sample_difference_max_abs": 3.0020430585864233e-13,
+        "independent_mean_difference_python_minus_matlab": -7.549516567451064e-15,
+        "evaluator_residual_after_own_state_difference_max_abs": 4.884981308350689e-15,
+        "same_terminal_samples_within_fixed_sample_comparison_gate": true
+      },
+      "FPA-MRT": {
+        "saved_sample_rate_difference_max_abs": 1.5543122344752192e-13,
+        "independent_same_evaluator_at_own_states_sample_difference_max_abs": 0.0,
+        "independent_mean_difference_python_minus_matlab": 0.0,
+        "evaluator_residual_after_own_state_difference_max_abs": 1.5543122344752192e-13,
+        "same_terminal_samples_within_fixed_sample_comparison_gate": true
+      },
+      "FPA-ZF": {
+        "saved_sample_rate_difference_max_abs": 3.5083047578154947e-14,
+        "independent_same_evaluator_at_own_states_sample_difference_max_abs": 0.0,
+        "independent_mean_difference_python_minus_matlab": 0.0,
+        "evaluator_residual_after_own_state_difference_max_abs": 3.5083047578154947e-14,
+        "same_terminal_samples_within_fixed_sample_comparison_gate": true
+      },
+      "FPA-OPT": {
+        "saved_sample_rate_difference_max_abs": 1.2452261444195756e-12,
+        "independent_same_evaluator_at_own_states_sample_difference_max_abs": 0.0,
+        "independent_mean_difference_python_minus_matlab": 0.0,
+        "evaluator_residual_after_own_state_difference_max_abs": 1.2452261444195756e-12,
+        "same_terminal_samples_within_fixed_sample_comparison_gate": true
+      }
+    }
+  },
+  "maximum_saved_dual_sample_rate_difference": 1.2452261444195756e-12,
+  "maximum_own_state_evaluator_residual": 1.2452261444195756e-12,
+  "new_native_reader_position_optimizer_or_benchmark_optimizer_or_RNG_calls": 0,
+  "original_unrecorded_FPA_inner_weights_or_histories_recovered": false,
+  "failed_v2_public_native_output_alias_attempt_retained": true,
+  "corrected_case_identity_uses_original_receipt_and_labels": true,
+  "all900_independent_or_native_completion_or_original_reference_or_paper_pass": false
+}

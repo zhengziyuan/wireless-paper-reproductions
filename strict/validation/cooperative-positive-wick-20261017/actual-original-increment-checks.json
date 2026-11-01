@@ -1,0 +1,48 @@
+{
+  "scope": "full_dimension_exact_original_objective_increment_component_NOT_paper_reproduction",
+  "dimensions": {
+    "J": 3,
+    "U": 2,
+    "N": 16,
+    "M": 25,
+    "K": 1
+  },
+  "cases": [
+    {
+      "kappa_leo_db": 0,
+      "checks": {
+        "AP_max_error": 1.6805468406013848e-20,
+        "AP_identity_error": 0.0,
+        "MR_S_max_error": 1.782989930927236e-17,
+        "MR_S_identity_error": 0.0,
+        "MR_TTS_max_error": 1.463672932855431e-17,
+        "MR_TTS_identity_error": 0.0
+      },
+      "all_passed": true
+    },
+    {
+      "kappa_leo_db": 20,
+      "checks": {
+        "AP_max_error": 2.202285662861181e-20,
+        "AP_identity_error": 0.0,
+        "MR_S_max_error": 1.4704458877110152e-17,
+        "MR_S_identity_error": 0.0,
+        "MR_TTS_max_error": 2.5215323806813267e-17,
+        "MR_TTS_identity_error": 0.0
+      },
+      "all_passed": true
+    }
+  ],
+  "all_passed": true,
+  "full_reproduction_pass": false,
+  "fixture_sha256": "8681b375a13c14a71f7e19fe04d63204c962604be1d3bdf2343533a64dbe7624",
+  "executed_source_hashes": {
+    "verify_increments.py": "9ed4056baadf0b2c58350738e904a1ee193236e19b49761dc342cc29c15d9d3a",
+    "increments.py": "384114958637e7d86dbce3894ef653cd6fd6edd2e40883b6b3774a65767fa7ea",
+    "models.py": "45298c4f9037663cc33f67533f0727fc36f14a70c208927816375efca32b29f3",
+    "core.py": "fdbe81b3d19e1c1aa62a015969017f24accdcdb6e7a709a65540576b49f0abf2",
+    "scenario.py": "7dbc490944c2fd7aaa2fc862068508530faab10b8c2dcb63eccf5511c74a62ba",
+    "algorithms.py": "3106b9c673757b73ccb350846c78aeae64739837e960b9c80b3fc62a3feaa5b2",
+    "full_config.json": "80c8d736546a9802c2b4c062ab5a585569b7610ed9c808841324cdd8a9995dea"
+  }
+}

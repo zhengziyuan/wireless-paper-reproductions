@@ -1,0 +1,64 @@
+{
+  "schema": "SCOPED_FIRST_NATIVE_CASE_COMPLETE15_MATRIX_EVIDENCE_PUBLIC_V1",
+  "original_mathematical_milestone_UTC": "2026-10-29T09:45:58.173916+00:00",
+  "original_mathematical_milestone_SHA256": "e5bf3d642a6d91b634e9d05d4f6921ef4d3f506a186e1889d4e9aa8fca5c35bd",
+  "source_closed_value_transport_receipt_SHA256": "0844ab786812e9c1acc0a4f5af2fd1c032a41f88d8612875a9a83880cb0842a1",
+  "public_native_input_SHA256": "abeb5ddccb9f8f5b0eb5a3106d281eec610d179b8e59722e92b289d644358d76",
+  "row_matrices": {
+    "count": 30,
+    "rows": 15,
+    "precisions": [
+      80,
+      100
+    ],
+    "shape": [
+      16,
+      16
+    ],
+    "cells": 7680,
+    "format": "Original tagged mpf/mpc integer-word tuples, complete column-major matrices; no rounded conversion.",
+    "original_key_provenance": "Opaque historical key; original private preimage is not exported, so old keys cannot be recomputed and the original three-file cache API is not supported."
+  },
+  "scope_boundary": "Only the first original native case projector matrices and prescribed full composite. This is not full optimizer, physical feasibility, convergence, original-paper-reference or full18/all-six acceptance. Transport checks are not new scientific validation.",
+  "new_data_export_or_publication_preparation_integrals": 0,
+  "row_generation_warning": "New uncached rows were actually integrated at original80/100 precision; only final saved-row assembly and this data preparation used zero new integrals.",
+  "publication_status": "Prepared locally; no GitHub upload claimed.",
+  "scope": {
+    "original_case": 1,
+    "original_geometry_event": 6,
+    "original_design_event": 7,
+    "N": 16,
+    "K": 15,
+    "U": 1,
+    "complete_rows": 15,
+    "MP_precisions": [
+      80,
+      100
+    ],
+    "complete_row_precision_pairs": 30,
+    "original_ordered_cross_products": 210
+  },
+  "native_complex_components_checked": 256,
+  "crossprecision_real_imag_components_checked": 512,
+  "original_native_field_failures": 0,
+  "original_crossprecision_failures": 0,
+  "original_comparison_exceptions": 0,
+  "all_component_records_independently_readback_and_native_words_matched": true,
+  "maximum_finite_original_scaled_field_error": "0.000000162458861812271412670919464454263073997066478902130756434215671043390206718543612435976467727199453995748",
+  "worst_native_component_zero_based": 221,
+  "assembly_row_hits": 30,
+  "assembly_new_integrals": 0,
+  "first_case_optimizer_full_physics_convergence_or_original_paper_reference_pass": false,
+  "full18_or_all_six_complete": false,
+  "exact_matrix_object": {
+    "definition": "Pi_k = h_k h_k^H / ||h_k||^2; A = I - sum_k Pi_k; M_k = E[Pi_k].",
+    "independent_NHU_identity": "E[A A^H] = I - sum_k M_k + sum_{k!=j} M_k M_j. All ordered pairs are retained.",
+    "assumptions": "Per-sample rank-one projector idempotence and independence of different NHU channels.",
+    "not_claimed": [
+      "A is an exact joint-nullspace orthogonal projector",
+      "full physical feasibility or final IEEE reference agreement"
+    ],
+    "local_derivation": "strict/hotspot-satcom/STATISTICAL_ERRATUM.md section3",
+    "interpretation": "This second moment is exact under the stated model; it is not E[A], not the square of I-sum(M_k), and not a truncated Neumann series."
+  }
+}

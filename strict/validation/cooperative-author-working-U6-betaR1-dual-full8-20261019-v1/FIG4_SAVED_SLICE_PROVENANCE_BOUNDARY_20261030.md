@@ -1,0 +1,9 @@
+# Fig. 4 saved-slice provenance boundary
+
+The author-supplied `test_varsigma_316.zip` contains both `test_varsigma_316/main.m` and `test_varsigma_316/plot_record0120.mat`. In `main.m`, lines 9–11 initialize `test_variable_2_count` to zero and increment it once in the sole `test_variable_2=2` loop. The assignments at lines 25, 29, 33, 43, 46, 50 and 53 use that count as the third index of `plot_record`. Thus, under the visible control flow, those assignments address slice 1.
+
+The previously reported agreement between the three saved triplicate means and the Fig. 4 EPS references uses **slice 2**, as detailed in [the saved-means evidence](FIG4_FIG5_AXIS_AND_SAVED_MEANS_EVIDENCE_20261030.md). A search of the other MATLAB members in the archive found no direct occurrence of the counter name. Some called scripts do load MAT files into the shared MATLAB workspace without a variable list, so the visible indexing alone does not exclude all workspace side effects or establish the exact historical execution. In the four same-named MAT members present in the ZIP, the top-level variables are `W`, `phi`, `p_w` and `p_w`, respectively; the actual historical working directory remains unverified.
+
+The archived `main.m` also assigns `Experimient_Times = 0:2:2` and subsequently uses that vector as a dimension argument and in scalar-index expressions. Its executability under the historical environment has not been tested here; this observation alone does not establish a particular runtime error.
+
+The archived `main.m` therefore does not by itself explain how the saved second slice was populated. This is a **source and run provenance gap**, not an identified mathematical error, a failed published curve, or a disproof of the existing numerical match. It does not determine the code revision, seeds, population or plotting steps used for the published figure. The source archive is not redistributed.

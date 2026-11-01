@@ -1,0 +1,76 @@
+{
+  "returned_state_entries": 84,
+  "components_per_precision": 1596,
+  "comparison_precisions": [
+    80,
+    100
+  ],
+  "total_component_comparisons": 3192,
+  "five_final_states_excluded": true,
+  "old_firstscheme_excluded": true,
+  "successful_V3_evaluate_calls": 84,
+  "successful_V3_native_exit": 0,
+  "comparison_and_owner_exit": 0,
+  "method_counts": {
+    "update_w": 34,
+    "update_theta": 16,
+    "update_rotation": 34
+  },
+  "all_original_strict_binary64_1e_minus5_vector_gates_PASS": true,
+  "maximum_absolute_error": "2.51875557481345623754763096147388465910962801120675353188233516436097413518240064016721035400294495E-13",
+  "max_error_by_precision": {
+    "80": "2.51875557481345623754763096147388465910962801120675353188233516436097413518240064016721035400294495E-13",
+    "100": "2.51875557481345623754763096147388465910962801115696432185415262846078434664324808919422627992492234E-13"
+  },
+  "per_scheme": [
+    {
+      "ordinal": 2,
+      "actual_own_block_entries": 6,
+      "components_per_precision": 132,
+      "all_original_1e_minus5_vector_gates_PASS": true,
+      "maximum_absolute_complex_error": "9.512451165012100702411216635749145104148907866282979802259948346964309729384817241006115727888E-14"
+    },
+    {
+      "ordinal": 3,
+      "actual_own_block_entries": 36,
+      "components_per_precision": 792,
+      "all_original_1e_minus5_vector_gates_PASS": true,
+      "maximum_absolute_complex_error": "2.51875557481345623754763096147388465910962801120675353188233516436097413518240064016721035400294495E-13"
+    },
+    {
+      "ordinal": 4,
+      "actual_own_block_entries": 6,
+      "components_per_precision": 132,
+      "all_original_1e_minus5_vector_gates_PASS": true,
+      "maximum_absolute_complex_error": "9.4100162538460481374982459007387149138962645423459968788098056986141744709099660455006880636018E-14"
+    },
+    {
+      "ordinal": 5,
+      "actual_own_block_entries": 30,
+      "components_per_precision": 450,
+      "all_original_1e_minus5_vector_gates_PASS": true,
+      "maximum_absolute_complex_error": "1.2194008765644414788565639800395274674944738131398593427024731303635982457102395062788630293997991611297676389915976029696543622285532779865024749786885411741103026413106556452265021691425591415801473E-15"
+    },
+    {
+      "ordinal": 6,
+      "actual_own_block_entries": 6,
+      "components_per_precision": 90,
+      "all_original_1e_minus5_vector_gates_PASS": true,
+      "maximum_absolute_complex_error": "9.0867527877643120289331916881893620773115629402349711458599621647395504121261873952420611506062607111118142809615233125897483505471979423247434815437986978116287597149539785772680144255557653699932825E-16"
+    }
+  ],
+  "all_original_native_state_class_shape_complex_and_F_bits_match": true,
+  "all_same_call_native_utility_and_fixed_iota_typed_bindings_pass": true,
+  "historical_native_vectors_recovered": false,
+  "original_ownstop_finaljoint_W_reference_or_paper_failures_not_promoted": true,
+  "previous_failed_attempt_native_exit": 1,
+  "previous_failed_attempt_saved_entries": 0,
+  "previous_failed_attempt_first_evaluate_occurred": true,
+  "new_MP_optimizer_MC_RNG_or_trial_calls": 0,
+  "final_state_entries_included": 0,
+  "old_firstscheme_entries_included": 0,
+  "scope_label": "New source-bound native analytic derivative execution at 84 saved own-block entries; not historical memory recovery",
+  "counts_do_not_assert_numeric_distinctness": true,
+  "old_first36_excluded": true,
+  "old_joint_W_reference_fullpaper_gates_not_promoted": true
+}

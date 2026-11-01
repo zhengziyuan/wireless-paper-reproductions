@@ -1,0 +1,25 @@
+{
+  "scope": "Actual517 scalar Python/native observations, independent official-pattern MP80/100 replay",
+  "actual_cases": 517,
+  "defined_standard_domain_cases": 500,
+  "declared_endpoint_convention_cases": 17,
+  "source_and_inputs_unchanged": true,
+  "precisions": [
+    80,
+    100
+  ],
+  "scalar_linear_absolute_tolerance": 1e-12,
+  "scalar_linear_relative_tolerance": 1e-12,
+  "maximum_MP80_MP100_difference": "2.96646224257535362603426764747198630675656294720199310393379294653897498608154232936652983704545271992682e-68",
+  "precision_absolute_bound": "1e-50",
+  "all500_defined_standard_domain_scalar_checks_pass": true,
+  "all17_explicit_endpoint_convention_checks_pass": true,
+  "maximum_observed_Python_native_relative_gap": 5.035924286532906e-16,
+  "fixed_named_decimal_angles_are_declared_boundary_probes_encoded_as_binary64": true,
+  "algebraic_thresholds_tested_on_strict_sides_not_unrepresentable_exact_equalities": true,
+  "boresight_uses_declared_continuous_Gmax_extension": true,
+  "small_q_exact33_1_printed_gap_uses_explicit_left_extension": true,
+  "full_continuum_interval_or_author_parameter_or_original_curve_or_paper_pass": false,
+  "optimizer_or_random_draw_calls": 0,
+  "elapsed_seconds": 0.21266910000122152
+}

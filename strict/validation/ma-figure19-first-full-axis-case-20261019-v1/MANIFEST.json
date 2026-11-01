@@ -1,0 +1,70 @@
+{
+  "schema": "one-case-MA19-public-evidence-manifest-v1",
+  "scope": "Historical completed first configured fixed-MC Python D3 case; subsequent user-selected lower-cost theoretical search is separate and is not validated here. No complete-axis/native/reference/fullpaper pass.",
+  "files": {
+    "evidence/actual-portable-readback.json.gz": {
+      "bytes": 45083,
+      "SHA256": "80d7b17f016a67e567574993e25080cde5b8f3170974dfb78449a47e7cc6e5ac"
+    },
+    "evidence/original-independent-readback.json.gz": {
+      "bytes": 45115,
+      "SHA256": "ed7f8a4252f19c1afcf3f9ac73be610322b2385d0034f47ab17b0d8792675fd0"
+    },
+    "evidence/portable-first-use.json": {
+      "bytes": 13477,
+      "SHA256": "08b3c0259b2fae54ad93a3244341cacf40dc26645a0538fde846a1af803d24b3"
+    },
+    "evidence/provenance.json": {
+      "bytes": 7621,
+      "SHA256": "888d1d421dbc0ca1597cab8a2f05a135554781b8a182246f6637bb305ce99b1f"
+    },
+    "fixtures/bank/jobs/case-000-mc-000.json.gz": {
+      "bytes": 225992,
+      "SHA256": "6149575873a137e390e3164aebf1002a6e939c6a58c11845ea1b93bae76932f5"
+    },
+    "fixtures/bank/manifest.json.gz": {
+      "bytes": 74745,
+      "SHA256": "bd3e85fd41c15ade5c2884c7cfde5315ac6cf6196d11be693982e0addec07da2"
+    },
+    "fixtures/bank/plan.json.gz": {
+      "bytes": 617,
+      "SHA256": "e206a6af1127b4991a95f7ad56c61b469f0872d0e023eab72be9ef45d89b641d"
+    },
+    "fixtures/bank/run_config.json.gz": {
+      "bytes": 2146,
+      "SHA256": "9ea8a64af410b182ed2043ec8a7c98032b545cbb419fe52563d6c03f0e1b0c10"
+    },
+    "fixtures/case-000-mc-000/case-000-mc-000-python.json.gz": {
+      "bytes": 228388,
+      "SHA256": "b40d6cd0dc03cd8fb647c9da18d9e6e9e6b0bf58c1a7312f3055ef49cb91e115"
+    },
+    "fixtures/case-000-mc-000/closed-result.json": {
+      "bytes": 3084,
+      "SHA256": "7912d2c6cab485c37c233f2a2323fcd2812e7ad370808823b8d2d16af7fa2a30"
+    },
+    "fixtures/case-000-mc-000/grid-MRT/checkpoint.json.gz": {
+      "bytes": 269,
+      "SHA256": "5ca8c2516790ed3ccac6470db4db6c2c1841c524624012859e6cd5b44857b087"
+    },
+    "fixtures/case-000-mc-000/grid-ZF/checkpoint.json.gz": {
+      "bytes": 268,
+      "SHA256": "add163b3c6185ce12de6eeae0207132c8780795c801277c1127ed65de195d85c"
+    },
+    "read_saved_first_case.py": {
+      "bytes": 18328,
+      "SHA256": "e1f0b1fc12460575841ed1ed12c8e2fc954cafd1bfab0290dc7ecedf715435be"
+    },
+    "README.md": {
+      "bytes": 5222,
+      "SHA256": "e831a850b693b2951c7df51c8d4cef4313afb6aa30aed7de86e49bf3b78d8821"
+    },
+    "SOURCE_INPUT_PINS.json": {
+      "bytes": 1848,
+      "SHA256": "036d4169e1fbe844d15ba232191116ba75be2e8479d172efb4d134f7dff63610"
+    },
+    "sources/independent_saved_physics.py": {
+      "bytes": 2255,
+      "SHA256": "9db2b29a4d2235122feb3438c2a47ffe8fdebfce738b6bf3779c4d0a7cc2b81d"
+    }
+  }
+}

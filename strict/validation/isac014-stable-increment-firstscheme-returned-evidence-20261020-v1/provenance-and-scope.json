@@ -1,0 +1,593 @@
+{
+  "schema": "new-stable014-cold-firstscheme-actual-returned-evidence-provenance-and-scope-v1",
+  "candidate_not_publication_ready": false,
+  "exact_executed_source_count": 12,
+  "executed_source_manifest_original_SHA256": "1442fab4203f067d88eb571f14fc3bd0a1c0611d93c7807e92d2403011403392",
+  "executed_source_manifest_public_path": "sources/executed/SOURCE_MANIFEST_V1.json",
+  "source_pin_set": {
+    "equivalent_runtime_case014_v1.py": "ec332540a25a67e205257d907fbe0fce8450e903e896e5be03fbc31932120243",
+    "passive_first_failure_v1.py": "855bb184d28c9a760b21b5dcb0d880b89a81b7bbf5e526d965dbbf3cbc7544a1",
+    "stable_metrics.py": "e15ad67ffc92b0ea2b3cbbd5428ff8be30bc6630ab651188d15aa2f01bde8c29",
+    "structured_original_qcqp_candidate_v1.py": "1fa91846426407d7313f0ba452e2d81c60fa433c9513d8618f870414903f8881",
+    "sources/core_original_case014_v1.py": "07f2eb9d9f5011dde45a8c947dd87db31d15b7e6e8ab233e9f43429c408f2fbb",
+    "sources/core_structured_case014_v1.py": "4cb6fcaa62353196f6d70e3de9f6bdf8249d9c1c43e365880f83ff1dd3864404",
+    "sources/run_selected_first_scheme_case014_v1.py": "7339b40b3efa519bf9f44fee3127451e30e0d3c255bcff01680362a10abde145",
+    "passive_RCG_seed_trace_v1.py": "7692fc1ea636b90ac623bc8ed6975f090f88d22ff95ffb4f7eac9dd3d59333d3",
+    "passive_original_cap_prefix_v1.py": "6a4c294bfad0aa4b405fa97747e99765ea023575b42ffe4bcf2ec6bdae979e1b",
+    "run_case014_stable_increment_growth_cap5000_rel1e10_first_scheme_v2.py": "3d9c7f2a3cf47cab165fbb3af6a9200d8826641fc947db724a583500b851b6f7",
+    "stable_rotation_increment_v1.py": "07678a483b3f8c70bcaf06c91d2ad611b30594c1cb8f17199f63eaa63fb60c4c",
+    "passive_returned_inner_block_states_v1.py": "8688a231b32dce900930997206bac4500e1f4945f4d03fdc430b3a5328b65e94"
+  },
+  "mathematical_source_and_saved_input_files": {
+    "evidence/actual-entry-closure.json": {
+      "bytes": 3788,
+      "SHA256": "2c93f9407f1d4c7489f8a055f59b1ee726120b3d36b934fd6f094f5acf19dbe9"
+    },
+    "saved/actual-returned-inner-block-states.json": {
+      "bytes": 21396,
+      "SHA256": "4f1de1f396ef0228daf82d7049455450464ccd5f1f7a86843c20c401ecfe35d0"
+    },
+    "saved/actual-returned-inner-block-states.npz": {
+      "bytes": 58465,
+      "SHA256": "a042ada00209e5075b6203e7ab8b2fbc5c29ab9926e6ebc3005816861696d690"
+    },
+    "saved/full-result.json.gz": {
+      "bytes": 432092,
+      "SHA256": "bf19adda8dc88608d3ea15c378c3dec7f002c73351bf635fb4b4d4c877d9ea4d"
+    },
+    "saved/original-config.json": {
+      "bytes": 5167,
+      "SHA256": "62d9450cd8ae67986a92c0cd7344f7788d75a3bfb8e89d11d54a59e501536460"
+    },
+    "saved/original-scenario.json": {
+      "bytes": 22737,
+      "SHA256": "3b5e8fced9d90337bc574d660ea29c0a2b1b67aae8fc11950cdbbb28d609c302"
+    },
+    "saved/passive-first-failure-and-methods.json": {
+      "bytes": 307,
+      "SHA256": "2d937dac285696335e936fdbd281f207db81914cd65e30fbc1862228d3f9c7a6"
+    },
+    "saved/passive-first-PGA-original500-boundary.json": {
+      "bytes": 1086,
+      "SHA256": "3158a33b23ef50a7f3d2e161bda51129d6eaa69406271a4f8bf2c634717ce7ab"
+    },
+    "saved/passive-RCG-actual-seeds-and-accepted-steps.json.gz": {
+      "bytes": 64969,
+      "SHA256": "d9336fbe09f583f1818b2b3d658ccd388428936ca46e884c651c1ae2c6e396b6"
+    },
+    "sources/executed/equivalent_runtime_case014_v1.py": {
+      "bytes": 2798,
+      "SHA256": "ec332540a25a67e205257d907fbe0fce8450e903e896e5be03fbc31932120243"
+    },
+    "sources/executed/passive_first_failure_v1.py": {
+      "bytes": 4455,
+      "SHA256": "855bb184d28c9a760b21b5dcb0d880b89a81b7bbf5e526d965dbbf3cbc7544a1"
+    },
+    "sources/executed/passive_original_cap_prefix_v1.py": {
+      "bytes": 1993,
+      "SHA256": "6a4c294bfad0aa4b405fa97747e99765ea023575b42ffe4bcf2ec6bdae979e1b"
+    },
+    "sources/executed/passive_RCG_seed_trace_v1.py": {
+      "bytes": 2494,
+      "SHA256": "7692fc1ea636b90ac623bc8ed6975f090f88d22ff95ffb4f7eac9dd3d59333d3"
+    },
+    "sources/executed/passive_returned_inner_block_states_v1.py": {
+      "bytes": 2784,
+      "SHA256": "8688a231b32dce900930997206bac4500e1f4945f4d03fdc430b3a5328b65e94"
+    },
+    "sources/executed/run_case014_stable_increment_growth_cap5000_rel1e10_first_scheme_v2.py": {
+      "bytes": 9433,
+      "SHA256": "3d9c7f2a3cf47cab165fbb3af6a9200d8826641fc947db724a583500b851b6f7"
+    },
+    "sources/executed/SOURCE_MANIFEST_V1.json": {
+      "bytes": 1890,
+      "SHA256": "1fadcf7687f589e65a7da0e0e169afc2bf714be9cd704745cbaf0abe197cf23d"
+    },
+    "sources/executed/sources/core_original_case014_v1.py": {
+      "bytes": 16714,
+      "SHA256": "07f2eb9d9f5011dde45a8c947dd87db31d15b7e6e8ab233e9f43429c408f2fbb"
+    },
+    "sources/executed/sources/core_structured_case014_v1.py": {
+      "bytes": 16632,
+      "SHA256": "4cb6fcaa62353196f6d70e3de9f6bdf8249d9c1c43e365880f83ff1dd3864404"
+    },
+    "sources/executed/sources/run_selected_first_scheme_case014_v1.py": {
+      "bytes": 9238,
+      "SHA256": "7339b40b3efa519bf9f44fee3127451e30e0d3c255bcff01680362a10abde145"
+    },
+    "sources/executed/stable_metrics.py": {
+      "bytes": 2383,
+      "SHA256": "e15ad67ffc92b0ea2b3cbbd5428ff8be30bc6630ab651188d15aa2f01bde8c29"
+    },
+    "sources/executed/stable_rotation_increment_v1.py": {
+      "bytes": 5769,
+      "SHA256": "07678a483b3f8c70bcaf06c91d2ad611b30594c1cb8f17199f63eaa63fb60c4c"
+    },
+    "sources/executed/structured_original_qcqp_candidate_v1.py": {
+      "bytes": 3221,
+      "SHA256": "1fa91846426407d7313f0ba452e2d81c60fa433c9513d8618f870414903f8881"
+    }
+  },
+  "README_provenance_delivery_manifest_and_later_receipts_excluded_from_input_files": true,
+  "JSON_projection_receipts": [
+    {
+      "public_file": "evidence/actual-entry-closure.json",
+      "original_SHA256": "2c93f9407f1d4c7489f8a055f59b1ee726120b3d36b934fd6f094f5acf19dbe9",
+      "original_bytes": 3788,
+      "public_decompressed_SHA256": "2c93f9407f1d4c7489f8a055f59b1ee726120b3d36b934fd6f094f5acf19dbe9",
+      "public_SHA256": "2c93f9407f1d4c7489f8a055f59b1ee726120b3d36b934fd6f094f5acf19dbe9",
+      "public_bytes": 3788,
+      "only_private_JSON_string_tokens_projected": true,
+      "every_numeric_token_type_and_IEEE64_bits_preserved": true,
+      "numeric_boolean_and_null_leaf_count": 9,
+      "lossless_gzip": false
+    },
+    {
+      "public_file": "evidence/actual-held-natural0.json",
+      "original_SHA256": "576ca3bfa09cbb1acc660866baf5312589d82d4e75ddd4be94ce26c65087d372",
+      "original_bytes": 13663,
+      "public_decompressed_SHA256": "743d26ce57e4f88f56466ba97b69f3c2bec4d676d9deb1fd7512ab978521785c",
+      "public_SHA256": "743d26ce57e4f88f56466ba97b69f3c2bec4d676d9deb1fd7512ab978521785c",
+      "public_bytes": 7501,
+      "only_private_JSON_string_tokens_projected": true,
+      "every_numeric_token_type_and_IEEE64_bits_preserved": true,
+      "numeric_boolean_and_null_leaf_count": 24,
+      "lossless_gzip": false
+    },
+    {
+      "public_file": "saved/actual-returned-inner-block-states.json",
+      "original_SHA256": "4f1de1f396ef0228daf82d7049455450464ccd5f1f7a86843c20c401ecfe35d0",
+      "original_bytes": 21396,
+      "public_decompressed_SHA256": "4f1de1f396ef0228daf82d7049455450464ccd5f1f7a86843c20c401ecfe35d0",
+      "public_SHA256": "4f1de1f396ef0228daf82d7049455450464ccd5f1f7a86843c20c401ecfe35d0",
+      "public_bytes": 21396,
+      "only_private_JSON_string_tokens_projected": true,
+      "every_numeric_token_type_and_IEEE64_bits_preserved": true,
+      "numeric_boolean_and_null_leaf_count": 331,
+      "lossless_gzip": false
+    },
+    {
+      "public_file": "saved/full-result.json.gz",
+      "original_SHA256": "eeafd5eeb305ae6c3c51e1cebe9a4f7e4fc0ef2bdbc266d183e21faea7c11f74",
+      "original_bytes": 2722219,
+      "public_decompressed_SHA256": "eeafd5eeb305ae6c3c51e1cebe9a4f7e4fc0ef2bdbc266d183e21faea7c11f74",
+      "public_SHA256": "bf19adda8dc88608d3ea15c378c3dec7f002c73351bf635fb4b4d4c877d9ea4d",
+      "public_bytes": 432092,
+      "only_private_JSON_string_tokens_projected": true,
+      "every_numeric_token_type_and_IEEE64_bits_preserved": true,
+      "numeric_boolean_and_null_leaf_count": 54595,
+      "lossless_gzip": true
+    },
+    {
+      "public_file": "saved/original-config.json",
+      "original_SHA256": "62d9450cd8ae67986a92c0cd7344f7788d75a3bfb8e89d11d54a59e501536460",
+      "original_bytes": 5167,
+      "public_decompressed_SHA256": "62d9450cd8ae67986a92c0cd7344f7788d75a3bfb8e89d11d54a59e501536460",
+      "public_SHA256": "62d9450cd8ae67986a92c0cd7344f7788d75a3bfb8e89d11d54a59e501536460",
+      "public_bytes": 5167,
+      "only_private_JSON_string_tokens_projected": true,
+      "every_numeric_token_type_and_IEEE64_bits_preserved": true,
+      "numeric_boolean_and_null_leaf_count": 125,
+      "lossless_gzip": false
+    },
+    {
+      "public_file": "saved/original-scenario.json",
+      "original_SHA256": "3b5e8fced9d90337bc574d660ea29c0a2b1b67aae8fc11950cdbbb28d609c302",
+      "original_bytes": 22737,
+      "public_decompressed_SHA256": "3b5e8fced9d90337bc574d660ea29c0a2b1b67aae8fc11950cdbbb28d609c302",
+      "public_SHA256": "3b5e8fced9d90337bc574d660ea29c0a2b1b67aae8fc11950cdbbb28d609c302",
+      "public_bytes": 22737,
+      "only_private_JSON_string_tokens_projected": true,
+      "every_numeric_token_type_and_IEEE64_bits_preserved": true,
+      "numeric_boolean_and_null_leaf_count": 779,
+      "lossless_gzip": false
+    },
+    {
+      "public_file": "saved/passive-first-failure-and-methods.json",
+      "original_SHA256": "2d937dac285696335e936fdbd281f207db81914cd65e30fbc1862228d3f9c7a6",
+      "original_bytes": 307,
+      "public_decompressed_SHA256": "2d937dac285696335e936fdbd281f207db81914cd65e30fbc1862228d3f9c7a6",
+      "public_SHA256": "2d937dac285696335e936fdbd281f207db81914cd65e30fbc1862228d3f9c7a6",
+      "public_bytes": 307,
+      "only_private_JSON_string_tokens_projected": true,
+      "every_numeric_token_type_and_IEEE64_bits_preserved": true,
+      "numeric_boolean_and_null_leaf_count": 7,
+      "lossless_gzip": false
+    },
+    {
+      "public_file": "saved/passive-first-PGA-original500-boundary.json",
+      "original_SHA256": "3158a33b23ef50a7f3d2e161bda51129d6eaa69406271a4f8bf2c634717ce7ab",
+      "original_bytes": 1086,
+      "public_decompressed_SHA256": "3158a33b23ef50a7f3d2e161bda51129d6eaa69406271a4f8bf2c634717ce7ab",
+      "public_SHA256": "3158a33b23ef50a7f3d2e161bda51129d6eaa69406271a4f8bf2c634717ce7ab",
+      "public_bytes": 1086,
+      "only_private_JSON_string_tokens_projected": true,
+      "every_numeric_token_type_and_IEEE64_bits_preserved": true,
+      "numeric_boolean_and_null_leaf_count": 21,
+      "lossless_gzip": false
+    },
+    {
+      "public_file": "saved/passive-RCG-actual-seeds-and-accepted-steps.json.gz",
+      "original_SHA256": "102a079150527dad15e1763880ebd56aba593f9cd5e2ae0b6262708d17644bb5",
+      "original_bytes": 743066,
+      "public_decompressed_SHA256": "102a079150527dad15e1763880ebd56aba593f9cd5e2ae0b6262708d17644bb5",
+      "public_SHA256": "d9336fbe09f583f1818b2b3d658ccd388428936ca46e884c651c1ae2c6e396b6",
+      "public_bytes": 64969,
+      "only_private_JSON_string_tokens_projected": true,
+      "every_numeric_token_type_and_IEEE64_bits_preserved": true,
+      "numeric_boolean_and_null_leaf_count": 17893,
+      "lossless_gzip": true
+    },
+    {
+      "public_file": "sources/executed/SOURCE_MANIFEST_V1.json",
+      "original_SHA256": "1442fab4203f067d88eb571f14fc3bd0a1c0611d93c7807e92d2403011403392",
+      "original_bytes": 2134,
+      "public_decompressed_SHA256": "1fadcf7687f589e65a7da0e0e169afc2bf714be9cd704745cbaf0abe197cf23d",
+      "public_SHA256": "1fadcf7687f589e65a7da0e0e169afc2bf714be9cd704745cbaf0abe197cf23d",
+      "public_bytes": 1890,
+      "only_private_JSON_string_tokens_projected": true,
+      "every_numeric_token_type_and_IEEE64_bits_preserved": true,
+      "numeric_boolean_and_null_leaf_count": 2,
+      "lossless_gzip": false
+    },
+    {
+      "public_file": "evidence/actual-returned-blocks-MP80-MP100.json.gz",
+      "original_SHA256": "88fc79ab20c2e3e56ccf36d61e5e7f79c304c1f22b05e664fad81acbb804d289",
+      "original_bytes": 732512,
+      "public_decompressed_SHA256": "262142191ff9f6e842eb178b18c4e55ba6dc6dde7dba4b01e29a786cfd48f6e5",
+      "public_SHA256": "0e9ed401bc66f8d232e1d7ca601a1516fb7c22f2268a168ffeeda07d27015f79",
+      "public_bytes": 206041,
+      "only_private_JSON_string_tokens_projected": true,
+      "every_numeric_token_type_and_IEEE64_bits_preserved": true,
+      "numeric_boolean_and_null_leaf_count": 2695,
+      "lossless_gzip": true
+    },
+    {
+      "public_file": "evidence/actual-own-W-versus-final-joint-scope.json",
+      "original_SHA256": "f101ea8d5115871d612765fe49f3a592f8d11e79c01d13a3fe63f6aaa8d619c2",
+      "original_bytes": 16672,
+      "public_SHA256": "7c47acecbd917f3627fd7544453f3d06af2881921076ea4569b0b32e03a5f7b1",
+      "public_bytes": 15963,
+      "only_private_JSON_string_tokens_projected": true,
+      "every_numeric_token_type_and_IEEE64_bits_preserved": true,
+      "numeric_boolean_and_null_leaf_count": 51,
+      "lossless_gzip": false
+    }
+  ],
+  "NPZ_original_bytes_copied_exactly_without_array_loading": {
+    "SHA256": "a042ada00209e5075b6203e7ab8b2fbc5c29ab9926e6ebc3005816861696d690",
+    "bytes": 58465
+  },
+  "actual_execution": {
+    "scheme": "Rot-BS & Rot-RIS",
+    "scheme_count": 1,
+    "outer_blocks": 12,
+    "actual_child_natural_exit_code": 0,
+    "exact_original_handle_birth_and_exit_match": true,
+    "watched_lifetime_source_count": 21,
+    "watched_lifetime_source_closed": true,
+    "entry_source_and_input_count": 15,
+    "entry_source_and_input_interval_unchanged": true,
+    "original_selected_scheme_checks_all_satisfied": true,
+    "original_result_checks": {
+      "Rot-BS & Rot-RIS": {
+        "status": "executed",
+        "converged": true,
+        "inner_all_converged": true,
+        "full_converged": true,
+        "power_feasible": true,
+        "unit_modulus_error": 2.220446049250313e-16,
+        "rotation_feasible": true
+      }
+    },
+    "actual_returned_states": {
+      "update_w": 12,
+      "update_theta": 12,
+      "update_rotation": 12
+    },
+    "capture_errors": [],
+    "capture_complete": true,
+    "capture_scientific_PASS_original_field": false,
+    "elapsed_seconds_original_entry_closure": 1758.3908304999932,
+    "not_a_second_execution_or_restored_historical_tape": true
+  },
+  "controls_and_algorithm_scope": {
+    "all28_current_explicit_config_fields_saved": true,
+    "caps5000_PGArelative1e10_seed_constants_are_unreported_reconstruction_controls": true,
+    "not_an_author_budget_or_author_initialization_recovery": true,
+    "strict_PG_threshold": 1e-06,
+    "original_OR_stop_retained": true,
+    "original_absolute_value_history_retained_in_full_result": true,
+    "only_stable_increment_Armijo_arithmetic_change_relative_to_previous_frozen_variant": true,
+    "original_backtrack_PR_BB_retraction_W_AO_controls_not_silently_changed": true
+  },
+  "independent_new_trajectory_MP80_MP100": {
+    "actual_report_present_in_this_candidate": true,
+    "actual_report": "evidence/actual-returned-blocks-MP80-MP100.json.gz",
+    "original_actual_report_SHA256": "88fc79ab20c2e3e56ccf36d61e5e7f79c304c1f22b05e664fad81acbb804d289",
+    "original_actual_report_bytes": 732512,
+    "unique_MP_reader_actual_natural_exit_code_confirmed_by_root_and_executor": 0,
+    "source_input_interval_closed": true,
+    "actual_reader_source_input_count": 25,
+    "actual_executed_reader_identity": {
+      "original_basename": "audit_only_closed_new_returned_states_v1.py",
+      "SHA256": "80fe571c8b729f35c7d0c03cf4c64c307b649d5b935025fcefd8685f96beb0ec",
+      "actual_local_path_bound_host_not_repackaged_as_a_portable_runner": true
+    },
+    "existing_repository_mathematical_dependency_references": [
+      {
+        "repository_relative_path": "tools/isac-line-search-replay/mp_physical_reference.py",
+        "source_SHA256_from_actual_closed_reader": "d14050078d636ca33bd78fb2206406735a22589eeb0aa14b0f28c3d443d893bc",
+        "public_relative_link": "../../../tools/isac-line-search-replay/mp_physical_reference.py"
+      },
+      {
+        "repository_relative_path": "tools/isac-line-search-replay/audit_cold_control.py",
+        "source_SHA256_from_actual_closed_reader": "70eb0f2795ece136d3ddf69fa3600d9d241452b35991bad66d744a22b7accdd8",
+        "public_relative_link": "../../../tools/isac-line-search-replay/audit_cold_control.py"
+      },
+      {
+        "repository_relative_path": "tools/isac-line-search-replay/audit_failure.py",
+        "source_SHA256_from_actual_closed_reader": "b05a3c958a79719339c61575ae69d65dd4432f47e6b3323e7bdd5977fc588e8b",
+        "public_relative_link": "../../../tools/isac-line-search-replay/audit_failure.py"
+      },
+      {
+        "repository_relative_path": "tools/isac-line-search-replay/audit_stable_derivatives.py",
+        "source_SHA256_from_actual_closed_reader": "bd02ce41fadb77ac57dc2f81d43cd4043042c1d58681ffd782eb058941af51b6",
+        "public_relative_link": "../../../tools/isac-line-search-replay/audit_stable_derivatives.py"
+      },
+      {
+        "repository_relative_path": "tools/isac-line-search-replay/stable_metrics.py",
+        "source_SHA256_confirmed_by_exclusive_executor_to_equal_included_runtime": "e15ad67ffc92b0ea2b3cbbd5428ff8be30bc6630ab651188d15aa2f01bde8c29",
+        "whole_byte_identical_public_copy": "sources/executed/stable_metrics.py",
+        "public_relative_link": "../../../tools/isac-line-search-replay/stable_metrics.py"
+      }
+    ],
+    "returned_inner_blocks": 36,
+    "returned_per_method": {
+      "update_w": 12,
+      "update_theta": 12,
+      "update_rotation": 12
+    },
+    "final_ownstate_also_checked": true,
+    "all_new_states_physics_feasibility_and_corresponding_gradient_formula_checks_pass": true,
+    "strict_PGA_failed_block_calls": [],
+    "strict_RCG_failed_block_calls": [],
+    "all_strict_RCGe_PGA_block_return_stationarity_pass": true,
+    "crossprecision_pass": true,
+    "MP80_MP100_maximum_absolute_difference": "2.07854224249465749565330675831572736924577629036600735387095120689070001632203451268995525199184817095318e-59",
+    "MP80_MP100_bound": "1e-35",
+    "elapsed_seconds": 233.45595770003274,
+    "original_algorithm_populations": {
+      "Rot-BS & Rot-RIS": {
+        "AO_iterations": 12,
+        "AO_budget": 500,
+        "original_AO_stop": true,
+        "original_full_stop": true,
+        "final_AO_relative_improvement": 5.756358938687541e-06,
+        "original_AO_tolerance": 1e-05,
+        "blocks": {
+          "W": {
+            "blocks": 12,
+            "original_stops": 12,
+            "caps": 0,
+            "final_gradient_above_tolerance": 0,
+            "relative_step_stop_with_final_gradient_above_tolerance": 0
+          },
+          "RIS": {
+            "blocks": 12,
+            "original_stops": 12,
+            "caps": 0,
+            "final_gradient_above_tolerance": 0,
+            "relative_step_stop_with_final_gradient_above_tolerance": 0
+          },
+          "rotation": {
+            "blocks": 12,
+            "original_stops": 12,
+            "caps": 0,
+            "final_gradient_above_tolerance": 0,
+            "relative_step_stop_with_final_gradient_above_tolerance": 0
+          }
+        },
+        "failed_scheme_tape_recovered": false
+      }
+    },
+    "original_scalar_flags_are_not_independent_stationarity_gates": true,
+    "final_joint_state_gradient_residuals": {
+      "scope": "Joint final W/theta/r with final optimal iota, distinct from earlier block-return stops; same-provider fixed evaluation is new saved-only diagnostic, not an algorithm stopping record.",
+      "parts": {
+        "W": {
+          "component_count": 24,
+          "maximum_component_error": "0.00000000000000132072361970022218433188926396278103720234152533221906591798996261451365446617361144875130887599989252437",
+          "existing_derivative_absolute_1e_minus5_pass": true,
+          "power_ball_multiplier_ray_estimate": "3.69968460784755438721942550606220008985192306370458535063266896937253367567188320890558126769480437666827",
+          "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "2.58062085254724834323099648349896015630919694098698016058539078761229324714525578280486143193698170338297",
+          "unit_gradient_step_projected_power_ball_residual": "0.284586599298728753970585387766885282542909882400037658290144941373301054021898870534372766958680061257716",
+          "complementarity_lambda_power_slack": "0.0301759324262863748074682068828343129666368685088298437182626555392107064743102062829487835057715639535432",
+          "author_W_stationarity_absolute_gate_reported": false,
+          "stationarity_PASS_not_assigned": true
+        },
+        "RCG": {
+          "component_count": 36,
+          "maximum_component_error": "0.00000000000000605556430097101080036475877139675866053889856991124701527723644227451518960082633841660410203800301249404",
+          "existing_derivative_absolute_1e_minus5_pass": true,
+          "normalized_unit_circle_tangent_norm": "0.000332393959552582654031078398339507065003956746145994559278721047532919089797988932991446491641548322500542",
+          "strict_gradient_threshold": 1e-06,
+          "strict_gradient_pass": false
+        },
+        "PGA": {
+          "component_count": 6,
+          "maximum_component_error": "0.0000000000000989288995898748232138561568733836118644500229084207890485305714868072609200748417745767601693910334398022",
+          "existing_derivative_absolute_1e_minus5_pass": true,
+          "projected_gradient_norm": "0.00000281123311620289248303999578377269458282533230562681479313749448854666659960939568826863062065879526897978",
+          "strict_gradient_threshold": 1e-06,
+          "strict_gradient_pass": false,
+          "reference": "Unchanged independent MP rotation central difference h=1e-20"
+        }
+      },
+      "existing_derivative_absolute_1e_minus5_pass": true,
+      "joint_full_stationarity_PASS_not_assigned": true
+    },
+    "final_joint_RCGe_PGA_strict_stationarity_pass": false,
+    "W_author_absolute_stationarity_gate": null,
+    "block_return_pass_does_not_establish_final_joint_KKT": true,
+    "fixed_block_iota_does_not_assert_optimal_iota": true,
+    "final_joint_diagnostic_uses_actual_final_state_and_final_optimal_iota": true,
+    "full_trajectory_joint_KKT_or_all_convergence_PASS_claimed": false,
+    "no_new_public_runner_or_repeat_MP_validation": true,
+    "own_W_versus_final_saved_report_readback": {
+      "original_basename": "ACTUAL_NEW_STABLE_36BLOCK_MP_AND_OWN_W_VS_FINAL_JOINT_SCOPE_V1.json",
+      "original_SHA256": "f101ea8d5115871d612765fe49f3a592f8d11e79c01d13a3fe63f6aaa8d619c2",
+      "original_bytes": 16672,
+      "W_own_block_diagnostics": [
+        {
+          "block": 1,
+          "power_ball_multiplier_ray_estimate": "3.62374656151968140346297494059209357749911183830713945259988376276624547364677372864907478281744081659578",
+          "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "0.000000000478101185696866588439335561791039920471393147327331300885144399848923564669498035442910019877618775446425",
+          "unit_gradient_step_projected_power_ball_residual": "0.0000000000579692736407382349281814638610723721265991612450555327620010087854766018788920676557266290316461040596425",
+          "complementarity_lambda_power_slack": "-0.000000000000000892384455530461846643585818125677544659241114498736348761023619835334260267493329024097389506643336150039",
+          "actual_W_stop": "relative_objective_tolerance"
+        },
+        {
+          "block": 2,
+          "power_ball_multiplier_ray_estimate": "3.68352234609715141709337985714362436559884101896346922321671774729696016310866903451486003152401398097247",
+          "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "2.525309705692708535082583671008612774229872002883672889465751128084146507199140525712876030555238546053",
+          "unit_gradient_step_projected_power_ball_residual": "0.28004976848876997377278651290563650836249414475860564234930847248280931789928398761046356883840737313791",
+          "complementarity_lambda_power_slack": "0.0237416210996293277867824388801169490525314038543045674713234604391078704283572843996335292820679650094701",
+          "actual_W_stop": "relative_objective_tolerance"
+        },
+        {
+          "block": 3,
+          "power_ball_multiplier_ray_estimate": "3.68528798996210991738237964679376840130343337904979912081328797363651173219154548334689602399109875842904",
+          "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "2.56739099188098671576967237172195901195848327767743243371385387225276085907539667324553960232318248766615",
+          "unit_gradient_step_projected_power_ball_residual": "0.283953769796240926019887401024401770784003848056703930835006420319974023297795609323440079490159701123022",
+          "complementarity_lambda_power_slack": "0.0244445360629336538074538447078286343128015029018998205319725125465015810163913791785254952759328738411477",
+          "actual_W_stop": "relative_objective_tolerance"
+        },
+        {
+          "block": 4,
+          "power_ball_multiplier_ray_estimate": "3.68573771915453505812135536211489576008380212824511927288430882030193323720765591855794038798445933787223",
+          "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "2.56996327503454453089163930133139456893481714269749925737980643081753428731731709860049644051275686817951",
+          "unit_gradient_step_projected_power_ball_residual": "0.284176854191964513165458273155958594738930862288093569918921838855344822321507644287985155836910896113491",
+          "complementarity_lambda_power_slack": "0.0246235763503052743274103776871194628819285759411879125992673972026807493074473599494544092352829426763152",
+          "actual_W_stop": "relative_objective_tolerance"
+        },
+        {
+          "block": 5,
+          "power_ball_multiplier_ray_estimate": "3.68650753469814421832362525605631488718592097146775069398596895858103686869881897548990987821397687255816",
+          "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "2.57032445517159333847546210533087109442944802650823076090335019429315734542346097357395950732194690935496",
+          "unit_gradient_step_projected_power_ball_residual": "0.284178026212899220365464220292479901943162268519494163863435677384336111621049844204622344713517172761228",
+          "complementarity_lambda_power_slack": "0.0249300452531398293637268053830052664784755390187371471349775372520283969790264579391201779382664414221312",
+          "actual_W_stop": "relative_objective_tolerance"
+        },
+        {
+          "block": 6,
+          "power_ball_multiplier_ray_estimate": "3.68794329728234205345018026717709710602402500483968477705333450070642924791282237879183724397692305267559",
+          "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "2.57026753124757915046325260557918231477228992250819867502439758389272168734383261179067794251373467285041",
+          "unit_gradient_step_projected_power_ball_residual": "0.284111491786229229532012124976747751942618764008466790849422073587914107151630119423152638099147858773021",
+          "complementarity_lambda_power_slack": "0.0255016324097185204290454351874816967732919761767662548950692544153825232287193844342999376482945827120634",
+          "actual_W_stop": "relative_objective_tolerance"
+        },
+        {
+          "block": 7,
+          "power_ball_multiplier_ray_estimate": "3.69536036059486978868229032929879982217097140027099488054203102670621569278212067640106637356755226275051",
+          "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "2.56451395781760509235484000886183086083893921007559516162729638005924614820152438914842992717550885624944",
+          "unit_gradient_step_projected_power_ball_residual": "0.283255511893132503627718333159248385531855086879940554027728723110261823578275451343577087215230260471886",
+          "complementarity_lambda_power_slack": "0.0284544183560989775791481720213707336137918522272638870796169324876865369141275325920704513563050660616421",
+          "actual_W_stop": "relative_objective_tolerance"
+        },
+        {
+          "block": 8,
+          "power_ball_multiplier_ray_estimate": "3.69709659076443951107887381174154057692006603707389608606612567427474967135202739222989341589033405141296",
+          "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "2.57544616040630133371592704596884828534398426056872770707403100525702097114996267006066924063662826272291",
+          "unit_gradient_step_projected_power_ball_residual": "0.28421014765887822975532425380623941539201695214791702468373810469278490619580328935665117219516648938588",
+          "complementarity_lambda_power_slack": "0.0291456238184573512624355907969602680192235145899983654195820955913221920578001439096846238376658386132796",
+          "actual_W_stop": "relative_objective_tolerance"
+        },
+        {
+          "block": 9,
+          "power_ball_multiplier_ray_estimate": "3.69805300429458043651292712787789661136205190285040460074278801950812594370540567820791395661759724972658",
+          "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "2.57763166036343676820637913520070366818640799436025168980526036570372009255468782237019723005611382649129",
+          "unit_gradient_step_projected_power_ball_residual": "0.284374970739406870352198192161871496172981266193991592911453783201260767377282270186091553990011689717208",
+          "complementarity_lambda_power_slack": "0.029526378909553565443464871330463621794566371540857655273585203888711416720012061787520601229720144138756",
+          "actual_W_stop": "relative_objective_tolerance"
+        },
+        {
+          "block": 10,
+          "power_ball_multiplier_ray_estimate": "3.69867036268820409451618712301413757289143024740961549970295965431077859084150315053063947770289124491598",
+          "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "2.57872115339471823209156711202384953931924946085561029241416296703554280546649062980962607195413496611097",
+          "unit_gradient_step_projected_power_ball_residual": "0.284451164476735422872330573592649034269194626289044575067644046242793729651772372201838650120140445771378",
+          "complementarity_lambda_power_slack": "0.0297721537232811958428697766382554309550840214346806815916782708027261137073297892338024070627335757002228",
+          "actual_W_stop": "relative_objective_tolerance"
+        },
+        {
+          "block": 11,
+          "power_ball_multiplier_ray_estimate": "3.69919332775259055857089583767102005253829997590584065582263725060127467902078688815204623057048401795136",
+          "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "2.57927987400669252115264203818051504215121384971513782171974524008936107780640253977379213565150560816478",
+          "unit_gradient_step_projected_power_ball_residual": "0.284481515837155610702668733978085226427755473635908884182023455265605885222104676635982833728530986260519",
+          "complementarity_lambda_power_slack": "0.0299803498760901067364005169433180986708405068301131443470716243725851247118370880966902907410077123886827",
+          "actual_W_stop": "relative_objective_tolerance"
+        },
+        {
+          "block": 12,
+          "power_ball_multiplier_ray_estimate": "3.69968460891427201554321516493357737607520103469897966472629218886842314514857927761823407499772011549967",
+          "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "2.57970055176447527610292492683186920300252889625391979857032980477444871810391820146711600540575147273775",
+          "unit_gradient_step_projected_power_ball_residual": "0.284500250766487376210832212278921283732029798446573379207029188814497373369630206153190272904327658247038",
+          "complementarity_lambda_power_slack": "0.0301759324349868999824923959559786304621625489296335765882339157617794408426266936591252062309951676207702",
+          "actual_W_stop": "relative_objective_tolerance"
+        }
+      ],
+      "W_last_own_and_final_comparison": {
+        "raw_KKT_gradient_minus_2lambdaW_Fro_norm": {
+          "maximum_own_block": "2.57970055176447527610292492683186920300252889625391979857032980477444871810391820146711600540575147273775",
+          "maximum_own_block_call": 12,
+          "last_own_W_block": "2.57970055176447527610292492683186920300252889625391979857032980477444871810391820146711600540575147273775",
+          "final_joint": "2.58062085254724834323099648349896015630919694098698016058539078761229324714525578280486143193698170338297",
+          "final_minus_last_own_W": "0.00092030078277306712807155666709095330666804473306036201506098283784452904133758133774542653123023064522",
+          "final_over_last_own_W": "1.0003567471356873555061771345661731297099905343073750678842426486146600630025194688463441841441834886448179174"
+        },
+        "unit_gradient_step_projected_power_ball_residual": {
+          "maximum_own_block": "0.284500250766487376210832212278921283732029798446573379207029188814497373369630206153190272904327658247038",
+          "maximum_own_block_call": 12,
+          "last_own_W_block": "0.284500250766487376210832212278921283732029798446573379207029188814497373369630206153190272904327658247038",
+          "final_joint": "0.284586599298728753970585387766885282542909882400037658290144941373301054021898870534372766958680061257716",
+          "final_minus_last_own_W": "0.000086348532241377759753175487963998810880083953464279083115752558803680652268664381182494054352403010678",
+          "final_over_last_own_W": "1.0003035095118852849877397049839524920622063983340462401280748330471884139090941043872760371945911240074279505"
+        }
+      },
+      "conclusion_copied_from_actual_saved_readback": "The large power-ball projected residual is already present at own-W returns2..12. Final joint changes increase its magnitude slightly; they are not its sole origin. This readback does not isolate the W-MM update/relative stop/conditioning cause. The ray multiplier estimate, raw gradient residual and complementarity are joint diagnostics; because complementarity is nonzero, the ray multiplier is not a certified KKT multiplier. No undocumented author W cutoff/PASS is assigned.",
+      "only_selected_fields_copied_no_new_MP_or_diagnostic_calculation": true,
+      "full_MP_report_already_contains_the_underlying_own_W_and_final_values": true,
+      "complete_public_receipt": "evidence/actual-own-W-versus-final-joint-scope.json",
+      "complete_public_receipt_SHA256": "7c47acecbd917f3627fd7544453f3d06af2881921076ea4569b0b32e03a5f7b1"
+    }
+  },
+  "historical_fixed15": {
+    "immutable_commit": "299a1a139e5a34decb68d77a8be1f34b847a22d8",
+    "repository_relative_path": "strict/validation/isac014-AO6-fifteen-PGA-trials-stable-increment-20261019-v1",
+    "old_14_fullphysical_false_rejections_and_old_strictPG_false_retained": true,
+    "not_duplicated_as_new_trajectory_evidence": true
+  },
+  "native_fixed15_scope_reference_only": {
+    "original_receipt_basename": "ACTUAL_NATIVE_FIXED15_V1_FAILURE_V2_CLOSED_ARITHMETIC_AND_MP100_UNIFIED_RECEIPT_V1.json",
+    "original_receipt_SHA256": "453940a701b69a4154e746b5e1c283b5a26be121ac81f594f9b12378eff0aa28",
+    "original_receipt_bytes": 6972,
+    "actual_V1_pre_arithmetic_interface_failure_exit": 1,
+    "actual_V2_saved15_exit": 0,
+    "all15_promoted_source_gradient_RHS_match_MP100": true,
+    "all15_native_dot_RHS_match_MP100": true,
+    "maximum_absolute_increment_error": "1.194220744252449365898774948157566452329753720451192656297715154863386712594849675814812101E-23",
+    "maximum_relative_increment_error": "9.82111005038248674346646845818726644527007750315460915981556207031393881489446330204928856865486746769204274294460713977561993691228586587818705481097409541196493952773804156117904E-10",
+    "fixed15_only_not_a_complete_native_trajectory": true,
+    "full_native_trajectory_stationarity_PASS": false
+  },
+  "native_fulltrajectory_original_reference_full_six_schemes_or_paper_PASS": false,
+  "new_portable_runner_or_new_MP_optimizer_MC_RNG_trial_calls": 0,
+  "public_math_replay_scope": {
+    "exact_producer_runtime_and_all_new_saved_states_are_included": true,
+    "independent_MP_formulas_referenced_in_existing_repository": true,
+    "actual_reader_contains_historical_local_path_bindings": true,
+    "actual_reader_whole_SHA_and_dependency_scope_disclosed": true,
+    "new_public_relative_MP_runner_not_created_or_tested": true,
+    "public_metadata_projection_is_not_claimed_as_an_executed_MP_invocation": true
+  }
+}

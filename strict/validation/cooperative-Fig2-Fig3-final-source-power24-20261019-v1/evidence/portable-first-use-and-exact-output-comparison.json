@@ -1,0 +1,53 @@
+{
+  "schema": "actual-once-public-projection-saved-render-first-use-v1",
+  "UTC": "2026-10-19T07:11:35.669317+00:00",
+  "actual_returncode": 0,
+  "source_interval_unchanged": true,
+  "comparisons": {
+    "Fig2_Fig3_all192_historical_author_EPS_ordinates.csv": {
+      "byte_equal": true
+    },
+    "Fig2_Fig3_all384_fresh_dual_plotted_ordinates_and_unfitted_reference.csv": {
+      "byte_equal": true
+    },
+    "Fig2_Fig3_unfitted_reference_gaps_no_agreement_PASS.json": {
+      "all_curve_numeric_rows_exact": true
+    },
+    "Fig02-corrected-Algorithm3-saved-dual-and-unfitted-author-reference.png": {
+      "pixel_arrays_equal": true,
+      "dimensions": [
+        1980,
+        927
+      ]
+    },
+    "Fig03-corrected-Algorithm3-saved-dual-and-unfitted-author-reference.png": {
+      "pixel_arrays_equal": true,
+      "dimensions": [
+        1980,
+        927
+      ]
+    }
+  },
+  "errors": [],
+  "all_first_use_and_comparisons_pass": true,
+  "new_optimization_MC_RNG_MP_calls": 0,
+  "original_reference_or_full_paper_pass": false,
+  "original_private_receipt": {
+    "artifact_id": "ACTUAL_ROOT_ONCE_PUBLIC_PROJECTION_RENDER_COMPARISON_V1.json",
+    "bytes": 4015,
+    "SHA256": "eccd78787e828ffc281729a04826c925372af9b593fc363141b40225e398aaef"
+  },
+  "source_before": {
+    "package/render_only_final_source_power24_Fig2_Fig3_v1.py": "1f1a4b2cd4fd7647a064d18a0c7c192301b2d9fbea9931f4f14a27e3c593fb21",
+    "package/all24_dual_full8_final_source_corrected_power_performance.json": "21e6e78076d16a23e37dcdeb933e28067fec5623c5d4099387ffc772dcb0ce0d",
+    "repository/strict/validation/cooperative-Fig2-11-corrected183-20261019-v1/historical_author_EPS_vector_references_Fig2_11.json": "30aaef7c01dd07567208c1b3f977202cb874b94543dcbdc2e259fce504a45237"
+  },
+  "source_after": {
+    "package/render_only_final_source_power24_Fig2_Fig3_v1.py": "1f1a4b2cd4fd7647a064d18a0c7c192301b2d9fbea9931f4f14a27e3c593fb21",
+    "package/all24_dual_full8_final_source_corrected_power_performance.json": "21e6e78076d16a23e37dcdeb933e28067fec5623c5d4099387ffc772dcb0ce0d",
+    "repository/strict/validation/cooperative-Fig2-11-corrected183-20261019-v1/historical_author_EPS_vector_references_Fig2_11.json": "30aaef7c01dd07567208c1b3f977202cb874b94543dcbdc2e259fce504a45237"
+  },
+  "metadata_projection": "Absolute interpreter/argv/working/output paths omitted; source paths become repository/package relative artifact IDs. Every retained result, digest, numerical dimension and comparison flag is unchanged.",
+  "render_scope": "Only the staged saved new24 aggregate and existing reference JSON were consumed. No optimizer, sampling, MP or case bank reader was run.",
+  "output_scope": "Both CSVs byte-equal; all reference-curve numeric rows exact; both PNG pixel arrays exact. No assertion that Matplotlib SVG random-ID bytes are stable across invocations."
+}

@@ -1,0 +1,81 @@
+{
+  "schema": "MA6_three_trajectory_exceptions_and_figure_gap_v1",
+  "scope": "post-closure read-only comparison of three saved cases; no optimization, RNG, or full population replay",
+  "cases": [
+    {
+      "power_dbm": 27,
+      "geometry_zero_based": 24,
+      "scheme": "MA-MRT",
+      "first_failed_sweep_boundary_zero_based": 50,
+      "first_boundary_max_position_difference": 2.0432344705056948e-10,
+      "first_boundary_design_objective_abs_difference": 1.407601146752313e-09,
+      "terminal_python_mean": 13.359917707989403,
+      "terminal_matlab_mean": 13.359917708011512,
+      "python_minus_matlab_terminal_mean": -2.2108537223175517e-11,
+      "contribution_to_100_geometry_mean_difference": -2.2108537223175516e-13,
+      "python_terminal_min_spacing": 0.5127715657058246,
+      "matlab_terminal_min_spacing": 0.512771565719007,
+      "figure_python_minus_author_reference": -1.3632943989877049
+    },
+    {
+      "power_dbm": 27,
+      "geometry_zero_based": 27,
+      "scheme": "MA-ZF",
+      "first_failed_sweep_boundary_zero_based": 345,
+      "first_boundary_max_position_difference": 2.596232673290899e-10,
+      "first_boundary_design_objective_abs_difference": 1.008068295504927e-09,
+      "terminal_python_mean": 28.109135089332288,
+      "terminal_matlab_mean": 28.109135088846838,
+      "python_minus_matlab_terminal_mean": 4.85449902498658e-10,
+      "contribution_to_100_geometry_mean_difference": 4.854499024986581e-12,
+      "python_terminal_min_spacing": 0.5000000004277889,
+      "matlab_terminal_min_spacing": 0.5000000004277889,
+      "figure_python_minus_author_reference": -2.40213058481217
+    },
+    {
+      "power_dbm": 33,
+      "geometry_zero_based": 24,
+      "scheme": "MA-MRT",
+      "first_failed_sweep_boundary_zero_based": 58,
+      "first_boundary_max_position_difference": 1.219403467089819e-10,
+      "first_boundary_design_objective_abs_difference": 1.0630056834770585e-09,
+      "terminal_python_mean": 13.881595082561716,
+      "terminal_matlab_mean": 13.881595082564662,
+      "python_minus_matlab_terminal_mean": -2.9451996397256153e-12,
+      "contribution_to_100_geometry_mean_difference": -2.945199639725615e-14,
+      "python_terminal_min_spacing": 0.5129249789510226,
+      "matlab_terminal_min_spacing": 0.5129249789524358,
+      "figure_python_minus_author_reference": -1.473668132590392
+    }
+  ],
+  "author_reference_point_sign_counts_python_minus_reference": {
+    "MA-ZF": {
+      "negative": 9,
+      "positive": 0
+    },
+    "MA-MRT": {
+      "negative": 9,
+      "positive": 0
+    },
+    "FPA-ZF": {
+      "negative": 1,
+      "positive": 8
+    },
+    "FPA-MRT": {
+      "negative": 0,
+      "positive": 9
+    },
+    "FPA-OPT": {
+      "negative": 0,
+      "positive": 9
+    }
+  },
+  "scope_and_limitations": [
+    "First failures refer to saved sweep boundaries and retain the existing absolute 1e-9 path gate.",
+    "A single slot contributes one hundredth of a complete 100-geometry curve point; figures are binary64 arithmetic on stored results.",
+    "These are observed Python-minus-MATLAB contributions, not bounds on unknown author differences or alternative models.",
+    "Independent own-state mathematical validation of all 900 saved cases is documented separately; these three intermediate path gate failures remain.",
+    "The complete author parameterization and original inputs, including random draws, initial MA positions and fixed-array geometry, are not fully recovered.",
+    "No source-paper error, root cause, repaired algorithm, trajectory equivalence, statistical rejection or reference agreement is asserted."
+  ]
+}

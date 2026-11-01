@@ -1,0 +1,43 @@
+{
+  "schema": "PREPARED_FIG5_FIG6_CLOSED_OUTPUT_ONLY_RENDER_PLAN_V2",
+  "prepared_only": true,
+  "entry": "render_closed_saved_Fig5_Fig6_v2.py",
+  "renderer_SHA256": "db938a00981d3093dbd1133c081ebb301765d9b09f49ceb7aa08cc032c4ccf33",
+  "assembly_plan_V2_SHA256": "dcd871addabb5af2203703e1e96277208dabb3e894ffcbb64d3045c22654ccdc",
+  "only_future_inputs": [
+    "summary.json",
+    "fig5-fig6-saved-curves.json",
+    "selected-fixed-final-state.json"
+  ],
+  "all_three_input_SHA256_required_in_admission": true,
+  "reject_partial_or_provisional": true,
+  "same_fixed_selected_and6000_population_including720_retained_false": true,
+  "stored_zeros_not_floored": "masked_log_gaps_plus_explicit_bottom_axis_coordinate_markers",
+  "all_zero_case": "no_numeric_log_ordinates_displayed",
+  "derived_hold_last": "actual short-history metadata chooses no-hold note for all6000 actual30; otherwise explicit derived mean-hold note",
+  "outputs": [
+    "Fig5-saved-fixed-selection.png",
+    "Fig5-saved-fixed-selection.pdf",
+    "Fig5-saved-fixed-selection.svg",
+    "Fig6-saved-fixed-selection.png",
+    "Fig6-saved-fixed-selection.pdf",
+    "Fig6-saved-fixed-selection.svg",
+    "display-provenance.json"
+  ],
+  "native_bank_payload_receipt_or_old_report_access": false,
+  "new_physical_or_optimizer_RNG_MC_MP_calls": false,
+  "reference_dual_allstart_convergence_and_wholepaper_gates": false,
+  "render_or_import_executed": false,
+  "first_true_use_and_visual_review_pending": true,
+  "existing_Fig3_renderer": {
+    "repository_relative_path": "strict/validation/sensing-same-cone-v5-components-v1/scientific-source-v5/plot_beampatterns.py",
+    "known_sealed_SHA256": "1f4dfe523361e86ce13aae3a4a3a09b50831e7b8b6a7a681a9876d60f0675a7d",
+    "API": "python -X utf8 -B plot_beampatterns.py DERIVED_FIG3_JSON --output FRESH_E_PLOTS_DIR",
+    "scope": "render_already_derived_beam_samples_only_no_new_fields",
+    "display_floor_disclosure": "existing renderer clips display at-120dB without modifying stored arrays"
+  },
+  "previous_V1_renderer_SHA256": "8b654602740abc92b62e580e5c1521b5714118c2218de3e4c972d3f47fb75c96",
+  "change_scope": "display-only isolated-positive visibility, original-certificate legend and actual-history note",
+  "positive_Fig6_samples": "small circular markers including isolated and endpoint positives; no numeric substitution",
+  "original_combined_certificate": "dynamic bool from actual selected saved certificate in both selected legends"
+}

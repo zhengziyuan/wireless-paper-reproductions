@@ -1,0 +1,53 @@
+{
+  "schema": "COOPERATIVE_FIG4_FINAL_PDF_AUTHOR_MEAN_SCREEN_V1",
+  "pdf_page_one_based": 13,
+  "vertical_plot_bounds": [
+    427.49609375,
+    560.42578125
+  ],
+  "vertical_axis_min_max": [
+    0,
+    14
+  ],
+  "methods": [
+    {
+      "method": "AP-AO",
+      "mat_rows_one_based": [
+        1,
+        2,
+        3
+      ],
+      "sample_count": 12,
+      "max_absolute_pdf_minus_mat": 0.00025195945310940715,
+      "rms_pdf_minus_mat": 0.00012832411670426526,
+      "max_absolute_pdf_minus_thesis_eps": 0.00023965180813689813
+    },
+    {
+      "method": "MR-S-PA",
+      "mat_rows_one_based": [
+        4,
+        5,
+        6
+      ],
+      "sample_count": 12,
+      "max_absolute_pdf_minus_mat": 0.00023818970979228027,
+      "rms_pdf_minus_mat": 0.0001277052051870861,
+      "max_absolute_pdf_minus_thesis_eps": 0.00023242133230283457
+    },
+    {
+      "method": "MR-TTS-PA",
+      "mat_rows_one_based": [
+        7,
+        8,
+        9
+      ],
+      "sample_count": 12,
+      "max_absolute_pdf_minus_mat": 0.00016128698015105414,
+      "rms_pdf_minus_mat": 0.00010927972273080615,
+      "max_absolute_pdf_minus_thesis_eps": 0.00017115678984236382
+    }
+  ],
+  "input_source_authenticated": false,
+  "final_figure_provenance_proven": false,
+  "full_paper_pass": false
+}

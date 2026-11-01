@@ -1,0 +1,50 @@
+{
+  "U": 1,
+  "beta_db": 20,
+  "selected_design_evaluations": 3000,
+  "schemes": [
+    {
+      "scheme": "NoRIS",
+      "draws": 1000,
+      "passed": true,
+      "errors": {
+        "maximum_sample_error": 1.687538997430238e-14,
+        "mean_error": 8.881784197001252e-16,
+        "standard_error_error": 1.734723475976807e-18,
+        "ratio_of_empirical_powers_rate_error": 2.6645352591003757e-15
+      },
+      "replayed_mean": 4.731317682091691,
+      "replayed_standard_error": 0.0032991968652978333,
+      "replayed_ratio_of_empirical_expected_powers_sum_rate": 4.7344785324938705
+    },
+    {
+      "scheme": "TwoStage",
+      "draws": 1000,
+      "passed": true,
+      "errors": {
+        "maximum_sample_error": 1.0516032489249483e-12,
+        "mean_error": 1.7763568394002505e-14,
+        "standard_error_error": 4.0939474033052647e-16,
+        "ratio_of_empirical_powers_rate_error": 2.6645352591003757e-13
+      },
+      "replayed_mean": 10.570597397909873,
+      "replayed_standard_error": 0.0022755156161573995,
+      "replayed_ratio_of_empirical_expected_powers_sum_rate": 10.569908248562367
+    },
+    {
+      "scheme": "AO",
+      "draws": 1000,
+      "passed": true,
+      "errors": {
+        "maximum_sample_error": 1.085354028873553e-12,
+        "mean_error": 3.552713678800501e-15,
+        "standard_error_error": 3.2916377956659915e-16,
+        "ratio_of_empirical_powers_rate_error": 4.369837824924616e-13
+      },
+      "replayed_mean": 10.570596926574847,
+      "replayed_standard_error": 0.002275598605835006,
+      "replayed_ratio_of_empirical_expected_powers_sum_rate": 10.56990763417116
+    }
+  ],
+  "passed": true
+}

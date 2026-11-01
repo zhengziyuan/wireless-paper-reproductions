@@ -1,0 +1,150 @@
+{
+  "schema": "actual-single-two-field-ground-kappa-source-versus-final-point-reference-diagnostic-v1",
+  "observed_UTC": "2026-10-19T09:49:01.942702+00:00",
+  "old": {
+    "path": "local-source/9b6f38622eb4/actual-result.json",
+    "bytes": 399017,
+    "SHA256": "c708fa20e852050d927bce73132503fcf43b0e0bf86976486635859f0d24fa03"
+  },
+  "new": {
+    "path": "local-source/3225575218fc/actual-result.json",
+    "bytes": 386662,
+    "SHA256": "e211bcbbae4f5c227ba7b0c1df2ed902d70b92eea6785ead3d7a7cceb06c69b4"
+  },
+  "reference": {
+    "path": "local-source/b17c4065473b/historical_author_EPS_vector_references_Fig2_11.json",
+    "bytes": 163451,
+    "SHA256": "30aaef7c01dd07567208c1b3f977202cb874b94543dcbdc2e259fce504a45237"
+  },
+  "changed_inputs": "Only r_mean/r_var from stored original H_RU_LOS and enabled mu_RU under selected linearK10; nine other arrays and two limits kept bitwise.",
+  "rows": [
+    {
+      "method": "AP-NoRIS",
+      "numerically_paired_threshold": 0.01,
+      "source_working_ground_kR0_SINR": 0.5218798316552461,
+      "final_ground_kR10_SINR": 0.5218798316552461,
+      "historical_EPS_ordinate": 0.5218907363420433,
+      "old_relative_difference": -2.089457819013981e-05,
+      "new_relative_difference": -2.089457819013981e-05,
+      "new_signed_difference": -1.0904686797208463e-05,
+      "within_EPS_ordinate_rounding_resolution": true
+    },
+    {
+      "method": "MR-S-NoRIS",
+      "numerically_paired_threshold": 0.01,
+      "source_working_ground_kR0_SINR": 0.503806991747981,
+      "final_ground_kR10_SINR": 0.503806991747981,
+      "historical_EPS_ordinate": 0.5038004750593816,
+      "old_relative_difference": 1.2935058464650266e-05,
+      "new_relative_difference": 1.2935058464650266e-05,
+      "new_signed_difference": 6.51668859941168e-06,
+      "within_EPS_ordinate_rounding_resolution": true
+    },
+    {
+      "method": "MR-TTS-NoRIS",
+      "numerically_paired_threshold": 0.01,
+      "source_working_ground_kR0_SINR": 0.5112737992070915,
+      "final_ground_kR10_SINR": 0.5112737992070915,
+      "historical_EPS_ordinate": 0.5114489311163893,
+      "old_relative_difference": -0.0003424230624855874,
+      "new_relative_difference": -0.0003424230624855874,
+      "new_signed_difference": -0.00017513190929785427,
+      "within_EPS_ordinate_rounding_resolution": false
+    },
+    {
+      "method": "AP-AO",
+      "numerically_paired_threshold": 0.01,
+      "source_working_ground_kR0_SINR": 0.9666619018634686,
+      "final_ground_kR10_SINR": 1.1618122923812115,
+      "historical_EPS_ordinate": 1.1683515439429932,
+      "old_relative_difference": -0.1726275307505954,
+      "new_relative_difference": -0.005596989703726335,
+      "new_signed_difference": -0.0065392515617817,
+      "within_EPS_ordinate_rounding_resolution": false
+    },
+    {
+      "method": "MR-S-PA",
+      "numerically_paired_threshold": 0.01,
+      "source_working_ground_kR0_SINR": 0.9176586112342997,
+      "final_ground_kR10_SINR": 1.0955924857435873,
+      "historical_EPS_ordinate": 1.1013111638954869,
+      "old_relative_difference": -0.16675809587871898,
+      "new_relative_difference": -0.005192608900532613,
+      "new_signed_difference": -0.005718678151899637,
+      "within_EPS_ordinate_rounding_resolution": false
+    },
+    {
+      "method": "MR-TTS-PA",
+      "numerically_paired_threshold": 0.01,
+      "source_working_ground_kR0_SINR": 0.9248466445393738,
+      "final_ground_kR10_SINR": 1.1025369855413933,
+      "historical_EPS_ordinate": 1.1098574821852731,
+      "old_relative_difference": -0.16669783338453423,
+      "new_relative_difference": -0.006595888896893296,
+      "new_signed_difference": -0.0073204966438797925,
+      "within_EPS_ordinate_rounding_resolution": false
+    },
+    {
+      "method": "MR-S-TS",
+      "numerically_paired_threshold": 0.01,
+      "source_working_ground_kR0_SINR": 0.9004102282435166,
+      "final_ground_kR10_SINR": 1.0892032523567774,
+      "historical_EPS_ordinate": 1.0832874109263666,
+      "old_relative_difference": -0.16881686322419617,
+      "new_relative_difference": 0.005461008196663062,
+      "new_signed_difference": 0.005915841430410795,
+      "within_EPS_ordinate_rounding_resolution": false
+    },
+    {
+      "method": "MR-TTS-TS",
+      "numerically_paired_threshold": 0.01,
+      "source_working_ground_kR0_SINR": 0.9068676876268831,
+      "final_ground_kR10_SINR": 1.0955532684471876,
+      "historical_EPS_ordinate": 1.0934964370546312,
+      "old_relative_difference": -0.17067156609164527,
+      "new_relative_difference": 0.0018809676217112845,
+      "new_signed_difference": 0.002056831392556413,
+      "within_EPS_ordinate_rounding_resolution": false
+    }
+  ],
+  "NoRIS_three_saved_evaluations_exactly_unchanged": true,
+  "RIS_old_absolute_relative_range": [
+    0.16669783338453423,
+    0.1726275307505954
+  ],
+  "RIS_new_absolute_relative_range": [
+    0.0018809676217112845,
+    0.006595888896893296
+  ],
+  "source_version": "author_thesis_Chapter4_original_EPS_not_verified_final_publisher_version",
+  "original_EPS_rounding_resolution": 3.32541567695962e-05,
+  "original_axis_calibration_and_unit_boundary": {
+    "rectangle": [
+      48,
+      10,
+      606,
+      431
+    ],
+    "x_range": [
+      0.01,
+      0.12
+    ],
+    "y_range": [
+      0,
+      14
+    ],
+    "scale": "linear in displayed coordinates and linear SINR",
+    "axes_visually_verified": true,
+    "source_horizontal_unit": "W as printed in original EPS",
+    "simulation_horizontal_unit": "noise-normalized I/N",
+    "source_to_simulation_horizontal_unit_conformance_verified": false,
+    "unit_scope_note": "Original interference EPS prints W and marks I/N=-12.2dB. The supplied implementation uses noise-normalized I/N; scalar-grid pairing does not resolve this source-unit conflict.",
+    "original_legend_colors_visually_verified": true
+  },
+  "interpretation": "Changing the explicitly sourced ground Rician parameter greatly reduces this one-point discrepancy without fitted gains. All five RIS residuals remain above original vector ordinate rounding resolution; do not treat this as accepted reference agreement or a recovered author Monte Carlo average.",
+  "author_original_init_and_performance_MC_population_recovered": false,
+  "new_independent_saved_scientific_stages": "In progress separately; this script only compares saved numbers.",
+  "fresh_optimizer_RNG_or_MC_calls": 0,
+  "final_publisher_reference_PASS": false,
+  "whole_curve_or_paper_PASS": false
+}

@@ -1,0 +1,328 @@
+{
+  "schema": "actual-Python014-only-ord2-to5-saved-MP-compact-closure-and-separated-gates-v1",
+  "held_journal": "logical-source/0001/python-remaining-four-saved-MP-actual-owned-process.json",
+  "held_journal_SHA256": "46c752bd0fb593903313781461372dfd6bb851a5d4afae5ee5c4dba0620d7dfd",
+  "owner": {
+    "PID": 8232,
+    "creation_FILETIME": 134369257281713618,
+    "associated_with_any_Windows_job": true
+  },
+  "child": {
+    "PID": 42356,
+    "creation_FILETIME": 134369257286979559,
+    "associated_with_any_Windows_job": true
+  },
+  "reader_natural_exit": 0,
+  "reader_sourceclosed": true,
+  "reader_exact_original_Popen_handle_birth_and_exit_match": true,
+  "host_errors": [],
+  "aggregate": "logical-source/0002/ACTUAL_ONLY_NEW_PYTHON_ORD2_5_SAVED_MP_SOURCE_AND_GATE_SUMMARY_V1.json",
+  "aggregate_SHA256": "453dad6f0acfa265e1b6c2b42027c8164e8057c32b3d938560249cf9a8d60c38",
+  "aggregate_actual_entry_exit": 0,
+  "producer_natural_exit_retained": 2,
+  "own_returned_states": 78,
+  "actual_final_states": 4,
+  "rows": [
+    {
+      "ordinal": 2,
+      "scheme": "Rot-BS & Fix-RIS",
+      "report": "logical-source/0003/ACTUAL_ONLY_NEW_APPLICABLE_SCHEME_SAVED_MP80_MP100_V1.json",
+      "report_SHA256": "3e541a36db0491dd8ef5d049de10c5616e3993cfd625af5f14912e84a55e8493",
+      "actual_returned_state_count": 6,
+      "final_ownstate_available_and_checked": true,
+      "actual_own_method_counts": {
+        "update_w": 2,
+        "update_theta": 2,
+        "update_rotation": 2
+      },
+      "physics_feasibility_gradient_formula_scope_PASS": true,
+      "MP80_MP100_maximum_absolute_difference": "3.62622910725233570054804921903856926485110840017753181427454250618319714056383459643032996010359157205353e-60",
+      "crossprecision_pass": true,
+      "maximum_own_gradient_component_error": "3.89279530076815461829793004627312237076022249026730770568652508638118170049851350524169109341821096157619E-14",
+      "original_algorithm_full_stop": true,
+      "actual_producer_scheme_entry": {
+        "schema": "actual-one-of-five-case014-cold-stable-scheme-closure-v1",
+        "ordinal": 2,
+        "scheme": "Rot-BS & Fix-RIS",
+        "algorithm_full_stop": true,
+        "actual_entry_exit": 0,
+        "strict_own_RCG": true,
+        "strict_own_PGA": true,
+        "host_errors": [],
+        "result_saved": true,
+        "no_MC_RNG_or_first_scheme_call": true,
+        "independent_physics_and_final_joint_pending": true,
+        "no_automatic_retry": true
+      },
+      "strict_own_RCG_failed_calls": [],
+      "strict_own_PGA_failed_calls": [],
+      "RCG_applicable": true,
+      "NoRIS_RCG_PASS_not_assigned": false,
+      "W_return_raw_KKT_residual_max": "2.5749904994162234853268551820078562385809493742239945628549439543264917842070645406000546257232369117748",
+      "W_return_raw_KKT_residual_last": "2.5749904994162234853268551820078562385809493742239945628549439543264917842070645406000546257232369117748",
+      "final_joint_diagnostics": {
+        "scope": "Joint final W/theta/r with final optimal iota, distinct from earlier block-return stops; same-provider fixed evaluation is new saved-only diagnostic, not an algorithm stopping record.",
+        "parts": {
+          "W": {
+            "component_count": 24,
+            "maximum_component_error": "0.00000000000000147161397465882029839220009872781498069330023633729775514308087305963949273437275280899465054766272351518",
+            "existing_derivative_absolute_1e_minus5_pass": true,
+            "power_ball_multiplier_ray_estimate": "3.62975124051347550884612297926733265926420657795868827549200604632546728991352828662064386293752145920085",
+            "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "2.58031445692212504963594886227110363693501585901743839074313199427826851279932688143452322123375033832488",
+            "unit_gradient_step_projected_power_ball_residual": "0.287612378457803675869462935878023465135551628875876811723732186566309995309277454937519088357298195600991",
+            "complementarity_lambda_power_slack": "0.00233496369372112666268432767736867219072784046711902339486469216971364269921255921990807745067849865441266",
+            "author_W_stationarity_absolute_gate_reported": false,
+            "stationarity_PASS_not_assigned": true
+          },
+          "RCG": {
+            "component_count": 36,
+            "maximum_component_error": "0.00000000000000430204064596046550623322896018835896498624738529889566008773871827436603832098011859129616964743718812189",
+            "existing_derivative_absolute_1e_minus5_pass": true,
+            "normalized_unit_circle_tangent_norm": "0.000000828878217469273568108391757644519987625258934660346019194088633644688872986603360984546234522755842225747",
+            "strict_gradient_threshold": 1e-06,
+            "strict_gradient_pass": true
+          },
+          "PGA": {
+            "component_count": 6,
+            "maximum_component_error": "0.0000000000000389084733690517781923043085020968793868285025624772032763742772443159911956707118203447075651550713737504",
+            "existing_derivative_absolute_1e_minus5_pass": true,
+            "projected_gradient_norm": "0.000000961702854720308666339804541398854056889908734757476012415339676497712647208964922998557927880795566331389",
+            "strict_gradient_threshold": 1e-06,
+            "strict_gradient_pass": true,
+            "reference": "Unchanged independent MP rotation central difference h=1e-20"
+          }
+        },
+        "existing_derivative_absolute_1e_minus5_pass": true,
+        "joint_full_stationarity_PASS_not_assigned": true
+      },
+      "W_author_absolute_stationarity_gate": null,
+      "final_joint_full_stationarity_PASS_not_assigned": true
+    },
+    {
+      "ordinal": 3,
+      "scheme": "Fix-BS & Rot-RIS",
+      "report": "logical-source/0004/ACTUAL_ONLY_NEW_APPLICABLE_SCHEME_SAVED_MP80_MP100_V1.json",
+      "report_SHA256": "280cc0b5d617a41cb9ff902d8ac194ea38e66ec3eac6ebbfd7cfc346c0cd6a1e",
+      "actual_returned_state_count": 36,
+      "final_ownstate_available_and_checked": true,
+      "actual_own_method_counts": {
+        "update_w": 12,
+        "update_theta": 12,
+        "update_rotation": 12
+      },
+      "physics_feasibility_gradient_formula_scope_PASS": true,
+      "MP80_MP100_maximum_absolute_difference": "1.74313081643939405667526898434234990945376517479356841947170892707502351012714406532584047037874055496169e-59",
+      "crossprecision_pass": true,
+      "maximum_own_gradient_component_error": "9.50168529055275676629214286840325060268860230725318128264264024791246417099773227907281502295687269154418E-14",
+      "original_algorithm_full_stop": false,
+      "actual_producer_scheme_entry": {
+        "schema": "actual-one-of-five-case014-cold-stable-scheme-closure-v1",
+        "ordinal": 3,
+        "scheme": "Fix-BS & Rot-RIS",
+        "algorithm_full_stop": false,
+        "actual_entry_exit": 2,
+        "strict_own_RCG": false,
+        "strict_own_PGA": true,
+        "host_errors": [],
+        "result_saved": true,
+        "no_MC_RNG_or_first_scheme_call": true,
+        "independent_physics_and_final_joint_pending": true,
+        "no_automatic_retry": true
+      },
+      "strict_own_RCG_failed_calls": [
+        6
+      ],
+      "strict_own_PGA_failed_calls": [],
+      "RCG_applicable": true,
+      "NoRIS_RCG_PASS_not_assigned": false,
+      "W_return_raw_KKT_residual_max": "0.474212791071756247764021128218082867582922732569083257772606352425832376662816741130000830859774743843397",
+      "W_return_raw_KKT_residual_last": "0.471914283365082954750615153206202219850603847009038092273112056135075303952086648200872244930698572088628",
+      "final_joint_diagnostics": {
+        "scope": "Joint final W/theta/r with final optimal iota, distinct from earlier block-return stops; same-provider fixed evaluation is new saved-only diagnostic, not an algorithm stopping record.",
+        "parts": {
+          "W": {
+            "component_count": 24,
+            "maximum_component_error": "0.000000000000000714491774245162544971451830140076188853255196380662372727619507127807684381734850154683092683077972343509",
+            "existing_derivative_absolute_1e_minus5_pass": true,
+            "power_ball_multiplier_ray_estimate": "3.62388606904373129010333349760226680321990881280712325555362529721565642908858827159732214240433450172674",
+            "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "0.47191576004405295318164061013177120058759354747594490070931837698095870680263957347443037115596539050156",
+            "unit_gradient_step_projected_power_ball_residual": "0.0570418456534300367839672420237656120332877671843289568443826945066797538712703175623138274886094909336011",
+            "complementarity_lambda_power_slack": "0.0000000000128522134312078576617499796776331597196378014689151529651482626638589087727968550273041177042321113423513",
+            "author_W_stationarity_absolute_gate_reported": false,
+            "stationarity_PASS_not_assigned": true
+          },
+          "RCG": {
+            "component_count": 36,
+            "maximum_component_error": "0.00000000000000573264764430398331193863620916274504692922609714099242172007920183425484726420346097184375769125678637922",
+            "existing_derivative_absolute_1e_minus5_pass": true,
+            "normalized_unit_circle_tangent_norm": "0.000313386145722566542325969185356482680306990149705229079933211786195313534634471087689587115140987179416471",
+            "strict_gradient_threshold": 1e-06,
+            "strict_gradient_pass": false
+          },
+          "PGA": {
+            "component_count": 6,
+            "maximum_component_error": "0.0000000000000571712549271651807047044657038314241478957133001694166584915163974032662074218756710610775099278788509293",
+            "existing_derivative_absolute_1e_minus5_pass": true,
+            "projected_gradient_norm": "0.00000292600173665012208386962633024737525922470535058590083274479542123844992428473255859068721007068612392039",
+            "strict_gradient_threshold": 1e-06,
+            "strict_gradient_pass": false,
+            "reference": "Unchanged independent MP rotation central difference h=1e-20"
+          }
+        },
+        "existing_derivative_absolute_1e_minus5_pass": true,
+        "joint_full_stationarity_PASS_not_assigned": true
+      },
+      "W_author_absolute_stationarity_gate": null,
+      "final_joint_full_stationarity_PASS_not_assigned": true
+    },
+    {
+      "ordinal": 4,
+      "scheme": "Fix-BS & Fix-RIS",
+      "report": "logical-source/0005/ACTUAL_ONLY_NEW_APPLICABLE_SCHEME_SAVED_MP80_MP100_V1.json",
+      "report_SHA256": "f5b7950943446b7f8a6397985db90665887a68814aff09d23a2bbafa26fcb859",
+      "actual_returned_state_count": 6,
+      "final_ownstate_available_and_checked": true,
+      "actual_own_method_counts": {
+        "update_w": 2,
+        "update_theta": 2,
+        "update_rotation": 2
+      },
+      "physics_feasibility_gradient_formula_scope_PASS": true,
+      "MP80_MP100_maximum_absolute_difference": "2.46023909001385100678759715717616872938125834888288995305295007820346379591769355517043974212832760991526e-60",
+      "crossprecision_pass": true,
+      "maximum_own_gradient_component_error": "3.85915225434027893746234158479577939175428109907788388534147943475351733651581991677053533962388149762315E-14",
+      "original_algorithm_full_stop": true,
+      "actual_producer_scheme_entry": {
+        "schema": "actual-one-of-five-case014-cold-stable-scheme-closure-v1",
+        "ordinal": 4,
+        "scheme": "Fix-BS & Fix-RIS",
+        "algorithm_full_stop": true,
+        "actual_entry_exit": 0,
+        "strict_own_RCG": true,
+        "strict_own_PGA": true,
+        "host_errors": [],
+        "result_saved": true,
+        "no_MC_RNG_or_first_scheme_call": true,
+        "independent_physics_and_final_joint_pending": true,
+        "no_automatic_retry": true
+      },
+      "strict_own_RCG_failed_calls": [],
+      "strict_own_PGA_failed_calls": [],
+      "RCG_applicable": true,
+      "NoRIS_RCG_PASS_not_assigned": false,
+      "W_return_raw_KKT_residual_max": "0.489712356766821902494109962295382226340819952591851587664685830734033756805770406533047135880538706724321",
+      "W_return_raw_KKT_residual_last": "0.489712356766821902494109962295382226340819952591851587664685830734033756805770406533047135880538706724321",
+      "final_joint_diagnostics": {
+        "scope": "Joint final W/theta/r with final optimal iota, distinct from earlier block-return stops; same-provider fixed evaluation is new saved-only diagnostic, not an algorithm stopping record.",
+        "parts": {
+          "W": {
+            "component_count": 24,
+            "maximum_component_error": "0.000000000000000471800849636248085707226577374355120033278142003526565341986205509389598645138463595598635819834087923892",
+            "existing_derivative_absolute_1e_minus5_pass": true,
+            "power_ball_multiplier_ray_estimate": "3.62388598694627811871573029220412655479400161958198996288733660451829174401829487995660573475362981584139",
+            "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "0.489824116898109580073018087026765256738859185201729226779851990647820021895800736759089088820722942629615",
+            "unit_gradient_step_projected_power_ball_residual": "0.0591924737079085452989984426154038287018502148543174476839287929006545733025810110986938993672124001807973",
+            "complementarity_lambda_power_slack": "0.0000000000270816226684560191673767908632606945069403642374767916665543528409434748325046659353267559276801344978108",
+            "author_W_stationarity_absolute_gate_reported": false,
+            "stationarity_PASS_not_assigned": true
+          },
+          "RCG": {
+            "component_count": 36,
+            "maximum_component_error": "0.00000000000000427131755599830552411185180992698888406034652336051590557701829548269313848059353654567858915968636037708",
+            "existing_derivative_absolute_1e_minus5_pass": true,
+            "normalized_unit_circle_tangent_norm": "0.000000993407909563331571571919427254021669510220792688450575352897063941376302574948718346323753054589189862084",
+            "strict_gradient_threshold": 1e-06,
+            "strict_gradient_pass": true
+          },
+          "PGA": {
+            "component_count": 6,
+            "maximum_component_error": "0.000000000000038489241720194970581390577369200593907004209078872415275282974037066944802031573572223870815430692821487",
+            "existing_derivative_absolute_1e_minus5_pass": true,
+            "projected_gradient_norm": "0.0",
+            "strict_gradient_threshold": 1e-06,
+            "strict_gradient_pass": true,
+            "reference": "Unchanged independent MP rotation central difference h=1e-20"
+          }
+        },
+        "existing_derivative_absolute_1e_minus5_pass": true,
+        "joint_full_stationarity_PASS_not_assigned": true
+      },
+      "W_author_absolute_stationarity_gate": null,
+      "final_joint_full_stationarity_PASS_not_assigned": true
+    },
+    {
+      "ordinal": 5,
+      "scheme": "Rot-BS & No-RIS",
+      "report": "logical-source/0006/ACTUAL_ONLY_NEW_APPLICABLE_SCHEME_SAVED_MP80_MP100_V1.json",
+      "report_SHA256": "20881dcd4c7b71e41064560f6d14d4e95a8aa1e8614e5dec52d1639fe2059de1",
+      "actual_returned_state_count": 30,
+      "final_ownstate_available_and_checked": true,
+      "actual_own_method_counts": {
+        "update_w": 15,
+        "update_theta": 0,
+        "update_rotation": 15
+      },
+      "physics_feasibility_gradient_formula_scope_PASS": true,
+      "MP80_MP100_maximum_absolute_difference": "2.13513125134483052301488940709120173793220684501586309354450087165249897949907981087275187489811560137152e-60",
+      "crossprecision_pass": true,
+      "maximum_own_gradient_component_error": "1.54397418359709139944330289410256361226035023178202902595099721974685621341199774411373911499887087298375E-15",
+      "original_algorithm_full_stop": false,
+      "actual_producer_scheme_entry": {
+        "schema": "actual-one-of-five-case014-cold-stable-scheme-closure-v1",
+        "ordinal": 5,
+        "scheme": "Rot-BS & No-RIS",
+        "algorithm_full_stop": false,
+        "actual_entry_exit": 2,
+        "strict_own_RCG": null,
+        "strict_own_PGA": false,
+        "host_errors": [],
+        "result_saved": true,
+        "no_MC_RNG_or_first_scheme_call": true,
+        "independent_physics_and_final_joint_pending": true,
+        "no_automatic_retry": true
+      },
+      "strict_own_RCG_failed_calls": null,
+      "strict_own_PGA_failed_calls": [
+        1,
+        2
+      ],
+      "RCG_applicable": false,
+      "NoRIS_RCG_PASS_not_assigned": true,
+      "W_return_raw_KKT_residual_max": "0.0147238739758686206552145441834576630613597236886325020789207112643738077687941081010902693119918909569509",
+      "W_return_raw_KKT_residual_last": "0.00026440212249321501140143094655134972777502334061182628058316019255114523763703060710735514033829429871052",
+      "final_joint_diagnostics": {
+        "scope": "Joint final W/theta/r with final optimal iota, distinct from earlier block-return stops; same-provider fixed evaluation is new saved-only diagnostic, not an algorithm stopping record.",
+        "parts": {
+          "W": {
+            "component_count": 24,
+            "maximum_component_error": "0.000000000000000601429721341168696162342552274612427216990202134839631012624193029535937705527231824407770447464560178051",
+            "existing_derivative_absolute_1e_minus5_pass": true,
+            "power_ball_multiplier_ray_estimate": "3.62370564192818887413592283086097574913989728915595867857589773924901955626042402602227791831421624046421",
+            "raw_KKT_gradient_minus_2lambdaW_Fro_norm": "0.0106684804546207990852564968521967393433238949127664200277399400346821682970842939944364884930553422893236",
+            "unit_gradient_step_projected_power_ball_residual": "0.00129355300375115698063596421705094608248798353707314123166699317356857672010624297078784442104673017251432",
+            "complementarity_lambda_power_slack": "0.000000000000000238104377109637470850518823875888725462866687597968825518532316107093297990658824354076062004623493917801",
+            "author_W_stationarity_absolute_gate_reported": false,
+            "stationarity_PASS_not_assigned": true
+          },
+          "PGA": {
+            "component_count": 6,
+            "maximum_component_error": "0.00000000000000083371548674603188678747033686720781365760440646335457244033779003067437811719036482097179228611066056142",
+            "existing_derivative_absolute_1e_minus5_pass": true,
+            "projected_gradient_norm": "0.00000910987793089671601116862659709436449690500233028979339745690820224402573433658629552771717686834461654946",
+            "strict_gradient_threshold": 1e-06,
+            "strict_gradient_pass": false,
+            "reference": "Unchanged independent MP rotation central difference h=1e-20"
+          }
+        },
+        "existing_derivative_absolute_1e_minus5_pass": true,
+        "joint_full_stationarity_PASS_not_assigned": true
+      },
+      "W_author_absolute_stationarity_gate": null,
+      "final_joint_full_stationarity_PASS_not_assigned": true
+    }
+  ],
+  "MP80_MP100_maximum_absolute_difference": "1.74313081643939405667526898434234990945376517479356841947170892707502351012714406532584047037874055496169E-59",
+  "old_firstscheme_old_Python6_and_native_not_reaudited": true,
+  "optimizer_MC_RNG_new_trial_calls": 0,
+  "original_reference_dual_trajectory_or_fullpaper_PASS": false
+}

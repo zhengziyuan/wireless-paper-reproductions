@@ -7,7 +7,7 @@ import numpy as np
 
 def source_hashes():
     root=Path(__file__).parent
-    return {p:hashlib.sha256((root/p).read_bytes()).hexdigest() for p in ('core.py','models.py','increments.py','algorithms.py','termination.py','scenario.py','run.py','receipts.py','full_config.json')}
+    return {p:hashlib.sha256((root/p).read_bytes()).hexdigest() for p in ('core.py','models.py','positive_wick.py','increments.py','algorithms.py','termination.py','scenario.py','run.py','receipts.py','full_config.json')}
 
 
 def unchanged(hashes):return source_hashes()==hashes

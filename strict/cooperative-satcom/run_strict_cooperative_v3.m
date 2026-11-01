@@ -30,8 +30,10 @@ for sidx=1:numel(sweeps)
             scene.tuned_not_reported.satellite_latitudes_deg=sweep.offset_deg; scene.tuned_not_reported.upa_shape=comparison.single_upa_shape;
         end
         [data,pl,il]=strict_satcom_scenario(scene);
+        strict_satcom_capture('begin',struct('configuration',scene,'data',data,'power_limit',pl,'interference_limit',il));
         try,schemes=strict_satcom_algorithms_v3(data,scene.tuned_not_reported,pl,il);
         catch exception
+            stateRecording=strict_satcom_capture('save',[outputPath '.states.mat']);
             records{end+1}=struct('sweep',sweep.id,'parameter',sweep.parameter,'value',value,'status','failed','error',exception.message, ...
                 'constraint_pass',false,'convergence_pass',false,'solver_primal_pass',false,'qt_bound_pass',false,'valid_figure_point',false); %#ok<AGROW>
             continue;
@@ -52,6 +54,7 @@ for sidx=1:numel(sweeps)
         fprintf('Completed author-model %s value=%g in %.1fs\n',sweep.id,value,toc(started));
     end
 end
+if ~exist('stateRecording','var'),stateRecording=strict_satcom_capture('save',[outputPath '.states.mat']);end
 checks=struct('constraint_pass',all(cellfun(@(x)x.constraint_pass,records)),'convergence_pass',all(cellfun(@(x)x.convergence_pass,records)), ...
     'solver_primal_pass',all(cellfun(@(x)x.solver_primal_pass,records)),'qt_bound_pass',all(cellfun(@(x)x.qt_bound_pass,records)));
 result=struct('paper_id','cooperative-satcom','source_version',config.source_version, ...
@@ -62,7 +65,7 @@ result=struct('paper_id','cooperative-satcom','source_version',config.source_ver
     'all_configured_sweeps_requested',nargin<3,'figure_validation_policy','Failed/capped/numerically-unvalidated points are retained and invalidate their selected sweep.', ...
     'numerical_version','prospective_v3_only_exact_constant_factored_MR_QT_added_to_same_v2_increments', ...
     'old_bank_not_upgraded',true,'new_formal183_bank_executed',false,'full_reproduction_pass',false,'remaining',{{'Publisher-version conformance','Original unreported values and figure grids','Published-figure agreement'}}, ...
-    'configuration',config,'executed_source_hashes',sourceHashes,'source_unchanged_during_run',isequal(sourceHashes,strict_satcom_v3_hashes(configPath)));
+    'configuration',config,'state_recording',stateRecording,'executed_source_hashes',sourceHashes,'source_unchanged_during_run',isequal(sourceHashes,strict_satcom_v3_hashes(configPath)));
 assert(result.source_unchanged_during_run,'Actual cooperative runtime sources changed; no mixed-source certification');
 folder=fileparts(outputPath); if ~isempty(folder) && ~exist(folder,'dir'), mkdir(folder); end
 fid=fopen(outputPath,'w'); assert(fid>=0); clean=onCleanup(@()fclose(fid)); fprintf(fid,'%s\n',jsonencode(result));

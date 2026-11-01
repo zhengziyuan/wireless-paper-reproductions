@@ -1,0 +1,120 @@
+{
+  "actual_controls": 17,
+  "all_invalid_complete_native_evidence_controls_rejected": true,
+  "actual_original_cases": 183,
+  "actual_original_archive_SHA256": "5c5f26e3231beaad564fafdca77814efdae5c337044b849abb77bc0661ba0aae",
+  "actual_original_configurations_and_native_MAT_latitude_vectors_checked": 183,
+  "actual_lossless_singleton_configuration_transports": 48,
+  "original_JSON_MAT_or_numeric_values_modified": false,
+  "wrong_local_inventory_guard_used_the_already_byte_verified_full_restoration": true,
+  "actual_gradient_optimizer_or_RNG_calls": 0,
+  "actual_control_source_SHA256": {
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\cooperative-stable-replay\\test_native183_evidence_controls.py": "1ddf0d023512b17b86e6a5a4951a542f9810da642f0079ec5ed36f9de4fb560e",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\cooperative-stable-replay\\native183_evidence.py": "a910f99956e5cfa74ef9c938fc7c976f629ea41dc0f5793bb21c410a553456c3",
+    "E:\\ZiyuanZhengProject\\academic-homepage\\wireless-paper-reproductions\\tools\\cooperative-stable-replay\\inventory_complete_native183_phase_and_QT_v2.py": "752a010dbc001e0390d1ff12f0c93c9d8ed1e64512b64222f4914b453acbca5f"
+  },
+  "controls": [
+    {
+      "control": "reduced182-native-population",
+      "expected_rejection_observed": true,
+      "actual_exception_type": "ValueError",
+      "actual_reason": "Require the complete original native183 scope"
+    },
+    {
+      "control": "substituted-original-native-slot",
+      "expected_rejection_observed": true,
+      "actual_exception_type": "ValueError",
+      "actual_reason": "Require the complete original native183 scope"
+    },
+    {
+      "control": "wrong-language-epoch",
+      "expected_rejection_observed": true,
+      "actual_exception_type": "ValueError",
+      "actual_reason": "Require the complete original native183 scope"
+    },
+    {
+      "control": "wrong-evidence-scope",
+      "expected_rejection_observed": true,
+      "actual_exception_type": "ValueError",
+      "actual_reason": "Require the complete original native183 scope"
+    },
+    {
+      "control": "missing-first-native-part",
+      "expected_rejection_observed": true,
+      "actual_exception_type": "FileNotFoundError",
+      "actual_reason": "[Errno 2] No such file or directory: 'E:\\\\ZiyuanZhengProject\\\\paper-reproduction-data\\\\resume-20261017\\\\cooperative-native183-complete-phase-final-QT-public-roundtrip-v1\\\\native183-evidence-controls-opg0ini2\\\\missing-first-native-part\\\\complete-native183-phase-final-QT-inputs-and-references.tar.gz.part000'"
+    },
+    {
+      "control": "changed-byte-in-native-part",
+      "expected_rejection_observed": true,
+      "actual_exception_type": "ValueError",
+      "actual_reason": "Actual original native archive part differs"
+    },
+    {
+      "control": "truncated-original-native-archive",
+      "expected_rejection_observed": true,
+      "actual_exception_type": "ValueError",
+      "actual_reason": "Whole original native archive differs"
+    },
+    {
+      "control": "native-part-path-escape",
+      "expected_rejection_observed": true,
+      "actual_exception_type": "ValueError",
+      "actual_reason": "Unsafe or missing original native archive part"
+    },
+    {
+      "control": "different-inventory-bytes-with-identical-JSON",
+      "expected_rejection_observed": true,
+      "actual_exception_type": "ValueError",
+      "actual_reason": "Local reuse requires the exact complete native183 inventory bytes"
+    },
+    {
+      "control": "configuration-changed-latitude-value",
+      "expected_rejection_observed": true,
+      "actual_exception_type": "ValueError",
+      "actual_reason": "A native latitude numerical byte differs from the exact original"
+    },
+    {
+      "control": "configuration-nonfinite-latitude",
+      "expected_rejection_observed": true,
+      "actual_exception_type": "ValueError",
+      "actual_reason": "Require one finite numerical original latitude and an actual native JSON scalar"
+    },
+    {
+      "control": "configuration-boolean-latitude",
+      "expected_rejection_observed": true,
+      "actual_exception_type": "ValueError",
+      "actual_reason": "Require one finite numerical original latitude and an actual native JSON scalar"
+    },
+    {
+      "control": "configuration-nested-latitude-axis",
+      "expected_rejection_observed": true,
+      "actual_exception_type": "ValueError",
+      "actual_reason": "Require one finite numerical original latitude and an actual native JSON scalar"
+    },
+    {
+      "control": "configuration-native-J2-substitution",
+      "expected_rejection_observed": true,
+      "actual_exception_type": "ValueError",
+      "actual_reason": "Only the declared J=1 latitude singleton may be interpreted"
+    },
+    {
+      "control": "configuration-source-J2-substitution",
+      "expected_rejection_observed": true,
+      "actual_exception_type": "ValueError",
+      "actual_reason": "Only the declared J=1 latitude singleton may be interpreted"
+    },
+    {
+      "control": "configuration-source-two-latitudes-for-J1",
+      "expected_rejection_observed": true,
+      "actual_exception_type": "ValueError",
+      "actual_reason": "Require one finite numerical original latitude and an actual native JSON scalar"
+    },
+    {
+      "control": "configuration-unrelated-original-N-change",
+      "expected_rejection_observed": true,
+      "actual_exception_type": "ValueError",
+      "actual_reason": "An unrelated original configuration field differs"
+    }
+  ]
+}

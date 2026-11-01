@@ -1,0 +1,19 @@
+{"actual_original_native_cases_bound": 12, "expected": 183, "actual_phase_endpoints": 555, "actual_QT_candidates": 368}
+{"actual_original_native_cases_bound": 24, "expected": 183, "actual_phase_endpoints": 1107, "actual_QT_candidates": 788}
+{"actual_original_native_cases_bound": 36, "expected": 183, "actual_phase_endpoints": 1659, "actual_QT_candidates": 1161}
+{"actual_original_native_cases_bound": 48, "expected": 183, "actual_phase_endpoints": 2194, "actual_QT_candidates": 1703}
+{"actual_original_native_cases_bound": 60, "expected": 183, "actual_phase_endpoints": 2752, "actual_QT_candidates": 2102}
+{"actual_original_native_cases_bound": 72, "expected": 183, "actual_phase_endpoints": 3308, "actual_QT_candidates": 2582}
+{"actual_original_native_cases_bound": 84, "expected": 183, "actual_phase_endpoints": 3865, "actual_QT_candidates": 3134}
+{"actual_original_native_cases_bound": 96, "expected": 183, "actual_phase_endpoints": 4420, "actual_QT_candidates": 3535}
+{"actual_original_native_cases_bound": 108, "expected": 183, "actual_phase_endpoints": 4980, "actual_QT_candidates": 3923}
+{"actual_original_native_cases_bound": 120, "expected": 183, "actual_phase_endpoints": 5522, "actual_QT_candidates": 4419}
+Traceback (most recent call last):
+  File "E:\ZiyuanZhengProject\academic-homepage\wireless-paper-reproductions\tools\cooperative-stable-replay\inventory_complete_native183_phase_and_QT.py", line 181, in <module>
+    result=run(p.parse_args())
+           ^^^^^^^^^^^^^^^^^^^
+  File "E:\ZiyuanZhengProject\academic-homepage\wireless-paper-reproductions\tools\cooperative-stable-replay\inventory_complete_native183_phase_and_QT.py", line 74, in run
+    phase.require(document['configuration']==phase.read(original_configuration),
+  File "E:\ZiyuanZhengProject\academic-homepage\wireless-paper-reproductions\tools\cooperative-stable-replay\phase183_evidence.py", line 24, in require
+    raise ValueError(message)
+ValueError: The full original scene configuration may not be reduced or substituted

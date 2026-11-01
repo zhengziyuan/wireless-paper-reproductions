@@ -1,0 +1,1152 @@
+{
+  "schema": "actual-closed014-first-scheme-stops-step-sizes-and-reconstruction-provenance-v1",
+  "created_UTC": "2026-10-19T18:26:51.582272+00:00",
+  "source_inputs": {
+    "source-c63960a016bb/full-result.json": "65e2873292d5845ff26cb29fd2ff18143b5d2159f386e7e13f2f053faf560d69",
+    "source-466e39e2fdc6/actual-source-input-and-result-closure.json": "a8c76d93710be18547f2eb3ec8fc0d5a9f0e0bbc111fa6b62efb55e0550d7f9c",
+    "source-d144784f7747/passive-first-failure-and-methods.json": "9601e8cd56c0083ad7f829e30c1f54bd9793f82af1eae11b42103ab2e5aa6ca0",
+    "source-e3f8a55bf61c/SOURCE_BUDGET_AUDIT.md": "b1639b74e60823c43f20ba4693d4cab83d71f33cce6dfce18a8764ff5dac31c7",
+    "source-3f0e7dec2c7a/source_contract.json": "0000cc08da641f393a42c82263e2ab01c91b878e025d5108ef5c3ca932e5f452",
+    "source-13483ade059a/full_config.json": "dd52f8b124cc1ec77ba71cf180048f6da665bb3809161dde6c922982c4eeec89",
+    "source-cee8739369c5/README.md": "973c426054d6753ebfa6791d560870b4d478e30c59284e99f2347945978263da"
+  },
+  "actual_execution": {
+    "effective_entry_exit": 2,
+    "source_interval_closed": true,
+    "host_errors": [],
+    "elapsed_seconds": 390.11146099999314,
+    "complete_one_scheme_return": true,
+    "source_represented_as_paper_budget": false
+  },
+  "actual_original_bad_Q_failure_not_repeated_in_this_variant": {
+    "first_real_exception": null,
+    "method_calls": {
+      "optimize": 1,
+      "update_w": 18,
+      "update_theta": 18,
+      "update_rotation": 18
+    },
+    "actual_original_bad_case_preserved": true,
+    "whole_original500_or_all_six_scheme_PASS": false
+  },
+  "original_stored_checks": {
+    "Rot-BS & Rot-RIS": {
+      "status": "executed",
+      "converged": true,
+      "inner_all_converged": false,
+      "full_converged": false,
+      "power_feasible": true,
+      "unit_modulus_error": 2.220446049250313e-16,
+      "rotation_feasible": true
+    }
+  },
+  "final_metrics": {
+    "utility": 19.325575252138236,
+    "rate": 29.325562855354686,
+    "nmse": 0.999998760321645,
+    "iota": 61878185.084815525,
+    "sinr": [
+      0.0,
+      672781527.4619856
+    ]
+  },
+  "outer": {
+    "iterations": 18,
+    "configured_safety_cap": 500,
+    "converged": true,
+    "full_converged": false,
+    "reason": "relative_objective_tolerance",
+    "relative_utility_improvement": 9.37631040644172e-06,
+    "relative_tolerance": 1e-05,
+    "initial_utility": -9.90393385395472,
+    "final_utility": 19.325575252138236
+  },
+  "actual_counts": {
+    "W_updates": 20,
+    "W_blocks": 18,
+    "W_unconverged": 0,
+    "RCG_updates": 9000,
+    "RCG_capped_blocks": 18,
+    "PGA_updates": 7037,
+    "PGA_capped_blocks": 13,
+    "PGA_relative_step_stop_blocks": 5,
+    "negative_PR": 7475,
+    "RCG_non_ascent_restarts": 0,
+    "PGA_BB_count": 7019,
+    "PGA_negative_raw_BB": 5,
+    "PGA_BB_seed_at_min": 5,
+    "PGA_BB_seed_at_max": 1162
+  },
+  "actual_all18_block_endpoint_and_step_fields": [
+    {
+      "AO_block_one_based": 1,
+      "held_iota": 5204734.607216854,
+      "W": {
+        "converged": true,
+        "updates": 3,
+        "reason": "relative_objective_tolerance"
+      },
+      "RCG": {
+        "converged": false,
+        "updates": 500,
+        "budget": 500,
+        "last_checked_normalized_gradient": 0.0010357654039162207,
+        "final_normalized_gradient": 0.0010360136631504479,
+        "gradient_tolerance": 1e-06,
+        "objective_first": 9.141174721766333,
+        "objective_last_saved": 14.911404578107822,
+        "actual_returned_final_objective": 14.911443213208303,
+        "raw_PR_min": -0.16516116917468016,
+        "raw_PR_max": 0.0005971629563393327,
+        "negative_PR_count": 98,
+        "non_ascent_restarts": 0,
+        "actual_accepted_step_values_saved": false
+      },
+      "PGA": {
+        "converged": true,
+        "iterations": 38,
+        "budget": 500,
+        "reason": "relative_step_tolerance",
+        "last_checked_projected_gradient": 0.001699779115142562,
+        "final_projected_gradient": 0.0016997791150117137,
+        "gradient_tolerance": 1e-06,
+        "relative_step": 1.69966691198866e-13,
+        "relative_tolerance": 1e-08,
+        "accepted_steps": 38,
+        "accepted_first": 0.01,
+        "accepted_last": 1e-10,
+        "accepted_min": 1e-10,
+        "accepted_max": 0.8020932624333897,
+        "accepted_at_alpha_min": 1,
+        "accepted_below_alpha_min": 0,
+        "BB_count": 37,
+        "negative_raw_BB": 1,
+        "BB_seed_at_min": 1,
+        "BB_seed_at_max": 2,
+        "last_BB": {
+          "raw": -281.8018668528596,
+          "clipped": 1e-10,
+          "denominator": -6.155102666549607e-09
+        },
+        "objective_first": 14.911443213208303,
+        "objective_last_saved": 18.750013854478528,
+        "actual_returned_final_objective": 18.75001385447853
+      }
+    },
+    {
+      "AO_block_one_based": 2,
+      "held_iota": 62193031099.25016,
+      "W": {
+        "converged": true,
+        "updates": 1,
+        "reason": "relative_objective_tolerance"
+      },
+      "RCG": {
+        "converged": false,
+        "updates": 500,
+        "budget": 500,
+        "last_checked_normalized_gradient": 0.00013797767605884732,
+        "final_normalized_gradient": 0.00013798168676072407,
+        "gradient_tolerance": 1e-06,
+        "objective_first": 18.756350389024107,
+        "objective_last_saved": 18.915677136015695,
+        "actual_returned_final_objective": 18.915677821407797,
+        "raw_PR_min": -0.08639805034248355,
+        "raw_PR_max": 3.414352207490109e-05,
+        "negative_PR_count": 164,
+        "non_ascent_restarts": 0,
+        "actual_accepted_step_values_saved": false
+      },
+      "PGA": {
+        "converged": true,
+        "iterations": 95,
+        "budget": 500,
+        "reason": "relative_step_tolerance",
+        "last_checked_projected_gradient": 0.0016709484029174457,
+        "final_projected_gradient": 0.0016709484019993789,
+        "gradient_tolerance": 1e-06,
+        "relative_step": 1.609929029313726e-13,
+        "relative_tolerance": 1e-08,
+        "accepted_steps": 95,
+        "accepted_first": 0.01,
+        "accepted_last": 1e-10,
+        "accepted_min": 1e-10,
+        "accepted_max": 1.0,
+        "accepted_at_alpha_min": 1,
+        "accepted_below_alpha_min": 0,
+        "BB_count": 94,
+        "negative_raw_BB": 1,
+        "BB_seed_at_min": 1,
+        "BB_seed_at_max": 20,
+        "last_BB": {
+          "raw": -5068.159662099668,
+          "clipped": 1e-10,
+          "denominator": -4.650687410547406e-10
+        },
+        "objective_first": 18.915677821407797,
+        "objective_last_saved": 18.963912127487085,
+        "actual_returned_final_objective": 18.963912127487085
+      }
+    },
+    {
+      "AO_block_one_based": 3,
+      "held_iota": 564568704.5233475,
+      "W": {
+        "converged": true,
+        "updates": 1,
+        "reason": "relative_objective_tolerance"
+      },
+      "RCG": {
+        "converged": false,
+        "updates": 500,
+        "budget": 500,
+        "last_checked_normalized_gradient": 0.00012667526072058854,
+        "final_normalized_gradient": 0.00012667821080913056,
+        "gradient_tolerance": 1e-06,
+        "objective_first": 18.963912534432275,
+        "objective_last_saved": 18.991401240931083,
+        "actual_returned_final_objective": 18.991401818629658,
+        "raw_PR_min": -0.07236891382904267,
+        "raw_PR_max": 2.6816596770252052e-05,
+        "negative_PR_count": 199,
+        "non_ascent_restarts": 0,
+        "actual_accepted_step_values_saved": false
+      },
+      "PGA": {
+        "converged": true,
+        "iterations": 82,
+        "budget": 500,
+        "reason": "relative_step_tolerance",
+        "last_checked_projected_gradient": 0.0014838582693889523,
+        "final_projected_gradient": 0.001483858269389167,
+        "gradient_tolerance": 1e-06,
+        "relative_step": 2.082076800109553e-15,
+        "relative_tolerance": 1e-08,
+        "accepted_steps": 82,
+        "accepted_first": 0.01,
+        "accepted_last": 1.5625e-12,
+        "accepted_min": 1.5625e-12,
+        "accepted_max": 1.0,
+        "accepted_at_alpha_min": 0,
+        "accepted_below_alpha_min": 1,
+        "BB_count": 81,
+        "negative_raw_BB": 1,
+        "BB_seed_at_min": 1,
+        "BB_seed_at_max": 12,
+        "last_BB": {
+          "raw": -246.85831079145,
+          "clipped": 1e-10,
+          "denominator": -2.447761390382759e-09
+        },
+        "objective_first": 18.991401818629658,
+        "objective_last_saved": 19.02138566574169,
+        "actual_returned_final_objective": 19.02138566574169
+      }
+    },
+    {
+      "AO_block_one_based": 4,
+      "held_iota": 134285878.96298954,
+      "W": {
+        "converged": true,
+        "updates": 1,
+        "reason": "relative_objective_tolerance"
+      },
+      "RCG": {
+        "converged": false,
+        "updates": 500,
+        "budget": 500,
+        "last_checked_normalized_gradient": 0.00012154551838598922,
+        "final_normalized_gradient": 0.00012154741978645,
+        "gradient_tolerance": 1e-06,
+        "objective_first": 19.021389457875657,
+        "objective_last_saved": 19.059523966398114,
+        "actual_returned_final_objective": 19.05952449824988,
+        "raw_PR_min": -0.0682725037607332,
+        "raw_PR_max": 1.684809061485289e-05,
+        "negative_PR_count": 310,
+        "non_ascent_restarts": 0,
+        "actual_accepted_step_values_saved": false
+      },
+      "PGA": {
+        "converged": true,
+        "iterations": 134,
+        "budget": 500,
+        "reason": "relative_step_tolerance",
+        "last_checked_projected_gradient": 0.0011143042558479064,
+        "final_projected_gradient": 0.0011143042556328215,
+        "gradient_tolerance": 1e-06,
+        "relative_step": 9.19990194091692e-14,
+        "relative_tolerance": 1e-08,
+        "accepted_steps": 134,
+        "accepted_first": 0.01,
+        "accepted_last": 1e-10,
+        "accepted_min": 1e-10,
+        "accepted_max": 1.0,
+        "accepted_at_alpha_min": 1,
+        "accepted_below_alpha_min": 0,
+        "BB_count": 133,
+        "negative_raw_BB": 1,
+        "BB_seed_at_min": 1,
+        "BB_seed_at_max": 19,
+        "last_BB": {
+          "raw": -1303.717365672606,
+          "clipped": 1e-10,
+          "denominator": -2.1068658535864712e-10
+        },
+        "objective_first": 19.05952449824988,
+        "objective_last_saved": 19.105477231614472,
+        "actual_returned_final_objective": 19.105477231614472
+      }
+    },
+    {
+      "AO_block_one_based": 5,
+      "held_iota": 170032294.94525093,
+      "W": {
+        "converged": true,
+        "updates": 1,
+        "reason": "relative_objective_tolerance"
+      },
+      "RCG": {
+        "converged": false,
+        "updates": 500,
+        "budget": 500,
+        "last_checked_normalized_gradient": 0.00011553091208031117,
+        "final_normalized_gradient": 0.00011553108691405775,
+        "gradient_tolerance": 1e-06,
+        "objective_first": 19.10547746799766,
+        "objective_last_saved": 19.14768092675975,
+        "actual_returned_final_objective": 19.14768140726691,
+        "raw_PR_min": -0.06893010811873186,
+        "raw_PR_max": 1.4561360786727431e-06,
+        "negative_PR_count": 485,
+        "non_ascent_restarts": 0,
+        "actual_accepted_step_values_saved": false
+      },
+      "PGA": {
+        "converged": true,
+        "iterations": 188,
+        "budget": 500,
+        "reason": "relative_step_tolerance",
+        "last_checked_projected_gradient": 0.0006536182307086087,
+        "final_projected_gradient": 0.0006536182306691396,
+        "gradient_tolerance": 1e-06,
+        "relative_step": 5.0982631857343265e-14,
+        "relative_tolerance": 1e-08,
+        "accepted_steps": 188,
+        "accepted_first": 0.01,
+        "accepted_last": 1e-10,
+        "accepted_min": 1e-10,
+        "accepted_max": 1.0,
+        "accepted_at_alpha_min": 1,
+        "accepted_below_alpha_min": 0,
+        "BB_count": 187,
+        "negative_raw_BB": 1,
+        "BB_seed_at_min": 1,
+        "BB_seed_at_max": 25,
+        "last_BB": {
+          "raw": -1393.9375497226206,
+          "clipped": 1e-10,
+          "denominator": -3.0306813538703686e-10
+        },
+        "objective_first": 19.14768140726691,
+        "objective_last_saved": 19.17008773276283,
+        "actual_returned_final_objective": 19.17008773276283
+      }
+    },
+    {
+      "AO_block_one_based": 6,
+      "held_iota": 208779818.42030248,
+      "W": {
+        "converged": true,
+        "updates": 1,
+        "reason": "relative_objective_tolerance"
+      },
+      "RCG": {
+        "converged": false,
+        "updates": 500,
+        "budget": 500,
+        "last_checked_normalized_gradient": 0.0002016313193521117,
+        "final_normalized_gradient": 0.00020108016828357722,
+        "gradient_tolerance": 1e-06,
+        "objective_first": 19.170087809398858,
+        "objective_last_saved": 19.18976186473134,
+        "actual_returned_final_objective": 19.189763322321873,
+        "raw_PR_min": -0.07821313564803876,
+        "raw_PR_max": 0.0,
+        "negative_PR_count": 499,
+        "non_ascent_restarts": 0,
+        "actual_accepted_step_values_saved": false
+      },
+      "PGA": {
+        "converged": false,
+        "iterations": 500,
+        "budget": 500,
+        "reason": "maximum_iterations_without_criterion_stop",
+        "last_checked_projected_gradient": 2.5319846727341954e-05,
+        "final_projected_gradient": 2.406409863243137e-05,
+        "gradient_tolerance": 1e-06,
+        "relative_step": 3.396014399181847e-07,
+        "relative_tolerance": 1e-08,
+        "accepted_steps": 500,
+        "accepted_first": 0.01,
+        "accepted_last": 0.018183168670509932,
+        "accepted_min": 0.009468597774211,
+        "accepted_max": 1.0,
+        "accepted_at_alpha_min": 0,
+        "accepted_below_alpha_min": 0,
+        "BB_count": 499,
+        "negative_raw_BB": 0,
+        "BB_seed_at_min": 0,
+        "BB_seed_at_max": 87,
+        "last_BB": {
+          "raw": 0.07273267468203973,
+          "clipped": 0.07273267468203973,
+          "denominator": 6.512391646851655e-12
+        },
+        "objective_first": 19.189763322321873,
+        "objective_last_saved": 19.22186680820011,
+        "actual_returned_final_objective": 19.221866808204418
+      }
+    },
+    {
+      "AO_block_one_based": 7,
+      "held_iota": 4304498204.44339,
+      "W": {
+        "converged": true,
+        "updates": 1,
+        "reason": "relative_objective_tolerance"
+      },
+      "RCG": {
+        "converged": false,
+        "updates": 500,
+        "budget": 500,
+        "last_checked_normalized_gradient": 0.0006267018342698624,
+        "final_normalized_gradient": 0.0006271967070160202,
+        "gradient_tolerance": 1e-06,
+        "objective_first": 19.2218678655911,
+        "objective_last_saved": 19.25392395460576,
+        "actual_returned_final_objective": 19.253938110803457,
+        "raw_PR_min": -0.08004096470639178,
+        "raw_PR_max": 0.0024785542423992283,
+        "negative_PR_count": 231,
+        "non_ascent_restarts": 0,
+        "actual_accepted_step_values_saved": false
+      },
+      "PGA": {
+        "converged": false,
+        "iterations": 500,
+        "budget": 500,
+        "reason": "maximum_iterations_without_criterion_stop",
+        "last_checked_projected_gradient": 0.00021834980362368076,
+        "final_projected_gradient": 0.00021798657391575158,
+        "gradient_tolerance": 1e-06,
+        "relative_step": 1.3909561024038387e-06,
+        "relative_tolerance": 1e-08,
+        "accepted_steps": 500,
+        "accepted_first": 0.01,
+        "accepted_last": 0.009149592254024034,
+        "accepted_min": 0.007984770765307233,
+        "accepted_max": 1.0,
+        "accepted_at_alpha_min": 0,
+        "accepted_below_alpha_min": 0,
+        "BB_count": 499,
+        "negative_raw_BB": 0,
+        "BB_seed_at_min": 0,
+        "BB_seed_at_max": 84,
+        "last_BB": {
+          "raw": 0.009149592254024034,
+          "clipped": 0.009149592254024034,
+          "denominator": 2.5782616642511017e-09
+        },
+        "objective_first": 19.253938110803457,
+        "objective_last_saved": 19.27730897469519,
+        "actual_returned_final_objective": 19.277308975130552
+      }
+    },
+    {
+      "AO_block_one_based": 8,
+      "held_iota": 642842654.4655863,
+      "W": {
+        "converged": true,
+        "updates": 1,
+        "reason": "relative_objective_tolerance"
+      },
+      "RCG": {
+        "converged": false,
+        "updates": 500,
+        "budget": 500,
+        "last_checked_normalized_gradient": 0.00010791128906409465,
+        "final_normalized_gradient": 0.00010781087273467102,
+        "gradient_tolerance": 1e-06,
+        "objective_first": 19.27730905106522,
+        "objective_last_saved": 19.29928655049486,
+        "actual_returned_final_objective": 19.299286969118725,
+        "raw_PR_min": -0.07254042505181521,
+        "raw_PR_max": 0.0,
+        "negative_PR_count": 499,
+        "non_ascent_restarts": 0,
+        "actual_accepted_step_values_saved": false
+      },
+      "PGA": {
+        "converged": false,
+        "iterations": 500,
+        "budget": 500,
+        "reason": "maximum_iterations_without_criterion_stop",
+        "last_checked_projected_gradient": 0.00043212168817198684,
+        "final_projected_gradient": 0.00026411222437197754,
+        "gradient_tolerance": 1e-06,
+        "relative_step": 2.315217915326625e-06,
+        "relative_tolerance": 1e-08,
+        "accepted_steps": 500,
+        "accepted_first": 0.01,
+        "accepted_last": 0.008014287578625963,
+        "accepted_min": 0.007421009232056989,
+        "accepted_max": 1.0,
+        "accepted_at_alpha_min": 0,
+        "accepted_below_alpha_min": 0,
+        "BB_count": 499,
+        "negative_raw_BB": 0,
+        "BB_seed_at_min": 0,
+        "BB_seed_at_max": 104,
+        "last_BB": {
+          "raw": 0.008014287578625963,
+          "clipped": 0.008014287578625963,
+          "denominator": 1.1862605148004391e-08
+        },
+        "objective_first": 19.299286969118725,
+        "objective_last_saved": 19.309494348134265,
+        "actual_returned_final_objective": 19.309494349120655
+      }
+    },
+    {
+      "AO_block_one_based": 9,
+      "held_iota": 139541543.93164062,
+      "W": {
+        "converged": true,
+        "updates": 1,
+        "reason": "relative_objective_tolerance"
+      },
+      "RCG": {
+        "converged": false,
+        "updates": 500,
+        "budget": 500,
+        "last_checked_normalized_gradient": 0.00010286943786451294,
+        "final_normalized_gradient": 0.00010286745250278976,
+        "gradient_tolerance": 1e-06,
+        "objective_first": 19.309495680549205,
+        "objective_last_saved": 19.315909106660555,
+        "actual_returned_final_objective": 19.31590948760588,
+        "raw_PR_min": -0.06635650825856984,
+        "raw_PR_max": 0.0,
+        "negative_PR_count": 499,
+        "non_ascent_restarts": 0,
+        "actual_accepted_step_values_saved": false
+      },
+      "PGA": {
+        "converged": false,
+        "iterations": 500,
+        "budget": 500,
+        "reason": "maximum_iterations_without_criterion_stop",
+        "last_checked_projected_gradient": 0.0005396929036220377,
+        "final_projected_gradient": 0.0005370870307670162,
+        "gradient_tolerance": 1e-06,
+        "relative_step": 4.311331242654227e-06,
+        "relative_tolerance": 1e-08,
+        "accepted_steps": 500,
+        "accepted_first": 0.01,
+        "accepted_last": 0.012238661107997767,
+        "accepted_min": 0.007098848653089824,
+        "accepted_max": 1.0,
+        "accepted_at_alpha_min": 0,
+        "accepted_below_alpha_min": 0,
+        "BB_count": 499,
+        "negative_raw_BB": 0,
+        "BB_seed_at_min": 0,
+        "BB_seed_at_max": 67,
+        "last_BB": {
+          "raw": 0.012238661107997767,
+          "clipped": 0.012238661107997767,
+          "denominator": 3.4220533406950432e-09
+        },
+        "objective_first": 19.31590948760588,
+        "objective_last_saved": 19.319599644617895,
+        "actual_returned_final_objective": 19.319599648130072
+      }
+    },
+    {
+      "AO_block_one_based": 10,
+      "held_iota": 81489565.93429708,
+      "W": {
+        "converged": true,
+        "updates": 1,
+        "reason": "relative_objective_tolerance"
+      },
+      "RCG": {
+        "converged": false,
+        "updates": 500,
+        "budget": 500,
+        "last_checked_normalized_gradient": 0.00010504117656497335,
+        "final_normalized_gradient": 0.00010503863050903338,
+        "gradient_tolerance": 1e-06,
+        "objective_first": 19.31960081083609,
+        "objective_last_saved": 19.321846999668942,
+        "actual_returned_final_objective": 19.321847396865866,
+        "raw_PR_min": -0.0639280684393068,
+        "raw_PR_max": 0.0,
+        "negative_PR_count": 499,
+        "non_ascent_restarts": 0,
+        "actual_accepted_step_values_saved": false
+      },
+      "PGA": {
+        "converged": false,
+        "iterations": 500,
+        "budget": 500,
+        "reason": "maximum_iterations_without_criterion_stop",
+        "last_checked_projected_gradient": 0.002191399570930545,
+        "final_projected_gradient": 0.001989098233425056,
+        "gradient_tolerance": 1e-06,
+        "relative_step": 1.8469773603806552e-05,
+        "relative_tolerance": 1e-08,
+        "accepted_steps": 500,
+        "accepted_first": 0.01,
+        "accepted_last": 0.013076402154418777,
+        "accepted_min": 0.006901226694236025,
+        "accepted_max": 1.0,
+        "accepted_at_alpha_min": 0,
+        "accepted_below_alpha_min": 0,
+        "BB_count": 499,
+        "negative_raw_BB": 0,
+        "BB_seed_at_min": 0,
+        "BB_seed_at_max": 83,
+        "last_BB": {
+          "raw": 0.05230560861767511,
+          "clipped": 0.05230560861767511,
+          "denominator": 3.796526894474837e-08
+        },
+        "objective_first": 19.321847396865866,
+        "objective_last_saved": 19.322898145086576,
+        "actual_returned_final_objective": 19.32289815376839
+      }
+    },
+    {
+      "AO_block_one_based": 11,
+      "held_iota": 68073347.05373645,
+      "W": {
+        "converged": true,
+        "updates": 1,
+        "reason": "relative_objective_tolerance"
+      },
+      "RCG": {
+        "converged": false,
+        "updates": 500,
+        "budget": 500,
+        "last_checked_normalized_gradient": 0.00010771844781101143,
+        "final_normalized_gradient": 0.00010771510034525334,
+        "gradient_tolerance": 1e-06,
+        "objective_first": 19.32289842807607,
+        "objective_last_saved": 19.323586445225587,
+        "actual_returned_final_objective": 19.323586862923634,
+        "raw_PR_min": -0.0658663374097325,
+        "raw_PR_max": 0.0,
+        "negative_PR_count": 499,
+        "non_ascent_restarts": 0,
+        "actual_accepted_step_values_saved": false
+      },
+      "PGA": {
+        "converged": false,
+        "iterations": 500,
+        "budget": 500,
+        "reason": "maximum_iterations_without_criterion_stop",
+        "last_checked_projected_gradient": 0.0006630429649621421,
+        "final_projected_gradient": 0.005410367893340952,
+        "gradient_tolerance": 1e-06,
+        "relative_step": 0.00010617724208781996,
+        "relative_tolerance": 1e-08,
+        "accepted_steps": 500,
+        "accepted_first": 0.01,
+        "accepted_last": 0.25,
+        "accepted_min": 0.006831789191436244,
+        "accepted_max": 1.0,
+        "accepted_at_alpha_min": 0,
+        "accepted_below_alpha_min": 0,
+        "BB_count": 499,
+        "negative_raw_BB": 0,
+        "BB_seed_at_min": 0,
+        "BB_seed_at_max": 83,
+        "last_BB": {
+          "raw": 2.2566796715753843,
+          "clipped": 1.0,
+          "denominator": 2.820154282233583e-10
+        },
+        "objective_first": 19.323586862923634,
+        "objective_last_saved": 19.32383595076338,
+        "actual_returned_final_objective": 19.32383595651547
+      }
+    },
+    {
+      "AO_block_one_based": 12,
+      "held_iota": 64919357.90703778,
+      "W": {
+        "converged": true,
+        "updates": 1,
+        "reason": "relative_objective_tolerance"
+      },
+      "RCG": {
+        "converged": false,
+        "updates": 500,
+        "budget": 500,
+        "last_checked_normalized_gradient": 0.00010972286022261291,
+        "final_normalized_gradient": 0.0001097186707339717,
+        "gradient_tolerance": 1e-06,
+        "objective_first": 19.32383598538926,
+        "objective_last_saved": 19.324152415838693,
+        "actual_returned_final_objective": 19.3241528492217,
+        "raw_PR_min": -0.06884480851698635,
+        "raw_PR_max": 0.0,
+        "negative_PR_count": 499,
+        "non_ascent_restarts": 0,
+        "actual_accepted_step_values_saved": false
+      },
+      "PGA": {
+        "converged": false,
+        "iterations": 500,
+        "budget": 500,
+        "reason": "maximum_iterations_without_criterion_stop",
+        "last_checked_projected_gradient": 0.0005683982318055667,
+        "final_projected_gradient": 0.0011054774796720886,
+        "gradient_tolerance": 1e-06,
+        "relative_step": 0.00019843353478042361,
+        "relative_tolerance": 1e-08,
+        "accepted_steps": 500,
+        "accepted_first": 0.01,
+        "accepted_last": 0.546896476300125,
+        "accepted_min": 0.006805698360654245,
+        "accepted_max": 1.0,
+        "accepted_at_alpha_min": 0,
+        "accepted_below_alpha_min": 0,
+        "BB_count": 499,
+        "negative_raw_BB": 0,
+        "BB_seed_at_min": 0,
+        "BB_seed_at_max": 77,
+        "last_BB": {
+          "raw": 0.546896476300125,
+          "clipped": 0.546896476300125,
+          "denominator": 3.287805345240356e-11
+        },
+        "objective_first": 19.3241528492217,
+        "objective_last_saved": 19.3242274769574,
+        "actual_returned_final_objective": 19.324227603651863
+      }
+    },
+    {
+      "AO_block_one_based": 13,
+      "held_iota": 63888606.44655497,
+      "W": {
+        "converged": true,
+        "updates": 1,
+        "reason": "relative_objective_tolerance"
+      },
+      "RCG": {
+        "converged": false,
+        "updates": 500,
+        "budget": 500,
+        "last_checked_normalized_gradient": 0.00010988222548579921,
+        "final_normalized_gradient": 0.0001098772787646177,
+        "gradient_tolerance": 1e-06,
+        "objective_first": 19.324227611463066,
+        "objective_last_saved": 19.324476173280928,
+        "actual_returned_final_objective": 19.324476607919312,
+        "raw_PR_min": -0.07128559979489368,
+        "raw_PR_max": 0.0,
+        "negative_PR_count": 499,
+        "non_ascent_restarts": 0,
+        "actual_accepted_step_values_saved": false
+      },
+      "PGA": {
+        "converged": false,
+        "iterations": 500,
+        "budget": 500,
+        "reason": "maximum_iterations_without_criterion_stop",
+        "last_checked_projected_gradient": 0.0004066414521098242,
+        "final_projected_gradient": 0.0004115112894031684,
+        "gradient_tolerance": 1e-06,
+        "relative_step": 4.616193554119255e-06,
+        "relative_tolerance": 1e-08,
+        "accepted_steps": 500,
+        "accepted_first": 0.01,
+        "accepted_last": 0.017823302935984168,
+        "accepted_min": 0.0067912445575739255,
+        "accepted_max": 1.0,
+        "accepted_at_alpha_min": 0,
+        "accepted_below_alpha_min": 0,
+        "BB_count": 499,
+        "negative_raw_BB": 0,
+        "BB_seed_at_min": 0,
+        "BB_seed_at_max": 76,
+        "last_BB": {
+          "raw": 0.017823302935984168,
+          "clipped": 0.017823302935984168,
+          "denominator": 9.000092200209074e-10
+        },
+        "objective_first": 19.324476607919312,
+        "objective_last_saved": 19.324510500635103,
+        "actual_returned_final_objective": 19.324510503525367
+      }
+    },
+    {
+      "AO_block_one_based": 14,
+      "held_iota": 63312108.50557771,
+      "W": {
+        "converged": true,
+        "updates": 1,
+        "reason": "relative_objective_tolerance"
+      },
+      "RCG": {
+        "converged": false,
+        "updates": 500,
+        "budget": 500,
+        "last_checked_normalized_gradient": 0.00010860878198919618,
+        "final_normalized_gradient": 0.00010860319340962477,
+        "gradient_tolerance": 1e-06,
+        "objective_first": 19.324510509339163,
+        "objective_last_saved": 19.324739992131708,
+        "actual_returned_final_objective": 19.32474041675017,
+        "raw_PR_min": -0.0680912863072751,
+        "raw_PR_max": 0.0,
+        "negative_PR_count": 499,
+        "non_ascent_restarts": 0,
+        "actual_accepted_step_values_saved": false
+      },
+      "PGA": {
+        "converged": false,
+        "iterations": 500,
+        "budget": 500,
+        "reason": "maximum_iterations_without_criterion_stop",
+        "last_checked_projected_gradient": 0.00029120612726180354,
+        "final_projected_gradient": 0.0018840480563536433,
+        "gradient_tolerance": 1e-06,
+        "relative_step": 4.63014806989412e-05,
+        "relative_tolerance": 1e-08,
+        "accepted_steps": 500,
+        "accepted_first": 0.01,
+        "accepted_last": 0.25,
+        "accepted_min": 0.006787329435417542,
+        "accepted_max": 1.0,
+        "accepted_at_alpha_min": 0,
+        "accepted_below_alpha_min": 0,
+        "BB_count": 499,
+        "negative_raw_BB": 0,
+        "BB_seed_at_min": 0,
+        "BB_seed_at_max": 66,
+        "last_BB": {
+          "raw": 72.10617025757874,
+          "clipped": 1.0,
+          "denominator": 1.2672445572414815e-10
+        },
+        "objective_first": 19.32474041675017,
+        "objective_last_saved": 19.32475889577561,
+        "actual_returned_final_objective": 19.324758904561897
+      }
+    },
+    {
+      "AO_block_one_based": 15,
+      "held_iota": 62899365.432441846,
+      "W": {
+        "converged": true,
+        "updates": 1,
+        "reason": "relative_objective_tolerance"
+      },
+      "RCG": {
+        "converged": false,
+        "updates": 500,
+        "budget": 500,
+        "last_checked_normalized_gradient": 0.00010627352340228059,
+        "final_normalized_gradient": 0.00010626742131753848,
+        "gradient_tolerance": 1e-06,
+        "objective_first": 19.324758909898293,
+        "objective_last_saved": 19.32497464342395,
+        "actual_returned_final_objective": 19.324975049975166,
+        "raw_PR_min": -0.06163417412047408,
+        "raw_PR_max": 0.0,
+        "negative_PR_count": 499,
+        "non_ascent_restarts": 0,
+        "actual_accepted_step_values_saved": false
+      },
+      "PGA": {
+        "converged": false,
+        "iterations": 500,
+        "budget": 500,
+        "reason": "maximum_iterations_without_criterion_stop",
+        "last_checked_projected_gradient": 0.00016439996127521155,
+        "final_projected_gradient": 0.0001600542981025641,
+        "gradient_tolerance": 1e-06,
+        "relative_step": 7.742388554594102e-07,
+        "relative_tolerance": 1e-08,
+        "accepted_steps": 500,
+        "accepted_first": 0.01,
+        "accepted_last": 0.007413469230432722,
+        "accepted_min": 0.006786973145153471,
+        "accepted_max": 1.0,
+        "accepted_at_alpha_min": 0,
+        "accepted_below_alpha_min": 0,
+        "BB_count": 499,
+        "negative_raw_BB": 0,
+        "BB_seed_at_min": 0,
+        "BB_seed_at_max": 95,
+        "last_BB": {
+          "raw": 0.007413469230432722,
+          "clipped": 0.007413469230432722,
+          "denominator": 2.067503990417469e-09
+        },
+        "objective_first": 19.324975049975166,
+        "objective_last_saved": 19.324987040971056,
+        "actual_returned_final_objective": 19.324987041165663
+      }
+    },
+    {
+      "AO_block_one_based": 16,
+      "held_iota": 62575149.86821122,
+      "W": {
+        "converged": true,
+        "updates": 1,
+        "reason": "relative_objective_tolerance"
+      },
+      "RCG": {
+        "converged": false,
+        "updates": 500,
+        "budget": 500,
+        "last_checked_normalized_gradient": 0.00010342169965652518,
+        "final_normalized_gradient": 0.00010341518516623244,
+        "gradient_tolerance": 1e-06,
+        "objective_first": 19.32498704629623,
+        "objective_last_saved": 19.325190487876785,
+        "actual_returned_final_objective": 19.32519087289814,
+        "raw_PR_min": -0.0572597777847386,
+        "raw_PR_max": 0.0,
+        "negative_PR_count": 499,
+        "non_ascent_restarts": 0,
+        "actual_accepted_step_values_saved": false
+      },
+      "PGA": {
+        "converged": false,
+        "iterations": 500,
+        "budget": 500,
+        "reason": "maximum_iterations_without_criterion_stop",
+        "last_checked_projected_gradient": 8.657460330901818e-05,
+        "final_projected_gradient": 0.0004008703722139282,
+        "gradient_tolerance": 1e-06,
+        "relative_step": 6.869790184112433e-06,
+        "relative_tolerance": 1e-08,
+        "accepted_steps": 500,
+        "accepted_first": 0.01,
+        "accepted_last": 0.125,
+        "accepted_min": 0.006791895751945438,
+        "accepted_max": 1.0,
+        "accepted_at_alpha_min": 0,
+        "accepted_below_alpha_min": 0,
+        "BB_count": 499,
+        "negative_raw_BB": 0,
+        "BB_seed_at_min": 0,
+        "BB_seed_at_max": 99,
+        "last_BB": {
+          "raw": 2.2648222822272572,
+          "clipped": 1.0,
+          "denominator": 5.076754616888755e-12
+        },
+        "objective_first": 19.32519087289814,
+        "objective_last_saved": 19.325198367624857,
+        "actual_returned_final_objective": 19.32519836797995
+      }
+    },
+    {
+      "AO_block_one_based": 17,
+      "held_iota": 62299185.0105739,
+      "W": {
+        "converged": true,
+        "updates": 1,
+        "reason": "relative_objective_tolerance"
+      },
+      "RCG": {
+        "converged": false,
+        "updates": 500,
+        "budget": 500,
+        "last_checked_normalized_gradient": 0.00010017506707030964,
+        "final_normalized_gradient": 0.00010016823910738986,
+        "gradient_tolerance": 1e-06,
+        "objective_first": 19.325198373016477,
+        "objective_last_saved": 19.325388389202985,
+        "actual_returned_final_objective": 19.325388750427642,
+        "raw_PR_min": -0.0510203908485182,
+        "raw_PR_max": 0.0,
+        "negative_PR_count": 499,
+        "non_ascent_restarts": 0,
+        "actual_accepted_step_values_saved": false
+      },
+      "PGA": {
+        "converged": false,
+        "iterations": 500,
+        "budget": 500,
+        "reason": "maximum_iterations_without_criterion_stop",
+        "last_checked_projected_gradient": 5.5055179460068185e-05,
+        "final_projected_gradient": 0.00010818452707841946,
+        "gradient_tolerance": 1e-06,
+        "relative_step": 1.0812319088191205e-06,
+        "relative_tolerance": 1e-08,
+        "accepted_steps": 500,
+        "accepted_first": 0.01,
+        "accepted_last": 0.03094981547177184,
+        "accepted_min": 0.006793940363328904,
+        "accepted_max": 1.0,
+        "accepted_at_alpha_min": 0,
+        "accepted_below_alpha_min": 0,
+        "BB_count": 499,
+        "negative_raw_BB": 0,
+        "BB_seed_at_min": 0,
+        "BB_seed_at_max": 80,
+        "last_BB": {
+          "raw": 0.2475985237741747,
+          "clipped": 0.2475985237741747,
+          "denominator": 8.407167105798112e-12
+        },
+        "objective_first": 19.325388750427642,
+        "objective_last_saved": 19.325394051036916,
+        "actual_returned_final_objective": 19.325394051078575
+      }
+    },
+    {
+      "AO_block_one_based": 18,
+      "held_iota": 62070336.54812054,
+      "W": {
+        "converged": true,
+        "updates": 1,
+        "reason": "relative_objective_tolerance"
+      },
+      "RCG": {
+        "converged": false,
+        "updates": 500,
+        "budget": 500,
+        "last_checked_normalized_gradient": 9.671002141463484e-05,
+        "final_normalized_gradient": 9.670296501402107e-05,
+        "gradient_tolerance": 1e-06,
+        "objective_first": 19.325394056038753,
+        "objective_last_saved": 19.325570796744493,
+        "actual_returned_final_objective": 19.325571133409465,
+        "raw_PR_min": -0.04546721639310083,
+        "raw_PR_max": 0.0,
+        "negative_PR_count": 499,
+        "non_ascent_restarts": 0,
+        "actual_accepted_step_values_saved": false
+      },
+      "PGA": {
+        "converged": false,
+        "iterations": 500,
+        "budget": 500,
+        "reason": "maximum_iterations_without_criterion_stop",
+        "last_checked_projected_gradient": 2.9676473609824788e-05,
+        "final_projected_gradient": 0.00031796599757513423,
+        "gradient_tolerance": 1e-06,
+        "relative_step": 1.2561288352381974e-05,
+        "relative_tolerance": 1e-08,
+        "accepted_steps": 500,
+        "accepted_first": 0.01,
+        "accepted_last": 0.6672466017047609,
+        "accepted_min": 0.006791145843899916,
+        "accepted_max": 1.0,
+        "accepted_at_alpha_min": 0,
+        "accepted_below_alpha_min": 0,
+        "BB_count": 499,
+        "negative_raw_BB": 0,
+        "BB_seed_at_min": 0,
+        "BB_seed_at_max": 83,
+        "last_BB": {
+          "raw": 0.6672466017047609,
+          "clipped": 0.6672466017047609,
+          "denominator": 8.282347757859163e-13
+        },
+        "objective_first": 19.325571133409465,
+        "objective_last_saved": 19.325575251900435,
+        "actual_returned_final_objective": 19.325575252019433
+      }
+    }
+  ],
+  "finite_mechanism_findings": [
+    "The remaining false is not only historical bookkeeping: last RCG normalized gradient9.6702965e-5 and last PGA projected residual3.17965998e-4 are both above the configured1e-6 target.",
+    "First five PGA blocks terminate by source-permitted relative-step OR criterion; each final raw BB seed is negative and clipped to reconstructed alpha_min1e-10. Four final acceptedsteps are1e-10; block3 backtracks to1.5625e-12. Their gradient norms remain6.536e-4..1.700e-3. This is directly observed step-clipping-driven tiny-movement termination, not a claimed gradient stop.",
+    "The thirteen capped PGA blocks have no alpha_min-clipped seeds at all. Their min acceptedsteps are about0.00679..0.00947, with max1. Therefore alpha_min cannot explain those thirteen caps. Upper-seed clipping and backtracking occur; scalar tape does not establish that they cause slow convergence.",
+    "RCG has9000 accepted updates with7475 negative raw untruncated PR coefficients and zero documented non-ascent restarts. No Armijo-exhaustion exception occurred. Actual accepted alpha/direction/gradient vectors/trials are absent, so seed1 alone does not prove a slow-step or analytic-gradient bug.",
+    "All numbers here are saved scalar readback; final-state independent MP is separately owned by scope audit. No old159/145 scalar outcome is inherited as014 scientificPASS."
+  ],
+  "budget_provenance": {
+    "local_preexisting_source_audit": "SOURCE_BUDGET_AUDIT.md",
+    "audited_author_R1_TeX_SHA256": "aa71da008c68caa605ec3ed17520fcb81796561f315667eeb2f7dddf1487d2d2",
+    "directly_reopened_author_TeX_this_pass": false,
+    "original_algorithm_anchors": {
+      "RCG_Algorithm2": "R1 L759-773: normalized Riemannian gradient <= symbolic epsilon OR symbolic j_max",
+      "PGA_Algorithm3": "R1 L981-1028: box projected-gradient residual OR relative accepted-angle step; symbolic tolerances/I_PGA_max",
+      "AO": "R1 L1046-1054: symbolic relative-utility tolerance or maximum iteration"
+    },
+    "reconstruction_controls": {
+      "RCG_PGA_AO_safety_caps": 500,
+      "W_safety_cap": 10000,
+      "gradient_target": 1e-06,
+      "PGA_relative_step_target": 1e-08,
+      "RCG_initial_trial_seed": 1.0,
+      "PGA_initial_seed": 0.01,
+      "PGA_minimum_BB_seed": 1e-10,
+      "PGA_maximum_BB_seed": 1.0,
+      "line_search_Armijo": 0.0001,
+      "backtracking_factor": 0.5,
+      "maximum_backtracks": 80
+    },
+    "provenance": "full_config.parameter_provenance explicitly classifies all numeric caps/tolerances/line-search constants as tuned or unreported, README89-93 calls them safetycaps. These are frozen configured reconstruction controls, not claimed author-specified500/1e-6/etc.",
+    "existing_larger_cap_evidence": "SOURCE_BUDGET_AUDIT records earlier case001 same500bitprefix RCG500->10000 and PGA500->10000 diagnostics still capped; no new rerun and no inference they decide014."
+  },
+  "minimum_next_diagnostic": {
+    "status": "recommendation_only_not_prepared_or_started",
+    "purpose": "One cold arithmetic-variant prefix to the first RCG complete return and first PGA return, passively capturing the missing decisive operands; no rerun of all18 AO cycles or other five schemes.",
+    "RCG_capture": [
+      "fixed W/c/iota/r, initial and final theta",
+      "initial and last few actual ambient/tangent gradients, transported oldg/oldd and raw PR",
+      "actual direction, alpha0 seed and accepted/backtracked trials/slope",
+      "all original500 scalar history/PR/restarts preserved for prefix equality comparison"
+    ],
+    "PGA_capture": [
+      "first negative BB seed: AO1, original last iteration37 zero-based, raw=-281.8018668528596, clipped1e-10",
+      "W/theta/c/iota, before/after r and oldr/oldg/g, bounds",
+      "raw curvature denominator, projected delta, accepted alpha and original Armijo trials",
+      "finish original first PGA block before diagnostic sentinel; compare38 existing scalar iterations"
+    ],
+    "expected_original_prefix_work": {
+      "W_updates_first_block": 3,
+      "RCG_updates_first_block": 500,
+      "PGA_updates_first_block": 38,
+      "AO_blocks_needed": 1
+    },
+    "cost_evidence": "Actual complete18AO took390.111461s with20W+9000RCG+7037PGA recordedupdates. The decisive first-block prefix is541updates; a linear mixed-cost ratio is about13.1s plus setup but is not an ETA because W/channel/line-search costs differ.",
+    "no_threshold_relaxation_no_unproven_cold_cap_increase_no_endpoint_splicing": true
+  },
+  "exact_continuation_feasibility": {
+    "existing_return_contains_only_final_scheme_arrays": true,
+    "per_inner_block_W_theta_r_endpoint_and_RCGR_PR_carry_not_saved": true,
+    "exact_RCGR_continuation_needs": [
+      "fixed W/r/c/iota",
+      "theta after500",
+      "oldg/oldd for original transported PR",
+      "iteration index and full accepted history"
+    ],
+    "exact_PGA_continuation_needs": [
+      "fixed W/theta/c/iota",
+      "r plus oldr/oldg for originalBB",
+      "bounds, accepted-history and current loop counter"
+    ],
+    "complete_AO_dependency_carry_also_required": true,
+    "full_AO_from_final_scheme_state_is_new_trajectory_and_does_not_retroactively_fix18_failed_inner_blocks": true
+  },
+  "next_cap_policy_boundary": "If fixed-block MP/curvature/Armijo demonstrates correct nonvanishing steps and genuine slow progress, a distinct cold same-algorithm larger safety-cap version may be authorized with the same1e-6 target, all old500failures retained and complete AO dependencies recomputed. Alpha0/alpha_min changes must be disclosed as selected reconstruction parameters, not printed numerical constants. No such run is started here.",
+  "operations": {
+    "new_optimizer_MP_MC_RNG_calls": 0,
+    "production_source_edits": 0,
+    "old_bank_or_other_case_replays": 0
+  },
+  "full_convergence_original_reference_or_paper_PASS": false
+}

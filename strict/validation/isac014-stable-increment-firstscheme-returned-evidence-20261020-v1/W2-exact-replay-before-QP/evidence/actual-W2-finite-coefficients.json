@@ -1,0 +1,208 @@
+{
+  "schema": "actual-original-W2-source-exact-finite-coefficient-readback-v1",
+  "source_before": {
+    "local-origin/W2-source\\read_only_actual_W2_passive_coefficients_v1.py": "162838c6fd58fe16f008da740431649a5ce31291efbe6eeb577b26520ca3a630",
+    "local-origin/W2-source\\actual-held-W2-probe-v1\\original-W2-probe-actual-owned-process.json": "17f44cce46fb92bab6dc0ed5bb64be634fa510eaed69f2b0a55c0f785c141a3d",
+    "local-origin/W2-replay-run\\ACTUAL_ORIGINAL_W2_ONE_UPDATE_SOURCE_REPLAY_AND_PASSIVE_QCQP_CLOSURE_V1.json": "596d1b0c148ecbaeb582ab16f2a1f60c94e2c19ba262f229d0bd649474779192",
+    "local-origin/W2-replay-run\\actual-original-W2-replay-and-passive-QCQP-operands.npz": "0c5bc4e282da5e59129898f8012b3838009e0f14587f38cdd94fd4a9385f8ad5",
+    "local-origin/W2-source\\original-scenario.json": "3b5e8fced9d90337bc574d660ea29c0a2b1b67aae8fc11950cdbbb28d609c302",
+    "local-origin/W2-source\\expected-original-W2-returned-status.json": "b390c23a6a2de37b2fa29e0ec1760d7c494e86facbf53715cd55ce995cb67024"
+  },
+  "source_after": {
+    "local-origin/W2-source\\read_only_actual_W2_passive_coefficients_v1.py": "162838c6fd58fe16f008da740431649a5ce31291efbe6eeb577b26520ca3a630",
+    "local-origin/W2-source\\actual-held-W2-probe-v1\\original-W2-probe-actual-owned-process.json": "17f44cce46fb92bab6dc0ed5bb64be634fa510eaed69f2b0a55c0f785c141a3d",
+    "local-origin/W2-replay-run\\ACTUAL_ORIGINAL_W2_ONE_UPDATE_SOURCE_REPLAY_AND_PASSIVE_QCQP_CLOSURE_V1.json": "596d1b0c148ecbaeb582ab16f2a1f60c94e2c19ba262f229d0bd649474779192",
+    "local-origin/W2-replay-run\\actual-original-W2-replay-and-passive-QCQP-operands.npz": "0c5bc4e282da5e59129898f8012b3838009e0f14587f38cdd94fd4a9385f8ad5",
+    "local-origin/W2-source\\original-scenario.json": "3b5e8fced9d90337bc574d660ea29c0a2b1b67aae8fc11950cdbbb28d609c302",
+    "local-origin/W2-source\\expected-original-W2-returned-status.json": "b390c23a6a2de37b2fa29e0ec1760d7c494e86facbf53715cd55ce995cb67024"
+  },
+  "source_and_input_interval_closed": true,
+  "owner": {
+    "PID": 14612,
+    "creation_FILETIME": 134369166152452070,
+    "associated_with_any_Windows_job": true
+  },
+  "child": {
+    "PID": 19432,
+    "creation_FILETIME": 134369166158857124,
+    "associated_with_any_Windows_job": true
+  },
+  "actual_probe_natural_exit": 0,
+  "original_same_path_gate": true,
+  "raw_array_count": 80,
+  "nonfinite_array_counts": {},
+  "all80_captured_arrays_finite": true,
+  "actual_recorded_coefficients_and_evaluator_scalars": {
+    "QP00000__info__alpha": {
+      "value": 3.1715239970089387e-09,
+      "dtype": "float64",
+      "shape": []
+    },
+    "QP00000__info__beta": {
+      "value": 6.864405606624647e-22,
+      "dtype": "float64",
+      "shape": []
+    },
+    "QP00000__info__nu": {
+      "value": 0.0,
+      "dtype": "float64",
+      "shape": []
+    },
+    "QP00000__info__singular": {
+      "value": [
+        46716.26024328415,
+        0.0
+      ],
+      "dtype": "float64",
+      "shape": [
+        2
+      ]
+    },
+    "QP00000__info__original_positive_diagonal": {
+      "value": [
+        2182408971.1182513,
+        3.1715239970089387e-09,
+        3.1715239970089387e-09,
+        3.1715239970089387e-09
+      ],
+      "dtype": "float64",
+      "shape": [
+        4
+      ]
+    },
+    "SOLVERACTUAL__row": {
+      "value": [
+        1.4349534037637676e+18,
+        3.375322289245509e-19,
+        5.073627963460798e-19,
+        6.424961657015325e-20
+      ],
+      "dtype": "float64",
+      "shape": [
+        4
+      ]
+    },
+    "QP00000__info__power_from_basis": {
+      "value": 0.39166181231512937,
+      "dtype": "float64",
+      "shape": []
+    },
+    "QP00000__info__actual_binary64_power": {
+      "value": 0.39166181231512937,
+      "dtype": "float64",
+      "shape": []
+    },
+    "TRANSMIT00000__nu": {
+      "value": 0,
+      "dtype": "int64",
+      "shape": []
+    },
+    "TRANSMIT00000__actual_return": {
+      "value": 0.39166181231512937,
+      "dtype": "float64",
+      "shape": []
+    },
+    "TRANSMIT00001__nu": {
+      "value": 0.0,
+      "dtype": "float64",
+      "shape": []
+    },
+    "TRANSMIT00001__actual_return": {
+      "value": 0.39166181231512937,
+      "dtype": "float64",
+      "shape": []
+    },
+    "WITER00000__mu": {
+      "value": [
+        0.0,
+        455750465.21262175
+      ],
+      "dtype": "float64",
+      "shape": [
+        2
+      ]
+    },
+    "WITER00000__signal": {
+      "value": [
+        0.0,
+        455750.4652126258
+      ],
+      "dtype": "float64",
+      "shape": [
+        2
+      ]
+    },
+    "WITER00000__interference": {
+      "value": [
+        35.39886734603915,
+        0.001000000000000009
+      ],
+      "dtype": "float64",
+      "shape": [
+        2
+      ]
+    },
+    "EVALUATE00000__utility": {
+      "value": 18.763668891224427,
+      "dtype": "float64",
+      "shape": []
+    },
+    "EVALUATE00001__utility": {
+      "value": 18.763668897607776,
+      "dtype": "float64",
+      "shape": []
+    },
+    "EVALUATE00000__rate": {
+      "value": 28.76366889117745,
+      "dtype": "float64",
+      "shape": []
+    },
+    "EVALUATE00001__rate": {
+      "value": 28.763668897508538,
+      "dtype": "float64",
+      "shape": []
+    },
+    "EVALUATE00000__nmse": {
+      "value": 0.9999999999953022,
+      "dtype": "float64",
+      "shape": []
+    },
+    "EVALUATE00001__nmse": {
+      "value": 0.9999999999900763,
+      "dtype": "float64",
+      "shape": []
+    }
+  },
+  "original_power_cap": 0.3981071705534972,
+  "actual_finite_transmit0_below_original_cap": true,
+  "actual_transmit0_equals_actual_power_IEEE": true,
+  "original_W2_returned_status": {
+    "objective": [
+      18.763668891224427,
+      18.763668897607776
+    ],
+    "QCQP": [
+      {
+        "nu": 0.0,
+        "bisection_steps": 0,
+        "stationarity_residual": 2.1950781140709273e-07,
+        "power": 0.39166181231512937
+      }
+    ],
+    "converged": true,
+    "termination_reason": "relative_objective_tolerance",
+    "iterations": 1,
+    "iteration_budget": 10000,
+    "budget_exhausted": false,
+    "capped_unconverged": false,
+    "relative_objective_improvement": 3.401972715214167e-10,
+    "relative_step": 0.12978891263425377,
+    "relative_tolerance": 1e-06
+  },
+  "interpretation": "The recorded zero-nu branch used a finite original transmit(0), not a NaN comparison. The large recorded positive diagonal is the communication-QT direction while sensing alpha is small; this scale readback does not itself certify a QP residual, tangent contact or W stationarity.",
+  "absolute_norm_deltaW_not_stored_and_not_newly_computed": true,
+  "new_W_objective_gradient_optimizer_QP_solve_MP_MC_RNG_calls": 0,
+  "independent_before_and_QP_MP_pending": true,
+  "after_W2_MP_not_recomputed": true,
+  "joint_stationarity_reference_or_paper_PASS": false
+}

@@ -1,0 +1,551 @@
+{
+  "scope": "Original local artifact digests identify source evidence; each public file has its own independent MANIFEST digest. No local digest is relabelled as public bytes SHA.",
+  "files": {
+    "configuration/source-working-betaR1-full.json": {
+      "original_artifact_SHA256": "998a1c191e60897eef08fac565b3aeb95fc5e0024572dbb4ba3874feeb44f79d",
+      "original_bytes": 79943,
+      "original_source_alias": "local-source/55123edaa440/configuration-requires-saved-source-factory.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 965
+    },
+    "inputs/canonical-eleven-arrays-and-limits.npz": {
+      "original_artifact_SHA256": "ce39e03acac33fa0670264ee5f49cf95f2ea6bf96334ab09fb0445978cf4df8e",
+      "original_bytes": 140712,
+      "original_source_alias": "local-source/76388dc3d7da/channel-data-and-limits.npz",
+      "byte_identical_copy": true
+    },
+    "inputs/canonical-eleven-arrays-and-limits.mat": {
+      "original_artifact_SHA256": "cc9a176813692300d592de139085c51ae7a6f964151dcc57d059514f630664e6",
+      "original_bytes": 139576,
+      "original_source_alias": "local-source/9272e1ed80dc/canonical-native-U6-eleven-fields-and-limits.mat",
+      "byte_identical_copy": true
+    },
+    "inputs/NPZ-to-MAT-exact-format-readback.json": {
+      "original_artifact_SHA256": "f85eacb0d7e0df52b8b70293064640547841152a95b565a7eb97821b47b8c9c1",
+      "original_bytes": 5173,
+      "original_source_alias": "local-source/3bbefc9945cc/ACTUAL_FORMAT_ONLY_CANONICAL_NPZ_TO_MAT_EXACT_READBACK_V1.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 64
+    },
+    "evidence/native-full-result.json.gz": {
+      "original_artifact_SHA256": "62a6702d836f2ebc404074b07a3ea163587502008e0d0bac6f69b1ba1eb2661e",
+      "original_bytes": 365024,
+      "original_source_alias": "local-source/79e406f1a0a7/actual-native-complete-timed-result.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 6807
+    },
+    "evidence/python-recapture-full-result.json.gz": {
+      "original_artifact_SHA256": "f853f72bd17320722c35b71bd2289fa9801924ab0a7a82cc559211af005eaf18",
+      "original_bytes": 403263,
+      "original_source_alias": "local-source/3a6687d285e2/case-python-recorded.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 6272
+    },
+    "evidence/python-first-optimization-full-result-export-failed.json.gz": {
+      "original_artifact_SHA256": "c708fa20e852050d927bce73132503fcf43b0e0bf86976486635859f0d24fa03",
+      "original_bytes": 399017,
+      "original_source_alias": "local-source/9b6f38622eb4/actual-result.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 6269
+    },
+    "evidence/python-first-export-failure1.json": {
+      "original_artifact_SHA256": "aba73d85c4b69a1ce2395211599702abd1d89f299992502655d0b13d0f1f3208",
+      "original_bytes": 15900,
+      "original_source_alias": "local-source/ecaf275349f1/ACTUAL_CANONICAL_NATIVE_U6_FULL8_PYTHON_VARIANT_OUTCOME_V1.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 15
+    },
+    "evidence/python-new-optimization-recapture-outcome.json": {
+      "original_artifact_SHA256": "f36c33cab7aeb3a51509b3b26502849ae82c56898ddba73638c41c1cee12519c",
+      "original_bytes": 22751,
+      "original_source_alias": "local-source/b368019392cf/ACTUAL_NEW_OPTIMIZATION_RECAPTURE_U6_FULL8_WITH_EXACT_OLD_MC_REUSE_OUTCOME_V1.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 16
+    },
+    "evidence/first-vs-recapture-history-and-status-differences.json": {
+      "original_artifact_SHA256": "3fa45c3c99dd66433b08b2ccf4d7070f21fa048fec245a3fdf9767c4e8997449",
+      "original_bytes": 11498,
+      "original_source_alias": "local-source/6069b7e5e316/ACTUAL_FIRST_OPTIMIZATION_VS_NEW_RECAPTURE_DIFFERING_STATUS_AND_HISTORY_LEAVES_V1.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 142
+    },
+    "evidence/native-four-science-gates-closed.json": {
+      "original_artifact_SHA256": "0e1fae4382f710ec5607d93a43eeebba99b45589e93ee0b96926c130bc278d12",
+      "original_bytes": 6684,
+      "original_source_alias": "local-source/9b92f0823731/ACTUAL_NATIVE_U6_ALL8_67QT_55PHASE_8250GRAD_MC1000_FOUR_SAVED_SCIENTIFIC_CLOSURE_V1.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 47
+    },
+    "evidence/python-ownstate-source-and-science-closure.json": {
+      "original_artifact_SHA256": "0a1fb52bf4e6ef3de90dec4046f57fe471e69be2cbfc640238d6317631e6209d",
+      "original_bytes": 14577,
+      "original_source_alias": "local-source/13940b38405a/ownstate-actual-source-raw-loader-and-stage-outcome.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 71
+    },
+    "evidence/python-stops-source-and-science-closure.json": {
+      "original_artifact_SHA256": "d3f6294f70c4745ce930d0dcf3e9f837101215b7b2d669854ff20842877cc1b0",
+      "original_bytes": 14413,
+      "original_source_alias": "local-source/3321eb5d50c1/stops-actual-source-raw-loader-and-stage-outcome.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 72
+    },
+    "evidence/python-initial-source-and-science-closure.json": {
+      "original_artifact_SHA256": "d39b383766a5f8e70c0fc27d20a48e0686afa56f14d4c20298b9eec39071ddbf",
+      "original_bytes": 14193,
+      "original_source_alias": "local-source/0880b643ec21/initial-actual-source-raw-loader-and-stage-outcome.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 69
+    },
+    "evidence/python-ownstate-QT-directP7-summary.json": {
+      "original_artifact_SHA256": "70f83839b0c5d393faa55ad4ddcb75719c085b0a949fecf69b6f41735c3a1cbd",
+      "original_bytes": 5055,
+      "original_source_alias": "local-source/c1e0f14c7b60/ACTUAL_NEW_FULL8_OWNSTATE_QT_PHASE_DIRECT_PREP7_INDEPENDENT_MP_CLOSURE_V1.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 14
+    },
+    "evidence/python-all55-phase-MP80-MP100-summary.json.gz": {
+      "original_artifact_SHA256": "ddd1d56cd4bff2ab0ef2e32c62ba33b698701ba9f947dd9ac441b25f22f7132e",
+      "original_bytes": 21094,
+      "original_source_alias": "local-source/26eb23c7dc12/summary.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 123
+    },
+    "evidence/python-stops-selection-MCbinding.json": {
+      "original_artifact_SHA256": "3b2e3b42e1f3f975c6b3cddc41b573521cea5ec89c52b61144b32b4812392ef2",
+      "original_bytes": 11500,
+      "original_source_alias": "local-source/a09ecc433c28/stops-selection-oldMCinput-binding.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 282
+    },
+    "evidence/python-initial-incumbent-MP.json.gz": {
+      "original_artifact_SHA256": "5da10be85282469e5a79f2ac39a740855bf4eb1ce5eadad6b47330e6626ffb4e",
+      "original_bytes": 62372,
+      "original_source_alias": "local-source/e65af815df64/TS-initial-incumbent-MP.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 469
+    },
+    "evidence/python-original1000-saved-MC-independent-closure.json": {
+      "original_artifact_SHA256": "cd7747fb5005d22a8c57506d217833f46d2ce50ffe99b696fca9e24bb5de0d1e",
+      "original_bytes": 14401,
+      "original_source_alias": "local-source/8853bffa3a69/ACTUAL_NEW_ONLINE_POWER24_FULL1000_SAVED_OPERAND_INDEPENDENT_CLOSURE_V1.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 115
+    },
+    "evidence/native-MC-scientific-report.json.gz": {
+      "original_artifact_SHA256": "cd4b8dfe882e706fc233b708260640d180146d3cf61236127ffc115975cba59d",
+      "original_bytes": 14426,
+      "original_source_alias": "local-source/8c4ae2844d89/ACTUAL_NEW_ONLINE_POWER24_FULL1000_SAVED_OPERAND_INDEPENDENT_CLOSURE_V1.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 115
+    },
+    "evidence/native-ownstate-scientific-report.json.gz": {
+      "original_artifact_SHA256": "9f2252646e4eedd023dd213aa2a235e742dde5e35c5848b1945214c5caa10439",
+      "original_bytes": 4989,
+      "original_source_alias": "local-source/22dd140d975e/ACTUAL_NEW_FULL8_OWNSTATE_QT_PHASE_DIRECT_PREP7_INDEPENDENT_MP_CLOSURE_V1.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 14
+    },
+    "evidence/native-phase-scientific-report.json.gz": {
+      "original_artifact_SHA256": "b0749d5ae3f41576256b5c7447ce889387ec6b9855bb2844793d1d5c334ff791",
+      "original_bytes": 21080,
+      "original_source_alias": "local-source/d18a1fbe1998/summary.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 123
+    },
+    "evidence/native-stops-scientific-report.json.gz": {
+      "original_artifact_SHA256": "73b8658be2b8442d541753c7f87c54796389ae20d9ed23feae7cf33e94086252",
+      "original_bytes": 11508,
+      "original_source_alias": "local-source/f27ab144ea10/stops-selection-MCbinding.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 282
+    },
+    "evidence/native-initial-scientific-report.json.gz": {
+      "original_artifact_SHA256": "4c23680debb0fd47c3e49eb7ca6a43e3ae3494012f0f38d3b063a78a9b6b61ef",
+      "original_bytes": 62398,
+      "original_source_alias": "local-source/476e98ed5cb8/initial-incumbent-MP.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 469
+    },
+    "evidence/native-first-stops-reader-host-failure1-retained.json": {
+      "original_artifact_SHA256": "2e5d620550d1c80fc62536dbdbd29b4c7344486f00778882dcbf1cd44ff9507e",
+      "original_bytes": 6085,
+      "original_source_alias": "local-source/fcf18b5bccc7/stops-ACTUAL_STAGE_SCOPE_OUTCOME_V1.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 9
+    },
+    "evidence/native-stops-reader-corrected-host-natural0.json": {
+      "original_artifact_SHA256": "1c22132e39d21becbf2c2f96a65431feaa94ce1baada22ab17d7fdd1ca9033d5",
+      "original_bytes": 4725,
+      "original_source_alias": "local-source/d81bda681f25/stops-ACTUAL_STAGE_SCOPE_OUTCOME_V2.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 13
+    },
+    "evidence/full-state-numeric-bit-identity-projection.json": {
+      "original_artifact_SHA256": "8f75986beadf8df975f44b9486c57645047acf9952fa5d6168b2836fa7415679",
+      "original_bytes": 1947,
+      "original_source_alias": "local-source/14c1611873c4/ACTUAL_PATH_METADATA_ONLY_STATES_NUMERIC_BIT_IDENTITY_V2.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 8
+    },
+    "evidence/native-all8-all55phase-all67QT-states.mat.gz": {
+      "projected_uncompressed_SHA256": "960beba491896ca0010ff5b736cd387cfd2ed7cf42031f3482de050732238ebd",
+      "projected_uncompressed_bytes": 7196167,
+      "compression": "gzip with mtime0",
+      "all_original_numeric_values_classes_shapes_and_bits_identical": true
+    },
+    "evidence/python-recapture-all8-all55phase-all67QT-states.mat.gz": {
+      "projected_uncompressed_SHA256": "2a6a1a5fc6b0915827a08e63d58af4c098321b653dadaaf413136a501e570970",
+      "projected_uncompressed_bytes": 7111250,
+      "compression": "gzip with mtime0",
+      "all_original_numeric_values_classes_shapes_and_bits_identical": true
+    },
+    "evidence/one-MR-S-P9-author-vs-Eq36-cost-closure.json": {
+      "original_artifact_SHA256": "663edb4f498291e6492bfa3f1c21138373fe98d4a83537dce56081cebd1298e2",
+      "original_bytes": 3664,
+      "original_source_alias": "local-source/69b8893d49cb/ACTUAL_SINGLE_SAVED_P9_COST_NATURAL0_INTERPRETATION_AND_SCOPE_V1.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 22
+    },
+    "evidence/one-MR-S-P9-actual-cost-values.json.gz": {
+      "original_artifact_SHA256": "7bd047e1516e523e0c23747e5c37af2292aa3af883bf8a4eb79617f01b7058ea",
+      "original_bytes": 27915,
+      "original_source_alias": "local-source/b5a952fc0581/ACTUAL_ONE_SAVED_NATIVE_MR_S_AUTHOR_HINGE_VS_FINAL_EQ36_COST_V1.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 1611
+    },
+    "evidence/dual-eight-final-evaluations.json": {
+      "original_artifact_SHA256": "952f59fc6b2b8a30ffc7acab4d7c10282986cbed5f28a31a6c046bd7795c7c65",
+      "original_bytes": 12727,
+      "original_source_alias": "local-source/18d8b39a4da4/ACTUAL_NATIVE_AND_NEW_PYTHON_RECAPTURE_EIGHT_FINAL_EVALS_UNFITTED_V1.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 221
+    },
+    "eight-final-minSINR.csv": {
+      "original_artifact_SHA256": "fde6bc4a4304c490a0062b23e499be31e515cddbed88ab31822c06d5c60debea",
+      "original_bytes": 847,
+      "original_source_alias": "local-source/2250580d51b5/actual-native-and-new-python-eight-minSINR.csv",
+      "byte_identical_copy": true
+    },
+    "evidence/working-source-vs-final-kappa-and-fourth-moment-source-distinction.json": {
+      "original_artifact_SHA256": "7aea887292ac9ab046c6e0a943ca06c2831063541e5a4401f3482cdb5778b606",
+      "original_bytes": 8228,
+      "original_source_alias": "local-source/ce4f70db18da/READONLY_AUTHOR_RIS_FORMULA_KAPPA10_AND_KNOWN_EQ45C_NO_RIS_LIMIT_REVIEW_V1.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 70
+    },
+    "ALGORITHMS_AND_SOURCE_NOTES.md": {
+      "original_artifact_SHA256": "60438ab132135df39c0bf534a9e862cd604f38b24de60314e4002e38e4eb579c",
+      "original_bytes": 3722,
+      "original_source_alias": "local-source/7491e9709a38/ALGORITHMS_AND_SOURCE_NOTES.md",
+      "byte_identical_copy": true
+    },
+    "evidence/native-original1000-tape-completion-local-stream-summary.json.gz": {
+      "original_artifact_SHA256": "43746da676b23a913c70558c1717f022a2b8918928e488ca9889d42e9e9d7f70",
+      "original_bytes": 16052,
+      "original_source_alias": "local-source/52d34dd5771d/actual-moment-tape-complete.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 1342
+    },
+    "evidence/python-original1000-tape-completion-local-stream-summary.json.gz": {
+      "original_artifact_SHA256": "7b0680bcee415558c447621c8775b42891894f74edc758360ebb033709e409da",
+      "original_bytes": 3709,
+      "original_source_alias": "local-source/2eb96fcf4927/actual-moment-tape-complete.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 98
+    },
+    "implementation/python/author_saved_physical_to_channel_data_v1.py": {
+      "original_artifact_SHA256": "66f3d75343382ba26712ca86b4ce9ed52c5da0335b8b79a1734a5ed91c9fd455",
+      "original_bytes": 16167,
+      "original_source_alias": "local-source/6a57bebd962e/author_saved_physical_to_channel_data_v1.py",
+      "byte_identical_copy": true
+    },
+    "implementation/python/run_canonical_native_saved_U6_corrected_full8_python_v1.py": {
+      "original_artifact_SHA256": "ac17b48d61fe599a2dfa367549a7260ab91ec8166fd4725a5e7ede18b6b27eac",
+      "original_bytes": 10745,
+      "original_source_alias": "local-source/2546c3d10262/run_canonical_native_saved_U6_corrected_full8_python_v1.py",
+      "byte_identical_copy": true
+    },
+    "implementation/python/run_new_optimization_U6_full8_recording_recapture_exact_saved_MC_v1.py": {
+      "original_artifact_SHA256": "90c4ea8da4e9aa54c61d8ca23920a4ca1203ff51051e69aec2c2b6f5e586db7f",
+      "original_bytes": 11767,
+      "original_source_alias": "local-source/6936f7204aed/run_new_optimization_U6_full8_recording_recapture_exact_saved_MC_v1.py",
+      "byte_identical_copy": true
+    },
+    "implementation/python/raw_backup_first_reversible_recording_MAT_transport_v2.py": {
+      "original_artifact_SHA256": "8144e650212be03f14b6f98aeec11da89518d8f72166afbcdd043744a4e7d74a",
+      "original_bytes": 7206,
+      "original_source_alias": "local-source/904dbbae5a3b/raw_backup_first_reversible_recording_MAT_transport_v2.py",
+      "byte_identical_copy": true
+    },
+    "implementation/python/exact_saved_MC_return_reuse_for_new_optimization_recapture_v1.py": {
+      "original_artifact_SHA256": "abcd6afba27c014c0091eb4ee72d5a5cb7820e4dc1a85fcbcff89100fb762447",
+      "original_bytes": 9682,
+      "original_source_alias": "local-source/e3300b44c32d/exact_saved_MC_return_reuse_for_new_optimization_recapture_v1.py",
+      "byte_identical_copy": true
+    },
+    "implementation/native/portable_native_canonical_U6_full8_entry_v3.m": {
+      "original_artifact_SHA256": "567a072fbe4994bea7f59964e1549a313bf06b07f37123a85b273d197242e436",
+      "original_bytes": 7017,
+      "original_source_alias": "local-source/4f10b2435684/portable_native_canonical_U6_full8_entry_v3.m",
+      "byte_identical_copy": true
+    },
+    "implementation/native/run_canonical_author_U6_native_full8_v3.m": {
+      "original_artifact_SHA256": "d20cd557f31d26ec54349fa5c1ec89690cccfd0c8015e078f82add10d65f5a17",
+      "original_bytes": 16119,
+      "original_source_alias": "local-source/9063feb2404b/run_canonical_author_U6_native_full8_v3.m",
+      "byte_identical_copy": true
+    },
+    "implementation/native/load_canonical_author_U6_data_v1.m": {
+      "original_artifact_SHA256": "6e9cacd2bd7b3a9e56ffd1b5231021008b97d236f7b606d0789770f752d6d70e",
+      "original_bytes": 1629,
+      "original_source_alias": "local-source/0ec57e3d0330/load_canonical_author_U6_data_v1.m",
+      "byte_identical_copy": true
+    },
+    "implementation/native/strict_satcom_power24_mc_capture_v1.m": {
+      "original_artifact_SHA256": "a864b2eca2741c0a414fe0fdd52181b791ffc2263570b445447a1dd5e6f1086e",
+      "original_bytes": 5455,
+      "original_source_alias": "local-source/75c2239ca2f5/strict_satcom_power24_mc_capture_v1.m",
+      "byte_identical_copy": true
+    },
+    "implementation/python/python_mc_passive_tape_v1.py": {
+      "original_artifact_SHA256": "001dc848096d780f86c987b5d5453476980d11822820a8da41d08a5beb97b26e",
+      "original_bytes": 11967,
+      "original_source_alias": "local-source/8d4a5a8bdd7f/python_mc_passive_tape_v1.py",
+      "byte_identical_copy": true
+    },
+    "evidence/native-actual-held-handle-terminal-and-source-closure.json.gz": {
+      "original_artifact_SHA256": "d45b82c9f2788ae861056eb322d1d5e7a8b1ef4fc323fdac5fe6077df9a58ea3",
+      "original_bytes": 24595,
+      "original_source_alias": "local-source/155b4d69452f/cooperative-author-U6-canonical-native-MATLAB-full8-v1-job-actual-owned-process.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 29
+    },
+    "evidence/python-recapture-actual-held-handle-terminal-and-source-closure.json.gz": {
+      "original_artifact_SHA256": "793fdf01ad2b6f356b38ecbf708ba85f4f390bd0d2d0978a3e46c025e895f4cc",
+      "original_bytes": 25934,
+      "original_source_alias": "local-source/612a569132ce/cooperative-author-U6-missing-recording-recapture-v1-job-actual-owned-process.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 29
+    },
+    "evidence/python-first-actual-held-handle-terminal-and-source-closure.json.gz": {
+      "original_artifact_SHA256": "d1e095d57c1d90532e35bcbc83c6047d5b793bdd562487c4327f00cd35e46115",
+      "original_bytes": 18956,
+      "original_source_alias": "local-source/43d866b24f5c/cooperative-author-U6-canonical-native-full8-v1-job-actual-owned-process.json",
+      "public_metadata_projection": true,
+      "all_JSON_typed_numeric_leaves_same_value_type_and_float64_bits": true,
+      "numeric_leaf_count": 29
+    },
+    "evidence/python-actual-reversible-field-and-None-codebook.json": {
+      "original_artifact_SHA256": "bc033137bd8f6c1dd481cdaaaefa0923d0282e65d983e18cde50db0e7a3bbfc6",
+      "original_bytes": 567,
+      "byte_identical_copy": true,
+      "original_source_alias": "actual-python-recapture-MAT-codebook"
+    }
+  },
+  "JSON_numeric_projection_checks": [
+    {
+      "public_file": "configuration/source-working-betaR1-full.json",
+      "numeric_leaf_count": 965,
+      "numeric_identity": true
+    },
+    {
+      "public_file": "inputs/NPZ-to-MAT-exact-format-readback.json",
+      "numeric_leaf_count": 64,
+      "numeric_identity": true
+    },
+    {
+      "public_file": "evidence/native-full-result.json.gz",
+      "numeric_leaf_count": 6807,
+      "numeric_identity": true
+    },
+    {
+      "public_file": "evidence/python-recapture-full-result.json.gz",
+      "numeric_leaf_count": 6272,
+      "numeric_identity": true
+    },
+    {
+      "public_file": "evidence/python-first-optimization-full-result-export-failed.json.gz",
+      "numeric_leaf_count": 6269,
+      "numeric_identity": true
+    },
+    {
+      "public_file": "evidence/python-first-export-failure1.json",
+      "numeric_leaf_count": 15,
+      "numeric_identity": true
+    },
+    {
+      "public_file": "evidence/python-new-optimization-recapture-outcome.json",
+      "numeric_leaf_count": 16,
+      "numeric_identity": true
+    },
+    {
+      "public_file": "evidence/first-vs-recapture-history-and-status-differences.json",
+      "numeric_leaf_count": 142,
+      "numeric_identity": true
+    },
+    {
+      "public_file": "evidence/native-four-science-gates-closed.json",
+      "numeric_leaf_count": 47,
+      "numeric_identity": true
+    },
+    {
+      "public_file": "evidence/python-ownstate-source-and-science-closure.json",
+      "numeric_leaf_count": 71,
+      "numeric_identity": true
+    },
+    {
+      "public_file": "evidence/python-stops-source-and-science-closure.json",
+      "numeric_leaf_count": 72,
+      "numeric_identity": true
+    },
+    {
+      "public_file": "evidence/python-initial-source-and-science-closure.json",
+      "numeric_leaf_count": 69,
+      "numeric_identity": true
+    },
+    {
+      "public_file": "evidence/python-ownstate-QT-directP7-summary.json",
+      "numeric_leaf_count": 14,
+      "numeric_identity": true
+    },
+    {
+      "public_file": "evidence/python-all55-phase-MP80-MP100-summary.json.gz",
+      "numeric_leaf_count": 123,
+      "numeric_identity": true
+    },
+    {
+      "public_file": "evidence/python-stops-selection-MCbinding.json",
+      "numeric_leaf_count": 282,
+      "numeric_identity": true
+    },
+    {
+      "public_file": "evidence/python-initial-incumbent-MP.json.gz",
+      "numeric_leaf_count": 469,
+      "numeric_identity": true
+    },
+    {
+      "public_file": "evidence/python-original1000-saved-MC-independent-closure.json",
+      "numeric_leaf_count": 115,
+      "numeric_identity": true
+    },
+    {
+      "public_file": "evidence/native-MC-scientific-report.json.gz",
+      "numeric_leaf_count": 115,
+      "numeric_identity": true
+    },
+    {
+      "public_file": "evidence/native-ownstate-scientific-report.json.gz",
+      "numeric_leaf_count": 14,
+      "numeric_identity": true
+    },
+    {
+      "public_file": "evidence/native-phase-scientific-report.json.gz",
+      "numeric_leaf_count": 123,
+      "numeric_identity": true
+    },
+    {
+      "public_file": "evidence/native-stops-scientific-report.json.gz",
+      "numeric_leaf_count": 282,
+      "numeric_identity": true
+    },
+    {
+      "public_file": "evidence/native-initial-scientific-report.json.gz",
+      "numeric_leaf_count": 469,
+      "numeric_identity": true
+    },
+    {
+      "public_file": "evidence/native-first-stops-reader-host-failure1-retained.json",
+      "numeric_leaf_count": 9,
+      "numeric_identity": true
+    },
+    {
+      "public_file": "evidence/native-stops-reader-corrected-host-natural0.json",
+      "numeric_leaf_count": 13,
+      "numeric_identity": true
+    },
+    {
+      "public_file": "evidence/full-state-numeric-bit-identity-projection.json",
+      "numeric_leaf_count": 8,
+      "numeric_identity": true
+    },
+    {
+      "public_file": "evidence/one-MR-S-P9-author-vs-Eq36-cost-closure.json",
+      "numeric_leaf_count": 22,
+      "numeric_identity": true
+    },
+    {
+      "public_file": "evidence/one-MR-S-P9-actual-cost-values.json.gz",
+      "numeric_leaf_count": 1611,
+      "numeric_identity": true
+    },
+    {
+      "public_file": "evidence/dual-eight-final-evaluations.json",
+      "numeric_leaf_count": 221,
+      "numeric_identity": true
+    },
+    {
+      "public_file": "evidence/working-source-vs-final-kappa-and-fourth-moment-source-distinction.json",
+      "numeric_leaf_count": 70,
+      "numeric_identity": true
+    },
+    {
+      "public_file": "evidence/native-original1000-tape-completion-local-stream-summary.json.gz",
+      "numeric_leaf_count": 1342,
+      "numeric_identity": true
+    },
+    {
+      "public_file": "evidence/python-original1000-tape-completion-local-stream-summary.json.gz",
+      "numeric_leaf_count": 98,
+      "numeric_identity": true
+    },
+    {
+      "public_file": "evidence/native-actual-held-handle-terminal-and-source-closure.json.gz",
+      "numeric_leaf_count": 29,
+      "numeric_identity": true
+    },
+    {
+      "public_file": "evidence/python-recapture-actual-held-handle-terminal-and-source-closure.json.gz",
+      "numeric_leaf_count": 29,
+      "numeric_identity": true
+    },
+    {
+      "public_file": "evidence/python-first-actual-held-handle-terminal-and-source-closure.json.gz",
+      "numeric_leaf_count": 29,
+      "numeric_identity": true
+    }
+  ]
+}

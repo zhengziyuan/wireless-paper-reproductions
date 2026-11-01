@@ -1,0 +1,72 @@
+{
+  "schema": "native-vector-addendum-whole-MAT-source-and-JSON-metadata-only-v1",
+  "JSON_checks": [
+    {
+      "file": "evidence/actual-comparison-MP80-MP100.json.gz",
+      "original_SHA256": "cbbfb448e83ceab1b909ca30814edb5606cdbf4728d6fd64cd18ce2669686032",
+      "projected_uncompressed_SHA256": "02f1355f43546cbdae2684b1f24936dcfc98d79056fa41f7d7dc42fd0c2cc308",
+      "numeric_literal_tokens_unchanged": true,
+      "numeric_literal_count": 259,
+      "all_numeric_types_float64_bits_and_nonpath_decimal_strings_unchanged": true,
+      "path_metadata_strings_changed": 28
+    },
+    {
+      "file": "evidence/actual-vector-closure-and-scope.json",
+      "original_SHA256": "57a1bd43ff9b47e9c0a32d74ad12444f6db62f6d3cee9c6a0e89cce8453ce2cc",
+      "projected_uncompressed_SHA256": "fb2ee9dc75f4f827f2017f730b0d84931d8d84f9f44bf7d6be75d6aacd1a5472",
+      "numeric_literal_tokens_unchanged": true,
+      "numeric_literal_count": 18,
+      "all_numeric_types_float64_bits_and_nonpath_decimal_strings_unchanged": true,
+      "path_metadata_strings_changed": 7
+    },
+    {
+      "file": "evidence/actual-native-probe-held-natural0.json.gz",
+      "original_SHA256": "4b77e2ba5a3b291e3a880860655bd90bd5a932181e09c88cb42830eb2fee48a1",
+      "projected_uncompressed_SHA256": "24bc9bff0e6c8c842cfeee3353f670532e3144af0baef8eff196307ffed8a269",
+      "numeric_literal_tokens_unchanged": true,
+      "numeric_literal_count": 18,
+      "all_numeric_types_float64_bits_and_nonpath_decimal_strings_unchanged": true,
+      "path_metadata_strings_changed": 32
+    },
+    {
+      "file": "evidence/actual-saved-comparison-first-use0.json",
+      "original_SHA256": "e93413059278c6b9360660b264921aed83f43d199a9a6b9f3dd93c065a70a677",
+      "projected_uncompressed_SHA256": "bcf6f1b952c78067ae8c78983bcd5e3456bbb0410c4e67786052709b88b65599",
+      "numeric_literal_tokens_unchanged": true,
+      "numeric_literal_count": 3,
+      "all_numeric_types_float64_bits_and_nonpath_decimal_strings_unchanged": true,
+      "path_metadata_strings_changed": 16
+    },
+    {
+      "file": "evidence/actual-native36-probe-completion.json",
+      "original_SHA256": "3a83604de092583ff89525156e725bfb2d0d1af918b052a253fcad8f6c8aab85",
+      "projected_uncompressed_SHA256": "3a83604de092583ff89525156e725bfb2d0d1af918b052a253fcad8f6c8aab85",
+      "numeric_literal_tokens_unchanged": true,
+      "numeric_literal_count": 7,
+      "all_numeric_types_float64_bits_and_nonpath_decimal_strings_unchanged": true,
+      "path_metadata_strings_changed": 0
+    },
+    {
+      "file": "source-mapping/original-five-function-byte-extraction.json",
+      "original_SHA256": "3f2138de2cfaeb110de34f4a31432ef2a41e727d0bb34d84c4edc47030f59c2a",
+      "projected_uncompressed_SHA256": "b5627f50f7ef15847a1c155aa513885196cea6bae932449881efd8ad4db4aade",
+      "numeric_literal_tokens_unchanged": true,
+      "numeric_literal_count": 8,
+      "all_numeric_types_float64_bits_and_nonpath_decimal_strings_unchanged": true,
+      "path_metadata_strings_changed": 3
+    },
+    {
+      "file": "source-mapping/exact-host-V1-to-V2-inverse.json",
+      "original_SHA256": "f6af7fd081e720434a0a84d4c13fd48a83bde89525854c99bafd3ec0aef86f20",
+      "projected_uncompressed_SHA256": "80ecff94165da8c0b9bc736938801ed170a837c9615aa96d75594615cf0acc3f",
+      "numeric_literal_tokens_unchanged": true,
+      "numeric_literal_count": 7,
+      "all_numeric_types_float64_bits_and_nonpath_decimal_strings_unchanged": true,
+      "path_metadata_strings_changed": 2
+    }
+  ],
+  "vector_MAT_and_two_executed_sources_wholebytes": true,
+  "derived_failure_record_scope": "V1 selects exact original lifecycle fields; V2 pipeline preserves its full numeric tree. Their real exit1 outcomes are not changed.",
+  "parent_original_MAT_and_full_MP_report_not_duplicated": true,
+  "no_new_numerical_MP_or_inspection_execution": true
+}

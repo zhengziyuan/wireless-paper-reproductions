@@ -1,0 +1,111 @@
+{
+  "schema": "actual-ISAC145-natural0-four-returned-saved-finals-MP80-MP100-with-six-retained-slots-v1",
+  "original_full_six_job_natural_child_exit": 0,
+  "original_effective_host_exit": 0,
+  "actual_original_source_interval_14pins_and_exact_original_held_child_match": true,
+  "actual_MP_tool_session": 90812,
+  "actual_MP_natural_exit_code": 0,
+  "original_status_extraction": {
+    "path": "artifacts/ISAC145-natural0-six-saved-final-MP-prepared-v1/ACTUAL_NATURAL0_FOUR_RETURNED_STATES_SIX_STATUS_SLOTS_BUDGET_AND_SOURCE_EXTRACT_V2.json",
+    "SHA256": "f1a1d3732703ee8e0ab62941eb029c76e95ae6e7dc706c98dc3067e9d808b93f",
+    "bytes": 27201
+  },
+  "actual_MP_report": {
+    "path": "artifacts/ISAC145-natural0-six-saved-final-MP-prepared-v1/actual-four-final-MP80-MP100-v1/ACTUAL_FOUR_RETURNED_FINAL_PHYSICS_AND_LAST_FIXED_IOTA_DERIVATIVES_WITH_SIX_SLOTS_MP80_MP100_V1.json",
+    "SHA256": "c88c76a49a9eeef11bd949b1af08dff8aa1b68ac5fcb71a742decdc7baa23d5f",
+    "bytes": 235958
+  },
+  "MP_plan": {
+    "path": "artifacts/ISAC145-natural0-six-saved-final-MP-prepared-v1/PREPARED_ISAC145_FOUR_ACTUAL_FINALS_KEEP_SIX_SLOTS_MP80_MP100_PLAN_V1.json",
+    "SHA256": "d766f8133f07cb7b32fda4ec168a4fe684ae95bf0afe6a770780a4405c2bf874",
+    "bytes": 10650
+  },
+  "actual_MP_source_interval_pins": 14,
+  "all_scoped_saved_final_flags": {
+    "all4_returned_final_physical_fields_and_feasibility_pass": true,
+    "all4_returned_last_fixed_iota_gradient_components_and_precision_pass": true,
+    "all4_returned_fixed_iota_objectives_and_final_PGA_norm_reader_comparisons_pass": true,
+    "exact_saved_historical_phase_norm_and_original_stop_classification_comparisons_pass": true,
+    "source_input_interval_unchanged": true,
+    "scoped_saved_final_state_and_derivative_comparisons_pass": true
+  },
+  "original_six_slots": {
+    "failed_no_final_state": [
+      "Rot-BS & Rot-RIS",
+      "Rot-BS & Fix-RIS"
+    ],
+    "returned_not_original_full_converged": [
+      "Fix-BS & Rot-RIS",
+      "Fix-BS & Fix-RIS"
+    ],
+    "original_full_converged": [
+      "Rot-BS & No-RIS",
+      "Fix-BS & No-RIS"
+    ]
+  },
+  "actual_returned_states_audited": 4,
+  "actual_six_final_states_available": false,
+  "original_failure_string": "Printed RCG Armijo line search failed; no substitute solver.",
+  "original_unchanged_controls": {
+    "W_solver": {
+      "maximum_iterations": 10000,
+      "relative_tolerance": 1e-06,
+      "bisection_tolerance": 1e-12
+    },
+    "RCG_solver": {
+      "maximum_iterations": 500,
+      "gradient_tolerance": 1e-06,
+      "initial_step": 1.0,
+      "armijo": 0.0001,
+      "backtrack_factor": 0.5,
+      "maximum_backtracks": 80,
+      "mode": "documented_non_ascent_restart"
+    },
+    "PGA_solver": {
+      "maximum_iterations": 500,
+      "gradient_tolerance": 1e-06,
+      "relative_tolerance": 1e-08,
+      "initial_step": 0.01,
+      "minimum_step": 1e-10,
+      "maximum_step": 1,
+      "armijo": 0.0001,
+      "backtrack_factor": 0.5,
+      "maximum_backtracks": 80,
+      "BB_interpretation": "ascent_sign_correction"
+    },
+    "AO_solver": {
+      "maximum_iterations": 500,
+      "relative_tolerance": 1e-05
+    }
+  },
+  "actual_AO_iterations": {
+    "Rot-BS & Rot-RIS": null,
+    "Rot-BS & Fix-RIS": null,
+    "Fix-BS & Rot-RIS": 500,
+    "Fix-BS & Fix-RIS": 500,
+    "Rot-BS & No-RIS": 390,
+    "Fix-BS & No-RIS": 5
+  },
+  "important_phase_boundary": {
+    "Fix_BS_Fix_RIS": {
+      "last_rotation_updates": 0,
+      "actual_MP100_normalized_gradient": "0.000475270466342282722452046962733765012126018891425995339288678972288384029768989373961232661348967010113593",
+      "original_recorded_gradient": 0.0004752704283343819,
+      "original_gradient_stop": 1e-06,
+      "historical_same_endpoint_gradient_failure_confirmed": true,
+      "original_RCG500_cap_retained": true
+    },
+    "Fix_BS_Rot_RIS": {
+      "last_rotation_updates": 55,
+      "actual_post_rotation_MP100_normalized_gradient": "0.639569419599974424869204576870483231101718637933397129821778707021442573062812465516167411204350310228636",
+      "original_pre_rotation_recorded_gradient": 0.003016350225283453,
+      "old_phase_gradient_and_final_state_not_same_endpoint": true,
+      "original_RCG500_cap_retained": true
+    }
+  },
+  "MP80_MP100_maximum_derivative_and_fixed_objective_difference": "1.9853078745766998346011593188713947518024759834610907034380774452492301213168651981539195846124011280044e-58",
+  "new_optimizer_RNG_MC_scenario_or_QCQP_calls": 0,
+  "full_six_algorithm_convergence_PASS": false,
+  "failed_RCG_trajectory_or_QCQP_KKT_certified": false,
+  "original_reference_dual_or_fullpaper_PASS": false
+}

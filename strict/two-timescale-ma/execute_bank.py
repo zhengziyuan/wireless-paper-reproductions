@@ -29,6 +29,10 @@ def atomic_json(path,value):
 
 
 def execute(bank,workers,previous_runner_sha256=None):
+    # This legacy entry can overwrite retained results when reuse fails. Keep
+    # the full algorithm below intact until a reviewed single-task storage
+    # guard and non-overwriting recovery path are integrated.
+    raise RuntimeError("MA bank execution disabled: existing results must be preserved and a storage guard is required")
     config_path=bank/"run_config.json";config_bytes=config_path.read_bytes();config=json.loads(config_bytes)
     manifest=json.loads((bank/"manifest.json").read_text())
     if (config.get("geometry_realizations")!=100 or config.get("nlos_realizations_per_geometry")!=1000
@@ -65,7 +69,8 @@ def execute(bank,workers,previous_runner_sha256=None):
             "elapsed_seconds":time.perf_counter()-began,"records":records,
             "full_bank_execution_complete":len(records)==manifest["expected_jobs"],
             "overall_implemented_scope_success":success==manifest["expected_jobs"],
-            "overall_original_scope_success":success==manifest["expected_jobs"] and all(r["original_scope_available"] for r in records),
+            "all_completed_jobs_original_scope_available":success==manifest["expected_jobs"] and all(r["original_scope_available"] for r in records),
+            "overall_original_scope_success":False,
             "original_curve_closeness_verified":False}
     atomic_json(bank/"execution-progress.json",receipt())
     with ThreadPoolExecutor(max_workers=workers) as pool:

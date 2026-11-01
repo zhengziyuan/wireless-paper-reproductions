@@ -68,6 +68,10 @@ def verify_source(bank):
 
 
 def derive(bank,output):
+    # The historical adapter writes in place and accepts only the old
+    # numerical gate. Preserve all prior outputs until a versioned,
+    # non-overwriting continuation with reviewed source provenance exists.
+    raise RuntimeError("Fig4 derivation disabled: verified source provenance and non-overwriting recovery are required")
     output.mkdir(parents=True,exist_ok=True);receipt,config,config_bytes,source_cases,records=verify_source(bank)
     atomic_json(output/"source-readiness.json",receipt)
     if not receipt["full_execution_verified"]:return {"source_bank_ready":False,"figure_rendered":False,"verified_jobs":len(records)}

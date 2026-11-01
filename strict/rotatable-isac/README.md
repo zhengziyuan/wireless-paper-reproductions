@@ -24,7 +24,9 @@ This code must not be described as numerical agreement with all published figure
   linear retraction and Armijo test. There is no phase-ascent or PR+ replacement.
 - Original box-projected PGA and BB initialization, with the necessary numerical
   interpretations below recorded explicitly.
-- Exact scale `iota=(p'p)/(pd'p)`, held fixed during each AO cycle.
+- Exact scale `iota=(p'p)/(pd'p)` for positive overlap, held fixed during
+  each AO cycle. The strict implementation fails at zero overlap; the paper's
+  separate practical epsilon-denominator rule is described below.
 - Full scenario drivers: original BS/RIS dimensions, 66 sensing samples, **100
   independent channels**, **all six original scheme families**, power/BS-count/
   user-count/rotation-range/rho sweeps. The complete 37-point rho grid is retained.
@@ -67,8 +69,34 @@ them. Full configuration uses the disclosed correction. Armijo/feasibility check
 remain applied to the actual model, not surrogate or stored curves.
 
 Half-space visibility at `b=0` is discontinuous at the boundary; zero response
-derivatives are only piecewise derivatives, not global smoothness claims. Exact
-`iota` is undefined at zero overlap, so this case produces an explicit failure.
+derivatives are only piecewise derivatives, not global smoothness claims. In
+[arXiv v2, Section II-D](https://arxiv.org/html/2512.20987v2#S2.SS4), Eq. (23)
+requires positive overlap. The following paragraph explicitly supplies the
+practical rule `iota=(p'p)/(pd'p+epsilon)`, without specifying a numerical epsilon.
+The current strict core instead rejects overlap at or below its configured guard.
+This is an implementation boundary, not evidence that the paper omitted a
+safeguard. In the actual retained case 004, both desired directions lie in the BS
+back hemisphere and their pattern values are exactly zero, while the total
+pattern is nonzero. The exact finite-scale problem has an unattained infimum at
+infinite scale. The practical epsilon rule is distinct from that exact argmin;
+its numerical setting and its convergence implications remain unresolved.
+See the [portable saved-state MP80/MP100 evidence](../validation/isac004-zero-overlap-backhemisphere-saved-MP-20261020-v1).
+
+The retained case 014 exposes a separate dense-matrix arithmetic failure at
+`rho=10`. Its positive sensing shift is about `3.40546e-9`, below one binary64
+diagonal spacing of `1.19209e-7` in the large communication Gram matrix. The
+shift is lost during addition; the stored matrix is indefinite even when its
+lower triangle is evaluated at high precision. The original factored expression
+remains positive definite. Its communication right-hand side also acquires
+spurious null-space components when assembled densely, so correcting only the
+matrix spectrum does not recover the original subproblem. Independent MP80 and
+MP100 solutions of the original structured fixed subproblem agree on inactive
+power constraint (`nu=0`, power about `0.388807 W`, cap `0.398107 W`). The generic
+exception text mentioning `rho=0` does not describe this input. These are results
+for one captured subproblem, not a corrected full trajectory, MATLAB/Python
+campaign completion, or agreement with a published figure.
+See the [captured operands and portable MP80/MP100 diagnosis](../validation/isac014-rho10-failed-Q-saved-MP-20261020-v1).
+
 Full runners retain failed/nonconverged outcomes instead of fabricating curves.
 
 ## Commands

@@ -44,9 +44,12 @@ def validate(job,config):
 
 if __name__=="__main__":
     p=argparse.ArgumentParser();p.add_argument("--job",type=Path,required=True);p.add_argument("--config",type=Path,required=True)
-    p.add_argument("--output",type=Path,required=True);args=p.parse_args();began=time.perf_counter()
+    p.add_argument("--output",type=Path,required=True);args=p.parse_args()
+    if args.output.exists():raise FileExistsError(f"Existing output is preserved: {args.output}")
+    began=time.perf_counter()
     config_bytes=args.config.read_bytes();job_bytes=args.job.read_bytes();result=validate(json.loads(job_bytes),json.loads(config_bytes))
     result["input_fingerprint"]=fingerprint(config_bytes,job_bytes);result["elapsed_seconds"]=time.perf_counter()-began
-    args.output.parent.mkdir(parents=True,exist_ok=True);args.output.write_text(json.dumps(result,indent=2,allow_nan=False)+"\n",encoding="utf-8")
+    args.output.parent.mkdir(parents=True,exist_ok=True)
+    with args.output.open('x',encoding='utf-8') as out:out.write(json.dumps(result,indent=2,allow_nan=False)+"\n")
     print(json.dumps({"checks":result["checks"],"rate_actual":result["actual_correlated_ZF"]["mean_sum_rate"],
         "corrected_Jensen_estimate":result["conditional_exact_Jensen_evaluator"]["sum_rate"],"elapsed_seconds":result["elapsed_seconds"]}))

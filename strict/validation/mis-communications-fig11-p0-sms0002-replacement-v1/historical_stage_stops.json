@@ -1,0 +1,234 @@
+{
+  "schema": "SMS_0002_HISTORICAL_SAVED_STOP_SUMMARY_V1",
+  "scope": "descriptive extraction from saved historical start; author source and input authenticity unverified",
+  "stages": [
+    {
+      "call": 1,
+      "mu": 325,
+      "recorded_inner_iterations": 83,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": 205.43307058599413,
+        "gradient_norm": 9.783851651943558e-07,
+        "projected_kkt_norm": 9.783851651943558e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 2,
+      "mu": 162.5,
+      "recorded_inner_iterations": 53,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": 93.4375769994714,
+        "gradient_norm": 9.09213762448673e-07,
+        "projected_kkt_norm": 9.09213762448673e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 3,
+      "mu": 81.25,
+      "recorded_inner_iterations": 139,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": 38.37783427874642,
+        "gradient_norm": 9.555838973720234e-07,
+        "projected_kkt_norm": 9.555838973720234e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 4,
+      "mu": 40.625,
+      "recorded_inner_iterations": 1119,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": 11.343201009732494,
+        "gradient_norm": 9.964526603768696e-07,
+        "projected_kkt_norm": 9.964526603768696e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 5,
+      "mu": 20.3125,
+      "recorded_inner_iterations": 621,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": -2.7344062989515585,
+        "gradient_norm": 9.925440226820945e-07,
+        "projected_kkt_norm": 9.925440226820945e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 6,
+      "mu": 10.15625,
+      "recorded_inner_iterations": 21,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": -9.774182351536318,
+        "gradient_norm": 9.434905682690581e-07,
+        "projected_kkt_norm": 9.434905682690581e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 7,
+      "mu": 5.078125,
+      "recorded_inner_iterations": 1,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": -13.294070377817182,
+        "gradient_norm": 5.565107219144081e-07,
+        "projected_kkt_norm": 5.565107219144081e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 8,
+      "mu": 2.5390625,
+      "recorded_inner_iterations": 39,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": -15.054014390959868,
+        "gradient_norm": 4.528255188844041e-07,
+        "projected_kkt_norm": 4.528255188844041e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 9,
+      "mu": 1.26953125,
+      "recorded_inner_iterations": 14,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": -15.93398639753038,
+        "gradient_norm": 4.4606488727211744e-07,
+        "projected_kkt_norm": 4.4606488727211744e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 10,
+      "mu": 0.634765625,
+      "recorded_inner_iterations": 1,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": -16.373972400815475,
+        "gradient_norm": 9.628985340364365e-07,
+        "projected_kkt_norm": 9.628985340364365e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 11,
+      "mu": 0.3173828125,
+      "recorded_inner_iterations": 2,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": -16.59396540245805,
+        "gradient_norm": 4.579444710425316e-07,
+        "projected_kkt_norm": 4.579444710425316e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 12,
+      "mu": 0.15869140625,
+      "recorded_inner_iterations": 1,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": -16.703961903279325,
+        "gradient_norm": 8.772196791592275e-07,
+        "projected_kkt_norm": 8.772196791592275e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 13,
+      "mu": 0.079345703125,
+      "recorded_inner_iterations": 2,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": -16.75896015368997,
+        "gradient_norm": 4.5822873367380185e-07,
+        "projected_kkt_norm": 4.5822873367380185e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 14,
+      "mu": 0.0396728515625,
+      "recorded_inner_iterations": 1,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": -16.786459278895286,
+        "gradient_norm": 8.765589572020608e-07,
+        "projected_kkt_norm": 8.765589572020608e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 15,
+      "mu": 0.01983642578125,
+      "recorded_inner_iterations": 2,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": -16.80020884149794,
+        "gradient_norm": 4.588714171522092e-07,
+        "projected_kkt_norm": 4.588714171522092e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 16,
+      "mu": 0.009918212890625,
+      "recorded_inner_iterations": 1,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": -16.807083622799272,
+        "gradient_norm": 8.727211556710989e-07,
+        "projected_kkt_norm": 8.727211556710989e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 17,
+      "mu": 0.0049591064453125,
+      "recorded_inner_iterations": 2,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": -16.810521013449943,
+        "gradient_norm": 4.589195255916908e-07,
+        "projected_kkt_norm": 4.589195255916908e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 18,
+      "mu": 0.00247955322265625,
+      "recorded_inner_iterations": 1,
+      "stop": {
+        "reason": "gradient_tolerance",
+        "objective": -16.812239708775273,
+        "gradient_norm": 8.724875007510533e-07,
+        "projected_kkt_norm": 8.724875007510533e-07,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    },
+    {
+      "call": 19,
+      "mu": 0.001239776611328125,
+      "recorded_inner_iterations": 5,
+      "stop": {
+        "reason": "block_line_search_exhausted_phi",
+        "objective": -16.813099056437938,
+        "gradient_norm": 1.529670547672714e-06,
+        "projected_kkt_norm": 1.529670547672714e-06,
+        "stationarity_measure": "projected_simplex_KKT"
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "streams": [
+    {
+      "lane": "native",
+      "public_primitive_stream_included": false,
+      "original_stream_basename": "actual-primitive-vector-stream.bin",
+      "bytes": 127104000,
+      "SHA256": "083452ecd36d71e0e59d5f18cad4d2b5ab912c8436e56be80e71c36452d03b0c",
+      "completed_draws": 1000,
+      "scope": "Actual local stream was independently audited; public summary preserves numerical moments and hashes, not public per-draw operands."
+    },
+    {
+      "lane": "python",
+      "public_primitive_stream_included": false,
+      "original_stream_basename": "actual-primitive-vector-stream.bin",
+      "bytes": 127104000,
+      "SHA256": "ae23a06178b42e49169d258dda08c2d9d3e634440c125c49832798dc542382d6",
+      "completed_draws": 1000,
+      "scope": "Actual local stream was independently audited; public summary preserves numerical moments and hashes, not public per-draw operands."
+    }
+  ],
+  "public_per_draw_physical_reverification_possible_from_this_capsule_alone": false,
+  "local_independent1000_MC_gates_pass": true,
+  "public_input_and_exact_empirical_moments_preserved": true,
+  "these_are_channel_moment_validation_draws_not_optimized_performance_MC": true,
+  "author_performance_MC_population_not_recovered": true
+}
