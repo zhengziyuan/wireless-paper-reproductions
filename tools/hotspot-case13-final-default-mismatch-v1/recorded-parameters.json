@@ -1,0 +1,42 @@
+{
+  "schema": "CASE13_FINAL_DEFAULT_PARAMETER_EVIDENCE_V1",
+  "saved_target_count": 30,
+  "saved_common_target_linear": 0.5011872336272722,
+  "saved_common_target_db_approx": -3.0000000000000004,
+  "saved_ground_component_count": 25,
+  "saved_ground_mean_square_over_variance_min": 99.99999999999999,
+  "saved_ground_mean_square_over_variance_max": 100.00000000000001,
+  "IEEE_VI_reported_global_nhu_default_db": 3,
+  "IEEE_VI_reported_global_ground_rician_default_db": 0,
+  "paper_figure10_specific_override_found_in_manual_reviewed_scope": false,
+  "paper_figure10_override_search_scope": "figure caption, legend and Section VI.G text; text-extraction caveats apply",
+  "paper_pdf_read_or_verified_by_this_script": false,
+  "default_nhu_threshold_linear_approx": 1.9952623149688795,
+  "schemes": [
+    {
+      "scheme": "NoRIS",
+      "recorded_nhu_count": 15,
+      "reported_nhu_below_3dB_count": 15,
+      "min_reported_nhu_sinr": 0.5011872522809641,
+      "max_reported_nhu_sinr": 0.5011928700338759
+    },
+    {
+      "scheme": "TwoStage",
+      "recorded_nhu_count": 15,
+      "reported_nhu_below_3dB_count": 15,
+      "min_reported_nhu_sinr": 0.5011873112527035,
+      "max_reported_nhu_sinr": 0.5011996549334251
+    },
+    {
+      "scheme": "AO",
+      "recorded_nhu_count": 15,
+      "reported_nhu_below_3dB_count": 15,
+      "min_reported_nhu_sinr": 0.5011873109351389,
+      "max_reported_nhu_sinr": 0.501199744942232
+    }
+  ],
+  "constraints_of_reported_sinr": "implementation full-J interference; paper Eq.32b uses K-only interference",
+  "historical_producer_authenticated": false,
+  "paper_figure_mismatch_cause_proved": false,
+  "paper_or_full_science_pass": false
+}
